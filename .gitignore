@@ -31,6 +31,8 @@ data/embedding_cache/
 data/ontology/
 docs/*_results.json
 docs/*outputs_live*
+docs/live_model_smoke_report.md
+docs/mock_model_smoke_report.md
 docs/extracted_requirements_and_tests.txt
 docs/final_requirements_and_test_report_extract.txt
 docs/test_plan_docx_extract_current.txt
@@ -41,6 +43,13 @@ docs/reference_assets/
 data/localization_guide/raw/
 data/localization_guide/localization_orchestrator.py
 data/localization_guide/tavily_localization_agent.py
+data/localization_guide/platform_observation/platform_trend_guide_prompt.json
+data/localization_guide/platform_observation/platform_trend_localization_guide.md
 data/legacy_idiom_rag/raw_enriched/*_references_enriched.json
+data/legacy_idiom_rag/normalized_sample/
+data/legacy_idiom_rag/usable_candidates/
+data/legacy_idiom_rag/seed/
+data/annotation_rag/k_culture_annotation_cards.json
+data/annotation_rag/_k_culture_annotation_report.json
 ko_anchored_idiom_results_final/
 notebooks/
