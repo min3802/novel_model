@@ -1,0 +1,46 @@
+# secret files
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Next.js frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+frontend/*.tsbuildinfo
+.omc/
+frontend/.omc/
+
+# Local agent/session state
+.claude/
+.omx/
+
+# Generated runtime/cache artifacts
+data/embedding_cache/
+data/ontology/
+docs/*_results.json
+docs/*outputs_live*
+docs/extracted_requirements_and_tests.txt
+docs/final_requirements_and_test_report_extract.txt
+docs/test_plan_docx_extract_current.txt
+docs/test_report_docx_extract_current.txt
+
+# Reference-only or raw research assets kept locally, not in the collaboration baseline
+docs/reference_assets/
+data/localization_guide/raw/
+data/localization_guide/localization_orchestrator.py
+data/localization_guide/tavily_localization_agent.py
+data/legacy_idiom_rag/raw_enriched/*_references_enriched.json
+ko_anchored_idiom_results_final/
+notebooks/

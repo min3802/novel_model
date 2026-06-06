@@ -1,0 +1,27 @@
+.modal-backdrop{position:fixed;inset:0;background:rgba(34,18,57,.38);backdrop-filter:blur(6px);display:grid;place-items:center;padding:1.2rem;z-index:50}
+.modal-card{width:min(760px,100%);max-height:min(90vh,900px);overflow:auto;padding:1.25rem;border-radius:24px}
+.modal-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem}
+.modal-subtitle{margin:.35rem 0 0;color:var(--muted);line-height:1.6}
+.modal-actions{display:flex;justify-content:flex-end;gap:.75rem;margin-top:1rem}
+
+
+.guide-form-help{margin:.25rem 0 1rem;color:#6f6485;line-height:1.65;font-size:.9rem}
+.guide-synopsis-input{width:100%;min-height:118px;border:1px solid var(--line);border-radius:14px;background:#fff;padding:.85rem;color:#4d425f;font-family:inherit;line-height:1.6;resize:vertical}
+.guide-selection-box,.guide-recommend-box,.guide-evidence-panel,.guide-html-preview{margin-top:1rem;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#fff,#faf5ff);padding:1rem}
+.guide-selection-box b,.guide-recommend-box b{display:block;color:#24143f;margin-bottom:.35rem}
+.guide-selection-box p{margin:.2rem 0 .8rem;color:#6f6485;line-height:1.55}
+.guide-option-list{display:flex;flex-wrap:wrap;gap:.55rem}
+.guide-recommend-box{display:grid;gap:.55rem}
+.guide-rec{display:flex;justify-content:space-between;gap:.8rem;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fff;padding:.75rem .85rem;color:#4d425f;font-weight:900;cursor:pointer;text-align:left}
+.guide-rec.active{border-color:#a78bfa;background:#f4eeff;color:#6d28d9}
+.guide-rec small{color:#7c7192;font-weight:850}
+.guide-section-list{display:grid;gap:1rem}
+.guide-evidence-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
+.guide-evidence-item{border:1px solid var(--line);border-radius:16px;background:#fff;padding:.85rem;display:grid;gap:.25rem;box-shadow:0 8px 18px rgba(124,58,237,.05)}
+.guide-evidence-item b{color:#6d28d9;font-size:.84rem}
+.guide-evidence-item span{color:#24143f;font-weight:900;line-height:1.45}
+.guide-evidence-item small{color:#7c7192;line-height:1.45}
+.guide-evidence-item p{margin:.25rem 0 0;color:#5e5275;font-size:.82rem;line-height:1.45}
+.guide-html-preview summary{cursor:pointer;color:#6d28d9;font-weight:950}
+.guide-html-preview .guide-html{margin-top:1rem}
+@media(max-width:900px){.guide-evidence-list{grid-template-columns:1fr}}

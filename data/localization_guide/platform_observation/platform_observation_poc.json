@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-06-04",
+  "purpose": "POC for localization guide platform ranking/genre/tag observation data collection.",
+  "probes": [
+    {
+      "platform": "Tapas",
+      "url": "https://tapas.io/collection/novels",
+      "http_accessible": true,
+      "html_bytes": 437281,
+      "observed_total_results": 129,
+      "observed_sort": "SUBSCRIBE",
+      "has_sort_ui": false,
+      "has_filter_ui": false,
+      "observable_fields": [
+        "genre/category labels",
+        "collection result count",
+        "series links via browser-rendered/ajax data"
+      ],
+      "missing_without_js_api": [
+        "title",
+        "views",
+        "likes",
+        "tags"
+      ],
+      "genre_counts_from_static_html": {
+        "Romance Fantasy": 14,
+        "BL": 19,
+        "LGBTQ+": 14,
+        "Romance": 32,
+        "Action Fantasy": 40,
+        "Drama": 8,
+        "Thriller/Horror": 1,
+        "GL": 1
+      },
+      "ranking_confidence": "low",
+      "collection_claim": "Static HTML exposes a collection with 129 results and server-selected SUBSCRIBE sort; it should not be treated as view ranking."
+    },
+    {
+      "platform": "Royal Road",
+      "url": "https://www.royalroad.com/fictions/best-rated",
+      "http_accessible": true,
+      "html_bytes": 164587,
+      "page_type": "Best Rated",
+      "sample_titles": [],
+      "observable_fields": [
+        "ranked listing page type",
+        "title",
+        "origin/status",
+        "tags",
+        "followers",
+        "pages",
+        "views",
+        "chapters",
+        "updated date",
+        "description"
+      ],
+      "stats_mentions": {
+        "followers_mentions": 20,
+        "views_mentions": 20,
+        "chapters_mentions": 21
+      },
+      "ranking_confidence": "high",
+      "collection_claim": "Direct listing exposes a named ranking page and per-work stats in static HTML."
+    },
+    {
+      "platform": "Wattpad",
+      "url": "https://www.wattpad.com/stories/romance",
+      "http_accessible": true,
+      "html_bytes": 364347,
+      "observable_fields": [
+        "category landing text"
+      ],
+      "missing_without_js_api": [
+        "reliable title/rank/stats extraction"
+      ],
+      "ranking_confidence": "low",
+      "collection_claim": "Direct static extraction is not reliable enough for model-grade ranking/tag evidence without an approved API/search layer."
+    }
+  ],
+  "decision": {
+    "usable_now": [
+      "Royal Road static ranking pages",
+      "Tapas collection genre/category observation"
+    ],
+    "needs_extra_work": [
+      "Tapas browser-rendered/ajax item details",
+      "Wattpad via search/API/manual sampling"
+    ],
+    "not_safe_to_claim": [
+      "Tapas Popular equals view ranking",
+      "Wattpad category page equals official ranking"
+    ]
+  }
+}

@@ -1,0 +1,1353 @@
+{
+  "role": "localization_guide_generator",
+  "source_generated_at": "2026-06-04T14:41:18.129297+00:00",
+  "task": "Generate country/platform-specific localization guidance for a Korean webnovel using current platform trend evidence.",
+  "safety_policy": {
+    "allowed_evidence": [
+      "public rank/exposure metadata",
+      "title",
+      "genre",
+      "tags",
+      "public metrics",
+      "public synopsis/description"
+    ],
+    "disallowed_evidence": [
+      "episode/story body text",
+      "paid or locked content",
+      "login-only data",
+      "image downloads"
+    ],
+    "claim_limit": "Do not claim national readership certainty; phrase as platform trend evidence."
+  },
+  "country_profiles": [
+    {
+      "country": "Japan",
+      "top_genres": [
+        [
+          "ハイファンタジー〔ファンタジー〕",
+          37
+        ],
+        [
+          "異世界〔恋愛〕",
+          30
+        ],
+        [
+          "ローファンタジー〔ファンタジー〕",
+          16
+        ],
+        [
+          "歴史〔文芸〕",
+          5
+        ],
+        [
+          "VRゲーム〔SF〕",
+          4
+        ],
+        [
+          "ヒューマンドラマ〔文芸〕",
+          2
+        ],
+        [
+          "コメディー〔文芸〕",
+          1
+        ],
+        [
+          "現実世界〔恋愛〕",
+          1
+        ],
+        [
+          "純文学〔文芸〕",
+          1
+        ],
+        [
+          "宇宙〔SF〕",
+          1
+        ],
+        [
+          "推理〔文芸〕",
+          1
+        ],
+        [
+          "その他〔その他〕",
+          1
+        ]
+      ],
+      "top_tags": [
+        [
+          "R15",
+          48
+        ],
+        [
+          "残酷な描写あり",
+          45
+        ],
+        [
+          "異世界転生",
+          36
+        ],
+        [
+          "男主人公",
+          36
+        ],
+        [
+          "女主人公",
+          32
+        ],
+        [
+          "ハッピーエンド",
+          31
+        ],
+        [
+          "魔法",
+          25
+        ],
+        [
+          "西洋",
+          24
+        ],
+        [
+          "チート",
+          21
+        ],
+        [
+          "ほのぼの",
+          20
+        ],
+        [
+          "ざまぁ",
+          17
+        ],
+        [
+          "シリアス",
+          17
+        ],
+        [
+          "日常",
+          14
+        ],
+        [
+          "異世界転移",
+          14
+        ],
+        [
+          "ダンジョン",
+          14
+        ],
+        [
+          "冒険",
+          13
+        ]
+      ],
+      "synopsis_terms": [
+        [
+          "https",
+          18
+        ],
+        [
+          "ncode",
+          5
+        ],
+        [
+          "syosetu",
+          5
+        ],
+        [
+          "youtube",
+          5
+        ],
+        [
+          "watch",
+          4
+        ],
+        [
+          "vrmmo",
+          3
+        ],
+        [
+          "kadokawa",
+          3
+        ],
+        [
+          "hellmode",
+          3
+        ],
+        [
+          "http",
+          2
+        ],
+        [
+          "line",
+          2
+        ],
+        [
+          "detail",
+          2
+        ],
+        [
+          "comic",
+          2
+        ]
+      ],
+      "localization_signals": [
+        "Isekai/reincarnation framing is prominent; early setup should clarify transfer/rebirth rules and the protagonist's advantage.",
+        "Relationship-forward fantasy/romance demand is strong; emotional stakes and pairing dynamics need clear early hooks.",
+        "Male-protagonist adventure/power-fantasy remains visible in platform exposure.",
+        "Female-lead status reversal, romance conflict, and social-position tropes are visible localization levers.",
+        "Content-intensity labels recur; violence, survival pressure, and age-rating expectations should be handled explicitly."
+      ],
+      "adaptation_guidance": [
+        "Anchor the pitch in the dominant platform-visible genre mix before adding niche cultural explanations.",
+        "Convert synopsis observations into title hooks, opening-episode stakes, and tag/copy choices rather than copying source descriptions.",
+        "Preserve progression mechanics in translation: skill names, rank terms, and upgrade cadence should be consistent across episodes.",
+        "Make relationship premise, power imbalance, consent boundary, and emotional payoff legible in synopsis and chapter-one localization.",
+        "Explain reincarnation/transport premises compactly; readers tolerate familiar setups when the unique advantage is clear.",
+        "For Japan, compare Korean proper nouns and honorific/social-rank terms against light-novel readability; keep hierarchy clear but reduce unexplained Korean-only institutional terms."
+      ],
+      "caution_points": [
+        "Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.",
+        "Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.",
+        "Japanese rankings expose age/content warnings; localization should preserve rating-sensitive violence/sexual-content cues."
+      ]
+    },
+    {
+      "country": "US/global English",
+      "top_genres": [
+        [
+          "Original",
+          188
+        ],
+        [
+          "Romance Fantasy",
+          47
+        ],
+        [
+          "Action Fantasy",
+          22
+        ],
+        [
+          "BL",
+          18
+        ],
+        [
+          "Fan Fiction",
+          12
+        ],
+        [
+          "Romance",
+          6
+        ],
+        [
+          "LGBTQ+",
+          5
+        ],
+        [
+          "Drama",
+          4
+        ],
+        [
+          "Fantasy",
+          2
+        ],
+        [
+          "GL",
+          1
+        ]
+      ],
+      "top_tags": [
+        [
+          "Adventure",
+          169
+        ],
+        [
+          "Fantasy",
+          161
+        ],
+        [
+          "Action",
+          160
+        ],
+        [
+          "Progression",
+          152
+        ],
+        [
+          "Male Lead",
+          130
+        ],
+        [
+          "LitRPG",
+          119
+        ],
+        [
+          "Magic",
+          115
+        ],
+        [
+          "Strong Lead",
+          89
+        ],
+        [
+          "High Fantasy",
+          80
+        ],
+        [
+          "Portal Fantasy / Isekai",
+          78
+        ],
+        [
+          "Reincarnation",
+          56
+        ],
+        [
+          "Comedy",
+          54
+        ],
+        [
+          "Anti-Hero Lead",
+          49
+        ],
+        [
+          "Slice of Life",
+          49
+        ],
+        [
+          "GameLit",
+          48
+        ],
+        [
+          "Supernatural",
+          46
+        ]
+      ],
+      "synopsis_terms": [
+        [
+          "litrpg",
+          63
+        ],
+        [
+          "just",
+          42
+        ],
+        [
+          "magic",
+          37
+        ],
+        [
+          "time",
+          31
+        ],
+        [
+          "years",
+          29
+        ],
+        [
+          "system",
+          28
+        ],
+        [
+          "family",
+          28
+        ],
+        [
+          "apocalypse",
+          26
+        ],
+        [
+          "cultivation",
+          25
+        ],
+        [
+          "death",
+          24
+        ],
+        [
+          "make",
+          20
+        ],
+        [
+          "prince",
+          19
+        ]
+      ],
+      "localization_signals": [
+        "System/progression readability is a primary market signal: levels, skills, growth loops, and payoff cadence should be explicit.",
+        "Isekai/reincarnation framing is prominent; early setup should clarify transfer/rebirth rules and the protagonist's advantage.",
+        "Relationship-forward fantasy/romance demand is strong; emotional stakes and pairing dynamics need clear early hooks.",
+        "Male-protagonist adventure/power-fantasy remains visible in platform exposure.",
+        "Female-lead status reversal, romance conflict, and social-position tropes are visible localization levers.",
+        "Content-intensity labels recur; violence, survival pressure, and age-rating expectations should be handled explicitly."
+      ],
+      "adaptation_guidance": [
+        "Anchor the pitch in the dominant platform-visible genre mix before adding niche cultural explanations.",
+        "Convert synopsis observations into title hooks, opening-episode stakes, and tag/copy choices rather than copying source descriptions.",
+        "Preserve progression mechanics in translation: skill names, rank terms, and upgrade cadence should be consistent across episodes.",
+        "Make relationship premise, power imbalance, consent boundary, and emotional payoff legible in synopsis and chapter-one localization.",
+        "Explain reincarnation/transport premises compactly; readers tolerate familiar setups when the unique advantage is clear.",
+        "For English platforms, foreground premise clarity and genre tags; avoid long cultural footnote-style exposition in the opening pitch."
+      ],
+      "caution_points": [
+        "Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.",
+        "Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.",
+        "BL/LGBTQ+ categories need tone and consent sensitivity; do not flatten identity-coded works into generic romance."
+      ]
+    }
+  ],
+  "evidence_documents_sample": {
+    "Royal Road::Trending": [
+      {
+        "id": "platform-trend::Royal Road::Trending::1",
+        "embedding_text": "US/global English Royal Road Trending rank 1 What? My “Information Club” is Actually an All-Knowing Secret Society? genre Original tags Reincarnation, Time Travel, Progression, Post Apocalyptic, Kingdom Building, Action, Drama, Fantasy, Psychological, Romance Subplot, Supernatural, Male Lead, Secret Identity, Magic, Low Fantasy, Dystopia, Attractive Lead, Modern Knowledge, Chivalry, Survival synopsis In the burning heat of Jakarta, Arlen is a broke car wash employee with one last hope, his unpublished novel The Frozen Era. Knowing that nobody reads books anymore, he decides to sell \"experience\".",
+        "context_text": "[US/global English / Royal Road / Trending] Rank 1: What? My “Information Club” is Actually an All-Knowing Secret Society?. Genre: Original. Tags: Reincarnation, Time Travel, Progression, Post Apocalyptic, Kingdom Building, Action, Drama, Fantasy, Psychological, Romance Subplot, Supernatural, Male Lead, Secret Identity, Magic, Low Fantasy, Dystopia, Attractive Lead, Modern Knowledge, Chivalry, Survival. Public metrics: followers: 248, pages: 1024, views: 86107, chapters: 109, rating: 4.24. Synopsis: In the burning heat of Jakarta, Arlen is a broke car wash employee with one last hope, his unpublished novel The Frozen Era. Knowing that nobody reads books anymore, he decides to sell \"experience\"..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Trending",
+          "ranking_basis": "platform_trending_order",
+          "rank": 1,
+          "title": "What? My “Information Club” is Actually an All-Knowing Secret Society?",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "Reincarnation",
+            "Time Travel",
+            "Progression",
+            "Post Apocalyptic",
+            "Kingdom Building",
+            "Action",
+            "Drama",
+            "Fantasy",
+            "Psychological",
+            "Romance Subplot",
+            "Supernatural",
+            "Male Lead",
+            "Secret Identity",
+            "Magic",
+            "Low Fantasy",
+            "Dystopia",
+            "Attractive Lead",
+            "Modern Knowledge",
+            "Chivalry",
+            "Survival",
+            "Local Protagonist",
+            "Monster Evolution",
+            "Apocalypse"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/159917/what-my-information-club-is-actually-an-all-knowing"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Trending::2",
+        "embedding_text": "US/global English Royal Road Trending rank 2 Prelude: To Domathra (Isekai/LitRPG/OP MC) genre Original tags LitRPG, Portal Fantasy / Isekai, Female Lead, Strong Lead, Drama, Action, Adventure, Fantasy, Reincarnation, Magic, GameLit, High Fantasy synopsis Pain. Violation. That was how Addy entered the world of Rengan.",
+        "context_text": "[US/global English / Royal Road / Trending] Rank 2: Prelude: To Domathra (Isekai/LitRPG/OP MC). Genre: Original. Tags: LitRPG, Portal Fantasy / Isekai, Female Lead, Strong Lead, Drama, Action, Adventure, Fantasy, Reincarnation, Magic, GameLit, High Fantasy. Public metrics: followers: 846, pages: 273, views: 75192, chapters: 41, rating: 4.62. Synopsis: Pain. Violation. That was how Addy entered the world of Rengan..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Trending",
+          "ranking_basis": "platform_trending_order",
+          "rank": 2,
+          "title": "Prelude: To Domathra (Isekai/LitRPG/OP MC)",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "LitRPG",
+            "Portal Fantasy / Isekai",
+            "Female Lead",
+            "Strong Lead",
+            "Drama",
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Reincarnation",
+            "Magic",
+            "GameLit",
+            "High Fantasy"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/162258/prelude-to-domathra-isekailitrpgop-mc"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Trending::3",
+        "embedding_text": "US/global English Royal Road Trending rank 3 Cyber Cultivation: When Technology meets Cultivation genre Original tags Portal Fantasy / Isekai, Progression, Strategy, Cultivation, Male Lead, Action, Adventure, Fantasy, Sci-fi, Cyberpunk, Technologically Engineered, Artificial Intelligence, Modern Knowledge, Crafting synopsis In 2030, Xia Li was cryogenically frozen. In 2532, he woke up to a world transformed.",
+        "context_text": "[US/global English / Royal Road / Trending] Rank 3: Cyber Cultivation: When Technology meets Cultivation. Genre: Original. Tags: Portal Fantasy / Isekai, Progression, Strategy, Cultivation, Male Lead, Action, Adventure, Fantasy, Sci-fi, Cyberpunk, Technologically Engineered, Artificial Intelligence, Modern Knowledge, Crafting. Public metrics: followers: 468, pages: 2430, views: 316522, chapters: 440, rating: 3.93. Synopsis: In 2030, Xia Li was cryogenically frozen. In 2532, he woke up to a world transformed..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Trending",
+          "ranking_basis": "platform_trending_order",
+          "rank": 3,
+          "title": "Cyber Cultivation: When Technology meets Cultivation",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "Portal Fantasy / Isekai",
+            "Progression",
+            "Strategy",
+            "Cultivation",
+            "Male Lead",
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Sci-fi",
+            "Cyberpunk",
+            "Technologically Engineered",
+            "Artificial Intelligence",
+            "Modern Knowledge",
+            "Crafting"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/151757/cyber-cultivation-when-technology-meets-cultivation"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Trending::4",
+        "embedding_text": "US/global English Royal Road Trending rank 4 The Wixx Chronicles: Overgeared and Underleveled [Yuri, LITRPG, ISEKAI, Progression] genre Original tags LitRPG, Portal Fantasy / Isekai, Progression, Non-Human Lead, Slice of Life, Adventure, Fantasy, Romance Subplot, Reincarnation, Female Lead, Strong Lead, Magic, GameLit, Attractive Lead, Lesbian Romance synopsis *Fresh chapter daily! (Some twice a day if the mood strikes me.)*",
+        "context_text": "[US/global English / Royal Road / Trending] Rank 4: The Wixx Chronicles: Overgeared and Underleveled [Yuri, LITRPG, ISEKAI, Progression]. Genre: Original. Tags: LitRPG, Portal Fantasy / Isekai, Progression, Non-Human Lead, Slice of Life, Adventure, Fantasy, Romance Subplot, Reincarnation, Female Lead, Strong Lead, Magic, GameLit, Attractive Lead, Lesbian Romance. Public metrics: followers: 579, pages: 742, views: 75509, chapters: 70, rating: 4.57. Synopsis: *Fresh chapter daily! (Some twice a day if the mood strikes me.)*.",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Trending",
+          "ranking_basis": "platform_trending_order",
+          "rank": 4,
+          "title": "The Wixx Chronicles: Overgeared and Underleveled [Yuri, LITRPG, ISEKAI, Progression]",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "LitRPG",
+            "Portal Fantasy / Isekai",
+            "Progression",
+            "Non-Human Lead",
+            "Slice of Life",
+            "Adventure",
+            "Fantasy",
+            "Romance Subplot",
+            "Reincarnation",
+            "Female Lead",
+            "Strong Lead",
+            "Magic",
+            "GameLit",
+            "Attractive Lead",
+            "Lesbian Romance"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/158518/the-wixx-chronicles-overgeared-and-underleveled"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Trending::5",
+        "embedding_text": "US/global English Royal Road Trending rank 5 Transcendence - One Percent a Day genre Original tags LitRPG, Portal Fantasy / Isekai, Progression, Strategy, Martial Arts, Action, Adventure, Fantasy, Horror, Reincarnation, Supernatural, Male Lead, Magic, Grimdark, High Fantasy synopsis Reborn into a ruthless world ruled by monsters, nobles, and strength, Kyle awakens with a talent unlike anything this world has ever seen.",
+        "context_text": "[US/global English / Royal Road / Trending] Rank 5: Transcendence - One Percent a Day. Genre: Original. Tags: LitRPG, Portal Fantasy / Isekai, Progression, Strategy, Martial Arts, Action, Adventure, Fantasy, Horror, Reincarnation, Supernatural, Male Lead, Magic, Grimdark, High Fantasy. Public metrics: followers: 210, pages: 185, views: 22709, chapters: 40, rating: 3.88. Synopsis: Reborn into a ruthless world ruled by monsters, nobles, and strength, Kyle awakens with a talent unlike anything this world has ever seen..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Trending",
+          "ranking_basis": "platform_trending_order",
+          "rank": 5,
+          "title": "Transcendence - One Percent a Day",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "LitRPG",
+            "Portal Fantasy / Isekai",
+            "Progression",
+            "Strategy",
+            "Martial Arts",
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Horror",
+            "Reincarnation",
+            "Supernatural",
+            "Male Lead",
+            "Magic",
+            "Grimdark",
+            "High Fantasy"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/161831/transcendence-one-percent-a-day"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Trending::6",
+        "embedding_text": "US/global English Royal Road Trending rank 6 I Can See Health Bars [An Eldritch Apocalypse LitRPG] genre Original tags LitRPG, Progression, Post Apocalyptic, Anti-Hero Lead, Male Lead, Action, Adventure, Fantasy, Sci-fi, Multiple Lovers, Supernatural, Hard Sci-fi, Attractive Lead, Magitech, Survival, Apocalypse synopsis The story takes place in a sprawling Eastern metropolis swallowed by energy pollution...",
+        "context_text": "[US/global English / Royal Road / Trending] Rank 6: I Can See Health Bars [An Eldritch Apocalypse LitRPG]. Genre: Original. Tags: LitRPG, Progression, Post Apocalyptic, Anti-Hero Lead, Male Lead, Action, Adventure, Fantasy, Sci-fi, Multiple Lovers, Supernatural, Hard Sci-fi, Attractive Lead, Magitech, Survival, Apocalypse. Public metrics: followers: 317, pages: 714, views: 112002, chapters: 133, rating: 4.32. Synopsis: The story takes place in a sprawling Eastern metropolis swallowed by energy pollution....",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Trending",
+          "ranking_basis": "platform_trending_order",
+          "rank": 6,
+          "title": "I Can See Health Bars [An Eldritch Apocalypse LitRPG]",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "LitRPG",
+            "Progression",
+            "Post Apocalyptic",
+            "Anti-Hero Lead",
+            "Male Lead",
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Sci-fi",
+            "Multiple Lovers",
+            "Supernatural",
+            "Hard Sci-fi",
+            "Attractive Lead",
+            "Magitech",
+            "Survival",
+            "Apocalypse"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/159185/i-can-see-health-bars-an-eldritch-apocalypse-litrpg"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Trending::7",
+        "embedding_text": "US/global English Royal Road Trending rank 7 Old Republic: Overlord genre Fan Fiction tags Reincarnation, Progression, Anti-Hero Lead, Space Opera, War and Military, Action, Adventure, Short Story, Cyberpunk, Supernatural, Steampunk, Villainous Lead, Kingdom Building, Technologically Engineered, Dystopia, Artificial Intelligence, Anti-Villain Lead synopsis A burnt-out IT manager from future Earth dies mid-click and awakens in the Old Republic era inside the shell of a Sith medical droid, stranded on a warship balanced between victory and annihilation. In a galaxy ruled by Force dynasties, slavery, and endless cycles of war, he discovers that his mind can read systems like living code, predict outcomes, and exploit the hidden machinery beneath power itself. What begins as a desperate struggle to survive as expendable property becomes something far more dangerous: a methodical campaign to steal forbidden knowledge, master body design and essence transfer, and forge a new existence beyond the limits of both man and machine. But as he rises from hidden survivor to myth, ruler, and anomaly, the galaxy itself begins to react, because he is no longer merely defying Sith and Jedi, but pushing against the deeper cycle of reality itself.",
+        "context_text": "[US/global English / Royal Road / Trending] Rank 7: Old Republic: Overlord. Genre: Fan Fiction. Tags: Reincarnation, Progression, Anti-Hero Lead, Space Opera, War and Military, Action, Adventure, Short Story, Cyberpunk, Supernatural, Steampunk, Villainous Lead, Kingdom Building, Technologically Engineered, Dystopia, Artificial Intelligence, Anti-Villain Lead. Public metrics: followers: 414, pages: 1547, views: 121907, chapters: 285, rating: 4.04. Synopsis: A burnt-out IT manager from future Earth dies mid-click and awakens in the Old Republic era inside the shell of a Sith medical droid, stranded on a warship balanced between victory and annihilation. In a galaxy ruled by Force dynasties, slavery, and endless cycles of war, he discovers that his mind can read systems like living code, predict outcomes, and exploit the hidden machinery beneath power itself. What begins as a desperate struggle to survive as expendable property becomes something far more dangerous: a methodical campaign to steal forbidden knowledge, master body design and essence transfer, and forge a new existence beyond the limits of both man and machine. But as he rises from hidden survivor to myth, ruler, and anomaly, the galaxy itself begins to react, because he is no longer merely defying Sith and Jedi, but pushing against the deeper cycle of reality itself..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Trending",
+          "ranking_basis": "platform_trending_order",
+          "rank": 7,
+          "title": "Old Republic: Overlord",
+          "genre": "Fan Fiction",
+          "genres": [
+            "Fan Fiction"
+          ],
+          "tags": [
+            "Reincarnation",
+            "Progression",
+            "Anti-Hero Lead",
+            "Space Opera",
+            "War and Military",
+            "Action",
+            "Adventure",
+            "Short Story",
+            "Cyberpunk",
+            "Supernatural",
+            "Steampunk",
+            "Villainous Lead",
+            "Kingdom Building",
+            "Technologically Engineered",
+            "Dystopia",
+            "Artificial Intelligence",
+            "Anti-Villain Lead"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/142103/old-republic-overlord"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Trending::8",
+        "embedding_text": "US/global English Royal Road Trending rank 8 The Cold Moon Inquisitor genre Original tags Anti-Hero Lead, Wuxia, Grimdark, Female Lead, Secret Identity, Action, Adventure, Fantasy, Romance, Romance Subplot, Martial Arts, Supernatural, Strong Lead, Cultivation, High Fantasy, Mythos, Dystopia synopsis Tired of copy-paste Xianxia loops with infinite level-ups and happy endings? If so, this is exactly the book you need.",
+        "context_text": "[US/global English / Royal Road / Trending] Rank 8: The Cold Moon Inquisitor. Genre: Original. Tags: Anti-Hero Lead, Wuxia, Grimdark, Female Lead, Secret Identity, Action, Adventure, Fantasy, Romance, Romance Subplot, Martial Arts, Supernatural, Strong Lead, Cultivation, High Fantasy, Mythos, Dystopia. Public metrics: followers: 84, pages: 573, views: 16875, chapters: 119, rating: 3.9. Synopsis: Tired of copy-paste Xianxia loops with infinite level-ups and happy endings? If so, this is exactly the book you need..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Trending",
+          "ranking_basis": "platform_trending_order",
+          "rank": 8,
+          "title": "The Cold Moon Inquisitor",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "Anti-Hero Lead",
+            "Wuxia",
+            "Grimdark",
+            "Female Lead",
+            "Secret Identity",
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Romance",
+            "Romance Subplot",
+            "Martial Arts",
+            "Supernatural",
+            "Strong Lead",
+            "Cultivation",
+            "High Fantasy",
+            "Mythos",
+            "Dystopia"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/159325/the-cold-moon-inquisitor"
+        }
+      }
+    ],
+    "Royal Road::Popular this week": [
+      {
+        "id": "platform-trend::Royal Road::Popular this week::1",
+        "embedding_text": "US/global English Royal Road Popular this week rank 1 Chaotic Craftsman Worships The Cube genre Original tags LitRPG, Portal Fantasy / Isekai, Progression, Sci-fi, Action, Adventure, Fantasy, Crafting, Dungeon Crawler, GameLit, Magic synopsis Summoned after an unfortunate accident in hopes they could protect the world from a coming threat, Ben and his classmates are gifted another chance at life. With fame and fortune promised to whoever is willing to fight for the sake of the world it doesn't seem like a bad deal, there's just one small problem. Ben wasn't blessed with any magic or combat skills, just crafting and enchanting. While the skills themselves aren't useless they also aren't seen as being necessary to the coming war. Now not needed and alone Ben tries to find a place in the world while meeting some of its colourful characters along the way.",
+        "context_text": "[US/global English / Royal Road / Popular this week] Rank 1: Chaotic Craftsman Worships The Cube. Genre: Original. Tags: LitRPG, Portal Fantasy / Isekai, Progression, Sci-fi, Action, Adventure, Fantasy, Crafting, Dungeon Crawler, GameLit, Magic. Public metrics: followers: 18789, pages: 7454, views: 46999296, chapters: 1061, rating: 4.59. Synopsis: Summoned after an unfortunate accident in hopes they could protect the world from a coming threat, Ben and his classmates are gifted another chance at life. With fame and fortune promised to whoever is willing to fight for the sake of the world it doesn't seem like a bad deal, there's just one small problem. Ben wasn't blessed with any magic or combat skills, just crafting and enchanting. While the skills themselves aren't useless they also aren't seen as being necessary to the coming war. Now not needed and alone Ben tries to find a place in the world while meeting some of its colourful characters along the way..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Popular this week",
+          "ranking_basis": "platform_weekly_popular_order",
+          "rank": 1,
+          "title": "Chaotic Craftsman Worships The Cube",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "LitRPG",
+            "Portal Fantasy / Isekai",
+            "Progression",
+            "Sci-fi",
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Crafting",
+            "Dungeon Crawler",
+            "GameLit",
+            "Magic"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/41656/chaotic-craftsman-worships-the-cube"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Popular this week::2",
+        "embedding_text": "US/global English Royal Road Popular this week rank 2 Path to Transcendence genre Original tags LitRPG, Portal Fantasy / Isekai, Cultivation, Slice of Life, Action, Adventure, Fantasy, Magic, Reincarnation, School Life synopsis A second chance. An opportunity to delve down the Path to Transcendence, where Tiers and Skills reign supreme.",
+        "context_text": "[US/global English / Royal Road / Popular this week] Rank 2: Path to Transcendence. Genre: Original. Tags: LitRPG, Portal Fantasy / Isekai, Cultivation, Slice of Life, Action, Adventure, Fantasy, Magic, Reincarnation, School Life. Public metrics: followers: 18670, pages: 5162, views: 26092964, chapters: 663, rating: 4.46. Synopsis: A second chance. An opportunity to delve down the Path to Transcendence, where Tiers and Skills reign supreme..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Popular this week",
+          "ranking_basis": "platform_weekly_popular_order",
+          "rank": 2,
+          "title": "Path to Transcendence",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "LitRPG",
+            "Portal Fantasy / Isekai",
+            "Cultivation",
+            "Slice of Life",
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Magic",
+            "Reincarnation",
+            "School Life"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/86047/path-to-transcendence"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Popular this week::3",
+        "embedding_text": "US/global English Royal Road Popular this week rank 3 (B1 STUBBING mid-June!!!) Runeblade: A Delving & Skill Merging LitRPG genre Original tags LitRPG, Progression, Post Apocalyptic, Male Lead, Strong Lead, Action, Adventure, Fantasy, Apocalypse, Dungeon Crawler, GameLit, Local Protagonist synopsis Kaius just wanted to unlock his class - instead, he restarted the apocalypse.",
+        "context_text": "[US/global English / Royal Road / Popular this week] Rank 3: (B1 STUBBING mid-June!!!) Runeblade: A Delving & Skill Merging LitRPG. Genre: Original. Tags: LitRPG, Progression, Post Apocalyptic, Male Lead, Strong Lead, Action, Adventure, Fantasy, Apocalypse, Dungeon Crawler, GameLit, Local Protagonist. Public metrics: followers: 17506, pages: 4723, views: 18718436, chapters: 584, rating: 4.63. Synopsis: Kaius just wanted to unlock his class - instead, he restarted the apocalypse..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Popular this week",
+          "ranking_basis": "platform_weekly_popular_order",
+          "rank": 3,
+          "title": "(B1 STUBBING mid-June!!!) Runeblade: A Delving & Skill Merging LitRPG",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "LitRPG",
+            "Progression",
+            "Post Apocalyptic",
+            "Male Lead",
+            "Strong Lead",
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Apocalypse",
+            "Dungeon Crawler",
+            "GameLit",
+            "Local Protagonist"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/94966/b1-stubbing-mid-june-runeblade-a-delving-skill"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Popular this week::4",
+        "embedding_text": "US/global English Royal Road Popular this week rank 4 Sky Pride genre Original tags Progression, Wuxia, Male Lead, Action, Adventure, Fantasy, Cultivation, Local Protagonist, Martial Arts, Supernatural synopsis What does it take to climb out of the trash and into the sky?",
+        "context_text": "[US/global English / Royal Road / Popular this week] Rank 4: Sky Pride. Genre: Original. Tags: Progression, Wuxia, Male Lead, Action, Adventure, Fantasy, Cultivation, Local Protagonist, Martial Arts, Supernatural. Public metrics: followers: 24121, pages: 2803, views: 15179995, chapters: 335, rating: 4.81. Synopsis: What does it take to climb out of the trash and into the sky?.",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Popular this week",
+          "ranking_basis": "platform_weekly_popular_order",
+          "rank": 4,
+          "title": "Sky Pride",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "Progression",
+            "Wuxia",
+            "Male Lead",
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Cultivation",
+            "Local Protagonist",
+            "Martial Arts",
+            "Supernatural"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/107917/sky-pride"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Popular this week::5",
+        "embedding_text": "US/global English Royal Road Popular this week rank 5 The Runesmith genre Original tags LitRPG, Portal Fantasy / Isekai, Kingdom Building, Male Lead, Slice of Life, Action, Adventure, Fantasy, Dungeon Crawler, GameLit, High Fantasy, Magic, Mythos synopsis Other Novel you might like: Heavy Metal [ A Monster Evolution LitRPG ]",
+        "context_text": "[US/global English / Royal Road / Popular this week] Rank 5: The Runesmith. Genre: Original. Tags: LitRPG, Portal Fantasy / Isekai, Kingdom Building, Male Lead, Slice of Life, Action, Adventure, Fantasy, Dungeon Crawler, GameLit, High Fantasy, Magic, Mythos. Public metrics: followers: 27140, pages: 7140, views: 47151788, chapters: 680, rating: 4.36. Synopsis: Other Novel you might like: Heavy Metal [ A Monster Evolution LitRPG ].",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Popular this week",
+          "ranking_basis": "platform_weekly_popular_order",
+          "rank": 5,
+          "title": "The Runesmith",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "LitRPG",
+            "Portal Fantasy / Isekai",
+            "Kingdom Building",
+            "Male Lead",
+            "Slice of Life",
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Dungeon Crawler",
+            "GameLit",
+            "High Fantasy",
+            "Magic",
+            "Mythos"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/33844/the-runesmith"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Popular this week::6",
+        "embedding_text": "US/global English Royal Road Popular this week rank 6 Cultivation System: Elder Edition genre Original tags LitRPG, Portal Fantasy / Isekai, Time Travel, Progression, Strategy, Action, Adventure, Comedy, Fantasy, Cultivation, GameLit, High Fantasy, Magic, Male Lead, Martial Arts, Multiple Lead Characters, Reincarnation, Slice of Life, Strong Lead, Supernatural synopsis [Action + System + Comedy + MC teaches protagonist disciples + Isekai + Cultivation]",
+        "context_text": "[US/global English / Royal Road / Popular this week] Rank 6: Cultivation System: Elder Edition. Genre: Original. Tags: LitRPG, Portal Fantasy / Isekai, Time Travel, Progression, Strategy, Action, Adventure, Comedy, Fantasy, Cultivation, GameLit, High Fantasy, Magic, Male Lead, Martial Arts, Multiple Lead Characters, Reincarnation, Slice of Life, Strong Lead, Supernatural. Public metrics: followers: 6588, pages: 1721, views: 5398486, chapters: 378, rating: 4.64. Synopsis: [Action + System + Comedy + MC teaches protagonist disciples + Isekai + Cultivation].",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Popular this week",
+          "ranking_basis": "platform_weekly_popular_order",
+          "rank": 6,
+          "title": "Cultivation System: Elder Edition",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "LitRPG",
+            "Portal Fantasy / Isekai",
+            "Time Travel",
+            "Progression",
+            "Strategy",
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy",
+            "Cultivation",
+            "GameLit",
+            "High Fantasy",
+            "Magic",
+            "Male Lead",
+            "Martial Arts",
+            "Multiple Lead Characters",
+            "Reincarnation",
+            "Slice of Life",
+            "Strong Lead",
+            "Supernatural"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/117531/cultivation-system-elder-edition"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Popular this week::7",
+        "embedding_text": "US/global English Royal Road Popular this week rank 7 Super Supportive genre Original tags Progression, Super Heroes, Sci-fi, Slice of Life, Drama, Fantasy, First Contact, Low Fantasy, Magic, School Life, Soft Sci-fi synopsis This story is about: The daily life of a teenager named Alden. He's growing up, slowly growing his powers, and figuring out who he really wants to be in a universe with Systems, superheroes, and extraterrestrial wizards.",
+        "context_text": "[US/global English / Royal Road / Popular this week] Rank 7: Super Supportive. Genre: Original. Tags: Progression, Super Heroes, Sci-fi, Slice of Life, Drama, Fantasy, First Contact, Low Fantasy, Magic, School Life, Soft Sci-fi. Public metrics: followers: 34148, pages: 5112, views: 32568743, chapters: 292, rating: 4.76. Synopsis: This story is about: The daily life of a teenager named Alden. He's growing up, slowly growing his powers, and figuring out who he really wants to be in a universe with Systems, superheroes, and extraterrestrial wizards..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Popular this week",
+          "ranking_basis": "platform_weekly_popular_order",
+          "rank": 7,
+          "title": "Super Supportive",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "Progression",
+            "Super Heroes",
+            "Sci-fi",
+            "Slice of Life",
+            "Drama",
+            "Fantasy",
+            "First Contact",
+            "Low Fantasy",
+            "Magic",
+            "School Life",
+            "Soft Sci-fi"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/63759/super-supportive"
+        }
+      },
+      {
+        "id": "platform-trend::Royal Road::Popular this week::8",
+        "embedding_text": "US/global English Royal Road Popular this week rank 8 The Hundred Reigns [Timeloop LitRPG] genre Original tags LitRPG, Time Loop, Progression, Kingdom Building, Male Lead, Action, Adventure, Drama, Fantasy, Crafting, GameLit, High Fantasy, Local Protagonist, Magic, Ruling Class, Strategy, Strong Lead, Supernatural, Time Travel synopsis A hundred tries to get it right. No more, no less.",
+        "context_text": "[US/global English / Royal Road / Popular this week] Rank 8: The Hundred Reigns [Timeloop LitRPG]. Genre: Original. Tags: LitRPG, Time Loop, Progression, Kingdom Building, Male Lead, Action, Adventure, Drama, Fantasy, Crafting, GameLit, High Fantasy, Local Protagonist, Magic, Ruling Class, Strategy, Strong Lead, Supernatural, Time Travel. Public metrics: followers: 13377, pages: 2034, views: 4060695, chapters: 151, rating: 4.77. Synopsis: A hundred tries to get it right. No more, no less..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Royal Road",
+          "collection": "Popular this week",
+          "ranking_basis": "platform_weekly_popular_order",
+          "rank": 8,
+          "title": "The Hundred Reigns [Timeloop LitRPG]",
+          "genre": "Original",
+          "genres": [
+            "Original"
+          ],
+          "tags": [
+            "LitRPG",
+            "Time Loop",
+            "Progression",
+            "Kingdom Building",
+            "Male Lead",
+            "Action",
+            "Adventure",
+            "Drama",
+            "Fantasy",
+            "Crafting",
+            "GameLit",
+            "High Fantasy",
+            "Local Protagonist",
+            "Magic",
+            "Ruling Class",
+            "Strategy",
+            "Strong Lead",
+            "Supernatural",
+            "Time Travel"
+          ],
+          "source_url": "https://www.royalroad.com/fiction/139212/the-hundred-reigns-timeloop-litrpg"
+        }
+      }
+    ],
+    "Tapas::Novels popular menu subtab 24": [
+      {
+        "id": "platform-trend::Tapas::Novels popular menu subtab 24::1",
+        "embedding_text": "US/global English Tapas Novels popular menu subtab 24 rank 1 Debut or Die! genre Drama tags synopsis After a night of drinking, aspiring civil servant Ryu Gunwoo passes out, only to awaken three years in the past in the body of a young man named Park Moondae. Before he can even assess the situation, he's given a mission: Debut or Die! Now, Moondae has one year to debut as an idol or face his doom. Luckily, he's able to snag a spot on the famous survival program \"Idol Inc.,\" but with his skills so low and the competition so high, does Moondae stand a chance at becoming a shining star?",
+        "context_text": "[US/global English / Tapas / Novels popular menu subtab 24] Rank 1: Debut or Die!. Genre: Drama. Tags: none observed. Public metrics: views: 1574566, subscribers: 13826, likes: 176397, platform_rank: 1. Synopsis: After a night of drinking, aspiring civil servant Ryu Gunwoo passes out, only to awaken three years in the past in the body of a young man named Park Moondae. Before he can even assess the situation, he's given a mission: Debut or Die! Now, Moondae has one year to debut as an idol or face his doom. Luckily, he's able to snag a spot on the famous survival program \"Idol Inc.,\" but with his skills so low and the competition so high, does Moondae stand a chance at becoming a shining star?.",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Tapas",
+          "collection": "Novels popular menu subtab 24",
+          "ranking_basis": "platform_popular_novel_order",
+          "rank": 1,
+          "title": "Debut or Die!",
+          "genre": "Drama",
+          "genres": [
+            "Drama"
+          ],
+          "tags": [],
+          "source_url": "https://tapas.io/series/260446"
+        }
+      },
+      {
+        "id": "platform-trend::Tapas::Novels popular menu subtab 24::2",
+        "embedding_text": "US/global English Tapas Novels popular menu subtab 24 rank 2 I Shall Master This Family genre Romance Fantasy tags synopsis The great Lombardi family was once at the top of the empire. After the death of its patriarch, the fate of the family and that of Firentia, born from a Lombardi and a peasant, fall to ruin at the hands of her useless and cruel cousins. But when she’s reincarnated as her seven-year-old self, she’ll work to protect the family’s honor, gain her grandpa Lulac’s favor, and prevent her own father’s death. In this lifetime, there’s only one way for her to win: become the head of their mighty household.",
+        "context_text": "[US/global English / Tapas / Novels popular menu subtab 24] Rank 2: I Shall Master This Family. Genre: Romance Fantasy. Tags: none observed. Public metrics: views: 892448, subscribers: 8153, likes: 63874, platform_rank: 2. Synopsis: The great Lombardi family was once at the top of the empire. After the death of its patriarch, the fate of the family and that of Firentia, born from a Lombardi and a peasant, fall to ruin at the hands of her useless and cruel cousins. But when she’s reincarnated as her seven-year-old self, she’ll work to protect the family’s honor, gain her grandpa Lulac’s favor, and prevent her own father’s death. In this lifetime, there’s only one way for her to win: become the head of their mighty household..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Tapas",
+          "collection": "Novels popular menu subtab 24",
+          "ranking_basis": "platform_popular_novel_order",
+          "rank": 2,
+          "title": "I Shall Master This Family",
+          "genre": "Romance Fantasy",
+          "genres": [
+            "Romance Fantasy"
+          ],
+          "tags": [],
+          "source_url": "https://tapas.io/series/286870"
+        }
+      },
+      {
+        "id": "platform-trend::Tapas::Novels popular menu subtab 24::3",
+        "embedding_text": "US/global English Tapas Novels popular menu subtab 24 rank 3 The Vampire's Last Omega genre BL tags synopsis After losing the vampire war, humans were downgraded in society as a blood source. The survivors lived in the wild like animals. Alphas and omegas were prized. Teru was a rare omega and the last. After being captured, he retaliates against the alpha vampire who bought him. Prince Kieran has a shameful secret—he can't drink blood... until he finds a human omega for sale. Teru had a choice—will he try to return to his pack or give everything up for a forbidden love that’s more than meets the eye?",
+        "context_text": "[US/global English / Tapas / Novels popular menu subtab 24] Rank 3: The Vampire's Last Omega. Genre: BL. Tags: none observed. Public metrics: views: 1844314, subscribers: 11852, likes: 114337, platform_rank: 3. Synopsis: After losing the vampire war, humans were downgraded in society as a blood source. The survivors lived in the wild like animals. Alphas and omegas were prized. Teru was a rare omega and the last. After being captured, he retaliates against the alpha vampire who bought him. Prince Kieran has a shameful secret—he can't drink blood... until he finds a human omega for sale. Teru had a choice—will he try to return to his pack or give everything up for a forbidden love that’s more than meets the eye?.",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Tapas",
+          "collection": "Novels popular menu subtab 24",
+          "ranking_basis": "platform_popular_novel_order",
+          "rank": 3,
+          "title": "The Vampire's Last Omega",
+          "genre": "BL",
+          "genres": [
+            "BL"
+          ],
+          "tags": [],
+          "source_url": "https://tapas.io/series/221210"
+        }
+      },
+      {
+        "id": "platform-trend::Tapas::Novels popular menu subtab 24::4",
+        "embedding_text": "US/global English Tapas Novels popular menu subtab 24 rank 4 The Villainess Flips the Script! genre Romance Fantasy tags synopsis I woke up inside my favorite novel, not as the protagonist, Luca Winterwald, but as Judith, his abusive aunt and the first character to die—time for a rewrite! I’ll hand Luca off to his loving, long-lost uncle as scripted, and then live my own life far from danger. At least, that was the plan. When his uncle arrives, Luca suddenly calls out, “Don’t leave!” Now, I must protect Luca from impending family tragedy, raise him to become the hero, and turn this villainess’s ending upside down!",
+        "context_text": "[US/global English / Tapas / Novels popular menu subtab 24] Rank 4: The Villainess Flips the Script!. Genre: Romance Fantasy. Tags: none observed. Public metrics: views: 643337, subscribers: 7381, likes: 41619, platform_rank: 4. Synopsis: I woke up inside my favorite novel, not as the protagonist, Luca Winterwald, but as Judith, his abusive aunt and the first character to die—time for a rewrite! I’ll hand Luca off to his loving, long-lost uncle as scripted, and then live my own life far from danger. At least, that was the plan. When his uncle arrives, Luca suddenly calls out, “Don’t leave!” Now, I must protect Luca from impending family tragedy, raise him to become the hero, and turn this villainess’s ending upside down!.",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Tapas",
+          "collection": "Novels popular menu subtab 24",
+          "ranking_basis": "platform_popular_novel_order",
+          "rank": 4,
+          "title": "The Villainess Flips the Script!",
+          "genre": "Romance Fantasy",
+          "genres": [
+            "Romance Fantasy"
+          ],
+          "tags": [],
+          "source_url": "https://tapas.io/series/267012"
+        }
+      },
+      {
+        "id": "platform-trend::Tapas::Novels popular menu subtab 24::5",
+        "embedding_text": "US/global English Tapas Novels popular menu subtab 24 rank 5 The Perks of Being an S-Class Heroine genre Romance Fantasy tags synopsis On the outside, Ailette Rodeline is an adorable child prodigy. Cooking, brewing tea, alchemy; you name it, she can do it. But this little girl has a big secret: Ailette is a transmigrator! After dying prematurely in her past life, she becomes a character whose world is destined for destruction. With all odds stacked against her, Ailette must figure out how to survive before her life is ripped from her again. Fortunately for her, she finds her salvation in… an insurance package?",
+        "context_text": "[US/global English / Tapas / Novels popular menu subtab 24] Rank 5: The Perks of Being an S-Class Heroine. Genre: Romance Fantasy. Tags: none observed. Public metrics: views: 1119881, subscribers: 9674, likes: 108628, platform_rank: 5. Synopsis: On the outside, Ailette Rodeline is an adorable child prodigy. Cooking, brewing tea, alchemy; you name it, she can do it. But this little girl has a big secret: Ailette is a transmigrator! After dying prematurely in her past life, she becomes a character whose world is destined for destruction. With all odds stacked against her, Ailette must figure out how to survive before her life is ripped from her again. Fortunately for her, she finds her salvation in… an insurance package?.",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Tapas",
+          "collection": "Novels popular menu subtab 24",
+          "ranking_basis": "platform_popular_novel_order",
+          "rank": 5,
+          "title": "The Perks of Being an S-Class Heroine",
+          "genre": "Romance Fantasy",
+          "genres": [
+            "Romance Fantasy"
+          ],
+          "tags": [],
+          "source_url": "https://tapas.io/series/267008"
+        }
+      },
+      {
+        "id": "platform-trend::Tapas::Novels popular menu subtab 24::6",
+        "embedding_text": "US/global English Tapas Novels popular menu subtab 24 rank 6 The Cruelty of Salvation genre Romance Fantasy tags synopsis To Prince Noah Astrid, Olivia Liberty is an angel sent from above. As their continent's first female university graduate, the papers are all over her, and he can finally focus on polo and liberating himself from his royal family. But she has a secret—she's the inventor of the revolutionary Magic Dome who has to stay hidden behind the male name \"Oliver.\" As husband and wife, they may be able to help each other—as long as their cruel society and inconvenient attraction don't get in the way.",
+        "context_text": "[US/global English / Tapas / Novels popular menu subtab 24] Rank 6: The Cruelty of Salvation. Genre: Romance Fantasy. Tags: none observed. Public metrics: views: 379032, subscribers: 4410, likes: 19646, platform_rank: 6. Synopsis: To Prince Noah Astrid, Olivia Liberty is an angel sent from above. As their continent's first female university graduate, the papers are all over her, and he can finally focus on polo and liberating himself from his royal family. But she has a secret—she's the inventor of the revolutionary Magic Dome who has to stay hidden behind the male name \"Oliver.\" As husband and wife, they may be able to help each other—as long as their cruel society and inconvenient attraction don't get in the way..",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Tapas",
+          "collection": "Novels popular menu subtab 24",
+          "ranking_basis": "platform_popular_novel_order",
+          "rank": 6,
+          "title": "The Cruelty of Salvation",
+          "genre": "Romance Fantasy",
+          "genres": [
+            "Romance Fantasy"
+          ],
+          "tags": [],
+          "source_url": "https://tapas.io/series/280663"
+        }
+      },
+      {
+        "id": "platform-trend::Tapas::Novels popular menu subtab 24::7",
+        "embedding_text": "US/global English Tapas Novels popular menu subtab 24 rank 7 The 4th Princess Just Wants To Rot genre Romance Fantasy tags synopsis Sophia Elise the Eighth is everything a princess of the Imperium should be: intelligent, demure, and terrifying. So when she’s forced to marry the last prince of a dying Dominion, everyone expects a bloodbath. Instead? She lies in bed eating donuts, reading bad novels. To live her dream life, Sophia must gaslight schemers, gatekeep her reputation, and girlboss her way through a crumbling empire…all while catching feelings for the tragic prince she was forced to marry. \"I just want to rot in peace!\"",
+        "context_text": "[US/global English / Tapas / Novels popular menu subtab 24] Rank 7: The 4th Princess Just Wants To Rot. Genre: Romance Fantasy. Tags: none observed. Public metrics: views: 84037, subscribers: 1461, likes: 1956, platform_rank: 7. Synopsis: Sophia Elise the Eighth is everything a princess of the Imperium should be: intelligent, demure, and terrifying. So when she’s forced to marry the last prince of a dying Dominion, everyone expects a bloodbath. Instead? She lies in bed eating donuts, reading bad novels. To live her dream life, Sophia must gaslight schemers, gatekeep her reputation, and girlboss her way through a crumbling empire…all while catching feelings for the tragic prince she was forced to marry. \"I just want to rot in peace!\".",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Tapas",
+          "collection": "Novels popular menu subtab 24",
+          "ranking_basis": "platform_popular_novel_order",
+          "rank": 7,
+          "title": "The 4th Princess Just Wants To Rot",
+          "genre": "Romance Fantasy",
+          "genres": [
+            "Romance Fantasy"
+          ],
+          "tags": [],
+          "source_url": "https://tapas.io/series/326697"
+        }
+      },
+      {
+        "id": "platform-trend::Tapas::Novels popular menu subtab 24::8",
+        "embedding_text": "US/global English Tapas Novels popular menu subtab 24 rank 8 Roxana genre Romance Fantasy tags synopsis Kidnapping, murder, and risqué relationships! Within the scandalous pages of The Abysmal Flower, the downfall of Roxana Agrece’s criminal family is already foretold. So when Cassis Pedelian, the heroine’s older brother, is kidnapped by Roxana’s father, she can either wait for the heroine’s revenge... or take matters into her own hands, since Cassis is the key to her survival. But with deceitful characters on all sides, can Roxana and Cassis trust each other enough to bring down the brutal Agreces?",
+        "context_text": "[US/global English / Tapas / Novels popular menu subtab 24] Rank 8: Roxana. Genre: Romance Fantasy. Tags: none observed. Public metrics: views: 1049165, subscribers: 13094, likes: 75131, platform_rank: 8. Synopsis: Kidnapping, murder, and risqué relationships! Within the scandalous pages of The Abysmal Flower, the downfall of Roxana Agrece’s criminal family is already foretold. So when Cassis Pedelian, the heroine’s older brother, is kidnapped by Roxana’s father, she can either wait for the heroine’s revenge... or take matters into her own hands, since Cassis is the key to her survival. But with deceitful characters on all sides, can Roxana and Cassis trust each other enough to bring down the brutal Agreces?.",
+        "metadata": {
+          "country": "US/global English",
+          "platform": "Tapas",
+          "collection": "Novels popular menu subtab 24",
+          "ranking_basis": "platform_popular_novel_order",
+          "rank": 8,
+          "title": "Roxana",
+          "genre": "Romance Fantasy",
+          "genres": [
+            "Romance Fantasy"
+          ],
+          "tags": [],
+          "source_url": "https://tapas.io/series/266604"
+        }
+      }
+    ],
+    "Shosetsuka ni Naro / Yomou::Weekly ranking": [
+      {
+        "id": "platform-trend::Shosetsuka ni Naro / Yomou::Weekly ranking::1",
+        "embedding_text": "Japan Shosetsuka ni Naro / Yomou Weekly ranking rank 1 第一部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜 genre 異世界〔恋愛〕 tags 異世界転生, ほのぼの, 女主人公, 学園, 中世, チート, 魔法, 日常, ハッピーエンド, 青春, ゲーム, 乙女ゲーム, ざまぁ synopsis 入学式の最中、リベルタは自分が乙女ゲームの当て馬令嬢である事を思い出した。 壇上には、将来彼女をゴミクズのように捨てる幼馴染のドS細マッチョ眼鏡男子のフレルトが新入生代表の挨拶で注目を集めている。 前世で彼女を重課金廃人にまで落した張本人から逃げることを決めたリベルタは、様々な人間と出会い、人間的成長を見せていく。 一方のフレルトは、リベルタが居なくなったことで徐々に順調だった生活に綻びが見えるようになった。 今更ながら、リベルタの存在価値を知り、利用しようと近づこうとするが、彼女の『お友達』が、それを許すはずもなかった。 これは、すっかり乙女ゲームなど忘れて日々を楽しむリベルタと彼女を守るためなら手段を選ばないお友達一同のオートマチック復讐劇。 そして、やっと出会えた本気で愛せる婚約者と結ばれるまでのお話。",
+        "context_text": "[Japan / Shosetsuka ni Naro / Yomou / Weekly ranking] Rank 1: 第一部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜. Genre: 異世界〔恋愛〕. Tags: 異世界転生, ほのぼの, 女主人公, 学園, 中世, チート, 魔法, 日常, ハッピーエンド, 青春, ゲーム, 乙女ゲーム, ざまぁ. Public metrics: weekly_points: 16688, episodes: 26, characters: 71520. Synopsis: 入学式の最中、リベルタは自分が乙女ゲームの当て馬令嬢である事を思い出した。 壇上には、将来彼女をゴミクズのように捨てる幼馴染のドS細マッチョ眼鏡男子のフレルトが新入生代表の挨拶で注目を集めている。 前世で彼女を重課金廃人にまで落した張本人から逃げることを決めたリベルタは、様々な人間と出会い、人間的成長を見せていく。 一方のフレルトは、リベルタが居なくなったことで徐々に順調だった生活に綻びが見えるようになった。 今更ながら、リベルタの存在価値を知り、利用しようと近づこうとするが、彼女の『お友達』が、それを許すはずもなかった。 これは、すっかり乙女ゲームなど忘れて日々を楽しむリベルタと彼女を守るためなら手段を選ばないお友達一同のオートマチック復讐劇。 そして、やっと出会えた本気で愛せる婚約者と結ばれるまでのお話。.",
+        "metadata": {
+          "country": "Japan",
+          "platform": "Shosetsuka ni Naro / Yomou",
+          "collection": "Weekly ranking",
+          "ranking_basis": "weekly_ranking_order",
+          "rank": 1,
+          "title": "第一部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜",
+          "genre": "異世界〔恋愛〕",
+          "genres": [
+            "異世界〔恋愛〕"
+          ],
+          "tags": [
+            "異世界転生",
+            "ほのぼの",
+            "女主人公",
+            "学園",
+            "中世",
+            "チート",
+            "魔法",
+            "日常",
+            "ハッピーエンド",
+            "青春",
+            "ゲーム",
+            "乙女ゲーム",
+            "ざまぁ"
+          ],
+          "source_url": "https://ncode.syosetu.com/n3126mf/"
+        }
+      },
+      {
+        "id": "platform-trend::Shosetsuka ni Naro / Yomou::Weekly ranking::2",
+        "embedding_text": "Japan Shosetsuka ni Naro / Yomou Weekly ranking rank 2 テンプレートが立ちはだかる日常 genre 異世界〔恋愛〕 tags テンプレート, ざまぁ？, 婚約破棄, 夜会, 学園時代もあり synopsis 超スピード政略結婚をした、天使な容貌の旦那様・ルシウスと言葉が鋭すぎる若奥様・ミュリエル。初っ端のアレはアレとして、テンプレートを乗り越えて仲良く過ごす二人に、それでも各種テンプレートが立ちはだかる日常のお話。 ＊＊＊＊＊＊＊＊ 出来そうなので連載型にしました。 詳しくはシリーズ内前作をご確認ください。",
+        "context_text": "[Japan / Shosetsuka ni Naro / Yomou / Weekly ranking] Rank 2: テンプレートが立ちはだかる日常. Genre: 異世界〔恋愛〕. Tags: テンプレート, ざまぁ？, 婚約破棄, 夜会, 学園時代もあり. Public metrics: weekly_points: 10766, episodes: 18, characters: 72552. Synopsis: 超スピード政略結婚をした、天使な容貌の旦那様・ルシウスと言葉が鋭すぎる若奥様・ミュリエル。初っ端のアレはアレとして、テンプレートを乗り越えて仲良く過ごす二人に、それでも各種テンプレートが立ちはだかる日常のお話。 ＊＊＊＊＊＊＊＊ 出来そうなので連載型にしました。 詳しくはシリーズ内前作をご確認ください。.",
+        "metadata": {
+          "country": "Japan",
+          "platform": "Shosetsuka ni Naro / Yomou",
+          "collection": "Weekly ranking",
+          "ranking_basis": "weekly_ranking_order",
+          "rank": 2,
+          "title": "テンプレートが立ちはだかる日常",
+          "genre": "異世界〔恋愛〕",
+          "genres": [
+            "異世界〔恋愛〕"
+          ],
+          "tags": [
+            "テンプレート",
+            "ざまぁ？",
+            "婚約破棄",
+            "夜会",
+            "学園時代もあり"
+          ],
+          "source_url": "https://ncode.syosetu.com/n6258md/"
+        }
+      },
+      {
+        "id": "platform-trend::Shosetsuka ni Naro / Yomou::Weekly ranking::3",
+        "embedding_text": "Japan Shosetsuka ni Naro / Yomou Weekly ranking rank 3 45歳社長、転生先でハズレスキル「綻びの目」を武器に没落領地を再建する genre ハイファンタジー〔ファンタジー〕 tags 異世界転生, ＥＳＮ大賞１０, BK小説大賞2, 春チャレンジ2026, ほのぼの, 男主人公, 西洋, 内政, 日常, ハッピーエンド, 領地, 経営, 開拓, 鑑定, 再建, 異世界 synopsis 仲間に裏切られ、会社を奪われかけた45歳の経営者は、過労の末に倒れた。 次に目を覚ました時、彼は異世界の没落領主の息子になっていた。 だが、12歳で授かった神授スキルは、最悪のハズレと呼ばれる《綻びの目》。 人や物や組織の“壊れる前兆”が見えるだけ。 歴代の所有者も、見えるだけで何も変えられず、嫌われ、潰れ、消えていったという。 ――だが、それがどうした。 前世で人の裏切りも、帳簿の歪みも、組織の腐りも嫌というほど見てきた男にとって、そのスキルはむしろ最高だった。 腐敗した家臣、横流しされる物資、崩れた徴税、終わったと思われた領地で、ハズレスキルは最強へ変わる。 これは、壊れた人生をやり直す男が、《綻びの目》と経営者の知識で領地も組織も再建していく異世界逆転譚。",
+        "context_text": "[Japan / Shosetsuka ni Naro / Yomou / Weekly ranking] Rank 3: 45歳社長、転生先でハズレスキル「綻びの目」を武器に没落領地を再建する. Genre: ハイファンタジー〔ファンタジー〕. Tags: 異世界転生, ＥＳＮ大賞１０, BK小説大賞2, 春チャレンジ2026, ほのぼの, 男主人公, 西洋, 内政, 日常, ハッピーエンド, 領地, 経営, 開拓, 鑑定, 再建, 異世界. Public metrics: weekly_points: 9312, episodes: 228, characters: 831263. Synopsis: 仲間に裏切られ、会社を奪われかけた45歳の経営者は、過労の末に倒れた。 次に目を覚ました時、彼は異世界の没落領主の息子になっていた。 だが、12歳で授かった神授スキルは、最悪のハズレと呼ばれる《綻びの目》。 人や物や組織の“壊れる前兆”が見えるだけ。 歴代の所有者も、見えるだけで何も変えられず、嫌われ、潰れ、消えていったという。 ――だが、それがどうした。 前世で人の裏切りも、帳簿の歪みも、組織の腐りも嫌というほど見てきた男にとって、そのスキルはむしろ最高だった。 腐敗した家臣、横流しされる物資、崩れた徴税、終わったと思われた領地で、ハズレスキルは最強へ変わる。 これは、壊れた人生をやり直す男が、《綻びの目》と経営者の知識で領地も組織も再建していく異世界逆転譚。.",
+        "metadata": {
+          "country": "Japan",
+          "platform": "Shosetsuka ni Naro / Yomou",
+          "collection": "Weekly ranking",
+          "ranking_basis": "weekly_ranking_order",
+          "rank": 3,
+          "title": "45歳社長、転生先でハズレスキル「綻びの目」を武器に没落領地を再建する",
+          "genre": "ハイファンタジー〔ファンタジー〕",
+          "genres": [
+            "ハイファンタジー〔ファンタジー〕"
+          ],
+          "tags": [
+            "異世界転生",
+            "ＥＳＮ大賞１０",
+            "BK小説大賞2",
+            "春チャレンジ2026",
+            "ほのぼの",
+            "男主人公",
+            "西洋",
+            "内政",
+            "日常",
+            "ハッピーエンド",
+            "領地",
+            "経営",
+            "開拓",
+            "鑑定",
+            "再建",
+            "異世界"
+          ],
+          "source_url": "https://ncode.syosetu.com/n2468mc/"
+        }
+      },
+      {
+        "id": "platform-trend::Shosetsuka ni Naro / Yomou::Weekly ranking::4",
+        "embedding_text": "Japan Shosetsuka ni Naro / Yomou Weekly ranking rank 4 婚約破棄したら速攻で婚約者の父親が出てきた件/おまけ追加中 genre コメディー〔文芸〕 tags synopsis 婚約破棄したら速攻で婚約者の父親が出てきた。",
+        "context_text": "[Japan / Shosetsuka ni Naro / Yomou / Weekly ranking] Rank 4: 婚約破棄したら速攻で婚約者の父親が出てきた件/おまけ追加中. Genre: コメディー〔文芸〕. Tags: none observed. Public metrics: weekly_points: 8608, episodes: 12, characters: 50803. Synopsis: 婚約破棄したら速攻で婚約者の父親が出てきた。.",
+        "metadata": {
+          "country": "Japan",
+          "platform": "Shosetsuka ni Naro / Yomou",
+          "collection": "Weekly ranking",
+          "ranking_basis": "weekly_ranking_order",
+          "rank": 4,
+          "title": "婚約破棄したら速攻で婚約者の父親が出てきた件/おまけ追加中",
+          "genre": "コメディー〔文芸〕",
+          "genres": [
+            "コメディー〔文芸〕"
+          ],
+          "tags": [],
+          "source_url": "https://ncode.syosetu.com/n4417jo/"
+        }
+      },
+      {
+        "id": "platform-trend::Shosetsuka ni Naro / Yomou::Weekly ranking::5",
+        "embedding_text": "Japan Shosetsuka ni Naro / Yomou Weekly ranking rank 5 『女の敵は女』だけとは限らない genre 異世界〔恋愛〕 tags テンプレートシリーズ, 侍女, 公爵家, 文官, ざまぁ？, 相談女 synopsis 王宮侍女見習いとして、研修期間を終えたシャーロット。久しぶりに会った友達との会話の中で、「刺激的な」仕事仲間の話題を出す。彼女の常套句「女の子に嫌われてるから」を説明していると、店内で同じ台詞が聞こえてきた。 ＊＊＊＊＊＊＊ 「女に嫌われる〜」の続編に当たります。 こちらだけでも成立するとは思いますが、前作を読んでいただけるとより笑えるかと。 またシリーズものですので、作中人物は別の話で主役を張ってます。",
+        "context_text": "[Japan / Shosetsuka ni Naro / Yomou / Weekly ranking] Rank 5: 『女の敵は女』だけとは限らない. Genre: 異世界〔恋愛〕. Tags: テンプレートシリーズ, 侍女, 公爵家, 文官, ざまぁ？, 相談女. Public metrics: weekly_points: 8588, episodes: 3, characters: 9879. Synopsis: 王宮侍女見習いとして、研修期間を終えたシャーロット。久しぶりに会った友達との会話の中で、「刺激的な」仕事仲間の話題を出す。彼女の常套句「女の子に嫌われてるから」を説明していると、店内で同じ台詞が聞こえてきた。 ＊＊＊＊＊＊＊ 「女に嫌われる〜」の続編に当たります。 こちらだけでも成立するとは思いますが、前作を読んでいただけるとより笑えるかと。 またシリーズものですので、作中人物は別の話で主役を張ってます。.",
+        "metadata": {
+          "country": "Japan",
+          "platform": "Shosetsuka ni Naro / Yomou",
+          "collection": "Weekly ranking",
+          "ranking_basis": "weekly_ranking_order",
+          "rank": 5,
+          "title": "『女の敵は女』だけとは限らない",
+          "genre": "異世界〔恋愛〕",
+          "genres": [
+            "異世界〔恋愛〕"
+          ],
+          "tags": [
+            "テンプレートシリーズ",
+            "侍女",
+            "公爵家",
+            "文官",
+            "ざまぁ？",
+            "相談女"
+          ],
+          "source_url": "https://ncode.syosetu.com/n3678mg/"
+        }
+      },
+      {
+        "id": "platform-trend::Shosetsuka ni Naro / Yomou::Weekly ranking::6",
+        "embedding_text": "Japan Shosetsuka ni Naro / Yomou Weekly ranking rank 6 【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！ genre 異世界〔恋愛〕 tags 残酷な描写あり, シリアス, 女主人公, 西洋, 中世, 年の差, ネトコン13, 悪女, 回帰, 巻き戻り, 溺愛 synopsis 第13回ネット小説大賞で、賞をいただきました！！ ブシロードワークスのスリーズノベルより、3/6発売です！ https://cnovel.bushiroad-works.com/novel/hatukoifullbet_1/ また、コミックグロウルでコミカライズが連載中です。 https://comic-growl.com/series/dc5ea3a3363f6 どちらもよろしくお願いします！ ＊＊＊＊＊＊ 「ごめんなさい、お姉様……もう、こうするしか……」 ガザード公爵ディアナは、双子の妹コーデリアに刺されて短い生涯を終えた──はずだった。 気が付けば、アカデミー卒業の当日朝に時間が巻き戻っていた。 ディアナを起こしに来たコーデリアが、明るい笑顔で声を掛けてくる。 あれは夢だったのか？ 違う、あまりに生々しい痛みと記憶。 裏切られた痛みが、数々の悲しみが、ディアナの心を苦しめる。 もう二度とあんな思いはしたくない。 二度目の人生、自分の手で切り開いてみせる。 卒業パーティーで、ディアナは幼い頃から淡い想いを抱いていた王弟アランに声を掛けた。 前世では、卒業式の後に命を落とした初恋の人。 今なら、まだ彼を救うことが出来る 二度目の人生、恋も、平穏も、全てを勝ち取ってみせる。 妹に殺された姉が新たな人生を歩き出す、リスタート・ロマンスファンタジー！ 現在、毎週金曜日18時20分に更新中。",
+        "context_text": "[Japan / Shosetsuka ni Naro / Yomou / Weekly ranking] Rank 6: 【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！. Genre: 異世界〔恋愛〕. Tags: 残酷な描写あり, シリアス, 女主人公, 西洋, 中世, 年の差, ネトコン13, 悪女, 回帰, 巻き戻り, 溺愛. Public metrics: weekly_points: 8562, episodes: 73, characters: 180335. Synopsis: 第13回ネット小説大賞で、賞をいただきました！！ ブシロードワークスのスリーズノベルより、3/6発売です！ https://cnovel.bushiroad-works.com/novel/hatukoifullbet_1/ また、コミックグロウルでコミカライズが連載中です。 https://comic-growl.com/series/dc5ea3a3363f6 どちらもよろしくお願いします！ ＊＊＊＊＊＊ 「ごめんなさい、お姉様……もう、こうするしか……」 ガザード公爵ディアナは、双子の妹コーデリアに刺されて短い生涯を終えた──はずだった。 気が付けば、アカデミー卒業の当日朝に時間が巻き戻っていた。 ディアナを起こしに来たコーデリアが、明るい笑顔で声を掛けてくる。 あれは夢だったのか？ 違う、あまりに生々しい痛みと記憶。 裏切られた痛みが、数々の悲しみが、ディアナの心を苦しめる。 もう二度とあんな思いはしたくない。 二度目の人生、自分の手で切り開いてみせる。 卒業パーティーで、ディアナは幼い頃から淡い想いを抱いていた王弟アランに声を掛けた。 前世では、卒業式の後に命を落とした初恋の人。 今なら、まだ彼を救うことが出来る 二度目の人生、恋も、平穏も、全てを勝ち取ってみせる。 妹に殺された姉が新たな人生を歩き出す、リスタート・ロマンスファンタジー！ 現在、毎週金曜日18時20分に更新中。.",
+        "metadata": {
+          "country": "Japan",
+          "platform": "Shosetsuka ni Naro / Yomou",
+          "collection": "Weekly ranking",
+          "ranking_basis": "weekly_ranking_order",
+          "rank": 6,
+          "title": "【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！",
+          "genre": "異世界〔恋愛〕",
+          "genres": [
+            "異世界〔恋愛〕"
+          ],
+          "tags": [
+            "残酷な描写あり",
+            "シリアス",
+            "女主人公",
+            "西洋",
+            "中世",
+            "年の差",
+            "ネトコン13",
+            "悪女",
+            "回帰",
+            "巻き戻り",
+            "溺愛"
+          ],
+          "source_url": "https://ncode.syosetu.com/n8755kr/"
+        }
+      },
+      {
+        "id": "platform-trend::Shosetsuka ni Naro / Yomou::Weekly ranking::7",
+        "embedding_text": "Japan Shosetsuka ni Naro / Yomou Weekly ranking rank 7 病弱な幼馴染のために娘の部屋を明け渡せと言われたので、夫ごと捨てます～前世で読んだ物語では娘が死んでから溺愛されるそうですが、そんな展開はお断りです～ genre 異世界〔恋愛〕 tags 異世界転生, 女主人公, 西洋, 近世, 魔法, ハッピーエンド, 政略結婚, 冷遇夫, 病弱な幼馴染, 娘, 母娘, 離縁, ざまぁ, もう遅い, 公爵夫人 synopsis 侯爵夫人ノエリアは、夫ギルベルトから冷遇されながらも、三歳の娘リュシーを守って暮らしていた。リュシーは少しの冷えでも高熱を出す体質で、南向きの療養室とノエリアの地味な《ぬくもり魔法》だけが、娘を健やかに保っている。 そんなある日、夫は病弱な幼馴染リリアを屋敷に住まわせると言い出した。 「リリアには暖かい部屋が必要だ。君とリュシーの部屋を明け渡してくれ」 その言葉を聞いた瞬間、ノエリアは前世の記憶を思い出す。ここは前世で読んだ少女小説の世界。自分は冷遇されても耐え続ける妻で、娘リュシーは、母が夫の幼馴染を看病している間に冷えた部屋で命を落とす。その死をきっかけに夫は妻への愛に気づき、物語は“溺愛”へ進む。 冗談ではない。 夫に愛されるより、娘が今日も温かい部屋で眠れることの方が大事だ。 「分かりました。では、離縁しましょう」 娘の部屋を奪われる前に、ノエリアは屋敷を出る。持参金、療養契約、娘の薬帳、そして夫が見向きもしなかった小さな命を抱えて。 一方、ノエリアの《ぬくもり魔法》と管理に支えられていた侯爵家は、彼女が去った途端、静かに崩れ始める。 これは、冷遇された妻が娘を守るため夫を捨て、暖かな居場所と本当の愛を取り戻す物語。",
+        "context_text": "[Japan / Shosetsuka ni Naro / Yomou / Weekly ranking] Rank 7: 病弱な幼馴染のために娘の部屋を明け渡せと言われたので、夫ごと捨てます～前世で読んだ物語では娘が死んでから溺愛されるそうですが、そんな展開はお断りです～. Genre: 異世界〔恋愛〕. Tags: 異世界転生, 女主人公, 西洋, 近世, 魔法, ハッピーエンド, 政略結婚, 冷遇夫, 病弱な幼馴染, 娘, 母娘, 離縁, ざまぁ, もう遅い, 公爵夫人. Public metrics: weekly_points: 8156, episodes: 65, characters: 111049. Synopsis: 侯爵夫人ノエリアは、夫ギルベルトから冷遇されながらも、三歳の娘リュシーを守って暮らしていた。リュシーは少しの冷えでも高熱を出す体質で、南向きの療養室とノエリアの地味な《ぬくもり魔法》だけが、娘を健やかに保っている。 そんなある日、夫は病弱な幼馴染リリアを屋敷に住まわせると言い出した。 「リリアには暖かい部屋が必要だ。君とリュシーの部屋を明け渡してくれ」 その言葉を聞いた瞬間、ノエリアは前世の記憶を思い出す。ここは前世で読んだ少女小説の世界。自分は冷遇されても耐え続ける妻で、娘リュシーは、母が夫の幼馴染を看病している間に冷えた部屋で命を落とす。その死をきっかけに夫は妻への愛に気づき、物語は“溺愛”へ進む。 冗談ではない。 夫に愛されるより、娘が今日も温かい部屋で眠れることの方が大事だ。 「分かりました。では、離縁しましょう」 娘の部屋を奪われる前に、ノエリアは屋敷を出る。持参金、療養契約、娘の薬帳、そして夫が見向きもしなかった小さな命を抱えて。 一方、ノエリアの《ぬくもり魔法》と管理に支えられていた侯爵家は、彼女が去った途端、静かに崩れ始める。 これは、冷遇された妻が娘を守るため夫を捨て、暖かな居場所と本当の愛を取り戻す物語。.",
+        "metadata": {
+          "country": "Japan",
+          "platform": "Shosetsuka ni Naro / Yomou",
+          "collection": "Weekly ranking",
+          "ranking_basis": "weekly_ranking_order",
+          "rank": 7,
+          "title": "病弱な幼馴染のために娘の部屋を明け渡せと言われたので、夫ごと捨てます～前世で読んだ物語では娘が死んでから溺愛されるそうですが、そんな展開はお断りです～",
+          "genre": "異世界〔恋愛〕",
+          "genres": [
+            "異世界〔恋愛〕"
+          ],
+          "tags": [
+            "異世界転生",
+            "女主人公",
+            "西洋",
+            "近世",
+            "魔法",
+            "ハッピーエンド",
+            "政略結婚",
+            "冷遇夫",
+            "病弱な幼馴染",
+            "娘",
+            "母娘",
+            "離縁",
+            "ざまぁ",
+            "もう遅い",
+            "公爵夫人"
+          ],
+          "source_url": "https://ncode.syosetu.com/n0520me/"
+        }
+      },
+      {
+        "id": "platform-trend::Shosetsuka ni Naro / Yomou::Weekly ranking::8",
+        "embedding_text": "Japan Shosetsuka ni Naro / Yomou Weekly ranking rank 8 【4/4コミカライズ開始】公爵家の長女でした genre 異世界〔恋愛〕 tags 異世界転生, 女主人公, ハッピーエンド, 婚約破棄, 姉妹格差, 前世の記憶, 長女 synopsis 次期公爵である優秀な兄と、母によく似た美しい妹。その間に挟まれた「公爵家の長女」たる私は「王太子の婚約者」でもあった。今日、婚約解消を申し出られるまでは。 いずれ王妃になるのだからと努力を重ねてきたのに、婚約者の王子の隣には噂の男爵令嬢。 「あなたはよく努力しているわ。でも、それだけなのよ」。王妃に追い打ちをかけられ、失意のうちに帰宅をした私に告げられた父の決定は、それまでの私の全てを否定するものだった。自室で泣き伏せた私が見た夢は全く別の世界のもので。「私の、前世？」 全てと決別して新しい自分を生きることにした「公爵家の長女」だった私の物語。 ＊＊コミックシーモアさまにて、コミカライズ独占先行配信中です。＊＊ ＊1～14，16～20話が短編版と同じです。（15話ゲームは短編の構成上カットされています） ＊21話からが連載版です。 ＊カクヨム様でも掲載しています。",
+        "context_text": "[Japan / Shosetsuka ni Naro / Yomou / Weekly ranking] Rank 8: 【4/4コミカライズ開始】公爵家の長女でした. Genre: 異世界〔恋愛〕. Tags: 異世界転生, 女主人公, ハッピーエンド, 婚約破棄, 姉妹格差, 前世の記憶, 長女. Public metrics: weekly_points: 5408, episodes: 93, characters: 252904. Synopsis: 次期公爵である優秀な兄と、母によく似た美しい妹。その間に挟まれた「公爵家の長女」たる私は「王太子の婚約者」でもあった。今日、婚約解消を申し出られるまでは。 いずれ王妃になるのだからと努力を重ねてきたのに、婚約者の王子の隣には噂の男爵令嬢。 「あなたはよく努力しているわ。でも、それだけなのよ」。王妃に追い打ちをかけられ、失意のうちに帰宅をした私に告げられた父の決定は、それまでの私の全てを否定するものだった。自室で泣き伏せた私が見た夢は全く別の世界のもので。「私の、前世？」 全てと決別して新しい自分を生きることにした「公爵家の長女」だった私の物語。 ＊＊コミックシーモアさまにて、コミカライズ独占先行配信中です。＊＊ ＊1～14，16～20話が短編版と同じです。（15話ゲームは短編の構成上カットされています） ＊21話からが連載版です。 ＊カクヨム様でも掲載しています。.",
+        "metadata": {
+          "country": "Japan",
+          "platform": "Shosetsuka ni Naro / Yomou",
+          "collection": "Weekly ranking",
+          "ranking_basis": "weekly_ranking_order",
+          "rank": 8,
+          "title": "【4/4コミカライズ開始】公爵家の長女でした",
+          "genre": "異世界〔恋愛〕",
+          "genres": [
+            "異世界〔恋愛〕"
+          ],
+          "tags": [
+            "異世界転生",
+            "女主人公",
+            "ハッピーエンド",
+            "婚約破棄",
+            "姉妹格差",
+            "前世の記憶",
+            "長女"
+          ],
+          "source_url": "https://ncode.syosetu.com/n8817iq/"
+        }
+      }
+    ]
+  },
+  "required_output_sections": [
+    "market_trend_fit",
+    "genre_trope_alignment",
+    "title_synopsis_localization",
+    "terminology_glossary_risks",
+    "content_rating_sensitivity",
+    "adaptation_checklist",
+    "evidence_used"
+  ]
+}

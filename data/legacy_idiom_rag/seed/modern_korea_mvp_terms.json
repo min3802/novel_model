@@ -1,0 +1,3247 @@
+[
+  {
+    "id": "seed_modern_ko_honorific_형",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "형",
+    "source_aliases": [
+      "형님"
+    ],
+    "target_expression": "hyung",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "relationship",
+      "male_speaker"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_형님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "형님",
+    "source_aliases": [],
+    "target_expression": "hyungnim",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "respect",
+      "relationship"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_오빠",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "오빠",
+    "source_aliases": [],
+    "target_expression": "oppa",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "relationship",
+      "female_speaker"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_누나",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "누나",
+    "source_aliases": [],
+    "target_expression": "noona",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "relationship",
+      "male_speaker"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_언니",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "언니",
+    "source_aliases": [],
+    "target_expression": "eonni",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "relationship",
+      "female_speaker"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_선배",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "선배",
+    "source_aliases": [
+      "선배님"
+    ],
+    "target_expression": "senior",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "school",
+      "workplace",
+      "hierarchy"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_선배님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "선배님",
+    "source_aliases": [],
+    "target_expression": "senior",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "respect",
+      "hierarchy"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_후배",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "후배",
+    "source_aliases": [],
+    "target_expression": "junior",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "school",
+      "workplace",
+      "hierarchy"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_아저씨",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "아저씨",
+    "source_aliases": [],
+    "target_expression": "ajeossi",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "address_term"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_아줌마",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "아줌마",
+    "source_aliases": [
+      "아주머니"
+    ],
+    "target_expression": "ajumma",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "address_term"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_아주머니",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "아주머니",
+    "source_aliases": [],
+    "target_expression": "ma'am",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "address_term"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_사장님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "사장님",
+    "source_aliases": [],
+    "target_expression": "boss",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "workplace",
+      "service"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_팀장님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "팀장님",
+    "source_aliases": [],
+    "target_expression": "team lead",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "workplace",
+      "title",
+      "hierarchy"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_대리님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "대리님",
+    "source_aliases": [],
+    "target_expression": "assistant manager",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "workplace",
+      "title",
+      "hierarchy"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_과장님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "과장님",
+    "source_aliases": [],
+    "target_expression": "manager",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "workplace",
+      "title",
+      "hierarchy"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_부장님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "부장님",
+    "source_aliases": [],
+    "target_expression": "department head",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "workplace",
+      "title",
+      "hierarchy"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_대표님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "대표님",
+    "source_aliases": [],
+    "target_expression": "CEO",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "workplace",
+      "title",
+      "hierarchy"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_선생님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "선생님",
+    "source_aliases": [],
+    "target_expression": "teacher",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "school",
+      "respect"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_교수님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "교수님",
+    "source_aliases": [],
+    "target_expression": "professor",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "school",
+      "respect"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_작가님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "작가님",
+    "source_aliases": [],
+    "target_expression": "author",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "creator",
+      "respect"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_honorific_기사님",
+    "locale": "ko_en_us",
+    "category": "honorific",
+    "source_expression": "기사님",
+    "source_aliases": [],
+    "target_expression": "driver",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물에서 인물 관계와 거리감을 빠르게 드러내는 핵심 호칭이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국어 호칭은 친족, 친밀도, 위계, 화자 성별을 함께 드러내므로 영어 친족어로 항상 고정하지 않는다."
+    ],
+    "tags": [
+      "honorific",
+      "service",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_relationship_남친",
+    "locale": "ko_en_us",
+    "category": "relationship",
+    "source_expression": "남친",
+    "source_aliases": [],
+    "target_expression": "boyfriend",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물의 관계성과 감정선을 드러내는 반복 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "관계어와 연애 속어는 장면의 친밀도와 말투를 확인해 과하게 설명하지 않는다."
+    ],
+    "tags": [
+      "relationship",
+      "slang",
+      "romance"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_relationship_여친",
+    "locale": "ko_en_us",
+    "category": "relationship",
+    "source_expression": "여친",
+    "source_aliases": [],
+    "target_expression": "girlfriend",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물의 관계성과 감정선을 드러내는 반복 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "관계어와 연애 속어는 장면의 친밀도와 말투를 확인해 과하게 설명하지 않는다."
+    ],
+    "tags": [
+      "relationship",
+      "slang",
+      "romance"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_relationship_썸남",
+    "locale": "ko_en_us",
+    "category": "relationship",
+    "source_expression": "썸남",
+    "source_aliases": [],
+    "target_expression": "a guy she/he is seeing",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물의 관계성과 감정선을 드러내는 반복 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "관계어와 연애 속어는 장면의 친밀도와 말투를 확인해 과하게 설명하지 않는다."
+    ],
+    "tags": [
+      "relationship",
+      "dating",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_relationship_썸녀",
+    "locale": "ko_en_us",
+    "category": "relationship",
+    "source_expression": "썸녀",
+    "source_aliases": [],
+    "target_expression": "a girl she/he is seeing",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물의 관계성과 감정선을 드러내는 반복 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "관계어와 연애 속어는 장면의 친밀도와 말투를 확인해 과하게 설명하지 않는다."
+    ],
+    "tags": [
+      "relationship",
+      "dating",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_relationship_전남친",
+    "locale": "ko_en_us",
+    "category": "relationship",
+    "source_expression": "전남친",
+    "source_aliases": [],
+    "target_expression": "ex-boyfriend",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물의 관계성과 감정선을 드러내는 반복 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "관계어와 연애 속어는 장면의 친밀도와 말투를 확인해 과하게 설명하지 않는다."
+    ],
+    "tags": [
+      "relationship",
+      "dating"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_relationship_전여친",
+    "locale": "ko_en_us",
+    "category": "relationship",
+    "source_expression": "전여친",
+    "source_aliases": [],
+    "target_expression": "ex-girlfriend",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물의 관계성과 감정선을 드러내는 반복 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "관계어와 연애 속어는 장면의 친밀도와 말투를 확인해 과하게 설명하지 않는다."
+    ],
+    "tags": [
+      "relationship",
+      "dating"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_relationship_동창",
+    "locale": "ko_en_us",
+    "category": "relationship",
+    "source_expression": "동창",
+    "source_aliases": [],
+    "target_expression": "schoolmate",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물의 관계성과 감정선을 드러내는 반복 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "관계어와 연애 속어는 장면의 친밀도와 말투를 확인해 과하게 설명하지 않는다."
+    ],
+    "tags": [
+      "relationship",
+      "school"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_relationship_절친",
+    "locale": "ko_en_us",
+    "category": "relationship",
+    "source_expression": "절친",
+    "source_aliases": [],
+    "target_expression": "best friend",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물의 관계성과 감정선을 드러내는 반복 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "관계어와 연애 속어는 장면의 친밀도와 말투를 확인해 과하게 설명하지 않는다."
+    ],
+    "tags": [
+      "relationship",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_relationship_알바생",
+    "locale": "ko_en_us",
+    "category": "relationship",
+    "source_expression": "알바생",
+    "source_aliases": [],
+    "target_expression": "part-time worker",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대물의 관계성과 감정선을 드러내는 반복 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "관계어와 연애 속어는 장면의 친밀도와 말투를 확인해 과하게 설명하지 않는다."
+    ],
+    "tags": [
+      "work",
+      "part_time",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_설렁탕",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "설렁탕",
+    "source_aliases": [],
+    "target_expression": "seolleongtang",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "korean_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_국밥",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "국밥",
+    "source_aliases": [],
+    "target_expression": "gukbap",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_해장국",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "해장국",
+    "source_aliases": [],
+    "target_expression": "haejangguk",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "drinking_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_김치찌개",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "김치찌개",
+    "source_aliases": [],
+    "target_expression": "kimchi jjigae",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "korean_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_된장찌개",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "된장찌개",
+    "source_aliases": [],
+    "target_expression": "doenjang jjigae",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "korean_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_떡볶이",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "떡볶이",
+    "source_aliases": [],
+    "target_expression": "tteokbokki",
+    "target_explanation": "",
+    "strategy": "preserve_transliteration",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "street_food"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_순대",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "순대",
+    "source_aliases": [],
+    "target_expression": "sundae",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "street_food"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_삼겹살",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "삼겹살",
+    "source_aliases": [],
+    "target_expression": "samgyeopsal",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "drinking_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_치맥",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "치맥",
+    "source_aliases": [],
+    "target_expression": "chimaek",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "drinking_culture",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_drink_막걸리",
+    "locale": "ko_en_us",
+    "category": "drink",
+    "source_expression": "막걸리",
+    "source_aliases": [],
+    "target_expression": "makgeolli",
+    "target_explanation": "",
+    "strategy": "preserve_transliteration",
+    "reason": "술자리, 회식, 친밀도 변화 장면에서 한국적 분위기를 만든다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 음주문화와 연결된 표현은 단순한 주류명 대체로 뉘앙스가 약해질 수 있다."
+    ],
+    "tags": [
+      "drink",
+      "korean_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_drink_소주",
+    "locale": "ko_en_us",
+    "category": "drink",
+    "source_expression": "소주",
+    "source_aliases": [],
+    "target_expression": "soju",
+    "target_explanation": "",
+    "strategy": "preserve_transliteration",
+    "reason": "술자리, 회식, 친밀도 변화 장면에서 한국적 분위기를 만든다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 음주문화와 연결된 표현은 단순한 주류명 대체로 뉘앙스가 약해질 수 있다."
+    ],
+    "tags": [
+      "drink",
+      "drinking_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_라면",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "라면",
+    "source_aliases": [],
+    "target_expression": "ramyeon",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_컵라면",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "컵라면",
+    "source_aliases": [],
+    "target_expression": "cup ramyeon",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "convenience_store"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_편의점도시락",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "편의점 도시락",
+    "source_aliases": [],
+    "target_expression": "convenience-store lunchbox",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "convenience_store"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_분식",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "분식",
+    "source_aliases": [],
+    "target_expression": "bunsik",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "street_food"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_족발",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "족발",
+    "source_aliases": [],
+    "target_expression": "jokbal",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "delivery_food"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_보쌈",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "보쌈",
+    "source_aliases": [],
+    "target_expression": "bossam",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "delivery_food"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_안주",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "안주",
+    "source_aliases": [],
+    "target_expression": "anju",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "food",
+      "drinking_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_food_해장",
+    "locale": "ko_en_us",
+    "category": "food",
+    "source_expression": "해장",
+    "source_aliases": [],
+    "target_expression": "hangover recovery",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대 한국의 일상성과 문화 배경을 드러내는 음식명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "음식명을 일반 음식명으로만 대체하면 한국적 생활감이 약해질 수 있다."
+    ],
+    "tags": [
+      "drinking_culture",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_포장마차",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "포장마차",
+    "source_aliases": [
+      "포차"
+    ],
+    "target_expression": "pojangmacha",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "street_food",
+      "drinking_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_포차",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "포차",
+    "source_aliases": [],
+    "target_expression": "pocha",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "street_food",
+      "drinking_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_노래방",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "노래방",
+    "source_aliases": [],
+    "target_expression": "noraebang",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "entertainment"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_pc방",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "PC방",
+    "source_aliases": [
+      "피시방"
+    ],
+    "target_expression": "PC bang",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "gaming",
+      "youth_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_피시방",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "피시방",
+    "source_aliases": [],
+    "target_expression": "PC bang",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "gaming",
+      "youth_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_학원",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "학원",
+    "source_aliases": [],
+    "target_expression": "hagwon",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "school",
+      "education"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_housing_고시원",
+    "locale": "ko_en_us",
+    "category": "housing",
+    "source_expression": "고시원",
+    "source_aliases": [
+      "고시텔"
+    ],
+    "target_expression": "gosiwon",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "인물의 경제상태와 생활 조건을 드러낼 수 있는 주거 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "주거 형태가 계층성이나 생활 조건을 드러낼 수 있으므로 단순 apartment/dormitory로 일반화하지 않는다."
+    ],
+    "tags": [
+      "housing",
+      "daily_life",
+      "economic_context"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_housing_고시텔",
+    "locale": "ko_en_us",
+    "category": "housing",
+    "source_expression": "고시텔",
+    "source_aliases": [],
+    "target_expression": "gositel",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "인물의 경제상태와 생활 조건을 드러낼 수 있는 주거 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "주거 형태가 계층성이나 생활 조건을 드러낼 수 있으므로 단순 apartment/dormitory로 일반화하지 않는다."
+    ],
+    "tags": [
+      "housing",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_housing_원룸",
+    "locale": "ko_en_us",
+    "category": "housing",
+    "source_expression": "원룸",
+    "source_aliases": [],
+    "target_expression": "studio apartment",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "인물의 경제상태와 생활 조건을 드러낼 수 있는 주거 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "주거 형태가 계층성이나 생활 조건을 드러낼 수 있으므로 단순 apartment/dormitory로 일반화하지 않는다."
+    ],
+    "tags": [
+      "housing",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_housing_반지하",
+    "locale": "ko_en_us",
+    "category": "housing",
+    "source_expression": "반지하",
+    "source_aliases": [],
+    "target_expression": "semi-basement apartment",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "인물의 경제상태와 생활 조건을 드러낼 수 있는 주거 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "주거 형태가 계층성이나 생활 조건을 드러낼 수 있으므로 단순 apartment/dormitory로 일반화하지 않는다."
+    ],
+    "tags": [
+      "housing",
+      "economic_context"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_편의점",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "편의점",
+    "source_aliases": [],
+    "target_expression": "convenience store",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_분식집",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "분식집",
+    "source_aliases": [],
+    "target_expression": "bunsik restaurant",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "food",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_찜질방",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "찜질방",
+    "source_aliases": [],
+    "target_expression": "jjimjilbang",
+    "target_explanation": "",
+    "strategy": "transliterate_with_gloss",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "bathhouse",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_모텔",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "모텔",
+    "source_aliases": [],
+    "target_expression": "motel",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_술집",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "술집",
+    "source_aliases": [],
+    "target_expression": "bar",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "drinking_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_독서실",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "독서실",
+    "source_aliases": [],
+    "target_expression": "study room",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "education"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_venue_스터디카페",
+    "locale": "ko_en_us",
+    "category": "venue",
+    "source_expression": "스터디카페",
+    "source_aliases": [],
+    "target_expression": "study cafe",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "현대 한국 생활공간과 장면 분위기를 설명하는 장소어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국식 공간문화가 중요한 경우 단순 시설명으로 일반화하지 않는다."
+    ],
+    "tags": [
+      "venue",
+      "education"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_place_지하철역",
+    "locale": "ko_en_us",
+    "category": "place",
+    "source_expression": "지하철역",
+    "source_aliases": [],
+    "target_expression": "subway station",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "서울/수도권의 도시 이미지, 계층성, 청년문화를 암시할 수 있는 지명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "지명이 계층, 문화권, 도시 이미지를 암시하는 경우 필요하면 짧은 맥락을 보존한다."
+    ],
+    "tags": [
+      "transportation",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_place_버스정류장",
+    "locale": "ko_en_us",
+    "category": "place",
+    "source_expression": "버스정류장",
+    "source_aliases": [],
+    "target_expression": "bus stop",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "서울/수도권의 도시 이미지, 계층성, 청년문화를 암시할 수 있는 지명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "지명이 계층, 문화권, 도시 이미지를 암시하는 경우 필요하면 짧은 맥락을 보존한다."
+    ],
+    "tags": [
+      "transportation",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_place_강남",
+    "locale": "ko_en_us",
+    "category": "place",
+    "source_expression": "강남",
+    "source_aliases": [],
+    "target_expression": "Gangnam",
+    "target_explanation": "",
+    "strategy": "preserve_name_with_context",
+    "reason": "서울/수도권의 도시 이미지, 계층성, 청년문화를 암시할 수 있는 지명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "지명이 계층, 문화권, 도시 이미지를 암시하는 경우 필요하면 짧은 맥락을 보존한다."
+    ],
+    "tags": [
+      "place",
+      "seoul",
+      "class_context"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_place_홍대",
+    "locale": "ko_en_us",
+    "category": "place",
+    "source_expression": "홍대",
+    "source_aliases": [],
+    "target_expression": "Hongdae",
+    "target_explanation": "",
+    "strategy": "preserve_name_with_context",
+    "reason": "서울/수도권의 도시 이미지, 계층성, 청년문화를 암시할 수 있는 지명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "지명이 계층, 문화권, 도시 이미지를 암시하는 경우 필요하면 짧은 맥락을 보존한다."
+    ],
+    "tags": [
+      "place",
+      "seoul",
+      "youth_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_place_이태원",
+    "locale": "ko_en_us",
+    "category": "place",
+    "source_expression": "이태원",
+    "source_aliases": [],
+    "target_expression": "Itaewon",
+    "target_explanation": "",
+    "strategy": "preserve_name_with_context",
+    "reason": "서울/수도권의 도시 이미지, 계층성, 청년문화를 암시할 수 있는 지명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "지명이 계층, 문화권, 도시 이미지를 암시하는 경우 필요하면 짧은 맥락을 보존한다."
+    ],
+    "tags": [
+      "place",
+      "seoul",
+      "urban_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_place_대학로",
+    "locale": "ko_en_us",
+    "category": "place",
+    "source_expression": "대학로",
+    "source_aliases": [],
+    "target_expression": "Daehangno",
+    "target_explanation": "",
+    "strategy": "preserve_name_with_context",
+    "reason": "서울/수도권의 도시 이미지, 계층성, 청년문화를 암시할 수 있는 지명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "지명이 계층, 문화권, 도시 이미지를 암시하는 경우 필요하면 짧은 맥락을 보존한다."
+    ],
+    "tags": [
+      "place",
+      "seoul",
+      "culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_place_판교",
+    "locale": "ko_en_us",
+    "category": "place",
+    "source_expression": "판교",
+    "source_aliases": [],
+    "target_expression": "Pangyo",
+    "target_explanation": "",
+    "strategy": "preserve_name_with_context",
+    "reason": "서울/수도권의 도시 이미지, 계층성, 청년문화를 암시할 수 있는 지명이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "지명이 계층, 문화권, 도시 이미지를 암시하는 경우 필요하면 짧은 맥락을 보존한다."
+    ],
+    "tags": [
+      "place",
+      "tech",
+      "workplace"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_야근",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "야근",
+    "source_aliases": [],
+    "target_expression": "overtime work",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_회식",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "회식",
+    "source_aliases": [],
+    "target_expression": "company dinner",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "drinking_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_출근",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "출근",
+    "source_aliases": [],
+    "target_expression": "go to work",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_퇴근",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "퇴근",
+    "source_aliases": [],
+    "target_expression": "get off work",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_지각",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "지각",
+    "source_aliases": [],
+    "target_expression": "being late",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "school",
+      "workplace"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_야자",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "야자",
+    "source_aliases": [],
+    "target_expression": "night self-study",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "school",
+      "education"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_수능",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "수능",
+    "source_aliases": [],
+    "target_expression": "CSAT",
+    "target_explanation": "",
+    "strategy": "preserve_name_with_context",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "school",
+      "exam",
+      "korean_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_내신",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "내신",
+    "source_aliases": [],
+    "target_expression": "school grades",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "school",
+      "education"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_과외",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "과외",
+    "source_aliases": [],
+    "target_expression": "private tutoring",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "school",
+      "education"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_알바",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "알바",
+    "source_aliases": [],
+    "target_expression": "part-time job",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "work",
+      "slang",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_정규직",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "정규직",
+    "source_aliases": [],
+    "target_expression": "full-time employee",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "employment"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_비정규직",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "비정규직",
+    "source_aliases": [],
+    "target_expression": "non-regular worker",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "employment"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_계약직",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "계약직",
+    "source_aliases": [],
+    "target_expression": "contract worker",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "employment"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_인턴",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "인턴",
+    "source_aliases": [],
+    "target_expression": "intern",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "employment"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_신입",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "신입",
+    "source_aliases": [],
+    "target_expression": "new hire",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "employment"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_경력직",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "경력직",
+    "source_aliases": [],
+    "target_expression": "experienced hire",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "employment"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_퇴사",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "퇴사",
+    "source_aliases": [],
+    "target_expression": "resignation",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "employment"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_입사",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "입사",
+    "source_aliases": [],
+    "target_expression": "joining a company",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "employment"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_면접",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "면접",
+    "source_aliases": [],
+    "target_expression": "job interview",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "employment"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_자기소개서",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "자기소개서",
+    "source_aliases": [],
+    "target_expression": "personal statement",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "school"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_월급",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "월급",
+    "source_aliases": [],
+    "target_expression": "monthly salary",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "money"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_연봉",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "연봉",
+    "source_aliases": [],
+    "target_expression": "annual salary",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "money"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_갑질",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "갑질",
+    "source_aliases": [],
+    "target_expression": "abuse of power",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "social_issue"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_school_work_꼰대",
+    "locale": "ko_en_us",
+    "category": "school_work",
+    "source_expression": "꼰대",
+    "source_aliases": [],
+    "target_expression": "kkondae",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "학교·회사 제도와 한국식 위계를 드러내는 현대물 핵심 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "학교/회사 제도 표현은 대상 문화권의 직역어와 완전히 대응하지 않을 수 있다."
+    ],
+    "tags": [
+      "workplace",
+      "social_issue",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_social_expression_눈치",
+    "locale": "ko_en_us",
+    "category": "social_expression",
+    "source_expression": "눈치",
+    "source_aliases": [],
+    "target_expression": "nunchi",
+    "target_explanation": "",
+    "strategy": "contextual_translate_or_preserve",
+    "reason": "관계의 미묘한 거리감과 현대 한국식 사회적 감각을 드러낸다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "사회적 눈치, 연애, 관계 표현은 직역보다 관계 역학을 살리는 번역이 중요하다."
+    ],
+    "tags": [
+      "social_expression",
+      "korean_culture"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_digital_카톡",
+    "locale": "ko_en_us",
+    "category": "digital",
+    "source_expression": "카톡",
+    "source_aliases": [],
+    "target_expression": "KakaoTalk message",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "메신저, 게임, 플랫폼 사용이 많은 현대물 장면에서 자주 등장하는 생활어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 플랫폼/인터넷 속어는 독자가 이해할 수 있게 자연스럽게 풀되 과도한 설명은 피한다."
+    ],
+    "tags": [
+      "digital",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_digital_단톡방",
+    "locale": "ko_en_us",
+    "category": "digital",
+    "source_expression": "단톡방",
+    "source_aliases": [],
+    "target_expression": "group chat",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "메신저, 게임, 플랫폼 사용이 많은 현대물 장면에서 자주 등장하는 생활어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 플랫폼/인터넷 속어는 독자가 이해할 수 있게 자연스럽게 풀되 과도한 설명은 피한다."
+    ],
+    "tags": [
+      "digital",
+      "social"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_digital_읽씹",
+    "locale": "ko_en_us",
+    "category": "digital",
+    "source_expression": "읽씹",
+    "source_aliases": [],
+    "target_expression": "leaving someone on read",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "메신저, 게임, 플랫폼 사용이 많은 현대물 장면에서 자주 등장하는 생활어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 플랫폼/인터넷 속어는 독자가 이해할 수 있게 자연스럽게 풀되 과도한 설명은 피한다."
+    ],
+    "tags": [
+      "digital",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_digital_안읽씹",
+    "locale": "ko_en_us",
+    "category": "digital",
+    "source_expression": "안읽씹",
+    "source_aliases": [],
+    "target_expression": "leaving a message unread",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "메신저, 게임, 플랫폼 사용이 많은 현대물 장면에서 자주 등장하는 생활어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 플랫폼/인터넷 속어는 독자가 이해할 수 있게 자연스럽게 풀되 과도한 설명은 피한다."
+    ],
+    "tags": [
+      "digital",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_digital_인스타",
+    "locale": "ko_en_us",
+    "category": "digital",
+    "source_expression": "인스타",
+    "source_aliases": [],
+    "target_expression": "Instagram",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "메신저, 게임, 플랫폼 사용이 많은 현대물 장면에서 자주 등장하는 생활어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 플랫폼/인터넷 속어는 독자가 이해할 수 있게 자연스럽게 풀되 과도한 설명은 피한다."
+    ],
+    "tags": [
+      "digital",
+      "social_media"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_digital_셀카",
+    "locale": "ko_en_us",
+    "category": "digital",
+    "source_expression": "셀카",
+    "source_aliases": [],
+    "target_expression": "selfie",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "메신저, 게임, 플랫폼 사용이 많은 현대물 장면에서 자주 등장하는 생활어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 플랫폼/인터넷 속어는 독자가 이해할 수 있게 자연스럽게 풀되 과도한 설명은 피한다."
+    ],
+    "tags": [
+      "digital",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_digital_악플",
+    "locale": "ko_en_us",
+    "category": "digital",
+    "source_expression": "악플",
+    "source_aliases": [],
+    "target_expression": "malicious comment",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "메신저, 게임, 플랫폼 사용이 많은 현대물 장면에서 자주 등장하는 생활어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 플랫폼/인터넷 속어는 독자가 이해할 수 있게 자연스럽게 풀되 과도한 설명은 피한다."
+    ],
+    "tags": [
+      "digital",
+      "social_issue"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_digital_현질",
+    "locale": "ko_en_us",
+    "category": "digital",
+    "source_expression": "현질",
+    "source_aliases": [],
+    "target_expression": "spending real money in-game",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "메신저, 게임, 플랫폼 사용이 많은 현대물 장면에서 자주 등장하는 생활어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 플랫폼/인터넷 속어는 독자가 이해할 수 있게 자연스럽게 풀되 과도한 설명은 피한다."
+    ],
+    "tags": [
+      "digital",
+      "gaming",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_digital_과금",
+    "locale": "ko_en_us",
+    "category": "digital",
+    "source_expression": "과금",
+    "source_aliases": [],
+    "target_expression": "in-app purchase",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "메신저, 게임, 플랫폼 사용이 많은 현대물 장면에서 자주 등장하는 생활어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 플랫폼/인터넷 속어는 독자가 이해할 수 있게 자연스럽게 풀되 과도한 설명은 피한다."
+    ],
+    "tags": [
+      "digital",
+      "gaming"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_digital_배달앱",
+    "locale": "ko_en_us",
+    "category": "digital",
+    "source_expression": "배달앱",
+    "source_aliases": [],
+    "target_expression": "delivery app",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "메신저, 게임, 플랫폼 사용이 많은 현대물 장면에서 자주 등장하는 생활어다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "한국 플랫폼/인터넷 속어는 독자가 이해할 수 있게 자연스럽게 풀되 과도한 설명은 피한다."
+    ],
+    "tags": [
+      "digital",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_daily_life_택배",
+    "locale": "ko_en_us",
+    "category": "daily_life",
+    "source_expression": "택배",
+    "source_aliases": [],
+    "target_expression": "parcel delivery",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "한국 현대 생활의 구체성을 보존하는 데 도움이 되는 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "생활어는 자연스러움과 한국적 맥락 보존 사이의 균형을 확인한다."
+    ],
+    "tags": [
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_daily_life_중고거래",
+    "locale": "ko_en_us",
+    "category": "daily_life",
+    "source_expression": "중고거래",
+    "source_aliases": [],
+    "target_expression": "secondhand transaction",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "한국 현대 생활의 구체성을 보존하는 데 도움이 되는 표현이다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "생활어는 자연스러움과 한국적 맥락 보존 사이의 균형을 확인한다."
+    ],
+    "tags": [
+      "daily_life",
+      "digital"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_social_expression_썸",
+    "locale": "ko_en_us",
+    "category": "social_expression",
+    "source_expression": "썸",
+    "source_aliases": [],
+    "target_expression": "the talking stage",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "관계의 미묘한 거리감과 현대 한국식 사회적 감각을 드러낸다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "사회적 눈치, 연애, 관계 표현은 직역보다 관계 역학을 살리는 번역이 중요하다."
+    ],
+    "tags": [
+      "dating",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_social_expression_소개팅",
+    "locale": "ko_en_us",
+    "category": "social_expression",
+    "source_expression": "소개팅",
+    "source_aliases": [],
+    "target_expression": "blind date",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "관계의 미묘한 거리감과 현대 한국식 사회적 감각을 드러낸다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "사회적 눈치, 연애, 관계 표현은 직역보다 관계 역학을 살리는 번역이 중요하다."
+    ],
+    "tags": [
+      "dating",
+      "daily_life"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_social_expression_밀당",
+    "locale": "ko_en_us",
+    "category": "social_expression",
+    "source_expression": "밀당",
+    "source_aliases": [],
+    "target_expression": "push-and-pull flirting",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "관계의 미묘한 거리감과 현대 한국식 사회적 감각을 드러낸다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "사회적 눈치, 연애, 관계 표현은 직역보다 관계 역학을 살리는 번역이 중요하다."
+    ],
+    "tags": [
+      "dating",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  },
+  {
+    "id": "seed_modern_ko_social_expression_철벽",
+    "locale": "ko_en_us",
+    "category": "social_expression",
+    "source_expression": "철벽",
+    "source_aliases": [],
+    "target_expression": "putting up a wall",
+    "target_explanation": "",
+    "strategy": "contextual_translate",
+    "reason": "관계의 미묘한 거리감과 현대 한국식 사회적 감각을 드러낸다.",
+    "example_source": "",
+    "example_translation": "",
+    "warnings": [
+      "사회적 눈치, 연애, 관계 표현은 직역보다 관계 역학을 살리는 번역이 중요하다."
+    ],
+    "tags": [
+      "dating",
+      "slang"
+    ],
+    "confidence": 0.55,
+    "source_type": "manual_seed",
+    "review_status": "needs_review",
+    "quality_flags": [
+      "needs_human_review",
+      "mvp_seed"
+    ],
+    "legacy": {}
+  }
+]

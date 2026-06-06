@@ -1,0 +1,78 @@
+[
+  {
+    "id": "ko_wedding_cash_gift",
+    "term_ko": "축의금",
+    "terms": ["축의금", "축의금 봉투", "결혼식 축의금"],
+    "aliases": ["부조금"],
+    "category": ["wedding", "money", "etiquette"],
+    "core_explanation": "한국 결혼식에서 하객이 신랑신부에게 현금으로 전달하는 축하금.",
+    "annotation_points": [
+      "봉투에 이름을 적어 전달하는 경우가 많다.",
+      "관계의 친밀도나 사회적 맥락에 따라 금액을 고민하는 일이 흔하다.",
+      "단순 선물보다 결혼식 접수 문화와 연결될 수 있다."
+    ],
+    "source_type": "curated",
+    "review_status": "draft",
+    "confidence": "medium"
+  },
+  {
+    "id": "ko_college_entrance_exam",
+    "term_ko": "수능",
+    "terms": ["수능", "대학수학능력시험"],
+    "aliases": ["수능 시험"],
+    "category": ["education", "exam", "social_event"],
+    "core_explanation": "한국의 대학 입시에 큰 영향을 주는 전국 단위 표준화 시험.",
+    "annotation_points": [
+      "시험 당일 사회적 관심과 응원이 집중되는 중요한 교육 이벤트로 다뤄진다.",
+      "단순한 학교 시험보다 대학 입시와 인생 진로의 압박이 강하게 연결될 수 있다."
+    ],
+    "source_type": "curated",
+    "review_status": "draft",
+    "confidence": "medium"
+  },
+  {
+    "id": "ko_military_conscription",
+    "term_ko": "군대",
+    "terms": ["군대", "입대", "전역", "병역", "징병제"],
+    "aliases": ["군 복무", "현역"],
+    "category": ["military", "social_system"],
+    "core_explanation": "한국에서는 병역 의무가 사회적 경험과 생애 일정에 큰 영향을 줄 수 있다.",
+    "annotation_points": [
+      "남성 인물의 입대, 전역, 군 복무는 학업·연애·취업 일정과 연결될 수 있다.",
+      "정확한 제도 설명이 필요하면 최신 공식 자료 확인이 필요하다."
+    ],
+    "source_type": "curated",
+    "review_status": "draft",
+    "confidence": "medium"
+  },
+  {
+    "id": "ko_memorial_49th_day",
+    "term_ko": "49재",
+    "terms": ["49재", "사십구재"],
+    "aliases": ["49일재"],
+    "category": ["funeral", "ritual", "religion"],
+    "core_explanation": "사망 후 49일째에 고인을 위해 지내는 불교적 성격의 추모 의례.",
+    "annotation_points": [
+      "장례 이후의 추모 의례로 등장할 수 있다.",
+      "종교·가족 관습과 연결되므로 단정적 일반화는 피하는 것이 좋다."
+    ],
+    "source_type": "curated",
+    "review_status": "draft",
+    "confidence": "medium"
+  },
+  {
+    "id": "ko_jeonse_housing",
+    "term_ko": "전세",
+    "terms": ["전세", "전셋집", "전세금"],
+    "aliases": [],
+    "category": ["housing", "money", "social_system"],
+    "core_explanation": "한국 주거 시장에서 큰 보증금을 맡기고 월세 없이 거주하는 임대 방식.",
+    "annotation_points": [
+      "일반적인 월세나 주택 구매와 다른 한국 특유의 임대 관행으로 설명이 필요할 수 있다.",
+      "제도와 시장 상황은 변할 수 있으므로 상세 설명에는 최신 자료 확인이 필요하다."
+    ],
+    "source_type": "curated",
+    "review_status": "draft",
+    "confidence": "medium"
+  }
+]
