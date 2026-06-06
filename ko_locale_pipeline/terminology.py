@@ -45,6 +45,15 @@ _COMMON_NOUNS: dict[str, tuple[str, list[str]]] = {
     ko("\ubb38\ud30c"): ("sect", ["sect", "clan"]),
     ko("\uac00\ubb38"): ("family", ["family", "house"]),
 }
+_COMMON_KOREAN_SURNAMES = set(
+    ko(
+        "\\uae40\\uc774\\ubc15\\ucd5c\\uc815\\uac15\\uc870\\uc724\\uc7a5\\uc784\\ud55c\\uc624\\uc11c\\uc2e0"
+        "\\uad8c\\ud669\\uc548\\uc1a1\\uc804\\ud64d\\uc720\\uace0\\ubb38\\uc591\\uc190\\ubc30\\uc870\\ubc31"
+        "\\ud5c8\\ub0a8\\uc2ec\\ub178\\ud558\\uacfd\\uc131\\ucc28\\uc8fc\\uc6b0\\uad6c\\ubbfc\\uc720\\ub958\\ub098"
+    )
+)
+_PERSON_NAME_BLOCKLIST = set(map(ko, ("\\uc774\\ub984", "\\ud45c\\uc815", "\\uc2dc\\uc7a5", "\\uc57d\\uad6d", "\\ubc88\\uc5ed")))
+_PERSON_NAME_REJECT_SUFFIXES = tuple(map(ko, ("\ub418\uc5b4", "\ub418\uc9c0", "\ud558\uc5ec", "\ud558\uc9c0", "\uc5b4", "\uc5ec", "\uc9c0", "\uace0", "\uac8c")))
 _HANGUL_NAME_RE = re.compile(r"[\uac00-\ud7a3]{2,4}(?:\uc740|\ub294|\uc774|\uac00|\uc744|\ub97c|\uc5d0\uac8c|\ud55c\ud14c|\uc640|\uacfc|\uc758|\ub3c4|\ub9cc|\ubd80\ud130|\uae4c\uc9c0|\uc5d0\uc11c|\ub85c|\uc73c\ub85c|,)")
 _EN_NAME_RE = re.compile(r"\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b")
 _PARTICLE_SUFFIXES = tuple(map(ko, ("\uc5d0\uac8c", "\ud55c\ud14c", "\ubd80\ud130", "\uae4c\uc9c0", "\uc5d0\uc11c", "\uc73c\ub85c", "\uc740", "\ub294", "\uc774", "\uac00", "\uc744", "\ub97c", "\uc640", "\uacfc", "\uc758", "\ub3c4", "\ub9cc", "\ub85c", ",")))
@@ -83,6 +92,23 @@ def _dedupe_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return result
 
 
+def _is_likely_person_name(source: str) -> bool:
+    if not (2 <= len(source) <= 4):
+        return False
+    if source[0] not in _COMMON_KOREAN_SURNAMES:
+        return False
+    if source in _PERSON_NAME_BLOCKLIST:
+        return False
+    if source in _COMMON_NOUNS:
+        return False
+    suffix_terms = {suffix for _, _, _, suffixes in _NOUN_SUFFIX_RULES for suffix in suffixes}
+    if source in suffix_terms or any(source.endswith(suffix) for suffix in suffix_terms):
+        return False
+    if any(source.endswith(suffix) for suffix in _PERSON_NAME_REJECT_SUFFIXES):
+        return False
+    return True
+
+
 def extract_noun_terminology_candidates(source_text: str) -> list[dict[str, Any]]:
     """Suggest noun/proper-noun glossary rows without enforcing verbs/adjectives."""
     text = source_text or ""
@@ -90,7 +116,10 @@ def extract_noun_terminology_candidates(source_text: str) -> list[dict[str, Any]
 
     for type_name, policy, meaning, suffixes in _NOUN_SUFFIX_RULES:
         for suffix in suffixes:
-            pattern = re.compile(rf"[\uac00-\ud7a3]{{2,12}}\s*{re.escape(suffix)}")
+            if len(suffix) == 1:
+                pattern = re.compile(rf"[\uac00-\ud7a3]{{2,8}}{re.escape(suffix)}")
+            else:
+                pattern = re.compile(rf"(?:[\uac00-\ud7a3]{{2,8}}\s+)?{re.escape(suffix)}")
             for match in pattern.finditer(text):
                 source = match.group(0).strip()
                 rows.append(
@@ -121,7 +150,7 @@ def extract_noun_terminology_candidates(source_text: str) -> list[dict[str, Any]
 
     for match in _HANGUL_NAME_RE.finditer(text):
         source = _strip_particle(match.group(0).strip())
-        if len(source) >= 2:
+        if _is_likely_person_name(source):
             rows.append(
                 {
                     "source": source,

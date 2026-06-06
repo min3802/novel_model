@@ -39,6 +39,7 @@ class TranslationConsistencyGlossaryTests(unittest.TestCase):
         self.assertIn(SARANG_PHARMACY, sources)
         self.assertIn(DONGSOMUN_MARKET, sources)
         self.assertIn(PHARMACY, sources)
+        self.assertNotIn(ko("\uc55e\uc5d0\uc11c \ub3d9"), sources)
         self.assertLess(sources.index(SARANG_PHARMACY), sources.index(PHARMACY))
         locked = next(row for row in candidates if row["source"] == SARANG_PHARMACY)
         self.assertEqual(locked["policy"], TERMINOLOGY_POLICY_LOCKED)

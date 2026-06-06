@@ -13,6 +13,28 @@ from .terminology import (
 )
 
 
+def _source_spans(text: str, needle: str) -> list[tuple[int, int]]:
+    spans: list[tuple[int, int]] = []
+    start = text.find(needle)
+    while start != -1:
+        spans.append((start, start + len(needle)))
+        start = text.find(needle, start + 1)
+    return spans
+
+
+def _covered_by_longer_row(source_text: str, source: str, longer_sources: list[str]) -> bool:
+    source_spans = _source_spans(source_text, source)
+    if not source_spans:
+        return False
+    cover_spans: list[tuple[int, int]] = []
+    for longer in longer_sources:
+        if source != longer and source in longer:
+            cover_spans.extend(_source_spans(source_text, longer))
+    if not cover_spans:
+        return False
+    return all(any(cover_start <= start and end <= cover_end for cover_start, cover_end in cover_spans) for start, end in source_spans)
+
+
 def check_translation_consistency(
     *,
     source_text: str,
@@ -34,7 +56,10 @@ def check_translation_consistency(
     checked: list[dict[str, Any]] = []
     skipped: list[dict[str, Any]] = []
 
-    for row in terminology_rows_for_locale(terms, locale):
+    rows = terminology_rows_for_locale(terms, locale)
+    longer_sources = [row["source"] for row in rows if row.get("policy") != TERMINOLOGY_POLICY_CONTEXTUAL]
+
+    for row in rows:
         source = row["source"]
         if source not in source_text:
             continue
@@ -50,6 +75,15 @@ def check_translation_consistency(
                     "source": source,
                     "policy": policy,
                     "reason": "contextual/reference-only noun term; not enforced",
+                }
+            )
+            continue
+        if _covered_by_longer_row(source_text, source, longer_sources):
+            skipped.append(
+                {
+                    "source": source,
+                    "policy": policy,
+                    "reason": "covered by a longer noun/proper-noun terminology row",
                 }
             )
             continue

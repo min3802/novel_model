@@ -19,6 +19,8 @@ class TerminologyTest(unittest.TestCase):
         self.assertIn(ko("\uc0ac\ub791 \uc57d\uad6d"), sources)
         self.assertNotIn(ko("\ube68\uac1b\uace0"), sources)
         self.assertNotIn(ko("\ubd89\uc740"), sources)
+        self.assertNotIn(ko("\ubc88\uc5ed\ub418\uc5b4"), sources)
+        self.assertNotIn(ko("\uc774\ub984"), sources)
 
     def test_merge_keeps_existing_confirmed_rows_and_adds_new_candidates(self):
         existing = [

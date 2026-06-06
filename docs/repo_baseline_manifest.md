@@ -19,6 +19,7 @@ ko_locale_pipeline/
   - terminology.py: noun/proper-noun consistency glossary
 prompts/
 scripts/
+  - module_smoke.py: direct model/module smoke runner without web
 tests/
 requirements.txt
 README.md

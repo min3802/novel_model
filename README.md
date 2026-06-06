@@ -49,6 +49,20 @@ npm run dev
 python -m unittest discover -s tests
 ```
 
+## Test model modules without web
+
+You do not need to start the Next.js frontend for model/module checks.
+Use the direct Python smoke runner:
+
+```bash
+python scripts/module_smoke.py --case all
+python scripts/module_smoke.py --case terminology
+python scripts/module_smoke.py --case translate --locale ko_en_us
+```
+
+Default mode is mock/offline. Add `--live` only when you intentionally want
+configured external model/API calls.
+
 Focused guide/pipeline checks:
 
 ```bash
