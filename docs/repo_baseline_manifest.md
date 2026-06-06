@@ -17,6 +17,8 @@ backend/
 frontend/
 ko_locale_pipeline/
   - terminology.py: noun/proper-noun consistency glossary
+  - runtime.py: shared runtime mode detection
+  - mock_adapters.py: deterministic test fakes kept out of production flow logic
 prompts/
 scripts/
   - module_smoke.py: direct model/module smoke runner without web

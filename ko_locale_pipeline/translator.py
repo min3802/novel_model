@@ -6,6 +6,7 @@ from typing import Any
 
 from .config import PipelineConfig
 from .korean_output import koreanize_text
+from .mock_adapters import translation_payload
 from .openai_client import get_openai_client
 from .prompt_loader import load_runtime_prompt
 from .retriever import DenseRetriever, RetrievalResult
@@ -87,26 +88,14 @@ class Translator:
     ) -> TranslationDraft:
         reference_ids = [row.item.get("id", "") for row in retrievals if row.item.get("id")]
         if self.config.mock:
-            translation_decisions = [
-                {
-                    "source_span": ", ".join(row.item.get("ko_anchor_expression", []) or row.item.get("ko_expression", []) or []),
-                    "reference_id": row.item.get("id", ""),
-                    "reference_expression": row.item.get("expression", ""),
-                    "translated_span": row.item.get("expression", ""),
-                    "decision_type": row.item.get("translation_strategy", "reference"),
-                    "reason": "Mock 모드에서는 RAG 매칭 결과를 근거 연결 예시로 표시합니다.",
-                }
-                for row in retrievals
-                if row.item.get("id")
-            ]
-            mock_translation = self._mock_translation(source_text)
+            payload = translation_payload(self.config, self.resources, source_text, retrievals)
             return TranslationDraft(
-                translation=mock_translation,
-                strategy="mock-reference" if retrievals else "mock-direct",
-                rationale="Mock 모드라 실제 모델 호출 없이 구조 확인용 번역을 반환했습니다.",
-                reference_ids=reference_ids,
-                translation_decisions=translation_decisions,
-                raw_response={},
+                translation=payload["translation"],
+                strategy=payload["strategy"],
+                rationale=payload["rationale"],
+                reference_ids=payload["reference_ids"],
+                translation_decisions=payload["translation_decisions"],
+                raw_response=payload["raw_response"],
             )
 
         client = get_openai_client()
@@ -152,19 +141,3 @@ class Translator:
             translation_decisions=payload["translation_decisions"],
             raw_response=payload,
         )
-
-    def _mock_translation(self, source_text: str) -> str:
-        """Deterministic translations for model acceptance scenarios."""
-        if self.config.locale == "ko_ja" and "하얀 조약돌" in source_text and "소녀" in source_text:
-            return (
-                "すると、少女が水の中から何かを拾い上げた。白い小石だった。"
-                "少女はそれを手にしたまま、ぱっと立ち上がると、飛び跳ねるようにして飛び石を渡っていった。"
-            )
-        if self.config.locale == "ko_zh_cn" and ("후려갈겼다" in source_text or "뺨" in source_text):
-            return (
-                "“哎，这个傻女人，真是命苦啊，不吃也病，吃了也病！到底叫我怎么办！"
-                "你倒是把眼睛睁开看看啊！” 说完，情绪失控地猛地摇了摇妻子的肩膀。"
-            )
-        if self.config.locale == "ko_th_th" and "김첨지" in source_text:
-            return source_text.replace("김첨지", "คิม ช็อมจี")
-        return f"[MOCK {self.resources.target_language}] {source_text}"

@@ -63,6 +63,20 @@ python scripts/module_smoke.py --case translate --locale ko_en_us
 Default mode is mock/offline. Add `--live` only when you intentionally want
 configured external model/API calls.
 
+## Mock vs live testing
+
+Mock mode is kept only for plumbing checks: imports, API contracts, pipeline
+data flow, and deterministic CI/local tests. Mock outputs live in
+`ko_locale_pipeline/mock_adapters.py`; environment mode detection lives in
+`ko_locale_pipeline/runtime.py`.
+
+Actual translation/localization quality should be checked with live model runs:
+
+```bash
+python scripts/module_smoke.py --case translate --live
+python scripts/run_live_model_smoke.py
+```
+
 Focused guide/pipeline checks:
 
 ```bash

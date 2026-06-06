@@ -8,6 +8,7 @@ from typing import Any
 
 from .config import PipelineConfig
 from .korean_output import koreanize_texts
+from .mock_adapters import review_payload
 from .openai_client import get_openai_client
 from .prompt_loader import load_runtime_prompt
 from .retriever import RetrievalResult
@@ -83,13 +84,14 @@ class Reviewer:
         retrievals: list[RetrievalResult],
     ) -> ReviewResult:
         if self.config.mock:
+            payload = review_payload(draft.translation)
             return ReviewResult(
-                detected_constraints=[],
-                risk_summary="Mock 검수에서 주요 위험 요소를 찾지 못했습니다.",
-                recommended_action="NOTE",
-                revised_translation=draft.translation,
-                review_note="[NOTE: mock review]",
-                raw_response={},
+                detected_constraints=payload["detected_constraints"],
+                risk_summary=payload["risk_summary"],
+                recommended_action=payload["recommended_action"],
+                revised_translation=payload["revised_translation"],
+                review_note=payload["review_note"],
+                raw_response=payload["raw_response"],
             )
 
         client = get_openai_client()

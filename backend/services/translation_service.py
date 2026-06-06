@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 
-import os
 from dataclasses import asdict
 from typing import Any
 
 from ko_locale_pipeline import ChatMessage, KoLocalePipeline, PipelineConfig
 from ko_locale_pipeline.consistency_checker import check_translation_consistency
+from ko_locale_pipeline.runtime import is_mock_mode
 from ko_locale_pipeline.terminology import (
     extract_noun_terminology_candidates,
     merge_terminology,
@@ -24,17 +24,11 @@ COUNTRY_TO_LOCALE = {
 
 
 def _pipeline(locale: str) -> KoLocalePipeline:
-    mock = os.getenv("WLIGHTER_MOCK_MODE", "true").lower() in {"1", "true", "yes", "y"}
-    return KoLocalePipeline(PipelineConfig(locale=locale, mock=mock, top_k=3))
+    return KoLocalePipeline(PipelineConfig(locale=locale, mock=is_mock_mode(), top_k=3))
 
 
 def _config(locale: str) -> PipelineConfig:
-    mock = os.getenv("WLIGHTER_MOCK_MODE", "true").lower() in {"1", "true", "yes", "y"}
-    return PipelineConfig(locale=locale, mock=mock, top_k=3)
-
-
-def _is_mock_mode() -> bool:
-    return os.getenv("WLIGHTER_MOCK_MODE", "true").lower() in {"1", "true", "yes", "y"}
+    return PipelineConfig(locale=locale, mock=is_mock_mode(), top_k=3)
 
 
 def _contains_hangul(text: str) -> bool:

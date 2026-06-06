@@ -6,6 +6,7 @@ from typing import Any
 
 from .config import PipelineConfig
 from .korean_output import koreanize_texts
+from .mock_adapters import inspection_payload
 from .openai_client import get_openai_client
 from .prompt_loader import load_base_review_prompt, load_locale_constraints, load_runtime_prompt
 
@@ -182,61 +183,8 @@ class InspectionAgent:
     ) -> InspectionResult:
         translation_to_review = reviewed_translation or draft_translation
         if self.config.mock:
-            if self.config.locale == "ko_zh_cn" and ("후려갈겼다" in source_text or "뺨" in source_text):
-                return InspectionResult(
-                    locale=self.resources.locale,
-                    context_analysis=ContextAnalysis(
-                        speaker="서술자",
-                        listener="독자",
-                        relationship="작품 서술",
-                        confidence="medium",
-                        evidence="원문에 아픈 이의 뺨을 후려갈기는 장면이 직접 언급됩니다.",
-                    ),
-                    detected_constraints=["CN-VIOLENCE-SENSITIVITY"],
-                    severity="MEDIUM",
-                    recommended_action="REVISE",
-                    intervention_policy="USER_DECISION",
-                    risk_summary="아픈 배우자를 직접 때리는 장면은 중국 독자에게 캐릭터 호감도 하락과 폭력성 문제로 받아들여질 수 있습니다.",
-                    problematic_spans=[
-                        ProblematicSpan(
-                            source_text="뺨을 한 번 후려갈겼다",
-                            translated_text="猛地摇了摇妻子的肩膀",
-                            issue="직접 폭행 묘사를 완화해 정서적 충돌은 유지하되 폭력 수위를 낮추는 편이 안전합니다.",
-                            constraint_id="CN-VIOLENCE-SENSITIVITY",
-                            severity="MEDIUM",
-                        )
-                    ],
-                    suggestions=[
-                        InspectionSuggestion(
-                            original="뺨을 한 번 후려갈겼다",
-                            suggested="어깨를 세게 흔들었다",
-                            reason="인물의 격앙된 감정은 유지하면서 직접적인 폭행 묘사를 줄입니다.",
-                        )
-                    ],
-                    revised_translation=translation_to_review,
-                    review_note="[NOTE: mock inspection] 중국 문화권 폭력 민감도 완화 제안을 반환했습니다.",
-                    raw_response={},
-                )
-            return InspectionResult(
-                locale=self.resources.locale,
-                context_analysis=ContextAnalysis(
-                    speaker="불명확",
-                    listener="불명확",
-                    relationship="불명확",
-                    confidence="low",
-                    evidence="Mock 모드에서는 원문 관계 분석을 수행하지 않았습니다.",
-                ),
-                detected_constraints=[],
-                severity="LOW",
-                recommended_action="NOTE",
-                intervention_policy="INFO_ONLY",
-                risk_summary="Mock 독립 검수에서 대상 문화권 특화 위험 요소를 찾지 못했습니다.",
-                problematic_spans=[],
-                suggestions=[],
-                revised_translation=translation_to_review,
-                review_note="[NOTE: mock inspection]",
-                raw_response={},
-            )
+            payload = inspection_payload(self.resources, source_text, translation_to_review)
+            return self._result_from_payload(payload)
 
         client = get_openai_client()
         schema_name = f"{self.resources.locale}_inspection".replace("-", "_")

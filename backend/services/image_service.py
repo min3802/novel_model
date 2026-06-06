@@ -5,6 +5,8 @@ from typing import Any
 
 from dotenv import load_dotenv
 from openai import OpenAI
+from ko_locale_pipeline.mock_adapters import image_payload
+from ko_locale_pipeline.runtime import is_mock_mode
 
 load_dotenv()
 
@@ -19,19 +21,9 @@ def _get_openai() -> OpenAI:
     return _openai_client
 
 
-def _is_mock_mode() -> bool:
-    return os.getenv("WLIGHTER_MOCK_MODE", "true").lower() in {"1", "true", "yes", "y"}
-
-
 def generate_image(prompt: str) -> dict[str, Any]:
-    if _is_mock_mode():
-        return {
-            "type": "mock_image",
-            "data": "mock://w-lighter/generated-image",
-            "model": OPENAI_IMAGE_MODEL,
-            "notice": "AI 생성 이미지입니다.",
-            "prompt": prompt,
-        }
+    if is_mock_mode():
+        return image_payload(prompt, OPENAI_IMAGE_MODEL)
     client = _get_openai()
     response = client.images.generate(
         model=OPENAI_IMAGE_MODEL,

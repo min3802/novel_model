@@ -168,7 +168,11 @@ def run_guide(locale: str) -> dict[str, Any]:
     return {
         "title": result.get("title"),
         "sectionCount": len(result.get("sections", [])),
-        "sections": result.get("sections", [])[:3],
+        "sections": (
+            result.get("sections", [])[:3]
+            if isinstance(result.get("sections"), list)
+            else list((result.get("sections") or {}).items())[:3]
+        ),
     }
 
 
