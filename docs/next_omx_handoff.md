@@ -1159,7 +1159,7 @@ Goal: keep named entities and fixed noun phrases consistent across episodes with
 Updated files:
 
 ```txt
-ko_locale_pipeline/ontology.py
+ko_locale_pipeline/terminology.py
 ko_locale_pipeline/consistency_checker.py
 api_server.py
 frontend/components/ApiPanels.tsx
@@ -1256,9 +1256,9 @@ warning messages
 Passed:
 
 ```txt
-python -B -m py_compile api_server.py ko_locale_pipeline/ontology.py ko_locale_pipeline/consistency_checker.py tests/test_translation_consistency_glossary.py
+python -B -m py_compile api_server.py ko_locale_pipeline/terminology.py ko_locale_pipeline/consistency_checker.py tests/test_translation_consistency_glossary.py
 python -B -m unittest tests.test_translation_consistency_glossary
-python -B -m unittest tests.test_translation_consistency_glossary tests.test_work_memory tests.test_model_acceptance_from_docs tests.test_k_culture_rag
+python -B -m unittest tests.test_translation_consistency_glossary tests.test_terminology tests.test_model_acceptance_from_docs tests.test_k_culture_rag
 npm run typecheck
 npm run build
 ```
@@ -1359,7 +1359,7 @@ Passed:
 
 ```txt
 python -B -m py_compile api_server.py backend/services/image_service.py backend/services/guide_service.py
-python -B -m unittest tests.test_translation_consistency_glossary tests.test_work_memory tests.test_model_acceptance_from_docs tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector tests.test_k_culture_rag tests.test_retriever_anchor_priority
+python -B -m unittest tests.test_translation_consistency_glossary tests.test_terminology tests.test_model_acceptance_from_docs tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector tests.test_k_culture_rag tests.test_retriever_anchor_priority
 npm run typecheck
 npm run build
 ```
@@ -1448,7 +1448,7 @@ Passed after the full split:
 
 ```txt
 python -B -m py_compile api_server.py backend/store/memory_store.py backend/services/translation_service.py backend/services/cover_plan_service.py backend/services/guide_service.py backend/services/image_service.py
-python -B -m unittest tests.test_translation_consistency_glossary tests.test_work_memory tests.test_model_acceptance_from_docs tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector tests.test_k_culture_rag tests.test_retriever_anchor_priority
+python -B -m unittest tests.test_translation_consistency_glossary tests.test_terminology tests.test_model_acceptance_from_docs tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector tests.test_k_culture_rag tests.test_retriever_anchor_priority
 npm run typecheck
 npm run build
 ```
@@ -1523,7 +1523,7 @@ Passed:
 ```txt
 python -B -m py_compile api_server.py ko_locale_pipeline/config.py ko_locale_pipeline/locales.py ko_locale_pipeline/retriever.py ko_locale_pipeline/annotation_retriever.py ko_locale_pipeline/pipeline.py tests/test_retriever_anchor_priority.py tests/test_k_culture_rag.py
 python -B -m unittest tests.test_k_culture_rag tests.test_retriever_anchor_priority
-python -B -m unittest tests.test_translation_consistency_glossary tests.test_work_memory tests.test_model_acceptance_from_docs tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector tests.test_k_culture_rag tests.test_retriever_anchor_priority
+python -B -m unittest tests.test_translation_consistency_glossary tests.test_terminology tests.test_model_acceptance_from_docs tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector tests.test_k_culture_rag tests.test_retriever_anchor_priority
 python -c "import importlib.util; print('sentence_transformers', bool(importlib.util.find_spec('sentence_transformers')))"
 ```
 
@@ -1643,7 +1643,7 @@ Passed:
 ```txt
 python -B -m unittest tests.test_server_backed_requirements
 python -B -m py_compile api_server.py backend/store/memory_store.py tests/test_server_backed_requirements.py
-python -B -m unittest tests.test_server_backed_requirements tests.test_k_culture_rag tests.test_retriever_anchor_priority tests.test_translation_consistency_glossary tests.test_work_memory tests.test_model_acceptance_from_docs tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector
+python -B -m unittest tests.test_server_backed_requirements tests.test_k_culture_rag tests.test_retriever_anchor_priority tests.test_translation_consistency_glossary tests.test_terminology tests.test_model_acceptance_from_docs tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector
 npm run typecheck
 npm run build
 ```

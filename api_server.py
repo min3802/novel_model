@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 from backend.services.cover_plan_service import cover_plan
 from backend.services.guide_service import guide
 from backend.services.image_service import cover_image, relation_image, visual_prompt
-from backend.services.translation_service import inspect_chat, translate, work_memory_extract, work_memory_get, work_memory_update
+from backend.services.translation_service import inspect_chat, translate
 
 load_dotenv()
 
@@ -29,8 +29,6 @@ _EP_TRANSLATIONS_RE = re.compile(r"^/api/works/(\d+)/episodes/(\d+)/translations
 _TRANSLATION_RE = re.compile(r"^/api/translations/(\d+)$")
 _TRANSLATION_APPLY_CHAT_RE = re.compile(r"^/api/translations/(\d+)/apply-chat-suggestion$")
 _TRANSLATION_CHAT_RE = re.compile(r"^/api/translations/(\d+)/chat$")
-_WORK_MEMORY_RE = re.compile(r"^/api/works/(\d+)/memory$")
-_WORK_MEMORY_EXTRACT_RE = re.compile(r"^/api/works/(\d+)/memory/extract$")
 _WORK_COVER_PLAN_RE = re.compile(r"^/api/works/(\d+)/cover-plan$")
 _ASSETS_RE = re.compile(r"^/api/generated-assets$")
 _ASSET_RE = re.compile(r"^/api/generated-assets/(\d+)$")
@@ -115,9 +113,6 @@ class ApiHandler(BaseHTTPRequestHandler):
                 self._send(200, dashboard_summary())
             elif path == "/api/works":
                 self._send(200, {"works": works_list()})
-            elif m := _WORK_MEMORY_RE.match(path):
-                wid = int(m.group(1))
-                self._send(200, {"memory": work_memory_get(wid)})
             elif m := _WORK_RE.match(path):
                 wid = int(m.group(1))
                 work = work_get(wid)
@@ -204,9 +199,6 @@ class ApiHandler(BaseHTTPRequestHandler):
                 self._send(200, result)
             elif path == "/api/works":
                 self._send(201, work_create(payload))
-            elif m := _WORK_MEMORY_EXTRACT_RE.match(path):
-                wid = int(m.group(1))
-                self._send(200, work_memory_extract(wid, payload))
             elif m := _WORK_COVER_PLAN_RE.match(path):
                 wid = int(m.group(1))
                 self._send(200, cover_plan(wid, payload))
@@ -234,9 +226,6 @@ class ApiHandler(BaseHTTPRequestHandler):
             elif m := _WORK_RE.match(path):
                 wid = int(m.group(1))
                 self._send(200, work_update(wid, payload))
-            elif m := _WORK_MEMORY_RE.match(path):
-                wid = int(m.group(1))
-                self._send(200, {"memory": work_memory_update(wid, payload)})
             else:
                 self._send(404, {"error": "not found"})
         except Exception as exc:

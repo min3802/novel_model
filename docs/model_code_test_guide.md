@@ -419,32 +419,32 @@ mock 예시:
 
 ---
 
-### 2.12 `ko_locale_pipeline/context_extractor.py`
+### 2.12 `ko_locale_pipeline/terminology.py`
 
-역할: 작품/회차 원문에서 인물, 관계, 설정, RAG query 후보를 추출한다.
+Role: lightweight noun/proper-noun terminology hints and consistency rows.
 
-주요 목적:
+Main scope:
 
-- 작품 메모리 구축
-- 고유명사/관계 일관성 유지
-- 이후 번역에서 memory context로 활용
+- Suggest noun/proper-noun candidates from source text.
+- Render confirmed `terminology`/`terms` rows into the translator prompt.
+- Avoid enforcing verbs, adjectives, and normal sentence-level wording variation.
 
-사용 경로:
+Use path:
 
-- `api_server.translate()`에서 `workId`가 들어온 경우 context extraction 및 memory merge를 수행한다.
+- `api_server.translate()` accepts explicit terminology rows and also returns suggested terminology candidates.
 
 ---
 
-### 2.13 `ko_locale_pipeline/ontology.py`
+### 2.13 `ko_locale_pipeline/terminology.py`
 
 역할: 작품 메모리 저장, 병합, 요약을 담당한다.
 
 주요 기능:
 
-- `load_memory`
-- `save_memory`
-- `merge_extraction`
-- `compact_memory_context`
+- `terminology_rows_for_locale`
+- `render_terminology_context`
+- `merge_terminology`
+- `render_terminology_context`
 
 테스트 목적:
 
@@ -452,7 +452,7 @@ mock 예시:
 
 관련 테스트:
 
-- `tests.test_work_memory`
+- `tests.test_terminology`
 - `tests.test_agent_workflow`
 
 ---
@@ -597,13 +597,13 @@ python scripts\run_live_model_smoke.py --mock --include-images --json-out docs\m
 명령:
 
 ```powershell
-python -m unittest tests.test_model_acceptance_from_docs tests.test_k_culture_rag tests.test_agent_workflow tests.test_cultural_lexicon tests.test_retriever_anchor_priority tests.test_work_memory
+python -m unittest tests.test_model_acceptance_from_docs tests.test_k_culture_rag tests.test_agent_workflow tests.test_cultural_lexicon tests.test_retriever_anchor_priority tests.test_terminology
 ```
 
 신규 기능 저장/일관성/표지 기획까지 포함하려면:
 
 ```powershell
-python -m unittest tests.test_model_feature_backlog tests.test_model_acceptance_from_docs tests.test_k_culture_rag tests.test_agent_workflow tests.test_cultural_lexicon tests.test_retriever_anchor_priority tests.test_work_memory
+python -m unittest tests.test_model_feature_backlog tests.test_model_acceptance_from_docs tests.test_k_culture_rag tests.test_agent_workflow tests.test_cultural_lexicon tests.test_retriever_anchor_priority tests.test_terminology
 ```
 
 성공 기준:
@@ -855,7 +855,7 @@ python scripts\run_live_model_smoke.py --mock --include-images --json-out docs\m
 명령:
 
 ```powershell
-python -m unittest tests.test_model_acceptance_from_docs tests.test_k_culture_rag tests.test_agent_workflow tests.test_cultural_lexicon tests.test_retriever_anchor_priority tests.test_work_memory
+python -m unittest tests.test_model_acceptance_from_docs tests.test_k_culture_rag tests.test_agent_workflow tests.test_cultural_lexicon tests.test_retriever_anchor_priority tests.test_terminology
 ```
 
 결과:

@@ -1,4 +1,4 @@
-"""Translation, memory extraction, and inspector chat services."""
+"""Translation and inspector chat services."""
 
 from __future__ import annotations
 
@@ -8,15 +8,10 @@ from typing import Any
 
 from ko_locale_pipeline import ChatMessage, KoLocalePipeline, PipelineConfig
 from ko_locale_pipeline.consistency_checker import check_translation_consistency
-from ko_locale_pipeline.context_extractor import ContextExtractor
-from ko_locale_pipeline.ontology import (
-    compact_memory_context,
-    extract_named_entity_glossary_candidates,
-    load_memory,
-    merge_extraction,
-    render_glossary_context,
-    save_memory,
-    upsert_glossary_candidates,
+from ko_locale_pipeline.terminology import (
+    extract_noun_terminology_candidates,
+    merge_terminology,
+    render_terminology_context,
 )
 from backend.store.memory_store import _get_episode, save_translation_version, work_get
 
@@ -45,56 +40,6 @@ def _is_mock_mode() -> bool:
 def _contains_hangul(text: str) -> bool:
     return any("\uac00" <= char <= "\ud7a3" for char in text)
 
-
-def work_memory_get(work_id: int) -> dict[str, Any]:
-    work = work_get(work_id)
-    if not work:
-        raise ValueError(f"work {work_id} not found")
-    return load_memory(work_id, title=work.get("title", ""))
-
-
-def work_memory_update(work_id: int, payload: dict[str, Any]) -> dict[str, Any]:
-    work = work_get(work_id)
-    if not work:
-        raise ValueError(f"work {work_id} not found")
-    memory = payload.get("memory") if isinstance(payload.get("memory"), dict) else payload
-    memory = dict(memory or {})
-    memory["workId"] = work_id
-    memory.setdefault("title", work.get("title", ""))
-    return save_memory(memory)
-
-
-def work_memory_extract(work_id: int, payload: dict[str, Any]) -> dict[str, Any]:
-    work = work_get(work_id)
-    if not work:
-        raise ValueError(f"work {work_id} not found")
-    country = payload.get("targetCountry") or "일본"
-    locale = COUNTRY_TO_LOCALE.get(country)
-    if not locale:
-        raise ValueError(f"unsupported targetCountry: {country}")
-    source_text = (payload.get("sourceText") or payload.get("body") or "").strip()
-    if not source_text:
-        raise ValueError("sourceText is required")
-
-    config = _config(locale)
-    memory = load_memory(work_id, title=work.get("title", ""))
-    memory_context = compact_memory_context(memory)
-    extraction = ContextExtractor(config).extract(source_text, existing_memory_context=memory_context)
-    merged = merge_extraction(memory, extraction.to_dict())
-    glossary_candidates = extract_named_entity_glossary_candidates(source_text)
-    merged = upsert_glossary_candidates(merged, glossary_candidates)
-    saved = save_memory(merged)
-    memory_context = compact_memory_context(saved)
-    glossary_context = render_glossary_context(saved, locale, source_text=source_text)
-    return {
-        "workId": work_id,
-        "country": country,
-        "locale": locale,
-        "extraction": extraction.to_dict(),
-        "glossaryCandidates": glossary_candidates,
-        "memory": saved,
-        "memoryContext": "\n\n".join(part for part in [memory_context, glossary_context] if part),
-    }
 
 
 ACTION_LABELS = {
@@ -196,9 +141,10 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             "memory": None,
         }
     config = _config(locale)
-    memory_context = ""
-    extraction_payload: dict[str, Any] | None = None
-    memory: dict[str, Any] | None = None
+    terminology = payload.get("terminology") or payload.get("terms") or payload.get("glossary") or []
+    terminology_candidates = extract_noun_terminology_candidates(source_text)
+    active_terminology = merge_terminology(terminology, terminology_candidates)
+    terminology_context = render_terminology_context(active_terminology, locale, source_text=source_text)
     retrieval_queries: list[str] = []
     if work_id is not None:
         work_id_int = int(work_id)
@@ -207,27 +153,12 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             raise ValueError(f"work {work_id_int} not found")
         if episode_id is not None and not _get_episode(work_id_int, int(episode_id)):
             raise ValueError(f"episode {episode_id} not found for work {work_id_int}")
-        memory = load_memory(work_id_int, title=work.get("title", ""))
-        memory_context = compact_memory_context(memory)
-        extraction = ContextExtractor(config).extract(source_text, existing_memory_context=memory_context)
-        extraction_payload = extraction.to_dict()
-        retrieval_queries = extraction.ragQueries
-        merged_memory = merge_extraction(memory, extraction_payload)
-        glossary_candidates = extract_named_entity_glossary_candidates(source_text)
-        merged_memory = upsert_glossary_candidates(merged_memory, glossary_candidates)
-        memory = save_memory(merged_memory)
-        base_memory_context = compact_memory_context(memory)
-        glossary_context = render_glossary_context(memory, locale, source_text=source_text)
-        memory_context = "\n\n".join(part for part in [base_memory_context, glossary_context] if part)
-        if extraction_payload is not None:
-            extraction_payload = dict(extraction_payload)
-            extraction_payload["glossaryCandidates"] = glossary_candidates
     workflow = KoLocalePipeline(config).run_with_inspection(
         source_text,
         translation_memory=[],
-        memory_context=memory_context,
+        memory_context=terminology_context,
         retrieval_queries=retrieval_queries,
-        context_extraction=extraction_payload,
+        context_extraction={"terminologyCandidates": terminology_candidates} if terminology_candidates else None,
     )
     data = asdict(workflow)
     final_translation = data.get("reviewed_translation", "")
@@ -235,9 +166,10 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
         source_text=source_text,
         translated_text=final_translation,
         locale=locale,
-        memory=memory,
+        terminology=terminology,
     )
     data["consistency"] = consistency
+    data["terminology_context"] = terminology_context
     review_summary = format_review_summary(data)
     saved_version: dict[str, Any] | None = None
     if work_id is not None and episode_id is not None:
@@ -250,7 +182,7 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             final_translation=final_translation,
             review_summary=review_summary,
             workflow=data,
-            memory=memory,
+            memory={"terms": active_terminology} if active_terminology else None,
         )
     return {
         "country": country,
@@ -259,7 +191,8 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
         "reviewSummary": review_summary,
         "retrievalCount": len(data.get("retrievals", [])),
         "workflow": data,
-        "memory": memory,
+        "terminologyCandidates": terminology_candidates,
+        "memory": None,
         "translationVersion": saved_version,
     }
 

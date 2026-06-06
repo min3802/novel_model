@@ -94,7 +94,7 @@ data/rag_augmented/* 파일은 이전 단계 산출물이고 최신 파이프라
 Next.js frontend
   -> api_server.py /api/translate
   -> targetCountry -> locale
-  -> workId 있으면 작품 메모리 load + ContextExtractor
+  -> optional terminology/terms glossary + noun/proper-noun candidate hints
   -> KoLocalePipeline.run_with_inspection()
        1. DenseRetriever: translation-expression RAG
        2. CulturalLexicon: curated cultural terms
@@ -138,7 +138,7 @@ annotation_matches: 일부 irrelevant 후보가 뜰 수 있음
 마지막 통과 명령:
 
 `powershell
-python -m unittest tests.test_k_culture_rag tests.test_agent_workflow tests.test_cultural_lexicon tests.test_retriever_anchor_priority tests.test_work_memory
+python -m unittest tests.test_k_culture_rag tests.test_agent_workflow tests.test_cultural_lexicon tests.test_retriever_anchor_priority tests.test_terminology
 # Ran 20 tests OK
 `
 

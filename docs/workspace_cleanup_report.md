@@ -61,7 +61,7 @@ Passed before final generated-artifact removal:
 
 ```txt
 python -B -m py_compile api_server.py backend/store/memory_store.py backend/services/translation_service.py backend/services/cover_plan_service.py backend/services/guide_service.py backend/services/image_service.py
-python -B -m unittest tests.test_translation_consistency_glossary tests.test_work_memory tests.test_model_acceptance_from_docs tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector tests.test_k_culture_rag tests.test_retriever_anchor_priority
+python -B -m unittest tests.test_translation_consistency_glossary tests.test_terminology tests.test_model_acceptance_from_docs tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector tests.test_k_culture_rag tests.test_retriever_anchor_priority
 npm run typecheck
 npm run build
 ```

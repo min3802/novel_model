@@ -28,7 +28,7 @@ frontend/.omc/
 
 # Generated runtime/cache artifacts
 data/embedding_cache/
-data/ontology/
+data/terminology/
 docs/*_results.json
 docs/*outputs_live*
 docs/live_model_smoke_report.md

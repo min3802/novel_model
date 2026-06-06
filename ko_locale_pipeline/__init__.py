@@ -4,6 +4,7 @@ from .chatbot import ChatbotAgent, ChatbotReply, ChatMessage
 from .cultural_lexicon import CulturalLexicon, CulturalTermMatch
 from .inspector import InspectionAgent, InspectionResult
 from .pipeline import AgentWorkflowResult, KoJaPipeline, KoLocalePipeline, PipelineResult
+from .terminology import extract_noun_terminology_candidates, render_terminology_context
 
 __all__ = [
     "AgentWorkflowResult",
@@ -20,4 +21,6 @@ __all__ = [
     "KoJaPipeline",
     "KoLocalePipeline",
     "PipelineResult",
+    "extract_noun_terminology_candidates",
+    "render_terminology_context",
 ]

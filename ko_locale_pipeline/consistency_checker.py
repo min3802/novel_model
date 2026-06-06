@@ -1,31 +1,16 @@
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
 from typing import Any
 
-from .ontology import (
-    GLOSSARY_POLICY_CONTEXTUAL,
-    GLOSSARY_POLICY_LOCKED,
-    GLOSSARY_POLICY_PREFERRED,
-    glossary_rows_for_locale,
+from .terminology import (
+    TERMINOLOGY_POLICY_CONTEXTUAL,
+    TERMINOLOGY_POLICY_LOCKED,
+    TERMINOLOGY_POLICY_PREFERRED,
+    TerminologyIssue,
+    issue_to_dict,
+    present_any,
+    terminology_rows_for_locale,
 )
-
-
-@dataclass(slots=True)
-class ConsistencyIssue:
-    type: str
-    source: str
-    expected: str
-    actual: str
-    severity: str
-    message: str
-
-
-def _present_any(translated_text: str, candidates: list[str]) -> str:
-    for candidate in candidates:
-        if candidate and candidate in translated_text:
-            return candidate
-    return ""
 
 
 def check_translation_consistency(
@@ -33,43 +18,54 @@ def check_translation_consistency(
     source_text: str,
     translated_text: str,
     locale: str,
-    memory: dict[str, Any] | None = None,
+    memory: dict[str, Any] | list[dict[str, Any]] | None = None,
+    terminology: dict[str, Any] | list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    """Check noun/proper-noun glossary consistency.
+    """Check noun/proper-noun terminology consistency only.
 
-    The checker intentionally does not enforce verbs, adjectives, or normal
-    sentence variation.  It only evaluates glossary rows from work memory:
-    - locked: exact target required when target exists
-    - preferred: preferred or allowed variants pass
-    - contextual: reference-only, reported as skipped
+    This intentionally ignores verbs, adjectives, idiomatic phrasing, and normal
+    sentence variation. It evaluates only explicit terminology/glossary rows:
+    - locked: exact target required when the source noun/proper noun appears
+    - preferred: target or allowed variants pass
+    - contextual: reference-only, skipped from enforcement
     """
-    issues: list[ConsistencyIssue] = []
+    terms = terminology if terminology is not None else memory
+    issues: list[TerminologyIssue] = []
     checked: list[dict[str, Any]] = []
     skipped: list[dict[str, Any]] = []
 
-    for row in glossary_rows_for_locale(memory, locale):
+    for row in terminology_rows_for_locale(terms, locale):
         source = row["source"]
         if source not in source_text:
             continue
-        policy = row.get("policy") or GLOSSARY_POLICY_LOCKED
+        policy = row.get("policy") or TERMINOLOGY_POLICY_LOCKED
         expected = row.get("target") or row.get("recommendedTranslation") or ""
         allowed = list(row.get("allowedTranslations") or [])
         if expected and expected not in allowed:
             allowed.insert(0, expected)
 
-        if policy == GLOSSARY_POLICY_CONTEXTUAL:
+        if policy == TERMINOLOGY_POLICY_CONTEXTUAL:
             skipped.append(
                 {
                     "source": source,
                     "policy": policy,
-                    "reason": "contextual/reference-only term; not enforced",
+                    "reason": "contextual/reference-only noun term; not enforced",
+                }
+            )
+            continue
+        if not expected and not allowed:
+            skipped.append(
+                {
+                    "source": source,
+                    "policy": policy,
+                    "reason": "no confirmed target translation; candidate only",
                 }
             )
             continue
 
-        found = _present_any(translated_text, allowed)
+        found = present_any(translated_text, allowed)
         status = "pass" if found else "missing_target"
-        if policy == GLOSSARY_POLICY_PREFERRED and found and expected and found != expected:
+        if policy == TERMINOLOGY_POLICY_PREFERRED and found and expected and found != expected:
             status = "pass_with_allowed_variant"
         checked.append(
             {
@@ -83,18 +79,18 @@ def check_translation_consistency(
             }
         )
 
-        if not found and expected:
-            severity = "HIGH" if policy == GLOSSARY_POLICY_LOCKED else "MEDIUM"
+        if not found:
+            severity = "HIGH" if policy == TERMINOLOGY_POLICY_LOCKED else "MEDIUM"
             issues.append(
-                ConsistencyIssue(
-                    type="glossary_mismatch" if policy == GLOSSARY_POLICY_LOCKED else "preferred_term_missing",
+                TerminologyIssue(
+                    type="terminology_mismatch" if policy == TERMINOLOGY_POLICY_LOCKED else "preferred_term_missing",
                     source=source,
-                    expected=expected,
+                    expected=expected or ", ".join(allowed),
                     actual="missing",
                     severity=severity,
                     message=(
-                        f"Source term '{source}' appears in the Korean text, but the translation does not contain "
-                        f"the expected glossary form '{expected}'."
+                        f"Source noun/proper noun '{source}' appears in the original text, but the translation does not contain "
+                        f"the expected terminology form '{expected or ', '.join(allowed)}'."
                     ),
                 )
             )
@@ -104,10 +100,10 @@ def check_translation_consistency(
         "status": status,
         "checked": checked,
         "skipped": skipped,
-        "issues": [asdict(issue) for issue in issues],
+        "issues": [issue_to_dict(issue) for issue in issues],
         "summary": (
-            "Glossary consistency passed for checked noun/proper-noun terms."
+            "Terminology consistency passed for checked noun/proper-noun terms."
             if not issues
-            else f"Glossary consistency found {len(issues)} issue(s)."
+            else f"Terminology consistency found {len(issues)} issue(s)."
         ),
     }

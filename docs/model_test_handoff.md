@@ -84,7 +84,7 @@ python scripts\run_live_model_smoke.py --mock --include-images --json-out docs\m
 ### 회귀 테스트
 
 ```powershell
-python -m unittest tests.test_model_acceptance_from_docs tests.test_k_culture_rag tests.test_agent_workflow tests.test_cultural_lexicon tests.test_retriever_anchor_priority tests.test_work_memory
+python -m unittest tests.test_model_acceptance_from_docs tests.test_k_culture_rag tests.test_agent_workflow tests.test_cultural_lexicon tests.test_retriever_anchor_priority tests.test_terminology
 ```
 
 결과:

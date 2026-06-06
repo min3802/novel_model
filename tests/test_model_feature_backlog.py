@@ -72,7 +72,7 @@ class ModelFeatureBacklogTests(unittest.TestCase):
         self.assertEqual([row["version_no"] for row in stored], [2, 3, 4])
         self.assertEqual(versions[-1]["autoRemovedVersions"][0]["version_no"], 1)
 
-    def test_consistency_checker_reports_glossary_mismatch(self) -> None:
+    def test_consistency_checker_reports_terminology_mismatch(self) -> None:
         work, _episode = self._work_episode()
         source_text = "Kim Cheonsu stepped into the rainy street."
         memory = {
@@ -95,7 +95,7 @@ class ModelFeatureBacklogTests(unittest.TestCase):
         )
 
         self.assertEqual(result["status"], "warning")
-        self.assertEqual(result["issues"][0]["type"], "glossary_mismatch")
+        self.assertEqual(result["issues"][0]["type"], "terminology_mismatch")
         self.assertEqual(result["issues"][0]["severity"], "HIGH")
 
     def test_chat_suggestion_can_be_applied_to_translation_version(self) -> None:

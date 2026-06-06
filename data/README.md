@@ -8,7 +8,6 @@ This folder separates active runtime data from historical/generated working data
 - `cultural_terms/`: exact/alias Korean cultural-term lexicon used by `CulturalLexicon`.
 - `embedding_cache/`: generated embedding cache. Safe to regenerate, but clearing it can cost API time/money.
 - `localization_guide/`: localization-guide modules and platform-observation assets used by the guide API/tests.
-- `ontology/`: per-work translation memory/glossary JSON used by `ko_locale_pipeline.ontology`.
 
 ## Legacy / working data
 

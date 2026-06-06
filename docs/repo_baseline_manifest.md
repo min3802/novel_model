@@ -16,6 +16,7 @@ api_server.py
 backend/
 frontend/
 ko_locale_pipeline/
+  - terminology.py: noun/proper-noun consistency glossary
 prompts/
 scripts/
 tests/
@@ -64,7 +65,7 @@ __pycache__/
 frontend/node_modules/
 frontend/.next/
 data/embedding_cache/
-data/ontology/
+data/terminology/
 data/localization_guide/raw/
 data/localization_guide/platform_observation/platform_trend_guide_prompt.json
 data/localization_guide/platform_observation/platform_trend_localization_guide.md
@@ -83,9 +84,10 @@ ko_anchored_idiom_results_final/
 notebooks/
 ```
 
-## Cleanup note
+## Terminology consistency note
 
-`ko_locale_pipeline/ontology.py` is not removed in this baseline because the
-current translation service and consistency checker still import it for work
-memory/glossary behavior. Remove it only in a separate cleanup pass that either
-retires or replaces those API paths.
+The collaboration baseline intentionally does not use the legacy broad memory
+approach. Translation consistency is scoped to `ko_locale_pipeline/terminology.py`:
+confirmed noun/proper-noun rows can be supplied as `terminology`/`terms` in a
+translation request, rendered into the prompt, and checked after translation.
+Verbs, adjectives, and normal sentence-level wording variation are not enforced.
