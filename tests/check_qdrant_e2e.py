@@ -15,7 +15,7 @@ from __future__ import annotations
 import sys as _sys
 from pathlib import Path as _Path
 
-# 이 스크립트는 tests/ 안에 있지만, 프로젝트 루트의 ko_locale_pipeline 을 import 해야 한다.
+# 이 스크립트는 tests/ 안에 있지만, 프로젝트 루트의 app.translation 을 import 해야 한다.
 # 어디서 실행하든(루트/ tests 폴더 등) 동작하도록 루트를 sys.path 에 추가한다.
 _ROOT = _Path(__file__).resolve().parent.parent
 if str(_ROOT) not in _sys.path:
@@ -53,8 +53,8 @@ def main() -> int:
 
     step("2) qdrant_local 연결 / 컬렉션 확인")
     try:
-        from ko_locale_pipeline.config import PipelineConfig
-        from ko_locale_pipeline.retrieval.retriever import make_qdrant_client
+        from app.translation.config import PipelineConfig
+        from app.translation.retrieval.retriever import make_qdrant_client
     except Exception as exc:
         print(f"{NO} 패키지 import 실패: {exc!r}")
         return 1
@@ -71,7 +71,7 @@ def main() -> int:
     step("3) IdiomRetriever end-to-end (한국어 문장 -> KURE -> qdrant)")
     sample = "자업자득이라더니, 결국 본인이 한 행동의 결과를 받는 거지."
     try:
-        from ko_locale_pipeline.retrieval.idiom_retriever import IdiomRetriever
+        from app.translation.retrieval.idiom_retriever import IdiomRetriever
         print("   KURE 모델 로딩 중... (처음 1회는 수 초~수십 초 소요)")
         t0 = time.time()
         retriever = IdiomRetriever(cfg)
@@ -91,7 +91,7 @@ def main() -> int:
     step("4) AnnotationRetriever end-to-end (kculture)")
     sample2 = "그 사람 당근으로 중고 거래한다더라."
     try:
-        from ko_locale_pipeline.retrieval.annotation_retriever import AnnotationRetriever
+        from app.translation.retrieval.annotation_retriever import AnnotationRetriever
         anno = AnnotationRetriever(cfg)
         res2 = anno.retrieve(sample2, top_k=3)
         print(f"{OK} 주석 검색 완료, 결과 {len(res2)}건")

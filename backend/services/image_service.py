@@ -5,8 +5,8 @@ from typing import Any
 
 from dotenv import load_dotenv
 from openai import OpenAI
-from ko_locale_pipeline.core.mock_adapters import image_payload
-from ko_locale_pipeline.core.runtime import is_mock_mode
+from app.translation.core.mock_adapters import image_payload
+from app.translation.core.runtime import is_mock_mode
 
 load_dotenv()
 

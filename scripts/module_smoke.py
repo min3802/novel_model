@@ -26,11 +26,11 @@ if hasattr(sys.stdout, "reconfigure"):
 
 from backend.services.guide_service import guide
 from backend.services.translation_service import COUNTRY_TO_LOCALE, translate
-from ko_locale_pipeline.retrieval.annotation_retriever import AnnotationRetriever
-from ko_locale_pipeline.config import PipelineConfig
-from ko_locale_pipeline.text_processing.consistency_checker import check_translation_consistency
-from ko_locale_pipeline.retrieval.retriever import IdiomRetriever
-from ko_locale_pipeline.text_processing.terminology import (
+from app.translation.retrieval.annotation_retriever import AnnotationRetriever
+from app.translation.config import PipelineConfig
+from app.translation.text_processing.consistency_checker import check_translation_consistency
+from app.translation.retrieval.retriever import IdiomRetriever
+from app.translation.text_processing.terminology import (
     extract_noun_terminology_candidates,
     render_terminology_context,
 )

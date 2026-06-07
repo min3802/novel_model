@@ -1,0 +1,7253 @@
+[
+  {
+    "id": "jp-00001",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "一石二鳥",
+    "meaning": "한 번의 행동으로 두 가지 이익을 얻는 것",
+    "original_meaning": "Achieving two benefits from a single action.",
+    "ko_expression": [
+      "일석이조",
+      "두 마리 토끼를 잡다",
+      "한 번에 두 가지 효과",
+      "꿩 먹고 알 먹기",
+      "한번에 두 가지를 얻다"
+    ],
+    "ko_anchor_expression": [
+      "일석이조",
+      "꿩 먹고 알 먹기"
+    ],
+    "usage": "원문이 한 행동의 결과로 이익이 2개 생긴다는 뜻일 때 참고합니다. 한국어에서는 관용구 대응 가능하지만 문체 차이는 확인하세요.",
+    "scene": [
+      "업무 효율",
+      "절약",
+      "운동과 실익",
+      "문제 해결"
+    ],
+    "tone": [
+      "일상적",
+      "비유적",
+      "긍정적"
+    ],
+    "caution": "한국어의 ‘일석이조’가 가장 가깝지만, 문장 톤에 따라 ‘두 마리 토끼를 잡다’는 더 구어적일 수 있습니다. 직역보다 관용구 치환이 자연스러운 편입니다.",
+    "examples": [
+      "自転車で通勤すれば、運動にもなるし交通費も節約できて一石二鳥だ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 96
+  },
+  {
+    "id": "jp-00002",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "時は金なり",
+    "meaning": "시간은 돈만큼 귀하니 낭비하지 말아야 한다는 뜻",
+    "original_meaning": "Time is extremely valuable and should not be wasted, just as precious as money.",
+    "ko_expression": [
+      "시간은 금이다",
+      "세월을 아껴 쓰다",
+      "시간이 곧 돈이다"
+    ],
+    "ko_anchor_expression": [
+      "시간은 금이다"
+    ],
+    "usage": "시간의 가치를 강조하거나, 비효율·지연을 지적하는 문맥에서 한국어 유사 표현을 참고할 때 쓴다.",
+    "scene": [
+      "자기계발",
+      "업무 효율",
+      "일상 대화",
+      "경영/비즈니스"
+    ],
+    "tone": [
+      "격언적",
+      "실용적",
+      "단정적"
+    ],
+    "caution": "한국어에는 유사한 격언이 있으나, 문맥에 따라 ‘시간이 곧 돈이다’는 경제적 뉘앙스가 강해질 수 있다. 일본어는 일반적으로 시간의 소중함을 말하는 데 쓰이므로 과한 상업적 해석은 피한다.",
+    "examples": [
+      "時は金なりだから、今は寄り道せずに帰ろう。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 93
+  },
+  {
+    "id": "jp-00003",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "七転び八起き",
+    "meaning": "몇 번 실패해도 포기하지 않고 다시 일어서는 태도",
+    "original_meaning": "No matter how many times you fail, never give up and keep getting back up.",
+    "ko_expression": [
+      "칠전팔기",
+      "실패해도 다시 일어나다",
+      "포기하지 않고 재도전하다"
+    ],
+    "ko_anchor_expression": [
+      "칠전팔기"
+    ],
+    "usage": "실패 뒤의 재도전, 인내, 근성 강조 문맥에서 참고. 한국어에도 ‘칠전팔기’가 있어 관용 대응이 비교적 자연스럽다.",
+    "scene": [
+      "응원/격려",
+      "자기계발",
+      "스포츠 경기",
+      "사업 재도전"
+    ],
+    "tone": [
+      "격려체",
+      "긍정적",
+      "비유적"
+    ],
+    "caution": "한국어 '칠전팔기'와 직접 대응이 가능하나, 한자어 느낌이 강해 구어체에서는 다소 딱딱할 수 있다. 문맥에 따라 직역보다 자연스러운 한국어 설명으로 풀어도 좋다.",
+    "examples": [
+      "七転び八起きで、またやり直すしかない。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 95
+  },
+  {
+    "id": "jp-00004",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "一期一会",
+    "meaning": "한 번의 만남은 다시 오지 않으니 소중히 여기라는 뜻",
+    "original_meaning": "Every encounter is unique and will never happen again, so it must be treasured.",
+    "ko_expression": [
+      "일회일기 같은 만남",
+      "한번뿐인 인연",
+      "다시는 없을 만남"
+    ],
+    "ko_anchor_expression": [
+      "한 번뿐인 인연"
+    ],
+    "usage": "인간관계, 접객, 행사 소개처럼 만남의 유일성과 소중함을 강조할 때 참고한다. 직접 관용구 치환보다 의미풀이가 안전하다.",
+    "scene": [
+      "인연",
+      "환대",
+      "이별 전후",
+      "행사/모임"
+    ],
+    "tone": [
+      "차분함",
+      "격식",
+      "감성적"
+    ],
+    "caution": "한국어에 딱 맞는 고정 관용구는 없다. ‘한번뿐인 인연’처럼 풀어 쓰는 편이 자연스럽고, ‘一期一会’의 정서적·불교적 뉘앙스는 과장하지 않는 것이 좋다.",
+    "examples": [
+      "この店では、一期一会の気持ちでお客さんを迎えている。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00005",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "猿も木から落ちる",
+    "meaning": "능숙한 사람도 실수할 수 있다는 뜻",
+    "original_meaning": "Even experts make mistakes. Nobody is perfect.",
+    "ko_expression": [
+      "원숭이도 나무에서 떨어진다",
+      "장인도 실수한다",
+      "천하의 명수도 실수한다"
+    ],
+    "ko_anchor_expression": [
+      "원숭이도 나무에서 떨어진다"
+    ],
+    "usage": "전문가·숙련자·잘하는 사람의 실수나 실패를 말할 때 참고한다. 한국어에서는 직역 또는 비슷한 뜻의 일반 표현이 무난하다.",
+    "scene": [
+      "업무 실수",
+      "시험/연습 실패",
+      "경험자의 방심",
+      "주의 당부"
+    ],
+    "tone": [
+      "일상적",
+      "교훈적",
+      "가벼운 자조적"
+    ],
+    "caution": "한국어에도 거의 대응되는 속담이 있어 직역이 자연스럽다. 다만 문맥에 따라 ‘실수하다/방심하다’로 풀어 쓰는 편이 더 안전하다. ‘명수’ 같은 표현은 문체가 다소 문어적이다.",
+    "examples": [
+      "猿も木から落ちるというから、油断しないようにしましょう。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 96
+  },
+  {
+    "id": "jp-00006",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "猫に小判",
+    "meaning": "가치 있는 것을 줘도 알아볼 줄 모르는 사람에게는 소용없음",
+    "original_meaning": "Giving something valuable to someone who can't appreciate its worth. A complete waste.",
+    "ko_expression": [
+      "돼지 목에 진주목걸이",
+      "그림의 떡",
+      "소귀에 경 읽기"
+    ],
+    "ko_anchor_expression": [
+      "돼지 목에 진주목걸이"
+    ],
+    "usage": "상대가 가치를 이해하지 못해 효과가 없다는 뜻을 옮길 때 참고한다. 직역보다 한국어 유사 비유를 상황에 맞게 고른다.",
+    "scene": [
+      "선물",
+      "능력 미달",
+      "과분한 제공",
+      "낭비"
+    ],
+    "tone": [
+      "속담체",
+      "비유적",
+      "구어적"
+    ],
+    "caution": "한국어에서는 ‘돼지 목에 진주목걸이’가 가장 가깝지만 다소 강한 뉘앙스가 있다. ‘그림의 떡’은 도달 불가, ‘소귀에 경 읽기’는 알아듣지 못함에 더 가까워 직역 또는 문맥 조정이 필요하다.",
+    "examples": [
+      "子供に高級ワインを出しても猫に小判だよ。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00007",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "石の上にも三年",
+    "meaning": "참고 버티면 결국 성과가 난다는 뜻",
+    "original_meaning": "Patience and perseverance will always pay off. If you persist long enough, even a cold stone will become warm.",
+    "ko_expression": [
+      "인내는 쓰다, 열매는 달다",
+      "될 때까지 버틴다",
+      "끈기 있게 밀고 나가다"
+    ],
+    "ko_anchor_expression": [
+      "돌 위에 삼 년"
+    ],
+    "usage": "버티는 태도, 장기전, 포기하지 말라는 문맥에서 참고하되 한국어 관용구로 과도하게 바꾸지 말고 의미 중심으로 처리",
+    "scene": [
+      "격려",
+      "자기계발",
+      "업무",
+      "시험 준비"
+    ],
+    "tone": [
+      "격언체",
+      "격려체",
+      "조언체"
+    ],
+    "caution": "일본 속담이라 한국어의 고정 관용구로 1:1 대응되기 어렵다. 직역보다는 ‘오래 참고 버티면 성과가 난다’는 의미로 풀어 쓰는 편이 안전하다.",
+    "examples": [
+      "石の上にも三年というから、もう少し頑張ってみよう。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00008",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "花より団子",
+    "meaning": "겉멋보다 실속을 더 중시함을 뜻함.",
+    "original_meaning": "Preferring practical things over aesthetic beauty. Substance over style.",
+    "ko_expression": [
+      "금강산도 식후경",
+      "보이는 것보다 실속",
+      "겉보다 속"
+    ],
+    "ko_anchor_expression": [
+      "금강산도 식후경",
+      "실속이 먼저다"
+    ],
+    "usage": "미적 가치보다 실제 이익, 먹을거리, 실용성을 우선하는 맥락에서 참고한다. 한국어 관용구로는 비슷하지만 완전 일치하진 않는다.",
+    "scene": [
+      "꽃구경·행사",
+      "쇼핑·소비",
+      "음식·간식",
+      "실용성 강조"
+    ],
+    "tone": [
+      "가벼운",
+      "속담적",
+      "구어체"
+    ],
+    "caution": "한국어의 ‘금강산도 식후경’은 식사 우선 뉘앙스가 강해 일반적인 ‘실속 선호’와는 범위가 다르다. 직역하면 의미가 가장 안전하며, 관용구 치환은 문맥에 따라 과할 수 있다.",
+    "examples": [
+      "花見に来たのに、みんな食べ物に夢中で、まさに花より団子だね。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 74
+  },
+  {
+    "id": "jp-00009",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "自業自得",
+    "meaning": "자신이 한 일의 결과를 스스로 받는 것, 자업자득",
+    "original_meaning": "Reaping what you sow. Bearing the consequences of your own actions.",
+    "ko_expression": [
+      "자업자득",
+      "자기가 한 일의 결과",
+      "스스로 초래한 결과"
+    ],
+    "ko_anchor_expression": [
+      "자업자득"
+    ],
+    "usage": "남의 탓보다 본인 행동의 결과를 말할 때 참고한다. 비난 뉘앙스가 있어 공적 문장보다 대화체에 더 잘 맞는다.",
+    "scene": [
+      "비난",
+      "결과",
+      "자책",
+      "교훈"
+    ],
+    "tone": [
+      "비판적",
+      "직설적",
+      "구어체"
+    ],
+    "caution": "한국어 ‘자업자득’이 가장 가깝지만 다소 단정적이고 비난조일 수 있다. 문맥에 따라 ‘스스로 초래한 결과’처럼 완화 번역이 더 안전하다.",
+    "examples": [
+      "勉強しなかったから試験に落ちたんだよ。自業自得だね。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 96
+  },
+  {
+    "id": "jp-00010",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "出る杭は打たれる",
+    "meaning": "튀어나온 사람은 비판·견제를 받기 쉽다는 뜻",
+    "original_meaning": "Those who stand out or differ from the group often become targets of criticism or social pressure in Japanese society.",
+    "ko_expression": [
+      "튀면 맞는다",
+      "눈에 띄면 시비가 걸린다",
+      "두드러지면 견제를 받는다"
+    ],
+    "ko_anchor_expression": [
+      "모난 돌이 정 맞는다"
+    ],
+    "usage": "집단에서 남들과 다르게 행동하거나 성과가 커서 주목받을 때, 그에 따른 비난·압박을 설명할 때 참고한다.",
+    "scene": [
+      "회사",
+      "학교",
+      "지역사회",
+      "온라인 커뮤니티"
+    ],
+    "tone": [
+      "경계",
+      "부정적",
+      "속담체"
+    ],
+    "caution": "한국어 속담처럼 바로 대응되는 표현은 약해 직역 또는 의미풀이가 안전하다. '튀면 맞는다'는 구어적이므로 문체에 맞게 조절해야 한다.",
+    "examples": [
+      "出る杭は打たれるというけど、自分らしく生きたい。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00011",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "どんぐりの背比べ",
+    "meaning": "서로 비슷해 우열이 잘 드러나지 않는 상태",
+    "original_meaning": "Comparing things that are essentially the same (nothing stands out).",
+    "ko_expression": [
+      "도토리 키재기",
+      "거기서 거기",
+      "다 비슷비슷하다"
+    ],
+    "ko_anchor_expression": [
+      "오십보백보",
+      "도토리 키 재기"
+    ],
+    "usage": "사람·실적·수준을 비교하지만 차이가 거의 없다고 말할 때 참고. 직역보다 한국어의 ‘비슷비슷함’으로 풀어도 자연스럽다.",
+    "scene": [
+      "경쟁",
+      "비교",
+      "실적 평가",
+      "실력 논의"
+    ],
+    "tone": [
+      "비판적",
+      "담담한",
+      "구어체"
+    ],
+    "caution": "한국어에 ‘도토리 키재기’가 거의 직접 대응하지만, 다소 구어적이고 평가적으로 들릴 수 있다. 문맥에 따라 ‘거기서 거기’ 같은 완곡한 표현이 더 안전하다.",
+    "examples": [
+      "誰が一番足が速いか争っているが、みんな平凡な記録でどんぐりの背比べだ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 94
+  },
+  {
+    "id": "jp-00012",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "一寸先は闇",
+    "meaning": "바로 앞의 미래는 알 수 없고, 앞일은 예측하기 어렵다는 뜻.",
+    "original_meaning": "The future is unpredictable; we do not know what will happen just ahead.",
+    "ko_expression": [
+      "앞날은 알 수 없다",
+      "한 치 앞도 모른다",
+      "미래는 예측 불가"
+    ],
+    "ko_anchor_expression": [
+      "한 치 앞을 모른다"
+    ],
+    "usage": "예상 밖의 사건으로 상황이 급변할 때, 미래 불확실성을 설명하는 문맥에서 참고한다.",
+    "scene": [
+      "경제 위기",
+      "사고/재난",
+      "인생의 불확실성",
+      "계획 실패"
+    ],
+    "tone": [
+      "경구적",
+      "비관적",
+      "중립적"
+    ],
+    "caution": "한국어에 딱 맞는 고정 관용구는 약해 직역·의역이 모두 가능하다. ‘한 치 앞도 모른다’가 가장 가깝지만, 지나치게 속담처럼 보이지 않게 문체를 맞추는 것이 좋다.",
+    "examples": [
+      "順調だった計画が急に崩れて、まさに一寸先は闇だと感じた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00013",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "一挙両得",
+    "meaning": "한 번의 행동으로 두 가지 이익을 얻는다는 뜻",
+    "original_meaning": "Killing two birds with one stone. Gaining two benefits from one action.",
+    "ko_expression": [
+      "일거양득",
+      "두 마리 토끼를 잡다",
+      "한 번에 두 가지를 얻다",
+      "누이 좋고 매부 좋다",
+      "서로 좋다",
+      "양쪽이 다 좋다",
+      "서로 이득이다"
+    ],
+    "ko_anchor_expression": [
+      "일석이조",
+      "누이 좋고 매부 좋다"
+    ],
+    "usage": "한 번의 행위로 두 이득을 얻는 맥락에서 참고한다. 한국어에서는 관용구 직역보다 자연스러운 표현 선택이 중요하다.",
+    "scene": [
+      "업무 효율",
+      "비용 절감",
+      "학습/운동 겸용",
+      "시간 절약"
+    ],
+    "tone": [
+      "격식체",
+      "일상체",
+      "설명체"
+    ],
+    "caution": "한국어의 ‘두 마리 토끼를 잡다’와 의미가 가깝지만, 문맥에 따라 직역 ‘일거양득’이 더 안전하다. 과장된 성공 뉘앙스는 주의.",
+    "examples": [
+      "自転車通勤は健康にもいいし、交通費も節約できる。まさに一挙両得だ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 95
+  },
+  {
+    "id": "jp-00014",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "三日坊主",
+    "meaning": "무언가를 시작해도 오래 못 가고 쉽게 그만두는 사람",
+    "original_meaning": "Someone who gives up easily; a quitter. Lit: A monk for (only) three days.",
+    "ko_expression": [
+      "작심삼일",
+      "금방 포기하는 사람",
+      "지속하지 못하는 습관"
+    ],
+    "ko_anchor_expression": [
+      "작심삼일"
+    ],
+    "usage": "계획·다이어트·공부·운동처럼 시작은 하지만 금세 중단하는 사람을 말할 때 참고한다. 직역보다 의미풀이가 안전하다.",
+    "scene": [
+      "습관",
+      "자기계발",
+      "취미",
+      "실패"
+    ],
+    "tone": [
+      "일상적",
+      "약간 자조적",
+      "비판적"
+    ],
+    "caution": "한국어의 ‘작심삼일’과 잘 맞지만, 일본어는 사람을 가리키는 뉘앙스가 더 강할 수 있다. 문맥에 따라 ‘~하는 사람’으로 풀어 쓰는 편이 안전하다. ‘스님’ 이미지를 살리는 직역은 보통 불필요하다.",
+    "examples": [
+      "日記を始めたが、やっぱり三日坊主で終わってしまった。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 92
+  },
+  {
+    "id": "jp-00015",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "亀の甲より年の功",
+    "meaning": "나이가 들며 쌓인 경험과 지혜가 더 믿을 만하다는 뜻",
+    "original_meaning": "The wisdom of age is more valuable than the shell of a tortoise (symbol of longevity). Experience is the best teacher.",
+    "ko_expression": [
+      "나이 들수록 지혜가 쌓이다",
+      "연륜의 힘",
+      "경험이 최고의 스승"
+    ],
+    "ko_anchor_expression": [
+      "경험이 최고의 스승이다"
+    ],
+    "usage": "연장자의 조언, 숙련된 사람의 판단, 경험에서 우러난 지혜를 강조할 때 참고한다. 한국어 관용구로 꼭 치환하기보다 의미풀이가 안전하다.",
+    "scene": [
+      "가족 대화",
+      "직장 조언",
+      "경험담",
+      "세대 비교"
+    ],
+    "tone": [
+      "격언체",
+      "담담함",
+      "칭찬"
+    ],
+    "caution": "직역은 어색하므로 관용구로 고정 치환하기보다 의미를 풀어 쓰는 것이 안전하다. 한국어의 '연륜', '경험' 표현이 가장 무난하며, 과도한 교훈조는 피한다.",
+    "examples": [
+      "やっぱり先輩の言うことは違うな。亀の甲より年の功だ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00016",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "仏の顔も三度",
+    "meaning": "아무리 온화한 사람도 거듭 건드리면 결국 화낸다는 뜻",
+    "original_meaning": "Even the gentlest person will get angry if provoked repeatedly. Patience has its limits.",
+    "ko_expression": [
+      "참을 인에도 한계가 있다",
+      "좋은 사람도 세 번이면 화낸다",
+      "호랑이도 세 번 건드리면 물어간다"
+    ],
+    "ko_anchor_expression": [
+      "부처님도 세 번이면 돌아선다"
+    ],
+    "usage": "반복된 실례나 자극으로 인내심이 끝났음을 말할 때 참고한다. 직역보다 한국어의 ‘인내 한계’ 의미로 옮기기 쉽다.",
+    "scene": [
+      "분노 표출",
+      "인내심 한계",
+      "반복된 실례",
+      "관계 갈등"
+    ],
+    "tone": [
+      "경고",
+      "구어체",
+      "비유적"
+    ],
+    "caution": "직역하면 뜻이 잘 안 살아나므로 의미풀이가 안전하다. 한국어 관용구로는 완전 대응이 약하고, 문체도 다소 속담풍이다.",
+    "examples": [
+      "いつも穏やかな課長も、今日ばかりは仏の顔も三度だと言っていた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00017",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "以心伝心",
+    "meaning": "말 없이도 마음이 통해 서로의 뜻을 알아채는 것",
+    "original_meaning": "Telepathy; tacit understanding. Communicating from heart to heart without words.",
+    "ko_expression": [
+      "눈빛만 봐도 안다",
+      "말하지 않아도 통하다",
+      "눈치로 알아채다"
+    ],
+    "ko_anchor_expression": [
+      "이심전심"
+    ],
+    "usage": "친한 관계에서 설명 없이 의사와 감정을 주고받는 맥락, 또는 협업에서 암묵적 합의를 말할 때 참고합니다.",
+    "scene": [
+      "오랜 친구",
+      "부부 관계",
+      "팀워크",
+      "호흡이 맞는 상황"
+    ],
+    "tone": [
+      "일상적",
+      "따뜻한",
+      "비유적"
+    ],
+    "caution": "한국어의 ‘척하면 척’과 가깝지만 완전 대응은 아닙니다. 직역보다 ‘말 없이도 통하다’처럼 의미풀이가 안전하며, 지나친 초능력 뉘앙스는 피하세요.",
+    "examples": [
+      "長年の親友とは、言いたいことが以心伝心でわかる。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00018",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "勝って兜の緒を締めよ",
+    "meaning": "성공한 뒤에도 방심하지 말고 경계를 늦추지 말라는 뜻",
+    "original_meaning": "Don't let your guard down after a victory. Stay alert even after success.",
+    "ko_expression": [
+      "방심은 금물",
+      "승리 뒤가 더 중요하다",
+      "긴장을 늦추지 않다"
+    ],
+    "ko_anchor_expression": [
+      "방심은 금물"
+    ],
+    "usage": "승리·합격·성과 뒤에 자만하거나 느슨해지지 말라고 할 때 참고. 한국어에선 직역보다 경계/방심 표현이 자연스럽다.",
+    "scene": [
+      "시험 합격 후",
+      "경기 승리 후",
+      "사업 성과 달성 후",
+      "작업 완료 후"
+    ],
+    "tone": [
+      "격언체",
+      "훈계체",
+      "단정적"
+    ],
+    "caution": "직역하면 어색하므로 ‘방심하지 말라’는 뜻으로 풀어 쓰는 편이 안전하다. 한국어 관용구로 무리하게 치환하기보다 경계의 의미를 살리는 것이 좋다.",
+    "examples": [
+      "試験に合格したからといって、遊んでばかりいてはいけない。勝って兜の緒を締めよだ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 87
+  },
+  {
+    "id": "jp-00019",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "十人十色",
+    "meaning": "사람마다 취향과 의견이 제각각이라는 뜻",
+    "original_meaning": "So many men, so many minds. Everyone has their own tastes and opinions.",
+    "ko_expression": [
+      "십인십색",
+      "사람마다 다르다",
+      "제각각이다"
+    ],
+    "ko_anchor_expression": [
+      "십인십색"
+    ],
+    "usage": "개인별 취향, 의견, 선택이 다름을 말할 때 참고한다. 한국어에선 관용구보다 평이한 설명으로 옮기기 쉽다.",
+    "scene": [
+      "취향 차이",
+      "의견 다양성",
+      "개인별 선택",
+      "호불호 비교"
+    ],
+    "tone": [
+      "중립적",
+      "설명적",
+      "일상적"
+    ],
+    "caution": "직역하면 어색하지는 않지만, 한국어에서는 관용구보다 의미풀이가 더 자연스럽다. 문체는 담담하고 일반적이므로 과한 비유로 바꾸지 않는 것이 안전하다.",
+    "examples": [
+      "何を好きになるかは十人十色だから、無理に意見を押し付けてはいけない。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00020",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "善は急げ",
+    "meaning": "좋은 일은 망설이지 말고 빨리 실행하라는 뜻.",
+    "original_meaning": "Strike while the iron is hot. Be quick to do good.",
+    "ko_expression": [
+      "선행은 미루지 말자",
+      "좋은 일은 바로 하자",
+      "미덕은 즉시 실천해야 한다"
+    ],
+    "ko_anchor_expression": [
+      "쇠뿔도 단김에 빼라"
+    ],
+    "usage": "결정·실행을 재촉할 때 참고하되, 한국어에서는 속담보다 평서문이나 권유형으로 옮기는 편이 자연스럽습니다.",
+    "scene": [
+      "조언",
+      "결심",
+      "실행 독려",
+      "시간 제한"
+    ],
+    "tone": [
+      "권유",
+      "교훈적",
+      "담백"
+    ],
+    "caution": "직역보다 의미풀이가 안전합니다. 한국어의 익숙한 관용구로 강하게 치환하면 원문의 ‘좋은 일에 서둘러라’는 뉘앙스가 흐려질 수 있습니다. 문체는 비교적 구어적입니다.",
+    "examples": [
+      "留学をしたいなら、今すぐ準備を始めましょう。善は急げと言うでしょう。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00021",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "嘘も方便",
+    "meaning": "상황에 따라 사람을 배려하거나 목적을 위해 거짓말이 용인될 수 있다는 뜻",
+    "original_meaning": "A white lie. Circumstances may justify a lie.",
+    "ko_expression": [
+      "선의의 거짓말",
+      "때로는 거짓말도 필요하다",
+      "거짓말도 상황에 따라 허용된다"
+    ],
+    "ko_anchor_expression": [
+      "선의의 거짓말"
+    ],
+    "usage": "상대에게 상처를 덜 주려는 경우나, 정면직설보다 완곡한 설명이 필요한 맥락에서 참고한다.",
+    "scene": [
+      "대인관계",
+      "배려형 설명",
+      "갈등 완화",
+      "윤리적 딜레마"
+    ],
+    "tone": [
+      "속담체",
+      "비유적",
+      "다소 문어적"
+    ],
+    "caution": "직역보다 의미풀이가 안전하다. 한국어의 ‘거짓말도 방편’은 다소 어색할 수 있어, 문맥에 따라 ‘선의의 거짓말’로 풀어 쓰는 편이 자연스럽다. 윤리적으로 거짓말을 일반화하는 뉘앙스는 과해질 수 있다.",
+    "examples": [
+      "本当のことを言って彼女を傷つけるよりはいい。嘘も方便だよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00022",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "失敗は成功のもと",
+    "meaning": "실패는 성공의 밑거름이 된다.",
+    "original_meaning": "Failure is the stepping stone to success.",
+    "ko_expression": [
+      "실패는 성공의 어머니",
+      "실패를 딛고 일어서다",
+      "시행착오를 거치다"
+    ],
+    "ko_anchor_expression": [
+      "실패는 성공의 어머니"
+    ],
+    "usage": "실패를 긍정적으로 해석하며 재도전·학습의 가치를 말할 때 참고한다. 한국어에선 속담식 대응이 가능하지만 문맥에 따라 직설적으로 풀어도 자연스럽다.",
+    "scene": [
+      "발명·연구",
+      "공부·훈련",
+      "창업·재도전",
+      "격려·조언"
+    ],
+    "tone": [
+      "격려적",
+      "교훈적",
+      "긍정적"
+    ],
+    "caution": "한국어의 ‘실패는 성공의 어머니’와 매우 가깝지만, 고정 속담처럼 꼭 치환할 필요는 없다. 원문이 담담하면 ‘실패가 성공의 밑거름이 된다’처럼 평서로 옮기는 것이 안전하다.",
+    "examples": [
+      "あの発明家は何度も失敗を重ねたが、ついに世界的な発明を成し遂げた。まさに「失敗は成功のもと」だ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 95
+  },
+  {
+    "id": "jp-00023",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "安物買いの銭失い",
+    "meaning": "싸구려를 샀다가 금세 고장 나 오히려 돈을 더 쓰게 됨",
+    "original_meaning": "Penny wise and pound foolish. Breaking the bank by buying cheap.",
+    "ko_expression": [
+      "싼 게 비지떡",
+      "아끼려다 더 든다",
+      "값싼 게 결국 비싸다"
+    ],
+    "ko_anchor_expression": [
+      "싼 게 비지떡"
+    ],
+    "usage": "값만 보고 저가품을 샀다가 수리비·재구매비가 더 드는 상황을 설명할 때 참고한다. 직접 대응 관용구로 자주 연결 가능하다.",
+    "scene": [
+      "쇼핑",
+      "가전/전자제품",
+      "수리·교체",
+      "실수·후회"
+    ],
+    "tone": [
+      "일상적",
+      "경고형",
+      "속담풍"
+    ],
+    "caution": "한국어에선 '싼 게 비지떡'이 가장 가깝지만, 원문은 단순 품질평가보다 '싸게 사려다 오히려 손해'를 더 분명히 말한다. 문맥에 따라 직역 또는 풀이가 안전하다.",
+    "examples": [
+      "安いパソコンを買ったが、すぐに壊れて修理代が高くついた。まさに安物買いの銭失いだ."
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 94
+  },
+  {
+    "id": "jp-00024",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "後悔先に立たず",
+    "meaning": "이미 지나간 일은 후회해도 바꿀 수 없다는 뜻",
+    "original_meaning": "Repentance comes too late. It is no use crying over spilt milk.",
+    "ko_expression": [
+      "소 잃고 외양간 고친다",
+      "엎질러진 물",
+      "지난 일은 되돌릴 수 없다"
+    ],
+    "ko_anchor_expression": [
+      "소 잃고 외양간 고친다"
+    ],
+    "usage": "실수나 기회를 놓친 뒤 뒤늦게 후회하는 맥락에서 참고하며, 결과보다 사후 한탄을 말할 때 쓴다.",
+    "scene": [
+      "시험/진로",
+      "실수/사고",
+      "기회 상실",
+      "사후 후회"
+    ],
+    "tone": [
+      "훈계체",
+      "일상체",
+      "비판적"
+    ],
+    "caution": "한국어의 '소 잃고 외양간 고친다'는 예방 부재를 더 강하게 암시해 과장될 수 있다. 직역 성격을 살리면 '이제 와 후회해도 늦다' 쪽이 안전하다.",
+    "examples": [
+      "あの時もっと勉強しておけばよかったと言っても、後悔先に立たずだ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 85
+  },
+  {
+    "id": "jp-00025",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "五十歩百歩",
+    "meaning": "서로 대동소이하여 우열이 없거나, 둘 다 비슷하게 못하다는 뜻",
+    "original_meaning": "Six of one, half a dozen of the other. The pot calling the kettle black.",
+    "ko_expression": [
+      "오십보백보",
+      "거기서 거기",
+      "도긴개긴"
+    ],
+    "ko_anchor_expression": [
+      "오십보백보",
+      "도토리 키 재기"
+    ],
+    "usage": "두 대상의 차이가 거의 없거나, 서로 비난하지만 본질적으로 비슷할 때 참고한다. 한국어에서는 직역보다 대응 관용구가 자연스럽다.",
+    "scene": [
+      "비교",
+      "평가",
+      "비판",
+      "변명"
+    ],
+    "tone": [
+      "구어체",
+      "비판적",
+      "중립적"
+    ],
+    "caution": "한국어에도 거의 직접 대응되는 표현이 있어 관용구 치환이 자연스럽다. 다만 문맥에 따라 ‘둘 다 비슷하다’인지 ‘서로를 비난할 자격이 없다’인지 구분해야 한다.",
+    "examples": [
+      "彼が遅刻を批判しているけど、自分もいつも遅れてくるから五十歩百歩だ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 96
+  },
+  {
+    "id": "jp-00026",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "急がば回れ",
+    "meaning": "서둘러야 할수록 돌아가는 편이 오히려 더 빠르다는 뜻",
+    "original_meaning": "Make haste slowly. More haste, less speed.",
+    "ko_expression": [
+      "급할수록 돌아가라",
+      "돌아가는 길이 더 빠르다",
+      "서두르다 일을 그르치다"
+    ],
+    "ko_anchor_expression": [
+      "급할수록 돌아가라"
+    ],
+    "usage": "급하게 처리하려다 오히려 지연될 때, 안전하게 우회하거나 절차를 밟는 판단을 설명하는 문맥에서 참고",
+    "scene": [
+      "교통 우회",
+      "업무 처리",
+      "시험 준비",
+      "문제 해결"
+    ],
+    "tone": [
+      "격언체",
+      "훈계체",
+      "설명체"
+    ],
+    "caution": "한국어의 ‘급할수록 돌아가라’와 매우 가깝지만, 상황에 따라 단순 조언문으로도 쓰입니다. 직역보다 유사 격언 대응이 자연스럽습니다.",
+    "examples": [
+      "高速道路が渋滞しているなら、下道を行こう。急がば回れだ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 96
+  },
+  {
+    "id": "jp-00027",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "情けは人のためならず",
+    "meaning": "남에게 베푼 친절은 결국 자신에게 돌아온다는 뜻",
+    "original_meaning": "Kindness is its own reward. A good turn deserves another.",
+    "ko_expression": [
+      "정은 돌고 돈다",
+      "호의는 결국 돌아온다",
+      "베푼 만큼 돌아온다"
+    ],
+    "ko_anchor_expression": [
+      "선행은 돌아온다"
+    ],
+    "usage": "남을 도운 이익이 언젠가 자신에게 돌아온다는 의미로 번역할 때 참고한다. ‘남을 위해서가 아니다’라는 오해는 피해야 한다.",
+    "scene": [
+      "조언",
+      "인간관계",
+      "회사 생활",
+      "일상 대화"
+    ],
+    "tone": [
+      "격언체",
+      "설명적",
+      "구어체"
+    ],
+    "caution": "직역하면 ‘남을 위한 것이 아니다’로 오해되기 쉬우므로 주의. 한국어 관용구로 완전 일치하는 표현은 약해 뜻풀이 중심 번역이 안전하다.",
+    "examples": [
+      "困っている人を助けるのは、いつか自分に返ってくる。情けは人のためならずだよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00028",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "捕らぬ狸の皮算用",
+    "meaning": "아직 손에 넣지 못한 것을 이미 가진 듯 계산하는 것",
+    "original_meaning": "Don't count your chickens before they hatch.",
+    "ko_expression": [
+      "김칫국부터 마시다",
+      "떡 줄 사람은 생각도 않는데",
+      "아직 잡히지도 않은 물고기 셈",
+      "떡 줄 사람은 생각도 않는데 김칫국부터 마신다",
+      "김칫국부터 마신다",
+      "아직인데 기대한다",
+      "성급하게 단정하다"
+    ],
+    "ko_anchor_expression": [
+      "김칫국부터 마신다",
+      "떡 줄 사람은 생각도 않는데 김칫국부터 마신다"
+    ],
+    "usage": "미래의 이익이나 결과를 너무 일찍 가정해 기대·계산하는 문맥에서 참고하되, 상황에 따라 직역보다 한국어 관용구를 선택",
+    "scene": [
+      "계획",
+      "기대",
+      "투자",
+      "복권"
+    ],
+    "tone": [
+      "비판적",
+      "회화체",
+      "약간 익살"
+    ],
+    "caution": "한국어의 '김칫국부터 마시다'가 가장 가깝지만, 문맥에 따라 더 자연스러운 직설 표현이 나을 수 있다. 직역하면 어색할 수 있고, 과도한 관용구 치환은 피하는 게 안전하다.",
+    "examples": [
+      "宝くじが当たる前から旅行先を決めるなんて、捕らぬ狸の皮算用だよ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-00029",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "損して得取れ",
+    "meaning": "당장은 손해를 봐도 나중의 이익을 위해 감수하라는 뜻",
+    "original_meaning": "Lose a fly to catch a trout. Give a sprat to catch a mackerel.",
+    "ko_expression": [
+      "손해를 감수하고 이익을 얻다",
+      "밑지는 셈 치고 하다",
+      "작은 손해로 큰 이익을 보다"
+    ],
+    "ko_anchor_expression": [
+      "손해 보고 이익 본다"
+    ],
+    "usage": "단기 손실을 감수해 장기 이익을 노리는 투자, 영업, 협상 맥락에서 참고할 표현이다.",
+    "scene": [
+      "투자",
+      "영업 전략",
+      "협상",
+      "장기 계획"
+    ],
+    "tone": [
+      "조언",
+      "설득",
+      "실용적"
+    ],
+    "caution": "직역보다 의미풀이가 안전하다. 한국어 관용구로 완전히 고정 대응되진 않으며, 문맥에 따라 ‘밑지는 셈 치다’처럼 완곡하게 옮기는 편이 자연스럽다.",
+    "examples": [
+      "今は赤字でも、広告にお金をかけたほうがいい。損して得取れだよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00030",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "早起きは三文の徳",
+    "meaning": "일찍 일어나면 작은 이득이나 도움이 있다는 뜻",
+    "original_meaning": "The early bird catches the worm.",
+    "ko_expression": [
+      "일찍 일어나는 새가 먹이를 잡는다",
+      "부지런하면 이득이 있다",
+      "아침형 인간이 유리하다"
+    ],
+    "ko_anchor_expression": [
+      "일찍 일어나는 새가 벌레를 잡는다"
+    ],
+    "usage": "조기 행동의 이점을 말할 때 참고하되, 한국어에서는 속담 직대응보다 상황에 맞는 풀어쓰기가 더 자연스러운 경우가 많다.",
+    "scene": [
+      "아침 습관",
+      "공부/업무 효율",
+      "준비를 서두를 때",
+      "생활 조언"
+    ],
+    "tone": [
+      "훈계조",
+      "가벼운 조언",
+      "속담체"
+    ],
+    "caution": "일본어는 ‘작은 이익’의 뉘앙스가 있어 과한 교훈으로 번역하지 않도록 주의. 한국어에선 직역 속담보다 상황에 따라 ‘일찍 하면 이득’ 식 풀어쓰기가 안전하다.",
+    "examples": [
+      "早起きして勉強したら捗った。早起きは三文の徳だね。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 92
+  },
+  {
+    "id": "jp-00032",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "果報は寝て待て",
+    "meaning": "할 수 있는 일은 다 했으면 조급해하지 말고 결과를 기다리라는 뜻",
+    "original_meaning": "Everything comes to him who waits. Sleep and wait for good luck.",
+    "ko_expression": [
+      "기다리면 복이 온다",
+      "될 일은 된다",
+      "마음을 비우고 기다리다"
+    ],
+    "ko_anchor_expression": [
+      "돌 위에 삼 년"
+    ],
+    "usage": "노력 후 결과를 조급하게 재촉하지 말라는 뜻으로, 조언·격려 문맥에서 참고한다. 한국어 관용구로 꼭 치환하지 않아도 된다.",
+    "scene": [
+      "시험 결과 대기",
+      "일이나 프로젝트 마무리 후",
+      "연애·인연을 기다리는 상황",
+      "운이나 기회를 기다리는 상황"
+    ],
+    "tone": [
+      "격언체",
+      "조언적",
+      "담담한"
+    ],
+    "caution": "직역하면 부자연스럽지만, 한국어의 ‘기다리면 복이 온다’와 의미축이 가깝다. 다만 ‘잠자고 기다리라’는 식의 표현은 과장되므로 피하고, 문맥에 따라 ‘마음을 비우고 기다리다’로 풀어 쓰는 편이 안전하다.",
+    "examples": [
+      "やれることは全部やったんだから、あとは果報は寝て待てだよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00034",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "棚からぼた餅",
+    "meaning": "아무 노력 없이 뜻밖의 이익이나 행운을 얻는 것",
+    "original_meaning": "A windfall. Pennies from heaven.",
+    "ko_expression": [
+      "횡재를 하다",
+      "뜻밖의 행운",
+      "노력 없이 얻다",
+      "호박이 넝쿨째 굴러들어오다",
+      "뜻밖의 행운이 오다",
+      "호박이 들어오다"
+    ],
+    "ko_anchor_expression": [
+      "호박이 넝쿨째 굴러들어오다"
+    ],
+    "usage": "예상치 못한 이득, 공짜로 생긴 행운을 말할 때 참고합니다. 한국어 관용구로 과하게 바꾸기보다 ‘뜻밖의 이익’ 축으로 옮기기 좋습니다.",
+    "scene": [
+      "복권 당첨",
+      "우연한 이득",
+      "예상 밖 선물",
+      "공짜로 얻은 기회"
+    ],
+    "tone": [
+      "구어적",
+      "비유적",
+      "가벼운"
+    ],
+    "caution": "한국어의 ‘누워서 떡 먹기’는 쉬움의 의미가 더 강해 완전 대응은 아닙니다. 문맥에 따라 직역하면 뜻이 안정적이고, 관용구 치환은 과할 수 있습니다.",
+    "examples": [
+      "宝くじが当たったなんて、まさに棚からぼた餅だ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-00037",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "河童の川流れ",
+    "meaning": "아무리 능숙한 사람도 실수할 수 있다는 뜻",
+    "original_meaning": "Even Homer sometimes nods. Anyone can make a mistake.",
+    "ko_expression": [
+      "원숭이도 나무에서 떨어진다",
+      "달인도 실수한다",
+      "고수도 한 번은 미끄러진다"
+    ],
+    "ko_anchor_expression": [
+      "원숭이도 나무에서 떨어진다"
+    ],
+    "usage": "실력자나 전문가의 뜻밖의 실수를 가볍게 말할 때 참고한다. 비난보다 허용적·격려적 맥락에 맞다.",
+    "scene": [
+      "실수 설명",
+      "가벼운 농담",
+      "격려",
+      "평가 코멘트"
+    ],
+    "tone": [
+      "속담풍",
+      "구어체",
+      "가벼움"
+    ],
+    "caution": "한국어에는 더 직접적인 대응 속담이 있어 직역보다 의미 대응이 우선이다. 다만 원문은 일본 고유 표현이므로 문체가 너무 딱딱해지지 않게 한다.",
+    "examples": [
+      "あの天才ピアニストがミスタッチをするなんて、河童の川流れだね。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 93
+  },
+  {
+    "id": "jp-00039",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "灯台下暗し",
+    "meaning": "가까이에 있는 중요한 것을 오히려 알아채지 못함",
+    "original_meaning": "It is darkest under the lamp. We are often unaware of what is right in front of us.",
+    "ko_expression": [
+      "등잔 밑이 어둡다",
+      "가까운 것을 놓치다",
+      "바로 앞의 것을 못 보다",
+      "가까운 곳이 더 안 보인다",
+      "코앞을 못 본다",
+      "등잔 아래가 어둡다"
+    ],
+    "ko_anchor_expression": [
+      "등잔 밑이 어둡다"
+    ],
+    "usage": "가까운 곳의 문제·단서·해답을 못 보고 있다가 뒤늦게 깨닫는 맥락에서 참고한다.",
+    "scene": [
+      "분실물 찾기",
+      "문제 원인 탐색",
+      "해결책 발견",
+      "일상적 실수"
+    ],
+    "tone": [
+      "일상적",
+      "약간 속담체",
+      "설명적"
+    ],
+    "caution": "한국어에 거의 직접 대응하는 속담이 있어 관용구 치환이 가능하다. 다만 문장형 직역보다 상황에 맞게 자연스럽게 쓰는 것이 좋다.",
+    "examples": [
+      "眼鏡を探していたら、頭の上にあった。灯台下暗しだね。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 96
+  },
+  {
+    "id": "jp-00040",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "焼け石に水",
+    "meaning": "아주 부족해서 거의 효과가 없는 보탬이나 조치",
+    "original_meaning": "A drop in the bucket. Asking for the moon.",
+    "ko_expression": [
+      "언 발에 오줌 누기",
+      "새 발의 피",
+      "눈 가리고 아웅",
+      "밑 빠진 독에 물 붓기",
+      "밑 빠진 독",
+      "헛수고다",
+      "끝없는 헛일"
+    ],
+    "ko_anchor_expression": [
+      "밑 빠진 독에 물 붓기"
+    ],
+    "usage": "부채, 피해, 부족한 자원에 대해 ‘해도 별 효과 없다’는 뜻으로 쓸 때 참고합니다. 첫 두 표현은 근접, 마지막은 뉘앙스 차이 주의.",
+    "scene": [
+      "빚 상환",
+      "응급 보강",
+      "지원·대책 평가",
+      "물량·예산 부족"
+    ],
+    "tone": [
+      "비판적",
+      "속담체",
+      "구어적"
+    ],
+    "caution": "직역하면 ‘뜨거운 돌에 물’이지만 실제 뜻은 ‘너무 적어 소용없음’입니다. 한국어 관용구로 완전 치환하기보다 맥락에 따라 ‘별 효과 없다’로 푸는 편이 안전합니다.",
+    "examples": [
+      "借金が山ほどあるのに、少し返しても焼け石に水だ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-00045",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "目くそ鼻くそを笑う",
+    "meaning": "서로 비슷한 결점이 있는 처지에서 남의 흠을 비웃는다는 뜻",
+    "original_meaning": "The pot calling the kettle black.",
+    "ko_expression": [
+      "똥 묻은 개가 겨 묻은 개 나무란다",
+      "도토리 키 재기",
+      "오십보백보"
+    ],
+    "ko_anchor_expression": [
+      "도토리 키 재기",
+      "오십보백보"
+    ],
+    "usage": "상대의 결함을 지적하지만 사실상 둘 다 비슷해 우열이 없을 때 참고한다. 직접 대응 관용구로는 첫째가 가장 가깝다.",
+    "scene": [
+      "비판/비난",
+      "다툼/말싸움",
+      "비교/우열",
+      "온라인 댓글"
+    ],
+    "tone": [
+      "비꼼",
+      "속담체",
+      "구어체"
+    ],
+    "caution": "한국어에서는 ‘똥 묻은 개가 겨 묻은 개 나무란다’가 가장 가깝지만 다소 거칠다. ‘도토리 키 재기’는 비웃음보다 비교 뉘앙스가 강해 문맥에 따라 직역보다 완곡한 번역이 낫다.",
+    "examples": [
+      "彼らは相手を責めてるけど、目くそ鼻くそを笑うみたいな話だよ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 94
+  },
+  {
+    "id": "jp-00057",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "清水の舞台から飛び降りる",
+    "meaning": "큰 결심으로 과감히 행동하거나 승부를 거는 것",
+    "original_meaning": "To take the plunge. Crossing the Rubicon.",
+    "ko_expression": [
+      "큰맘 먹고",
+      "한번 질러보다",
+      "승부수를 던지다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "금전·진학·이직·구매처럼 손실 가능성을 감수하고 결단하는 맥락에서 참고한다. 한국어 관용구로 과하게 치환하지 말고 결심의 뉘앙스를 살린다.",
+    "scene": [
+      "구매 결정",
+      "이직/창업",
+      "진학/지원",
+      "모험적 선택"
+    ],
+    "tone": [
+      "비유적",
+      "회화체",
+      "중립적"
+    ],
+    "caution": "직역하면 의미가 잘 안 살아서 보통은 ‘큰맘 먹고’, ‘과감히’처럼 풀어 번역하는 편이 안전하다. 한국어의 ‘목숨 걸다’류로 과장하지 않도록 주의한다.",
+    "examples": [
+      "清水の舞台から飛び降りるつもりで、マンションを買った。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00060",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "熱を上げる",
+    "meaning": "흥분하거나 화를 내며 감정이 고조되다.",
+    "original_meaning": "興奮する。怒りや感情を高める。",
+    "ko_expression": [
+      "열을 올리다",
+      "감정이 격해지다",
+      "흥분이 고조되다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "감정의 상승, 특히 분노·흥분 상태를 묘사할 때 참고한다. 한국어 관용구로 고정 치환하기보다 문맥에 따라 직역·의역을 판단한다.",
+    "scene": [
+      "분노 표출",
+      "열띤 토론",
+      "과도한 흥분",
+      "감정이 달아오름"
+    ],
+    "tone": [
+      "중립",
+      "비유적",
+      "구어적"
+    ],
+    "caution": "일본어의 '熱'은 실제 체온이 아니라 감정의 고조를 비유한다. 한국어에서는 '열을 올리다'가 비교적 가깝지만, 문맥에 따라 단순히 '흥분하다/화를 내다'로 푸는 편이 자연스러울 수 있다.",
+    "examples": [
+      "彼はその話になるとすぐ熱を上げる。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00061",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "足元を見る",
+    "meaning": "주변 상황과 상대 반응을 살피며 신중히 행동하다.",
+    "original_meaning": "注意深く行動する。周囲の状況や他者の意見を考慮する。",
+    "ko_expression": [
+      "눈치를 보다",
+      "상황을 살피다",
+      "주위를 고려하다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "상대의 반응이나 주변 분위기를 고려해 조심스럽게 움직인다는 뜻으로, 직역보다 ‘신중함’ 중심으로 옮길 때 참고한다.",
+    "scene": [
+      "대인 관계",
+      "회의/협상",
+      "실수 방지",
+      "정세 판단"
+    ],
+    "tone": [
+      "중립적",
+      "조심스러운",
+      "설명적"
+    ],
+    "caution": "한국어의 ‘발밑을 보다’는 자연스러운 대응이 아니다. 다만 일본어 원문은 관용구라기보다 서술적 의미이므로, 과한 관용구 치환보다 의미풀이 번역이 안전하다.",
+    "examples": [
+      "周りの反応を気にしながら、彼は足元を見るように慎重に答えた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 68
+  },
+  {
+    "id": "jp-00063",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "バスに乗り遅れる",
+    "meaning": "기회를 놓치다, 타이밍을 놓치다.",
+    "original_meaning": "チャンスを逃す。機会を逃す。",
+    "ko_expression": [
+      "기회를 놓치다",
+      "한발 늦다",
+      "때를 놓치다"
+    ],
+    "ko_anchor_expression": [
+      "쇠뿔도 단김에 빼라"
+    ],
+    "usage": "일본어의 ‘버스’ 이미지를 굳이 살리기보다, 한국어에서는 기회 상실·시기 지연의 뜻으로 자연스럽게 옮길 때 참고.",
+    "scene": [
+      "계획·사업 기회",
+      "입시·채용 지원",
+      "유행·흐름 추격",
+      "협상·의사결정 지연"
+    ],
+    "tone": [
+      "일상적",
+      "비유적",
+      "다소 구어적"
+    ],
+    "caution": "직역하면 어색하므로 대체로 의미풀이가 안전하다. 한국어의 ‘버스를 놓치다’는 실제 교통 상황으로 읽힐 수 있어, 문맥상 기회 상실인지 확인해야 한다.",
+    "examples": [
+      "今申し込まないと、せっかくのチャンスにバスに乗り遅れるよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00070",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "顔が広い",
+    "meaning": "많은 사람과 알고 지내며 인맥이 넓다.",
+    "original_meaning": "多くの人々と良好な関係を持ち、広い人脈を持っている。",
+    "ko_expression": [
+      "인맥이 넓다",
+      "아는 사람이 많다",
+      "폭넓은 인맥을 두다",
+      "발이 넓다",
+      "교분이 넓다"
+    ],
+    "ko_anchor_expression": [
+      "발이 넓다"
+    ],
+    "usage": "사람을 많이 알고 있어 소개·연결·섭외에 유리한 맥락에서 참고한다. 직역보다 한국어의 인맥 표현이 자연스럽다.",
+    "scene": [
+      "직장",
+      "모임",
+      "지역사회",
+      "비즈니스"
+    ],
+    "tone": [
+      "중립적",
+      "약간 격식",
+      "일상적"
+    ],
+    "caution": "직역하면 어색하므로 ‘얼굴이 넓다’보다 ‘인맥이 넓다, 아는 사람이 많다’로 옮기는 것이 안전하다. 긍정적 뉘앙스지만 과장된 능력 표현으로 번역하지 않도록 주의한다.",
+    "examples": [
+      "彼はこの業界で顔が広いから、話を通しやすい。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 95
+  },
+  {
+    "id": "jp-00073",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "水を差す",
+    "meaning": "남의 즐거움이나 의욕을 꺾고 분위기를 깨다.",
+    "original_meaning": "他人の楽しみを邪魔する。また、他人をやる気をなくさせる。",
+    "ko_expression": [
+      "찬물을 끼얹다",
+      "김을 빼다",
+      "흥을 깨다",
+      "물을 흐리다",
+      "분위기를 흐리다",
+      "판을 흐리다",
+      "일을 흐트러뜨리다",
+      "분위기를 깨다"
+    ],
+    "ko_anchor_expression": [
+      "물을 흐리다",
+      "찬물을 끼얹다"
+    ],
+    "usage": "축하, 대화, 진행 중인 분위기에 끼어들어 기세를 꺾는 뜻으로 참고한다. 한국어는 직역보다 유사 관용구로 옮기기 쉽다.",
+    "scene": [
+      "축하 자리",
+      "회의/발표",
+      "연인·친구 대화",
+      "행사 진행"
+    ],
+    "tone": [
+      "비유적",
+      "일상적",
+      "약간 부정적"
+    ],
+    "caution": "한국어의 ‘찬물을 끼얹다’와 의미가 가장 가깝지만, 항상 강한 방해까지 뜻하진 않는다. 상황에 따라 ‘흥을 깨다’처럼 완화해도 된다.",
+    "examples": [
+      "せっかく盛り上がっていたのに、彼の一言で水を差された。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 92
+  },
+  {
+    "id": "jp-00080",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "阿吽の呼吸",
+    "meaning": "말하지 않아도 서로 뜻이 맞아 완벽하게 호흡이 맞는 상태",
+    "original_meaning": "完全な共鳴や一体感を持つこと。完璧な連携をすること。",
+    "ko_expression": [
+      "눈빛만 봐도 통하다",
+      "찰떡 호흡",
+      "손발이 척척 맞다"
+    ],
+    "ko_anchor_expression": [
+      "이심전심"
+    ],
+    "usage": "팀워크, 장단 맞추기, 파트너십처럼 말없이 맞춰 움직이는 관계를 설명할 때 참고한다.",
+    "scene": [
+      "팀 협업",
+      "오랜 연인/부부",
+      "무대 공연",
+      "스포츠 경기"
+    ],
+    "tone": [
+      "구어체",
+      "서술체",
+      "긍정적"
+    ],
+    "caution": "직역보다 ‘호흡이 맞다’ 계열로 옮기는 편이 안전하다. 완전한 관용구 치환은 과할 수 있고, 문맥에 따라 ‘손발이 맞다’가 더 자연스럽다.",
+    "examples": [
+      "二人は阿吽の呼吸で、次の動きも言わずに合わせた。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-00085",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "波に乗る",
+    "meaning": "시류를 타서 일이 잘 풀리다. 때로는 호황에 들떠 분위기를 타는 뜻도 있음.",
+    "original_meaning": "時流に乗って成功する。また、好況に浮かれる。",
+    "ko_expression": [
+      "승승장구하다",
+      "물살을 타다",
+      "탄력을 받다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "성과가 연속으로 이어지거나, 유행·호황을 타고 기세가 오른 상황을 번역할 때 참고한다.",
+    "scene": [
+      "사업 성공",
+      "스포츠 연승",
+      "유행 확산",
+      "주가·경기 상승"
+    ],
+    "tone": [
+      "중립적",
+      "긍정적",
+      "약간 들뜬"
+    ],
+    "caution": "직역하면 ‘파도에 올라타다’가 되지만 한국어에서는 보통 비유적 대응이 필요하다. 다만 ‘호황에 들떠 흥분하다’까지 항상 포함되지는 않으므로 문맥 구분이 중요하다.",
+    "examples": [
+      "新製品のヒットで、会社は完全に波に乗った。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00088",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手を握る",
+    "meaning": "서로 힘을 합치고 협력하다.",
+    "original_meaning": "団結する。協力する。",
+    "ko_expression": [
+      "손을 맞잡다",
+      "뜻을 같이하다",
+      "힘을 합치다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "협력 관계 형성, 공동 대응, 연대의 뉘앙스를 살릴 때 참고한다. 직접적인 관용구보다 의미풀이가 안전하다.",
+    "scene": [
+      "협업",
+      "연대",
+      "공동대응",
+      "팀워크"
+    ],
+    "tone": [
+      "중립적",
+      "긍정적",
+      "공식적"
+    ],
+    "caution": "일본어는 ‘단결하다/협력하다’의 의미로 넓게 쓰인다. 한국어로는 상황에 따라 직역보다 의미풀이가 자연스럽고, 과도한 친밀감 표현은 피하는 것이 좋다.",
+    "examples": [
+      "両社は新事業で手を握ることになった。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00089",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "口を切る",
+    "meaning": "처음 말을 꺼내다, 먼저 발언하다.",
+    "original_meaning": "はじめて物事を言う。口火を切る。",
+    "ko_expression": [
+      "말문을 열다",
+      "입을 떼다",
+      "선수를 치다",
+      "입을 열다",
+      "말을 꺼내다"
+    ],
+    "ko_anchor_expression": [
+      "입을 열다"
+    ],
+    "usage": "회의나 대화에서 누가 먼저 화제를 시작하거나 발언을 시작하는지 번역할 때 참고한다.",
+    "scene": [
+      "회의 시작",
+      "토론 개시",
+      "대화의 첫 발언",
+      "행사에서 첫 멘트"
+    ],
+    "tone": [
+      "중립적",
+      "구어적",
+      "문어적"
+    ],
+    "caution": "직역인 ‘입을 자르다’는 한국어에서 관용으로 쓰이지 않는다. ‘口火を切る’의 ‘선두로 시작하다’ 뉘앙스를 살려 자연스럽게 옮기는 것이 좋다.",
+    "examples": [
+      "会議で部長が口を切って、皆が続いた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00109",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "頭が痛い",
+    "meaning": "곤란한 문제나 골칫거리가 생겨 대응하기 어렵다는 뜻",
+    "original_meaning": "困ったこと、難しい問題が起きて、対応に困ること。",
+    "ko_expression": [
+      "골칫거리",
+      "속앓이하다",
+      "골머리를 앓다",
+      "머리가 복잡하다",
+      "머리가 복잡해지다",
+      "머리가 뒤죽박죽이다",
+      "생각이 많다",
+      "머리가 아프다",
+      "골치 아프다",
+      "머리가 지끈거리다",
+      "신경 쓰인다"
+    ],
+    "ko_anchor_expression": [
+      "머리가 복잡하다",
+      "머리가 아프다"
+    ],
+    "usage": "문제 해결이 쉽지 않거나 신경 쓰이는 사안을 말할 때 참고한다. 실제 번역에서는 ‘심각한 두통’이 아니라 ‘난감한 문제’ 의미를 살핀다.",
+    "scene": [
+      "업무 문제",
+      "가정 내 걱정",
+      "예산·일정 문제",
+      "정치·사회 이슈"
+    ],
+    "tone": [
+      "회화체",
+      "중립적",
+      "다소 비유적"
+    ],
+    "caution": "직역하면 신체 증상처럼 들리므로 문맥상 ‘곤란하다, 난감하다, 골치 아프다’ 쪽으로 옮기는 것이 안전하다. 한국어의 ‘골머리를 앓다’는 비유가 강해 원문보다 약간 더 구어적일 수 있다.",
+    "examples": [
+      "この件は本当に頭が痛い。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00110",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "笑う門には福来る",
+    "meaning": "밝게 웃고 지내면 좋은 일이 따른다는 뜻",
+    "original_meaning": "明るい人にはいいことが起こる。",
+    "ko_expression": [
+      "웃는 얼굴에 복이 온다",
+      "웃으면 복이 온다",
+      "밝게 지내면 좋은 일도 따른다"
+    ],
+    "ko_anchor_expression": [
+      "돌 위에 삼 년"
+    ],
+    "usage": "긍정적 태도와 행운의 연결을 옮길 때 참고한다. 한국어의 비슷한 속담이 있어 직접 대응이 비교적 자연스럽다.",
+    "scene": [
+      "조언",
+      "격려",
+      "일상 대화",
+      "캠페인 문구"
+    ],
+    "tone": [
+      "따뜻한",
+      "교훈적인",
+      "가벼운"
+    ],
+    "caution": "한국어 속담 ‘웃는 얼굴에 복이 온다’와 매우 가깝지만, 일본어는 ‘집안에 웃음이 있으면 복이 온다’는 뉘앙스가 있어 가족·가정 맥락은 살펴야 한다.",
+    "examples": [
+      "笑っていれば、きっといいことがあるよ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 95
+  },
+  {
+    "id": "jp-00112",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "足を引っ張る",
+    "meaning": "남의 일을 방해하거나 발목을 잡아 진도를 늦추게 함",
+    "original_meaning": "他人の邪魔をして、妨げる。",
+    "ko_expression": [
+      "발목을 잡다",
+      "뒤를 잡아끄는",
+      "방해가 되다",
+      "방해하다",
+      "발을 묶다",
+      "걸림돌이 되다",
+      "발목을 붙잡다",
+      "진행을 막다"
+    ],
+    "ko_anchor_expression": [
+      "발목을 잡다",
+      "발목을 붙잡다"
+    ],
+    "usage": "개인·조직·팀이 다른 대상의 진행을 막는 맥락에서 참고한다. 직역보다 한국어의 ‘발목을 잡다’가 자연스러운지 먼저 본다.",
+    "scene": [
+      "업무 협업",
+      "팀 경기",
+      "프로젝트 진행",
+      "정치·사회 논평"
+    ],
+    "tone": [
+      "중립적",
+      "비판적",
+      "구어체"
+    ],
+    "caution": "한국어에는 ‘발목을 잡다’가 매우 자연스럽지만, 문맥에 따라 단순한 방해인지 심각한 저해인지 구분해야 한다. 과도하게 ‘딴지’로만 옮기면 뉘앙스가 세질 수 있다.",
+    "examples": [
+      "彼のミスがチーム全体の足を引っ張っている。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 94
+  },
+  {
+    "id": "jp-00113",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "根を張る",
+    "meaning": "기반을 단단히 마련하고 오래 자리잡아 계속 이어가다.",
+    "original_meaning": "固くしっかりと立っている。基盤を作り、長く続ける。",
+    "ko_expression": [
+      "기반을 다지다",
+      "자리를 잡다",
+      "뿌리내리다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "사업, 조직, 생활 터전처럼 장기적으로 안정된 기반을 만들고 정착하는 뜻으로 번역 참고.",
+    "scene": [
+      "사업/창업",
+      "이주/정착",
+      "조직 운영",
+      "지역 기반 형성"
+    ],
+    "tone": [
+      "중립적",
+      "서술적",
+      "비유적"
+    ],
+    "caution": "직역하면 어색할 수 있어 문맥에 따라 '기반을 다지다/자리를 잡다'로 풀어 쓰는 편이 안전하다. 장기성·정착감을 과하게 넣지 않도록 주의.",
+    "examples": [
+      "新しい町で少しずつ根を張ってきた。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00118",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "峠を越す",
+    "meaning": "가장 힘든 고비를 넘기다, 어려운 국면을 벗어나다.",
+    "original_meaning": "困難を乗り越える。最も困難な部分をクリアする。",
+    "ko_expression": [
+      "고비를 넘기다",
+      "산을 넘다",
+      "위기를 넘기다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "상황의 가장 어려운 국면을 통과했다는 뜻으로, 회복·진행·협상 등에서 무난하게 참고한다.",
+    "scene": [
+      "병세 회복",
+      "시험/프로젝트 진행",
+      "문제 해결",
+      "협상 국면"
+    ],
+    "tone": [
+      "일상적",
+      "비유적",
+      "중립적"
+    ],
+    "caution": "직역하면 ‘고개를 넘다’ 느낌이지만 한국어에서는 보통 ‘고비를 넘기다’가 자연스럽다. 지나친 관용구 치환보다 상황 서술형 번역도 안전하다.",
+    "examples": [
+      "やっと峠を越したけど、まだ安心はできない。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 92
+  },
+  {
+    "id": "jp-00121",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "芋を洗うよう",
+    "meaning": "시간만 낭비되고 헛수고가 되는 상태",
+    "original_meaning": "時間が無駄になる。無駄な努力をする。",
+    "ko_expression": [
+      "헛수고하다",
+      "애써도 소용없다",
+      "시간만 버리다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "노력이나 시간이 성과로 이어지지 않는 상황을 옮길 때 참고한다. 한국어 관용구로 굳이 치환하기보다 의미풀이가 안전하다.",
+    "scene": [
+      "일 처리",
+      "준비 작업",
+      "반복 노동",
+      "성과 없는 시도"
+    ],
+    "tone": [
+      "중립적",
+      "비판적",
+      "회한적"
+    ],
+    "caution": "직역하면 의미가 드러나지 않아 뜻풀이가 필요하다. 한국어에 딱 맞는 관용구는 약하므로 과한 비유 치환은 피하고, 문체도 구어·서술문 모두 무난한 표현을 쓰는 편이 안전하다.",
+    "examples": [
+      "いくら調べても答えが出ず、芋を洗うような作業ばかりで疲れた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 62
+  },
+  {
+    "id": "jp-00127",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手が離れる",
+    "meaning": "맡은 일이나 책임에서 벗어나 더 이상 관여하지 않게 됨",
+    "original_meaning": "関わりがなくなる。担当・責任が外れる。",
+    "ko_expression": [
+      "손을 떼다",
+      "담당에서 빠지다",
+      "책임에서 벗어나다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "업무, 프로젝트, 자녀 돌봄 등에서 더 이상 맡지 않게 되는 상황을 번역할 때 참고한다.",
+    "scene": [
+      "업무 인수인계",
+      "프로젝트 종료",
+      "돌봄·육아 분담 변경",
+      "담당자 변경"
+    ],
+    "tone": [
+      "중립적",
+      "실무적",
+      "구어·문어 모두 가능"
+    ],
+    "caution": "직역하면 어색할 수 있어 의미를 풀어 쓰는 편이 안전하다. 한국어의 ‘손을 떼다’는 의도적 중단 뉘앙스가 있어, 단순히 담당이 끝난 경우는 ‘담당에서 빠지다’가 더 자연스럽다.",
+    "examples": [
+      "その件は今日で手が離れるから、明日から別の人に引き継ぐよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00130",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手が出ない",
+    "meaning": "감당하기 어렵고 손댈 수 없는 상태라는 뜻",
+    "original_meaning": "手に負えない。扱いが難しい。",
+    "ko_expression": [
+      "손을 못 대다",
+      "감당이 안 되다",
+      "어쩌지 못하다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "대상이나 상황이 너무 어렵거나 복잡해 처리·개입·구매를 못 하는 맥락에서 참고한다.",
+    "scene": [
+      "문제 상황",
+      "가격·비용 부담",
+      "기술·업무 난이도",
+      "개입 불가 상태"
+    ],
+    "tone": [
+      "구어적",
+      "중립적",
+      "약간 비유적"
+    ],
+    "caution": "직역하면 ‘손이 나오지 않는다’로 어색하므로 의미 중심 번역이 안전하다. 한국어도 관용적 대응은 가능하지만 과한 비약은 피한다.",
+    "examples": [
+      "この案件は複雑すぎて、今のうちの会社では手が出ない。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00132",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "身から出た錆",
+    "meaning": "자신의 행동이나 과거 때문에 생긴 좋지 않은 결과나 곤란",
+    "original_meaning": "自分の行いや過去の経験が原因で生じた悪い結果、または困難。",
+    "ko_expression": [
+      "자업자득",
+      "제 발등을 찍다",
+      "자신이 자초한 일"
+    ],
+    "ko_anchor_expression": [
+      "자업자득"
+    ],
+    "usage": "책임이나 원인이 자기에게 있는 불이익, 곤란을 말할 때 참고한다. 한국어는 직접적 비난 강도가 달라 문맥에 맞춰 선택한다.",
+    "scene": [
+      "실수로 인한 손해",
+      "과거 행동의 결과",
+      "책임 귀속",
+      "자업자득을 말하는 장면"
+    ],
+    "tone": [
+      "비판적",
+      "자기반성적",
+      "구어적"
+    ],
+    "caution": "한국어의 '자업자득'은 비난 뉘앙스가 강하고, '제 발등을 찍다'는 후회·자해적 비유가 더 강하다. 문맥에 따라 직역보다 완곡한 풀이가 안전하다.",
+    "examples": [
+      "あの失敗は身から出た錆だと、彼は黙って受け止めた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00133",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "首が回らない",
+    "meaning": "일이 벅차서 제대로 처리하지 못하거나, 경제적으로 궁해 여유가 없는 상태",
+    "original_meaning": "物事を効率的に進めることができず、うまく対応できない。",
+    "ko_expression": [
+      "손이 벅차다",
+      "감당이 안 되다",
+      "숨 돌릴 틈이 없다",
+      "허리가 휘다",
+      "허리가 휜다",
+      "살림이 빠듯하다",
+      "쪼들리다"
+    ],
+    "ko_anchor_expression": [
+      "허리가 휘다"
+    ],
+    "usage": "업무·사정이 너무 많아 대응이 안 되는 뜻으로 참고하되, 재정적 곤란 맥락은 직역보다 문맥 풀이가 안전합니다.",
+    "scene": [
+      "업무 과부하",
+      "금전난",
+      "일정 과밀",
+      "대응 불가 상황"
+    ],
+    "tone": [
+      "구어체",
+      "비유적",
+      "다소 완곡"
+    ],
+    "caution": "일본어는 원래 ‘목이 돌아가지 않다’가 아니라 ‘여유가 없어 제대로 돌지 않음’의 비유입니다. 한국어에선 상황에 따라 ‘손이 벅차다’, ‘감당이 안 되다’처럼 풀어 쓰는 편이 안전하며, 금전적 궁핍은 직역보다 맥락 설명이 더 자연스럽습니다.",
+    "examples": [
+      "仕事が重なって、今は首が回らないよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00142",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "メスを入れる",
+    "meaning": "문제나 난국에 과감히 손을 대어 정리·해결하다.",
+    "original_meaning": "問題や難局に決着をつける。",
+    "ko_expression": [
+      "메스를 대다",
+      "손을 대다",
+      "칼을 대다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "조직·제도·문제에 강하게 개입해 구조를 손보거나 결론을 내는 맥락에서 참고한다. 단순 수술 뜻과 구분 필요.",
+    "scene": [
+      "조직 개편",
+      "제도 개혁",
+      "문제 정리",
+      "강한 개입"
+    ],
+    "tone": [
+      "비유적",
+      "단정적",
+      "다소 강경"
+    ],
+    "caution": "원뜻은 수술이지만 여기서는 비유로 ‘문제를 과감히 다루다’에 가깝다. 한국어에서도 ‘메스를 대다’는 가능하나, 문맥에 따라 너무 의료적으로 들릴 수 있어 직역/의역을 함께 검토하는 것이 안전하다.",
+    "examples": [
+      "改革にメスを入れなければ、この問題はいつまでも残る。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00145",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "塵も積もれば山となる",
+    "meaning": "작은 것도 계속 쌓이면 큰 결과가 된다.",
+    "original_meaning": "Many a little makes a mickle. Accumulating small things results in something huge.",
+    "ko_expression": [
+      "티끌 모아 태산",
+      "조금씩 모으면 큰돈이 된다",
+      "작은 일도 쌓이면 큰일이 된다",
+      "가랑비에 옷 젖는 줄 모른다",
+      "가랑비에 옷이 젖는다",
+      "조금씩 쌓여 큰일 된다",
+      "작은 물방울이 바위를 뚫는다",
+      "작은 것도 모이면 크다",
+      "적은 것도 쌓이면 크다",
+      "모이면 큰일 된다"
+    ],
+    "ko_anchor_expression": [
+      "가랑비에 옷 젖는 줄 모른다",
+      "티끌 모아 태산"
+    ],
+    "usage": "작은 노력·돈·시간이 누적되어 큰 성과가 되는 맥락에서 참고한다. 한국어에선 직역보다 흔한 관용구로 자연스럽게 옮길 수 있다.",
+    "scene": [
+      "저축",
+      "공부",
+      "운동",
+      "일상 습관"
+    ],
+    "tone": [
+      "교훈적",
+      "중립적",
+      "설득적"
+    ],
+    "caution": "한국어의 ‘티끌 모아 태산’과 거의 직접 대응한다. 다만 문맥이 돈에 한정되면 직역적 의미보다 ‘조금씩 모아 큰돈’처럼 풀어 쓰는 편이 자연스러울 수 있다.",
+    "examples": [
+      "毎日100円ずつ貯金すれば、塵も積もれば山となるで、一年で３万円になる。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 96
+  },
+  {
+    "id": "jp-00147",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "弘法も筆の誤まり",
+    "meaning": "명인도 실수할 수 있다는 뜻",
+    "original_meaning": "Even experts make mistakes. Even Homer sometimes nods.",
+    "ko_expression": [
+      "백전노장도 실수한다",
+      "장인도 틀릴 때가 있다",
+      "호랑이도 가끔 실수한다"
+    ],
+    "ko_anchor_expression": [
+      "원숭이도 나무에서 떨어진다"
+    ],
+    "usage": "전문가, 베테랑, 숙련자도 실수할 수 있음을 말할 때 참고한다. 한국어 속담으로 완전 치환하기보다 일반 진술로 옮겨도 자연스럽다.",
+    "scene": [
+      "실수 인정",
+      "전문가 평가",
+      "가벼운 위로",
+      "자기변명"
+    ],
+    "tone": [
+      "담담한",
+      "속담체",
+      "일상적"
+    ],
+    "caution": "한국어에 거의 직접 대응하는 속담이 없어, 과한 관용구 치환보다 의미 중심 번역이 안전하다. '호랑이도 가끔 실수한다'는 느낌은 유사하지만 원문의 고전적 어감은 약하다.",
+    "examples": [
+      "あのベテラン医者も診断を間違えた。弘法も筆の誤まりだね。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00148",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "井の中の蛙",
+    "meaning": "자기 세계에 갇혀 넓은 세상과 실정을 모르는 상태",
+    "original_meaning": "A frog in a well knows nothing of the great ocean. Parochialism.",
+    "ko_expression": [
+      "우물 안 개구리",
+      "시야가 좁다",
+      "세상 물정을 모르다",
+      "좁은 세계에 갇히다",
+      "우물 안에 갇힌 개구리"
+    ],
+    "ko_anchor_expression": [
+      "우물 안 개구리"
+    ],
+    "usage": "비교적 직역이 가능한 표현이지만, 문맥에 따라 ‘자기 세계에 갇힌 사람’의 뉘앙스를 살려 번역 참고용으로 사용",
+    "scene": [
+      "자기만족",
+      "무지/편협",
+      "비교·자각",
+      "성장 전후 대비"
+    ],
+    "tone": [
+      "비판적",
+      "교훈적",
+      "자조적"
+    ],
+    "caution": "한국어 ‘우물 안 개구리’와 거의 대응하지만, 상황에 따라 단순 비하보다 ‘세상 경험 부족’ 쪽이 더 자연스러울 수 있음. 과도한 관용구 치환보다 직역·의역을 함께 검토하는 것이 안전함.",
+    "examples": [
+      "地元の大会で優勝して得意になっていたが、全国大会では井の中の蛙だったと思い知らされた。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 94
+  },
+  {
+    "id": "jp-00151",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "目から鼻に抜ける",
+    "meaning": "매우 영리하고 눈치가 빠른 상태를 이르는 표현",
+    "original_meaning": "Very intelligent. Sharp as a tack.",
+    "ko_expression": [
+      "머리가 비상하다",
+      "눈치가 빠르다",
+      "영리하고 재빠르다",
+      "눈치가 있다",
+      "눈치가 좋다",
+      "영리하게 알아차리다"
+    ],
+    "ko_anchor_expression": [
+      "눈치가 빠르다"
+    ],
+    "usage": "사람의 총명함, 이해 속도, 처세 감각을 말할 때 참고한다. 한국어 관용구로 단정 치환하기보다 칭찬 표현으로 옮기는 편이 안전하다.",
+    "scene": [
+      "인물 평가",
+      "학업/두뇌 묘사",
+      "비즈니스 협상",
+      "성격 칭찬"
+    ],
+    "tone": [
+      "칭찬",
+      "격식",
+      "구어"
+    ],
+    "caution": "한국어의 고정 관용구와 1:1 대응은 약하다. 직역하면 어색하므로 의미 중심으로 옮기되, 지나치게 과장된 천재형 표현은 피하는 것이 좋다.",
+    "examples": [
+      "彼は目から鼻に抜けるような秀才だ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00156",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "頭が切れる",
+    "meaning": "머리가 매우 좋고 판단이 빠르다. 말솜씨보다 지적 능력과 재치가 두드러진다는 뜻.",
+    "original_meaning": "Eloquent and intelligent.",
+    "ko_expression": [
+      "머리가 좋다",
+      "눈치가 빠르다",
+      "재치가 있다",
+      "머리가 잘 돌아가다",
+      "회전이 빠르다"
+    ],
+    "ko_anchor_expression": [
+      "머리가 잘 돌아가다"
+    ],
+    "usage": "사람의 지적 능력, 상황 판단, 기민함을 말할 때 참고한다. 한국어의 ‘말 잘함’보다 ‘똑똑함’ 쪽이 핵심이다.",
+    "scene": [
+      "인물 평가",
+      "업무 협업",
+      "면접/추천",
+      "대화 중 칭찬"
+    ],
+    "tone": [
+      "칭찬",
+      "중립",
+      "격식"
+    ],
+    "caution": "직역하면 ‘머리가 잘 잘린다’로 오해될 수 있어 의미풀이가 필요하다. 한국어에서는 주로 지능·판단력 칭찬으로 쓰며, 지나친 관용구 치환은 피하는 편이 안전하다.",
+    "examples": [
+      "彼は頭が切れるから、難しい案件でもすぐ整理できる。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00160",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "調子に乗る",
+    "meaning": "자신의 힘이나 성공을 지나치게 믿고 우쭐해지다.",
+    "original_meaning": "自分の力量や成功を過信し、傲慢になる。勢いに乗って浮かれる。",
+    "ko_expression": [
+      "우쭐해지다",
+      "기고만장하다",
+      "잘난 척하다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "성과 뒤에 들뜸, 자신감 과잉, 건방짐이 드러나는 문맥에서 참고한다. 한국어 관용구로 고정 치환하기보다 어조를 살펴 번역한다.",
+    "scene": [
+      "성공 후 태도 변화",
+      "과신으로 무리하는 상황",
+      "주변의 경고를 듣는 장면",
+      "농담 섞인 핀잔"
+    ],
+    "tone": [
+      "가볍게 비판적",
+      "구어체",
+      "다소 부정적"
+    ],
+    "caution": "직역하면 어색하므로 ‘우쭐해지다’처럼 자연스러운 한국어로 옮기는 것이 안전하다. ‘신이 나다’와는 비슷하지만 자만·오만의 뉘앙스가 더 강하다.",
+    "examples": [
+      "ちょっと調子に乗って、先輩にまで偉そうに言っちゃった。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 86
+  },
+  {
+    "id": "jp-00163",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "失敗は成功の元",
+    "meaning": "실패를 통해 배우고, 그 경험이 성공으로 이어질 수 있다는 뜻.",
+    "original_meaning": "失敗から学び、成功に繋げることができる。",
+    "ko_expression": [
+      "실패는 성공의 어머니",
+      "실패를 거울삼다",
+      "넘어져도 다시 일어서다"
+    ],
+    "ko_anchor_expression": [
+      "실패는 성공의 어머니"
+    ],
+    "usage": "실패의 가치를 말하는 문맥, 격려·조언·교훈적 표현에서 참고. 한국어에선 직접 대응 관용구와 뜻풀이를 함께 검토하면 안전함.",
+    "scene": [
+      "격려하는 대화",
+      "자기계발·조언",
+      "비즈니스 회의",
+      "교훈적인 글"
+    ],
+    "tone": [
+      "격려적",
+      "교훈적",
+      "담담한"
+    ],
+    "caution": "한국어에 널리 쓰이는 대응은 ‘실패는 성공의 어머니’이지만 다소 고정된 속담체다. 문맥에 따라 직역보다 뜻풀이가 더 자연스러울 수 있다.",
+    "examples": [
+      "失敗は成功の元だから、今回のミスを次に活かそう。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 94
+  },
+  {
+    "id": "jp-00164",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "埒が明かない",
+    "meaning": "문제가 해결되지 않고 진전이 없는 상태",
+    "original_meaning": "解決が難しい。進展がない。",
+    "ko_expression": [
+      "끝이 안 나다",
+      "답이 안 나오다",
+      "진전이 없다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "논의·협상·문제가 계속 제자리걸음일 때 참고하며, 한국어 관용구보다 상태 설명으로 옮기기 적합합니다.",
+    "scene": [
+      "회의",
+      "분쟁",
+      "협상",
+      "업무 지연"
+    ],
+    "tone": [
+      "중립적",
+      "구어적",
+      "약간 답답한"
+    ],
+    "caution": "직역보다 ‘진전이 없다/해결이 안 된다’로 풀어 옮기는 편이 안전합니다. 한국어에 딱 맞는 관용구는 약합니다.",
+    "examples": [
+      "この話、何時間やっても埒が明かないよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00170",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "網を張る",
+    "meaning": "엄격하게 감시하거나 단속하기 위해 대비해 두다.",
+    "original_meaning": "厳重な監視や取り締まりを行う。",
+    "ko_expression": [
+      "감시망을 치다",
+      "빈틈없이 지켜보다",
+      "단속을 강화하다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "사람·장소·대상에 대해 미리 경계하고 감시 체계를 갖추는 문맥에서 참고한다. 단순 관찰보다 통제·단속 뉘앙스가 있다.",
+    "scene": [
+      "경찰 수사",
+      "세관·검문",
+      "보안 감시",
+      "불법 행위 단속"
+    ],
+    "tone": [
+      "공식적",
+      "경계적",
+      "중립적"
+    ],
+    "caution": "직역하면 '그물을 치다'가 되지만 실제 의미는 감시·단속이다. 한국어 관용구로 과하게 바꾸기보다 상황에 따라 '감시망을 치다', '단속하다'처럼 풀어 쓰는 편이 안전하다.",
+    "examples": [
+      "警察は不審な動きをするグループに網を張っていた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00174",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "鼻を折る",
+    "meaning": "상대의 기세나 의욕을 꺾다.",
+    "original_meaning": "相手の調子を悪くさせる。挫く。",
+    "ko_expression": [
+      "기세를 꺾다",
+      "김을 빼다",
+      "의욕을 꺾다",
+      "콧대가 꺾이다",
+      "기세가 꺾이다",
+      "고개를 숙이다",
+      "체면이 구겨지다"
+    ],
+    "ko_anchor_expression": [
+      "콧대가 꺾이다"
+    ],
+    "usage": "상대의 자신감·기세를 꺾는 뜻으로 쓰일 때 참고한다. 직역보다 상황에 맞는 평이한 한국어 표현이 안전하다.",
+    "scene": [
+      "경쟁 상황",
+      "대화 중 반박",
+      "상대의 자신감 저하",
+      "도전 의지 약화"
+    ],
+    "tone": [
+      "중립적",
+      "다소 강함",
+      "구어적"
+    ],
+    "caution": "직역하면 어색하다. 한국어의 ‘코를 꺾다’보다 일반적으로는 기세·의욕을 꺾는 의미로 풀어 쓰는 편이 안전하다. 공격성은 문맥에 따라 조절해야 한다.",
+    "examples": [
+      "会議で強気な彼を一言で鼻を折ってしまった。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00176",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "肝試し",
+    "meaning": "무서운 일을 겪으며 담력이나 용기를 시험함",
+    "original_meaning": "怖いものを経験することで、勇気を試すこと。",
+    "ko_expression": [
+      "담력 시험",
+      "간이 콩알만 해지다",
+      "용기 시험"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "공포 체험, 무서운 장소 방문, 겁을 이겨내는 상황을 번역할 때 참고하되, 맥락에 따라 직설적으로 옮기는 것이 안전합니다.",
+    "scene": [
+      "공포 체험",
+      "무서운 장소 방문",
+      "담력 테스트",
+      "친구끼리 장난스러운 도전"
+    ],
+    "tone": [
+      "구어체",
+      "가벼운",
+      "장난스러운"
+    ],
+    "caution": "한국어의 ‘간이 콩알만 해지다’는 두려움 상태를 말할 뿐 ‘용기를 시험하다’의 뜻과는 다릅니다. 상황에 따라 ‘담력 시험’처럼 설명적으로 옮기는 편이 안전합니다.",
+    "examples": [
+      "夏休みに友だちと廃屋へ肝試しに行った。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 72
+  },
+  {
+    "id": "jp-00178",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "しっぽを出す",
+    "meaning": "본성이나 숨긴 약점·비밀이 드러나다.",
+    "original_meaning": "本性や思っていた以上の悪いところが現れる。また、秘密が明らかになる。",
+    "ko_expression": [
+      "꼬리를 드러내다",
+      "민낯이 드러나다",
+      "본색을 드러내다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "숨기던 성격, 의도, 약점, 비밀이 겉으로 드러난 상황을 번역할 때 참고한다. 직역보다 의미 대응이 중요하다.",
+    "scene": [
+      "비밀 폭로",
+      "본성 노출",
+      "약점 드러남",
+      "정체 탄로"
+    ],
+    "tone": [
+      "중립적",
+      "약간 부정적",
+      "구어적"
+    ],
+    "caution": "한국어의 ‘꼬리를 드러내다’는 어색할 수 있어 직접 대응 관용구로 고정하지 말고, 문맥에 따라 ‘본색/민낯/정체가 드러나다’로 풀어 쓰는 편이 안전하다.",
+    "examples": [
+      "うまく隠していたつもりでも、最後にしっぽを出した。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00179",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "熱を入れる",
+    "meaning": "의욕을 높여 열심히 몰두하다.",
+    "original_meaning": "意欲を高める。熱心に取り組む。",
+    "ko_expression": [
+      "열을 올리다",
+      "정성을 들이다",
+      "열심을 쏟다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "일이나 취미, 운동 등에 적극적으로 힘을 쏟는 뜻으로 참고한다. 한국어에선 상황에 따라 직역보다 ‘열심히 하다’로 풀 수 있다.",
+    "scene": [
+      "일/학업",
+      "취미/수집",
+      "운동/연습",
+      "프로젝트/준비"
+    ],
+    "tone": [
+      "중립적",
+      "다소 격식",
+      "담담한"
+    ],
+    "caution": "한국어의 ‘열을 올리다’는 대개 논쟁·흥분 의미가 강해 그대로 대응하면 어색할 수 있다. 문맥에 따라 ‘열심히 하다’, ‘정성을 들이다’가 더 안전하다.",
+    "examples": [
+      "彼は新しい企画に熱を入れて、毎晩遅くまで資料を作っている。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 76
+  },
+  {
+    "id": "jp-00180",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "空気を読まない",
+    "meaning": "주변 분위기나 상대의 마음을 읽지 못하고 눈치 없이 행동하는 것",
+    "original_meaning": "相手の気持ちや雰囲気を察し、適切な態度や言動をすることができない。他人に対して無神経である。",
+    "ko_expression": [
+      "눈치가 없다",
+      "분위기 파악을 못하다",
+      "상황을 읽지 못하다",
+      "분위기 못 읽다",
+      "무딘 편이다"
+    ],
+    "ko_anchor_expression": [
+      "눈치가 없다"
+    ],
+    "usage": "상대의 감정·현장 분위기를 고려하지 못한 말이나 행동을 번역할 때 참고한다. 직접적인 관용구보다 평서적 표현이 안전하다.",
+    "scene": [
+      "대화 중 배려 없는 발언",
+      "모임에서 분위기 깨는 행동",
+      "상대 감정을 읽지 못한 반응",
+      "사회적 맥락을 못 읽는 인물 묘사"
+    ],
+    "tone": [
+      "비판적",
+      "구어체",
+      "약간 부정적"
+    ],
+    "caution": "한국어의 '눈치 없다'가 가장 가깝지만, 일본어의 사회적 맥락 강조와 완전 일치하진 않는다. 과도하게 심한 비난으로 번역하지 말고, 직역·의역을 문맥에 맞게 선택하는 것이 안전하다.",
+    "examples": [
+      "そんな空気を読まないこと言わないでよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 87
+  },
+  {
+    "id": "jp-00188",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "火が消えたよう",
+    "meaning": "활기와 움직임이 사라져 분위기나 활동이 멈춘 듯한 상태.",
+    "original_meaning": "活気がなくなり、活動が停滞している様子。",
+    "ko_expression": [
+      "활기가 사라지다",
+      "썰렁해지다",
+      "맥이 빠지다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "사람 모임, 행사장, 팀 분위기, 매장처럼 예전보다 조용하고 생기가 없어졌을 때 번역 참고.",
+    "scene": [
+      "모임 분위기",
+      "행사장",
+      "조직/팀",
+      "상점/거리"
+    ],
+    "tone": [
+      "중립",
+      "서술적",
+      "다소 비유적"
+    ],
+    "caution": "직역하면 어색할 수 있어 분위기 저하를 풀어 쓰는 편이 안전합니다. 한국어 관용구로 과하게 치환하기보다 '활기가 사라지다/썰렁해지다' 정도가 무난합니다.",
+    "examples": [
+      "祭りが終わったあと、商店街は火が消えたように静かになった。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00190",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "腹が立つ",
+    "meaning": "화가 나다, 분노가 치밀다.",
+    "original_meaning": "怒りを感じる。腹を立てる。",
+    "ko_expression": [
+      "화가 치밀다",
+      "속이 부글부글하다",
+      "분통이 터지다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "감정의 강도는 유지하되, 한국어에서는 상황에 따라 ‘화가 나다’로 풀지 관용적으로 옮길지 판단할 때 참고.",
+    "scene": [
+      "분노 표출",
+      "불쾌한 상황",
+      "항의/대립",
+      "심리 묘사"
+    ],
+    "tone": [
+      "구어적",
+      "중립적",
+      "감정적"
+    ],
+    "caution": "일본어의 ‘배(腹)’ 이미지는 한국어로 직역하지 않는 편이 자연스럽습니다. 다만 ‘분통이 터지다’는 더 강한 표현이므로 원문 강도에 맞춰 조절하세요.",
+    "examples": [
+      "そんな言い方をされたら、さすがに腹が立つよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00191",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "胸が詰まる",
+    "meaning": "슬픔이나 괴로움이 밀려와 가슴이 답답해지는 느낌",
+    "original_meaning": "心に重い感じがする。特に、苦しい気持ちや悲しい気持ちが押し寄せる。",
+    "ko_expression": [
+      "가슴이 먹먹하다",
+      "목이 메다",
+      "가슴이 미어지다",
+      "목이 메이다",
+      "울먹이다",
+      "말이 막히다"
+    ],
+    "ko_anchor_expression": [
+      "목이 메다"
+    ],
+    "usage": "슬픔, 감격, 안타까움처럼 감정이 치밀어 말문이 막히거나 가슴이 답답한 장면에서 참고",
+    "scene": [
+      "이별 장면",
+      "비극적 소식",
+      "감동적인 순간",
+      "안타까운 회상"
+    ],
+    "tone": [
+      "서정적",
+      "감정적",
+      "조심스러운"
+    ],
+    "caution": "‘胸’은 실제 흉통이 아니라 감정적 답답함이다. 한국어에서도 관용적으로 옮기되, 지나치게 극적인 표현은 피하고 문맥에 맞춰 ‘먹먹하다/미어지다’ 중 선택하는 편이 안전하다.",
+    "examples": [
+      "彼女の手紙を読んで、胸が詰まった。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-00194",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "目を覆う",
+    "meaning": "너무 놀랍거나 혐오스러워서 차마 보지 못하고 눈을 돌리고 싶어짐",
+    "original_meaning": "驚愕や嫌悪のあまり、目を背けたくなる。",
+    "ko_expression": [
+      "눈을 돌리다",
+      "차마 못 보다",
+      "눈을 감고 싶다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "충격적이거나 보기 불편한 장면, 혐오감 때문에 정면으로 보기 어려운 맥락에서 참고한다.",
+    "scene": [
+      "비극적 사건",
+      "혐오스러운 장면",
+      "충격적인 뉴스",
+      "잔혹한 묘사"
+    ],
+    "tone": [
+      "구어체",
+      "서술체",
+      "다소 문어적"
+    ],
+    "caution": "한국어의 ‘눈을 가리다’는 실제 행동에 더 가깝고, 이 표현은 심리적 반응을 뜻하므로 직역보다 ‘차마 못 보다/눈을 돌리다’가 안전하다.",
+    "examples": [
+      "あまりの惨状に、思わず目を覆った。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00195",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "耳を澄ます",
+    "meaning": "주의를 기울여 소리를 듣다. 귀를 기울여 자세히 듣다.",
+    "original_meaning": "注意深く聞く。よく聞き耳をたてる。",
+    "ko_expression": [
+      "귀를 기울이다",
+      "주의 깊게 듣다",
+      "소리에 집중하다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "소리·말을 놓치지 않으려는 동작을 묘사할 때 참고한다. 한국어에선 직역보다 ‘귀를 기울이다’가 자연스럽다.",
+    "scene": [
+      "대화에서 작은 말소리를 알아차림",
+      "어두운 곳에서 소리를 확인함",
+      "멀리서 나는 소식을 듣기 위해 집중함",
+      "조용히 주변 소리에 신경 씀"
+    ],
+    "tone": [
+      "중립적",
+      "서술적",
+      "비유적"
+    ],
+    "caution": "한국어에는 직접 대응하는 표현이 있어 관용구 치환이 무리하지 않다. 다만 ‘귀를 세우다’처럼 어색한 직역은 피하고, 문맥에 따라 ‘주의 깊게 듣다’로 풀어도 좋다.",
+    "examples": [
+      "耳を澄ましていると、遠くから誰かの声が聞こえた。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 95
+  },
+  {
+    "id": "jp-00198",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手を入れる",
+    "meaning": "개선하거나 수정하다.",
+    "original_meaning": "改良する。修正する。",
+    "ko_expression": [
+      "손을 보다",
+      "수정하다",
+      "다듬다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "문서, 설계, 작품, 시스템 등을 더 낫게 고치거나 손질한다는 뜻으로 참고한다. 단순 ‘끼워 넣다’보다 개선·보완 맥락에 맞는다.",
+    "scene": [
+      "문서 수정",
+      "설계 보완",
+      "작품 다듬기",
+      "시스템 개선"
+    ],
+    "tone": [
+      "중립적",
+      "실무적",
+      "설명체"
+    ],
+    "caution": "직역하면 ‘손을 넣다’로 오해될 수 있다. 한국어에서는 관용구 치환보다 ‘수정하다/개선하다’처럼 뜻을 풀어 쓰는 편이 안전하다. '손을 보다'는 문맥에 따라 다소 구어적이다.",
+    "examples": [
+      "この資料は少し手を入れれば、かなり見やすくなる。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00202",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "目がない",
+    "meaning": "몹시 좋아해 푹 빠지다. 특히 사람이나 물건에 쉽게 열중하는 뜻.",
+    "original_meaning": "とても好きで熱中する。相手に夢中になる。",
+    "ko_expression": [
+      "푹 빠지다",
+      "정신을 못 차리다",
+      "사족을 못 쓰다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "사람, 음식, 취미 등을 매우 좋아해 열중하는 뜻으로 참고하되, 과장된 직역보다 문맥상 ‘푹 빠짐’으로 옮길 때 적합합니다.",
+    "scene": [
+      "연애 감정",
+      "취미 몰입",
+      "음식 선호",
+      "물건에 대한 강한 호감"
+    ],
+    "tone": [
+      "구어체",
+      "비유적",
+      "다소 친근함"
+    ],
+    "caution": "직역하면 ‘눈이 없다’로 오해되므로 피해야 합니다. 한국어는 ‘사족을 못 쓰다’처럼 강한 관용구가 가능하지만, 사람 대상엔 다소 과장될 수 있어 문맥에 따라 완곡하게 옮기는 편이 안전합니다.",
+    "examples": [
+      "彼はあの店のケーキに目がなくて、毎週のように買っている。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00205",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "輪を掛ける",
+    "meaning": "일을 더 심하게 만들거나, 정도를 더 과장하다.",
+    "original_meaning": "物事をさらにひどくする。誇張する。",
+    "ko_expression": [
+      "부채질하다",
+      "과장하다",
+      "더 심하게 만들다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "부정적 상태를 한층 악화시키거나 말·표현을 더 부풀릴 때 참고한다. 한국어 관용구로 딱 맞기보다 의미풀이가 안전하다.",
+    "scene": [
+      "갈등 악화",
+      "문제 확대",
+      "말/평가 과장",
+      "상황을 더 나쁘게 함"
+    ],
+    "tone": [
+      "부정적",
+      "구어적",
+      "비유적"
+    ],
+    "caution": "‘輪を掛ける’는 한국어의 고정 관용구로 직접 대응이 약하다. 문맥에 따라 ‘더 심하게 하다/과장하다’로 풀어 쓰는 편이 안전하다. 지나치게 관용구로 치환하지 말 것.",
+    "examples": [
+      "彼の一言が、事態を輪を掛けて悪化させた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 74
+  },
+  {
+    "id": "jp-00208",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "頭を抱える",
+    "meaning": "심각한 문제나 곤란한 상황에 부딪혀 난감해하고 고민하다.",
+    "original_meaning": "深刻な問題や困難に直面して、困惑したり苦しんだりする。",
+    "ko_expression": [
+      "골머리를 앓다",
+      "난감해하다",
+      "어쩔 줄 모르다",
+      "머리를 싸매다",
+      "골똘히 생각하다",
+      "답을 찾느라 애쓰다"
+    ],
+    "ko_anchor_expression": [
+      "머리를 싸매다"
+    ],
+    "usage": "문제 해결이 막혔거나 대응책이 떠오르지 않는 상황을 옮길 때 참고한다. 한국어 관용구로 과하게 바꾸기보다 난감함·고민을 살피는 데 유용하다.",
+    "scene": [
+      "업무 문제",
+      "금전 문제",
+      "인간관계 갈등",
+      "돌발 사고"
+    ],
+    "tone": [
+      "일상적",
+      "중립적",
+      "다소 위기감 있는"
+    ],
+    "caution": "직역인 ‘머리를 감싸 쥐다’도 가능하지만 한국어에서는 관용적 대응이 약하다. ‘골머리를 앓다’가 가장 가깝지만, 상황에 따라서는 단순히 ‘난감해하다’로 푸는 편이 자연스럽다.",
+    "examples": [
+      "この不具合、原因がわからなくて頭を抱えている。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00214",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "青筋を立てる",
+    "meaning": "몹시 화를 내다, 크게 격노하다.",
+    "original_meaning": "激怒する。非常に怒る。",
+    "ko_expression": [
+      "화를 내다",
+      "눈에 불을 켜다",
+      "버럭 화를 내다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "분노의 강도를 나타낼 때 참고하되, 한국어 관용구로 과장 치환하기보다 감정 상태를 자연스럽게 옮길 때 사용.",
+    "scene": [
+      "대화 중 격한 반응",
+      "상사에게 꾸중받는 장면",
+      "싸움 직전의 긴장 상황",
+      "분노한 표정 묘사"
+    ],
+    "tone": [
+      "구어체",
+      "서술체",
+      "강한 감정"
+    ],
+    "caution": "‘青筋’의 이미지가 한국어에서 동일한 관용으로 굳어 있지 않아 직역하면 부자연스러울 수 있다. 문맥에 따라 ‘화를 내다/버럭 화를 내다’로 풀고, 만화체·과장 표현은 작품 톤일 때만 선택하는 것이 안전하다.",
+    "examples": [
+      "彼は青筋を立てて抗議した。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 74
+  },
+  {
+    "id": "jp-00215",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "根を下ろす",
+    "meaning": "안정된 자리를 잡고 편안하게 정착하다.",
+    "original_meaning": "安定する。落ち着く。",
+    "ko_expression": [
+      "자리를 잡다",
+      "뿌리를 내리다",
+      "정착하다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "사람이나 조직이 한곳에 안정적으로 자리 잡는 상황에서 참고한다. 물리적 이동보다 생활·활동 기반의 안착을 말할 때 적합하다.",
+    "scene": [
+      "이사 후 정착",
+      "새 직장 안착",
+      "지역사회에 자리 잡음",
+      "사업 기반 구축"
+    ],
+    "tone": [
+      "중립적",
+      "서술적",
+      "약간 비유적"
+    ],
+    "caution": "‘뿌리를 내리다’와 가깝지만 한국어에서는 성장·기반 확장 뉘앙스가 더 강할 수 있다. 단순히 편안해짐을 뜻할 때는 ‘자리를 잡다’처럼 풀어 번역하는 편이 안전하다.",
+    "examples": [
+      "この町に来て、ようやく根を下ろした気がする。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00218",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "歯が抜けたよう",
+    "meaning": "늙거나 기운이 빠져 힘이 없고 맥이 풀린 모습",
+    "original_meaning": "老いて衰えた様子や意気消沈した様子を表す。",
+    "ko_expression": [
+      "기운이 빠지다",
+      "맥이 빠지다",
+      "정신이 축 나다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "노화로 인한 쇠약함이나 의욕 저하를 묘사할 때 참고하며, 외형보다 ‘기세가 꺾임’에 초점을 맞춰 번역한다.",
+    "scene": [
+      "노인 묘사",
+      "의욕 상실",
+      "활기 없는 분위기",
+      "축 처진 모습"
+    ],
+    "tone": [
+      "담담한",
+      "서술적인",
+      "다소 비유적인"
+    ],
+    "caution": "직역하면 뜻이 잘 안 살아날 수 있어 의미풀이가 안전하다. 한국어 관용구로는 ‘맥이 빠지다’가 가장 가깝지만, ‘정신이 축 나다’는 구어체라 문체 차이를 봐야 한다.",
+    "examples": [
+      "最近、あの人は歯が抜けたように元気がない。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00219",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "幕を開ける",
+    "meaning": "일이 시작되다, 막 시작하다.",
+    "original_meaning": "始まる。スタートする。",
+    "ko_expression": [
+      "문을 열다",
+      "시작을 알리다",
+      "막이 오르다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "행사, 이야기, 프로젝트 등 어떤 일이 본격적으로 시작되는 맥락에서 참고한다. 직역보다 자연스러운 시작 표현을 우선 고려한다.",
+    "scene": [
+      "행사 시작",
+      "이야기 전개",
+      "프로젝트 출범",
+      "시즌 개막"
+    ],
+    "tone": [
+      "중립적",
+      "문어체",
+      "비유적"
+    ],
+    "caution": "연극의 ‘막’ 이미지를 살린 비유라서, 한국어에서는 상황에 따라 ‘시작하다’로 풀어 쓰는 편이 안전하다. ‘막이 오르다’는 문학적·보도체에 잘 맞는다.",
+    "examples": [
+      "いよいよ新しいプロジェクトの幕を開けることになった。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00221",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "息が詰まる",
+    "meaning": "압박감이나 긴장감이 심해져 답답하고 힘든 상태",
+    "original_meaning": "圧迫感や緊張感が強くなり、苦しくなる。また、思うように行動できずに困ること。",
+    "ko_expression": [
+      "숨이 막히다",
+      "답답해서 미치겠다",
+      "압박감을 느끼다",
+      "답답하다",
+      "숨이 턱 막히다",
+      "속이 답답하다",
+      "가슴이 답답하다",
+      "속이 막히다"
+    ],
+    "ko_anchor_expression": [
+      "숨이 막히다",
+      "속이 답답하다"
+    ],
+    "usage": "분위기나 관계가 너무 답답하고 긴장될 때, 또는 제약 때문에 마음대로 못 움직이는 상황 묘사에 참고한다.",
+    "scene": [
+      "직장 상사 앞",
+      "가정 내 갈등",
+      "혼잡한 공간",
+      "강한 통제 상황"
+    ],
+    "tone": [
+      "비유적",
+      "부정적",
+      "구어체"
+    ],
+    "caution": "직역하면 ‘숨이 막히다’가 자연스럽지만, 실제로 호흡곤란이 아니라 심리적 압박을 뜻할 때가 많다. 과한 관용구 치환보다 문맥에 맞춰 답답함·압박감을 풀어 쓰는 편이 안전하다.",
+    "examples": [
+      "上司の前だと、いつも息が詰まる。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00224",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "けたが違う",
+    "meaning": "비교할 수 없을 만큼 차이가 크다.",
+    "original_meaning": "比較して大きな差がある。水平が異なる。",
+    "ko_expression": [
+      "차원이 다르다",
+      "급이 다르다",
+      "비교가 안 된다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "능력, 규모, 수준, 성능처럼 비교 대상 간 격차가 매우 클 때 참고할 표현이다.",
+    "scene": [
+      "업무 평가",
+      "스포츠 실력 비교",
+      "제품 성능 설명",
+      "가격·규모 차이 강조"
+    ],
+    "tone": [
+      "구어체",
+      "비교적 직설적",
+      "평가적"
+    ],
+    "caution": "일본어의 'けた'는 본래 자리수/자릿수 느낌이 있어 수치 차이를 암시하지만, 한국어에선 직역보다 '차원이 다르다'류로 자연스럽게 옮기는 편이 안전하다. 다만 문맥이 수치 비교면 과한 관용구보다 '비교할 수 없을 만큼 차이가 크다' 같은 풀이가 더 적절할 수 있다.",
+    "examples": [
+      "あの新人、まだ若いのに先輩たちとけたが違うな。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00229",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "一刻も早く",
+    "meaning": "가능한 한 빨리, 최대한 신속하게",
+    "original_meaning": "できるだけ早く。すみやかに。",
+    "ko_expression": [
+      "하루라도 빨리",
+      "가능한 한 빨리",
+      "서둘러"
+    ],
+    "ko_anchor_expression": [
+      "쇠뿔도 단김에 빼라"
+    ],
+    "usage": "일본어의 강한 긴급성 없이 ‘되도록 빨리’의 시간 압박을 옮길 때 참고한다. 문맥에 따라 직역보다 평이한 표현이 안전하다.",
+    "scene": [
+      "업무 지시",
+      "연락 요청",
+      "문제 대응",
+      "출발·이동"
+    ],
+    "tone": [
+      "공손함",
+      "실무적",
+      "절박함"
+    ],
+    "caution": "관용구로 과장해 옮길 표현은 아니다. 한국어에서는 ‘가능한 한 빨리’가 가장 안전하며, 상황에 따라 ‘즉시’보다 약하게 조정해야 한다.",
+    "examples": [
+      "できるだけ早く連絡してください。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 94
+  },
+  {
+    "id": "jp-00231",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "頭をもたげる",
+    "meaning": "자신감이 생기고 기세가 오르다.",
+    "original_meaning": "自信を持つ。意気込む。",
+    "ko_expression": [
+      "기세가 오르다",
+      "자신감이 붙다",
+      "의기양양해지다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "자신감·의욕이 차오르는 상황을 번역할 때 참고. 실제 문맥에 따라 직역보다 상태 변화를 풀어 쓰는 편이 안전함.",
+    "scene": [
+      "성과 후 분위기 상승",
+      "경기/경쟁 직전",
+      "처음의 주저함이 사라짐",
+      "말투가 당당해짐"
+    ],
+    "tone": [
+      "긍정적",
+      "활기찬",
+      "다소 문어적"
+    ],
+    "caution": "직역하면 ‘머리를 들다’가 되어 어색하므로 의미 중심으로 옮기는 편이 좋다. 다만 한국어 관용구 ‘고개를 들다’와는 의미가 달라 혼동 주의.",
+    "examples": [
+      "新しい企画が当たって、彼は急に頭をもたげてきた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 68
+  },
+  {
+    "id": "jp-00232",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "目をつぶる",
+    "meaning": "결점이나 문제를 알고도 못 본 척하며 넘어가다.",
+    "original_meaning": "欠点や問題を見逃したり、無視する。",
+    "ko_expression": [
+      "눈감아 주다",
+      "모른 척하다",
+      "문제 삼지 않다",
+      "눈을 감다",
+      "못 본 체하다"
+    ],
+    "ko_anchor_expression": [
+      "눈을 감다"
+    ],
+    "usage": "책임 추궁을 완화하거나 작은 결함을 의도적으로 넘어갈 때 참고. 직접 대응은 가능하지만 문맥상 허용·묵인 뉘앙스를 확인해야 함.",
+    "scene": [
+      "직장 내 실수",
+      "규정 위반의 묵인",
+      "관계에서의 양해",
+      "감사·처벌 완화"
+    ],
+    "tone": [
+      "일상적",
+      "중립적",
+      "다소 완곡한"
+    ],
+    "caution": "한국어의 ‘눈감아 주다’가 가장 가깝지만, 상황에 따라 ‘묵인하다’처럼 더 문어적일 수 있습니다. 단순히 눈을 감는 직역은 뜻이 달라지므로 피하세요.",
+    "examples": [
+      "今回は特別に目をつぶるから、次はちゃんとしてよ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 92
+  },
+  {
+    "id": "jp-00242",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "しっぽをつかむ",
+    "meaning": "중요한 단서나 실마리를 잡다.",
+    "original_meaning": "重要な手がかりをつかむ。",
+    "ko_expression": [
+      "단서를 잡다",
+      "실마리를 얻다",
+      "꼬리를 밟다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "수사·조사·분석 맥락에서 핵심 단서를 확보했다는 뜻으로 참고. 직역보다 한국어 자연표현으로 옮기기 좋음.",
+    "scene": [
+      "수사/조사",
+      "문제 해결",
+      "정보 탐색",
+      "분석 보고"
+    ],
+    "tone": [
+      "중립적",
+      "실무적",
+      "다소 구어적"
+    ],
+    "caution": "직역하면 어색하므로 ‘단서를 잡다’처럼 의미 중심으로 옮기는 것이 안전합니다. ‘꼬리를 밟다’는 한국어에서 뉘앙스가 달라 과한 대응일 수 있습니다.",
+    "examples": [
+      "やっと事件のしっぽをつかんだ気がする。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00243",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "気に入る",
+    "meaning": "마음에 들다, 좋아하게 되다. 경우에 따라 관심을 두다의 뜻도 있음",
+    "original_meaning": "好きになる。気にかける。",
+    "ko_expression": [
+      "마음에 들다",
+      "좋아하게 되다",
+      "눈여겨보다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "대상이나 사람을 호감 있게 느끼는 뜻이 핵심일 때 참고하고, ‘기에 들다’처럼 고정 관용구로 옮길 필요는 적음",
+    "scene": [
+      "물건 선택",
+      "사람에 대한 호감",
+      "취향 표현",
+      "추천 대상 평가"
+    ],
+    "tone": [
+      "일상적",
+      "중립적",
+      "부드러운"
+    ],
+    "caution": "한국어의 ‘마음에 들다’가 가장 자연스럽다. 문맥에 따라 ‘좋아하다’로 풀 수 있지만, ‘관심을 두다’는 일부 용법에서만 맞으므로 과잉 일반화는 피한다.",
+    "examples": [
+      "この店の雰囲気、すぐ気に入った。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 95
+  },
+  {
+    "id": "jp-00249",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "朝飯前",
+    "meaning": "매우 쉬워서 금방 해낼 수 있는 일",
+    "original_meaning": "とても簡単なこと。たやすくできる。",
+    "ko_expression": [
+      "식은 죽 먹기",
+      "누워서 떡 먹기",
+      "껌이다",
+      "땅 짚고 헤엄치기",
+      "아주 쉽다",
+      "아침 먹기"
+    ],
+    "ko_anchor_expression": [
+      "땅 짚고 헤엄치기",
+      "식은 죽 먹기"
+    ],
+    "usage": "난이도가 낮고 별일 아니라는 뜻으로, 쉬운 작업·판단·해결을 말할 때 번역 참고용으로 쓴다.",
+    "scene": [
+      "업무 난이도 설명",
+      "실력 과시 발화",
+      "가벼운 대화",
+      "문제 해결 평가"
+    ],
+    "tone": [
+      "구어체",
+      "가벼움",
+      "자신감"
+    ],
+    "caution": "한국어도 비슷한 관용구가 많아 직접 대응이 가능하지만, 상대를 깎아내리는 뉘앙스가 섞일 수 있어 문맥을 봐야 한다. 지나친 자랑조로 들리지 않게 주의.",
+    "examples": [
+      "これなら朝飯前だよ、5分もかからない。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 96
+  },
+  {
+    "id": "jp-00252",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "鼻が高い",
+    "meaning": "남을 깔보거나 잘난 체하는 마음이 있음.",
+    "original_meaning": "見下す気持ちがある。傲慢で高慢な態度を持っている。",
+    "ko_expression": [
+      "우쭐하다",
+      "거만하다",
+      "잘난 체하다",
+      "코가 높다",
+      "콧대가 세다",
+      "오만하다",
+      "자존심이 세다"
+    ],
+    "ko_anchor_expression": [
+      "코가 높다",
+      "콧대가 세다"
+    ],
+    "usage": "인물의 태도나 감정이 오만하고 남을 얕보는 뉘앙스를 번역할 때 참고한다. 칭찬 의미로 오해하지 않게 주의.",
+    "scene": [
+      "성격 묘사",
+      "대화 속 평가",
+      "비판적 서술",
+      "대립 장면"
+    ],
+    "tone": [
+      "부정적",
+      "비판적",
+      "구어적"
+    ],
+    "caution": "한국어의 ‘자랑스럽다’ 의미로는 잘 맞지 않는다. 문맥에 따라 ‘우쭐하다’보다 ‘거만하다/잘난 체하다’가 더 안전하며, 직역은 피하는 편이 좋다.",
+    "examples": [
+      "ちょっと鼻が高い態度で話された。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00253",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "鼻に付く",
+    "meaning": "몹시 거슬리고 짜증 나서 견디기 싫다.",
+    "original_meaning": "非常に不快である。非常にいやだ。",
+    "ko_expression": [
+      "눈에 거슬리다",
+      "역겹도록 싫다",
+      "너무 오글거리다",
+      "거슬리다",
+      "보기 싫다",
+      "눈엣가시다"
+    ],
+    "ko_anchor_expression": [
+      "눈에 거슬리다"
+    ],
+    "usage": "인물의 말투, 태도, 자랑, 행동이 과도해 불쾌할 때 참고한다. 단순 ‘지겹다’보다 혐오감·거슬림이 강할 수 있다.",
+    "scene": [
+      "사람의 허세를 말할 때",
+      "과한 친절이나 아첨을 거부할 때",
+      "반복되는 말버릇이 신경 쓰일 때",
+      "불쾌한 태도에 반응할 때"
+    ],
+    "tone": [
+      "구어체",
+      "감정적",
+      "비판적"
+    ],
+    "caution": "직역하면 의미가 잘 안 살아난다. 한국어에서는 ‘눈에 거슬리다’, ‘짜증 나다’ 계열로 풀어 쓰는 편이 안전하다. 다만 ‘역겹다’는 원문보다 강할 수 있어 문맥에 따라 주의가 필요하다.",
+    "examples": [
+      "あいつの自慢話、もう鼻に付くよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-00254",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "目に入る",
+    "meaning": "눈에 띄다, 시선을 끌다.",
+    "original_meaning": "注意を引く。目立つ。",
+    "ko_expression": [
+      "눈에 들어오다",
+      "눈에 띄다",
+      "시선이 가다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "사람·물건·표현이 자연스럽게 보이거나 주목받는 상황에서 참고한다. ‘보다’보다 존재감이 느껴질 때 쓰기 좋다.",
+    "scene": [
+      "광고/디자인",
+      "인물 묘사",
+      "일상 대화",
+      "기사/리뷰"
+    ],
+    "tone": [
+      "중립적",
+      "구어적",
+      "서술적"
+    ],
+    "caution": "직역하면 ‘눈에 들어가다’가 되지만 한국어에선 ‘눈에 띄다’가 더 자연스럽다. 강한 관용구 치환은 아니며 문맥에 따라 ‘시선을 끌다’도 가능하다.",
+    "examples": [
+      "店に入った瞬間、赤い看板が目に入った。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00256",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "気が気ではない",
+    "meaning": "걱정이 커서 전혀 마음이 놓이지 않는 상태.",
+    "original_meaning": "心配で落ち着かない。不安である。",
+    "ko_expression": [
+      "마음이 놓이지 않다",
+      "가슴이 조마조마하다",
+      "속이 타다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "불안·걱정 때문에 차분히 있지 못하는 상황을 옮길 때 참고한다. 과한 관용구보다 심리 상태를 자연스럽게 풀어 쓰는 데 적합하다.",
+    "scene": [
+      "시험 결과를 기다릴 때",
+      "가족의 안부를 걱정할 때",
+      "사고 소식을 듣고 난 뒤",
+      "중요한 연락을 기다릴 때"
+    ],
+    "tone": [
+      "불안한",
+      "초조한",
+      "걱정스러운"
+    ],
+    "caution": "직역하면 어색하므로 ‘걱정으로 불안하다’는 의미로 풀어 쓰는 편이 안전하다. 한국어 관용구로는 부분 대응만 가능하며, 문체는 비교적 일상적이다.",
+    "examples": [
+      "彼からまだ返事がなくて、気が気ではない。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00259",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "鼻息が荒い",
+    "meaning": "흥분·분노 등으로 호흡이 거칠거나, 의욕이 지나치게 강한 상태",
+    "original_meaning": "興奮や怒りなどで舐めたり荒い呼吸をする。また、情熱や意欲が高まっている様子を表す。",
+    "ko_expression": [
+      "코가 높다",
+      "기세가 등등하다",
+      "의욕이 지나치다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "호흡 상태보다 ‘기세가 세다, 의욕이 넘친다’는 뜻으로 번역할 때 참고. 부정적 뉘앙스가 섞일 수 있음.",
+    "scene": [
+      "흥분한 상태",
+      "분노한 상태",
+      "의욕이 과한 상황",
+      "상대에게 기세를 보이는 장면"
+    ],
+    "tone": [
+      "구어적",
+      "묘사적",
+      "약간 비판적"
+    ],
+    "caution": "직역하면 ‘코로 거칠게 숨쉰다’는 생리 묘사에 가깝다. 한국어 관용구로 무리하게 치환하기보다, 문맥에 따라 ‘기세가 세다/의욕이 넘친다’로 풀어 쓰는 편이 안전하다. ‘코가 높다’는 의미가 달라 주의.",
+    "examples": [
+      "彼は新しい企画の話になると、すぐ鼻息が荒くなる。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 63
+  },
+  {
+    "id": "jp-00273",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "あぐらをかく",
+    "meaning": "편하게 앉아 아무 일도 하지 않거나, 안일하게 지내는 것",
+    "original_meaning": "くつろいで、何もせずに座る。",
+    "ko_expression": [
+      "팔짱만 끼고 있다",
+      "아무 일도 하지 않고 있다",
+      "안주하다"
+    ],
+    "ko_anchor_expression": [
+      "원숭이도 나무에서 떨어진다"
+    ],
+    "usage": "행동 없이 편히 지내는 뜻은 살릴 수 있지만, 한국어 관용구로 과장 치환하기보다 문맥에 맞게 ‘안주하다/가만있다’로 옮길 때 참고",
+    "scene": [
+      "휴식 자세 묘사",
+      "게으름/무기력 상태",
+      "일을 하지 않고 방치하는 상황",
+      "현상 유지에 안주하는 태도"
+    ],
+    "tone": [
+      "중립적",
+      "구어체",
+      "비판적"
+    ],
+    "caution": "원뜻은 ‘다리를 꼬고 편히 앉다’이지만 번역에서는 실제 자세보다 ‘아무 일도 안 함/안주함’이 더 중요하다. 한국어에서 완전 대응 관용구는 약하므로 문맥에 따라 직역 또는 풀이가 안전하다.",
+    "examples": [
+      "そんなにあぐらをかいてばかりいないで、少しは手伝ってよ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 68
+  },
+  {
+    "id": "jp-00275",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "胸を痛める",
+    "meaning": "마음이 아프고 슬퍼하다. 걱정하거나 안타까워하는 상태를 뜻함.",
+    "original_meaning": "心を痛める。悲しむ。",
+    "ko_expression": [
+      "마음 아파하다",
+      "안타까워하다",
+      "속상해하다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "슬픔, 걱정, 안타까움처럼 감정의 통증을 말할 때 참고한다. 한국어 관용구보다 평이한 심정 묘사로 옮기기 쉽다.",
+    "scene": [
+      "가족 걱정",
+      "사고 소식",
+      "타인의 불행을 봄",
+      "애써도 막지 못한 일"
+    ],
+    "tone": [
+      "비유적",
+      "부드러운",
+      "다소 문어적"
+    ],
+    "caution": "한국어의 ‘가슴이 아프다’와 가까우나 고정 관용구로 꼭 치환할 필요는 없다. 상황에 따라 ‘마음이 아프다/안타깝다’가 더 자연스럽다.",
+    "examples": [
+      "彼の知らせを聞いて、母は胸を痛めた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00279",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "肩を並べる",
+    "meaning": "동등한 지위·가치가 있어 같은 수준에 서다.",
+    "original_meaning": "同等の地位や価値がある。同じような立場や能力を持つ。",
+    "ko_expression": [
+      "어깨를 나란히 하다",
+      "동등한 위치에 서다",
+      "같은 선상에 있다",
+      "같은 수준이다",
+      "비등하다",
+      "견줄 만하다"
+    ],
+    "ko_anchor_expression": [
+      "어깨를 나란히 하다"
+    ],
+    "usage": "실력, 지위, 평가가 비슷해 서로 견줄 만하다는 뜻으로 번역할 때 참고한다.",
+    "scene": [
+      "인물의 실력 비교",
+      "기업·국가의 위상 비교",
+      "동료 간 경쟁 관계",
+      "동급의 평가를 말할 때"
+    ],
+    "tone": [
+      "중립적",
+      "격식체",
+      "서술적"
+    ],
+    "caution": "한국어의 ‘어깨를 나란히 하다’와 거의 대응하지만, 문맥에 따라 단순 비교인지 대등한 지위 강조인지 구분해야 한다. 과도한 경쟁 뉘앙스는 피한다.",
+    "examples": [
+      "新興チームでも、実力は大手に肩を並べる。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 95
+  },
+  {
+    "id": "jp-00283",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "腹が太い",
+    "meaning": "욕심이 많고 탐욕스러운 상태를 뜻함.",
+    "original_meaning": "欲張りである。貪欲である。",
+    "ko_expression": [
+      "욕심이 많다",
+      "탐욕스럽다",
+      "배짱이 두둑하다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "인물의 성격이 이익을 지나치게 탐하는 쪽인지 설명할 때 참고. 한국어에서는 직역보다 성격 묘사로 푸는 편이 안전함.",
+    "scene": [
+      "성격 묘사",
+      "이익 추구",
+      "비판적 평가",
+      "문학적 서술"
+    ],
+    "tone": [
+      "비판적",
+      "구어적",
+      "서술적"
+    ],
+    "caution": "‘배가 크다’로 직역하면 의미가 잘 전달되지 않습니다. 한국어 관용구로는 직접 대응이 약해 성격 설명으로 풀어 쓰는 것이 안전합니다. ‘배짱이 두둑하다’는 뜻이 달라 혼동 주의.",
+    "examples": [
+      "あいつは腹が太いから、少しの利益じゃ満足しない。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 58
+  },
+  {
+    "id": "jp-00287",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "熱が冷める",
+    "meaning": "흥미나 열정이 사라지다. 또는 애정과 의욕이 식다.",
+    "original_meaning": "興味や情熱がなくなる。また、愛情や熱意が冷える。",
+    "ko_expression": [
+      "열기가 식다",
+      "흥이 가라앉다",
+      "마음이 식다"
+    ],
+    "ko_anchor_expression": [
+      "이심전심"
+    ],
+    "usage": "관심이 급격히 줄거나, 연애·관계에서 애정이 약해진 상황을 옮길 때 참고한다.",
+    "scene": [
+      "연애 관계",
+      "취미·유행",
+      "프로젝트 의욕 저하",
+      "팬심이 식는 장면"
+    ],
+    "tone": [
+      "일상적",
+      "비유적",
+      "다소 감정적"
+    ],
+    "caution": "직역하면 ‘열이 식다’이지만 한국어에선 감정·관심이 식는 뜻으로 자연스럽다. 연애 문맥은 ‘마음이 식다’가 더 자연스럽고, 일반 관심은 ‘열기가 식다’가 무난하다.",
+    "examples": [
+      "最初はあんなに盛り上がっていたのに、最近は熱が冷めてきた。"
+    ],
+    "translation_strategy": "metaphor",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00296",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "情けは人の為ならず",
+    "meaning": "남을 도우면 결국 그 이익이 자신에게 돌아온다는 뜻",
+    "original_meaning": "人に対して情けをかけることは、結果的には自分自身の利益になる。",
+    "ko_expression": [
+      "남을 돕는 것이 곧 나를 돕는 것",
+      "베푸는 정이 돌아온다",
+      "호의는 결국 자신에게 돌아온다"
+    ],
+    "ko_anchor_expression": [
+      "선행은 돌아온다"
+    ],
+    "usage": "타인에게 친절이나 도움을 베푸는 것이 장기적으로 자신에게도 이익이 된다는 맥락에서 참고한다.",
+    "scene": [
+      "봉사·기부",
+      "직장 내 협업",
+      "인간관계 조언",
+      "격언·훈계"
+    ],
+    "tone": [
+      "격언체",
+      "교훈적",
+      "다소 문어적"
+    ],
+    "caution": "한국어의 ‘정’이나 ‘호의’로 풀 수 있지만, 직역하면 오해가 생길 수 있다. 일본어 원뜻은 ‘사람을 위하는 것이 남을 위한 것만은 아니다’이므로, ‘남을 아끼는 마음’ 같은 의미로 과장하지 않도록 주의한다.",
+    "examples": [
+      "人に親切にしておくと、あとで自分に返ってくることもある。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00297",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "胸が膨らむ",
+    "meaning": "기대감이나 기쁨, 자부심으로 마음이 부풀어 오르는 느낌",
+    "original_meaning": "自信や誇りを感じる。うれしさや興奮を感じる。",
+    "ko_expression": [
+      "가슴이 벅차다",
+      "기대에 부풀다",
+      "마음이 뿌듯하다"
+    ],
+    "ko_anchor_expression": [
+      "이심전심"
+    ],
+    "usage": "기쁨·기대·자부심이 섞인 감정을 옮길 때 참고하되, 실제 문맥에 따라 ‘벅차다’나 ‘뿌듯하다’로 풀어 쓰기 좋음",
+    "scene": [
+      "성취 직후",
+      "즐거운 소식 수신",
+      "앞날에 대한 기대",
+      "자녀·제자에 대한 자랑스러움"
+    ],
+    "tone": [
+      "따뜻한",
+      "긍정적인",
+      "다소 문어적인"
+    ],
+    "caution": "‘胸が膨らむ’은 일본어에서 기대·기쁨·자부심을 모두 넓게 담지만, 한국어는 상황별로 ‘벅차다/뿌듯하다/기대에 부풀다’처럼 나누는 편이 자연스럽다. 직역은 어색할 수 있다.",
+    "examples": [
+      "初めて受賞したと聞いて、胸が膨らんだ。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 78
+  },
+  {
+    "id": "jp-00298",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "耳に入れる",
+    "meaning": "충고나 가르침을 받아들이다.",
+    "original_meaning": "忠告や教えを受け入れる。",
+    "ko_expression": [
+      "귀담아듣다",
+      "마음에 새기다",
+      "조언을 받아들이다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "상대의 말이나 충고를 수용한다는 뜻으로, 한국어 번역에서는 ‘귀담아듣다’나 ‘조언을 받아들이다’로 자연스럽게 옮길 때 참고.",
+    "scene": [
+      "상담",
+      "훈계",
+      "조언",
+      "교육"
+    ],
+    "tone": [
+      "중립적",
+      "부드러움",
+      "격식체"
+    ],
+    "caution": "일본어의 비유가 비교적 약해 직역보다 의미 중심 번역이 안전하다. 한국어 관용구로 과하게 바꾸기보다 ‘귀담아듣다/받아들이다’ 정도가 무난하다.",
+    "examples": [
+      "先生の言葉を耳に入れて、少しやり方を変えてみた。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 84
+  },
+  {
+    "id": "jp-00300",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "人目に付く",
+    "meaning": "남의 시선을 끌다, 눈에 띄다.",
+    "original_meaning": "他人の注目を集める。目立つ。",
+    "ko_expression": [
+      "눈에 띄다",
+      "사람들 눈에 띄다",
+      "주목을 받다"
+    ],
+    "ko_anchor_expression": [],
+    "usage": "외모·행동·장소 등이 주변의 시선을 끌거나 쉽게 보일 때, 번역에서 자연스러운 대응 표현을 찾는 참고로 쓴다.",
+    "scene": [
+      "외모/복장",
+      "행동/태도",
+      "광고/전시",
+      "장소/배치"
+    ],
+    "tone": [
+      "중립적",
+      "구어체",
+      "서술적"
+    ],
+    "caution": "직역하면 어색하므로 보통은 ‘눈에 띄다’로 옮기면 안전하다. ‘주목을 끌다’는 문맥에 따라 다소 격식적일 수 있다.",
+    "examples": [
+      "あの店は駅前で人目に付く場所にある。"
+    ],
+    "translation_strategy": "paraphrase",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00142",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "胸を打つ",
+    "meaning": "말이나 뜻이 깊이 느껴지다",
+    "original_meaning": "信頼できない。頼りにならない。",
+    "ko_expression": [
+      "가슴에 와 닿다",
+      "마음에 와 닿다",
+      "와닿다",
+      "뼈에 사무치다"
+    ],
+    "ko_anchor_expression": [
+      "가슴에 와 닿다"
+    ],
+    "usage": "한국어 원문에서 ‘가슴에 와 닿다’가 ‘말이나 뜻이 깊이 느껴지다’ 의미로 쓰일 때 일본어 후보 ‘胸を打つ’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘가슴에 와 닿다’와 ‘胸を打つ’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00141",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "胸を撫で下ろす",
+    "meaning": "놀람이나 걱정이 지나가 안도하다",
+    "original_meaning": "安堵する。心の中で安心する。",
+    "ko_expression": [
+      "가슴을 쓸어내리다",
+      "가슴을 쓸다",
+      "안도하다",
+      "한숨 돌리다"
+    ],
+    "ko_anchor_expression": [
+      "가슴을 쓸어내리다"
+    ],
+    "usage": "한국어 원문에서 ‘가슴을 쓸어내리다’가 ‘놀람이나 걱정이 지나가 안도하다’ 의미로 쓰일 때 일본어 후보 ‘胸を撫で下ろす’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘가슴을 쓸어내리다’와 ‘胸を撫で下ろす’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00138",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "胸を躍らせる",
+    "meaning": "몹시 설레거나 긴장되다",
+    "original_meaning": "to get excited; to make one's heart leap; to make one's heart pound",
+    "ko_expression": [
+      "가슴이 뛰다",
+      "두근거리다",
+      "심장이 뛰다",
+      "가슴이 설레다"
+    ],
+    "ko_anchor_expression": [
+      "가슴이 뛰다"
+    ],
+    "usage": "한국어 원문에서 ‘가슴이 뛰다’가 ‘몹시 설레거나 긴장되다’ 의미로 쓰일 때 일본어 후보 ‘胸を躍らせる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘가슴이 뛰다’와 ‘胸を躍らせる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00140",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "胸が痛む",
+    "meaning": "너무 슬퍼서 견디기 어렵다",
+    "original_meaning": "悲しみや苦しみを感じる。心が痛む。",
+    "ko_expression": [
+      "가슴이 미어지다",
+      "가슴이 아프다",
+      "마음이 찢어지다",
+      "애가 타다"
+    ],
+    "ko_anchor_expression": [
+      "가슴이 미어지다"
+    ],
+    "usage": "한국어 원문에서 ‘가슴이 미어지다’가 ‘너무 슬퍼서 견디기 어렵다’ 의미로 쓰일 때 일본어 후보 ‘胸が痛む’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "감정",
+      "교훈/격언",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘가슴이 미어지다’와 ‘胸が痛む’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00139",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "度肝を抜く",
+    "meaning": "갑자기 놀라거나 불안해지다",
+    "original_meaning": "驚かせる。非常に驚く。",
+    "ko_expression": [
+      "가슴이 철렁하다",
+      "철렁하다",
+      "가슴이 덜컥하다",
+      "가슴이 내려앉다"
+    ],
+    "ko_anchor_expression": [
+      "가슴이 철렁하다"
+    ],
+    "usage": "한국어 원문에서 ‘가슴이 철렁하다’가 ‘갑자기 놀라거나 불안해지다’ 의미로 쓰일 때 일본어 후보 ‘度肝を抜く’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘가슴이 철렁하다’와 ‘度肝を抜く’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00150",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "小心翼々",
+    "meaning": "겁이 많고 대담하지 않다",
+    "original_meaning": "very timid; very nervous; faint-hearted",
+    "ko_expression": [
+      "간이 작다",
+      "겁이 많다",
+      "소심하다",
+      "간이 작다",
+      "배짱이 없다",
+      "기세가 없다",
+      "배짱이 약하다"
+    ],
+    "ko_anchor_expression": [
+      "간이 작다",
+      "배짱이 없다"
+    ],
+    "usage": "한국어 원문에서 ‘간이 작다’가 ‘겁이 많고 대담하지 않다’ 의미로 쓰일 때 일본어 후보 ‘小心翼々’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘간이 작다’와 ‘小心翼々’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00151",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "肝をつぶす",
+    "meaning": "몹시 겁을 먹다",
+    "original_meaning": "to be flabbergasted; to be amazed; to be astounded",
+    "ko_expression": [
+      "간이 콩알만 해지다",
+      "간이 작아지다",
+      "겁에 질리다",
+      "간이 콩알만 해지다",
+      "간 떨어질 뻔하다",
+      "깜짝 놀라다",
+      "가슴이 철렁하다",
+      "혼비백산하다"
+    ],
+    "ko_anchor_expression": [
+      "간이 콩알만 해지다",
+      "간 떨어질 뻔하다"
+    ],
+    "usage": "한국어 원문에서 ‘간이 콩알만 해지다’가 ‘몹시 겁을 먹다’ 의미로 쓰일 때 일본어 후보 ‘肝をつぶす’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘간이 콩알만 해지다’와 ‘肝をつぶす’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00149",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "肝が据わる",
+    "meaning": "겁이 없고 대담하다",
+    "original_meaning": "to have guts; to be plucky; to have nerves of steel",
+    "ko_expression": [
+      "간이 크다",
+      "배짱이 좋다",
+      "간이 배 밖으로 나오다",
+      "담이 크다",
+      "배짱이 두둑하다",
+      "배포가 크다",
+      "배짱이 있다"
+    ],
+    "ko_anchor_expression": [
+      "간이 크다",
+      "배짱이 두둑하다"
+    ],
+    "usage": "한국어 원문에서 ‘간이 크다’가 ‘겁이 없고 대담하다’ 의미로 쓰일 때 일본어 후보 ‘肝が据わる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "교훈/격언",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘간이 크다’와 ‘肝が据わる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00179",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "一難去ってまた一難",
+    "meaning": "상황이 갈수록 더 어려워진다",
+    "original_meaning": "one thing after another; out of the frying pan and into the fire",
+    "ko_expression": [
+      "갈수록 태산이다",
+      "갈수록 힘들다",
+      "문제가 더 커진다",
+      "점점 태산이다",
+      "산 넘어 산",
+      "고비가 계속된다",
+      "넘어도 또 산이다",
+      "일이 자꾸 더 어려워진다"
+    ],
+    "ko_anchor_expression": [
+      "갈수록 태산이다",
+      "산 넘어 산"
+    ],
+    "usage": "한국어 원문에서 ‘갈수록 태산이다’가 ‘상황이 갈수록 더 어려워진다’ 의미로 쓰일 때 일본어 후보 ‘一難去ってまた一難’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘갈수록 태산이다’와 ‘一難去ってまた一難’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00126",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "耳を傾ける",
+    "meaning": "주의를 집중해 듣다",
+    "original_meaning": "to lend an ear; to hearken; to give an ear to",
+    "ko_expression": [
+      "귀를 기울이다",
+      "주의 깊게 듣다",
+      "귀담아듣다",
+      "신경 써 듣다"
+    ],
+    "ko_anchor_expression": [
+      "귀를 기울이다"
+    ],
+    "usage": "한국어 원문에서 ‘귀를 기울이다’가 ‘주의를 집중해 듣다’ 의미로 쓰일 때 일본어 후보 ‘耳を傾ける’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘귀를 기울이다’와 ‘耳を傾ける’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00125",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "耳にタコができる",
+    "meaning": "같은 말을 너무 들어 지겹다",
+    "original_meaning": "to be told or made to hear something so often that you (metaphorically) get calluses on your ears",
+    "ko_expression": [
+      "귀에 못이 박히다",
+      "귀가 아프도록 듣다",
+      "지겹도록 듣다",
+      "귀에 딱지가 앉다"
+    ],
+    "ko_anchor_expression": [
+      "귀에 못이 박히다"
+    ],
+    "usage": "한국어 원문에서 ‘귀에 못이 박히다’가 ‘같은 말을 너무 들어 지겹다’ 의미로 쓰일 때 일본어 후보 ‘耳にタコができる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘귀에 못이 박히다’와 ‘耳にタコができる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00180",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "絵に描いた餅",
+    "meaning": "아무리 좋아도 내 것이 아니라 쓸 수 없다",
+    "original_meaning": "pie in the sky; castles in the air; drawing of a rice cake",
+    "ko_expression": [
+      "그림의 떡",
+      "눈앞의 떡",
+      "그냥 바라만 보는 것",
+      "있어도 내 몫은 아니다"
+    ],
+    "ko_anchor_expression": [
+      "그림의 떡"
+    ],
+    "usage": "한국어 원문에서 ‘그림의 떡’가 ‘아무리 좋아도 내 것이 아니라 쓸 수 없다’ 의미로 쓰일 때 일본어 후보 ‘絵に描いた餅’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘그림의 떡’와 ‘絵に描いた餅’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00166",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "肩透かしを食う",
+    "meaning": "기대하던 재미나 기세가 꺾이다",
+    "original_meaning": "to suffer a disappointment; to feel let down; to have one's attack (question, etc.) sidestepped",
+    "ko_expression": [
+      "김이 새다",
+      "흥이 깨지다",
+      "기세가 꺾이다",
+      "재미가 반감되다",
+      "김이 빠지다",
+      "맥이 빠지다",
+      "흥이 식다",
+      "기운이 빠지다"
+    ],
+    "ko_anchor_expression": [
+      "김이 새다",
+      "김이 빠지다"
+    ],
+    "usage": "한국어 원문에서 ‘김이 새다’가 ‘기대하던 재미나 기세가 꺾이다’ 의미로 쓰일 때 일본어 후보 ‘肩透かしを食う’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘김이 새다’와 ‘肩透かしを食う’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00163",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "尻尾を巻く",
+    "meaning": "기세를 꺾고 물러서다",
+    "original_meaning": "to tuck one's tail between one's legs; to admit defeat; to turn tail (and run)",
+    "ko_expression": [
+      "꼬리를 내리다",
+      "기가 꺾이다",
+      "물러서다",
+      "항복하다"
+    ],
+    "ko_anchor_expression": [
+      "꼬리를 내리다"
+    ],
+    "usage": "한국어 원문에서 ‘꼬리를 내리다’가 ‘기세를 꺾고 물러서다’ 의미로 쓰일 때 일본어 후보 ‘尻尾を巻く’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘꼬리를 내리다’와 ‘尻尾を巻く’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00181",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "隣の芝生は青い",
+    "meaning": "남의 것이 더 좋아 보인다",
+    "original_meaning": "the grass is always greener on the other side of the fence",
+    "ko_expression": [
+      "남의 떡이 더 커 보인다",
+      "남의 것이 더 커 보인다",
+      "다른 집 떡이 커 보인다",
+      "내 것보다 남의 게 좋아 보인다"
+    ],
+    "ko_anchor_expression": [
+      "남의 떡이 더 커 보인다"
+    ],
+    "usage": "한국어 원문에서 ‘남의 떡이 더 커 보인다’가 ‘남의 것이 더 좋아 보인다’ 의미로 쓰일 때 일본어 후보 ‘隣の芝生は青い’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘남의 떡이 더 커 보인다’와 ‘隣の芝生は青い’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00182",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "壁に耳あり障子に目あり",
+    "meaning": "말은 언제든 남에게 새어 나간다",
+    "original_meaning": "walls have ears; walls have ears, sliding doors have eyes",
+    "ko_expression": [
+      "낮말은 새가 듣고 밤말은 쥐가 듣는다",
+      "말은 새어 나간다",
+      "입조심해야 한다",
+      "세상에 비밀은 없다"
+    ],
+    "ko_anchor_expression": [
+      "낮말은 새가 듣고 밤말은 쥐가 듣는다"
+    ],
+    "usage": "한국어 원문에서 ‘낮말은 새가 듣고 밤말은 쥐가 듣는다’가 ‘말은 언제든 남에게 새어 나간다’ 의미로 쓰일 때 일본어 후보 ‘壁に耳あり障子に目あり’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "교훈/격언",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘낮말은 새가 듣고 밤말은 쥐가 듣는다’와 ‘壁に耳あり障子に目あり’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00159",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "借りてきた猫",
+    "meaning": "처음 보는 사람 앞에서 쉽게 어색해하다",
+    "original_meaning": "someone who is suddenly quiet and meek; borrowed cat",
+    "ko_expression": [
+      "낯을 가리다",
+      "사람을 좀 가리다",
+      "내성적이다",
+      "낯선 사람을 어려워하다"
+    ],
+    "ko_anchor_expression": [
+      "낯을 가리다"
+    ],
+    "usage": "한국어 원문에서 ‘낯을 가리다’가 ‘처음 보는 사람 앞에서 쉽게 어색해하다’ 의미로 쓰일 때 일본어 후보 ‘借りてきた猫’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘낯을 가리다’와 ‘借りてきた猫’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00157",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "面の皮が厚い",
+    "meaning": "부끄러움을 모를 만큼 뻔뻔하다",
+    "original_meaning": "shameless; bold; brazen",
+    "ko_expression": [
+      "낯이 두껍다",
+      "얼굴이 두껍다",
+      "뻔뻔하다",
+      "염치가 없다",
+      "얼굴에 철판을 깔다",
+      "뻔뻔하게 굴다",
+      "염치없이 행동하다"
+    ],
+    "ko_anchor_expression": [
+      "낯이 두껍다",
+      "얼굴에 철판을 깔다"
+    ],
+    "usage": "한국어 원문에서 ‘낯이 두껍다’가 ‘부끄러움을 모를 만큼 뻔뻔하다’ 의미로 쓰일 때 일본어 후보 ‘面の皮が厚い’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘낯이 두껍다’와 ‘面の皮が厚い’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00158",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "顔から火が出る",
+    "meaning": "부끄럽고 민망해서 얼굴이 달아오르다",
+    "original_meaning": "to be extremely embarrassed; to burn with shame",
+    "ko_expression": [
+      "낯이 뜨겁다",
+      "창피하다",
+      "민망하다",
+      "얼굴이 화끈하다"
+    ],
+    "ko_anchor_expression": [
+      "낯이 뜨겁다"
+    ],
+    "usage": "한국어 원문에서 ‘낯이 뜨겁다’가 ‘부끄럽고 민망해서 얼굴이 달아오르다’ 의미로 쓰일 때 일본어 후보 ‘顔から火が出る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘낯이 뜨겁다’와 ‘顔から火が出る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00183",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "天に向かって唾を吐く",
+    "meaning": "자기에게 해가 돌아오는 행동을 한다",
+    "original_meaning": "to harm oneself as a result of trying to harm someone else; to cut off one's nose to spite one's face; to turn to the sky and spit",
+    "ko_expression": [
+      "누워서 침 뱉기",
+      "제 발등 찍기",
+      "자업자득",
+      "자기 얼굴에 침 뱉기"
+    ],
+    "ko_anchor_expression": [
+      "누워서 침 뱉기"
+    ],
+    "usage": "한국어 원문에서 ‘누워서 침 뱉기’가 ‘자기에게 해가 돌아오는 행동을 한다’ 의미로 쓰일 때 일본어 후보 ‘天に向かって唾を吐く’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘누워서 침 뱉기’와 ‘天に向かって唾を吐く’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00209",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "頭隠して尻隠さず",
+    "meaning": "겉만 속이고 제대로 숨기지 못한다",
+    "original_meaning": "burying one's head in the sand (while leaving other parts of one's body exposed); exposing one's weak point while attempting to protect oneself; hiding one's head without hiding one's bottom",
+    "ko_expression": [
+      "눈 가리고 아웅",
+      "뻔한 속임수",
+      "대충 속이기",
+      "겉만 번지르르하다"
+    ],
+    "ko_anchor_expression": [
+      "눈 가리고 아웅"
+    ],
+    "usage": "한국어 원문에서 ‘눈 가리고 아웅’가 ‘겉만 속이고 제대로 숨기지 못한다’ 의미로 쓰일 때 일본어 후보 ‘頭隠して尻隠さず’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘눈 가리고 아웅’와 ‘頭隠して尻隠さず’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00122",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "目に入れても痛くない",
+    "meaning": "몹시 귀엽고 사랑스럽다",
+    "original_meaning": "thinking so highly of someone that you are blind to their faults; thinking the sun shines out of someone's eyes; being the apple of one's eye",
+    "ko_expression": [
+      "눈에 넣어도 아프지 않다",
+      "너무 예쁘다",
+      "금이야 옥이야 하다",
+      "아주 귀엽다"
+    ],
+    "ko_anchor_expression": [
+      "눈에 넣어도 아프지 않다"
+    ],
+    "usage": "한국어 원문에서 ‘눈에 넣어도 아프지 않다’가 ‘몹시 귀엽고 사랑스럽다’ 의미로 쓰일 때 일본어 후보 ‘目に入れても痛くない’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘눈에 넣어도 아프지 않다’와 ‘目に入れても痛くない’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00119",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "人目を引く",
+    "meaning": "쉽게 보이거나 두드러지다",
+    "original_meaning": "注目を集める。目立つ。",
+    "ko_expression": [
+      "눈에 띄다",
+      "두드러지다",
+      "확 눈에 들어오다",
+      "눈에 잘 띄다"
+    ],
+    "ko_anchor_expression": [
+      "눈에 띄다"
+    ],
+    "usage": "한국어 원문에서 ‘눈에 띄다’가 ‘쉽게 보이거나 두드러지다’ 의미로 쓰일 때 일본어 후보 ‘人目を引く’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘눈에 띄다’와 ‘人目を引く’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00121",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "目を皿にする",
+    "meaning": "몹시 열심히 찾거나 달려들다",
+    "original_meaning": "to open one's eyes wide",
+    "ko_expression": [
+      "눈에 불을 켜다",
+      "혈안이 되다",
+      "눈을 부릅뜨다",
+      "열을 올리다"
+    ],
+    "ko_anchor_expression": [
+      "눈에 불을 켜다"
+    ],
+    "usage": "한국어 원문에서 ‘눈에 불을 켜다’가 ‘몹시 열심히 찾거나 달려들다’ 의미로 쓰일 때 일본어 후보 ‘目を皿にする’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘눈에 불을 켜다’와 ‘目を皿にする’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00120",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "目を背ける",
+    "meaning": "다른 데로 시선을 옮기다",
+    "original_meaning": "to look away (from); to avert one's gaze; to disregard",
+    "ko_expression": [
+      "눈을 돌리다",
+      "시선을 돌리다",
+      "외면하다",
+      "관심을 돌리다"
+    ],
+    "ko_anchor_expression": [
+      "눈을 돌리다"
+    ],
+    "usage": "한국어 원문에서 ‘눈을 돌리다’가 ‘다른 데로 시선을 옮기다’ 의미로 쓰일 때 일본어 후보 ‘目を背ける’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘눈을 돌리다’와 ‘目を背ける’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00124",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "白い目で見る",
+    "meaning": "날카로운 시선을 받다",
+    "original_meaning": "to look coldly at; to turn a cold shoulder",
+    "ko_expression": [
+      "눈총을 맞다",
+      "눈총을 받다",
+      "따가운 시선을 받다",
+      "눈살을 사다"
+    ],
+    "ko_anchor_expression": [
+      "눈총을 맞다"
+    ],
+    "usage": "한국어 원문에서 ‘눈총을 맞다’가 ‘날카로운 시선을 받다’ 의미로 쓰일 때 일본어 후보 ‘白い目で見る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘눈총을 맞다’와 ‘白い目で見る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00123",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "空気",
+    "meaning": "상대의 기분이나 분위기를 살피다",
+    "original_meaning": "air; atmosphere; mood",
+    "ko_expression": [
+      "눈치를 보다",
+      "눈치껏 하다",
+      "분위기를 살피다",
+      "살살 눈치보다"
+    ],
+    "ko_anchor_expression": [
+      "눈치를 보다"
+    ],
+    "usage": "한국어 원문에서 ‘눈치를 보다’가 ‘상대의 기분이나 분위기를 살피다’ 의미로 쓰일 때 일본어 후보 ‘空気’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘눈치를 보다’와 ‘空気’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00210",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "甘い汁を吸う",
+    "meaning": "유리할 때만 챙기고 불리하면 버린다",
+    "original_meaning": "to be onto a good thing; to make money without working; to line one's pockets",
+    "ko_expression": [
+      "달면 삼키고 쓰면 뱉는다",
+      "좋을 때만 챙긴다",
+      "이익 따라 행동한다",
+      "편할 때만 붙는다"
+    ],
+    "ko_anchor_expression": [
+      "달면 삼키고 쓰면 뱉는다"
+    ],
+    "usage": "한국어 원문에서 ‘달면 삼키고 쓰면 뱉는다’가 ‘유리할 때만 챙기고 불리하면 버린다’ 의미로 쓰일 때 일본어 후보 ‘甘い汁を吸う’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘달면 삼키고 쓰면 뱉는다’와 ‘甘い汁を吸う’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00184",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "後の祭り",
+    "meaning": "애써 쫓던 일을 놓치고 허탈해한다",
+    "original_meaning": "a day after the fair; (at a) stage when it's too late",
+    "ko_expression": [
+      "닭 쫓던 개 지붕 쳐다본다",
+      "헛수고했다",
+      "눈앞에서 놓치다",
+      "허탕치고 멍하니 있다"
+    ],
+    "ko_anchor_expression": [
+      "닭 쫓던 개 지붕 쳐다본다"
+    ],
+    "usage": "한국어 원문에서 ‘닭 쫓던 개 지붕 쳐다본다’가 ‘애써 쫓던 일을 놓치고 허탈해한다’ 의미로 쓰일 때 일본어 후보 ‘後の祭り’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘닭 쫓던 개 지붕 쳐다본다’와 ‘後の祭り’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00162",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "尻尾を掴む",
+    "meaning": "숨긴 잘못이나 약점을 들키다",
+    "original_meaning": "to have something on someone; to catch someone out; to trip someone up",
+    "ko_expression": [
+      "덜미를 잡히다",
+      "꼬리를 잡히다",
+      "들통나다",
+      "약점이 드러나다",
+      "정체가 드러나다"
+    ],
+    "ko_anchor_expression": [
+      "덜미를 잡히다",
+      "꼬리를 잡히다"
+    ],
+    "usage": "한국어 원문에서 ‘덜미를 잡히다’가 ‘숨긴 잘못이나 약점을 들키다’ 의미로 쓰일 때 일본어 후보 ‘尻尾を掴む’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘덜미를 잡히다’와 ‘尻尾を掴む’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00211",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "盗人猛々しい",
+    "meaning": "죄 지은 사람이 괜히 찔려 한다",
+    "original_meaning": "brazen-faced (about one's misdeed); audacious (despite being in the wrong); shameless",
+    "ko_expression": [
+      "도둑이 제 발 저리다",
+      "찔리는 게 있다",
+      "마음에 켕기다",
+      "죄 있는 사람이 더 놀란다"
+    ],
+    "ko_anchor_expression": [
+      "도둑이 제 발 저리다"
+    ],
+    "usage": "한국어 원문에서 ‘도둑이 제 발 저리다’가 ‘죄 지은 사람이 괜히 찔려 한다’ 의미로 쓰일 때 일본어 후보 ‘盗人猛々しい’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘도둑이 제 발 저리다’와 ‘盗人猛々しい’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00173",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "槍玉に挙げる",
+    "meaning": "비판과 검토의 대상이 되다",
+    "original_meaning": "to make an example of; to make a victim of; to hold up someone (something) to ridicule",
+    "ko_expression": [
+      "도마 위에 오르다",
+      "도마에 오르다",
+      "비판의 대상이 되다",
+      "도마에 놓이다"
+    ],
+    "ko_anchor_expression": [
+      "도마 위에 오르다"
+    ],
+    "usage": "한국어 원문에서 ‘도마 위에 오르다’가 ‘비판과 검토의 대상이 되다’ 의미로 쓰일 때 일본어 후보 ‘槍玉に挙げる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘도마 위에 오르다’와 ‘槍玉に挙げる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00185",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "青天の霹靂",
+    "meaning": "예상 못 한 큰일이 갑자기 닥친다",
+    "original_meaning": "突然起こる驚くべき出来事。",
+    "ko_expression": [
+      "마른하늘에 날벼락",
+      "날벼락 맞다",
+      "뜻밖의 큰일",
+      "느닷없는 불행"
+    ],
+    "ko_anchor_expression": [
+      "마른하늘에 날벼락"
+    ],
+    "usage": "한국어 원문에서 ‘마른하늘에 날벼락’가 ‘예상 못 한 큰일이 갑자기 닥친다’ 의미로 쓰일 때 일본어 후보 ‘青天の霹靂’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘마른하늘에 날벼락’와 ‘青天の霹靂’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00186",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "口は災いのもと",
+    "meaning": "말을 잘하면 큰 일도 풀린다",
+    "original_meaning": "Out of the mouth comes evil. Careless speech can be the source of disaster.",
+    "ko_expression": [
+      "말 한마디에 천 냥 빚도 갚는다",
+      "말 한마디가 중요하다",
+      "한마디 말이 힘이 크다",
+      "말이 사람을 살린다"
+    ],
+    "ko_anchor_expression": [
+      "말 한마디에 천 냥 빚도 갚는다"
+    ],
+    "usage": "한국어 원문에서 ‘말 한마디에 천 냥 빚도 갚는다’가 ‘말을 잘하면 큰 일도 풀린다’ 의미로 쓰일 때 일본어 후보 ‘口は災いのもと’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘말 한마디에 천 냥 빚도 갚는다’와 ‘口は災いのもと’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [
+      "同僚の悪口を言っていたら、本人に聞かれてしまった。まさに「口は災いのもと」だ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00154",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "石頭",
+    "meaning": "생각이 둔하고 융통성이 없다",
+    "original_meaning": "obstinate person; stubbornness; pigheadedness",
+    "ko_expression": [
+      "머리가 굳다",
+      "머리가 안 돌아가다",
+      "고지식하다",
+      "머리가 굳어지다"
+    ],
+    "ko_anchor_expression": [
+      "머리가 굳다"
+    ],
+    "usage": "한국어 원문에서 ‘머리가 굳다’가 ‘생각이 둔하고 융통성이 없다’ 의미로 쓰일 때 일본어 후보 ‘石頭’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘머리가 굳다’와 ‘石頭’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00155",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "頭を痛める",
+    "meaning": "계산하고 꾀를 내다",
+    "original_meaning": "To be worried or troubled.",
+    "ko_expression": [
+      "머리를 굴리다",
+      "궁리하다",
+      "잔머리를 굴리다",
+      "생각을 굴리다"
+    ],
+    "ko_anchor_expression": [
+      "머리를 굴리다"
+    ],
+    "usage": "한국어 원문에서 ‘머리를 굴리다’가 ‘계산하고 꾀를 내다’ 의미로 쓰일 때 일본어 후보 ‘頭を痛める’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘머리를 굴리다’와 ‘頭を痛める’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00156",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "頭が下がる",
+    "meaning": "겸손하게 자세를 낮추거나 사과하다",
+    "original_meaning": "敬意を表する。尊敬する。",
+    "ko_expression": [
+      "머리를 숙이다",
+      "고개를 숙이다",
+      "사과하다",
+      "겸손해지다",
+      "고개를 떨구다"
+    ],
+    "ko_anchor_expression": [
+      "머리를 숙이다",
+      "고개를 숙이다"
+    ],
+    "usage": "한국어 원문에서 ‘머리를 숙이다’가 ‘겸손하게 자세를 낮추거나 사과하다’ 의미로 쓰일 때 일본어 후보 ‘頭が下がる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘머리를 숙이다’와 ‘頭が下がる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00212",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "背に腹は変えられない",
+    "meaning": "먹고살기 위해 어쩔 수 없다",
+    "original_meaning": "you can't make an omelet without breaking eggs; a small sacrifice may be necessary to solve a more pressing problem",
+    "ko_expression": [
+      "목구멍이 포도청이다",
+      "먹고살려면 어쩔 수 없다",
+      "생계가 급하다",
+      "목구멍이 밥줄이다"
+    ],
+    "ko_anchor_expression": [
+      "목구멍이 포도청이다"
+    ],
+    "usage": "한국어 원문에서 ‘목구멍이 포도청이다’가 ‘먹고살기 위해 어쩔 수 없다’ 의미로 쓰일 때 일본어 후보 ‘背に腹は変えられない’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘목구멍이 포도청이다’와 ‘背に腹は変えられない’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00213",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "背に腹は替えられぬ",
+    "meaning": "먹고살기 위해 어쩔 수 없다",
+    "original_meaning": "you can't make an omelet without breaking eggs; a small sacrifice may be necessary to solve a more pressing problem",
+    "ko_expression": [
+      "목구멍이 포도청이다",
+      "먹고살려면 어쩔 수 없다",
+      "생계가 급하다",
+      "목구멍이 밥줄이다"
+    ],
+    "ko_anchor_expression": [
+      "목구멍이 포도청이다"
+    ],
+    "usage": "한국어 원문에서 ‘목구멍이 포도청이다’가 ‘먹고살기 위해 어쩔 수 없다’ 의미로 쓰일 때 일본어 후보 ‘背に腹は替えられぬ’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘목구멍이 포도청이다’와 ‘背に腹は替えられぬ’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00136",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "一生懸命",
+    "meaning": "매우 큰 위험을 무릅쓰다",
+    "original_meaning": "very hard; with utmost effort; as hard as one can",
+    "ko_expression": [
+      "목숨을 걸다",
+      "목숨을 내놓다",
+      "죽기를 각오하다",
+      "몸을 던지다"
+    ],
+    "ko_anchor_expression": [
+      "목숨을 걸다"
+    ],
+    "usage": "한국어 원문에서 ‘목숨을 걸다’가 ‘매우 큰 위험을 무릅쓰다’ 의미로 쓰일 때 일본어 후보 ‘一生懸命’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘목숨을 걸다’와 ‘一生懸命’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00135",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "不惜身命",
+    "meaning": "매우 큰 위험을 무릅쓰다",
+    "original_meaning": "devoting one's body and soul to Buddhist teachings; unsparing devotion to Buddhism",
+    "ko_expression": [
+      "목숨을 걸다",
+      "목숨을 내놓다",
+      "죽기를 각오하다",
+      "몸을 던지다"
+    ],
+    "ko_anchor_expression": [
+      "목숨을 걸다"
+    ],
+    "usage": "한국어 원문에서 ‘목숨을 걸다’가 ‘매우 큰 위험을 무릅쓰다’ 의미로 쓰일 때 일본어 후보 ‘不惜身命’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘목숨을 걸다’와 ‘不惜身命’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00134",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "首を長くする",
+    "meaning": "몹시 애타게 기다리다",
+    "original_meaning": "to eagerly look forward to",
+    "ko_expression": [
+      "목이 빠지게 기다리다",
+      "애타게 기다리다",
+      "목 빠지게 기다리다",
+      "간절히 기다리다"
+    ],
+    "ko_anchor_expression": [
+      "목이 빠지게 기다리다"
+    ],
+    "usage": "한국어 원문에서 ‘목이 빠지게 기다리다’가 ‘몹시 애타게 기다리다’ 의미로 쓰일 때 일본어 후보 ‘首を長くする’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘목이 빠지게 기다리다’와 ‘首を長くする’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00165",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "水泡に帰す",
+    "meaning": "일이 거의 어려워지다",
+    "original_meaning": "to come to naught",
+    "ko_expression": [
+      "물 건너가다",
+      "끝장나다",
+      "희망이 사라지다",
+      "틀어지다",
+      "물을 먹다",
+      "망신당하다",
+      "헛수고하다",
+      "낭패를 보다"
+    ],
+    "ko_anchor_expression": [
+      "물 건너가다",
+      "물을 먹다"
+    ],
+    "usage": "한국어 원문에서 ‘물 건너가다’가 ‘일이 거의 어려워지다’ 의미로 쓰일 때 일본어 후보 ‘水泡に帰す’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘물 건너가다’와 ‘水泡に帰す’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00164",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "口火を切る",
+    "meaning": "일이나 대화의 시작을 열다",
+    "original_meaning": "to start the debate; to get the ball rolling; to fire the first shot",
+    "ko_expression": [
+      "물꼬를 트다",
+      "실마리를 풀다",
+      "계기를 만들다",
+      "물길을 열다"
+    ],
+    "ko_anchor_expression": [
+      "물꼬를 트다"
+    ],
+    "usage": "한국어 원문에서 ‘물꼬를 트다’가 ‘일이나 대화의 시작을 열다’ 의미로 쓰일 때 일본어 후보 ‘口火を切る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "관계/대화",
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘물꼬를 트다’와 ‘口火を切る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00175",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "暗中飛躍",
+    "meaning": "드러내지 않고 뒤에서 일하다",
+    "original_meaning": "behind-the-scenes maneuvering; behind-the-scenes manoeuvering; secret maneuvers",
+    "ko_expression": [
+      "물밑에서 움직이다",
+      "물밑 작업을 하다",
+      "뒤에서 움직이다",
+      "비공개로 움직이다"
+    ],
+    "ko_anchor_expression": [
+      "물밑에서 움직이다"
+    ],
+    "usage": "한국어 원문에서 ‘물밑에서 움직이다’가 ‘드러내지 않고 뒤에서 일하다’ 의미로 쓰일 때 일본어 후보 ‘暗中飛躍’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘물밑에서 움직이다’와 ‘暗中飛躍’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00172",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "物議騒然",
+    "meaning": "사회적 비난이나 문제를 일으키다",
+    "original_meaning": "tumultuous public discussion; noisy public criticism",
+    "ko_expression": [
+      "물의를 빚다",
+      "물의를 일으키다",
+      "물의를 사다",
+      "구설에 오르다",
+      "논란을 낳다",
+      "논란이 되다",
+      "논쟁을 부르다",
+      "말이 많다"
+    ],
+    "ko_anchor_expression": [
+      "물의를 빚다",
+      "논란을 낳다"
+    ],
+    "usage": "한국어 원문에서 ‘물의를 빚다’가 ‘사회적 비난이나 문제를 일으키다’ 의미로 쓰일 때 일본어 후보 ‘物議騒然’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘물의를 빚다’와 ‘物議騒然’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00187",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "飼い犬に手をかまれる",
+    "meaning": "믿었던 사람에게 오히려 큰 배신을 당함",
+    "original_meaning": "恩を仇で返される。",
+    "ko_expression": [
+      "믿는 도끼에 발등 찍힌다",
+      "가까운 사람에게 배신당하다",
+      "믿었던 도끼에 발등 찍히다",
+      "믿는 사람한테 당하다"
+    ],
+    "ko_anchor_expression": [
+      "믿는 도끼에 발등 찍힌다"
+    ],
+    "usage": "한국어 원문에서 ‘믿는 도끼에 발등 찍힌다’가 ‘믿었던 사람에게 오히려 큰 배신을 당함’ 의미로 쓰일 때 일본어 후보 ‘飼い犬に手をかまれる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘믿는 도끼에 발등 찍힌다’와 ‘飼い犬に手をかまれる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00188",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "嘘つきは泥棒のはじまり",
+    "meaning": "작은 잘못이 큰 죄로 커짐",
+    "original_meaning": "Lying leads to stealing. He that will lie will steal.",
+    "ko_expression": [
+      "바늘 도둑이 소 도둑 된다",
+      "작은 도둑이 큰 도둑 된다",
+      "작은 잘못이 커진다",
+      "처음이 작으면 나중이 크다"
+    ],
+    "ko_anchor_expression": [
+      "바늘 도둑이 소 도둑 된다"
+    ],
+    "usage": "한국어 원문에서 ‘바늘 도둑이 소 도둑 된다’가 ‘작은 잘못이 큰 죄로 커짐’ 의미로 쓰일 때 일본어 후보 ‘嘘つきは泥棒のはじまり’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘바늘 도둑이 소 도둑 된다’와 ‘嘘つきは泥棒のはじまり’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [
+      "お母さんはいつも「嘘つきは泥棒のはじまり」と言って、僕を𠮟った。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00170",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "風前の灯",
+    "meaning": "몹시 위태롭고 약한 처지",
+    "original_meaning": "precarious situation; precarious state",
+    "ko_expression": [
+      "바람 앞의 등불",
+      "풍전등화",
+      "아주 위태롭다",
+      "위태로운 처지"
+    ],
+    "ko_anchor_expression": [
+      "바람 앞의 등불"
+    ],
+    "usage": "한국어 원문에서 ‘바람 앞의 등불’가 ‘몹시 위태롭고 약한 처지’ 의미로 쓰일 때 일본어 후보 ‘風前の灯’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘바람 앞의 등불’와 ‘風前の灯’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00189",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "悪事千里を走る",
+    "meaning": "소문이 매우 빨리 퍼짐",
+    "original_meaning": "bad news travels quickly",
+    "ko_expression": [
+      "발 없는 말이 천 리 간다",
+      "말이 빨리 퍼진다",
+      "소문은 금세 퍼진다",
+      "입에서 입으로 번지다"
+    ],
+    "ko_anchor_expression": [
+      "발 없는 말이 천 리 간다"
+    ],
+    "usage": "한국어 원문에서 ‘발 없는 말이 천 리 간다’가 ‘소문이 매우 빨리 퍼짐’ 의미로 쓰일 때 일본어 후보 ‘悪事千里を走る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘발 없는 말이 천 리 간다’와 ‘悪事千里を走る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00118",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "尻に火がつく",
+    "meaning": "급한 일이 닥치다",
+    "original_meaning": "to be pressed (by urgent business); to be under great pressure (to act); to be under the gun",
+    "ko_expression": [
+      "발등에 불이 떨어지다",
+      "급해지다",
+      "다급해지다",
+      "불이 급하다"
+    ],
+    "ko_anchor_expression": [
+      "발등에 불이 떨어지다"
+    ],
+    "usage": "한국어 원문에서 ‘발등에 불이 떨어지다’가 ‘급한 일이 닥치다’ 의미로 쓰일 때 일본어 후보 ‘尻に火がつく’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘발등에 불이 떨어지다’와 ‘尻に火がつく’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00152",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "やきもちを焼く",
+    "meaning": "남이 잘되면 샘이 나다",
+    "original_meaning": "to be jealous",
+    "ko_expression": [
+      "배가 아프다",
+      "샘이 나다",
+      "질투가 나다",
+      "배가 아프다"
+    ],
+    "ko_anchor_expression": [
+      "배가 아프다"
+    ],
+    "usage": "한국어 원문에서 ‘배가 아프다’가 ‘남이 잘되면 샘이 나다’ 의미로 쓰일 때 일본어 후보 ‘やきもちを焼く’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘배가 아프다’와 ‘やきもちを焼く’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00190",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "本末転倒",
+    "meaning": "본질보다 부수적인 것이 더 커짐",
+    "original_meaning": "putting the cart before the horse; mistaking the means for the end; getting one's priorities backwards",
+    "ko_expression": [
+      "배보다 배꼽이 크다",
+      "주객이 전도되다",
+      "부대비용이 더 크다",
+      "본말이 뒤바뀌다"
+    ],
+    "ko_anchor_expression": [
+      "배보다 배꼽이 크다"
+    ],
+    "usage": "한국어 원문에서 ‘배보다 배꼽이 크다’가 ‘본질보다 부수적인 것이 더 커짐’ 의미로 쓰일 때 일본어 후보 ‘本末転倒’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘배보다 배꼽이 크다’와 ‘本末転倒’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00191",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "三人寄れば文殊の知恵",
+    "meaning": "아무리 쉬운 일도 함께하면 더 수월함",
+    "original_meaning": "three heads are better than two; three ordinary people together have great wisdom; if three people gather; the wisdom of Manjushri",
+    "ko_expression": [
+      "백지장도 맞들면 낫다",
+      "힘을 합치면 낫다",
+      "혼자보다 함께가 낫다",
+      "같이 들면 더 쉽다"
+    ],
+    "ko_anchor_expression": [
+      "백지장도 맞들면 낫다"
+    ],
+    "usage": "한국어 원문에서 ‘백지장도 맞들면 낫다’가 ‘아무리 쉬운 일도 함께하면 더 수월함’ 의미로 쓰일 때 일본어 후보 ‘三人寄れば文殊の知恵’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘백지장도 맞들면 낫다’와 ‘三人寄れば文殊の知恵’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00214",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "実るほど頭を垂れる稲穂かな",
+    "meaning": "될수록 겸손해야 한다",
+    "original_meaning": "the more learned, the more humble; the boughs bearing the most hang lowest",
+    "ko_expression": [
+      "벼는 익을수록 고개를 숙인다",
+      "알수록 겸손하다",
+      "될수록 고개를 숙인다",
+      "겸손할수록 좋다"
+    ],
+    "ko_anchor_expression": [
+      "벼는 익을수록 고개를 숙인다"
+    ],
+    "usage": "한국어 원문에서 ‘벼는 익을수록 고개를 숙인다’가 ‘될수록 겸손해야 한다’ 의미로 쓰일 때 일본어 후보 ‘実るほど頭を垂れる稲穂かな’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "교훈/격언",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘벼는 익을수록 고개를 숙인다’와 ‘実るほど頭を垂れる稲穂かな’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00193",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "傷口に塩",
+    "meaning": "해를 끼친 뒤 도움을 주는 척함",
+    "original_meaning": "(rubbing) salt in the wound",
+    "ko_expression": [
+      "병 주고 약 준다",
+      "상처 주고 달래다",
+      "해놓고 수습하다",
+      "혼내고 어르는 척하다"
+    ],
+    "ko_anchor_expression": [
+      "병 주고 약 준다"
+    ],
+    "usage": "한국어 원문에서 ‘병 주고 약 준다’가 ‘해를 끼친 뒤 도움을 주는 척함’ 의미로 쓰일 때 일본어 후보 ‘傷口に塩’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘병 주고 약 준다’와 ‘傷口に塩’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00192",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "馬子にも衣装",
+    "meaning": "겉모습이 좋으면 내용도 기대가 감",
+    "original_meaning": "anybody can look good with the right clothes; clothes make the man; fine feathers make fine birds",
+    "ko_expression": [
+      "보기 좋은 떡이 먹기도 좋다",
+      "보기 좋은 것이 먹기도 좋다",
+      "겉이 좋으면 속도 기대된다",
+      "첫인상이 좋으면 좋다"
+    ],
+    "ko_anchor_expression": [
+      "보기 좋은 떡이 먹기도 좋다"
+    ],
+    "usage": "한국어 원문에서 ‘보기 좋은 떡이 먹기도 좋다’가 ‘겉모습이 좋으면 내용도 기대가 감’ 의미로 쓰일 때 일본어 후보 ‘馬子にも衣装’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "교훈/격언",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘보기 좋은 떡이 먹기도 좋다’와 ‘馬子にも衣装’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00169",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "火に油を注ぐ",
+    "meaning": "작은 문제를 점점 크게 만듦",
+    "original_meaning": "to add fuel to the fire; to make things worse; to stir things up",
+    "ko_expression": [
+      "불씨를 키우다",
+      "불을 키우다",
+      "갈등을 키우다",
+      "문제를 키우다",
+      "불난 집에 부채질한다",
+      "불난 데 기름 붓기",
+      "일을 더 키우다",
+      "상황을 악화시키다"
+    ],
+    "ko_anchor_expression": [
+      "불씨를 키우다",
+      "불난 집에 부채질한다"
+    ],
+    "usage": "한국어 원문에서 ‘불씨를 키우다’가 ‘작은 문제를 점점 크게 만듦’ 의미로 쓰일 때 일본어 후보 ‘火に油を注ぐ’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘불씨를 키우다’와 ‘火に油を注ぐ’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00167",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "火をつける",
+    "meaning": "사건이나 관심을 일으키다",
+    "original_meaning": "to ignite; to set fire to; to spark (an incident, etc.)",
+    "ko_expression": [
+      "불을 붙이다",
+      "점화하다",
+      "불씨를 만들다",
+      "관심을 끌다",
+      "불을 지피다",
+      "열기를 더하다",
+      "분위기를 띄우다",
+      "논란을 키우다",
+      "불을 댕기다",
+      "불씨를 지피다",
+      "시작을 알리다"
+    ],
+    "ko_anchor_expression": [
+      "불을 붙이다",
+      "불을 지피다",
+      "불을 댕기다"
+    ],
+    "usage": "한국어 원문에서 ‘불을 붙이다’가 ‘사건이나 관심을 일으키다’ 의미로 쓰일 때 일본어 후보 ‘火をつける’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘불을 붙이다’와 ‘火をつける’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00168",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "火がつく",
+    "meaning": "일이나 열기가 급히 커지다",
+    "original_meaning": "to catch fire; to be ignited; to ignite",
+    "ko_expression": [
+      "불이 붙다",
+      "열기가 오르다",
+      "기세가 붙다",
+      "세가 붙다"
+    ],
+    "ko_anchor_expression": [
+      "불이 붙다"
+    ],
+    "usage": "한국어 원문에서 ‘불이 붙다’가 ‘일이나 열기가 급히 커지다’ 의미로 쓰일 때 일본어 후보 ‘火がつく’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘불이 붙다’와 ‘火がつく’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00215",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "雨降って地固まる",
+    "meaning": "어려움을 겪고 나면 더 단단해진다",
+    "original_meaning": "adversity strengthens the foundations; after a storm comes a calm; what doesn't kill you makes you stronger",
+    "ko_expression": [
+      "비 온 뒤에 땅이 굳어진다",
+      "고생 끝에 단단해진다",
+      "시련 뒤에 더 강해진다",
+      "비 온 뒤 땅이 굳는다"
+    ],
+    "ko_anchor_expression": [
+      "비 온 뒤에 땅이 굳어진다"
+    ],
+    "usage": "한국어 원문에서 ‘비 온 뒤에 땅이 굳어진다’가 ‘어려움을 겪고 나면 더 단단해진다’ 의미로 쓰일 때 일본어 후보 ‘雨降って地固まる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘비 온 뒤에 땅이 굳어진다’와 ‘雨降って地固まる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00194",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "能無し犬の高吠え",
+    "meaning": "실속 없는 사람이 말만 많음",
+    "original_meaning": "jealous complaint; the loud bark of a talentless dog",
+    "ko_expression": [
+      "빈 수레가 요란하다",
+      "겉만 요란하다",
+      "실속은 없고 소리만 크다",
+      "허풍만 크다"
+    ],
+    "ko_anchor_expression": [
+      "빈 수레가 요란하다"
+    ],
+    "usage": "한국어 원문에서 ‘빈 수레가 요란하다’가 ‘실속 없는 사람이 말만 많음’ 의미로 쓰일 때 일본어 후보 ‘能無し犬の高吠え’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘빈 수레가 요란하다’와 ‘能無し犬の高吠え’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00195",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "船頭多くして船山に登る",
+    "meaning": "의견이 많으면 일이 엉뚱하게 흘러감",
+    "original_meaning": "too many cooks spoil the broth; too many captains will steer the ship up a mountain",
+    "ko_expression": [
+      "사공이 많으면 배가 산으로 간다",
+      "여럿이 덤비면 일이 꼬인다",
+      "지휘가 많으면 엉망이다",
+      "의견이 많으면 산으로 간다"
+    ],
+    "ko_anchor_expression": [
+      "사공이 많으면 배가 산으로 간다"
+    ],
+    "usage": "한국어 원문에서 ‘사공이 많으면 배가 산으로 간다’가 ‘의견이 많으면 일이 엉뚱하게 흘러감’ 의미로 쓰일 때 일본어 후보 ‘船頭多くして船山に登る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘사공이 많으면 배가 산으로 간다’와 ‘船頭多くして船山に登る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00216",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "門前の小僧習わぬ経を読む",
+    "meaning": "오래 있으면 저절로 익힌다",
+    "original_meaning": "you learn, without realising it, from what is around you; a shop-boy near the temple gate will recite sutras untaught",
+    "ko_expression": [
+      "서당 개 삼 년이면 풍월을 읊는다",
+      "귀에 익으면 한다",
+      "오래 있으면 배운다",
+      "서당개 삼년이면 풍월을 읊는다"
+    ],
+    "ko_anchor_expression": [
+      "서당 개 삼 년이면 풍월을 읊는다"
+    ],
+    "usage": "한국어 원문에서 ‘서당 개 삼 년이면 풍월을 읊는다’가 ‘오래 있으면 저절로 익힌다’ 의미로 쓰일 때 일본어 후보 ‘門前の小僧習わぬ経を読む’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘서당 개 삼 년이면 풍월을 읊는다’와 ‘門前の小僧習わぬ経を読む’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00177",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "先手必勝",
+    "meaning": "상대보다 먼저 움직이다",
+    "original_meaning": "victory goes to the one who makes the first move; being quick to take action leads to victory; the early bird gets the worm",
+    "ko_expression": [
+      "선수를 치다",
+      "먼저 치다",
+      "선수를 놓다",
+      "선제적으로 움직이다"
+    ],
+    "ko_anchor_expression": [
+      "선수를 치다"
+    ],
+    "usage": "한국어 원문에서 ‘선수를 치다’가 ‘상대보다 먼저 움직이다’ 의미로 쓰일 때 일본어 후보 ‘先手必勝’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘선수를 치다’와 ‘先手必勝’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00161",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "一線を越える",
+    "meaning": "넘지 말아야 할 한계를 넘다",
+    "original_meaning": "to cross the line; to go too far",
+    "ko_expression": [
+      "선을 넘다",
+      "한계를 넘다",
+      "도 넘다",
+      "지나치다"
+    ],
+    "ko_anchor_expression": [
+      "선을 넘다"
+    ],
+    "usage": "한국어 원문에서 ‘선을 넘다’가 ‘넘지 말아야 할 한계를 넘다’ 의미로 쓰일 때 일본어 후보 ‘一線を越える’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘선을 넘다’와 ‘一線を越える’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00196",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "三つ子の魂百まで",
+    "meaning": "어릴 때 습관이 오래 감",
+    "original_meaning": "a leopard cannot change its spots; the child is father to the man; the soul of a child of three (is the same) at 100",
+    "ko_expression": [
+      "세 살 버릇 여든까지 간다",
+      "버릇은 어릴 때 든다",
+      "어릴 적 버릇이 평생 간다",
+      "어릴 때 습관은 오래 간다"
+    ],
+    "ko_anchor_expression": [
+      "세 살 버릇 여든까지 간다"
+    ],
+    "usage": "한국어 원문에서 ‘세 살 버릇 여든까지 간다’가 ‘어릴 때 습관이 오래 감’ 의미로 쓰일 때 일본어 후보 ‘三つ子の魂百まで’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘세 살 버릇 여든까지 간다’와 ‘三つ子の魂百まで’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00197",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "大山鳴動して鼠一匹",
+    "meaning": "기대가 컸지만 실속이 없음",
+    "original_meaning": "much ado about nothing; great cry and little wool; the mountain laboured and brought forth a mouse",
+    "ko_expression": [
+      "소문난 잔치에 먹을 것 없다",
+      "기대만 크고 실속 없다",
+      "이름난 데가 별것 없다",
+      "소문만 요란하고 별것 없다"
+    ],
+    "ko_anchor_expression": [
+      "소문난 잔치에 먹을 것 없다"
+    ],
+    "usage": "한국어 원문에서 ‘소문난 잔치에 먹을 것 없다’가 ‘기대가 컸지만 실속이 없음’ 의미로 쓰일 때 일본어 후보 ‘大山鳴動して鼠一匹’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘소문난 잔치에 먹을 것 없다’와 ‘大山鳴動して鼠一匹’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00148",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "腹を割る",
+    "meaning": "마음속 생각을 감추지 않고 보이다",
+    "original_meaning": "本音を打ち明ける。隠し事をしないで話す。",
+    "ko_expression": [
+      "속내를 드러내다",
+      "속마음을 털어놓다",
+      "본심을 드러내다",
+      "마음을 내보이다"
+    ],
+    "ko_anchor_expression": [
+      "속내를 드러내다"
+    ],
+    "usage": "한국어 원문에서 ‘속내를 드러내다’가 ‘마음속 생각을 감추지 않고 보이다’ 의미로 쓰일 때 일본어 후보 ‘腹を割る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘속내를 드러내다’와 ‘腹を割る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00147",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手を焼く",
+    "meaning": "걱정이나 말썽으로 마음고생하게 하다",
+    "original_meaning": "to not know what to do with; to be at a loss with; to have difficulty with",
+    "ko_expression": [
+      "속을 썩이다",
+      "속을 태우다",
+      "애를 먹이다",
+      "마음을 졸이게 하다"
+    ],
+    "ko_anchor_expression": [
+      "속을 썩이다"
+    ],
+    "usage": "한국어 원문에서 ‘속을 썩이다’가 ‘걱정이나 말썽으로 마음고생하게 하다’ 의미로 쓰일 때 일본어 후보 ‘手を焼く’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘속을 썩이다’와 ‘手を焼く’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00146",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "寛仁大度",
+    "meaning": "생각이 깊고 배려심이 있다",
+    "original_meaning": "being generous, benevolent and magnanimous in disposition",
+    "ko_expression": [
+      "속이 깊다",
+      "마음이 깊다",
+      "속이 넓다",
+      "그릇이 크다"
+    ],
+    "ko_anchor_expression": [
+      "속이 깊다"
+    ],
+    "usage": "한국어 원문에서 ‘속이 깊다’가 ‘생각이 깊고 배려심이 있다’ 의미로 쓰일 때 일본어 후보 ‘寛仁大度’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘속이 깊다’와 ‘寛仁大度’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00144",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "狷介固陋",
+    "meaning": "마음이 너그럽지 못하다",
+    "original_meaning": "stubbornly sticking to old ways; narrow-mindedly rejecting other people's views",
+    "ko_expression": [
+      "속이 좁다",
+      "마음이 좁다",
+      "소심하다",
+      "도량이 좁다"
+    ],
+    "ko_anchor_expression": [
+      "속이 좁다"
+    ],
+    "usage": "한국어 원문에서 ‘속이 좁다’가 ‘마음이 너그럽지 못하다’ 의미로 쓰일 때 일본어 후보 ‘狷介固陋’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘속이 좁다’와 ‘狷介固陋’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00145",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "視野狭窄",
+    "meaning": "마음이 너그럽지 못하다",
+    "original_meaning": "narrowing of visual field; narrow-mindedness; lack of vision",
+    "ko_expression": [
+      "속이 좁다",
+      "마음이 좁다",
+      "소심하다",
+      "도량이 좁다"
+    ],
+    "ko_anchor_expression": [
+      "속이 좁다"
+    ],
+    "usage": "한국어 원문에서 ‘속이 좁다’가 ‘마음이 너그럽지 못하다’ 의미로 쓰일 때 일본어 후보 ‘視野狭窄’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘속이 좁다’와 ‘視野狭窄’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00143",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "気をもむ",
+    "meaning": "몹시 조급하고 애가 타다",
+    "original_meaning": "to worry; to fret; to get anxious",
+    "ko_expression": [
+      "속이 타다",
+      "애가 타다",
+      "마음이 타다",
+      "속이 바짝바짝 타다",
+      "피가 마르다",
+      "마음이 타들어가다"
+    ],
+    "ko_anchor_expression": [
+      "속이 타다",
+      "피가 마르다"
+    ],
+    "usage": "한국어 원문에서 ‘속이 타다’가 ‘몹시 조급하고 애가 타다’ 의미로 쓰일 때 일본어 후보 ‘気をもむ’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘속이 타다’와 ‘気をもむ’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00115",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "息が合う",
+    "meaning": "서로 호흡이 잘 맞다",
+    "original_meaning": "to perform in tune with each other; to get along well; to be in perfect harmony",
+    "ko_expression": [
+      "손발이 맞다",
+      "호흡이 맞다",
+      "척척 맞다",
+      "궁합이 맞다"
+    ],
+    "ko_anchor_expression": [
+      "손발이 맞다"
+    ],
+    "usage": "한국어 원문에서 ‘손발이 맞다’가 ‘서로 호흡이 잘 맞다’ 의미로 쓰일 때 일본어 후보 ‘息が合う’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손발이 맞다’와 ‘息が合う’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00117",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手が塞がる",
+    "meaning": "자유롭게 움직이지 못하다",
+    "original_meaning": "to be busy; to be tied up doing something",
+    "ko_expression": [
+      "손발이 묶이다",
+      "움직임이 막히다",
+      "행동이 묶이다",
+      "발이 묶이다"
+    ],
+    "ko_anchor_expression": [
+      "손발이 묶이다"
+    ],
+    "usage": "한국어 원문에서 ‘손발이 묶이다’가 ‘자유롭게 움직이지 못하다’ 의미로 쓰일 때 일본어 후보 ‘手が塞がる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손발이 묶이다’와 ‘手が塞がる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00116",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手が離せない",
+    "meaning": "자유롭게 움직이지 못하다",
+    "original_meaning": "unable to leave the work at hand; right in the middle of something; tied up",
+    "ko_expression": [
+      "손발이 묶이다",
+      "움직임이 막히다",
+      "행동이 묶이다",
+      "발이 묶이다"
+    ],
+    "ko_anchor_expression": [
+      "손발이 묶이다"
+    ],
+    "usage": "한국어 원문에서 ‘손발이 묶이다’가 ‘자유롭게 움직이지 못하다’ 의미로 쓰일 때 일본어 후보 ‘手が離せない’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손발이 묶이다’와 ‘手が離せない’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00114",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "五指に入る",
+    "meaning": "여럿 중에서 아주 드물게 꼽다",
+    "original_meaning": "to be among the top five; to be one of the five best",
+    "ko_expression": [
+      "손에 꼽다",
+      "손꼽다",
+      "손에 꼽히다",
+      "몇 손가락 안에 들다"
+    ],
+    "ko_anchor_expression": [
+      "손에 꼽다"
+    ],
+    "usage": "한국어 원문에서 ‘손에 꼽다’가 ‘여럿 중에서 아주 드물게 꼽다’ 의미로 쓰일 때 일본어 후보 ‘五指に入る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손에 꼽다’와 ‘五指に入る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00113",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "五本の指に入る",
+    "meaning": "여럿 중에서 아주 드물게 꼽다",
+    "original_meaning": "to be among the top five; to be one of the five best",
+    "ko_expression": [
+      "손에 꼽다",
+      "손꼽다",
+      "손에 꼽히다",
+      "몇 손가락 안에 들다"
+    ],
+    "ko_anchor_expression": [
+      "손에 꼽다"
+    ],
+    "usage": "한국어 원문에서 ‘손에 꼽다’가 ‘여럿 중에서 아주 드물게 꼽다’ 의미로 쓰일 때 일본어 후보 ‘五本の指に入る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손에 꼽다’와 ‘五本の指に入る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00111",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手に入れる",
+    "meaning": "원하던 것을 얻다",
+    "original_meaning": "得ることができる。 cons of being blind、獲得する。",
+    "ko_expression": [
+      "손에 넣다",
+      "손에 쥐다",
+      "얻어내다",
+      "확보하다",
+      "거머쥐다"
+    ],
+    "ko_anchor_expression": [
+      "손에 넣다",
+      "손에 쥐다"
+    ],
+    "usage": "한국어 원문에서 ‘손에 넣다’가 ‘원하던 것을 얻다’ 의미로 쓰일 때 일본어 후보 ‘手に入れる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손에 넣다’와 ‘手に入れる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00112",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手に汗握る",
+    "meaning": "몹시 긴장되고 아슬아슬하다",
+    "original_meaning": "to sit on the edge of one's seat; to be in breathless suspense",
+    "ko_expression": [
+      "손에 땀을 쥐다",
+      "가슴을 졸이다",
+      "아슬아슬하다",
+      "조마조마하다"
+    ],
+    "ko_anchor_expression": [
+      "손에 땀을 쥐다"
+    ],
+    "usage": "한국어 원문에서 ‘손에 땀을 쥐다’가 ‘몹시 긴장되고 아슬아슬하다’ 의미로 쓰일 때 일본어 후보 ‘手に汗握る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손에 땀을 쥐다’와 ‘手に汗握る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00110",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手を付ける",
+    "meaning": "어떤 일에 처음 손을 쓰다",
+    "original_meaning": "始める。取り組む。",
+    "ko_expression": [
+      "손을 대다",
+      "건드리다",
+      "손을 보다",
+      "개입하다"
+    ],
+    "ko_anchor_expression": [
+      "손을 대다"
+    ],
+    "usage": "한국어 원문에서 ‘손을 대다’가 ‘어떤 일에 처음 손을 쓰다’ 의미로 쓰일 때 일본어 후보 ‘手を付ける’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손을 대다’와 ‘手を付ける’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00109",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手を出す",
+    "meaning": "어떤 일에 처음 손을 쓰다",
+    "original_meaning": "to reach out one's hand; to extend one's arm; to get involved in",
+    "ko_expression": [
+      "손을 대다",
+      "건드리다",
+      "손을 보다",
+      "개입하다"
+    ],
+    "ko_anchor_expression": [
+      "손을 대다"
+    ],
+    "usage": "한국어 원문에서 ‘손을 대다’가 ‘어떤 일에 처음 손을 쓰다’ 의미로 쓰일 때 일본어 후보 ‘手を出す’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손을 대다’와 ‘手を出す’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00107",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "手を切る",
+    "meaning": "더 이상 관여하지 않다",
+    "original_meaning": "関係を絶つ。連絡を断つ。",
+    "ko_expression": [
+      "손을 떼다",
+      "발을 빼다",
+      "관여하지 않다",
+      "손을 놓다",
+      "포기하다",
+      "그만두다"
+    ],
+    "ko_anchor_expression": [
+      "손을 떼다",
+      "손을 놓다"
+    ],
+    "usage": "한국어 원문에서 ‘손을 떼다’가 ‘더 이상 관여하지 않다’ 의미로 쓰일 때 일본어 후보 ‘手を切る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손을 떼다’와 ‘手を切る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00108",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "足を洗う",
+    "meaning": "더 이상 관여하지 않다",
+    "original_meaning": "違法なことを辞めて、清く正しく生きる。",
+    "ko_expression": [
+      "손을 떼다",
+      "발을 빼다",
+      "관여하지 않다",
+      "손을 놓다",
+      "빠져나오다",
+      "물러서다"
+    ],
+    "ko_anchor_expression": [
+      "손을 떼다",
+      "발을 빼다"
+    ],
+    "usage": "한국어 원문에서 ‘손을 떼다’가 ‘더 이상 관여하지 않다’ 의미로 쓰일 때 일본어 후보 ‘足を洗う’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘손을 떼다’와 ‘足を洗う’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00174",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "氷山の一角",
+    "meaning": "숨겨졌던 일이 드러나다",
+    "original_meaning": "問題・事態の一部分だけしか見えておらず、実際にはそのほかにも大きな問題・事態が存在していること。また、表面の部分だけではなく、本質的・真の部分を見抜くことが重要であることを表す。",
+    "ko_expression": [
+      "수면 위로 떠오르다",
+      "세상에 드러나다",
+      "표면화되다",
+      "드러나다"
+    ],
+    "ko_anchor_expression": [
+      "수면 위로 떠오르다"
+    ],
+    "usage": "한국어 원문에서 ‘수면 위로 떠오르다’가 ‘숨겨졌던 일이 드러나다’ 의미로 쓰일 때 일본어 후보 ‘氷山の一角’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘수면 위로 떠오르다’와 ‘氷山の一角’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00217",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "生兵法は大怪我のもと",
+    "meaning": "겉만 보고 속을 모른다",
+    "original_meaning": "a little learning is a dangerous thing",
+    "ko_expression": [
+      "수박 겉핥기",
+      "겉핥기",
+      "피상적으로 보다",
+      "겉만 훑다"
+    ],
+    "ko_anchor_expression": [
+      "수박 겉핥기"
+    ],
+    "usage": "한국어 원문에서 ‘수박 겉핥기’가 ‘겉만 보고 속을 모른다’ 의미로 쓰일 때 일본어 후보 ‘生兵法は大怪我のもと’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘수박 겉핥기’와 ‘生兵法は大怪我のもと’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00137",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "つかえが取れる",
+    "meaning": "답답하던 일이 풀리다",
+    "original_meaning": "to get a load off one's chest; to be relieved of a worry",
+    "ko_expression": [
+      "숨통이 트이다",
+      "길이 열리다",
+      "살 길이 열리다",
+      "한숨 돌리다",
+      "숨통을 틔우다",
+      "여유를 주다",
+      "숨 쉴 틈을 주다",
+      "속이 시원하다",
+      "시원하다",
+      "마음이 후련하다",
+      "속이 뻥 뚫리다"
+    ],
+    "ko_anchor_expression": [
+      "숨통이 트이다",
+      "숨통을 틔우다",
+      "속이 시원하다"
+    ],
+    "usage": "한국어 원문에서 ‘숨통이 트이다’가 ‘답답하던 일이 풀리다’ 의미로 쓰일 때 일본어 후보 ‘つかえが取れる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘숨통이 트이다’와 ‘つかえが取れる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00198",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "猫も杓子も",
+    "meaning": "여기저기 빠지지 않고 끼는 사람이나 것",
+    "original_meaning": "すべてのものや人々を指して、何も例外なく全てを意味する。",
+    "ko_expression": [
+      "약방의 감초",
+      "빠지지 않는 존재",
+      "늘 끼어드는 사람",
+      "어딜 가나 등장하는 사람"
+    ],
+    "ko_anchor_expression": [
+      "약방의 감초"
+    ],
+    "usage": "한국어 원문에서 ‘약방의 감초’가 ‘여기저기 빠지지 않고 끼는 사람이나 것’ 의미로 쓰일 때 일본어 후보 ‘猫も杓子も’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘약방의 감초’와 ‘猫も杓子も’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00199",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "猫を被る",
+    "meaning": "겉과 다르게 속셈이 있는 경우가 있음",
+    "original_meaning": "To feign innocence. A wolf in sheep's clothing.",
+    "ko_expression": [
+      "얌전한 고양이 부뚜막에 먼저 올라간다",
+      "얌전한 척해도 속을 모른다",
+      "조용한 사람이 더 무섭다",
+      "겉만 얌전하다"
+    ],
+    "ko_anchor_expression": [
+      "얌전한 고양이 부뚜막에 먼저 올라간다"
+    ],
+    "usage": "한국어 원문에서 ‘얌전한 고양이 부뚜막에 먼저 올라간다’가 ‘겉과 다르게 속셈이 있는 경우가 있음’ 의미로 쓰일 때 일본어 후보 ‘猫を被る’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘얌전한 고양이 부뚜막에 먼저 올라간다’와 ‘猫を被る’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [
+      "あの子は先生の前では猫を被っているけど、本当はやんちゃだよ。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00160",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "肩の荷が下りる",
+    "meaning": "걱정이나 부담이 덜어져 홀가분하다",
+    "original_meaning": "to feel relieved of one's burden; to have a weight removed from one's mind",
+    "ko_expression": [
+      "어깨가 가볍다",
+      "홀가분하다",
+      "마음이 가볍다",
+      "부담이 없다"
+    ],
+    "ko_anchor_expression": [
+      "어깨가 가볍다"
+    ],
+    "usage": "한국어 원문에서 ‘어깨가 가볍다’가 ‘걱정이나 부담이 덜어져 홀가분하다’ 의미로 쓰일 때 일본어 후보 ‘肩の荷が下りる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘어깨가 가볍다’와 ‘肩の荷が下りる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00200",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "雨垂れ石を穿つ",
+    "meaning": "계속 시도하면 결국 뜻을 이룸",
+    "original_meaning": "slow but steady wins the race; constant effort will result in success; constant dripping wears away a stone",
+    "ko_expression": [
+      "열 번 찍어 안 넘어가는 나무 없다",
+      "끈질기게 하면 된다",
+      "계속하면 된다",
+      "포기하지 않으면 이룬다"
+    ],
+    "ko_anchor_expression": [
+      "열 번 찍어 안 넘어가는 나무 없다"
+    ],
+    "usage": "한국어 원문에서 ‘열 번 찍어 안 넘어가는 나무 없다’가 ‘계속 시도하면 결국 뜻을 이룸’ 의미로 쓰일 때 일본어 후보 ‘雨垂れ石を穿つ’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "교훈/격언",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘열 번 찍어 안 넘어가는 나무 없다’와 ‘雨垂れ石を穿つ’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00218",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "泣く子と地頭には勝てぬ",
+    "meaning": "조르거나 소란피우면 더 챙겨 준다",
+    "original_meaning": "you cannot win against someone who doesn't listen to reason; you can't fight City Hall",
+    "ko_expression": [
+      "우는 아이 떡 하나 더 준다",
+      "우는 아이에게 떡이 간다",
+      "조르는 사람이 이긴다",
+      "울면 더 받는다"
+    ],
+    "ko_anchor_expression": [
+      "우는 아이 떡 하나 더 준다"
+    ],
+    "usage": "한국어 원문에서 ‘우는 아이 떡 하나 더 준다’가 ‘조르거나 소란피우면 더 챙겨 준다’ 의미로 쓰일 때 일본어 후보 ‘泣く子と地頭には勝てぬ’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘우는 아이 떡 하나 더 준다’와 ‘泣く子と地頭には勝てぬ’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00201",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "良薬は口に苦し",
+    "meaning": "불편해도 충고나 처방이 도움이 됨",
+    "original_meaning": "the most helpful advice may be difficult to listen to; good medicine tastes bitter",
+    "ko_expression": [
+      "입에 쓴 약이 병에 좋다",
+      "쓴 약이 몸에 좋다",
+      "듣기 싫은 말이 약이다",
+      "약은 쓰지만 몸엔 좋다"
+    ],
+    "ko_anchor_expression": [
+      "입에 쓴 약이 병에 좋다"
+    ],
+    "usage": "한국어 원문에서 ‘입에 쓴 약이 병에 좋다’가 ‘불편해도 충고나 처방이 도움이 됨’ 의미로 쓰일 때 일본어 후보 ‘良薬は口に苦し’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "교훈/격언",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘입에 쓴 약이 병에 좋다’와 ‘良薬は口に苦し’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00130",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "人の口には戸が立てられない",
+    "meaning": "남들 사이에서 화제가 되다",
+    "original_meaning": "you can't control what people say; you can't stop rumours (rumors)",
+    "ko_expression": [
+      "입에 오르내리다",
+      "입방아에 오르다",
+      "이야깃거리가 되다",
+      "화제가 되다",
+      "입방아를 찧다",
+      "구설수에 오르다",
+      "뒷말이 돌다"
+    ],
+    "ko_anchor_expression": [
+      "입에 오르내리다",
+      "입방아에 오르다"
+    ],
+    "usage": "한국어 원문에서 ‘입에 오르내리다’가 ‘남들 사이에서 화제가 되다’ 의미로 쓰일 때 일본어 후보 ‘人の口には戸が立てられない’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘입에 오르내리다’와 ‘人の口には戸が立てられない’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00129",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "口にのぼせる",
+    "meaning": "남들 사이에서 화제가 되다",
+    "original_meaning": "to talk about (something)",
+    "ko_expression": [
+      "입에 오르내리다",
+      "입방아에 오르다",
+      "이야깃거리가 되다",
+      "화제가 되다",
+      "입방아를 찧다",
+      "구설수에 오르다",
+      "뒷말이 돌다"
+    ],
+    "ko_anchor_expression": [
+      "입에 오르내리다",
+      "입방아에 오르다"
+    ],
+    "usage": "한국어 원문에서 ‘입에 오르내리다’가 ‘남들 사이에서 화제가 되다’ 의미로 쓰일 때 일본어 후보 ‘口にのぼせる’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘입에 오르내리다’와 ‘口にのぼせる’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00131",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "毀誉褒貶",
+    "meaning": "아주 극찬하다",
+    "original_meaning": "praise and censure; public criticisms",
+    "ko_expression": [
+      "입에 침이 마르다",
+      "극찬하다",
+      "입이 닳도록 칭찬하다",
+      "치켜세우다"
+    ],
+    "ko_anchor_expression": [
+      "입에 침이 마르다"
+    ],
+    "usage": "한국어 원문에서 ‘입에 침이 마르다’가 ‘아주 극찬하다’ 의미로 쓰일 때 일본어 후보 ‘毀誉褒貶’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘입에 침이 마르다’와 ‘毀誉褒貶’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00128",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "口をつぐむ",
+    "meaning": "말을 그치고 조용히 있다",
+    "original_meaning": "to hold one's tongue; to shut up",
+    "ko_expression": [
+      "입을 다물다",
+      "입을 닫다",
+      "말을 삼가다",
+      "조용히 있다"
+    ],
+    "ko_anchor_expression": [
+      "입을 다물다"
+    ],
+    "usage": "한국어 원문에서 ‘입을 다물다’가 ‘말을 그치고 조용히 있다’ 의미로 쓰일 때 일본어 후보 ‘口をつぐむ’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘입을 다물다’와 ‘口をつぐむ’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00132",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "口を酸っぱくする",
+    "meaning": "같은 말을 여러 번 되풀이하며 강조하다",
+    "original_meaning": "to repeatedly admonish; to tell over and over",
+    "ko_expression": [
+      "입이 닳도록 말하다",
+      "입이 마르도록 말하다",
+      "거듭 말하다",
+      "누누이 말하다"
+    ],
+    "ko_anchor_expression": [
+      "입이 닳도록 말하다"
+    ],
+    "usage": "한국어 원문에서 ‘입이 닳도록 말하다’가 ‘같은 말을 여러 번 되풀이하며 강조하다’ 의미로 쓰일 때 일본어 후보 ‘口を酸っぱくする’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘입이 닳도록 말하다’와 ‘口を酸っぱくする’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00127",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "開いた口がふさがらない",
+    "meaning": "놀라거나 부러워서 입이 크게 벌어지다",
+    "original_meaning": "dumbfounded; speechless; flabbergasted",
+    "ko_expression": [
+      "입이 벌어지다",
+      "놀라 입이 벌어지다",
+      "입을 다물지 못하다",
+      "감탄하다"
+    ],
+    "ko_anchor_expression": [
+      "입이 벌어지다"
+    ],
+    "usage": "한국어 원문에서 ‘입이 벌어지다’가 ‘놀라거나 부러워서 입이 크게 벌어지다’ 의미로 쓰일 때 일본어 후보 ‘開いた口がふさがらない’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘입이 벌어지다’와 ‘開いた口がふさがらない’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00202",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "羹に懲りて膾を吹く",
+    "meaning": "한번 놀라면 비슷한 것에도 과하게 겁낸다",
+    "original_meaning": "a burnt child dreads the fire; once bitten twice shy; to become overcautious from a bad experience",
+    "ko_expression": [
+      "자라 보고 놀란 가슴 솥뚜껑 보고 놀란다",
+      "한번 놀라면 다 겁난다",
+      "비슷한 것도 무섭다",
+      "예민하게 겁낸다"
+    ],
+    "ko_anchor_expression": [
+      "자라 보고 놀란 가슴 솥뚜껑 보고 놀란다"
+    ],
+    "usage": "한국어 원문에서 ‘자라 보고 놀란 가슴 솥뚜껑 보고 놀란다’가 ‘한번 놀라면 비슷한 것에도 과하게 겁낸다’ 의미로 쓰일 때 일본어 후보 ‘羹に懲りて膾を吹く’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘자라 보고 놀란 가슴 솥뚜껑 보고 놀란다’와 ‘羹に懲りて膾を吹く’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00203",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "山椒は小粒でもぴりりと辛い",
+    "meaning": "작아 보여도 실속이나 능력이 대단하다",
+    "original_meaning": "size isn't everything; something might be small but still pack a punch; Japanese pepper is small-grained but has a tongue-numbing tingle",
+    "ko_expression": [
+      "작은 고추가 맵다",
+      "작아도 매섭다",
+      "작은 게 더 세다",
+      "작은 고추 맵다"
+    ],
+    "ko_anchor_expression": [
+      "작은 고추가 맵다"
+    ],
+    "usage": "한국어 원문에서 ‘작은 고추가 맵다’가 ‘작아 보여도 실속이나 능력이 대단하다’ 의미로 쓰일 때 일본어 후보 ‘山椒は小粒でもぴりりと辛い’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘작은 고추가 맵다’와 ‘山椒は小粒でもぴりりと辛い’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00219",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "待てば海路の日和あり",
+    "meaning": "어려움도 결국 풀릴 때가 있다",
+    "original_meaning": "good things come to those who wait; if you wait, there will come a fine day for taking the sea route",
+    "ko_expression": [
+      "쥐구멍에도 볕 들 날 있다",
+      "언젠가 나아진다",
+      "쥐구멍에도 볕이 든다",
+      "좋은 날도 온다"
+    ],
+    "ko_anchor_expression": [
+      "쥐구멍에도 볕 들 날 있다"
+    ],
+    "usage": "한국어 원문에서 ‘쥐구멍에도 볕 들 날 있다’가 ‘어려움도 결국 풀릴 때가 있다’ 의미로 쓰일 때 일본어 후보 ‘待てば海路の日和あり’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "교훈/격언",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘쥐구멍에도 볕 들 날 있다’와 ‘待てば海路の日和あり’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00204",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "一寸の虫にも五分の魂",
+    "meaning": "약한 사람도 억울하면 반응한다",
+    "original_meaning": "tread on a worm and it will turn; even a tiny bug will defend itself; even the weakest and smallest beings have their own wills, so do not make light of them",
+    "ko_expression": [
+      "지렁이도 밟으면 꿈틀한다",
+      "가만있지 않는다",
+      "약자도 반발한다",
+      "참기만 하진 않는다"
+    ],
+    "ko_anchor_expression": [
+      "지렁이도 밟으면 꿈틀한다"
+    ],
+    "usage": "한국어 원문에서 ‘지렁이도 밟으면 꿈틀한다’가 ‘약한 사람도 억울하면 반응한다’ 의미로 쓰일 때 일본어 후보 ‘一寸の虫にも五分の魂’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘지렁이도 밟으면 꿈틀한다’와 ‘一寸の虫にも五分の魂’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00205",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "千里の道も一歩から",
+    "meaning": "큰일도 첫걸음부터 시작된다",
+    "original_meaning": "a journey of a thousand miles begins with a single step",
+    "ko_expression": [
+      "천 리 길도 한 걸음부터",
+      "시작이 반이다",
+      "한 걸음부터다",
+      "작은 시작이 중요하다",
+      "첫술에 배부르랴",
+      "처음부터 다 되진 않는다",
+      "한 번에 잘되진 않는다",
+      "시작부터 욕심내지 말라"
+    ],
+    "ko_anchor_expression": [
+      "천 리 길도 한 걸음부터",
+      "첫술에 배부르랴"
+    ],
+    "usage": "한국어 원문에서 ‘천 리 길도 한 걸음부터’가 ‘큰일도 첫걸음부터 시작된다’ 의미로 쓰일 때 일본어 후보 ‘千里の道も一歩から’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘천 리 길도 한 걸음부터’와 ‘千里の道も一歩から’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00206",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "蛙の子は蛙",
+    "meaning": "원인에 맞는 결과가 따라온다",
+    "original_meaning": "Like father, like son. The apple doesn't fall far from the tree.",
+    "ko_expression": [
+      "콩 심은 데 콩 나고 팥 심은 데 팥 난다",
+      "뿌린 대로 거둔다",
+      "원인대로 결과가 난다",
+      "심은 대로 난다"
+    ],
+    "ko_anchor_expression": [
+      "콩 심은 데 콩 나고 팥 심은 데 팥 난다"
+    ],
+    "usage": "한국어 원문에서 ‘콩 심은 데 콩 나고 팥 심은 데 팥 난다’가 ‘원인에 맞는 결과가 따라온다’ 의미로 쓰일 때 일본어 후보 ‘蛙の子は蛙’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "교훈/격언",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘콩 심은 데 콩 나고 팥 심은 데 팥 난다’와 ‘蛙の子は蛙’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [
+      "息子も私に似て野球が好きだ。蛙の子は蛙だね。"
+    ],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00171",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "波紋を呼ぶ",
+    "meaning": "큰 반향과 논란을 만들다",
+    "original_meaning": "to cause a stir; to have repercussions; to generate controversy",
+    "ko_expression": [
+      "파문을 일으키다",
+      "큰 파장을 낳다",
+      "파장을 일으키다",
+      "반향을 일으키다"
+    ],
+    "ko_anchor_expression": [
+      "파문을 일으키다"
+    ],
+    "usage": "한국어 원문에서 ‘파문을 일으키다’가 ‘큰 반향과 논란을 만들다’ 의미로 쓰일 때 일본어 후보 ‘波紋を呼ぶ’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘파문을 일으키다’와 ‘波紋を呼ぶ’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00176",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "形勢逆転",
+    "meaning": "상황을 완전히 유리하게 바꾸다",
+    "original_meaning": "競争や戦いにおいて、劣勢から優勢になること。相手を追い詰めること。",
+    "ko_expression": [
+      "판을 뒤집다",
+      "판세를 뒤집다",
+      "전세를 뒤집다",
+      "국면을 바꾸다"
+    ],
+    "ko_anchor_expression": [
+      "판을 뒤집다"
+    ],
+    "usage": "한국어 원문에서 ‘판을 뒤집다’가 ‘상황을 완전히 유리하게 바꾸다’ 의미로 쓰일 때 일본어 후보 ‘形勢逆転’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "일상 대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘판을 뒤집다’와 ‘形勢逆転’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00153",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "血が騒ぐ",
+    "meaning": "의욕과 흥분이 강하게 일다",
+    "original_meaning": "to get excited; to be roused (to action); to get the itch (to do)",
+    "ko_expression": [
+      "피가 끓다",
+      "피가 들끓다",
+      "가슴이 뜨거워지다",
+      "의욕이 솟다"
+    ],
+    "ko_anchor_expression": [
+      "피가 끓다"
+    ],
+    "usage": "한국어 원문에서 ‘피가 끓다’가 ‘의욕과 흥분이 강하게 일다’ 의미로 쓰일 때 일본어 후보 ‘血が騒ぐ’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘피가 끓다’와 ‘血が騒ぐ’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00207",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "高嶺の花",
+    "meaning": "몹시 어렵고 이루기 힘들다",
+    "original_meaning": "prize beyond one's reach; unattainable object; woman who is out of one's league",
+    "ko_expression": [
+      "하늘의 별 따기",
+      "거의 불가능하다",
+      "아주 어렵다",
+      "별 따기다"
+    ],
+    "ko_anchor_expression": [
+      "하늘의 별 따기"
+    ],
+    "usage": "한국어 원문에서 ‘하늘의 별 따기’가 ‘몹시 어렵고 이루기 힘들다’ 의미로 쓰일 때 일본어 후보 ‘高嶺の花’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "교훈/격언",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘하늘의 별 따기’와 ‘高嶺の花’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  },
+  {
+    "id": "jp-expanded-00178",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "寝耳に水",
+    "meaning": "상대가 예상 못 한 부분을 공격하다",
+    "original_meaning": "bolt from the blue; great surprise",
+    "ko_expression": [
+      "허를 찌르다",
+      "기습하다",
+      "뜻밖의 한 방을 날리다",
+      "허점을 노리다",
+      "허를 찔리다",
+      "기습당하다",
+      "뜻밖의 일격을 받다",
+      "뒤통수를 맞다",
+      "배신당하다",
+      "뒤통수 맞다",
+      "한 방 먹다"
+    ],
+    "ko_anchor_expression": [
+      "허를 찌르다",
+      "허를 찔리다",
+      "뒤통수를 맞다"
+    ],
+    "usage": "한국어 원문에서 ‘허를 찌르다’가 ‘상대가 예상 못 한 부분을 공격하다’ 의미로 쓰일 때 일본어 후보 ‘寝耳に水’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "관계/대화",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘허를 찌르다’와 ‘寝耳に水’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00133",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "舌を巻く",
+    "meaning": "너무 대단해 감탄하거나 놀라다",
+    "original_meaning": "to be astonished; to be amazed; to be astounded",
+    "ko_expression": [
+      "혀를 내두르다",
+      "감탄하다",
+      "놀라다",
+      "대단하다고 여기다"
+    ],
+    "ko_anchor_expression": [
+      "혀를 내두르다"
+    ],
+    "usage": "한국어 원문에서 ‘혀를 내두르다’가 ‘너무 대단해 감탄하거나 놀라다’ 의미로 쓰일 때 일본어 후보 ‘舌を巻く’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "감정",
+      "번역 검토"
+    ],
+    "tone": [
+      "비유적",
+      "문맥 의존",
+      "구어적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘혀를 내두르다’와 ‘舌を巻く’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "metaphor",
+    "fit_score": 82
+  },
+  {
+    "id": "jp-expanded-00208",
+    "country": "Japan",
+    "language": "ja",
+    "expression": "今日の一針、明日の十針",
+    "meaning": "미리 막을 일을 키워서 크게 수습한다",
+    "original_meaning": "a stitch in time saves nine; one needle today, ten needles tomorrow",
+    "ko_expression": [
+      "호미로 막을 것을 가래로 막는다",
+      "초기에 못 막아 커진다",
+      "작을 때 못 막아 커진다",
+      "일을 키워서 처리한다"
+    ],
+    "ko_anchor_expression": [
+      "호미로 막을 것을 가래로 막는다"
+    ],
+    "usage": "한국어 원문에서 ‘호미로 막을 것을 가래로 막는다’가 ‘미리 막을 일을 키워서 크게 수습한다’ 의미로 쓰일 때 일본어 후보 ‘今日の一針、明日の十針’를 문맥에 맞게 검토합니다.",
+    "scene": [
+      "업무",
+      "번역 검토"
+    ],
+    "tone": [
+      "관용적",
+      "일상적",
+      "비유적"
+    ],
+    "caution": "자동 확장 매칭입니다. ‘호미로 막을 것을 가래로 막는다’와 ‘今日の一針、明日の十針’는 의미가 가까워 RAG 후보로 유용하지만, 문장 맥락에 따라 관용구 치환보다 의미풀이가 자연스러울 수 있습니다.",
+    "examples": [],
+    "translation_strategy": "idiom",
+    "fit_score": 88
+  }
+]

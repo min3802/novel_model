@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from .core.locales import KO_JA, LOCALE_REGISTRY, LocaleResources
+from .core.project_paths import package_project_root
 
 
 @dataclass(slots=True)
@@ -54,12 +55,12 @@ class PipelineConfig:
     def resolved_annotation_dataset_path(self) -> Path:
         if self.annotation_dataset_path is not None:
             return Path(self.annotation_dataset_path)
-        return Path(__file__).resolve().parent.parent / "data" / "annotation_rag" / "kculture_rag_documents_reviewed.json"
+        return package_project_root(Path(__file__)) / "data" / "annotation_rag" / "kculture_rag_documents_reviewed.json"
 
     def resolved_cultural_terms_path(self) -> Path:
         if self.cultural_terms_path is not None:
             return Path(self.cultural_terms_path)
-        return Path(__file__).resolve().parent.parent / "data" / "cultural_terms" / "ko_cultural_terms.json"
+        return package_project_root(Path(__file__)) / "data" / "cultural_terms" / "ko_cultural_terms.json"
 
     def resolved_review_prompt_path(self) -> Path:
         return Path(self.review_prompt_path or self.resolved_resources().review_prompt_path)
@@ -67,7 +68,7 @@ class PipelineConfig:
     def resolved_embedding_cache_dir(self) -> Path:
         if self.embedding_cache_dir is not None:
             return Path(self.embedding_cache_dir)
-        return Path(__file__).resolve().parent.parent / "data" / "embedding_cache"
+        return package_project_root(Path(__file__)) / "data" / "embedding_cache"
 
     # locale → idiom(번역용) qdrant 컬렉션 이름 매핑.
     _IDIOM_COLLECTION_BY_LOCALE = {
@@ -92,4 +93,4 @@ class PipelineConfig:
         path = Path(self.qdrant_path)
         if path.is_absolute():
             return path
-        return Path(__file__).resolve().parent.parent / path
+        return package_project_root(Path(__file__)) / path

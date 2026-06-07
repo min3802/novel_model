@@ -31,7 +31,7 @@ from __future__ import annotations
 import sys as _sys
 from pathlib import Path as _Path
 
-# 이 스크립트는 tests/ 안에 있지만, 프로젝트 루트의 ko_locale_pipeline 을 import 해야 한다.
+# 이 스크립트는 tests/ 안에 있지만, 프로젝트 루트의 app.translation 을 import 해야 한다.
 # 어디서 실행하든(루트/ tests 폴더 등) 동작하도록 루트를 sys.path 에 추가한다.
 _ROOT = _Path(__file__).resolve().parent.parent
 if str(_ROOT) not in _sys.path:
@@ -97,7 +97,7 @@ def main() -> int:
         return 1
 
     try:
-        from ko_locale_pipeline import TranslationPipeline, PipelineConfig
+        from app.translation import TranslationPipeline, PipelineConfig
     except Exception as exc:
         print(f"{NO} 패키지 import 실패: {exc!r}")
         return 1
@@ -127,7 +127,7 @@ def main() -> int:
 
 
 def run_one(locale: str, text: str):  # -> (rc:int, html_block:str)
-    from ko_locale_pipeline import TranslationPipeline, PipelineConfig
+    from app.translation import TranslationPipeline, PipelineConfig
     cfg = PipelineConfig(locale=locale, mock=False)
     print(f"   locale={cfg.locale}  translation_model={cfg.translation_model}  "
           f"chunk_strategy={cfg.chunk_strategy}")
