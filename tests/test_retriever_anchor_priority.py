@@ -5,9 +5,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from ko_locale_pipeline import TranslationPipeline, PipelineConfig
-from ko_locale_pipeline.core.locales import LOCALE_REGISTRY
-from ko_locale_pipeline.retrieval.retriever import IdiomRetriever, MockEmbeddingBackend, build_search_text, create_embedding_backend
+from app.translation import TranslationPipeline, PipelineConfig
+from app.translation.core.locales import LOCALE_REGISTRY
+from app.translation.retrieval.retriever import IdiomRetriever, MockEmbeddingBackend, build_search_text, create_embedding_backend
 
 
 class IdiomRetrieverAnchorPriorityTests(unittest.TestCase):

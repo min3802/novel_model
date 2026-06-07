@@ -155,6 +155,7 @@ annotation 전달: search → `build_context()` 텍스트화 → `cultural_conte
 
 - 관련 unittest 28~30개 통과(작업마다 재확인).
 - 실 qdrant: 두 retriever search(공유벡터) 정상, 동시 읽기 안전, top_k/return_k 독립 동작.
+- 검색 결과 중복 제거 구현됨: 같은 문서가 여러 청크에서 걸리면 source_id 기준 최고 점수 1건만 유지.
 - KURE 임베딩 쿼리당 1회 호출 확인.
 - end-to-end(앵살 로컬): qdrant+KURE 검색 의미적으로 정확히 작동 확인 완료.
 
@@ -164,6 +165,11 @@ annotation 전달: search → `build_context()` 텍스트화 → `cultural_conte
   (`--locale all` 4개국어 / `--file tests/엘리트_1화.txt` 긴 원문 / `--out`)
 - 프론트엔드가 응답의 `cultural_matches` 를 참조했다면 그쪽도 수정(이 레포엔 프론트 없음).
 - cultural_lexicon 완전 삭제 여부(원작성자 확인 후).
+- **청크(문장) 추적** — 각 검색 결과가 원문의 "어느 문장(청크)에서 검색됐는지" 기록.
+  현재 `_retrieve_qdrant` 는 source_id 로 중복 제거(✅ 구현됨)하며 점수·payload 만 남기고
+  "어느 청크였는지"는 버린다. 추적이 있으면 (1) 검증: 원문 문장→참고 관용구 매핑 확인,
+  (2) 번역: 문장별로 맞는 참고자료를 줘서 정확도↑. 두 가지 방향(가벼운 HTML 표시 / 번역 프롬프트
+  문장별 연결) 중 선택해 추후 구현.
 - langgraph 전환(현재 ThreadPool 로 충분, fallback·노드 확장 필요 시).
 - mock 분기 완전 제거(도커 전환 + 테스트를 진짜 qdrant 로 이관 시점).
 - 보고서 동기화 — ChromaDB→Qdrant, 임베딩 KURE-v1, 번역 모델 gpt-4.1-mini.

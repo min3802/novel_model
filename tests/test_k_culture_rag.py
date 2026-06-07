@@ -5,9 +5,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from ko_locale_pipeline import PipelineConfig
-from ko_locale_pipeline.retrieval.annotation_retriever import AnnotationRetriever, build_annotation_search_text
-from ko_locale_pipeline.retrieval.retriever import IdiomRetriever
+from app.translation import PipelineConfig
+from app.translation.retrieval.annotation_retriever import AnnotationRetriever, build_annotation_search_text
+from app.translation.retrieval.retriever import IdiomRetriever
 from scripts.build_k_culture_rag import build_annotation_dataset, make_annotation_card
 
 

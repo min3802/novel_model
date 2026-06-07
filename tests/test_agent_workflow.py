@@ -5,8 +5,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from ko_locale_pipeline import ChatbotAgent, InspectionAgent, TranslationPipeline, PipelineConfig
-from ko_locale_pipeline.core.prompt_loader import load_locale_constraints
+from app.translation import ChatbotAgent, InspectionAgent, TranslationPipeline, PipelineConfig
+from app.translation.core.prompt_loader import load_locale_constraints
 
 
 class AgentWorkflowTests(unittest.TestCase):

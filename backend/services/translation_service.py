@@ -5,10 +5,10 @@ from __future__ import annotations
 from dataclasses import asdict
 from typing import Any
 
-from ko_locale_pipeline import ChatMessage, TranslationPipeline, PipelineConfig
-from ko_locale_pipeline.text_processing.consistency_checker import check_translation_consistency
-from ko_locale_pipeline.core.runtime import is_mock_mode
-from ko_locale_pipeline.text_processing.terminology import (
+from app.translation import ChatMessage, TranslationPipeline, PipelineConfig
+from app.translation.text_processing.consistency_checker import check_translation_consistency
+from app.translation.core.runtime import is_mock_mode
+from app.translation.text_processing.terminology import (
     extract_noun_terminology_candidates,
     merge_terminology,
     render_terminology_context,

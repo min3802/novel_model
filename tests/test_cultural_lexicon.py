@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from ko_locale_pipeline import CulturalLexicon, PipelineConfig
+from app.translation import CulturalLexicon, PipelineConfig
 
 
 class CulturalLexiconTests(unittest.TestCase):

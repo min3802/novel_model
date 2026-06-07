@@ -37,9 +37,9 @@ from backend.services.guide_service import guide
 from backend.services.image_service import cover_image, relation_image
 from backend.services.translation_service import inspect_chat, translate
 from backend.store import memory_store as store
-from ko_locale_pipeline.retrieval.annotation_retriever import AnnotationRetriever
-from ko_locale_pipeline.config import PipelineConfig
-from ko_locale_pipeline.retrieval.retriever import IdiomRetriever
+from app.translation.retrieval.annotation_retriever import AnnotationRetriever
+from app.translation.config import PipelineConfig
+from app.translation.retrieval.retriever import IdiomRetriever
 
 
 @dataclass(frozen=True)

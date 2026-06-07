@@ -6,7 +6,7 @@ import unittest
 import api_server
 from backend.services.translation_service import COUNTRY_TO_LOCALE
 from backend.store import memory_store as store
-from ko_locale_pipeline.text_processing.consistency_checker import check_translation_consistency
+from app.translation.text_processing.consistency_checker import check_translation_consistency
 
 
 COUNTRY_JAPAN = next(country for country, locale in COUNTRY_TO_LOCALE.items() if locale == "ko_ja")

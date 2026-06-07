@@ -54,7 +54,17 @@ data/annotation_rag/_k_culture_annotation_report.json
 ko_anchored_idiom_results_final/
 notebooks/
 
-# novel texts
-*.bak
-*.txt
+# qdrant 로컬 벡터DB
+# sqlite 데이터는 팀 공유 위해 git 유지. 단 런타임 lock 파일만 제외.
+qdrant_local/.lock
+**/qdrant_local/.lock
+**/qdrant_local/**/*.lock
+# (app 등 엉뚱한 위치에 잘못 생긴 qdrant_local 통째 무시)
+app/qdrant_local/
+
+# 검증 결과물·백업 (생성물, 커밋 제외)
 tests/outputs/
+*.bak
+
+# tests 폴더의 원문/텍스트 파일 (엘리트_1화 등 — git 제외)
+tests/*.txt

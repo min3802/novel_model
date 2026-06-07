@@ -18,7 +18,7 @@ def find_ancestor_containing(start: Path, relative_path: str) -> Path:
 def package_project_root(start: Path | None = None) -> Path:
     """Directory that owns the pipeline package and local data files."""
     anchor = Path(start or __file__).resolve()
-    return find_ancestor_containing(anchor, "ko_locale_pipeline")
+    return find_ancestor_containing(anchor, "app/translation")
 
 
 def repository_root(start: Path | None = None) -> Path:

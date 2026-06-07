@@ -1,6 +1,6 @@
 import unittest
 
-from ko_locale_pipeline.text_processing.terminology import extract_noun_terminology_candidates, merge_terminology, render_terminology_context
+from app.translation.text_processing.terminology import extract_noun_terminology_candidates, merge_terminology, render_terminology_context
 
 
 def ko(value: str) -> str:
