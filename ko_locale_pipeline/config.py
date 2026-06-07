@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from .locales import KO_JA, LOCALE_REGISTRY, LocaleResources
+from .core.locales import KO_JA, LOCALE_REGISTRY, LocaleResources
 
 
 @dataclass(slots=True)
@@ -15,24 +15,31 @@ class PipelineConfig:
     cultural_terms_path: Path | None = None
     review_prompt_path: Path | None = None
     embedding_model: str = "nlpai-lab/KURE-v1"
-    translation_model: str = "gpt-5.4-mini"
-    review_model: str = "gpt-5.4-mini"
-    top_k: int = 5
-    score_threshold: float | None = None
-    annotation_top_k: int = 5
-    annotation_score_threshold: float = 0.55
+    translation_model: str = "gpt-4.1-mini"
+    review_model: str = "gpt-4.1-mini"
+    # 검색 개수 (2단계로 분리)
+    #  *_top_k    : (A) 쿼리(문장) 1개당 qdrant 에서 가져올 후보 수 — 문장별 검색 깊이
+    #  *_return_k : (B) 모든 문장 결과를 통합한 뒤 번역에 넘길 최종 상한
+    idiom_top_k: int = 3
+    idiom_return_k: int = 15
+    # 검색 threshold (idiom·annotation 동일하게 0.6으로 통일)
+    score_threshold: float = 0.6
+    annotation_top_k: int = 2
+    annotation_return_k: int = 10
+    annotation_score_threshold: float = 0.6
     mock: bool = False
     embedding_cache_dir: Path | None = None
-
-    def __post_init__(self) -> None:
-        if self.score_threshold is None:
-            self.score_threshold = self.default_score_threshold(self.locale)
-
-    @staticmethod
-    def default_score_threshold(locale: str) -> float:
-        if locale in {"ko_zh_cn", "ko_th_th"}:
-            return 0.55
-        return 0.60
+    # --- 청킹 전략 선택 (A/B 실험용) -----------------------------------
+    # "paragraph": 줄바꿈 기준으로 묶는다.
+    # "sentence" : Kiwi(kiwipiepy)로 문장 단위 분리 후 각 문장을 그대로 검색.
+    # 현재 기본값은 "sentence" (Kiwi 문장 단위). kiwipiepy 미설치 시 paragraph로 폴백.
+    chunk_strategy: str = "sentence"
+    # --- qdrant 설정 ---------------------------------------------------
+    # mock=False면 qdrant 검색, mock=True면 레거시 JSON 경로(테스트용).
+    # TODO: 도커 서버로 전환 시 이 경로 대신 url 방식으로 교체.
+    #   예) QdrantClient(url="http://localhost:6333")
+    #   서버 전환 시 코드 한 줄 변경 + 컬렉션 데이터 서버에 재적재 필요.
+    qdrant_path: str = "qdrant_local"
 
     def resolved_resources(self) -> LocaleResources:
         if self.resources is not None:
@@ -61,3 +68,28 @@ class PipelineConfig:
         if self.embedding_cache_dir is not None:
             return Path(self.embedding_cache_dir)
         return Path(__file__).resolve().parent.parent / "data" / "embedding_cache"
+
+    # locale → idiom(번역용) qdrant 컬렉션 이름 매핑.
+    _IDIOM_COLLECTION_BY_LOCALE = {
+        "ko_ja": "idiom_jp",
+        "ko_en_us": "idiom_us",
+        "ko_zh_cn": "idiom_cn",
+        "ko_th_th": "idiom_th",
+    }
+
+    def resolved_idiom_collection(self) -> str:
+        try:
+            return self._IDIOM_COLLECTION_BY_LOCALE[self.locale]
+        except KeyError as exc:
+            raise KeyError(f"No idiom collection mapped for locale: {self.locale}") from exc
+
+    def resolved_annotation_collection(self) -> str:
+        # 한국 문화 주석은 locale과 무관하게 항상 kculture 컬렉션을 사용한다.
+        return "kculture"
+
+    def resolved_qdrant_path(self) -> Path:
+        # 상대경로면 프로젝트 루트 기준으로 해석한다.
+        path = Path(self.qdrant_path)
+        if path.is_absolute():
+            return path
+        return Path(__file__).resolve().parent.parent / path

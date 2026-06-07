@@ -4,8 +4,8 @@ import os
 import unittest
 
 import api_server
-from ko_locale_pipeline.consistency_checker import check_translation_consistency
-from ko_locale_pipeline.terminology import (
+from ko_locale_pipeline.text_processing.consistency_checker import check_translation_consistency
+from ko_locale_pipeline.text_processing.terminology import (
     TERMINOLOGY_POLICY_LOCKED,
     TERMINOLOGY_POLICY_PREFERRED,
     extract_noun_terminology_candidates,

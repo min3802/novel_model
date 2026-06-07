@@ -5,8 +5,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from ko_locale_pipeline import ChatbotAgent, InspectionAgent, KoLocalePipeline, PipelineConfig
-from ko_locale_pipeline.prompt_loader import load_locale_constraints
+from ko_locale_pipeline import ChatbotAgent, InspectionAgent, TranslationPipeline, PipelineConfig
+from ko_locale_pipeline.core.prompt_loader import load_locale_constraints
 
 
 class AgentWorkflowTests(unittest.TestCase):
@@ -92,20 +92,13 @@ class AgentWorkflowTests(unittest.TestCase):
         self.assertFalse(reply.needs_user_confirmation)
 
     def test_pipeline_run_with_inspection_returns_agent_workflow(self) -> None:
-        pipeline = KoLocalePipeline(self._config())
+        pipeline = TranslationPipeline(self._config())
         result = pipeline.run_with_inspection("이건 꿩 먹고 알 먹기야.")
 
         self.assertEqual(result.source_text, "이건 꿩 먹고 알 먹기야.")
         self.assertEqual(result.inspection["recommended_action"], "NOTE")
         self.assertIn("translation", result.draft)
         self.assertTrue(result.reviewed_translation)
-
-    def test_pipeline_run_with_inspection_returns_cultural_matches(self) -> None:
-        pipeline = KoLocalePipeline(self._config())
-        result = pipeline.run_with_inspection("친구 결혼식이라 축의금 봉투를 챙겼다.")
-
-        self.assertEqual(result.cultural_matches[0]["id"], "ko_wedding_cash_gift")
-        self.assertIn("한국 결혼식", result.cultural_matches[0]["core_explanation"])
 
 
 if __name__ == "__main__":

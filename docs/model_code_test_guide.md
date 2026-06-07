@@ -54,7 +54,7 @@
 - 모델 설정 및 mock/live 전환
   - `_config(locale)`
   - `_is_mock_mode()`
-  - 환경 변수 `WLIGHTER_MOCK_MODE`가 `true`면 mock, `false`면 live로 동작한다.
+  - 환경 변수 `WLIGHTER_MOCK_MODE`가 `true`면 mock, `false`면 live로 동작한다. (미설정 시 기본값은 `false`=live)
 
 - 번역 API
   - `translate(payload)`

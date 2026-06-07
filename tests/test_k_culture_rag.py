@@ -6,8 +6,8 @@ import unittest
 from pathlib import Path
 
 from ko_locale_pipeline import PipelineConfig
-from ko_locale_pipeline.annotation_retriever import AnnotationRetriever, build_annotation_search_text
-from ko_locale_pipeline.retriever import DenseRetriever
+from ko_locale_pipeline.retrieval.annotation_retriever import AnnotationRetriever, build_annotation_search_text
+from ko_locale_pipeline.retrieval.retriever import IdiomRetriever
 from scripts.build_k_culture_rag import build_annotation_dataset, make_annotation_card
 
 
@@ -46,7 +46,7 @@ class KCultureRagTests(unittest.TestCase):
         self.assertNotIn("annotation_hint", card)
 
     def test_generated_k_culture_dataset_is_searchable_by_annotation_retriever(self) -> None:
-        config = PipelineConfig(locale="ko_en_us", mock=True, top_k=5, annotation_score_threshold=0.0)
+        config = PipelineConfig(locale="ko_en_us", mock=True, idiom_top_k=5, annotation_score_threshold=0.0)
         retriever = AnnotationRetriever(config)
 
         results = retriever.retrieve("초복이라 삼계탕을 먹고 몸보신했다.", top_k=5)
@@ -57,7 +57,7 @@ class KCultureRagTests(unittest.TestCase):
         self.assertTrue(all(row.final_score == row.similarity_score for row in results))
 
     def test_default_annotation_dataset_uses_reviewed_documents(self) -> None:
-        config = PipelineConfig(locale="ko_en_us", mock=True, top_k=5)
+        config = PipelineConfig(locale="ko_en_us", mock=True, idiom_top_k=5)
         self.assertEqual(config.resolved_annotation_dataset_path().name, "kculture_rag_documents_reviewed.json")
         retriever = AnnotationRetriever(config)
 
@@ -79,7 +79,7 @@ class KCultureRagTests(unittest.TestCase):
         self.assertEqual(AnnotationRetriever._trigger_match_boost(item, "막걸리를 차에 뿌렸다."), 0.0)
 
     def test_translation_rag_stays_separate_from_k_culture_annotations(self) -> None:
-        retriever = DenseRetriever(PipelineConfig(locale="ko_en_us", mock=True, top_k=5))
+        retriever = IdiomRetriever(PipelineConfig(locale="ko_en_us", mock=True, idiom_top_k=5))
 
         self.assertTrue(retriever.items)
         self.assertFalse(any(row.get("source_type") == "k_culture_desc" for row in retriever.items))

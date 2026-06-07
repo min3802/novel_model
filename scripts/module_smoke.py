@@ -26,11 +26,11 @@ if hasattr(sys.stdout, "reconfigure"):
 
 from backend.services.guide_service import guide
 from backend.services.translation_service import COUNTRY_TO_LOCALE, translate
-from ko_locale_pipeline.annotation_retriever import AnnotationRetriever
+from ko_locale_pipeline.retrieval.annotation_retriever import AnnotationRetriever
 from ko_locale_pipeline.config import PipelineConfig
-from ko_locale_pipeline.consistency_checker import check_translation_consistency
-from ko_locale_pipeline.retriever import DenseRetriever
-from ko_locale_pipeline.terminology import (
+from ko_locale_pipeline.text_processing.consistency_checker import check_translation_consistency
+from ko_locale_pipeline.retrieval.retriever import IdiomRetriever
+from ko_locale_pipeline.text_processing.terminology import (
     extract_noun_terminology_candidates,
     render_terminology_context,
 )
@@ -132,7 +132,7 @@ def run_translate(source: str, locale: str) -> dict[str, Any]:
 
 def run_retrieval(source: str, locale: str) -> dict[str, Any]:
     config = PipelineConfig(locale=locale, mock=True, score_threshold=0.0, annotation_score_threshold=0.0)
-    dense = DenseRetriever(config)
+    dense = IdiomRetriever(config)
     annotation = AnnotationRetriever(config)
     return {
         "dense": [

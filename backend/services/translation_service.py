@@ -5,10 +5,10 @@ from __future__ import annotations
 from dataclasses import asdict
 from typing import Any
 
-from ko_locale_pipeline import ChatMessage, KoLocalePipeline, PipelineConfig
-from ko_locale_pipeline.consistency_checker import check_translation_consistency
-from ko_locale_pipeline.runtime import is_mock_mode
-from ko_locale_pipeline.terminology import (
+from ko_locale_pipeline import ChatMessage, TranslationPipeline, PipelineConfig
+from ko_locale_pipeline.text_processing.consistency_checker import check_translation_consistency
+from ko_locale_pipeline.core.runtime import is_mock_mode
+from ko_locale_pipeline.text_processing.terminology import (
     extract_noun_terminology_candidates,
     merge_terminology,
     render_terminology_context,
@@ -23,12 +23,12 @@ COUNTRY_TO_LOCALE = {
 }
 
 
-def _pipeline(locale: str) -> KoLocalePipeline:
-    return KoLocalePipeline(PipelineConfig(locale=locale, mock=is_mock_mode(), top_k=3))
+def _pipeline(locale: str) -> TranslationPipeline:
+    return TranslationPipeline(PipelineConfig(locale=locale, mock=is_mock_mode()))
 
 
 def _config(locale: str) -> PipelineConfig:
-    return PipelineConfig(locale=locale, mock=is_mock_mode(), top_k=3)
+    return PipelineConfig(locale=locale, mock=is_mock_mode())
 
 
 def _contains_hangul(text: str) -> bool:
@@ -122,7 +122,6 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             "workflow": {
                 "source_text": source_text,
                 "retrievals": [],
-                "cultural_matches": [],
                 "annotation_matches": [],
                 "draft": {"translation": message, "strategy": "unsupported-source-language"},
                 "translation_review": {},
@@ -147,7 +146,7 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             raise ValueError(f"work {work_id_int} not found")
         if episode_id is not None and not _get_episode(work_id_int, int(episode_id)):
             raise ValueError(f"episode {episode_id} not found for work {work_id_int}")
-    workflow = KoLocalePipeline(config).run_with_inspection(
+    workflow = TranslationPipeline(config).run_with_inspection(
         source_text,
         translation_memory=[],
         memory_context=terminology_context,
