@@ -1,10 +1,14 @@
 from .config import PipelineConfig
-from .annotation_retriever import AnnotationRetriever, AnnotationResult
-from .chatbot import ChatbotAgent, ChatbotReply, ChatMessage
-from .cultural_lexicon import CulturalLexicon, CulturalTermMatch
-from .inspector import InspectionAgent, InspectionResult
-from .pipeline import AgentWorkflowResult, KoJaPipeline, KoLocalePipeline, PipelineResult
-from .terminology import extract_noun_terminology_candidates, render_terminology_context
+from .retrieval.annotation_retriever import AnnotationRetriever, AnnotationResult
+from .agents.chatbot import ChatbotAgent, ChatbotReply, ChatMessage
+from .text_processing.cultural_lexicon import CulturalLexicon, CulturalTermMatch
+from .agents.inspector import InspectionAgent, InspectionResult
+from .translation_pipeline import (
+    AgentWorkflowResult,
+    PipelineResult,
+    TranslationPipeline,
+)
+from .text_processing.terminology import extract_noun_terminology_candidates, render_terminology_context
 
 __all__ = [
     "AgentWorkflowResult",
@@ -18,8 +22,7 @@ __all__ = [
     "InspectionAgent",
     "InspectionResult",
     "PipelineConfig",
-    "KoJaPipeline",
-    "KoLocalePipeline",
+    "TranslationPipeline",
     "PipelineResult",
     "extract_noun_terminology_candidates",
     "render_terminology_context",

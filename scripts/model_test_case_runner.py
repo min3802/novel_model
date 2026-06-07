@@ -37,9 +37,9 @@ from backend.services.guide_service import guide
 from backend.services.image_service import cover_image, relation_image
 from backend.services.translation_service import inspect_chat, translate
 from backend.store import memory_store as store
-from ko_locale_pipeline.annotation_retriever import AnnotationRetriever
+from ko_locale_pipeline.retrieval.annotation_retriever import AnnotationRetriever
 from ko_locale_pipeline.config import PipelineConfig
-from ko_locale_pipeline.retriever import DenseRetriever
+from ko_locale_pipeline.retrieval.retriever import IdiomRetriever
 
 
 @dataclass(frozen=True)
@@ -103,7 +103,7 @@ def run_retrieval(_: bool, __: bool) -> dict[str, Any]:
     # Mock embeddings make this runnable without API calls; the output is for
     # scenario inspection, not final Recall/MRR computation.
     config = PipelineConfig(locale="ko_ja", mock=True, score_threshold=0.0, annotation_score_threshold=0.0)
-    dense = DenseRetriever(config)
+    dense = IdiomRetriever(config)
     annotation = AnnotationRetriever(config)
     queries = ["징검다리", "조약돌", "축의금", "인력거", "김첨지"]
     return {

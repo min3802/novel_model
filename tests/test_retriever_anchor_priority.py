@@ -5,12 +5,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from ko_locale_pipeline import KoLocalePipeline, PipelineConfig
-from ko_locale_pipeline.locales import LOCALE_REGISTRY
-from ko_locale_pipeline.retriever import DenseRetriever, MockEmbeddingBackend, build_search_text, create_embedding_backend
+from ko_locale_pipeline import TranslationPipeline, PipelineConfig
+from ko_locale_pipeline.core.locales import LOCALE_REGISTRY
+from ko_locale_pipeline.retrieval.retriever import IdiomRetriever, MockEmbeddingBackend, build_search_text, create_embedding_backend
 
 
-class DenseRetrieverAnchorPriorityTests(unittest.TestCase):
+class IdiomRetrieverAnchorPriorityTests(unittest.TestCase):
     def test_search_text_uses_anchor_first_fields_only(self) -> None:
         item = {
             "id": "jp-00001",
@@ -51,7 +51,7 @@ class DenseRetrieverAnchorPriorityTests(unittest.TestCase):
         items: list[dict],
         locale: str = "ko_ja",
         score_threshold: float = 0.0,
-    ) -> DenseRetriever:
+    ) -> IdiomRetriever:
         temp_dir = tempfile.TemporaryDirectory()
         self.addCleanup(temp_dir.cleanup)
         base = Path(temp_dir.name)
@@ -64,7 +64,7 @@ class DenseRetrieverAnchorPriorityTests(unittest.TestCase):
             score_threshold=score_threshold,
             embedding_cache_dir=base / "cache",
         )
-        return DenseRetriever(config)
+        return IdiomRetriever(config)
 
     def test_exact_anchor_match_outranks_description_only_neighbors(self) -> None:
         items = [
@@ -108,7 +108,7 @@ class DenseRetrieverAnchorPriorityTests(unittest.TestCase):
         retriever = self._build_retriever(items)
 
         results = retriever.retrieve("this is two birds one stone", top_k=3)
-        boosted = DenseRetriever._lexical_match_boost(items[0], "this is two birds one stone")
+        boosted = IdiomRetriever._lexical_match_boost(items[0], "this is two birds one stone")
 
         self.assertGreater(boosted, 0.0)
         self.assertTrue(any(row.item["id"] == "jp-00001" for row in results))
@@ -155,7 +155,7 @@ class DenseRetrieverAnchorPriorityTests(unittest.TestCase):
             "tone": ["positive"],
         }
         retriever = self._build_retriever([item], locale="ko_en_us")
-        pipeline = KoLocalePipeline(retriever.config)
+        pipeline = TranslationPipeline(retriever.config)
 
         result = pipeline.run("this is two birds one stone")
         row = result.retrievals[0]
@@ -228,13 +228,13 @@ class DenseRetrieverAnchorPriorityTests(unittest.TestCase):
         th = PipelineConfig(locale="ko_th_th", mock=True)
 
         self.assertEqual(ja.embedding_model, "nlpai-lab/KURE-v1")
-        self.assertEqual(ja.top_k, 5)
-        self.assertEqual(ja.annotation_top_k, 5)
-        self.assertEqual(ja.annotation_score_threshold, 0.55)
-        self.assertEqual(ja.score_threshold, 0.60)
-        self.assertEqual(us.score_threshold, 0.60)
-        self.assertEqual(cn.score_threshold, 0.55)
-        self.assertEqual(th.score_threshold, 0.55)
+        self.assertEqual(ja.idiom_top_k, 3)
+        self.assertEqual(ja.annotation_top_k, 2)
+        self.assertEqual(ja.annotation_score_threshold, 0.6)
+        self.assertEqual(ja.score_threshold, 0.6)
+        self.assertEqual(us.score_threshold, 0.6)
+        self.assertEqual(cn.score_threshold, 0.6)
+        self.assertEqual(th.score_threshold, 0.6)
 
     def test_mock_config_keeps_tests_from_downloading_kure_model(self) -> None:
         backend = create_embedding_backend(PipelineConfig(locale="ko_en_us", mock=True))
@@ -242,19 +242,25 @@ class DenseRetrieverAnchorPriorityTests(unittest.TestCase):
         self.assertIsInstance(backend, MockEmbeddingBackend)
 
     def test_kure_ready_context_is_rendered_from_context_text(self) -> None:
+        # qdrant payload는 평면 구조(country/language가 최상위, source_id 사용).
         item = {
-            "id": "US_000002",
+            "source_id": "US_000002",
             "embedding_text": "이렇게 하면 끝, 그거면 됐지, 식은 죽 먹기. 어렵지 않게 끝난다.",
             "context_text": "원문 표현: Bob's your uncle\n한국어 기준 표현: 이렇게 하면 끝",
-            "metadata": {"country": "US", "language": "en"},
+            "country": "US",
+            "language": "en",
         }
         retriever = self._build_retriever([item], locale="ko_en_us", score_threshold=0.0)
         result = retriever.retrieve("이렇게 하면 끝", top_k=1)[0]
 
         self.assertEqual(result.anchor_boost, 0.0)
-        context = DenseRetriever.build_context([result])
+        context = IdiomRetriever.build_context([result])
+        # context_text 는 LLM 에 넘어가야 한다.
         self.assertIn("원문 표현: Bob's your uncle", context)
-        self.assertIn('"country": "US"', context)
+        # 노이즈/중복 필드(country, source_id, 검색 점수)는 LLM 프롬프트에서 제외됨.
+        self.assertNotIn("country", context)
+        self.assertNotIn("US_000002", context)
+        self.assertNotIn("similarity_score", context)
 
 
 if __name__ == "__main__":

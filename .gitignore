@@ -53,3 +53,8 @@ data/annotation_rag/k_culture_annotation_cards.json
 data/annotation_rag/_k_culture_annotation_report.json
 ko_anchored_idiom_results_final/
 notebooks/
+
+# novel texts
+*.bak
+*.txt
+tests/outputs/
