@@ -265,13 +265,16 @@ def _section_payload(country_profile: Any, *, target_country: str, genre: str, s
     cautions = country_profile.caution_points if country_profile else []
     synopsis_mode = bool(synopsis.strip())
     best_reasons = recommendations[0].reasons if recommendations else []
+    genre_label = genre or '\ubbf8\uc9c0\uc815'  # '미지정' (py3.10 f-string 백슬래시 제약 회피)
+    _top_genre_join = ', '.join(f'{g}({c})' for g, c in top_genres[:5])
+    top_genres_label = _top_genre_join or '\uadfc\uac70 \ubd80\uc871'  # '근거 부족'
     return {
         "market_trend_fit": {
             "title": "\uc2dc\uc7a5 \ud2b8\ub80c\ub4dc \uc801\ud569\ub3c4",
             "items": [
                 f"\uc120\ud0dd/\ucd94\ucc9c \uad6d\uac00: {target_country}",
-                f"\uc694\uccad \uc7a5\ub974: {genre or '\ubbf8\uc9c0\uc815'}",
-                f"\uc0c1\uc704 \uc7a5\ub974 \uadfc\uac70: {', '.join(f'{g}({c})' for g, c in top_genres[:5]) or '\uadfc\uac70 \ubd80\uc871'}",
+                f"\uc694\uccad \uc7a5\ub974: {genre_label}",
+                f"\uc0c1\uc704 \uc7a5\ub974 \uadfc\uac70: {top_genres_label}",
                 "\uc2dc\ub189\uc2dc\uc2a4 \uae30\ubc18 \uad6d\uac00 \ucd94\ucc9c \ud750\ub984\uc785\ub2c8\ub2e4." if synopsis_mode else "\uad6d\uac00\uc640 \uc7a5\ub974 \uc120\ud0dd \uae30\ubc18 \uac00\uc774\ub4dc \ud750\ub984\uc785\ub2c8\ub2e4.",
             ],
         },

@@ -1,147 +1,133 @@
+"""이미지 서빙 계층 (얇은 포장).
+
+설계 원칙(번역 기능과 동일): app/image = 모델링(추출·생성·안전검사),
+backend/services/image_service = 그걸 호출해 HTTP payload 로 포장.
+
+표지/관계도는 별개 플로우다.
+  - 표지:   payload → (episodes 있으면 추출) → CoverGenerator → 안전검사 포함
+  - 관계도: payload → (episodes 있으면 추출) → RelationGenerator
+
+레거시 payload(protagonist/appearance/characters/relations 직접 전달)도 그대로 지원해
+기존 api_server·테스트 호환성을 유지한다.
+"""
 from __future__ import annotations
 
-import os
 from typing import Any
 
 from dotenv import load_dotenv
-from openai import OpenAI
-from app.translation.core.mock_adapters import image_payload
-from app.translation.core.runtime import is_mock_mode
+
+from app.image import (
+    CoverCharacter,
+    CoverExtractionResult,
+    CoverGenerator,
+    ImageConfig,
+    Relation,
+    RelationExtractionResult,
+    RelationGenerator,
+    RelationNode,
+)
+from app.image._generate import generate_image as _generate_image
 
 load_dotenv()
 
-OPENAI_IMAGE_MODEL = os.getenv("OPENAI_IMAGE_MODEL", "gpt-image-2")
-_openai_client: OpenAI | None = None
-
-
-def _get_openai() -> OpenAI:
-    global _openai_client
-    if _openai_client is None:
-        _openai_client = OpenAI()
-    return _openai_client
+_config = ImageConfig()
 
 
 def generate_image(prompt: str) -> dict[str, Any]:
-    if is_mock_mode():
-        return image_payload(prompt, OPENAI_IMAGE_MODEL)
-    client = _get_openai()
-    response = client.images.generate(
-        model=OPENAI_IMAGE_MODEL,
-        prompt=prompt,
-        size="1024x1024",
-        n=1,
-    )
-    item = response.data[0]
-    b64 = getattr(item, "b64_json", None)
-    url = getattr(item, "url", None)
-    if b64:
-        return {"type": "base64", "data": b64, "model": OPENAI_IMAGE_MODEL}
-    if url:
-        return {"type": "url", "data": url, "model": OPENAI_IMAGE_MODEL}
-    raise RuntimeError("이미지 데이터를 찾지 못했습니다.")
+    """레거시 호환: 프롬프트 직접 → 이미지."""
+    return _generate_image(prompt, _config)
 
 
-def _unsafe_visual_request(text: str) -> bool:
-    lowered = text.lower()
-    unsafe_terms = [
-        "나체",
-        "전신 노출",
-        "성기",
-        "nude",
-        "nudity",
-        "fully naked",
-        "genitals",
-    ]
-    return any(term in lowered for term in unsafe_terms)
-
-
-def _visual_refusal() -> dict[str, Any]:
-    return {
-        "type": "refusal",
-        "model": OPENAI_IMAGE_MODEL,
-        "message": (
-            "전신 노출처럼 성기까지 보이는 이미지는 생성해드릴 수 없습니다. "
-            "대신 상의는 벗고 하의는 젖은 잠방이 또는 허리 천으로 가린 모습처럼 "
-            "비노출 방향으로 조정할 수 있습니다."
-        ),
-    }
-
+# ---------------------------------------------------------------------------
+# 표지
+# ---------------------------------------------------------------------------
 def cover_image(payload: dict[str, Any]) -> dict[str, Any]:
     work_title = (payload.get("workTitle") or "작품").strip()
-    country = (payload.get("targetCountry") or payload.get("country") or "대상 국가").strip()
+    country = (payload.get("targetCountry") or payload.get("country") or "").strip()
     genre = (payload.get("genre") or "").strip()
-    protagonist = (payload.get("protagonist") or payload.get("characterName") or "주인공").strip()
-    protagonist_traits = (payload.get("protagonistTraits") or payload.get("personality") or "").strip()
-    appearance = (payload.get("appearance") or "").strip()
-    episode_summaries = payload.get("episodeSummaries") or []
-    symbols = payload.get("symbols") or []
-    mood = payload.get("mood") or payload.get("tone") or []
     extra = (payload.get("extraPrompt") or "").strip()
-    safety_text = " ".join(
-        [
-            work_title,
-            country,
-            genre,
-            protagonist,
-            protagonist_traits,
-            appearance,
-            " ".join(map(str, episode_summaries)),
-            " ".join(map(str, symbols)),
-            " ".join(map(str, mood)) if isinstance(mood, list) else str(mood),
-            extra,
-        ]
+
+    gen = CoverGenerator(_config)
+    episodes = payload.get("episodes")
+    if episodes:
+        # 새 플로우: 원문 → 추출 → 표지.
+        return gen.generate_from_episodes(
+            episodes, work_title=work_title, target_country=country,
+            genre=genre, extra_prompt=extra,
+        )
+
+    # 레거시 플로우: 이미 정리된 인물 정보를 추출 결과 형태로 감싸 생성.
+    extraction = _cover_extraction_from_legacy(payload)
+    return gen.generate(
+        extraction, work_title=work_title, target_country=country,
+        genre=genre, extra_prompt=extra,
     )
-    if _unsafe_visual_request(safety_text):
-        return _visual_refusal()
 
-    summaries_text = (
-        "\n".join(f"- {row}" for row in episode_summaries[:10])
-        if episode_summaries
-        else "- Use the work title, genre, protagonist, and visual symbols as the cover brief."
+
+def _cover_extraction_from_legacy(payload: dict[str, Any]) -> CoverExtractionResult:
+    protagonist = (payload.get("protagonist") or payload.get("characterName") or "주인공").strip()
+    traits = (payload.get("protagonistTraits") or payload.get("personality") or "불명확").strip() or "불명확"
+    appearance_raw = payload.get("appearance") or ""
+    appearance = (
+        [str(a).strip() for a in appearance_raw if str(a).strip()]
+        if isinstance(appearance_raw, list)
+        else [appearance_raw.strip()] if appearance_raw.strip() else []
     )
-    symbols_text = ", ".join(map(str, symbols)) if symbols else "genre-appropriate symbolic props"
-    mood_text = ", ".join(map(str, mood)) if isinstance(mood, list) else (mood or "commercial web novel cover mood")
+    summaries = payload.get("episodeSummaries") or []
+    arc = " ".join(map(str, summaries)).strip() or "불명확"
+    symbols = payload.get("symbols") or []
+    key_moments = [str(s).strip() for s in symbols if str(s).strip()]
 
-    prompt = f"""Create a vertical commercial web novel cover illustration.
-Work title: {work_title}
-Target country/market: {country}
-Genre: {genre or "web novel"}
-Main cover subject: {protagonist}
-Protagonist traits: {protagonist_traits or "clear protagonist identity and readable emotion"}
-Appearance features: {appearance or "derive from the episode context without overcomplicating the design"}
-Selected episode summary signals:
-{summaries_text}
-Visual symbols to consider: {symbols_text}
-Mood: {mood_text}
-Additional request: {extra or "No additional request."}
-Style: vertical web novel cover, strong thumbnail readability, one clear focal subject, title-safe negative space near top or bottom, polished digital illustration, genre immediately recognizable, simple background hierarchy, no generated text, no watermark, family-friendly safe-for-all-ages."""
-
-    return generate_image(prompt)
+    char = CoverCharacter(
+        name=protagonist, gender="불명확", age_estimate="불명확",
+        appearance=appearance, personality=traits, role="주연",
+        arc_summary=arc, key_moments=key_moments,
+    )
+    return CoverExtractionResult(characters=[char])
 
 
+# ---------------------------------------------------------------------------
+# 관계도
+# ---------------------------------------------------------------------------
 def relation_image(payload: dict[str, Any]) -> dict[str, Any]:
     work_title = (payload.get("workTitle") or "작품").strip()
+    extra = (payload.get("extraPrompt") or "").strip()
+
+    gen = RelationGenerator(_config)
+    episodes = payload.get("episodes")
+    if episodes:
+        return gen.generate_from_episodes(episodes, work_title=work_title, extra_prompt=extra)
+
+    extraction = _relation_extraction_from_legacy(payload)
+    return gen.generate(extraction, work_title=work_title, extra_prompt=extra)
+
+
+def _relation_extraction_from_legacy(payload: dict[str, Any]) -> RelationExtractionResult:
     characters = payload.get("characters") or []
     relations = payload.get("relations") or []
-    theme = (payload.get("theme") or "").strip()
-    extra = (payload.get("extraPrompt") or "").strip()
-    if _unsafe_visual_request(" ".join([theme, extra])):
-        return _visual_refusal()
 
-    chars_text = "\n".join(f"- {c['name']}: {c.get('description','')}" for c in characters) if characters else "- Main characters"
-    rels_text = "\n".join(f"- {r['from']} → {r['to']}: {r.get('relation','')}" for r in relations) if relations else "- Connected by story"
+    nodes = [
+        RelationNode(name=str(c.get("name", "")).strip(), role="불명확")
+        for c in characters
+        if str(c.get("name", "")).strip()
+    ]
+    rels = [
+        Relation(
+            from_=str(r.get("from", "")).strip(),
+            to=str(r.get("to", "")).strip(),
+            relation_type=str(r.get("relation") or r.get("relation_type") or "불명확").strip() or "불명확",
+            directed=bool(r.get("directed", False)),
+            evidence=str(r.get("evidence", "")).strip(),
+        )
+        for r in relations
+        if str(r.get("from", "")).strip() and str(r.get("to", "")).strip()
+    ]
+    return RelationExtractionResult(nodes=nodes, relations=rels)
 
-    prompt = f"""Create a clean visual character relationship map for a web novel.
-Work title: {work_title}
-Characters:\n{chars_text}
-Relationships:\n{rels_text}
-Theme: {theme or "human drama"}
-Additional request: {extra or "No additional request."}
-Style: clean diagram-like composition, portrait nodes connected by relationship arrows, muted modern literary color palette, readable layout, no watermark, family-friendly."""
 
-    return generate_image(prompt)
-
-
+# ---------------------------------------------------------------------------
+# 레거시 호환: 프롬프트 미리보기
+# ---------------------------------------------------------------------------
 def visual_prompt(payload: dict[str, Any], kind: str) -> dict[str, Any]:
     work_title = payload.get("workTitle") or "작품"
     extra = payload.get("extraPrompt") or ""
