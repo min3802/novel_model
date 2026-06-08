@@ -73,3 +73,20 @@ def koreanize_texts(texts: Iterable[str], *, model: str) -> list[str]:
 
 def koreanize_text(text: str, *, model: str) -> str:
     return koreanize_texts([text], model=model)[0]
+
+
+def korean_char_ratio(text: str) -> float:
+    """공백을 제외한 글자 중 완성형 한글(가~힣)의 비중. 0.0~1.0."""
+    han = sum(1 for ch in text if "가" <= ch <= "힣")
+    total = sum(1 for ch in text if not ch.isspace())
+    return han / total if total else 0.0
+
+
+def is_korean_source(text: str, threshold: float = 0.5) -> bool:
+    """원문이 한국어인지 판정. 한글 비중이 threshold 이상이면 True.
+
+    기존엔 '한글이 하나라도 있으면 통과'(한·영 혼용/영문에 한글 한 글자도 통과)였으나,
+    비중 기반으로 바꿔 실질적으로 한국어인 원문만 통과시킨다. 기본 임계값 0.5.
+    8000자 기준 계산 ~1ms로 번역 비용 대비 무시 가능.
+    """
+    return korean_char_ratio(text) >= threshold

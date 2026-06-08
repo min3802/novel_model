@@ -80,7 +80,8 @@ class ServerBackedRequirementTests(unittest.TestCase):
         result = self.request(
             "POST",
             "/api/generate-cover-image",
-            {"workId": work["id"], "workTitle": "Demo Work", "targetCountry": "US", "genre": "LitRPG"},
+            {"workId": work["id"], "workTitle": "Demo Work", "targetCountry": "US", "genre": "LitRPG",
+             "episodes": ["주인공이 던전에서 각성하는 장면으로 1화가 시작된다."]},
         )
         self.assertEqual(result["type"], "mock_image")
         record = result.get("assetRecord")

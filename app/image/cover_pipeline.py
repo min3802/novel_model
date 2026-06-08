@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Any
 
 from .config import ImageConfig
@@ -40,17 +40,6 @@ class CoverPipeline:
         target_country: str = "", genre: str = "", extra_prompt: str = "",
     ) -> CoverResult:
         extraction = self.extractor.extract(episodes)
-        image = self.generator.generate(
-            extraction, work_title=work_title, target_country=target_country,
-            genre=genre, extra_prompt=extra_prompt,
-        )
-        return CoverResult(extraction=extraction, image=image)
-
-    def generate_from_extraction(
-        self, extraction: CoverExtractionResult, *, work_title: str = "작품",
-        target_country: str = "", genre: str = "", extra_prompt: str = "",
-    ) -> CoverResult:
-        """이미 추출된 결과로 생성만 (추출 재호출 없이)."""
         image = self.generator.generate(
             extraction, work_title=work_title, target_country=target_country,
             genre=genre, extra_prompt=extra_prompt,
