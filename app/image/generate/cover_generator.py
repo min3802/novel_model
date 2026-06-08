@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from ._generate import generate_image
-from .config import ImageConfig
-from .cover_extractor import CoverCharacter, CoverExtractionResult, CoverExtractor
+from ..config import ImageConfig
+from ..infra._generate import generate_image
+from ..extract.cover_extractor import CoverCharacter, CoverExtractionResult
 from .safety import build_refusal, is_unsafe_visual_request
 
 
@@ -12,23 +12,12 @@ class CoverGenerator:
     """표지 플로우 ②생성. 추출된 캐릭터(외형+행보+임팩트) + 사용자 추가 문구 → 표지 이미지.
 
     안전검사(거부+대안)는 표지 플로우 전용으로 여기서 수행한다.
+    (episodes→추출→생성 end-to-end 는 CoverPipeline 이 담당.)
     """
 
     def __init__(self, config: ImageConfig | None = None) -> None:
         self.config = config or ImageConfig()
 
-    # episodes 로부터 추출까지 포함한 end-to-end (표지 플로우 단독 실행용).
-    def generate_from_episodes(
-        self, episodes: str | list[str], *, work_title: str = "작품",
-        target_country: str = "", genre: str = "", extra_prompt: str = "",
-    ) -> dict[str, Any]:
-        extraction = CoverExtractor(self.config).extract(episodes)
-        return self.generate(
-            extraction, work_title=work_title, target_country=target_country,
-            genre=genre, extra_prompt=extra_prompt,
-        )
-
-    # 이미 추출된 결과로 표지 생성.
     def generate(
         self, extraction: CoverExtractionResult, *, work_title: str = "작품",
         target_country: str = "", genre: str = "", extra_prompt: str = "",

@@ -6,9 +6,9 @@ from typing import Any
 
 from ..config import PipelineConfig
 from ..text_processing.korean_output import koreanize_text
-from ..core.mock_adapters import translation_payload
-from ..core.openai_client import get_openai_client
-from ..core.prompt_loader import load_runtime_prompt
+from ..infra.mock_adapters import translation_payload
+from ..infra.openai_client import get_openai_client
+from ..infra.prompt_loader import load_runtime_prompt
 from ..retrieval.retriever import IdiomRetriever, RetrievalResult
 
 

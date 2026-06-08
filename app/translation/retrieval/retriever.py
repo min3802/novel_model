@@ -10,7 +10,7 @@ from typing import Any, Iterable, Protocol
 import numpy as np
 
 from ..config import PipelineConfig
-from ..core.openai_client import get_openai_client
+from ..infra.openai_client import get_openai_client
 
 
 def l2_normalize(matrix: np.ndarray) -> np.ndarray:

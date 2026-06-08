@@ -3,16 +3,13 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import Any
 
-from app.translation.core.runtime import is_mock_mode
+from app.translation.infra.runtime import is_mock_mode
 
-from ._extract_base import call_structured, join_episodes
-from .config import ImageConfig
-from .core.mock_adapters import cover_extraction_payload
+from ..config import ImageConfig
+from ..infra._extract_base import call_structured, join_episodes
+from ..infra.mock_adapters import cover_extraction_payload
 
 
-# ---------------------------------------------------------------------------
-# 표지용 캐릭터 — 외형뿐 아니라 "이 분량에서의 행보/임팩트"까지 담는다.
-# ---------------------------------------------------------------------------
 @dataclass(slots=True)
 class CoverCharacter:
     name: str
@@ -89,11 +86,7 @@ class CoverExtractor:
         self.config = config or ImageConfig()
 
     def extract(self, episodes: str | list[str]) -> CoverExtractionResult:
-        source = join_episodes(
-            episodes,
-            max_episodes=self.config.cover_max_episodes,
-            max_chars=self.config.max_input_chars,
-        )
+        source = join_episodes(episodes, max_episodes=self.config.cover_max_episodes)
         if not source.strip():
             raise ValueError("표지 추출할 원문이 비어 있습니다.")
 

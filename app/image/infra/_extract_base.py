@@ -3,26 +3,24 @@ from __future__ import annotations
 import json
 from typing import Any
 
-from app.translation.core.openai_client import get_openai_client
+from app.translation.infra.openai_client import get_openai_client
 
 
-def join_episodes(episodes: str | list[str], max_episodes: int, max_chars: int) -> str:
+def join_episodes(episodes: str | list[str], max_episodes: int) -> str:
     """여러 화를 추출용 단일 텍스트로 합친다.
 
     - 리스트면 최대 max_episodes 화까지만(앞에서부터) 사용.
     - 화 경계를 '=== N화 ==='로 표시해 LLM 이 화 구분을 인지하게 한다.
-    - 최종 길이가 max_chars 초과 시 뒤쪽(최신 화) 우선 보존하며 앞을 자른다.
+
+    입력 글자 길이 보호(절단)는 여기서 하지 않는다 — 분량 제한은 업로드/저장 시점 책임이며,
+    추출 단계는 화 개수 상한(max_episodes)만 책임진다.
     """
     if isinstance(episodes, str):
-        joined = episodes
-    else:
-        selected = [ep for ep in episodes if (ep or "").strip()][:max_episodes]
-        joined = "\n\n".join(
-            f"=== {idx}화 ===\n{ep.strip()}" for idx, ep in enumerate(selected, start=1)
-        )
-    if len(joined) > max_chars:
-        joined = joined[-max_chars:]
-    return joined
+        return episodes
+    selected = [ep for ep in episodes if (ep or "").strip()][:max_episodes]
+    return "\n\n".join(
+        f"=== {idx}화 ===\n{ep.strip()}" for idx, ep in enumerate(selected, start=1)
+    )
 
 
 def call_structured(model: str, system_prompt: str, user_prompt: str,

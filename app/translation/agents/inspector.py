@@ -6,9 +6,9 @@ from typing import Any
 
 from ..config import PipelineConfig
 from ..text_processing.korean_output import koreanize_texts
-from ..core.mock_adapters import inspection_payload
-from ..core.openai_client import get_openai_client
-from ..core.prompt_loader import load_base_review_prompt, load_locale_constraints, load_runtime_prompt
+from ..infra.mock_adapters import inspection_payload
+from ..infra.openai_client import get_openai_client
+from ..infra.prompt_loader import load_base_review_prompt, load_locale_constraints, load_runtime_prompt
 
 
 INSPECTION_SCHEMA: dict[str, Any] = {

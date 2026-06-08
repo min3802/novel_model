@@ -5,9 +5,9 @@ from dataclasses import asdict, dataclass
 from typing import Any
 
 from ..config import PipelineConfig
-from ..core.mock_adapters import chatbot_payload
-from ..core.openai_client import get_openai_client
-from ..core.prompt_loader import load_runtime_prompt
+from ..infra.mock_adapters import chatbot_payload
+from ..infra.openai_client import get_openai_client
+from ..infra.prompt_loader import load_runtime_prompt
 
 
 CHATBOT_SCHEMA: dict[str, Any] = {
