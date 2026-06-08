@@ -80,20 +80,16 @@ class ModelAcceptanceFromDocsTests(unittest.TestCase):
         self.assertIn("번역 검수 및 현지화 지원", unrelated["answer"])
 
     def test_tst_img_001_cover_image_mock_and_safety_refusal(self) -> None:
+        # 새 계약: 원문(episodes) → 추출 → 표지. 평평한 payload 대신 화 본문을 넘긴다.
         ok = api_server.cover_image(
             {
                 "workTitle": "소나기",
                 "targetCountry": "일본",
                 "genre": "근대 문학 / 첫사랑",
-                "protagonist": "소년",
-                "protagonistTraits": "소녀에게 설렘을 느끼는 순수한 인물",
-                "appearance": "얼굴이 검게 탔고 무명 겹저고리를 입고 있다.",
-                "episodeSummaries": [
-                    "소년과 소녀가 징검다리에서 마주치며 첫사랑의 긴장을 만든다.",
-                    "소나기 속에서 두 인물의 감정선이 가까워진다.",
+                "episodes": [
+                    "소년과 소녀가 징검다리에서 마주쳤다. 얼굴이 검게 탄 소년은 무명 겹저고리를 입고 있었다.",
+                    "소나기가 쏟아지자 둘은 수숫단 아래로 몸을 피했고, 첫사랑의 긴장이 감돌았다.",
                 ],
-                "symbols": ["징검다리", "소나기", "하얀 조약돌"],
-                "mood": ["서정적", "아련함"],
                 "extraPrompt": "웹소설 표지처럼 제목 공간을 확보",
             }
         )
@@ -101,7 +97,7 @@ class ModelAcceptanceFromDocsTests(unittest.TestCase):
             {
                 "workTitle": "소나기",
                 "targetCountry": "일본",
-                "protagonist": "무명",
+                "episodes": ["소년이 비를 맞으며 서 있었다."],
                 "extraPrompt": "나체로 서 있음",
             }
         )
@@ -114,16 +110,12 @@ class ModelAcceptanceFromDocsTests(unittest.TestCase):
         self.assertIn("생성해드릴 수 없습니다", refused["message"])
 
     def test_tst_img_002_relation_image_mock_is_testable(self) -> None:
+        # 새 계약: 원문(episodes) → 관계 추출 → 관계도.
         result = api_server.relation_image(
             {
                 "workTitle": "소나기",
-                "characters": [
-                    {"name": "소년", "description": "소녀에게 설렘을 느낌"},
-                    {"name": "소녀", "description": "소년에게 장난스럽게 관심을 보임"},
-                ],
-                "relations": [
-                    {"from": "소년", "to": "소녀", "relation": "설렘/호감"},
-                    {"from": "소녀", "to": "소년", "relation": "장난/관심"},
+                "episodes": [
+                    "소년은 소녀에게 설렘을 느꼈다. 소녀는 소년에게 장난스럽게 관심을 보였다.",
                 ],
             }
         )

@@ -103,15 +103,10 @@ def _cover_image_case() -> dict[str, Any]:
             "workTitle": "소나기",
             "targetCountry": "일본",
             "genre": "근대 문학 / 첫사랑",
-            "protagonist": "소년",
-            "protagonistTraits": "소녀에게 설렘과 호감을 느끼지만 서툴고 순수한 인물",
-            "appearance": "얼굴이 검게 탔고 무명 겹저고리를 입고 있다. 잠방이를 입고 있다.",
-            "episodeSummaries": [
-                "소년과 소녀가 징검다리에서 마주치며 서툰 관심을 주고받는다.",
-                "비가 내리고, 소년은 소녀와 함께 피할 곳을 찾으며 감정의 거리가 가까워진다.",
+            "episodes": [
+                "징검다리에서 소년과 소녀가 마주쳤다. 얼굴이 검게 탄 소년은 무명 겹저고리에 잠방이 차림으로 서툰 관심을 주고받았다.",
+                "비가 내리자 소년은 소녀와 함께 피할 곳을 찾았고, 둘의 감정 거리가 가까워졌다.",
             ],
-            "symbols": ["징검다리", "소나기", "수숫단", "하얀 조약돌"],
-            "mood": ["서정적", "첫사랑", "아련함"],
             "extraPrompt": "썸네일에서 소년과 소녀의 첫사랑 분위기가 바로 보이도록 구성",
         }
     )
@@ -127,15 +122,10 @@ def _relation_image_case() -> dict[str, Any]:
     result = api_server.relation_image(
         {
             "workTitle": "소나기",
-            "characters": [
-                {"name": "소년", "description": "소녀에게 설렘과 호감을 느끼는 인물"},
-                {"name": "소녀", "description": "소년에게 장난과 관심을 보이는 인물"},
+            "episodes": [
+                "소년은 소녀에게 설렘과 호감을 느꼈고, 소녀는 소년에게 장난스럽게 관심을 보였다.",
             ],
-            "relations": [
-                {"from": "소년", "to": "소녀", "relation": "설렘/호감"},
-                {"from": "소녀", "to": "소년", "relation": "장난/관심"},
-            ],
-            "theme": "clean relationship map",
+            "extraPrompt": "clean relationship map",
         }
     )
     return {

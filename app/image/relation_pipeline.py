@@ -37,10 +37,3 @@ class RelationPipeline:
         extraction = self.extractor.extract(episodes)
         image = self.generator.generate(extraction, work_title=work_title, extra_prompt=extra_prompt)
         return RelationResult(extraction=extraction, image=image)
-
-    def generate_from_extraction(
-        self, extraction: RelationExtractionResult, *, work_title: str = "작품", extra_prompt: str = "",
-    ) -> RelationResult:
-        """이미 추출된 결과로 생성만 (추출 재호출 없이)."""
-        image = self.generator.generate(extraction, work_title=work_title, extra_prompt=extra_prompt)
-        return RelationResult(extraction=extraction, image=image)

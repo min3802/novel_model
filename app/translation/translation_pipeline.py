@@ -9,6 +9,7 @@ from .config import PipelineConfig
 from .agents.chatbot import ChatbotAgent
 from .agents.inspector import InspectionAgent
 from .retrieval.retriever import IdiomRetriever, RetrievalResult, embed_query
+from .text_processing.korean_output import is_korean_source
 from .agents.reviewer import Reviewer
 from .agents.translator import Translator
 
@@ -33,6 +34,8 @@ class AgentWorkflowResult:
     reviewed_translation: str
     context_extraction: dict[str, Any] | None = None
     memory_context: str = ""
+    blocked: bool = False
+    block_reason: str = ""
 
 
 class TranslationPipeline:
@@ -67,6 +70,22 @@ class TranslationPipeline:
         context_extraction: dict[str, Any] | None = None,
     ) -> AgentWorkflowResult:
         """Run translation plus independent inspection without auto-finalizing changes."""
+        # 입력 언어 검증: 한국어 원문만 번역 가능. 한글 비중 0.5 미만이면 차단.
+        # (모델 처리 불가 여부만 판단해 신호 반환. 사용자 응답 포장은 호출측/backend 담당.)
+        if not is_korean_source(source_text):
+            return AgentWorkflowResult(
+                source_text=source_text,
+                retrievals=[],
+                annotation_matches=[],
+                draft={},
+                translation_review={},
+                inspection={},
+                reviewed_translation="",
+                context_extraction=context_extraction,
+                memory_context=memory_context,
+                blocked=True,
+                block_reason="non_korean_source",
+            )
         retrieval_query = "\n".join([source_text, *(retrieval_queries or [])]).strip()
         query = retrieval_query or source_text
 
