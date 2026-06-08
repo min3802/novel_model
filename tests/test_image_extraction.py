@@ -1,6 +1,6 @@
-"""이미지 기능 추출·생성 단위 테스트 (mock 모드 — 네트워크/LLM 불필요).
+"""이미지 기능 추출·생성·파이프라인 단위 테스트 (mock 모드 — 네트워크/LLM 불필요).
 
-표지/관계도는 별개 플로우다. 각 플로우의 추출→생성과 안전검사를 검증한다.
+표지/관계도는 별개 플로우다. 각 플로우의 추출→생성, 안전검사, 파이프라인을 검증한다.
 실제 end-to-end(mock=False)는 tests/check_image_extraction.py 를
 OPENAI_API_KEY 가 있는 로컬 환경에서 실행해 확인한다.
 """
@@ -30,7 +30,6 @@ def test_cover_extract_has_arc_and_key_moments():
     assert result.characters
     c = result.characters[0]
     assert isinstance(c, CoverCharacter)
-    # 4번 요구: 외형뿐 아니라 행보/임팩트 필드 존재
     assert c.arc_summary
     assert isinstance(c.key_moments, list)
     assert isinstance(c.appearance, list)
@@ -45,15 +44,15 @@ def test_cover_protagonist_prefers_main_role():
 
 def test_cover_episode_limit_caps_at_10(monkeypatch):
     from app.image import CoverExtractor, ImageConfig
-    from app.image import _extract_base
+    from app.image.infra import _extract_base
     captured = {}
     orig = _extract_base.join_episodes
 
-    def spy(eps, max_episodes, max_chars):
+    def spy(eps, max_episodes):
         captured["max_episodes"] = max_episodes
-        return orig(eps, max_episodes, max_chars)
+        return orig(eps, max_episodes)
 
-    monkeypatch.setattr("app.image.cover_extractor.join_episodes", spy)
+    monkeypatch.setattr("app.image.extract.cover_extractor.join_episodes", spy)
     CoverExtractor(ImageConfig()).extract([f"{i}화" for i in range(30)])
     assert captured["max_episodes"] == 10
 
@@ -81,17 +80,26 @@ def test_relation_to_dict_shape():
 
 def test_relation_episode_limit_caps_at_20(monkeypatch):
     from app.image import RelationExtractor, ImageConfig
-    from app.image import _extract_base
+    from app.image.infra import _extract_base
     captured = {}
     orig = _extract_base.join_episodes
 
-    def spy(eps, max_episodes, max_chars):
+    def spy(eps, max_episodes):
         captured["max_episodes"] = max_episodes
-        return orig(eps, max_episodes, max_chars)
+        return orig(eps, max_episodes)
 
-    monkeypatch.setattr("app.image.relation_extractor.join_episodes", spy)
+    monkeypatch.setattr("app.image.extract.relation_extractor.join_episodes", spy)
     RelationExtractor(ImageConfig()).extract([f"{i}화" for i in range(40)])
     assert captured["max_episodes"] == 20
+
+
+def test_join_episodes_no_char_truncation():
+    """max_chars 절단 제거 확인: 아주 긴 화도 그대로 보존(화 경계 안 깨짐)."""
+    from app.image.infra._extract_base import join_episodes
+    long_ep = "가" * 100000
+    out = join_episodes([long_ep], max_episodes=10)
+    assert out.count("가") == 100000
+    assert out.startswith("=== 1화 ===")
 
 
 def test_empty_source_raises():
@@ -120,12 +128,11 @@ def test_cover_safety_refusal_with_alternative():
     out = CoverGenerator().generate(extraction, extra_prompt="나체로 서 있음")
     assert out["type"] == "refusal"
     assert "생성해드릴 수 없습니다" in out["message"]
-    # 단순 거부가 아니라 대안 제시 포함
     assert "조정" in out["message"] or "대신" in out["message"]
 
 
 # ----------------------------- 관계도 생성 -----------------------------
-def test_relation_generate_prompt_directionality():
+def test_relation_generate_prompt():
     from app.image import RelationExtractor, RelationGenerator
     extraction = RelationExtractor().extract("원문")
     out = RelationGenerator().generate(extraction, work_title="소나기")
@@ -133,17 +140,31 @@ def test_relation_generate_prompt_directionality():
     assert "relationship map" in out["prompt"]
 
 
-# ----------------------------- end-to-end (episodes→생성) -----------------------------
-def test_cover_end_to_end_from_episodes():
-    from app.image import CoverGenerator
-    out = CoverGenerator().generate_from_episodes(["1화 내용", "2화 내용"], work_title="작품")
-    assert out["type"] == "mock_image"
+# ----------------------------- 파이프라인 (오케스트레이터) -----------------------------
+def test_cover_pipeline_run():
+    from app.image import CoverPipeline, CoverResult
+    result = CoverPipeline().run(["1화", "2화"], work_title="작품", genre="음악")
+    assert isinstance(result, CoverResult)
+    assert result.extraction.characters
+    assert result.image["type"] == "mock_image"
+    assert result.refused is False
+    d = result.to_dict()
+    assert set(d.keys()) == {"extraction", "image"}
 
 
-def test_relation_end_to_end_from_episodes():
-    from app.image import RelationGenerator
-    out = RelationGenerator().generate_from_episodes(["1화", "2화"], work_title="작품")
-    assert out["type"] == "mock_image"
+def test_cover_pipeline_refusal():
+    from app.image import CoverPipeline
+    result = CoverPipeline().run("원문", extra_prompt="나체로 서 있음")
+    assert result.refused is True
+    assert result.image["type"] == "refusal"
+
+
+def test_relation_pipeline_run():
+    from app.image import RelationPipeline, RelationResult
+    result = RelationPipeline().run(["1화", "2화"], work_title="작품")
+    assert isinstance(result, RelationResult)
+    assert result.extraction.nodes
+    assert result.image["type"] == "mock_image"
 
 
 # ----------------------------- 안전검사 사전필터 -----------------------------

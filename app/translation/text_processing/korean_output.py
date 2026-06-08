@@ -4,8 +4,8 @@ import json
 import re
 from typing import Iterable
 
-from ..core.openai_client import get_openai_client
-from ..core.prompt_loader import load_runtime_prompt
+from ..infra.openai_client import get_openai_client
+from ..infra.prompt_loader import load_runtime_prompt
 
 
 KOREAN_TRANSLATION_SCHEMA = {

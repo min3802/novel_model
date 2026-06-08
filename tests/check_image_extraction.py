@@ -31,7 +31,7 @@ from app.image import (  # noqa: E402
     CoverExtractor, CoverGenerator, ImageConfig,
     RelationExtractor, RelationGenerator,
 )
-from app.translation.core.runtime import is_mock_mode  # noqa: E402
+from app.translation.infra.runtime import is_mock_mode  # noqa: E402
 
 SAMPLE = ROOT / "tests" / "엘리트_1화.txt"
 OUT_DIR = ROOT / "tests" / "outputs"

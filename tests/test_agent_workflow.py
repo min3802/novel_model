@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 from app.translation import ChatbotAgent, InspectionAgent, TranslationPipeline, PipelineConfig
-from app.translation.core.prompt_loader import load_locale_constraints
+from app.translation.infra.prompt_loader import load_locale_constraints
 
 
 class AgentWorkflowTests(unittest.TestCase):

@@ -3,8 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from .core.locales import KO_JA, LOCALE_REGISTRY, LocaleResources
-from .core.project_paths import package_project_root
+from .infra.locales import KO_JA, LOCALE_REGISTRY, LocaleResources
+from .infra.project_paths import package_project_root
 
 
 @dataclass(slots=True)

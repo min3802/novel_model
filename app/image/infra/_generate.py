@@ -2,10 +2,10 @@ from __future__ import annotations
 
 from typing import Any
 
-from app.translation.core.openai_client import get_openai_client
-from app.translation.core.runtime import is_mock_mode
+from app.translation.infra.openai_client import get_openai_client
+from app.translation.infra.runtime import is_mock_mode
 
-from .config import ImageConfig
+from ..config import ImageConfig
 
 
 def generate_image(prompt: str, config: ImageConfig | None = None) -> dict[str, Any]:

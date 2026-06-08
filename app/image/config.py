@@ -25,13 +25,11 @@ class ImageConfig:
 
     # 추출 입력 분량 상한 (요구사항: 표지 최대 10화, 관계도 최대 20화).
     # 관계는 누적할수록 풍부하므로 관계도 쪽이 더 길다.
+    # (글자 길이 절단은 두지 않는다 — 입력 분량 보호는 업로드/저장 시점 책임.)
     cover_max_episodes: int = 10
     relation_max_episodes: int = 20
 
-    # 화당 입력 글자 보호 상한(과도한 토큰 방지). 초과 시 뒤쪽(최신) 우선 보존.
-    max_input_chars: int = 40000
-
-    # --- ② 생성(cover_generator / relation_generator) ----------------
+    # --- ② 생성(cover / relation generator) --------------------------
     image_model: str = "gpt-image-2"
     image_size: str = "1024x1024"
 

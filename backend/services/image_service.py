@@ -1,11 +1,11 @@
 """이미지 서빙 계층 (얇은 포장).
 
-설계 원칙(번역 기능과 동일): app/image = 모델링(추출·생성·안전검사),
+설계 원칙(번역 기능과 동일): app/image = 모델링(추출·생성·안전검사·파이프라인),
 backend/services/image_service = 그걸 호출해 HTTP payload 로 포장.
 
 표지/관계도는 별개 플로우다.
-  - 표지:   payload → (episodes 있으면 추출) → CoverGenerator → 안전검사 포함
-  - 관계도: payload → (episodes 있으면 추출) → RelationGenerator
+  - 표지:   payload → CoverPipeline(추출→생성+안전검사)
+  - 관계도: payload → RelationPipeline(추출→생성)
 
 레거시 payload(protagonist/appearance/characters/relations 직접 전달)도 그대로 지원해
 기존 api_server·테스트 호환성을 유지한다.
@@ -19,14 +19,14 @@ from dotenv import load_dotenv
 from app.image import (
     CoverCharacter,
     CoverExtractionResult,
-    CoverGenerator,
+    CoverPipeline,
     ImageConfig,
     Relation,
     RelationExtractionResult,
-    RelationGenerator,
     RelationNode,
+    RelationPipeline,
 )
-from app.image._generate import generate_image as _generate_image
+from app.image.infra._generate import generate_image as _generate_image
 
 load_dotenv()
 
@@ -47,21 +47,22 @@ def cover_image(payload: dict[str, Any]) -> dict[str, Any]:
     genre = (payload.get("genre") or "").strip()
     extra = (payload.get("extraPrompt") or "").strip()
 
-    gen = CoverGenerator(_config)
+    pipeline = CoverPipeline(_config)
     episodes = payload.get("episodes")
     if episodes:
         # 새 플로우: 원문 → 추출 → 표지.
-        return gen.generate_from_episodes(
+        result = pipeline.run(
             episodes, work_title=work_title, target_country=country,
             genre=genre, extra_prompt=extra,
         )
-
-    # 레거시 플로우: 이미 정리된 인물 정보를 추출 결과 형태로 감싸 생성.
-    extraction = _cover_extraction_from_legacy(payload)
-    return gen.generate(
-        extraction, work_title=work_title, target_country=country,
-        genre=genre, extra_prompt=extra,
-    )
+    else:
+        # 레거시 플로우: 이미 정리된 인물 정보를 추출 결과로 감싸 생성.
+        extraction = _cover_extraction_from_legacy(payload)
+        result = pipeline.generate_from_extraction(
+            extraction, work_title=work_title, target_country=country,
+            genre=genre, extra_prompt=extra,
+        )
+    return result.image
 
 
 def _cover_extraction_from_legacy(payload: dict[str, Any]) -> CoverExtractionResult:
@@ -93,13 +94,14 @@ def relation_image(payload: dict[str, Any]) -> dict[str, Any]:
     work_title = (payload.get("workTitle") or "작품").strip()
     extra = (payload.get("extraPrompt") or "").strip()
 
-    gen = RelationGenerator(_config)
+    pipeline = RelationPipeline(_config)
     episodes = payload.get("episodes")
     if episodes:
-        return gen.generate_from_episodes(episodes, work_title=work_title, extra_prompt=extra)
-
-    extraction = _relation_extraction_from_legacy(payload)
-    return gen.generate(extraction, work_title=work_title, extra_prompt=extra)
+        result = pipeline.run(episodes, work_title=work_title, extra_prompt=extra)
+    else:
+        extraction = _relation_extraction_from_legacy(payload)
+        result = pipeline.generate_from_extraction(extraction, work_title=work_title, extra_prompt=extra)
+    return result.image
 
 
 def _relation_extraction_from_legacy(payload: dict[str, Any]) -> RelationExtractionResult:

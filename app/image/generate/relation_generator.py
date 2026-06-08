@@ -2,25 +2,20 @@ from __future__ import annotations
 
 from typing import Any
 
-from ._generate import generate_image
-from .config import ImageConfig
-from .relation_extractor import RelationExtractionResult, RelationExtractor
+from ..config import ImageConfig
+from ..infra._generate import generate_image
+from ..extract.relation_extractor import RelationExtractionResult
 
 
 class RelationGenerator:
     """관계도 플로우 ②생성. 추출된 인물·관계 → 관계도(다이어그램) 이미지.
 
     관계도는 다이어그램이라 표지와 달리 신체 노출 위험이 없어 안전검사를 두지 않는다.
+    (episodes→추출→생성 end-to-end 는 RelationPipeline 이 담당.)
     """
 
     def __init__(self, config: ImageConfig | None = None) -> None:
         self.config = config or ImageConfig()
-
-    def generate_from_episodes(
-        self, episodes: str | list[str], *, work_title: str = "작품", extra_prompt: str = "",
-    ) -> dict[str, Any]:
-        extraction = RelationExtractor(self.config).extract(episodes)
-        return self.generate(extraction, work_title=work_title, extra_prompt=extra_prompt)
 
     def generate(
         self, extraction: RelationExtractionResult, *, work_title: str = "작품", extra_prompt: str = "",
@@ -43,7 +38,7 @@ class RelationGenerator:
 Work title: {work_title}
 Characters (nodes):
 {nodes_text}
-Relationships (use one-directional arrows → for unrequited/one-way, double arrows ↔ for mutual):
+Relationships (use one-directional arrows for unrequited/one-way, double arrows for mutual):
 {rels_text}
 Additional request: {extra or "No additional request."}
 Style: clean diagram-like relationship map, portrait nodes connected by labeled relationship arrows, arrow direction matches one-directional vs mutual relations, muted modern literary color palette, readable layout, no watermark, family-friendly."""

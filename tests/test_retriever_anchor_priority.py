@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 from app.translation import TranslationPipeline, PipelineConfig
-from app.translation.core.locales import LOCALE_REGISTRY
+from app.translation.infra.locales import LOCALE_REGISTRY
 from app.translation.retrieval.retriever import IdiomRetriever, MockEmbeddingBackend, build_search_text, create_embedding_backend
 
 

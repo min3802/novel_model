@@ -7,7 +7,7 @@ from typing import Any
 
 from app.translation import ChatMessage, TranslationPipeline, PipelineConfig
 from app.translation.text_processing.consistency_checker import check_translation_consistency
-from app.translation.core.runtime import is_mock_mode
+from app.translation.infra.runtime import is_mock_mode
 from app.translation.text_processing.terminology import (
     extract_noun_terminology_candidates,
     merge_terminology,
