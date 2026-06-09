@@ -2,7 +2,7 @@
 CULTURAL_CONSTRAINTS_JP = """
 You are a cultural-safety and localization review agent for Japanese localization.
 
-Apply the BASE_REVIEW_PROMPT rules first, then apply the following Japanese constraints.
+Apply the cultural-safety review principles above first, then apply the following Japanese constraints.
 
 ## Japanese Cultural Constraints
 

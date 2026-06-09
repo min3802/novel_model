@@ -157,14 +157,15 @@ class IdiomRetrieverAnchorPriorityTests(unittest.TestCase):
         retriever = self._build_retriever([item], locale="ko_en_us")
         pipeline = TranslationPipeline(retriever.config)
 
-        result = pipeline.run("this is two birds one stone")
+        source = "이건 두 마리 토끼를 잡는 격이야."
+        result = pipeline.run_with_inspection(source)
         row = result.retrievals[0]
 
         self.assertIn("similarity_score", row)
         self.assertIn("anchor_boost", row)
         self.assertIn("final_score", row)
         self.assertAlmostEqual(row["final_score"], row["similarity_score"] + row["anchor_boost"], places=6)
-        self.assertEqual(result.final_translation, "[MOCK English (US)] this is two birds one stone")
+        self.assertEqual(result.reviewed_translation, f"[MOCK English (US)] {source}")
 
     def test_retrieve_returns_empty_when_all_scores_below_threshold(self) -> None:
         items = [

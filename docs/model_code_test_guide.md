@@ -221,7 +221,6 @@ OPENAI_API_KEY=sk-...
 - `annotation_matches`
 - `cultural_matches`
 - `draft`
-- `translation_review`
 - `inspection`
 - `reviewed_translation`
 

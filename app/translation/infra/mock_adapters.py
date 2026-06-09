@@ -27,36 +27,11 @@ def translation_payload(config: Any, resources: Any, source_text: str, retrieval
     }
 
 
-def review_payload(draft_translation: str) -> dict[str, Any]:
+def inspection_payload(resources: Any, source_text: str, translation_under_inspection: str) -> dict[str, Any]:
+    # Inspector 새 구조: {summary, issues[]}. mock 은 이슈 없음(빈 배열)으로 결정적 반환.
     return {
-        "detected_constraints": [],
-        "risk_summary": "Mock review did not find blocking risks.",
-        "recommended_action": "NOTE",
-        "revised_translation": draft_translation,
-        "review_note": "[NOTE: mock review]",
-        "raw_response": {},
-    }
-
-
-def inspection_payload(resources: Any, source_text: str, translation_to_review: str) -> dict[str, Any]:
-    return {
-        "locale": resources.locale,
-        "context_analysis": {
-            "speaker": "unknown",
-            "listener": "unknown",
-            "relationship": "unknown",
-            "confidence": "low",
-            "evidence": "Mock mode does not perform real discourse analysis.",
-        },
-        "detected_constraints": [],
-        "severity": "LOW",
-        "recommended_action": "NOTE",
-        "intervention_policy": "INFO_ONLY",
-        "risk_summary": "Mock inspection did not find locale-specific risks.",
-        "problematic_spans": [],
-        "suggestions": [],
-        "revised_translation": translation_to_review,
-        "review_note": "[NOTE: mock inspection]",
+        "summary": "[MOCK 검수] 구체적인 문화권 리스크나 현지화 문제는 확인되지 않았습니다.",
+        "issues": [],
         "raw_response": {},
     }
 

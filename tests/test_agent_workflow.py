@@ -74,10 +74,8 @@ class AgentWorkflowTests(unittest.TestCase):
             translation_rationale="Mock translator bypassed the model call.",
         )
 
-        self.assertEqual(result.locale, "ko_en_us")
-        self.assertEqual(result.recommended_action, "NOTE")
-        self.assertEqual(result.problematic_spans, [])
-        self.assertIn("mock inspection", result.review_note)
+        self.assertEqual(result.issues, [])
+        self.assertIn("MOCK 검수", result.summary)
 
     def test_chatbot_agent_mock_returns_revision_context(self) -> None:
         agent = ChatbotAgent(self._config())
@@ -96,7 +94,8 @@ class AgentWorkflowTests(unittest.TestCase):
         result = pipeline.run_with_inspection("이건 꿩 먹고 알 먹기야.")
 
         self.assertEqual(result.source_text, "이건 꿩 먹고 알 먹기야.")
-        self.assertEqual(result.inspection["recommended_action"], "NOTE")
+        self.assertIn("summary", result.inspection)
+        self.assertEqual(result.inspection["issues"], [])
         self.assertIn("translation", result.draft)
         self.assertTrue(result.reviewed_translation)
 

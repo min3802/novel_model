@@ -10,17 +10,7 @@ from .agents.chatbot import ChatbotAgent
 from .agents.inspector import InspectionAgent
 from .retrieval.retriever import IdiomRetriever, RetrievalResult, embed_query
 from .text_processing.korean_output import is_korean_source
-from .agents.reviewer import Reviewer
 from .agents.translator import Translator
-
-
-@dataclass(slots=True)
-class PipelineResult:
-    source_text: str
-    retrievals: list[dict[str, Any]]
-    draft: dict[str, Any]
-    review: dict[str, Any]
-    final_translation: str
 
 
 @dataclass(slots=True)
@@ -29,7 +19,6 @@ class AgentWorkflowResult:
     retrievals: list[dict[str, Any]]
     annotation_matches: list[dict[str, Any]]
     draft: dict[str, Any]
-    translation_review: dict[str, Any]
     inspection: dict[str, Any]
     reviewed_translation: str
     context_extraction: dict[str, Any] | None = None
@@ -44,21 +33,8 @@ class TranslationPipeline:
         self.retriever = IdiomRetriever(self.config)
         self.annotation_retriever = AnnotationRetriever(self.config)
         self.translator = Translator(self.config)
-        self.reviewer = Reviewer(self.config)
         self.inspector = InspectionAgent(self.config)
         self.chatbot = ChatbotAgent(self.config)
-
-    def run(self, source_text: str) -> PipelineResult:
-        retrievals = self.retriever.retrieve(source_text)
-        draft = self.translator.translate(source_text, retrievals)
-        review = self.reviewer.review(source_text, draft, retrievals)
-        return PipelineResult(
-            source_text=source_text,
-            retrievals=[self._retrieval_to_dict(row) for row in retrievals],
-            draft=asdict(draft),
-            review=asdict(review),
-            final_translation=review.revised_translation or draft.translation,
-        )
 
     def run_with_inspection(
         self,
@@ -78,7 +54,6 @@ class TranslationPipeline:
                 retrievals=[],
                 annotation_matches=[],
                 draft={},
-                translation_review={},
                 inspection={},
                 reviewed_translation="",
                 context_extraction=context_extraction,
@@ -111,31 +86,21 @@ class TranslationPipeline:
             annotation_matches = annotation_future.result()
             retrievals = idiom_future.result()
 
-        cultural_context = self._build_cultural_context(annotation_matches)
+        # annotation_matches(한국 문화 주석 후보)는 번역 대체어가 아니라 "독자용 문화 설명"이므로
+        # Translator 입력에 넣지 않는다. 사용자 채택용 주석 후보군으로만 결과에 실어 보낸다.
+        # 번역은 원문 + idiom RAG(retrievals) + 용어집(memory_context)만으로 수행한다.
         draft = self.translator.translate(
             source_text,
             retrievals,
             memory_context=memory_context,
-            cultural_context=cultural_context,
         )
-        review = self.reviewer.review(source_text, draft, retrievals)
         retrieval_dicts = [self._retrieval_to_dict(row) for row in retrievals]
-        used_references = [
-            {
-                # qdrant idiom payload는 평면 구조. source_id/embedding_text 사용.
-                "id": row["item"].get("source_id", row["item"].get("id")),
-                "reference_text": row["item"].get("embedding_text", ""),
-                "original_meaning": row["item"].get("original_meaning", ""),
-                "score": row["score"],
-            }
-            for row in retrieval_dicts
-        ]
+        # Inspector는 전체 재번역을 하지 않는다. draft 번역을 검사해 span 단위 issue만 반환한다.
+        # (RAG references 는 검수 입력에서 제외 — 번역 단계 산물이라 검수에는 과한 맥락.)
         inspection = self.inspector.inspect(
             source_text=source_text,
             draft_translation=draft.translation,
-            reviewed_translation=review.revised_translation,
             translation_rationale=draft.rationale,
-            used_references=used_references,
             translation_memory=translation_memory or [],
         )
         return AgentWorkflowResult(
@@ -143,13 +108,10 @@ class TranslationPipeline:
             retrievals=retrieval_dicts,
             annotation_matches=[self._annotation_to_dict(row) for row in annotation_matches],
             draft=asdict(draft),
-            translation_review=asdict(review),
+            # Reviewer 제거: 전체 번역문을 생성하는 LLM 호출은 Translator 1회로 일원화.
             inspection=inspection.to_dict(),
-            reviewed_translation=self._select_reviewed_translation(
-                draft_translation=draft.translation,
-                translation_review=review.revised_translation,
-                inspection=inspection.to_dict(),
-            ),
+            # 전체 번역문은 draft 하나뿐. Inspector는 span 제안만 하므로 draft를 그대로 최종본으로 쓴다.
+            reviewed_translation=draft.translation,
             context_extraction=context_extraction,
             memory_context=memory_context,
         )
@@ -174,22 +136,5 @@ class TranslationPipeline:
             "item": row.item,
         }
 
-    @staticmethod
-    def _build_cultural_context(annotation_matches: list[AnnotationResult]) -> str:
-        # cultural_lexicon 제외 후 annotation_retriever(kculture)만 문화 맥락을 담당.
-        return AnnotationRetriever.build_context(annotation_matches)
-
-    @staticmethod
-    def _select_reviewed_translation(
-        *,
-        draft_translation: str,
-        translation_review: str,
-        inspection: dict[str, Any],
-    ) -> str:
-        """Only auto-apply inspection revisions when the inspector explicitly says so."""
-        baseline = translation_review or draft_translation
-        if inspection.get("intervention_policy") == "AUTO_APPLIED":
-            return inspection.get("revised_translation") or baseline
-        return baseline
 
 

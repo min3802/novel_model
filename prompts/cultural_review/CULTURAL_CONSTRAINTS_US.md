@@ -2,7 +2,7 @@
 CULTURAL_CONSTRAINTS_US = """
 You are a cultural-safety and localization review agent for U.S. English localization.
 
-Apply the BASE_REVIEW_PROMPT rules first, then apply the following U.S. constraints.
+Apply the cultural-safety review principles above first, then apply the following U.S. constraints.
 
 ## U.S. Cultural Constraints
 

@@ -170,31 +170,20 @@ def run_one(locale: str, text: str):  # -> (rc:int, html_block:str)
     if draft.get("rationale"):
         print(f"   근거: {str(draft.get('rationale',''))[:150]}")
 
-    review = result.translation_review or {}
-    print(f"\n[검수]")
-    print(f"   조치(recommended_action): {review.get('recommended_action','')}")
-    print(f"   위험요약(risk_summary): {str(review.get('risk_summary',''))[:200]}")
-    if review.get('review_note'):
-        print(f"   검수메모(review_note): {str(review.get('review_note',''))[:200]}")
-    if review.get('detected_constraints'):
-        print(f"   감지된 제약: {review.get('detected_constraints')}")
-    print(f"   수정본(revised): {str(review.get('revised_translation',''))[:200]}")
-
     insp = result.inspection or {}
-    print(f"\n[검수챗봇 inspect]")
-    print(f"   심각도(severity): {insp.get('severity','')}  |  조치: {insp.get('recommended_action','')}  |  정책: {insp.get('intervention_policy','')}")
-    if insp.get('risk_summary'):
-        print(f"   위험요약: {str(insp.get('risk_summary',''))[:200]}")
-    spans = insp.get('problematic_spans') or []
-    if spans:
-        print(f"   문제구간(problematic_spans) {len(spans)}건:")
-        for s in spans[:5]:
-            print(f"      - {s}")
-    sugg = insp.get('suggestions') or []
-    if sugg:
-        print(f"   수정제안(suggestions) {len(sugg)}건:")
-        for s in sugg[:5]:
-            print(f"      - {s}")
+    print(f"\n[검수 inspect]")
+    print(f"   요약(summary): {str(insp.get('summary',''))[:200]}")
+    issues = insp.get('issues') or []
+    if issues:
+        print(f"   문제(issues) {len(issues)}건:")
+        for it in issues[:6]:
+            print(f"      - [{it.get('severity','')}] {str(it.get('problem',''))[:120]}")
+            if it.get('translated_span'):
+                print(f"        대상구간: {str(it.get('translated_span',''))[:80]}")
+            if it.get('suggested'):
+                print(f"        제안: {str(it.get('suggested',''))[:80]}")
+    else:
+        print("   문제(issues): 없음")
 
     print(f"\n[최종 번역] {result.reviewed_translation}")
 
@@ -212,7 +201,6 @@ def _esc(v) -> str:
 def _build_html_block(locale, cfg, elapsed, result) -> str:
     """한 locale의 결과를 HTML 섹션으로."""
     draft = result.draft or {}
-    review = result.translation_review or {}
     insp = result.inspection or {}
 
     # 검색 결과 행들
@@ -234,10 +222,12 @@ def _build_html_block(locale, cfg, elapsed, result) -> str:
                         f"<td>{_esc(it.get('category'))}</td></tr>")
         return "".join(rows) or "<tr><td colspan=3>(없음)</td></tr>"
 
-    spans = insp.get("problematic_spans") or []
-    sugg = insp.get("suggestions") or []
-    spans_html = "".join(f"<li>{_esc(s)}</li>" for s in spans) or "<li>(없음)</li>"
-    sugg_html = "".join(f"<li>{_esc(s)}</li>" for s in sugg) or "<li>(없음)</li>"
+    issues = insp.get("issues") or []
+    issues_html = "".join(
+        f"<li><b>[{_esc(it.get('severity'))}]</b> {_esc(it.get('problem'))}"
+        f"<br><small>대상: {_esc(it.get('translated_span'))} → 제안: {_esc(it.get('suggested')) or '(없음)'}</small></li>"
+        for it in issues
+    ) or "<li>(없음)</li>"
 
     return f"""
 <section>
@@ -253,15 +243,9 @@ def _build_html_block(locale, cfg, elapsed, result) -> str:
   <div class="box">{_esc(draft.get('translation'))}</div>
   <p class="muted">근거: {_esc(draft.get('rationale'))}</p>
 
-  <h3>검수 (review)</h3>
-  <p>조치: <b>{_esc(review.get('recommended_action'))}</b> · 위험요약: {_esc(review.get('risk_summary'))}</p>
-  <p class="muted">검수메모: {_esc(review.get('review_note'))}</p>
-  <div class="box">수정본: {_esc(review.get('revised_translation'))}</div>
-
-  <h3>검수챗봇 (inspect)</h3>
-  <p>심각도: <b>{_esc(insp.get('severity'))}</b> · 조치: {_esc(insp.get('recommended_action'))} · 정책: {_esc(insp.get('intervention_policy'))}</p>
-  <p>문제구간:</p><ul>{spans_html}</ul>
-  <p>수정제안:</p><ul>{sugg_html}</ul>
+  <h3>검수 (inspect)</h3>
+  <p>요약: {_esc(insp.get('summary'))}</p>
+  <p>문제(issues) {len(issues)}건:</p><ul>{issues_html}</ul>
 
   <h3>최종 번역</h3>
   <div class="box final">{_esc(result.reviewed_translation)}</div>

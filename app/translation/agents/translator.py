@@ -84,7 +84,6 @@ class Translator:
         retrievals: list[RetrievalResult],
         *,
         memory_context: str = "",
-        cultural_context: str = "",
     ) -> TranslationDraft:
         reference_ids = [str(row.item.get("source_id") or row.item.get("id") or "") for row in retrievals if (row.item.get("source_id") or row.item.get("id"))]
         if self.config.mock:
@@ -110,8 +109,6 @@ class Translator:
             target_language=target_language,
             source_text=source_text,
             rag_context=context,
-            cultural_context=cultural_context
-            or "[CULTURAL_LEXICON] no Korean cultural annotation candidates matched",
         )
 
         response = client.responses.create(
