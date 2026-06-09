@@ -36,7 +36,9 @@ class ModelAcceptanceFromDocsTests(unittest.TestCase):
 
         self.assertIn("현재 한국어 원문만 지원", result["finalTranslation"])
         self.assertEqual(result["retrievalCount"], 0)
-        self.assertEqual(result["workflow"]["inspection"]["recommended_action"], "BLOCK")
+        inspection = result["workflow"]["inspection"]
+        self.assertEqual(inspection["issues"], [])
+        self.assertIn("한국어 원문이 아닌", inspection["summary"])
 
     def test_tst_chat_001_revision_request_suggests_japanese_natural_expression(self) -> None:
         result = api_server.inspect_chat(
@@ -47,7 +49,6 @@ class ModelAcceptanceFromDocsTests(unittest.TestCase):
                 "currentTranslation": "彼は静かに『愛してる』と言った。",
                 "workflow": {
                     "draft": {"translation": "彼は静かに『愛してる』と言った。"},
-                    "translation_review": {},
                     "inspection": {},
                     "retrievals": [],
                 },

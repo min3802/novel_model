@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Iterable, Protocol
 
@@ -127,12 +128,20 @@ class SentenceTransformerEmbeddingBackend:
         return np.asarray(vectors, dtype=np.float32)
 
 
+@lru_cache(maxsize=None)
+def _cached_st_backend(model: str) -> "SentenceTransformerEmbeddingBackend":
+    # KURE 등 로컬 임베딩 모델은 로딩(메모리 적재)이 무거우므로 프로세스당 1회만 만든다.
+    # 같은 모델명 요청은 이 캐시된 인스턴스(=encoder)를 재사용해 매 요청 재로딩을 막는다.
+    return SentenceTransformerEmbeddingBackend(model)
+
+
 def create_embedding_backend(config: PipelineConfig) -> EmbeddingBackend:
     if config.mock:
         return MockEmbeddingBackend()
     if config.embedding_model.startswith("text-embedding-"):
         return OpenAIEmbeddingBackend(config.embedding_model)
-    return SentenceTransformerEmbeddingBackend(config.embedding_model)
+    # 모델명이 같으면 캐시된 백엔드(로딩 완료된 encoder)를 재사용한다.
+    return _cached_st_backend(config.embedding_model)
 
 
 # qdrant 클라이언트는 경로(또는 서버)당 1개만 만들어 공유한다.

@@ -43,8 +43,8 @@ def load_prompt_file(path: Path) -> str:
     return extract_prompt_text(prompt_path.read_text(encoding="utf-8"))
 
 
-def load_base_review_prompt(config: PipelineConfig) -> str:
-    return load_prompt_file(config.resolved_review_prompt_path())
+def load_inspector_prompt(config: PipelineConfig) -> str:
+    return load_prompt_file(config.resolved_inspection_prompt_path())
 
 
 def load_locale_constraints(locale: str) -> str:

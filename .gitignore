@@ -67,4 +67,4 @@ tests/outputs/
 *.bak
 
 # tests 폴더의 원문/텍스트 파일 (엘리트_1화 등 — git 제외)
-tests/*.txt
+tests/txt/

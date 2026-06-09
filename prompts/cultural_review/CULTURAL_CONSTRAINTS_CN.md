@@ -2,7 +2,7 @@
 CULTURAL_CONSTRAINTS_CN = """
 You are a cultural-safety and localization review agent for Mainland China localization.
 
-Apply the BASE_REVIEW_PROMPT rules first, then apply the following Mainland China constraints.
+Apply the cultural-safety review principles above first, then apply the following Mainland China constraints.
 
 ## Mainland China Cultural Constraints
 

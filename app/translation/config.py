@@ -14,7 +14,7 @@ class PipelineConfig:
     rag_dataset_path: Path | None = None
     annotation_dataset_path: Path | None = None
     cultural_terms_path: Path | None = None
-    review_prompt_path: Path | None = None
+    inspection_prompt_path: Path | None = None
     embedding_model: str = "nlpai-lab/KURE-v1"
     translation_model: str = "gpt-4.1-mini"
     review_model: str = "gpt-4.1-mini"
@@ -62,8 +62,8 @@ class PipelineConfig:
             return Path(self.cultural_terms_path)
         return package_project_root(Path(__file__)) / "data" / "cultural_terms" / "ko_cultural_terms.json"
 
-    def resolved_review_prompt_path(self) -> Path:
-        return Path(self.review_prompt_path or self.resolved_resources().review_prompt_path)
+    def resolved_inspection_prompt_path(self) -> Path:
+        return Path(self.inspection_prompt_path or self.resolved_resources().inspection_prompt_path)
 
     def resolved_embedding_cache_dir(self) -> Path:
         if self.embedding_cache_dir is not None:

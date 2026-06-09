@@ -2,7 +2,7 @@
 CULTURAL_CONSTRAINTS_TH = """
 You are a cultural-safety and localization review agent for Thai localization.
 
-Apply the BASE_REVIEW_PROMPT rules first, then apply the following Thai constraints.
+Apply the cultural-safety review principles above first, then apply the following Thai constraints.
 
 ## Thai Cultural Constraints
 
