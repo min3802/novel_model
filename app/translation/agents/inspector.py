@@ -31,6 +31,14 @@ INSPECTION_SCHEMA: dict[str, Any] = {
                         "type": "string",
                         "description": "LOW | MEDIUM | HIGH | CRITICAL 중 하나.",
                     },
+                    "review_label": {
+                        "type": "string",
+                        "description": "Optional editorial label such as REVIEW, CRITICAL_REVIEW, or ADAPT_WITH_INTENT.",
+                    },
+                    "keep_intent": {
+                        "type": "string",
+                        "description": "Korean note describing what must be preserved if the line is revised.",
+                    },
                     "context": {
                         "type": "string",
                         "description": "이 issue를 이해하는 데 필요한 최소 장면 정보(화자/청자/관계/분위기/말투). 한국어로 작성한다.",
@@ -54,6 +62,8 @@ INSPECTION_SCHEMA: dict[str, Any] = {
                 },
                 "required": [
                     "severity",
+                    "review_label",
+                    "keep_intent",
                     "context",
                     "source_span",
                     "translated_span",
@@ -75,6 +85,8 @@ class InspectionIssue:
     translated_span: str
     problem: str
     suggested: str
+    review_label: str = ""
+    keep_intent: str = ""
 
 
 @dataclass(slots=True)
@@ -85,6 +97,41 @@ class InspectionResult:
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
+
+
+def _format_profile_context(profile: dict[str, Any] | None) -> str:
+    profile = profile or {}
+    if not profile:
+        return ""
+    return "\n".join(
+        [
+            "[TRANSLATION_PROFILE]",
+            f"- tone: {profile.get('tone', '')}",
+            f"- dialogue_style: {profile.get('dialogue_style', '')}",
+            f"- narration_style: {profile.get('narration_style', '')}",
+            f"- localization_level: {profile.get('localization_level', '')}",
+            f"- proper_noun_policy: {profile.get('proper_noun_policy', '')}",
+            f"- culture_policy: {profile.get('culture_policy', '')}",
+            f"- do_not: {', '.join(profile.get('do_not') or [])}",
+        ]
+    ).strip()
+
+
+def _format_source_analysis_context(analysis: dict[str, Any] | None) -> str:
+    analysis = analysis or {}
+    if not analysis:
+        return ""
+    return "\n".join(
+        [
+            "[SOURCE_ANALYSIS]",
+            f"- summary: {analysis.get('summary', '')}",
+            f"- scene_functions: {', '.join(analysis.get('scene_functions') or [])}",
+            f"- emotions: {', '.join(analysis.get('emotions') or [])}",
+            f"- idiom_candidates: {', '.join(analysis.get('idiom_candidates') or []) or 'none'}",
+            f"- cultural_elements: {', '.join(analysis.get('cultural_elements') or []) or 'none'}",
+            f"- speech_hints: {', '.join(analysis.get('speech_hints') or []) or 'none'}",
+        ]
+    ).strip()
 
 
 class InspectionAgent:
@@ -105,6 +152,8 @@ class InspectionAgent:
         draft_translation: str,
         translation_rationale: str = "",
         translation_memory: list[dict[str, Any]] | None = None,
+        translation_profile: dict[str, Any] | None = None,
+        source_analysis: dict[str, Any] | None = None,
     ) -> InspectionResult:
         if self.config.mock:
             payload = inspection_payload(self.resources, source_text, draft_translation)
@@ -117,6 +166,8 @@ class InspectionAgent:
             draft_translation=draft_translation,
             translation_rationale=translation_rationale,
             translation_memory=translation_memory or [],
+            translation_profile=translation_profile,
+            source_analysis=source_analysis,
         )
         response = client.responses.create(
             model=self.config.review_model,
@@ -152,6 +203,8 @@ class InspectionAgent:
         draft_translation: str,
         translation_rationale: str,
         translation_memory: list[dict[str, Any]],
+        translation_profile: dict[str, Any] | None = None,
+        source_analysis: dict[str, Any] | None = None,
     ) -> str:
         memory_json = json.dumps(translation_memory, ensure_ascii=False, indent=2)
         return self.prompt_template.format(
@@ -163,6 +216,8 @@ class InspectionAgent:
             draft_translation=draft_translation,
             translation_rationale=translation_rationale or "- none",
             memory_json=memory_json,
+            translation_profile_context=_format_profile_context(translation_profile) or "- none",
+            source_analysis_context=_format_source_analysis_context(source_analysis) or "- none",
         )
 
     def _koreanize_payload(self, payload: dict[str, Any]) -> None:
@@ -173,6 +228,7 @@ class InspectionAgent:
         for row in issues:
             texts.append(row.get("context", ""))
             texts.append(row.get("problem", ""))
+            texts.append(row.get("keep_intent", ""))
 
         translated = koreanize_texts(texts, model=self.config.review_model)
         cursor = 0
@@ -182,6 +238,8 @@ class InspectionAgent:
             row["context"] = translated[cursor]
             cursor += 1
             row["problem"] = translated[cursor]
+            cursor += 1
+            row["keep_intent"] = translated[cursor]
             cursor += 1
 
     @staticmethod
@@ -196,6 +254,8 @@ class InspectionAgent:
                     translated_span=row["translated_span"],
                     problem=row["problem"],
                     suggested=row["suggested"],
+                    review_label=row.get("review_label", ""),
+                    keep_intent=row.get("keep_intent", ""),
                 )
                 for row in payload.get("issues", [])
             ],

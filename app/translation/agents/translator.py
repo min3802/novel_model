@@ -71,6 +71,41 @@ class TranslationDraft:
     raw_response: dict[str, Any]
 
 
+def _format_profile_context(profile: dict[str, Any] | None) -> str:
+    profile = profile or {}
+    if not profile:
+        return ""
+    return "\n".join(
+        [
+            "[TRANSLATION_PROFILE]",
+            f"- tone: {profile.get('tone', '')}",
+            f"- dialogue_style: {profile.get('dialogue_style', '')}",
+            f"- narration_style: {profile.get('narration_style', '')}",
+            f"- localization_level: {profile.get('localization_level', '')}",
+            f"- proper_noun_policy: {profile.get('proper_noun_policy', '')}",
+            f"- culture_policy: {profile.get('culture_policy', '')}",
+            f"- do_not: {', '.join(profile.get('do_not') or [])}",
+        ]
+    ).strip()
+
+
+def _format_source_analysis_context(analysis: dict[str, Any] | None) -> str:
+    analysis = analysis or {}
+    if not analysis:
+        return ""
+    return "\n".join(
+        [
+            "[SOURCE_ANALYSIS]",
+            f"- summary: {analysis.get('summary', '')}",
+            f"- scene_functions: {', '.join(analysis.get('scene_functions') or [])}",
+            f"- emotions: {', '.join(analysis.get('emotions') or [])}",
+            f"- idiom_candidates: {', '.join(analysis.get('idiom_candidates') or []) or 'none'}",
+            f"- cultural_elements: {', '.join(analysis.get('cultural_elements') or []) or 'none'}",
+            f"- speech_hints: {', '.join(analysis.get('speech_hints') or []) or 'none'}",
+        ]
+    ).strip()
+
+
 class Translator:
     def __init__(self, config: PipelineConfig):
         self.config = config
@@ -84,6 +119,8 @@ class Translator:
         retrievals: list[RetrievalResult],
         *,
         memory_context: str = "",
+        translation_profile: dict[str, Any] | None = None,
+        source_analysis: dict[str, Any] | None = None,
     ) -> TranslationDraft:
         reference_ids = [str(row.item.get("source_id") or row.item.get("id") or "") for row in retrievals if (row.item.get("source_id") or row.item.get("id"))]
         if self.config.mock:
@@ -101,14 +138,12 @@ class Translator:
         context = IdiomRetriever.build_context(retrievals)
         if memory_context.strip():
             context = "\n\n[작품 메모리 / 온톨로지 참고]\n" + memory_context.strip() + "\n\n[RAG 참고]\n" + context
-        target_language = self.resources.target_language
         schema_name = f"{self.resources.locale}_translation".replace("-", "_")
-        prompt = self.prompt_template.format(
-            common_korean_rule=self.common_korean_rule,
-            source_language=self.resources.source_language,
-            target_language=target_language,
+        prompt = self._build_prompt(
             source_text=source_text,
             rag_context=context,
+            translation_profile=translation_profile,
+            source_analysis=source_analysis,
         )
 
         response = client.responses.create(
@@ -137,4 +172,22 @@ class Translator:
             reference_ids=payload["reference_ids"],
             translation_decisions=payload["translation_decisions"],
             raw_response=payload,
+        )
+
+    def _build_prompt(
+        self,
+        *,
+        source_text: str,
+        rag_context: str,
+        translation_profile: dict[str, Any] | None = None,
+        source_analysis: dict[str, Any] | None = None,
+    ) -> str:
+        return self.prompt_template.format(
+            common_korean_rule=self.common_korean_rule,
+            source_language=self.resources.source_language,
+            target_language=self.resources.target_language,
+            source_text=source_text,
+            rag_context=rag_context,
+            translation_profile_context=_format_profile_context(translation_profile) or "- none",
+            source_analysis_context=_format_source_analysis_context(source_analysis) or "- none",
         )

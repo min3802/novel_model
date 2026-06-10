@@ -7,6 +7,7 @@ from .translation_pipeline import (
     AgentWorkflowResult,
     TranslationPipeline,
 )
+from .translation_graph import TranslationGraph, TranslationState
 from .text_processing.terminology import extract_noun_terminology_candidates, render_terminology_context
 
 __all__ = [
@@ -21,7 +22,9 @@ __all__ = [
     "InspectionAgent",
     "InspectionResult",
     "PipelineConfig",
+    "TranslationGraph",
     "TranslationPipeline",
+    "TranslationState",
     "extract_noun_terminology_candidates",
     "render_terminology_context",
 ]

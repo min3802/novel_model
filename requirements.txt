@@ -3,6 +3,7 @@ requests>=2.31
 python-dotenv>=1.0
 openai>=1.0
 numpy>=1.26
+langgraph>=1.2,<2
 
 # HTML parsing (bs4)
 beautifulsoup4>=4.12
