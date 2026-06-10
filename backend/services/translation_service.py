@@ -5,30 +5,15 @@ from __future__ import annotations
 from dataclasses import asdict
 from typing import Any
 
-from app.translation import ChatMessage, TranslationPipeline, PipelineConfig
-from app.translation.text_processing.consistency_checker import check_translation_consistency
+from app.translation import ChatMessage, PipelineConfig, TranslationPipeline
+from app.translation.infra.country_locale import COUNTRY_TO_LOCALE, resolve_locale_for_country
 from app.translation.infra.runtime import is_mock_mode
-from app.translation.text_processing.terminology import (
-    extract_noun_terminology_candidates,
-    merge_terminology,
-    render_terminology_context,
-)
+from app.translation.text_processing.consistency_checker import check_translation_consistency
 from backend.store.memory_store import _get_episode, save_translation_version, work_get
-
-COUNTRY_TO_LOCALE = {
-    "일본": "ko_ja",
-    "미국": "ko_en_us",
-    "중국": "ko_zh_cn",
-    "태국": "ko_th_th",
-}
 
 
 def _pipeline(locale: str) -> TranslationPipeline:
     return TranslationPipeline(PipelineConfig(locale=locale, mock=is_mock_mode()))
-
-
-def _config(locale: str) -> PipelineConfig:
-    return PipelineConfig(locale=locale, mock=is_mock_mode())
 
 
 BLOCK_MESSAGES = {
@@ -42,7 +27,7 @@ BLOCK_MESSAGES = {
 _DEFAULT_BLOCK = {
     "finalTranslation": "입력을 처리할 수 없어요. 입력 내용을 확인해 주세요.",
     "reviewSummary": "입력 확인이 필요합니다.",
-    "summary": "입력이 번역 모델 처리 대상에서 제외되었습니다.",
+    "summary": "입력이 번역 모델 처리 대상으로 보이지 않았습니다.",
 }
 
 
@@ -72,12 +57,11 @@ def _blocked_response(
     }
 
 
-# Inspector severity(LOW~CRITICAL) 기준 사용자용 라벨.
 SEVERITY_LABELS = {
-    "LOW": ("참고", "큰 수정은 필요 없지만, 표시된 구간을 한 번 확인해보세요."),
-    "MEDIUM": ("주의", "현지화·표현 리스크가 있어 사람이 한 번 더 확인하는 것이 좋습니다."),
-    "HIGH": ("현지화 조정 권장", "문화권 적합성 문제가 있어 표시된 구간을 다듬는 것이 좋습니다."),
-    "CRITICAL": ("재작성 권장", "법적/플랫폼/문화권 리스크가 커서 해당 구간을 반드시 손보는 것이 좋습니다."),
+    "LOW": ("李멸퀬", "???섏젙? ?꾩슂 ?놁?留? ?쒖떆??援ш컙????踰??뺤씤?대낫?몄슂."),
+    "MEDIUM": ("二쇱쓽", "?꾩??붋룻몴??由ъ뒪?ш? ?덉뼱 ?щ엺????踰????뺤씤?섎뒗 寃껋씠 醫뗭뒿?덈떎."),
+    "HIGH": ("?꾩???議곗젙 沅뚯옣", "臾명솕沅??곹빀??臾몄젣媛 ?덉뼱 ?쒖떆??援ш컙???ㅻ벉??寃껋씠 醫뗭뒿?덈떎."),
+    "CRITICAL": ("?ъ옉??沅뚯옣", "踰뺤쟻/?뚮옯??臾명솕沅?由ъ뒪?ш? 而ㅼ꽌 ?대떦 援ш컙??諛섎뱶???먮낫??寃껋씠 醫뗭뒿?덈떎."),
 }
 _SEVERITY_ORDER = ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
 
@@ -102,7 +86,6 @@ def _top_severity(issues: list[dict[str, Any]]) -> str:
 
 
 def format_review_summary(workflow: dict[str, Any]) -> str:
-    # Inspector 새 구조({summary, issues[]}) + Translator draft(rationale) 기준으로 요약을 구성한다.
     inspection = workflow.get("inspection", {}) or {}
     draft = workflow.get("draft", {}) or {}
     summary = _clean_summary_text(inspection.get("summary"))
@@ -112,43 +95,42 @@ def format_review_summary(workflow: dict[str, Any]) -> str:
     top_severity = _top_severity(issues)
     sev_title, sev_desc = SEVERITY_LABELS.get(
         top_severity,
-        ("참고", "구체적인 문제는 확인되지 않았습니다. 필요 시 표현을 한 번 더 살펴보세요."),
+        ("李멸퀬", "援ъ껜?곸씤 臾몄젣???뺤씤?섏? ?딆븯?듬땲?? ?꾩슂 ???쒗쁽????踰????댄렣蹂댁꽭??"),
     )
 
-    # 검출된 issue 들을 사람이 읽기 좋은 한국어 항목으로 변환.
     issue_lines: list[str] = []
     for idx, issue in enumerate(issues, start=1):
         sev = _clean_summary_text(issue.get("severity")).upper()
         problem = _clean_summary_text(issue.get("problem"))
         translated_span = _clean_summary_text(issue.get("translated_span"))
         suggested = _clean_summary_text(issue.get("suggested"))
-        parts = [f"{idx}) [{sev or '확인'}] {problem or '확인이 필요한 표현입니다.'}"]
+        parts = [f"{idx}) [{sev or '?뺤씤'}] {problem or '?뺤씤???꾩슂???쒗쁽?낅땲??'}"]
         if translated_span:
-            parts.append(f"   - 대상 구간: {translated_span}")
+            parts.append(f"   - ???援ш컙: {translated_span}")
         if suggested:
-            parts.append(f"   - 제안: {suggested}")
+            parts.append(f"   - ?쒖븞: {suggested}")
         issue_lines.append("\n".join(parts))
 
     sections: list[str] = [
         "\n".join([
-            "1. 핵심 검수 요약",
-            summary or "구체적인 문화권 리스크나 현지화 문제는 확인되지 않았습니다.",
-            f"권장 조치: {sev_title}",
+            "1. ?듭떖 寃???붿빟",
+            summary or "援ъ껜?곸씤 臾명솕沅?由ъ뒪?щ굹 ?꾩???臾몄젣???뺤씤?섏? ?딆븯?듬땲??",
+            f"沅뚯옣 議곗튂: {sev_title}",
             sev_desc,
         ]),
         "\n".join([
-            "2. 문제 구간 및 제안",
-            "\n\n".join(issue_lines) if issue_lines else "구간 단위로 보고된 문제는 없습니다.",
+            "2. 臾몄젣 援ш컙 諛??쒖븞",
+            "\n\n".join(issue_lines) if issue_lines else "援ш컙 ?⑥쐞濡?蹂닿퀬??臾몄젣???놁뒿?덈떎.",
         ]),
         "\n".join([
-            "3. 문체/현지화 전략",
-            rationale or "문체와 현지화 전략은 대상 국가 독자 기준으로 자연스러운지 살펴보세요.",
-            "이 항목은 문장 호흡, 어휘 선택, 문화적 완곡함을 함께 보는 용도입니다.",
+            "3. 臾몄껜/?꾩????꾨왂",
+            rationale or "臾몄껜? ?꾩????꾨왂? ???援?? ?낆옄 湲곗??쇰줈 ?먯뿰?ㅻ윭?댁? ?댄렣蹂댁꽭??",
+            "????ぉ? 臾몄옣 ?명씉, ?댄쐶 ?좏깮, 臾명솕???꾧끝?⑥쓣 ?④퍡 蹂대뒗 ?⑸룄?낅땲??",
         ]),
     ]
 
     if top_severity:
-        sections[0] += f"\n심각도: {top_severity}"
+        sections[0] += f"\n?ш컖?? {top_severity}"
 
     return "\n\n".join(sections)
 
@@ -162,15 +144,9 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
         raise ValueError("targetCountry is required")
     if not source_text:
         raise ValueError("sourceText is required")
-    locale = COUNTRY_TO_LOCALE.get(country)
+    locale = resolve_locale_for_country(country)
     if not locale:
         raise ValueError(f"unsupported targetCountry: {country}")
-    config = _config(locale)
-    terminology = payload.get("terminology") or payload.get("terms") or payload.get("glossary") or []
-    terminology_candidates = extract_noun_terminology_candidates(source_text)
-    active_terminology = merge_terminology(terminology, terminology_candidates)
-    terminology_context = render_terminology_context(active_terminology, locale, source_text=source_text)
-    retrieval_queries: list[str] = []
     if work_id is not None:
         work_id_int = int(work_id)
         work = work_get(work_id_int)
@@ -178,12 +154,11 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             raise ValueError(f"work {work_id_int} not found")
         if episode_id is not None and not _get_episode(work_id_int, int(episode_id)):
             raise ValueError(f"episode {episode_id} not found for work {work_id_int}")
-    workflow = TranslationPipeline(config).run_with_inspection(
+
+    workflow = _pipeline(locale).run_with_inspection(
         source_text,
+        request_payload=payload,
         translation_memory=[],
-        memory_context=terminology_context,
-        retrieval_queries=retrieval_queries,
-        context_extraction={"terminologyCandidates": terminology_candidates} if terminology_candidates else None,
     )
     data = asdict(workflow)
     if data.get("blocked"):
@@ -198,12 +173,12 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
         source_text=source_text,
         translated_text=final_translation,
         locale=locale,
-        terminology=terminology,
+        terminology=payload.get("terminology") or payload.get("terms") or payload.get("glossary") or [],
     )
     data["consistency"] = consistency
-    data["terminology_context"] = terminology_context
     review_summary = format_review_summary(data)
     saved_version: dict[str, Any] | None = None
+    terminology_memory = data.get("active_terminology") or data.get("terminology_candidates")
     if work_id is not None and episode_id is not None:
         saved_version = save_translation_version(
             work_id=int(work_id),
@@ -214,7 +189,7 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             final_translation=final_translation,
             review_summary=review_summary,
             workflow=data,
-            memory={"terms": active_terminology} if active_terminology else None,
+            memory={"terms": terminology_memory} if terminology_memory else None,
         )
     return {
         "country": country,
@@ -223,7 +198,7 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
         "reviewSummary": review_summary,
         "retrievalCount": len(data.get("retrievals", [])),
         "workflow": data,
-        "terminologyCandidates": terminology_candidates,
+        "terminologyCandidates": data.get("terminology_candidates", []),
         "memory": None,
         "translationVersion": saved_version,
     }

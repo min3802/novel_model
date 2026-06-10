@@ -5,7 +5,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from app.translation import ChatbotAgent, InspectionAgent, TranslationPipeline, PipelineConfig
+from app.translation import ChatbotAgent, InspectionAgent, PipelineConfig, TranslationPipeline
+from app.translation.agents.translator import Translator
 from app.translation.infra.prompt_loader import load_locale_constraints
 
 
@@ -98,6 +99,55 @@ class AgentWorkflowTests(unittest.TestCase):
         self.assertEqual(result.inspection["issues"], [])
         self.assertIn("translation", result.draft)
         self.assertTrue(result.reviewed_translation)
+
+
+    def test_translator_prompt_includes_profile_and_analysis(self) -> None:
+        agent = Translator(self._config())
+        prompt = agent._build_prompt(
+            source_text="??",
+            rag_context="[RAG]",
+            translation_profile={"tone": "literary", "do_not": ["flatten voice"]},
+            source_analysis={"summary": "scene summary", "scene_functions": ["dialogue"]},
+        )
+
+        self.assertIn("[TRANSLATION_PROFILE]", prompt)
+        self.assertIn("literary", prompt)
+        self.assertIn("[SOURCE_ANALYSIS]", prompt)
+        self.assertIn("scene summary", prompt)
+
+    def test_inspector_prompt_includes_profile_and_analysis(self) -> None:
+        agent = InspectionAgent(self._config())
+        prompt = agent._build_prompt(
+            source_text="??",
+            draft_translation="???",
+            translation_rationale="reason",
+            translation_memory=[],
+            translation_profile={"tone": "literary", "do_not": ["sanitize"]},
+            source_analysis={"summary": "scene summary", "emotions": ["anger"]},
+        )
+
+        self.assertIn("[TRANSLATION_PROFILE]", prompt)
+        self.assertIn("literary", prompt)
+        self.assertIn("[SOURCE_ANALYSIS]", prompt)
+        self.assertIn("anger", prompt)
+
+
+    def test_inspection_schema_requires_optional_fields_for_strict_json(self) -> None:
+        from app.translation.agents.inspector import INSPECTION_SCHEMA
+
+        issue_schema = INSPECTION_SCHEMA["properties"]["issues"]["items"]
+        self.assertIn("review_label", issue_schema["required"])
+        self.assertIn("keep_intent", issue_schema["required"])
+        self.assertIn("review_label", issue_schema["properties"])
+        self.assertIn("keep_intent", issue_schema["properties"])
+
+    def test_inspector_prompt_schema_example_mentions_required_optional_fields(self) -> None:
+        from app.translation.agents.inspector import InspectionAgent
+
+        prompt = InspectionAgent(self._config()).prompt_template
+        self.assertIn("review_label", prompt)
+        self.assertIn("keep_intent", prompt)
+        self.assertIn("Required issue fields", prompt)
 
 
 if __name__ == "__main__":
