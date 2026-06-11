@@ -48,6 +48,16 @@ class ServerBackedRequirementTests(unittest.TestCase):
             body = json.loads(exc.read().decode("utf-8") or "{}")
             raise AssertionError(f"{method} {path} failed: {exc.code} {body}") from exc
 
+    def request_binary(self, method: str, path: str) -> tuple[bytes, dict[str, str]]:
+        req = Request(f"{self.base_url}{path}", method=method)
+        try:
+            with urlopen(req, timeout=10) as res:
+                headers = {key: value for key, value in res.headers.items()}
+                return res.read(), headers
+        except HTTPError as exc:
+            body = exc.read().decode("utf-8") or ""
+            raise AssertionError(f"{method} {path} failed: {exc.code} {body}") from exc
+
     def create_work(self) -> dict[str, Any]:
         return self.request("POST", "/api/works", {"title": "Demo Work", "genre": "LitRPG"})
 
@@ -73,6 +83,62 @@ class ServerBackedRequirementTests(unittest.TestCase):
         deleted = self.request("DELETE", f"/api/localization-guides/{guide_id}")
         self.assertEqual(deleted, {"ok": True})
         self.assertEqual(self.request("GET", "/api/localization-guides")["guides"], [])
+        self.assertEqual(self.request("GET", "/api/dashboard-summary")["guideCount"], 0)
+
+    def test_localization_guide_pdf_download_is_generated_on_demand(self) -> None:
+        work = self.create_work()
+        guide = self.request(
+            "POST",
+            "/api/guide",
+            {"workId": work["id"], "title": work["title"], "targetCountry": "US", "genre": "LitRPG", "synopsis": "A hero enters a dungeon."},
+        )
+        record = guide.get("guideRecord")
+        self.assertIsInstance(record, dict)
+        guide_id = record["id"]
+
+        pdf_bytes, headers = self.request_binary("GET", f"/api/localization-guides/{guide_id}/pdf")
+        self.assertEqual(headers.get("Content-Type"), "application/pdf")
+        self.assertIn(b"%PDF", pdf_bytes[:8])
+        self.assertGreater(len(pdf_bytes), 1000)
+
+    def test_localization_guides_enforce_per_work_limit_of_five(self) -> None:
+        work = self.create_work()
+        created_ids: list[int] = []
+
+        for index in range(6):
+            guide = self.request(
+                "POST",
+                "/api/guide",
+                {
+                    "workId": work["id"],
+                    "title": work["title"],
+                    "targetCountry": "US",
+                    "genre": "LitRPG",
+                    "synopsis": f"A hero enters dungeon floor {index + 1}.",
+                },
+            )
+            record = guide.get("guideRecord")
+            self.assertIsInstance(record, dict)
+            created_ids.append(record["id"])
+
+        self.assertIn("storageNotice", guide)
+        self.assertEqual(guide["storageNotice"]["guideLimit"], 5)
+        self.assertEqual(guide["storageNotice"]["removedGuideIds"], [created_ids[0]])
+
+        listing = self.request("GET", f"/api/localization-guides?workId={work['id']}")
+        listed_ids = [row["id"] for row in listing["guides"]]
+        self.assertEqual(len(listed_ids), 5)
+        self.assertNotIn(created_ids[0], listed_ids)
+        self.assertEqual(listed_ids, sorted(listed_ids, reverse=True))
+
+    def test_synopsis_only_returns_recommendation_without_persisting(self) -> None:
+        summary_before = self.request("GET", "/api/dashboard-summary")
+        self.assertEqual(summary_before["guideCount"], 0)
+
+        result = self.request("POST", "/api/guide", {"genre": "LitRPG", "synopsis": "A reborn hero enters a dungeon and grows stronger."})
+        self.assertTrue(result["requiresSelection"])
+        self.assertEqual(result["mode"], "synopsis_country_recommendation")
+        self.assertNotIn("guideRecord", result)
         self.assertEqual(self.request("GET", "/api/dashboard-summary")["guideCount"], 0)
 
     def test_generated_assets_are_server_backed_list_detail_delete(self) -> None:

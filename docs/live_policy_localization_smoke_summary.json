@@ -1,0 +1,24 @@
+{
+  "status": 200,
+  "title": "Japan 현지화 가이드",
+  "targetCountry": "Japan",
+  "displayCountry": "Japan",
+  "genre": "로맨스 판타지",
+  "mode": "synopsis_country_recommendation",
+  "synopsisPresent": true,
+  "synopsisInferredElements": [
+    "회귀·전생·이세계 축",
+    "전투·생존 축",
+    "연령/민감 표현 축"
+  ],
+  "policyCardCount": 7,
+  "contextPackBriefing": true,
+  "contextPackEvidence": true,
+  "generationMode": "deterministic_rag_fallback",
+  "htmlExportsRegeneratedAt": "2026-06-09T00:55:58.321764+00:00",
+  "htmlFiles": [
+    "docs/live_policy_intermediate_html_report.html",
+    "docs/live_policy_intermediate_policy_cards.html",
+    "docs/live_policy_final_localization_report.html"
+  ]
+}

@@ -1,0 +1,2419 @@
+{
+  "market": "Japan",
+  "language_market": "Japanese",
+  "raw_language": "ja",
+  "platform": "Kakuyomu",
+  "signal_type": "weekly_ranking",
+  "target_limit": 100,
+  "records": [
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 1,
+      "title": "実力派の有名悪役俳優(30歳)は、週刊誌に実生活では物凄く良い人であることを暴露されてしまってイメージが全て崩壊。そして人生が終了...する？",
+      "labels": [
+        "ラブコメ",
+        "悪役俳優",
+        "女優",
+        "女子アナ",
+        "アイドル",
+        "美人マネージャー",
+        "実力派",
+        "恋愛",
+        "芸能界"
+      ],
+      "synopsis": "主人公、柳楽雄大(30歳)は、その風貌や雰囲気から、悪役俳優と呼ばれる存在として群雄割拠の芸能界を生きている男。 悪役俳優の道を進むと決意した時から、私生活でも本来であればある…",
+      "public_metrics": {
+        "stars": 12063,
+        "platform_rank": 1
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 2,
+      "title": "自分が主人公じゃないことにようやく気付いた男は、流れ着いた片田舎で魔術を教える",
+      "labels": [
+        "異世界ファンタジー",
+        "主人公最強格",
+        "現地主人公",
+        "魔術",
+        "スローライフ",
+        "ハーレム？",
+        "学園",
+        "育成",
+        "万人向け"
+      ],
+      "synopsis": "魔術師アーサーはかつて天才であった。 だが特別な才能の前に挫折し、傷心のままとある田舎の村に流れ着く。 ある日村長からのお願いで、アーサーはシズという少女に魔術を教えることにな…",
+      "public_metrics": {
+        "stars": 6946,
+        "platform_rank": 2
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 3,
+      "title": "異世界で奴隷になった同級生（剣聖）を買ったらヤンデレだった。〜金貨2枚で追放された俺、実は世界唯一のポーション生成士〜",
+      "labels": [
+        "ラブコメ",
+        "異世界転移",
+        "クラス転移",
+        "追放",
+        "ヤンデレ",
+        "チート",
+        "恋愛",
+        "ファンタジー",
+        "ハーレム"
+      ],
+      "synopsis": "「無能は去れ」 グランタリア王国からわずか金貨2枚で追放された【ポーション生成士】の影山。だが、彼が生成するポーションは、世界の常識を覆す「超高純度」の逸品だった。 ​追放から1…",
+      "public_metrics": {
+        "stars": 2265,
+        "platform_rank": 3
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 4,
+      "title": "灰の剣士は魔剣と眠る",
+      "labels": [
+        "異世界ファンタジー",
+        "カクヨムオンリー",
+        "男性向け",
+        "戦え",
+        "寝ろ",
+        "剣士",
+        "先輩",
+        "過酷"
+      ],
+      "synopsis": "田舎で育った少年のアスラは、家族に売られて魔王軍と戦うことになった。 スタートは底辺。 訓練もさせてもらえない、武器は死体から拾って使う。 優遇されていた長男とは違って身体も細…",
+      "public_metrics": {
+        "stars": 3742,
+        "platform_rank": 4
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 5,
+      "title": "分身スキルの最強戦術って自爆特攻じゃね？ 最新",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生",
+        "曇らせ",
+        "冒険",
+        "成り上がり",
+        "分身",
+        "勘違い"
+      ],
+      "synopsis": "「俺が死んだと思ったって？ いやそれ分身だから」 そんな感じの主人公が周囲の人の脳みそをこんがり焼いたり、美味しいご飯を食べようとしたり、がんばってお金を稼いだり、分身が巻き込…",
+      "public_metrics": {
+        "stars": 2741,
+        "platform_rank": 5
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 6,
+      "title": "その子供、伝説の剣聖につき",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生",
+        "男主人公",
+        "剣と魔法",
+        "迷宮",
+        "最強",
+        "冒険者"
+      ],
+      "synopsis": "◆コミカライズ 第1巻 6/8発売予定 コミックグロウルにて連載中◆ アルフレッド・スチュアートはかつて起きた魔物の大侵攻で活躍し、剣聖と呼ばれた英雄である。 その功績で祖国の…",
+      "public_metrics": {
+        "stars": 2567,
+        "platform_rank": 6
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 7,
+      "title": "少年漫画によくいる主人公と嫌々敵対しているタイプの公務員に転生した",
+      "labels": [
+        "現代ファンタジー",
+        "ライトノベル",
+        "架空原作",
+        "男主人公",
+        "異世界",
+        "転生",
+        "ほのぼの",
+        "シリアス"
+      ],
+      "synopsis": "上の命令だし仕事だから仕方なく敵対してるけど、心情的には割と主人公側だしできれば戦いたくないんだけどなぁ……。 みたいなスタンスで、時には強敵として、時には心強い仲間として戦うタ…",
+      "public_metrics": {
+        "stars": 1693,
+        "platform_rank": 7
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 8,
+      "title": "辺境貴族の俺と婚約した黒幕公爵家の令嬢が可愛すぎた件",
+      "labels": [
+        "異世界ファンタジー",
+        "主人公最強",
+        "異世界",
+        "ラブコメ",
+        "剣と魔法",
+        "ファンタジー",
+        "イチャイチャ",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "魔物が多い領地で有名な子爵家三男として生まれた俺——アクセル・ライド。 脳筋一家の生まれだが、勉強の楽しさに目覚めたため、文官を目指していた。 運命が大きく動いたのは…",
+      "public_metrics": {
+        "stars": 9638,
+        "platform_rank": 8
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 9,
+      "title": "マジックパンク〜転移先のスラムで底辺冒険者をしていたら、なぜか裏社会で危険人物認定された件〜",
+      "labels": [
+        "SF",
+        "サイバーパンク",
+        "成り上がり",
+        "異世界転移",
+        "主人公最強",
+        "ダンジョン",
+        "成長",
+        "スキル",
+        "魔術×銃"
+      ],
+      "synopsis": "ある日、御影シオンは異世界に転移した。 しかし転移したのは光るネオン、降りしきる酸性雨、都市が企業によって統治されている世界だった。 その中で言語を魔術で覚えるために多額の借金を…",
+      "public_metrics": {
+        "stars": 1634,
+        "platform_rank": 9
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 10,
+      "title": "会社をクビになった俺、深夜ダンジョンでゴミ拾いしてたら【鑑定】が覚醒して配信界のトップになった",
+      "labels": [
+        "現代ファンタジー",
+        "ダンジョン",
+        "鑑定チート",
+        "配信",
+        "ざまぁ少な目",
+        "成り上がり",
+        "無自覚チート",
+        "お仕事もの"
+      ],
+      "synopsis": "※【新着6/4】サポーター様専用のSS第4話目を近況ノート更新しました！ ※小説家になろうローファンタジーランキングにて、日間・週間・月間、四半期1位、年間2位を獲得中※ 会社を…",
+      "public_metrics": {
+        "stars": 2986,
+        "platform_rank": 10
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 11,
+      "title": "近所のガキ達相手に師匠面して千年後、久しぶりに戻ったら色々荒れてた",
+      "labels": [
+        "異世界ファンタジー",
+        "TS",
+        "ダークエルフ",
+        "勘違い",
+        "主人公強い",
+        "微曇らせ",
+        "師匠",
+        "魔法",
+        "性転換"
+      ],
+      "synopsis": "ヒキニートだった主人公は、「いい加減里に貢献しろ」と親にエルフの里の子守りを任される。しぶしぶそれを引き受け、子供達相手に師匠面をして遊んでいたある日、魔法の発動ミスで、主人公ひ…",
+      "public_metrics": {
+        "stars": 8677,
+        "platform_rank": 11
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 12,
+      "title": "心優しいダークヒーローおじさん 転生現代ダンジョンで自由に排除してたら虐められっ子JKに弟子入りされる【5/29一巻発売】",
+      "labels": [
+        "現代ファンタジー",
+        "ダンジョン",
+        "ざまぁ",
+        "主人公最強",
+        "お仕事",
+        "無双",
+        "転生",
+        "男性向け",
+        "ライトノベル"
+      ],
+      "synopsis": "社畜ゲーマー、影一普通が転生した先はなぜかダンジョンが当たり前にある現代日本。そのダンジョンは転生前、影一がやり込んでいたゲーム”LAW”によく似ており、影一は新たな日本で最強の…",
+      "public_metrics": {
+        "stars": 5650,
+        "platform_rank": 12
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 13,
+      "title": "スラムの子、コツコツ金稼ぎ",
+      "labels": [
+        "異世界ファンタジー",
+        "ダンジョン",
+        "魔眼",
+        "チート",
+        "成り上がり",
+        "差別",
+        "ざまぁ？",
+        "主人公最強？",
+        "現地主人公"
+      ],
+      "synopsis": "アスクレイは、一人だ。 五才で母を亡くしてから、ずっと貧困と犯罪の統べるスラム街を生き残ってきた。 心に秘めた密かな願いは、ささやかな幸せ。 きちんとした家に暮らして、暖か…",
+      "public_metrics": {
+        "stars": 2680,
+        "platform_rank": 13
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 14,
+      "title": "「料理しかできない」と最深層に捨てられた給食係、腹ペコ少女を餌付けしたら世界がざわつき始めた〜え、この子って都市を灰にする滅国級の竜姫なんですか？〜",
+      "labels": [
+        "現代ファンタジー",
+        "現代ダンジョン",
+        "追放ざまぁ",
+        "飯テロ",
+        "無自覚最強",
+        "掲示板・配信",
+        "激重ヒロイン",
+        "勘違い・すれ違い",
+        "AI利用"
+      ],
+      "synopsis": "「料理しかできないやつは、もういらない」 大手探索者チームの『給食係』だった棗庭しずくは、 ダンジョンの最深層に置き去りにされた。 食料は三日分。武器は包丁一本。 死を覚悟し…",
+      "public_metrics": {
+        "stars": 1771,
+        "platform_rank": 14
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 15,
+      "title": "テイムした雑魚が全員S級進化しました ――誰も育てない雑魚魔獣を最強まで育成した結果、世界最強テイマーになった件――",
+      "labels": [
+        "現代ファンタジー",
+        "ダンジョン",
+        "テイマー",
+        "成り上がり",
+        "育成",
+        "進化",
+        "配信",
+        "ざまぁ"
+      ],
+      "synopsis": "世界各地に突如出現した“ダンジョン”。 人類は魔物と資源を手にし、新時代へ突入した。 十八歳で職業適性が決まる現代。 剣士、魔導師、治癒師――華やかな当たり職がもてはやさ…",
+      "public_metrics": {
+        "stars": 730,
+        "platform_rank": 15
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 16,
+      "title": "ダンジョンから帰ったら五十年経ってたんだが。～え？昔の仲間が今や大手ギルドの代表？なにそれ知らん……こわ……～",
+      "labels": [
+        "現代ファンタジー",
+        "現代ダンジョン",
+        "ダンジョン配信",
+        "掲示板形式",
+        "コメディ",
+        "晴れ時々大雨"
+      ],
+      "synopsis": "世界にダンジョンという、いくつもの『扉』が出現してから、早五十年。 人類はこの未知の脅威に対し、慎重に対処をしようとしていた。しかし、その『扉』から現れた異形のモノたちが…",
+      "public_metrics": {
+        "stars": 711,
+        "platform_rank": 16
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 17,
+      "title": "社畜に異世界は生ぬるい〜奉公から始まる楽勝平民ライフ",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生"
+      ],
+      "synopsis": "目覚めたら、明日から奉公、異世界幼児。字余り。 しかしこちとら、16年分の教育とブラックで培った根性がある。 異世界ライフ、楽勝でしょ！",
+      "public_metrics": {
+        "stars": 3677,
+        "platform_rank": 17
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 18,
+      "title": "転生30年。成り上がりスローライフで教師をしてたら乙女ゲーム転生だった",
+      "labels": [
+        "異世界ファンタジー",
+        "乙女ゲーム",
+        "転生",
+        "教師",
+        "エルフ",
+        "悪役令嬢",
+        "聖女",
+        "王子"
+      ],
+      "synopsis": "貴族、庶子、追放。 よっしゃ！成り上がり転生だ！そしてスローライフだ！と過ごして30年。 今さら乙女ゲームとか聞いてないが！？ それでも俺は我が道を突き進む！と乙女ゲームの舞…",
+      "public_metrics": {
+        "stars": 11573,
+        "platform_rank": 18
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 19,
+      "title": "罰ゲームで嘘告してきた幼馴染を見限ったら、クラスの美少女が「ねぇ、変わりたい？」と微笑んだ。〜今さら後悔する幼馴染は放っておこう。だって俺は彼女との約束で忙しいので〜",
+      "labels": [
+        "ラブコメ",
+        "男主人公",
+        "幼馴染",
+        "嘘告",
+        "黒髪美少女ヒロイン",
+        "曇らせ",
+        "後悔",
+        "学園ラブコメ",
+        "甘々"
+      ],
+      "synopsis": "冴えない陰キャ高校生の灰原朔人は、密かに想いを寄せていた幼馴染の星川莉奈から告白される。しかし、それは罰ゲームによる「嘘告」だった。 初恋を踏みにじられ、笑い者にする莉奈へ完全…",
+      "public_metrics": {
+        "stars": 2255,
+        "platform_rank": 19
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 20,
+      "title": "《5/29 第一巻発売》おまえだけは選ばない 《カクヨムコンテスト10 特別賞＆コミカライズ賞 受賞》",
+      "labels": [
+        "恋愛",
+        "タイムリープ",
+        "友情",
+        "オーケストラ",
+        "アンサンブル",
+        "ミステリー",
+        "高校",
+        "青春"
+      ],
+      "synopsis": "ついにスニーカー文庫より第一巻が発売されます。 一巻は基本となる部分なのでカクヨム版と流れを変えませんが、二巻以降はストーリーが変わっていきます。 『おまえだけは選ばない』流に…",
+      "public_metrics": {
+        "stars": 16423,
+        "platform_rank": 20
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 21,
+      "title": "国家契約の救助探索者、配信中の美人探索者を救ったら“回収屋”としてバズり始めた",
+      "labels": [
+        "現代ファンタジー",
+        "ダンジョン",
+        "魔法",
+        "掲示板",
+        "主人公最強",
+        "カクヨムオンリー",
+        "AI補助利用",
+        "男性向け",
+        "配信"
+      ],
+      "synopsis": "ダンジョンが日常となった現代。 探索者たちは魔石や素材を求め、時に配信者として人気を集めながら、危険な迷宮へと潜っていた。 南雲司朗は、国家から特別に契約を受ける救助専門の探索…",
+      "public_metrics": {
+        "stars": 894,
+        "platform_rank": 21
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 22,
+      "title": "曇りゆく勇者へ捧ぐ闇堕ちの美学（旧：勇者に勝ちたいだけなのに、魔王の剣が闇堕ちした宿敵ムーブを強要してくるせいで周りが曇り始めた。）",
+      "labels": [
+        "異世界ファンタジー",
+        "いずれ主人公最強",
+        "剣と魔法",
+        "女尊男卑",
+        "あべこべ",
+        "闇落ち",
+        "曇らせ",
+        "激重感情",
+        "ヤンデレ"
+      ],
+      "synopsis": "──少年は、勇者に勝ちたいだけだった。 女神の祝福が女性にしか宿らないエウリア聖王国で、男は守られる存在とされている。 少年ユリス・アステルは、そんな世界で、幼馴染であ…",
+      "public_metrics": {
+        "stars": 1180,
+        "platform_rank": 22
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 23,
+      "title": "異世界帰還者の俺、田舎でキャンプ場経営しながら料理していたらなぜか人類最強のS級認定され無双する",
+      "labels": [
+        "現代ファンタジー",
+        "男主人公",
+        "主人公最強",
+        "チート",
+        "ざまぁ",
+        "ダンジョン配信",
+        "掲示板",
+        "スローライフ",
+        "AI補助利用"
+      ],
+      "synopsis": "異世界での過酷な十年間を生き抜き、現代日本へ帰還した浅木 湊（あさぎ みなと）。 平和な世界で『美味しいご飯』を食べる事だけを望んでいた彼だが、所属していた探索者ギルドからは理…",
+      "public_metrics": {
+        "stars": 605,
+        "platform_rank": 23
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 24,
+      "title": "『結界魔法』しか使えない公爵家の次期当主ですが、弟に婚約者を奪われ辺境に追放されました 〜氷の辺境伯令嬢とスローライフを満喫中なので、今更泣きついてこないでください〜",
+      "labels": [
+        "異世界ファンタジー",
+        "カクヨムオンリー",
+        "ざまぁ",
+        "ざまあ",
+        "辺境伯",
+        "スローライフ",
+        "NTR",
+        "婚約破棄",
+        "復讐"
+      ],
+      "synopsis": "フォルクハルト公爵家の長男・クラヴィスは魔法が使えない無能として家族から蔑まれていた。 世界中でダンジョンが活性化し魔獣が溢れかえる中、公爵領だけが被害ゼロだった理由。それはク…",
+      "public_metrics": {
+        "stars": 3768,
+        "platform_rank": 24
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 25,
+      "title": "音属性の魔法使い 〜無能のハズレ属性だと追放されたおっさんが物理知識で魔法をハック。指先一つで炎・氷を操る俺を大賢者と勘違いしているようです〜",
+      "labels": [
+        "異世界ファンタジー",
+        "追放",
+        "ハズレ属性",
+        "ざまぁ",
+        "実は最強",
+        "勘違い",
+        "チート",
+        "おっさん",
+        "男主人公"
+      ],
+      "synopsis": "37歳の誕生日にリオンは突如してパーティーから追放されクランから懲戒解雇を言い渡される。 無能のハズレ属性、音属性では再就職の道も難しくどん底に落とされた彼は途方に暮れる。 しか…",
+      "public_metrics": {
+        "stars": 3110,
+        "platform_rank": 25
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 26,
+      "title": "万年二番と馬鹿にされる凡人、何故か幼馴染を差し置いて天才高校生VTuberユニットのメンバー募集に合格してしまう",
+      "labels": [
+        "現代ドラマ",
+        "ざまぁ",
+        "幼馴染",
+        "VTuber",
+        "成り上がり",
+        "いずれ主人公最強",
+        "青春",
+        "創作",
+        "努力無双"
+      ],
+      "synopsis": "万年二番。それが、夏代燎のこれまでの人生だった。 何をやっても一番になれない。何をやっても自分よりすごい奴がいる。 そんな状況を変えたくて天才たちが集う高校に入ったけれど、そこ…",
+      "public_metrics": {
+        "stars": 4606,
+        "platform_rank": 26
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 27,
+      "title": "底辺大賢者の不本意な伝説",
+      "labels": [
+        "異世界ファンタジー",
+        "魔法",
+        "恋愛",
+        "冒険",
+        "コメディ",
+        "ライトノベル",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "「でも、僕が魔法使いになったのは外界を探索するためではありません。僕は世界平和のために――」 「見苦しい。黙って行け！」 魔法使いになって偉くなればモテモテの人生薔…",
+      "public_metrics": {
+        "stars": 1525,
+        "platform_rank": 27
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 28,
+      "title": "その〝声〟は何を語る ～憑かれ体質少年、演技の世界へと誘われる～",
+      "labels": [
+        "現代ドラマ",
+        "三人称視点",
+        "演技／演劇",
+        "俳優／女優",
+        "プチホラー要素",
+        "子役",
+        "配信"
+      ],
+      "synopsis": "物心ついた時から、人ならざるものが見えた少年――気仙響哉。 見えるだけならばともかく、眠る度に憑いてきたものの人生を、その霊が生きてきた頃の主観を通して体験するという特異体質を持…",
+      "public_metrics": {
+        "stars": 665,
+        "platform_rank": 28
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 29,
+      "title": "【第二部、完！！】巡礼中の聖女をもてなしたら家に居着いて旅立たないんだが",
+      "labels": [
+        "異世界ファンタジー",
+        "スローライフ",
+        "イチャイチャ",
+        "ラブコメ",
+        "ほのぼの",
+        "グルメ",
+        "異世界転生",
+        "聖女",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "エルデ王国の小さな村で暮らす青年、エイトには秘密がある。 彼と彼の住む家は電気やガス、水道を自由に使える日本から転移してきたチートハウスなのだ。 それから三年、村人との交…",
+      "public_metrics": {
+        "stars": 9360,
+        "platform_rank": 29
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 30,
+      "title": "男女比1:9の貞操観念が逆転した世界で、俺の家の給湯器が何故かやたらと壊れる。",
+      "labels": [
+        "ラブコメ",
+        "ヤンデレ",
+        "曇らせ",
+        "激重",
+        "男女比逆転",
+        "ハーレム",
+        "貞操逆転",
+        "溺愛"
+      ],
+      "synopsis": "俺、狭山弥は平凡な大学生だった。 ある雨の夜に倒れているところを保護され、目覚めた先は見知らぬ世界。 男女比1:9、女性の性欲が強く男性が『被保護対象』である、常識が逆転したパラ…",
+      "public_metrics": {
+        "stars": 692,
+        "platform_rank": 30
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 31,
+      "title": "公園で知り合ったアイドル志望の美少女がバズってアイドルになったので距離を置いたら表情が曇った",
+      "labels": [
+        "ラブコメ",
+        "曇らせ",
+        "ほのぼの",
+        "じれあま",
+        "ヤンデレ",
+        "美少女",
+        "アイドル",
+        "激重感情",
+        "鈍感主人公"
+      ],
+      "synopsis": "公園で知り合った美少女・星野雫。ひょんなことから彼女の動画がバズってしまい、夢だったアイドルとしてデビューすることに。アイドルが男と二人でいるなんてご法度。だから距離を置こうとし…",
+      "public_metrics": {
+        "stars": 1015,
+        "platform_rank": 31
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 32,
+      "title": "【6/5完結】就職先が倒産したので牧場を継いだら、俺だけ馬の声が聞こえるようになりました",
+      "labels": [
+        "現代ファンタジー",
+        "牧場",
+        "競馬",
+        "チート",
+        "男主人公",
+        "現代",
+        "コメディ"
+      ],
+      "synopsis": "大学四年生、卒業を間近に控えた三月。 友人と飲んでいる時に居酒屋のテレビで内定先の倒産を知る。 ウイポを買って仮想牧場主になろうとしたが、田舎の爺さんから電話が来て、リアルで牧場…",
+      "public_metrics": {
+        "stars": 16583,
+        "platform_rank": 32
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 33,
+      "title": "過労死した元社畜、2億ギル貯めてFIREするはずが勇者たちの感情が重すぎる",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生",
+        "ラブコメ",
+        "ハーレム",
+        "ファンタジー",
+        "勇者パーティ",
+        "激重感情",
+        "社畜",
+        "ヤンデレ"
+      ],
+      "synopsis": "ドラゴンの咆哮も、ヒロインの激重感情も、社畜には効かない。 俺の目標は2億ギル貯めてのFIRE。田舎で畑を耕す、それだけだ。 ブラック企業で過労死した元社畜・ノルが選んだ職業は…",
+      "public_metrics": {
+        "stars": 868,
+        "platform_rank": 33
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 34,
+      "title": "断罪されている悪役令嬢ですが、そういえば前世は大魔法使いでした",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生",
+        "大魔法使い",
+        "悪役令嬢",
+        "スローライフ？",
+        "ハッピーエンド",
+        "チート",
+        "ざまぁ"
+      ],
+      "synopsis": "辺境伯令嬢、シェリー・クリステンは婚約者だった第二王子アルスに冤罪をかけられ、断罪された。 彼の傍らには聖女候補の少女、マーガレットの姿がある。ご丁寧に取り巻きを引き連れて、…",
+      "public_metrics": {
+        "stars": 4766,
+        "platform_rank": 34
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 35,
+      "title": "世間がレベルだのダンジョンだの騒ぐ中、廃ゲーマーの俺は只々実績を狙っていく〜実績獲得に世界初達成報酬があるとか聞いてないんだけど〜",
+      "labels": [
+        "現代ファンタジー",
+        "ダンジョン",
+        "成り上がり",
+        "ざまぁ",
+        "主人公最強",
+        "カクヨムオンリー",
+        "ゲーム要素",
+        "覚醒者"
+      ],
+      "synopsis": "世界各地に黒い球体──ゲートが出現した。 中にはダンジョンという未知の空間が広がっているらしい。 そして同時に、特殊能力に覚醒したという報告が相次いで起こり始める。 高校一年生…",
+      "public_metrics": {
+        "stars": 715,
+        "platform_rank": 35
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 36,
+      "title": "ハズレスキル『汁属性』の魔術士、貴族になれなかったので辺境のママに養子に出される ～メイドさんがみんな、イヤな顔しながらぱんつを見せてくるのは、なぜですか？～",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生・領地運営・内政",
+        "ママヒロイン・年上メイド",
+        "年上女性・年下男性",
+        "ＡＩ補助使用",
+        "ハッピーエンド・完結保証",
+        "グルメ・飯テロ",
+        "ラブコメ・エロコメ",
+        "女性上位・男主人公ハーレム"
+      ],
+      "synopsis": "転生したら、貧乏男爵家の長男でした。 それでも貴族だから、と喜んでいたら、目覚めたスキルが謎の『汁属性』！？ そんなわけのわからん奴に男爵家は継がせられん、と他領へ養子に出される…",
+      "public_metrics": {
+        "stars": 920,
+        "platform_rank": 36
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 37,
+      "title": "あいつならどうせ許してくれると幼馴染に雑に扱われた俺、クラスカースト最強のギャルに拾われたら、幼馴染が曇りだした",
+      "labels": [
+        "ラブコメ",
+        "学園ラブコメ",
+        "幼馴染",
+        "ギャル",
+        "曇らせ",
+        "独占欲",
+        "依存",
+        "修羅場",
+        "三角関係"
+      ],
+      "synopsis": "影宮透真は、十年以上一緒に過ごしてきた幼馴染の雪代依織に、ずっと尽くしてきた。朝は起こす。弁当を作る。勉強を教える。体調が悪ければ、誰より先に気づく。 けれど依織は、そんな透…",
+      "public_metrics": {
+        "stars": 793,
+        "platform_rank": 37
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 38,
+      "title": "転生騎士のスローライフ～冤罪で辞めさせられたのでゆっくり自由に生活する～",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界",
+        "転生",
+        "騎士",
+        "ハーレム",
+        "最強",
+        "ざまぁ",
+        "自由"
+      ],
+      "synopsis": "俺は一度死んで異世界に転生した。 転生したのはある貴族の庶子だった。 だいぶ腫れもの扱いだったんだよな。 努力して得た身体強化の魔法を使い、 王国の騎士団として活動していたのだが…",
+      "public_metrics": {
+        "stars": 5890,
+        "platform_rank": 38
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 39,
+      "title": "腹ペコ異世界帰還者、S級モンスターを食材としか見ていなくて話が合わない",
+      "labels": [
+        "現代ファンタジー",
+        "掲示板",
+        "ダンジョン配信",
+        "バズ",
+        "勘違い",
+        "主人公最強",
+        "帰還者",
+        "ざまぁ"
+      ],
+      "synopsis": "異世界で20年の過酷なサバイバルを生き抜き、奇跡の生還を果たした男。 懐かしの故郷で平和な生活を送るはずが、帰還した地球は激変していた。 世界で唯一、日本にだけ未知の資源を産…",
+      "public_metrics": {
+        "stars": 7813,
+        "platform_rank": 39
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 40,
+      "title": "迷宮都市の石路〜その日暮らしの転生者〜",
+      "labels": [
+        "異世界ファンタジー",
+        "カクヨムオンリー",
+        "異世界転生",
+        "魔法",
+        "ファンタジー",
+        "ダンジョン",
+        "男主人公",
+        "成長",
+        "男性向け"
+      ],
+      "synopsis": "異世界のスラム街のような場所に転生した主人公、クロウはチンピラ達とシノギを削りながら、毎日を生きていた。 チンピラ達を倒せるぐらいには強くなっていたクロウだが、前世の日本との暮ら…",
+      "public_metrics": {
+        "stars": 15622,
+        "platform_rank": 40
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 41,
+      "title": "片隅の貧しい村に転生した僕は、魔道具づくりで暮らしを変えます～規格外のモノづくりで大好きな家族を世界一幸せにする～",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生",
+        "もふもふ",
+        "スローライフ",
+        "チート",
+        "主人公最強",
+        "魔道具",
+        "学園",
+        "貧乏"
+      ],
+      "synopsis": "前世で家族から無能と蔑まれ、愛されずに死んだ高校生の少年は、ファンタジー世界の貧しい開拓村に「クリス」として転生する。 新しい家族は貧乏だが、底抜けに優しく、クリスに惜しみない…",
+      "public_metrics": {
+        "stars": 1783,
+        "platform_rank": 41
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 42,
+      "title": "雷鳴の霊術師は天に轟く～冷遇されて暇だからひたすら鍛えていたら、急にお家騒動に巻き込まれました～",
+      "labels": [
+        "現代ファンタジー",
+        "ライトノベル",
+        "魔法",
+        "男性向け",
+        "陰陽師",
+        "学園"
+      ],
+      "synopsis": "特級妖怪金色白面九尾による百鬼夜行から十五年。 九尾は日本全国より集められた霊術師達によりなんとか討伐出されたが、未だに全国各地に霊障が多発していた。 古くから日本を守り…",
+      "public_metrics": {
+        "stars": 493,
+        "platform_rank": 42
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 43,
+      "title": "転生した推しゲー世界にドハマりしてたら、導師と呼ばれ優秀すぎる教え子たちに包囲されていた",
+      "labels": [
+        "異世界ファンタジー",
+        "勘違い",
+        "ヤンデレ",
+        "架空原作",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "大好きなハクスラRPGの世界に転生したルスラは、そこでの生活にドはまりしていた。 そんな中、彼の楽しみは迷える若者に最適なビルドを教えること。 自分はゲームの頃から考えていた様々…",
+      "public_metrics": {
+        "stars": 642,
+        "platform_rank": 43
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 44,
+      "title": "幼馴染に嘘で振られた陰キャ、実は激つよ",
+      "labels": [
+        "現代ドラマ",
+        "NTR",
+        "寝取られ",
+        "ではない",
+        "幼馴染",
+        "BSS",
+        "僕が先に好きだったのに",
+        "ざまぁ",
+        "復讐"
+      ],
+      "synopsis": "中学二年の初夏。 幼馴染の白石莉子に告白した蓮見大和は、 「勉強と部活に集中したい」と振られた。 だが一週間後。 莉子はクラスの人気者――サッカー部のエース・藤堂と付き合い…",
+      "public_metrics": {
+        "stars": 447,
+        "platform_rank": 44
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 45,
+      "title": "兵站将校は休みたい！",
+      "labels": [
+        "異世界ファンタジー",
+        "オリジナル戦記",
+        "シリアス",
+        "現地主人公",
+        "不憫系主人公",
+        "社畜",
+        "ハッピーエンド"
+      ],
+      "synopsis": "【カクヨムコン10ライト文芸部門特別賞受賞】 「大尉殿は――分遣隊長殿は、戦死されました」 派遣された部隊に着任したら、隊長は既に戦死していた。 ／ 「まずくありま…",
+      "public_metrics": {
+        "stars": 6816,
+        "platform_rank": 45
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 46,
+      "title": "弱小領主ですが俺以外の家族が全員異世界からの転生者らしくて成り上がらされています。",
+      "labels": [
+        "異世界ファンタジー",
+        "コメディ",
+        "成り上がり",
+        "ざまぁ",
+        "ギャグ",
+        "スローライフ",
+        "ハーレム",
+        "異世界転生",
+        "チート"
+      ],
+      "synopsis": "古くから続く小さな子爵家の領主シーン・トールマンは、幼馴染で恋人でも会った婚約者を伯爵家に奪われたあげくに冤罪で誹謗中傷されて収入も激減させられて困窮させられてしまう。 その理…",
+      "public_metrics": {
+        "stars": 730,
+        "platform_rank": 46
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 47,
+      "title": "伯爵家の転生末娘、爆速で【実家を最適化】します！ ～前世で『非効率』に殺された元準公務員、貴族社会がブラックすぎてドン引きしたので、すべての原因を叩き潰して家族とボーナスライフ～",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生",
+        "令嬢",
+        "幼女",
+        "女主人公",
+        "ざまぁ",
+        "もふもふ",
+        "内政",
+        "家族愛"
+      ],
+      "synopsis": "前世の記憶を取り戻して、最初に抱いた感情は――『ドン引き』だった。 ◆◆◆ 残業・休出常連の準公務員だった私の転生先は、伯爵家の末娘・セシリア。 貴族に生まれたんだし、紅…",
+      "public_metrics": {
+        "stars": 1766,
+        "platform_rank": 47
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 48,
+      "title": "エンチャント・ブレイブ",
+      "labels": [
+        "異世界ファンタジー",
+        "カクヨムオンリー",
+        "勇者",
+        "聖女",
+        "恋愛",
+        "現地主人公",
+        "万人向け",
+        "剣と魔法",
+        "両片思い"
+      ],
+      "synopsis": "これは後に、剣聖と聖女の再来と呼ばれる二人の物語。 大商会の息子であるフェンスは、貧民街の少女——コノハを拾う。 メイドとして雇った彼女には、伝説の聖女だけが使えたという付与魔…",
+      "public_metrics": {
+        "stars": 218,
+        "platform_rank": 48
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 49,
+      "title": "スマホ転移で始める異世界ゆるゆる生活 ～日本の商品が高値で売れたのでスローライフを目指すことにしました～",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転移",
+        "男主人公",
+        "魔法",
+        "ヒロインは2人"
+      ],
+      "synopsis": "高校を卒業して7年が経ち、25歳となったリヒトは定職も付かずに実家でゴロゴロと怠惰に生きていた。 実家がそこそこ太かったこともあったが、リヒトは物心がついた時から不思議な力が使え…",
+      "public_metrics": {
+        "stars": 3152,
+        "platform_rank": 49
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 50,
+      "title": "冤罪で追放された異世界帰還者、拾った神猫と田舎でS級モンスター料理配信を始めたら、俺を捨てた連中が勝手に曇っていく",
+      "labels": [
+        "現代ファンタジー",
+        "ダンジョン配信",
+        "異世界帰還者",
+        "ざまぁ",
+        "掲示板",
+        "もふもふ",
+        "スローライフ",
+        "飯テロ",
+        "AI本文一部利用"
+      ],
+      "synopsis": "「お前みたいな無能はもういらない」 冤罪を着せられ、探索者チームを追放された神代悠真は、祖母の残した田舎の空き家へ逃げるように移り住んだ。 そこで拾ったのは、額に不思議な紋様…",
+      "public_metrics": {
+        "stars": 1847,
+        "platform_rank": 50
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 51,
+      "title": "異世界帰還者、壊れた魔法少女たちからの愛が重すぎる",
+      "labels": [
+        "現代ファンタジー",
+        "男性向け",
+        "ヤンデレ",
+        "依存",
+        "執着",
+        "ハーレム",
+        "ダーク",
+        "救済",
+        "魔法少女"
+      ],
+      "synopsis": "十年にわたる魔王討伐の旅を終え、ようやく元の世界へ帰還した勇者・佐藤秋人。 しかし、帰ってきたはずの日本は、秋人の知る世界とは微妙に違う平行世界だった。 家もなく、知人もおらず…",
+      "public_metrics": {
+        "stars": 490,
+        "platform_rank": 51
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 52,
+      "title": "鑑定っぽいスキルに急に目覚めたけど、わりと要らない",
+      "labels": [
+        "現代ファンタジー",
+        "大学",
+        "日常",
+        "どこにでもいるごく普通の大学生",
+        "コメディ",
+        "鑑定っぽいスキル",
+        "主人公は異常者",
+        "ラブコメ"
+      ],
+      "synopsis": "『どこにでもいるごく普通の男子高校生』……ではなく『大学生』の桐城ゴウトは、ある朝唐突に鑑定スキルらしき力に目覚めた。 「普通の大学生って『鑑定』スキルとか持ってると思うか？」…",
+      "public_metrics": {
+        "stars": 7074,
+        "platform_rank": 52
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 53,
+      "title": "完璧な生徒会長の姉をもつ落ちこぼれの俺。運動も成績も学年2位で姉にいつも負けている美少女『風紀委員長』に優しくしたらヤンデレ化した",
+      "labels": [
+        "ラブコメ",
+        "ヤンデレ",
+        "曇らせ",
+        "激重感情",
+        "ざまぁ",
+        "学園",
+        "嫉妬",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "入学早々陰キャが確定した俺、深町陸(ふかまちりく)には深町秋奈(ふかまちあきな)っていう美人で文武両道な生徒会長の姉がいる。 秋姉と違って影の薄い俺はクラスメイト達から落ちこぼ…",
+      "public_metrics": {
+        "stars": 531,
+        "platform_rank": 53
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 54,
+      "title": "異世界で食堂を開いて十七年、常連だった子どもたちが騎士団長と宰相補佐と聖女になって迎えに来ました 〜元看護師の女将は、王弟殿下に人生ごと大切にされます〜",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界恋愛",
+        "食堂",
+        "女主人公",
+        "大人ヒロイン",
+        "溺愛",
+        "ざまぁ",
+        "無自覚有能",
+        "ハッピーエンド"
+      ],
+      "synopsis": "医師の夫に「看護師なんて医師の指示がなければ何もできない」と自信を奪われた元看護師の私。 異世界で食堂を開いて十七年、温かいご飯を出していただけなのに、昔の常連が騎士団長・宰…",
+      "public_metrics": {
+        "stars": 557,
+        "platform_rank": 54
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 55,
+      "title": "長命種パーティ、命と引き換えに守ったら千年後も病んでる",
+      "labels": [
+        "異世界ファンタジー",
+        "曇らせ",
+        "ヤンデレ",
+        "激重感情",
+        "激長感情",
+        "長命種",
+        "異世界"
+      ],
+      "synopsis": "聖騎士シオンは身代わりになった。自らの意思でパーティ３人を守り死んだ。 魔女、エルフ、龍族の娘に幸せに生きて欲しかったから。 それから千年。 「止まない雨はないの？ 明けない夜は…",
+      "public_metrics": {
+        "stars": 1248,
+        "platform_rank": 55
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 56,
+      "title": "外れスキル《箱庭》を引いた俺、異世界の街を育てて最強になる",
+      "labels": [
+        "現代ファンタジー",
+        "カクヨムオンリー",
+        "スキル",
+        "成り上がり",
+        "主人公最強",
+        "AI本文利用",
+        "ダンジョン"
+      ],
+      "synopsis": "世界各地にダンジョンが出現し、人々はステータスとスキルを得た。 都内で働く平凡な会社員・世我進が手にしたのは、情報のない外れスキル《箱庭》。 それは、スマホのアプリで異世界の街…",
+      "public_metrics": {
+        "stars": 1526,
+        "platform_rank": 56
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 57,
+      "title": "濁唾濔蓏-ダクダデイラ-",
+      "labels": [
+        "ホラー",
+        "オカルト",
+        "怪文書"
+      ],
+      "synopsis": "過去十数年に亘って、個人的に収集してきたネット上の怪文書を、誰かと共有出来たらと思い、こちらに投稿させて頂きます。 その中の一つに「濁唾濔蓏（ダクダデイラ）」という物があり、こ…",
+      "public_metrics": {
+        "stars": 3978,
+        "platform_rank": 57
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 58,
+      "title": "俺たちの青春を学校の連中は誰も知らない。～マジ告した超バランス型美少女とウソ告だと誤解してる学生ゲームクリエイターが意外とすれ違わない～",
+      "labels": [
+        "ラブコメ",
+        "学園",
+        "ハイスペック",
+        "クリエイター",
+        "両者優秀",
+        "超バランス型優等生",
+        "ちょっとすれ違い",
+        "ハッピーエンド",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "クラスでは陰キャぼっちと呼ばれる秋崎喜助（あきさき きすけ）は、実は大ヒット中のインディーゲームの製作者で、学外には何人もの友人、知人がいる。 秋崎はある日、クラスメイトの…",
+      "public_metrics": {
+        "stars": 4565,
+        "platform_rank": 58
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 59,
+      "title": "退魔師転生 過酷なエロゲ世界でキツネ顔の関西弁な性悪男はどないすりゃええですか？",
+      "labels": [
+        "現代ファンタジー",
+        "異世界転生",
+        "関西弁",
+        "ハーレム",
+        "退魔師",
+        "書籍化",
+        "オマージュ",
+        "お約束"
+      ],
+      "synopsis": "その日、退魔師の名門葛道家の惣領である直志は思い出した。 退魔師もあやかしも存在しない、平和な日本での記憶を。 そして気づいた、ここが凌辱エロゲの世界である可能性と自身の微妙過ぎ…",
+      "public_metrics": {
+        "stars": 2931,
+        "platform_rank": 59
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 60,
+      "title": "ハズレスキル「小箱」 〜異世界でも四畳半あれば生きていける〜",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生",
+        "ハズレスキル",
+        "マイペース",
+        "スローライフ",
+        "成長",
+        "魔法",
+        "小箱"
+      ],
+      "synopsis": "七歳で受ける「祝福の儀」でレンが授かったのは「小箱」というスキルだった。 発動してみるとぼんやりと光る小さな箱が現れた。 武力スキルが価値あると言われている世の中。「剣術」スキ…",
+      "public_metrics": {
+        "stars": 13160,
+        "platform_rank": 60
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 61,
+      "title": "災禍級魔術師はサイコロを砕く ～正史ルートだとバッドエンド直行のゲーム世界に転生したから特殊エンディングを目指していたら、ネームドキャラたちに執着されてヤバいことになった件～",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生",
+        "男主人公",
+        "ゲーム世界",
+        "成り上がり",
+        "ヤンデレ",
+        "主人公最強",
+        "成長",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "戦場跡の死体を漁ることで生計を立てている戦災孤児ジャック・リンカーは、焼け焦げた魔導書を拾ったことで現代日本人だった前世の記憶を、そしてこの世界が生前プレイしていたゲームの舞台…",
+      "public_metrics": {
+        "stars": 18082,
+        "platform_rank": 61
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 62,
+      "title": "最強付与士の無自覚ハーレム冒険譚～仲間の顔も素性も知らないけどたぶん全員男だと思う～",
+      "labels": [
+        "異世界ファンタジー",
+        "無自覚ハーレム",
+        "付与士",
+        "全員最強",
+        "異種族",
+        "正体不明",
+        "シリアスあり",
+        "男性向け",
+        "魔術"
+      ],
+      "synopsis": "わずか3年でS級にまで駆け上がったパーティー【名称未定（アンノウン）】 アバンテールの町で最強格の一つとして名をあげ続けていた。 強さは本物。だが全員正体不明。顔も素性も性別年齢…",
+      "public_metrics": {
+        "stars": 13982,
+        "platform_rank": 62
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 63,
+      "title": "アイテムストレージをモンスター化したら、世界中の全てを喰らい尽くす神話級の相棒（バケモノ）が生まれました！",
+      "labels": [
+        "異世界ファンタジー",
+        "主人公最強",
+        "ダークファンタジー",
+        "異世界転移",
+        "ざまぁ",
+        "因果応報",
+        "容赦なし",
+        "破滅",
+        "徹底的断罪"
+      ],
+      "synopsis": "二つの大国によって異世界へ召喚された十五歳の少年・日向夏樹（ひなた なつき）。 だが、期待されたスキル「モンスター化」が期待外れだと判明した瞬間、同郷の転移者・日陰南空の手によっ…",
+      "public_metrics": {
+        "stars": 358,
+        "platform_rank": 63
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 64,
+      "title": "その野球小僧、前世知識で鍛錬中につき",
+      "labels": [
+        "現代ドラマ",
+        "野球",
+        "医療知識",
+        "高校野球",
+        "トレーニング",
+        "修行",
+        "青春",
+        "スポーツ",
+        "やり直し"
+      ],
+      "synopsis": "『今の知識が若い頃にあれば、もっと上にいけたのに』 そう嘆くアスリートは多い。 ある日、医療系の仕事に従事していた男が病で死んだ ……と思ったら、赤子に戻っていた。男は二度目…",
+      "public_metrics": {
+        "stars": 3481,
+        "platform_rank": 64
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 65,
+      "title": "無限の魔術師 魔力無しで平民の子と迫害された俺。実は無限の魔力持ち。",
+      "labels": [
+        "異世界ファンタジー",
+        "書籍化",
+        "ライトノベル",
+        "異世界転生",
+        "魔法",
+        "主人公最強（になる予定）",
+        "複数ヒロイン（ハーレムあり）",
+        "王道",
+        "ざまあ"
+      ],
+      "synopsis": "書籍２巻発売。電撃大王にてコミカライズ連載中。 ※タイトルを『無限の魔術師 魔力無しで平民の子と迫害された俺。実は無限の魔力持ち。』に変更します。 貴族と平民の間に生まれた少年・…",
+      "public_metrics": {
+        "stars": 29908,
+        "platform_rank": 65
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 66,
+      "title": "超毒舌グルメVTuberは俺の飯だけ星一千万〜隣の無口美少女を料亭仕込みの家庭料理で餌付けしていたら、毎晩ごはんをねだられるようになった〜",
+      "labels": [
+        "ラブコメ",
+        "ハッピーエンド",
+        "餌付け",
+        "同棲",
+        "現代",
+        "VTuber",
+        "グルメ",
+        "甘々",
+        "無口ヒロイン"
+      ],
+      "synopsis": "老舗料亭の跡取り息子・結城湊は、実家の重圧から逃げるように一人暮らしをしている大学生。 ある日、隣室の前で空腹のあまり倒れかけていた無口な美少女・氷室鈴音に、何気なく温かいうどん…",
+      "public_metrics": {
+        "stars": 400,
+        "platform_rank": 66
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 67,
+      "title": "【書籍第二巻発売中！！】捨てられ王子が最前線で敵国の兵士を治療したら実は第七皇女だった件【書籍第一巻発売中】",
+      "labels": [
+        "異世界ファンタジー",
+        "追放",
+        "ハーレム",
+        "ざまあ",
+        "主人公最強",
+        "男性向け",
+        "男主人公",
+        "魔法",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "レイシェル・フォン・アガーラムは、チート能力を授かった転生者であり、アガーラム王国の第一王子だった。 そのチート能力とは、触れる者のあらゆる異常を治すというもの。 レイ…",
+      "public_metrics": {
+        "stars": 9824,
+        "platform_rank": 67
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 68,
+      "title": "田舎のガキンチョ達と感動の別れをして、数年後に帰省したら「美少女ヤンデレ」と化していた件〜俺はそんな子に育てた覚えはありません！！〜",
+      "labels": [
+        "ラブコメ",
+        "青春",
+        "田舎",
+        "激重感情",
+        "ヤンデレ",
+        "男主人公",
+        "ほのぼの",
+        "美少女",
+        "曇らせ"
+      ],
+      "synopsis": "六年前。 田舎町で暮らしていた中学生・佐伯悠真は、親の都合で都会へ引っ越すことになった。 別れの日、悠真の前で泣きじゃくっていたのは、近所に住む三人のガキンチョたち。 …",
+      "public_metrics": {
+        "stars": 239,
+        "platform_rank": 68
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 69,
+      "title": "ぼったくりの賢者",
+      "labels": [
+        "異世界ファンタジー",
+        "錬金術師",
+        "現地主人公",
+        "ガラス工房の錬金術師スピンオフ",
+        "放浪",
+        "男主人公",
+        "魔法",
+        "賢者",
+        "守銭奴"
+      ],
+      "synopsis": "南の領主貴族メリーディエース伯爵家の三男コランダムは十歳の時の祝福の儀で授かった天職【賢者】に翻弄されることになる。のちに【放浪の賢者】と呼ばれるようになるコランダム・ヴァンデラ…",
+      "public_metrics": {
+        "stars": 868,
+        "platform_rank": 69
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 70,
+      "title": "双剣無頼 ～現代ダンジョンで雑魚狩りしてた底辺掃除屋、神話級の剣を手に入れてしまう。しかも二本～",
+      "labels": [
+        "現代ファンタジー",
+        "主人公最強",
+        "現代ダンジョン",
+        "ダンジョン配信",
+        "探索者",
+        "勇者",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "【カクヨムコン11 エンタメ総合部門大賞＆コミカライズ賞】西暦一九九九年、恐怖の大王は落ちて来なかったが、世界は異世界と融合し、地球上には魔法と異種族、そしてダンジョンが現れるよ…",
+      "public_metrics": {
+        "stars": 22689,
+        "platform_rank": 70
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 71,
+      "title": "大好きな幼馴染を狙うライバルが現れたので、諦めようと思ったら幼馴染がヤンデレ化して激重感情を向けてきた。",
+      "labels": [
+        "ラブコメ",
+        "ヤンデレ",
+        "激重感情",
+        "恋愛",
+        "学園",
+        "高校生",
+        "ホラー",
+        "曇らせ"
+      ],
+      "synopsis": "「実はオレも、犬飼のこと好きなんだよ」「僕も同じかな」 幼馴染の犬飼緑子に片想いを続けてきた猫山紫音は、クラスの男友達ふたりから同じ人（緑子）を好きになっていることを告白される…",
+      "public_metrics": {
+        "stars": 522,
+        "platform_rank": 71
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 72,
+      "title": "『ダンジョン発生初日に消えた俺、500年後に帰還したら人類最強になっていた』",
+      "labels": [
+        "現代ファンタジー",
+        "ダンジョン",
+        "無双",
+        "配信",
+        "最強主人公",
+        "成り上がり",
+        "AI",
+        "神話"
+      ],
+      "synopsis": "ダンジョン発生初日。 ブラック企業をクビになった青年・悠斗は、突如現れた“神級ダンジョン”へ落下した。 落ちた先は、誰も到達したことのない最下層。 そこで彼を待っていたのは、…",
+      "public_metrics": {
+        "stars": 810,
+        "platform_rank": 72
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 73,
+      "title": "彼女ができたという嘘のせいで距離感をバグらせた女友達と瞳の光を失った幼馴染、部屋を不法占拠する妹たちに詰められている",
+      "labels": [
+        "ラブコメ",
+        "ヤンデレ",
+        "幼馴染",
+        "女友達",
+        "妹",
+        "修羅場",
+        "AI補助利用"
+      ],
+      "synopsis": "悪友の「お前彼女とどうなの」という冗談のせいで、俺の平穏は終わった。瞳の光を失った幼馴染、距離感をバグらせ猛アタックしてくる女友達、部屋を不法占拠する妹。逃げ場ゼロの勘違い修羅場…",
+      "public_metrics": {
+        "stars": 433,
+        "platform_rank": 73
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 74,
+      "title": "誰だ、そよ風のレオンなんて言った奴は！",
+      "labels": [
+        "異世界ファンタジー",
+        "風魔法",
+        "冒険者",
+        "スキル",
+        "精霊",
+        "成り上がり"
+      ],
+      "synopsis": "日本からの転生者レオン、授けの儀で授かったのは風魔法一つ。日本で見たアニメやラノベの記憶と知識を利用して、風魔法を使い無双する。アイアンランクから冒険者の最高プラチナランクへとの…",
+      "public_metrics": {
+        "stars": 25827,
+        "platform_rank": 74
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 75,
+      "title": "公爵家の転生侍女ですが、どうやら私はヤンデレ悪役令嬢に娶られて王妃となるようです……なんて？",
+      "labels": [
+        "異世界ファンタジー",
+        "女主人公",
+        "女性主人公",
+        "ガールズラブ",
+        "百合",
+        "ハッピーエンド",
+        "悪役令嬢",
+        "ヤンデレ",
+        "どうしてこうなった"
+      ],
+      "synopsis": "公爵令嬢の侍女兼腹心となるよう、お嬢様に引き合わされた所で私は記憶を取り戻しました。 「この設定！私が書いてたゲームのシナリオまんまじゃん！」 科学と同時に魔法が発展した地球。 …",
+      "public_metrics": {
+        "stars": 273,
+        "platform_rank": 75
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 76,
+      "title": "貞操逆転世界で勇者パーティーの雑用やってます",
+      "labels": [
+        "異世界ファンタジー",
+        "貞操逆転世界",
+        "ヤンデレ",
+        "クソボケ主人公",
+        "理由ある鈍感",
+        "魔法",
+        "主人公弱い"
+      ],
+      "synopsis": "四天王の毒を食らって動けなくなってからパーティーメンバーの様子がおかしい気がする。 小説パート多めの掲示板です。",
+      "public_metrics": {
+        "stars": 451,
+        "platform_rank": 76
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 77,
+      "title": "自らを凡人だと思い込んだ最強天才剣士は無自覚に無双する～怠惰で努力嫌いな平民出身の凡人剣士なのに、なぜか俺に負けた美少女たちの瞳が曇っていくんだが～",
+      "labels": [
+        "異世界ファンタジー",
+        "曇らせ",
+        "成り上がり",
+        "主人公最強",
+        "無自覚",
+        "ざまぁ",
+        "ヤンデレ",
+        "勘違い",
+        "転生"
+      ],
+      "synopsis": "努力できる人は凄いと思う。 努力には才能が必要だと言うし、確かに努力できる人こそ天才だと思う。 そうであるならば、やはり俺は天才ではない。 怠惰な人間だからだ。 隙あらば寮…",
+      "public_metrics": {
+        "stars": 255,
+        "platform_rank": 77
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 78,
+      "title": "クソガキ時代に俺の夢を壊した「天才教え子たち」が大成して戻ってくるも、心を入れ替えて田舎で『普通の子』を可愛がっている俺の姿を見て【毎日】嫉妬と後悔で勝手に【曇っていく】。",
+      "labels": [
+        "異世界ファンタジー",
+        "錬金術師",
+        "現地主人公（教授）",
+        "追放",
+        "ざまぁ",
+        "曇らせ",
+        "ヤンデレ",
+        "学園",
+        "スローライフ"
+      ],
+      "synopsis": "「――こうなった責任は俺にある。君たちは、次から間違えないようにね」 名誉を奪われ、爆発事故で右半身を焼かれ、何より大切な友の命を失った。 それでも、錬金術の教授であったケイ…",
+      "public_metrics": {
+        "stars": 259,
+        "platform_rank": 78
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 79,
+      "title": "最年少Sランク冒険者、騎士試験の合格結果を貴族に奪われたので田舎に帰ります〜勝手に着いてきた仲間達のせいでスローライフは送れないようです〜",
+      "labels": [
+        "異世界ファンタジー",
+        "ハーレム",
+        "主人公最強",
+        "チート（？）",
+        "ざまぁ",
+        "成長",
+        "成り上がり",
+        "ステータス",
+        "少しダーク"
+      ],
+      "synopsis": "『調子に乗るなよ！ 庶民風情が！』 最年少の十二歳でSランク冒険者となったヴィルには夢があった。それは自身の父親と同じ騎士となる事、だが、そんな夢が容易に貴族によって奪われてし…",
+      "public_metrics": {
+        "stars": 132,
+        "platform_rank": 79
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 80,
+      "title": "ハズレ職【錬金術師】だけど、合法RMTで生活費を稼いでいたら世界市場で無双していた",
+      "labels": [
+        "現代ファンタジー",
+        "VRMMO",
+        "錬金術師",
+        "テイマー",
+        "合法RMT",
+        "生産職",
+        "成り上がり",
+        "現実逆転",
+        "最弱主人公"
+      ],
+      "synopsis": "母子家庭、深夜バイト、ギリギリの生活。 高校卒業後の神谷錬司に必要だったのは、夢じゃない。 今月を生きるための金だった。 世界的人気VRMMO《Eternal Frontier…",
+      "public_metrics": {
+        "stars": 469,
+        "platform_rank": 80
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 81,
+      "title": "魔女だらけのレストランで働いてるけど毎日死にそう（でも飯が美味いので辞められない）",
+      "labels": [
+        "現代ファンタジー",
+        "男主人公",
+        "一人称",
+        "魔女",
+        "レストラン",
+        "グルメ",
+        "料理",
+        "コメディ",
+        "人外ヒロイン"
+      ],
+      "synopsis": "魔女しか来ないレストランで働いてます。 なお、普通に死にかけます。 客は全員やばい女。オーナーもやばい女。 でも料理はめちゃくちゃ美味いので（あとイカれた契約書を交わしたので）…",
+      "public_metrics": {
+        "stars": 1529,
+        "platform_rank": 81
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 82,
+      "title": "運び屋ロブ",
+      "labels": [
+        "異世界ファンタジー"
+      ],
+      "synopsis": "借金返済の代わりに異世界転生した主人公（２３・コンビニバイト）。 異世界転生の履歴書に書けそうなことなんて、コンビニバイト経験と動画閲覧、小説投稿サイト閲覧、あとはタブレットＰ…",
+      "public_metrics": {
+        "stars": 12713,
+        "platform_rank": 82
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 83,
+      "title": "辺境伯貴族家の息子、魔道具修理で無双し王女をも救う",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界転生",
+        "魔道具",
+        "辺境伯",
+        "王女",
+        "成り上がり",
+        "ファンタジー",
+        "ラブコメ",
+        "AI補助利用"
+      ],
+      "synopsis": "ブラック企業の回路設計士だった俺、藤原怜音。三徹の果てに倒れたと思ったら ――辺境伯の家に転生していた！？ その後貧乏辺境伯貴族として生まれた俺は前世の知識を活かして壊れた魔…",
+      "public_metrics": {
+        "stars": 16485,
+        "platform_rank": 83
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 84,
+      "title": "初手で女主人公にプロポーズし玉砕した俺がこの先生きのこるには",
+      "labels": [
+        "異世界ファンタジー",
+        "学園",
+        "異世界転生",
+        "ゲーム世界",
+        "主人公と女主人公",
+        "プロポーズ",
+        "生存重点",
+        "知識チート（できたら良いよね）",
+        "ラブコメ"
+      ],
+      "synopsis": "Q.目を覚ましたら目の前に、大好きだった女主人公が居たらどうしますか？ A.プロポーズする。した。 その結果、社会的に死亡した主人公ロクスだったが彼には悩みがあった。 この…",
+      "public_metrics": {
+        "stars": 2661,
+        "platform_rank": 84
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 85,
+      "title": "処刑された勇者は十年前に還る 〜俺を裏切った聖女と王女、その他諸々――今度はお前らから引導を渡してやる〜",
+      "labels": [
+        "異世界ファンタジー",
+        "復讐",
+        "ざまぁ",
+        "やり直し",
+        "勇者",
+        "処刑",
+        "男主人公",
+        "AI本文利用"
+      ],
+      "synopsis": "四年間、共に魔王を倒した仲間――聖女、賢者、剣聖、そして婚約者の王女。 彼ら全員に裏切られ、無実の罪で処刑された勇者カイル・ヴァレンタイン。 刃が振り下ろされた瞬間、彼の意識は十…",
+      "public_metrics": {
+        "stars": 584,
+        "platform_rank": 85
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 86,
+      "title": "レベル1を35個持ったおっさん、有能すぎて美女三人に包囲される〜レベル10大火力至上主義の世界で裏方が最強だった〜",
+      "labels": [
+        "異世界ファンタジー",
+        "恋愛",
+        "レベル1",
+        "おっさん主人公",
+        "スローライフ",
+        "ハーレム",
+        "主人公最強",
+        "成り上がり"
+      ],
+      "synopsis": "🔥 第2回カドカワBOOKSファンタジー長編コンテスト 週間総合3位（2026年4月29日～5月10日現在）しばらく順位が変動いたしましたが、皆様のおかげで再び5月25日に3位に…",
+      "public_metrics": {
+        "stars": 800,
+        "platform_rank": 86
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 87,
+      "title": "Fランク荷物持ちのバズりキャンプ飯 〜無能と追放され最深部でヤケクソ配信したら、ラスボス神獣が餌付けされました〜",
+      "labels": [
+        "現代ファンタジー",
+        "男主人公",
+        "ダンジョン配信",
+        "飯テロ",
+        "モフモフ",
+        "ざまぁ",
+        "スローライフ",
+        "無自覚チート",
+        "追放"
+      ],
+      "synopsis": "探索者が憧れの職業となった現代。 Aランクパーティーで荷物持ちとしてこき使われていたFランク探索者の山本博人は、未踏の超難関ダンジョン『深淵の迷宮』で罠の身代わりにされ、ボスのい…",
+      "public_metrics": {
+        "stars": 2930,
+        "platform_rank": 87
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 88,
+      "title": "ギャルゲーの中盤で倒される悪役貴族に転生〜平穏な学園生活のため脇役を演じようとしたらクラスの大人気美少女達に囲まれたんだが、主人公様にヒロインを寝取ったと勘違いされています〜",
+      "labels": [
+        "ラブコメ",
+        "異世界ファンタジー",
+        "学園ラブコメ",
+        "主人公最強",
+        "悪役に転生",
+        "ざまぁ",
+        "勘違い",
+        "ハーレム",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "​○毎日更新 気づけば、やり込んでいたギャルゲーの最悪な悪役令息シスルに転生していた俺。 将来は主人公に敗北し、家系ごと監獄送りになる破滅エンド……！？ そうならない為に、学…",
+      "public_metrics": {
+        "stars": 285,
+        "platform_rank": 88
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 89,
+      "title": "Sランク配信をクビになった【翻訳家】、魔神がガチギレして日本滅亡の危機らしいが俺はハローワークにいる",
+      "labels": [
+        "現代ファンタジー",
+        "配信",
+        "現代ダンジョン",
+        "ダンジョン",
+        "ダンジョン配信",
+        "ざまぁ",
+        "成り上がり"
+      ],
+      "synopsis": "チャンネル登録者数300万人を誇る、日本最強のSランク探索者配信グループ『白銀の軌跡』。 その裏方として荷物持ちをさせられていたリュートの職業は、非戦闘職の【深淵翻訳家】だった。…",
+      "public_metrics": {
+        "stars": 611,
+        "platform_rank": 89
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 90,
+      "title": "書の花嫁 転生乙女書帖",
+      "labels": [
+        "異世界ファンタジー",
+        "女主人公",
+        "カクヨムオンリー",
+        "逆行転生",
+        "書道",
+        "三角関係",
+        "異類婚姻譚",
+        "オリエント"
+      ],
+      "synopsis": "文字オタクで日本書道やペン習字を嗜んでいたカリンは、現代からずっと過去（？）のペルシア帝国に生まれ変わる。 七歳になり、書家である父からペルシア書道の手解きを受けると、たちまちそ…",
+      "public_metrics": {
+        "stars": 95,
+        "platform_rank": 90
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 91,
+      "title": "転生した凡人は天才に憧れ努力を続ける",
+      "labels": [
+        "異世界ファンタジー",
+        "転生",
+        "努力",
+        "冒険者",
+        "魔法",
+        "剣"
+      ],
+      "synopsis": "ただの冒険者であったアルフ。 住んでいた街が魔物に襲われ、たった一人で魔物の大群と戦い命を落とした。 しかし、次に目が覚めるとアルフレッド・フォン・ヴェルゴールドとして新たな人生…",
+      "public_metrics": {
+        "stars": 670,
+        "platform_rank": 91
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 92,
+      "title": "戦場しか知らない辺境領主の俺に嫁いだ氷の公爵令嬢が、完璧すぎる理想の嫁だった",
+      "labels": [
+        "異世界ファンタジー",
+        "主人公最強",
+        "異世界",
+        "領地経営",
+        "恋愛",
+        "ラブコメ",
+        "悪役令嬢",
+        "婚約破棄",
+        "カクヨムオンリー"
+      ],
+      "synopsis": "隣国との戦争に勝利した辺境伯の俺、アグリロッド・ド・デュオス。 英雄と呼ばれるが、勝利の代償として領地は荒廃し、統治すらままならない状態だった。 戦場では最強でも、内政の…",
+      "public_metrics": {
+        "stars": 10252,
+        "platform_rank": 92
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 93,
+      "title": "最強スペックの令嬢があまりにも可愛かったので、からかっていたら鎖で捕まえようとしてくるので、全力で逃げ続ける。",
+      "labels": [
+        "ラブコメ",
+        "曇らせ（ヤンデレ）",
+        "溺愛",
+        "鬼ごっこ",
+        "主人公逃げ上手",
+        "陰陽キャラ",
+        "ヒロイン最強",
+        "AI校正入れてます"
+      ],
+      "synopsis": "明るく元気な主人公ニルは、公爵家の騎士見習いとして日々を過ごしていた。 だが、公爵家はどこかお通夜のように静かで重苦しい雰囲気が常に付き纏っていた。 その原因は、一年前に亡く…",
+      "public_metrics": {
+        "stars": 2314,
+        "platform_rank": 93
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 94,
+      "title": "貞操逆転死にゲー世界で湿度高めヒロイン達を無自覚に沼らせる転生者～死にゲー世界で死亡エンドのヒロイン全員救う、全員が曇る～",
+      "labels": [
+        "異世界ファンタジー",
+        "異世界",
+        "貞操逆転",
+        "男主人公",
+        "曇らせ",
+        "ハーレム",
+        "ヤンデレ",
+        "チート",
+        "主人公最強"
+      ],
+      "synopsis": "『どうせゲームするんなら、男じゃなくて女キャラで遊びてえな』 『でも、周りの奴らに女キャラ使ってエロと思われたくねえな』 ある天才の思いつきが生んだ神ゲー『灰と絶望のダークフ…",
+      "public_metrics": {
+        "stars": 5154,
+        "platform_rank": 94
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 95,
+      "title": "異世界の館で通訳として働いてた俺、看板娘をしてたら勇者パーティに同行させられる",
+      "labels": [
+        "異世界ファンタジー",
+        "勘違い",
+        "曇らせ",
+        "勇者",
+        "ＴＳ",
+        "性転換",
+        "異世界転移"
+      ],
+      "synopsis": "どんな言葉でも理解できる、ちょっと変わった力を持つ俺。この能力は、幼い頃に出会った不思議なお姉さんがくれたものだ。不思議にも程がある。 そして17歳の誕生日、俺はお姉さんと…",
+      "public_metrics": {
+        "stars": 185,
+        "platform_rank": 95
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 96,
+      "title": "ハズレ魔法【設計図】ただの紙切れしかだせない魔法などクソだと追放された転生貴族の九男坊～実は小人さんたちが寝てる間になんでも作ってくれる便利魔法だったので、魔の森で現代快適領地経営を始めます～",
+      "labels": [
+        "異世界ファンタジー",
+        "領地経営 領主 領地開拓",
+        "異世界転生",
+        "小人さん 設計図 ハズレ魔法",
+        "九男坊 貴族",
+        "メイド 公爵令嬢 聖女 女騎士 筋肉騎士",
+        "ざまぁ 辺境",
+        "現代無双 近代無双 内政",
+        "カクヨムオンリー ハッピーエンド"
+      ],
+      "synopsis": "「紙切れしか出せん魔法などクソだ！」 そう言われて、最果ての地に追放されたアイザス伯爵家九男坊のブラン（19歳）。 ブランが使える魔法はセッケーズという紙切れ一枚しか出せない魔法…",
+      "public_metrics": {
+        "stars": 453,
+        "platform_rank": 96
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 97,
+      "title": "アラサーＴＳメスガキ魔法少女に煽られて恥ずかしくないの？♡ざぁーこ♡",
+      "labels": [
+        "現代ファンタジー",
+        "コメディー",
+        "ＴＳ",
+        "ブラック企業",
+        "掲示板回",
+        "主人公最強",
+        "配信",
+        "メスガキ",
+        "ざまぁちょっとあり"
+      ],
+      "synopsis": "アラサー社畜男性がメスガキ魔法少女に転職し、（口が勝手に）敵を煽って煽って煽りまくってボコボコにやっつけちゃう話。 七瀬律はブラック企業でパワハラ上司にこき使われる社畜である。…",
+      "public_metrics": {
+        "stars": 859,
+        "platform_rank": 97
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 98,
+      "title": "貞操逆転世界でクールな先輩にオスガキムーブかましてたら普通に押し倒された",
+      "labels": [
+        "ラブコメ",
+        "貞操逆転",
+        "あべこべ",
+        "甘々",
+        "ヤンデレ",
+        "激重感情",
+        "イチャイチャ",
+        "学園",
+        "男女比"
+      ],
+      "synopsis": "いつのまにか、男女比1:4の世界に来ていた。 クラスの女子は人目を気にせず着替えるし、僕が教室で寝ていると変な目でずっと見てくる、そんな世界。 さて、そんな馬鹿げた世界で…",
+      "public_metrics": {
+        "stars": 1067,
+        "platform_rank": 98
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 99,
+      "title": "乙女ゲーのモブ（邪神様）に転生した俺、生け贄の少女（ラスボス）を拾って親子になった結果、鬱シナリオが崩壊。ラブがコメったりするようになった。",
+      "labels": [
+        "異世界ファンタジー",
+        "百合（？）",
+        "激重感情",
+        "ヤンデレ",
+        "超依存系ヒロイン",
+        "異世界転生",
+        "乙女ゲーム",
+        "ラブコメ",
+        "擬似TS"
+      ],
+      "synopsis": "哀れな生け贄の少女を前にした瞬間、神の一柱たるそれは前世の記憶を取り戻し、世界の真実を知る。 ここはいわゆる乙女ゲーの世界であり……目前に立つ少女は、幼少期のラスボス。 …",
+      "public_metrics": {
+        "stars": 773,
+        "platform_rank": 99
+      }
+    },
+    {
+      "market": "Japan",
+      "language_market": "Japanese",
+      "raw_language": "ja",
+      "platform": "Kakuyomu",
+      "signal_type": "weekly_ranking",
+      "rank": 100,
+      "title": "「お前程度の盾役はいくらでもいる」と追放された俺。守るほど味方を強くする隠しスキルが最強の美少女令嬢パーティーで覚醒しました",
+      "labels": [
+        "ラブコメ",
+        "追放",
+        "ざまぁ",
+        "ハーレム要素",
+        "えっち",
+        "エロ",
+        "ハッピーエンド"
+      ],
+      "synopsis": "「お前程度の盾役なら、他にいくらでもいるんだよ」 ――そう言われて、俺はパーティーをクビになった。 いや、待ってくれ。こっちは病気の妹の治療費を稼ぐために、地味で損な盾役を必…",
+      "public_metrics": {
+        "stars": 399,
+        "platform_rank": 100
+      }
+    }
+  ]
+}

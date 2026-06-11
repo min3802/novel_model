@@ -1,0 +1,1810 @@
+{
+  "market": "Thailand",
+  "language_market": "Thai",
+  "raw_language": "th",
+  "platform": "Joylada",
+  "signal_type": "homepage_ranking",
+  "target_limit": 100,
+  "records": [
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 1,
+      "title": "สายไหมที่รัก || Kookv The-Serpent🐍",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 33786425,
+        "category_rank": 1,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 2,
+      "title": "ธีร์มีคุณ | kookv Nefji",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 18521452,
+        "category_rank": 2,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 3,
+      "title": "เวย์รอน คาลท์ #kookv _Olivia",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 17121037,
+        "category_rank": 3,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 4,
+      "title": "Catch me if you can - kookv (l) yournxgirl°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 15544540,
+        "category_rank": 4,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 5,
+      "title": "คุณภูภัทร | kookv gabol ꑭ ˖",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 9407473,
+        "category_rank": 5,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 6,
+      "title": "ชายาเคียงหทัย หอหมื่นอักษร",
+      "labels": [
+        "joylada_ranking_box_2"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 954627356,
+        "category_rank": 1,
+        "ranking_box": 2
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 7,
+      "title": "ยอดไทเฮาเขย่าวังหลัง หอหมื่นอักษร",
+      "labels": [
+        "joylada_ranking_box_2"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 349256701,
+        "category_rank": 2,
+        "ranking_box": 2
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 8,
+      "title": "พลิกปฐพี หอหมื่นอักษร",
+      "labels": [
+        "joylada_ranking_box_2"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1190426669,
+        "category_rank": 3,
+        "ranking_box": 2
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 9,
+      "title": "ท้าลิขิตพลิกโชคชะตา หอหมื่นอักษร",
+      "labels": [
+        "joylada_ranking_box_2"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 180122330,
+        "category_rank": 4,
+        "ranking_box": 2
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 10,
+      "title": "ฝืนชะตาชายาอสูร หอหมื่นอักษร",
+      "labels": [
+        "joylada_ranking_box_2"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 728869193,
+        "category_rank": 5,
+        "ranking_box": 2
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 11,
+      "title": "เรื่องสั้นจากนรก ploy040",
+      "labels": [
+        "joylada_ranking_box_3"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 442792306,
+        "category_rank": 1,
+        "ranking_box": 3
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 12,
+      "title": "[ธาม❤️ลลิน] หยุดหัวใจ นายแบดบอย (อ่านลำดับที่ 1) ผลส้ม สีชมพู 🍊🍊",
+      "labels": [
+        "joylada_ranking_box_3"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1477996480,
+        "category_rank": 2,
+        "ranking_box": 3
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 13,
+      "title": "[เฮดิส❤️เฌอร์วา] รักร้าย นายมาเฟียจอมโหด(อ่านลำดับที่ 2) ผลส้ม สีชมพู 🍊🍊",
+      "labels": [
+        "joylada_ranking_box_3"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 935159842,
+        "category_rank": 3,
+        "ranking_box": 3
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 14,
+      "title": "[ยูกิ❤️ทิชา] หยุดหัวใจ นายกะล่อน (อ่านลำดับที่ 13) ผลส้ม สีชมพู 🍊🍊",
+      "labels": [
+        "joylada_ranking_box_3"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 610804281,
+        "category_rank": 4,
+        "ranking_box": 3
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 15,
+      "title": "[อทิต❤️ริต้า] อำนาจรัก คุณชายแบดบอย (อ่านลำดับที่ 22) ผลส้ม สีชมพู 🍊🍊",
+      "labels": [
+        "joylada_ranking_box_3"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 128948591,
+        "category_rank": 5,
+        "ranking_box": 3
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 16,
+      "title": "สายไหมที่รัก || Kookv The-Serpent🐍",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 33786425,
+        "category_rank": 1,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 17,
+      "title": "ธีร์มีคุณ | kookv Nefji",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 18521452,
+        "category_rank": 2,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 18,
+      "title": "เวย์รอน คาลท์ #kookv _Olivia",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 17121037,
+        "category_rank": 3,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 19,
+      "title": "Catch me if you can - kookv (l) yournxgirl°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 15544540,
+        "category_rank": 4,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 20,
+      "title": "คุณภูภัทร | kookv gabol ꑭ ˖",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 9407473,
+        "category_rank": 5,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 21,
+      "title": "สามีคลีโอพัตรา | kookv aquaqtype 𐤀",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 8854638,
+        "category_rank": 6,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 22,
+      "title": "Mile Johnson |KOOKV มานู๊ด._.",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 7717072,
+        "category_rank": 7,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 23,
+      "title": "พ่อเลี้ยงครับกุกวี | kookv ( Mpreg ) 3p K.jankhana",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 7389198,
+        "category_rank": 8,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 24,
+      "title": "pick someone | kookv mithv ft.สลิ่มพี่ชิน",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 7055441,
+        "category_rank": 9,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 25,
+      "title": "โซนเธอ | KOOKV puynun22",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 6411626,
+        "category_rank": 10,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 26,
+      "title": "ภริยาสองแฝด (Omegaverse)[3]3P Northern starlight",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 6166055,
+        "category_rank": 11,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 27,
+      "title": "แฝดสลับรัก [1] #KOOKV Jkthv_9597",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 5625679,
+        "category_rank": 12,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 28,
+      "title": "ชาตินี้พี่จะเปรี้ยว | KOOKV xtigxr",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 5581245,
+        "category_rank": 13,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 29,
+      "title": "ไอ้แฟรงค์ปากหมา | kookv yunijouxc.non",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 5438863,
+        "category_rank": 14,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 30,
+      "title": "ตราประทับอัลฟ่า | kookv (Omegaverse) เคคิ",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 5362066,
+        "category_rank": 15,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 31,
+      "title": "คุณกวิน | kookv myst.stamp",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 5059730,
+        "category_rank": 16,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 32,
+      "title": "หลงตรีลิน #kookv Marilyn99",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 4919816,
+        "category_rank": 17,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 33,
+      "title": "junhavat — kookv nm.6",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 4664503,
+        "category_rank": 18,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 34,
+      "title": "LOOK AT ME | #KOOKV M.minrada",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 4389091,
+        "category_rank": 19,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 35,
+      "title": "|| EMRYS ||kookv รีไรท์ EIPP",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 4241827,
+        "category_rank": 20,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 36,
+      "title": "- 𝑀𝐴𝐺𝐼𝐶 𝐹𝑂𝑅 𝑌𝑂𝑈 - | 𝑲𝑶𝑶𝑲𝑽 (2) Lezane.•",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 4156915,
+        "category_rank": 21,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 37,
+      "title": "#KOOKV | อย่าหลงเฟย์ (1) yournxgirl°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 4003061,
+        "category_rank": 22,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 38,
+      "title": "Secret (mpreg)|bkpp WDS.BKPP",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3986248,
+        "category_rank": 23,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 39,
+      "title": "4 : เมื่อความรักเบ่งบานอีกครั้ง 𝗆𝗍𝖻𝖻~9397",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3983861,
+        "category_rank": 24,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 40,
+      "title": "เป้อมันหยาบ / kookv แต่งไปเรื่อย ༆",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3925807,
+        "category_rank": 25,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 41,
+      "title": "Solo stardom | Kookv classickey",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3676621,
+        "category_rank": 26,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 42,
+      "title": "One child mafia #มาเฟียลูกหนึ่ง #KOOKV #Mpreg Jkthv_9597",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3635846,
+        "category_rank": 27,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 43,
+      "title": "หลินอวี่เหยา | KookV 𝐁𝐋𝐀𝐂𝐊𝐌𝐈𝐍",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3431844,
+        "category_rank": 28,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 44,
+      "title": "Drive me crazy - kookv (ll) yournxgirl°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3310994,
+        "category_rank": 29,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 45,
+      "title": "เชาส์ ชวิศ | KOOKV PINKERBELL",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3258803,
+        "category_rank": 30,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 46,
+      "title": "เสเพล | KOOKV xtigxr",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3252728,
+        "category_rank": 31,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 47,
+      "title": "ไข่เจียวนรสิงห์ | KOOKV PINKERBELL",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3215679,
+        "category_rank": 32,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 48,
+      "title": "ธนูแผลงศร | KookV _Cotton.n",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3068177,
+        "category_rank": 33,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 49,
+      "title": "辰樂 เฉินเล่อ - kookv (5) yournxgirl°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 3065062,
+        "category_rank": 34,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 50,
+      "title": "Ravencourt (I) | kookv aquaqtype 𐤀",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2956361,
+        "category_rank": 35,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 51,
+      "title": "เด็กพี่คริส | bkpp สมกิ้น",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2901125,
+        "category_rank": 36,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 52,
+      "title": "†𝕯𝖊𝖒𝖔𝖓 𝖌𝖔𝖉 𝟐† รัชทายาทปีศาจ soonmoon•◞°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2569583,
+        "category_rank": 37,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 53,
+      "title": "ฟาร์มนมของบอสตัน¹ | KookV (Omegavera) 𝐁𝐋𝐀𝐂𝐊𝐌𝐈𝐍",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2460736,
+        "category_rank": 38,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 54,
+      "title": "Hide and Seek | ซ่อนเป็น เห็นตาย #KookV #MinV (No 3p) บักแมวสามชั้น ∞ ฐาอนันต์",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2446422,
+        "category_rank": 39,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 55,
+      "title": "มาเฟียคลั่งรัก KookV Minnylovelyy",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2393756,
+        "category_rank": 40,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 56,
+      "title": "- 𝑀𝐴𝐺𝐼𝐶 𝐹𝑂𝑅 𝑌𝑂𝑈 - | 𝑲𝑶𝑶𝑲𝑽 (1) Lezane.•",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2362091,
+        "category_rank": 41,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 57,
+      "title": "สายเลือดเทพปีศาจ(𝐒𝐒1) |𝐊𝐎𝐎𝐊𝐕 ꧁⁂ผีเสื้อหลากสี⁂꧂",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2330631,
+        "category_rank": 42,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 58,
+      "title": "พ่อเลี้ยงภูริช Kookv (1) Fairy_T",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2302633,
+        "category_rank": 43,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 59,
+      "title": "Your flower of Jafar - kookv (2) yournxgirl°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2286328,
+        "category_rank": 44,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 60,
+      "title": "พ่อเลี้ยงภูมินทร์ Kookv (3) Fairy_T",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2269771,
+        "category_rank": 45,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 61,
+      "title": "龙丽 เพียงหลงลี่ - kookv (3) yournxgirl°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2253951,
+        "category_rank": 46,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 62,
+      "title": "พี่รหัสที่รัก#kookv 𝖒𝖗.𝖏𝖔𝖓 ⋆",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2221791,
+        "category_rank": 47,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 63,
+      "title": "ปะป๊าของหนูเกล |KOOKV| 🐈‍⬛ moonlight ☾ ྀི",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 2114382,
+        "category_rank": 48,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 64,
+      "title": "ETHAN #KOOKV (2) M.minrada",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1954479,
+        "category_rank": 49,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 65,
+      "title": "กูกับพี่มึง มึงกับน้องกู || KOOKV kookv_jv",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1918626,
+        "category_rank": 50,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 66,
+      "title": "คุณจักร#kookv 𝖒𝖗.𝖏𝖔𝖓 ⋆",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1899167,
+        "category_rank": 51,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 67,
+      "title": "I'm the Villian | #kookv (1) Lubbu_C",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1890661,
+        "category_rank": 52,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 68,
+      "title": "เหนือโจเดน || #KOOKV M.minrada",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1884881,
+        "category_rank": 53,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 69,
+      "title": "Minamoto (II) | kookv aquaqtype 𐤀",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1871135,
+        "category_rank": 54,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 70,
+      "title": "AST4R | KOOKV-VKOOK puynun22",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1843468,
+        "category_rank": 55,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 71,
+      "title": "พ่อเลี้ยงภูวินทร์ Kookv (2) Fairy_T",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1842933,
+        "category_rank": 56,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 72,
+      "title": "เวธัสตัวร้าย | KOOKV nm.6",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1833879,
+        "category_rank": 57,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 73,
+      "title": "เมธาลลิต | KOOKV PINKERBELL",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1827571,
+        "category_rank": 58,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 74,
+      "title": "ทูลหัวของธาวิน #KOOKV M.minrada",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1776847,
+        "category_rank": 59,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 75,
+      "title": "หลงชิงหลัน | KOOKV (MPREG) YOURLALYN",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1722705,
+        "category_rank": 60,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 76,
+      "title": "คฤหาสน์ความลับ | NCT Ladyredrum",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1708099,
+        "category_rank": 61,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 77,
+      "title": "คู่ชีวิตกุกวี | kookv K.jankhana",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1703932,
+        "category_rank": 62,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 78,
+      "title": "在成 ไจ้เฉิง - kookv (4) yournxgirl°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1685439,
+        "category_rank": 63,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 79,
+      "title": "ไอ้จ๊าบอย่าโหด | (kookv) inmind.",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1675826,
+        "category_rank": 64,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 80,
+      "title": "พันธุ์ปริ๊นซ์ | Kookv PINKERBELL",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1614432,
+        "category_rank": 65,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 81,
+      "title": "ไอ้พี่เกียร์ #kookv mmbbgift.",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1589182,
+        "category_rank": 66,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 82,
+      "title": "หัวใจพิการ⛓️ || kookv (เรื่องแรกมือใหม่งับ รอปรับปรุง) เจ้าหญิงเถาวัลย์",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1545415,
+        "category_rank": 67,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 83,
+      "title": "ภูมิแพ้พี่หมอ | kookv gabol ꑭ ˖",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1527065,
+        "category_rank": 68,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 84,
+      "title": "† 𝕯𝖊𝖒𝖔𝖓 𝖌𝖔𝖉 † เทพของปีศาจ soonmoon•◞°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1520338,
+        "category_rank": 69,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 85,
+      "title": "เท่โช้คอัพ | KookV _Cotton.n",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1502443,
+        "category_rank": 70,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 86,
+      "title": "หัวใจสิงห์ | KOOKV (Mpreg) เคคิ",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1460277,
+        "category_rank": 71,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 87,
+      "title": "นฤเคนทร์ | Kookv Banax.tQ",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1454394,
+        "category_rank": 72,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 88,
+      "title": "มินทร์ทราวน์ | KOOKV nm.6",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1428380,
+        "category_rank": 73,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 89,
+      "title": "นันน์ณริน | NA ໒ っ୨୧໒ ୨୧ഒ 𖦹 🤍",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1393954,
+        "category_rank": 74,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 90,
+      "title": "Renzo Leon | kookv เมบีเอ",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1378711,
+        "category_rank": 75,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 91,
+      "title": "ภรรยาราฟาเอล(Omegaverse)[1] Northern starlight🌌",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1375060,
+        "category_rank": 76,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 92,
+      "title": "NIKO MAYAN | kookv yournxgirl°",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1370013,
+        "category_rank": 77,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 93,
+      "title": "Drive to You | ป๋อจ้าน Julalumpa",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1369788,
+        "category_rank": 78,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 94,
+      "title": "ตุ้ย | Kookv เปลือกส้มพี่ดารา",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1362467,
+        "category_rank": 79,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 95,
+      "title": "เล่ห์ฤทัย Sinleeya",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1344952,
+        "category_rank": 80,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 96,
+      "title": "#LUCASนักฆ่าเกิดใหม่เป็นเมียมาเฟีย—KOOKV 𝘆𝗼𝘂𝗿𝘀𝘂𝗻.",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1338202,
+        "category_rank": 81,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 97,
+      "title": "พี่สิงห์ | KOOKV (2) nm.6",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1332306,
+        "category_rank": 82,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 98,
+      "title": "Master P. | KOOKV PINKERBELL",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1328809,
+        "category_rank": 83,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 99,
+      "title": "สายเลือดเทพปีศาจแวมไพร์(𝐒𝐒4) | 𝐊𝐎𝐎𝐊𝐕 ꧁⁂ผีเสื้อหลากสี⁂꧂",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1327881,
+        "category_rank": 84,
+        "ranking_box": 1
+      }
+    },
+    {
+      "market": "Thailand",
+      "language_market": "Thai",
+      "raw_language": "th",
+      "platform": "Joylada",
+      "signal_type": "homepage_ranking",
+      "rank": 100,
+      "title": "Warning #ระวังพันเจีย | KOOKV PINKERBELL",
+      "labels": [
+        "joylada_ranking_box_1"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "reads_or_views": 1315561,
+        "category_rank": 85,
+        "ranking_box": 1
+      }
+    }
+  ]
+}

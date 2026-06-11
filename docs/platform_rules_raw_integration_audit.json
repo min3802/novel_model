@@ -1,0 +1,146 @@
+{
+  "raw_platform_rule_files": [
+    {
+      "file": "data\\localization_guide\\raw\\platform_rules\\platform_rules_report_CN.json",
+      "rules": 58,
+      "countries": {
+        "CN": 58
+      },
+      "platform_count": 3,
+      "top_platforms": [
+        [
+          "番茄小说(판치에소설)",
+          42
+        ],
+        [
+          "晋江文学城(진장문학성)",
+          14
+        ],
+        [
+          "阅文(웨원)",
+          2
+        ]
+      ],
+      "severities": {
+        "high": 20,
+        "medium": 21,
+        "low": 17
+      },
+      "missing_optional_labels": {
+        "risk_type_labels_ko": 4
+      },
+      "bad_char_rules": 0
+    },
+    {
+      "file": "data\\localization_guide\\raw\\platform_rules\\platform_rules_report_JP.json",
+      "rules": 42,
+      "countries": {
+        "JP": 42
+      },
+      "platform_count": 3,
+      "top_platforms": [
+        [
+          "カクヨム(카쿠요무)",
+          18
+        ],
+        [
+          "アルファポリス(알파폴리스)",
+          12
+        ],
+        [
+          "小説家になろう(소설가가 되자)",
+          12
+        ]
+      ],
+      "severities": {
+        "high": 17,
+        "medium": 13,
+        "low": 12
+      },
+      "missing_optional_labels": {
+        "risk_type_labels_ko": 4
+      },
+      "bad_char_rules": 0
+    },
+    {
+      "file": "data\\localization_guide\\raw\\platform_rules\\platform_rules_report_TH.json",
+      "rules": 46,
+      "countries": {
+        "TH": 46
+      },
+      "platform_count": 3,
+      "top_platforms": [
+        [
+          "Dek-D",
+          25
+        ],
+        [
+          "Joylada",
+          14
+        ],
+        [
+          "ReadAWrite",
+          7
+        ]
+      ],
+      "severities": {
+        "high": 14,
+        "medium": 20,
+        "low": 12
+      },
+      "missing_optional_labels": {
+        "risk_type_labels_ko": 12
+      },
+      "bad_char_rules": 0
+    },
+    {
+      "file": "data\\localization_guide\\raw\\platform_rules\\platform_rules_report_US.json",
+      "rules": 30,
+      "countries": {
+        "US": 30
+      },
+      "platform_count": 2,
+      "top_platforms": [
+        [
+          "Tapas",
+          20
+        ],
+        [
+          "Wattpad",
+          10
+        ]
+      ],
+      "severities": {
+        "high": 20,
+        "medium": 7,
+        "low": 3
+      },
+      "missing_optional_labels": {
+        "risk_type_labels_ko": 1
+      },
+      "bad_char_rules": 0
+    }
+  ],
+  "loader_counts": {
+    "JP": 42,
+    "US": 30,
+    "CN": 58,
+    "TH": 46
+  },
+  "sample_policy_card_count": 27,
+  "sample_card_titles_first_10": [
+    "연령 등급/성인 표시 · 미성년자 보호",
+    "연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사",
+    "연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사",
+    "성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사 · 자해/자살 · 혐오/차별 · 불법/범죄 행위 · 제목/소개/표지/회차 형식",
+    "성적 콘텐츠 · 저작권/상표권/IP · 2차창작/팬콘텐츠 · 제목/소개/표지/회차 형식 · 상업화/수익화",
+    "연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사 · 자해/자살 · 제목/소개/표지/회차 형식",
+    "연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사",
+    "성적 콘텐츠 · AI 생성 콘텐츠 · 제목/소개/표지/회차 형식 · 상업화/수익화",
+    "성적 콘텐츠 · 저작권/상표권/IP · 2차창작/팬콘텐츠",
+    "연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 저작권/상표권/IP · 개인정보/사생활"
+  ],
+  "sample_has_bad_question_placeholder": false,
+  "sample_has_replacement_char": false,
+  "integration_note": "Loader now prefers data/localization_guide/raw/platform_rules/platform_rules_report_{COUNTRY}.json and falls back to data/localization_guide/regulation only when raw files are absent."
+}

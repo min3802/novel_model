@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-06-09T01:41:31.428207+00:00",
+  "synopsisSource": "C:\\Users\\kwonm\\Kwon3802\\바탕 화면\\시놉시스.txt",
+  "cases": [
+    {
+      "case": "case1_us_modern_romance_no_synopsis",
+      "label": "Case 1: US + Modern Romance, no synopsis",
+      "payloadFile": "docs\\live_guide_case1_us_modern_romance_no_synopsis_payload.json",
+      "responseFile": "docs\\live_guide_case1_us_modern_romance_no_synopsis_response.json",
+      "htmlFile": "docs\\live_guide_case1_us_modern_romance_no_synopsis_final.html",
+      "mode": "country_genre_guide",
+      "generationMode": "llm_with_rag",
+      "llmGeneratedGuide": true,
+      "llmGuideModel": "gpt-4.1-mini",
+      "llmGuideError": null,
+      "targetCountry": "US/global English",
+      "displayCountry": "미국",
+      "genre": "현대 로맨스",
+      "synopsisPresent": false,
+      "synopsisChars": 0,
+      "policyCardCount": 0,
+      "contextPackBriefing": true,
+      "contextPackEvidence": true,
+      "createdAt": "2026-06-09 10:40"
+    },
+    {
+      "case": "case2_us_modern_romance_with_synopsis",
+      "label": "Case 2: US + Modern Romance + synopsis file",
+      "payloadFile": "docs\\live_guide_case2_us_modern_romance_with_synopsis_payload.json",
+      "responseFile": "docs\\live_guide_case2_us_modern_romance_with_synopsis_response.json",
+      "htmlFile": "docs\\live_guide_case2_us_modern_romance_with_synopsis_final.html",
+      "mode": "synopsis_country_recommendation",
+      "generationMode": "llm_with_rag",
+      "llmGeneratedGuide": true,
+      "llmGuideModel": "gpt-4.1-mini",
+      "llmGuideError": null,
+      "targetCountry": "US/global English",
+      "displayCountry": "미국",
+      "genre": "현대 로맨스",
+      "synopsisPresent": true,
+      "synopsisChars": 3136,
+      "policyCardCount": 18,
+      "contextPackBriefing": true,
+      "contextPackEvidence": true,
+      "createdAt": "2026-06-09 10:41"
+    }
+  ]
+}

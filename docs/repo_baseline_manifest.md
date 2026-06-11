@@ -1,4 +1,4 @@
-# Repository baseline manifest
+﻿# Repository baseline manifest
 
 Date: 2026-06-06
 
@@ -37,8 +37,8 @@ data/cultural_terms/
 data/legacy_idiom_rag/raw_enriched/*_embedding_anchor_meaning.json
 data/localization_guide/platform_observation/platform_observation_poc.json
 data/localization_guide/platform_observation/platform_trends_current.json
-data/localization_guide/platform_trend_advisor.py
-data/localization_guide/platform_trend_guide.py
+app/guide/platform_trend_advisor.py
+app/guide/platform_trend_guide.py
 ```
 
 ## Handoff documents kept in git
@@ -94,3 +94,4 @@ approach. Translation consistency is scoped to `ko_locale_pipeline/terminology.p
 confirmed noun/proper-noun rows can be supplied as `terminology`/`terms` in a
 translation request, rendered into the prompt, and checked after translation.
 Verbs, adjectives, and normal sentence-level wording variation are not enforced.
+

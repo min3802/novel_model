@@ -1,0 +1,1450 @@
+{
+  "mode": "synopsis_country_recommendation",
+  "requiresSelection": false,
+  "title": "미국/영어권 현지화 가이드",
+  "country": "US/global English",
+  "targetCountry": "US/global English",
+  "genre": "현대 로맨스",
+  "synopsis": "10년 전, 윤해린은 첫사랑 한서준을 떠났다. 그를 버린 것이 아니라, 지키기 위한 선택이었다. 그리고 다시 만난 두 사람은 정략결혼 상대가 되어 있었다. 서준은 해린을 미워한다고 믿고, 해린은 끝까지 진실을 숨기려 한다. 필요한 건 결혼이지, 사랑이 아니야. 상처를 감춘 여자와, 그 상처를 뒤늦게 알아가는 남자. 서로를 밀어내던 두 사람은 결혼이라는 이름 아래 다시 흔들리기  시작한다.",
+  "recommendedCountries": [
+    {
+      "country": "US/global English",
+      "score": 1306.555,
+      "reasons": [
+        "synopsis motifs overlap with exposed titles/descriptions/tags (653)",
+        "requested genre overlaps with platform-visible genres/tags (449)"
+      ],
+      "evidence": [
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 16,
+          "title": "The Cruelty of Salvation",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "COMPLETED",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=5, rank=16"
+        },
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 1,
+          "title": "The Villainess' Mandate",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "ON_GOING",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=3, rank=1"
+        },
+        {
+          "platform": "Wattpad",
+          "collection": "hot_fantasy",
+          "rank": 4,
+          "title": "The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt",
+          "genre": "aristocracy",
+          "tags": [
+            "aristocracy",
+            "betrayal",
+            "darkfantasy",
+            "darkromance",
+            "fantasy",
+            "femaleprotagonist",
+            "guiltridden",
+            "multiplelovinterests",
+            "noblewoman",
+            "regression"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=3, rank=4"
+        },
+        {
+          "platform": "Wattpad",
+          "collection": "hot_fantasy",
+          "rank": 1,
+          "title": "The Life of A Villainess [COMPLETED]",
+          "genre": "changedestiny",
+          "tags": [
+            "changedestiny",
+            "fantasy",
+            "lazyheroine",
+            "nobility",
+            "noble",
+            "original",
+            "prince",
+            "reincarnated",
+            "reincarnation",
+            "romance"
+          ],
+          "source_url": null,
+          "reason": "genre hits=2, synopsis hits=5, rank=1"
+        },
+        {
+          "platform": "Wattpad",
+          "collection": "hot_fantasy",
+          "rank": 9,
+          "title": "The Scamming High Priest",
+          "genre": "-romance",
+          "tags": [
+            "-romance",
+            "comedy-romance",
+            "fantasy",
+            "fantasy-romance",
+            "fantasyadventure",
+            "fantasyfiction",
+            "femaleprotagonist",
+            "femaletomale",
+            "genderbender",
+            "historical"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=3, rank=9"
+        },
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 27,
+          "title": "Forget My Husband, I'll Go Make Money",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "COMPLETED",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=5, rank=27"
+        },
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 10,
+          "title": "The Perks of Being a Villainess",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "COMPLETED",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=3, rank=10"
+        },
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 23,
+          "title": "Villains Are Destined to Die",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "COMPLETED",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=4, rank=23"
+        }
+      ]
+    },
+    {
+      "country": "Global",
+      "score": 380.505,
+      "reasons": [
+        "synopsis motifs overlap with exposed titles/descriptions/tags (183)",
+        "requested genre overlaps with platform-visible genres/tags (140)"
+      ],
+      "evidence": [
+        {
+          "platform": "WebNovel",
+          "collection": "power_ranking",
+          "rank": 36,
+          "title": "Reborn As The Minor Villain In A Romance Fantasy Novel",
+          "genre": "Fantasy",
+          "tags": [
+            "Fantasy",
+            "ROMANCE",
+            "ADVENTURE",
+            "SYSTEM",
+            "REINCARNATION",
+            "MAGIC",
+            "R18",
+            "COMEDY",
+            "HAREM",
+            "OVERPOWERED"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=3, rank=36"
+        },
+        {
+          "platform": "WebNovel",
+          "collection": "power_ranking",
+          "rank": 24,
+          "title": "Path To Godhood Begins With Marrying Wife And Gaining SSS Rank Skill",
+          "genre": "Fantasy",
+          "tags": [
+            "Fantasy",
+            "ACTION",
+            "ROMANCE",
+            "SYSTEM",
+            "R18",
+            "WEAKTOSTRONG",
+            "HAREM",
+            "SLICEOFLIFE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=2, synopsis hits=4, rank=24"
+        },
+        {
+          "platform": "WebNovel",
+          "collection": "power_ranking",
+          "rank": 1,
+          "title": "Others Summon Dragons, I Summon Legendary Knights",
+          "genre": "Fantasy",
+          "tags": [
+            "Fantasy",
+            "ACTION",
+            "ROMANCE",
+            "ADVENTURE",
+            "SYSTEM",
+            "R18",
+            "SUPERPOWERS",
+            "OVERPOWERED",
+            "ACADEMY",
+            "EVOLUTION"
+          ],
+          "source_url": null,
+          "reason": "genre hits=2, synopsis hits=2, rank=1"
+        },
+        {
+          "platform": "WebNovel",
+          "collection": "power_ranking",
+          "rank": 28,
+          "title": "Lewd System: Every Scream and Moan is EXP",
+          "genre": "Games",
+          "tags": [
+            "Games",
+            "SYSTEM",
+            "R18",
+            "COMEDY",
+            "HAREM",
+            "OVERPOWERED",
+            "TRANSMIGRATION",
+            "SLICEOFLIFE",
+            "SMUT",
+            "ACADEMY"
+          ],
+          "source_url": null,
+          "reason": "genre hits=2, synopsis hits=4, rank=28"
+        },
+        {
+          "platform": "WebNovel",
+          "collection": "power_ranking",
+          "rank": 2,
+          "title": "SSS Awakening: I Can Class Change at will",
+          "genre": "Games",
+          "tags": [
+            "Games",
+            "ACTION",
+            "ROMANCE",
+            "SYSTEM",
+            "MAGIC",
+            "WEAKTOSTRONG",
+            "SUPERPOWERS",
+            "OVERPOWERED",
+            "TRANSMIGRATION",
+            "EVOLUTION"
+          ],
+          "source_url": null,
+          "reason": "genre hits=2, synopsis hits=2, rank=2"
+        },
+        {
+          "platform": "WebNovel",
+          "collection": "power_ranking",
+          "rank": 3,
+          "title": "Absolute Beast Dominion",
+          "genre": "Fantasy",
+          "tags": [
+            "Fantasy",
+            "ACTION",
+            "ROMANCE",
+            "ADVENTURE",
+            "SYSTEM",
+            "R18",
+            "SUPERPOWERS",
+            "SLICEOFLIFE",
+            "NO-HAREM",
+            "BEAST TAMING"
+          ],
+          "source_url": null,
+          "reason": "genre hits=2, synopsis hits=2, rank=3"
+        },
+        {
+          "platform": "WebNovel",
+          "collection": "power_ranking",
+          "rank": 4,
+          "title": "A Cunning Pervert in the Cultivation World",
+          "genre": "Eastern",
+          "tags": [
+            "Eastern",
+            "ACTION",
+            "ROMANCE",
+            "ADVENTURE",
+            "SYSTEM",
+            "R18",
+            "WEAKTOSTRONG",
+            "COMEDY",
+            "HAREM",
+            "OVERPOWERED"
+          ],
+          "source_url": null,
+          "reason": "genre hits=2, synopsis hits=2, rank=4"
+        },
+        {
+          "platform": "WebNovel",
+          "collection": "power_ranking",
+          "rank": 5,
+          "title": "Harem System In A fantasy World",
+          "genre": "Fantasy",
+          "tags": [
+            "Fantasy",
+            "ACTION",
+            "ROMANCE",
+            "ADVENTURE",
+            "SYSTEM",
+            "MAGIC",
+            "R18",
+            "HAREM",
+            "SMUT",
+            "LEVELUP"
+          ],
+          "source_url": null,
+          "reason": "genre hits=2, synopsis hits=2, rank=5"
+        }
+      ]
+    },
+    {
+      "country": "Japan",
+      "score": 116.285,
+      "reasons": [
+        "requested genre overlaps with platform-visible genres/tags (65)",
+        "synopsis motifs overlap with exposed titles/descriptions/tags (2)"
+      ],
+      "evidence": [
+        {
+          "platform": "Syosetu",
+          "collection": "weekly_ranking",
+          "rank": 1,
+          "title": "第二部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "異世界転生",
+            "ギャグ",
+            "ほのぼの",
+            "女主人公",
+            "学園",
+            "中世",
+            "チート",
+            "魔法",
+            "日常"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=1"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "monthly_ranking",
+          "rank": 2,
+          "title": "第二部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "異世界転生",
+            "ギャグ",
+            "ほのぼの",
+            "女主人公",
+            "学園",
+            "中世",
+            "チート",
+            "魔法",
+            "日常"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=2"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "monthly_ranking",
+          "rank": 3,
+          "title": "【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "残酷な描写あり",
+            "シリアス",
+            "女主人公",
+            "西洋",
+            "中世",
+            "年の差",
+            "ネトコン13",
+            "悪女",
+            "回帰"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=3"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "weekly_ranking",
+          "rank": 3,
+          "title": "【第二部開始】アルジェ・ロッシーニ元王太子妃の剣",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "女主人公",
+            "西洋",
+            "学園",
+            "ハッピーエンド",
+            "ざまぁ",
+            "強いヒロイン",
+            "剣聖"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=3"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "monthly_ranking",
+          "rank": 4,
+          "title": "病弱な幼馴染のために娘の部屋を明け渡せと言われたので、夫ごと捨てます～前世で読んだ物語では娘が死んでから溺愛されるそうですが、そんな展開はお断りです～",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "異世界転生",
+            "女主人公",
+            "西洋",
+            "近世",
+            "魔法",
+            "ハッピーエンド",
+            "政略結婚",
+            "冷遇夫",
+            "病弱な幼馴染"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=4"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "monthly_ranking",
+          "rank": 5,
+          "title": "【4/4コミカライズ開始】公爵家の長女でした",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "異世界転生",
+            "女主人公",
+            "ハッピーエンド",
+            "婚約破棄",
+            "姉妹格差",
+            "前世の記憶",
+            "長女"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=5"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "weekly_ranking",
+          "rank": 5,
+          "title": "【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "残酷な描写あり",
+            "シリアス",
+            "女主人公",
+            "西洋",
+            "中世",
+            "年の差",
+            "ネトコン13",
+            "悪女",
+            "回帰"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=5"
+        },
+        {
+          "platform": "Alphapolis",
+          "collection": "hot_24h",
+          "rank": 39,
+          "title": "転生したら子持ちだったのに皇帝陛下が嫁になれと迫ってくる",
+          "genre": "BL",
+          "tags": [
+            "BL",
+            "連載中",
+            "長編",
+            "R18",
+            "小説",
+            "ハッピーエンド",
+            "異世界",
+            "年下攻め",
+            "オメガバース（独自設定有り）",
+            "ご都合主義ダンジョン有"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=1, rank=39"
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "market_trend_fit": {
+      "title": "시장 트렌드 적합도",
+      "items": [
+        "선택/추천 국가: US/global English",
+        "요청 장르: 현대 로맨스",
+        "상위 장르 근거: Fantasy(248), Adventure(216), Action(212), LitRPG(164), ONGOING(140)",
+        "시놉시스 기반 국가 추천 흐름입니다."
+      ]
+    },
+    "genre_trope_alignment": {
+      "title": "장르/트로프 정렬",
+      "items": [
+        "System/progression readability is a primary market signal: levels, skills, growth loops, and payoff cadence should be explicit.",
+        "Isekai/reincarnation framing is prominent; early setup should clarify transfer/rebirth rules and the protagonist's advantage.",
+        "Relationship-forward fantasy/romance demand is strong; emotional stakes and pairing dynamics need clear early hooks.",
+        "Male-protagonist adventure/power-fantasy remains visible in platform exposure.",
+        "Female-lead status reversal, romance conflict, and social-position tropes are visible localization levers.",
+        "반복 태그: Fantasy(248), Adventure(216), Action(212), LitRPG(164), ONGOING(140), Original(140), Progression(111), WAIT_UNTIL_FREE(100)"
+      ]
+    },
+    "title_synopsis_localization": {
+      "title": "제목/시놉시스 현지화",
+      "items": [
+        "플랫폼 상위 노출작의 제목·소개문은 장르 훅을 빠르게 드러내는 방향으로 압축합니다.",
+        "시놉시스가 제공된 경우, 원문 소재를 시장 상위 장르/태그 언어로 재정렬합니다.",
+        "공개 시놉시스는 신호 분석에만 쓰고 문장을 복사하지 않습니다."
+      ]
+    },
+    "terminology_glossary_risks": {
+      "title": "용어/글로서리 리스크",
+      "items": [
+        "고유명사, 스킬명, 계급명, 호칭은 작품 단위 glossary로 고정합니다.",
+        "한국 제도/학교/군대/가족 호칭은 대상 시장 독자가 이해할 수 있게 설명량을 조절합니다.",
+        "장르 태그와 본문 용어가 충돌하지 않도록 번역 후 consistency check가 필요합니다."
+      ]
+    },
+    "content_rating_sensitivity": {
+      "title": "연령등급/민감도",
+      "items": [
+        "Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.",
+        "Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.",
+        "플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다."
+      ]
+    },
+    "adaptation_checklist": {
+      "title": "구체 적용 체크리스트",
+      "items": [
+        "Anchor the pitch in the dominant platform-visible genre mix before adding niche cultural explanations.",
+        "Convert synopsis observations into title hooks, opening-episode stakes, and tag/copy choices rather than copying source descriptions.",
+        "Preserve progression mechanics in translation: skill names, rank terms, and upgrade cadence should be consistent across episodes.",
+        "Make relationship premise, power imbalance, consent boundary, and emotional payoff legible in synopsis and chapter-one localization.",
+        "Explain reincarnation/transport premises compactly; readers tolerate familiar setups when the unique advantage is clear.",
+        "For English platforms, foreground premise clarity and genre tags; avoid long cultural footnote-style exposition in the opening pitch.",
+        "최종 가이드에는 사용한 플랫폼, 수집일, rank evidence를 함께 남깁니다.",
+        "본문 수집 없이 공개 메타데이터와 시놉시스 신호만 사용합니다."
+      ]
+    },
+    "evidence_used": {
+      "title": "사용 근거",
+      "items": [
+        "Tapas/popular_novels rank 16: The Cruelty of Salvation (Romance Fantasy) - genre hits=3, synopsis hits=5, rank=16",
+        "Tapas/popular_novels rank 1: The Villainess' Mandate (Romance Fantasy) - genre hits=3, synopsis hits=3, rank=1",
+        "Wattpad/hot_fantasy rank 4: The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt (aristocracy) - genre hits=3, synopsis hits=3, rank=4",
+        "Wattpad/hot_fantasy rank 1: The Life of A Villainess [COMPLETED] (changedestiny) - genre hits=2, synopsis hits=5, rank=1",
+        "Wattpad/hot_fantasy rank 9: The Scamming High Priest (-romance) - genre hits=3, synopsis hits=3, rank=9",
+        "Tapas/popular_novels rank 27: Forget My Husband, I'll Go Make Money (Romance Fantasy) - genre hits=3, synopsis hits=5, rank=27",
+        "Tapas/popular_novels rank 10: The Perks of Being a Villainess (Romance Fantasy) - genre hits=3, synopsis hits=3, rank=10",
+        "Tapas/popular_novels rank 23: Villains Are Destined to Die (Romance Fantasy) - genre hits=3, synopsis hits=4, rank=23"
+      ]
+    }
+  },
+  "evidenceUsed": [
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 16,
+      "title": "The Cruelty of Salvation",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "COMPLETED",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=5, rank=16"
+    },
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 1,
+      "title": "The Villainess' Mandate",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "ON_GOING",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=3, rank=1"
+    },
+    {
+      "platform": "Wattpad",
+      "collection": "hot_fantasy",
+      "rank": 4,
+      "title": "The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt",
+      "genre": "aristocracy",
+      "tags": [
+        "aristocracy",
+        "betrayal",
+        "darkfantasy",
+        "darkromance",
+        "fantasy",
+        "femaleprotagonist",
+        "guiltridden",
+        "multiplelovinterests",
+        "noblewoman",
+        "regression"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=3, rank=4"
+    },
+    {
+      "platform": "Wattpad",
+      "collection": "hot_fantasy",
+      "rank": 1,
+      "title": "The Life of A Villainess [COMPLETED]",
+      "genre": "changedestiny",
+      "tags": [
+        "changedestiny",
+        "fantasy",
+        "lazyheroine",
+        "nobility",
+        "noble",
+        "original",
+        "prince",
+        "reincarnated",
+        "reincarnation",
+        "romance"
+      ],
+      "source_url": null,
+      "reason": "genre hits=2, synopsis hits=5, rank=1"
+    },
+    {
+      "platform": "Wattpad",
+      "collection": "hot_fantasy",
+      "rank": 9,
+      "title": "The Scamming High Priest",
+      "genre": "-romance",
+      "tags": [
+        "-romance",
+        "comedy-romance",
+        "fantasy",
+        "fantasy-romance",
+        "fantasyadventure",
+        "fantasyfiction",
+        "femaleprotagonist",
+        "femaletomale",
+        "genderbender",
+        "historical"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=3, rank=9"
+    },
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 27,
+      "title": "Forget My Husband, I'll Go Make Money",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "COMPLETED",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=5, rank=27"
+    },
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 10,
+      "title": "The Perks of Being a Villainess",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "COMPLETED",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=3, rank=10"
+    },
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 23,
+      "title": "Villains Are Destined to Die",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "COMPLETED",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=4, rank=23"
+    }
+  ],
+  "modelPromptPayload": {
+    "role": "localization_guide_generator",
+    "task": "Generate a Korean webnovel localization guide using the selected/recommended market and platform trend evidence.",
+    "original": {
+      "title": null,
+      "genre": "현대 로맨스",
+      "synopsis": "10년 전, 윤해린은 첫사랑 한서준을 떠났다. 그를 버린 것이 아니라, 지키기 위한 선택이었다. 그리고 다시 만난 두 사람은 정략결혼 상대가 되어 있었다. 서준은 해린을 미워한다고 믿고, 해린은 끝까지 진실을 숨기려 한다. 필요한 건 결혼이지, 사랑이 아니야. 상처를 감춘 여자와, 그 상처를 뒤늦게 알아가는 남자. 서로를 밀어내던 두 사람은 결혼이라는 이름 아래 다시 흔들리기  시작한다.",
+      "tags": [],
+      "ageRating": null,
+      "glossary": {}
+    },
+    "targetCountry": "US/global English",
+    "recommendedCountries": [
+      {
+        "country": "US/global English",
+        "score": 1306.555,
+        "reasons": [
+          "synopsis motifs overlap with exposed titles/descriptions/tags (653)",
+          "requested genre overlaps with platform-visible genres/tags (449)"
+        ],
+        "evidence": [
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 16,
+            "title": "The Cruelty of Salvation",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "COMPLETED",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=5, rank=16"
+          },
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 1,
+            "title": "The Villainess' Mandate",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "ON_GOING",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=3, rank=1"
+          },
+          {
+            "platform": "Wattpad",
+            "collection": "hot_fantasy",
+            "rank": 4,
+            "title": "The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt",
+            "genre": "aristocracy",
+            "tags": [
+              "aristocracy",
+              "betrayal",
+              "darkfantasy",
+              "darkromance",
+              "fantasy",
+              "femaleprotagonist",
+              "guiltridden",
+              "multiplelovinterests",
+              "noblewoman",
+              "regression"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=3, rank=4"
+          },
+          {
+            "platform": "Wattpad",
+            "collection": "hot_fantasy",
+            "rank": 1,
+            "title": "The Life of A Villainess [COMPLETED]",
+            "genre": "changedestiny",
+            "tags": [
+              "changedestiny",
+              "fantasy",
+              "lazyheroine",
+              "nobility",
+              "noble",
+              "original",
+              "prince",
+              "reincarnated",
+              "reincarnation",
+              "romance"
+            ],
+            "source_url": null,
+            "reason": "genre hits=2, synopsis hits=5, rank=1"
+          },
+          {
+            "platform": "Wattpad",
+            "collection": "hot_fantasy",
+            "rank": 9,
+            "title": "The Scamming High Priest",
+            "genre": "-romance",
+            "tags": [
+              "-romance",
+              "comedy-romance",
+              "fantasy",
+              "fantasy-romance",
+              "fantasyadventure",
+              "fantasyfiction",
+              "femaleprotagonist",
+              "femaletomale",
+              "genderbender",
+              "historical"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=3, rank=9"
+          },
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 27,
+            "title": "Forget My Husband, I'll Go Make Money",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "COMPLETED",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=5, rank=27"
+          },
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 10,
+            "title": "The Perks of Being a Villainess",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "COMPLETED",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=3, rank=10"
+          },
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 23,
+            "title": "Villains Are Destined to Die",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "COMPLETED",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=4, rank=23"
+          }
+        ]
+      },
+      {
+        "country": "Global",
+        "score": 380.505,
+        "reasons": [
+          "synopsis motifs overlap with exposed titles/descriptions/tags (183)",
+          "requested genre overlaps with platform-visible genres/tags (140)"
+        ],
+        "evidence": [
+          {
+            "platform": "WebNovel",
+            "collection": "power_ranking",
+            "rank": 36,
+            "title": "Reborn As The Minor Villain In A Romance Fantasy Novel",
+            "genre": "Fantasy",
+            "tags": [
+              "Fantasy",
+              "ROMANCE",
+              "ADVENTURE",
+              "SYSTEM",
+              "REINCARNATION",
+              "MAGIC",
+              "R18",
+              "COMEDY",
+              "HAREM",
+              "OVERPOWERED"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=3, rank=36"
+          },
+          {
+            "platform": "WebNovel",
+            "collection": "power_ranking",
+            "rank": 24,
+            "title": "Path To Godhood Begins With Marrying Wife And Gaining SSS Rank Skill",
+            "genre": "Fantasy",
+            "tags": [
+              "Fantasy",
+              "ACTION",
+              "ROMANCE",
+              "SYSTEM",
+              "R18",
+              "WEAKTOSTRONG",
+              "HAREM",
+              "SLICEOFLIFE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=2, synopsis hits=4, rank=24"
+          },
+          {
+            "platform": "WebNovel",
+            "collection": "power_ranking",
+            "rank": 1,
+            "title": "Others Summon Dragons, I Summon Legendary Knights",
+            "genre": "Fantasy",
+            "tags": [
+              "Fantasy",
+              "ACTION",
+              "ROMANCE",
+              "ADVENTURE",
+              "SYSTEM",
+              "R18",
+              "SUPERPOWERS",
+              "OVERPOWERED",
+              "ACADEMY",
+              "EVOLUTION"
+            ],
+            "source_url": null,
+            "reason": "genre hits=2, synopsis hits=2, rank=1"
+          },
+          {
+            "platform": "WebNovel",
+            "collection": "power_ranking",
+            "rank": 28,
+            "title": "Lewd System: Every Scream and Moan is EXP",
+            "genre": "Games",
+            "tags": [
+              "Games",
+              "SYSTEM",
+              "R18",
+              "COMEDY",
+              "HAREM",
+              "OVERPOWERED",
+              "TRANSMIGRATION",
+              "SLICEOFLIFE",
+              "SMUT",
+              "ACADEMY"
+            ],
+            "source_url": null,
+            "reason": "genre hits=2, synopsis hits=4, rank=28"
+          },
+          {
+            "platform": "WebNovel",
+            "collection": "power_ranking",
+            "rank": 2,
+            "title": "SSS Awakening: I Can Class Change at will",
+            "genre": "Games",
+            "tags": [
+              "Games",
+              "ACTION",
+              "ROMANCE",
+              "SYSTEM",
+              "MAGIC",
+              "WEAKTOSTRONG",
+              "SUPERPOWERS",
+              "OVERPOWERED",
+              "TRANSMIGRATION",
+              "EVOLUTION"
+            ],
+            "source_url": null,
+            "reason": "genre hits=2, synopsis hits=2, rank=2"
+          },
+          {
+            "platform": "WebNovel",
+            "collection": "power_ranking",
+            "rank": 3,
+            "title": "Absolute Beast Dominion",
+            "genre": "Fantasy",
+            "tags": [
+              "Fantasy",
+              "ACTION",
+              "ROMANCE",
+              "ADVENTURE",
+              "SYSTEM",
+              "R18",
+              "SUPERPOWERS",
+              "SLICEOFLIFE",
+              "NO-HAREM",
+              "BEAST TAMING"
+            ],
+            "source_url": null,
+            "reason": "genre hits=2, synopsis hits=2, rank=3"
+          },
+          {
+            "platform": "WebNovel",
+            "collection": "power_ranking",
+            "rank": 4,
+            "title": "A Cunning Pervert in the Cultivation World",
+            "genre": "Eastern",
+            "tags": [
+              "Eastern",
+              "ACTION",
+              "ROMANCE",
+              "ADVENTURE",
+              "SYSTEM",
+              "R18",
+              "WEAKTOSTRONG",
+              "COMEDY",
+              "HAREM",
+              "OVERPOWERED"
+            ],
+            "source_url": null,
+            "reason": "genre hits=2, synopsis hits=2, rank=4"
+          },
+          {
+            "platform": "WebNovel",
+            "collection": "power_ranking",
+            "rank": 5,
+            "title": "Harem System In A fantasy World",
+            "genre": "Fantasy",
+            "tags": [
+              "Fantasy",
+              "ACTION",
+              "ROMANCE",
+              "ADVENTURE",
+              "SYSTEM",
+              "MAGIC",
+              "R18",
+              "HAREM",
+              "SMUT",
+              "LEVELUP"
+            ],
+            "source_url": null,
+            "reason": "genre hits=2, synopsis hits=2, rank=5"
+          }
+        ]
+      },
+      {
+        "country": "Japan",
+        "score": 116.285,
+        "reasons": [
+          "requested genre overlaps with platform-visible genres/tags (65)",
+          "synopsis motifs overlap with exposed titles/descriptions/tags (2)"
+        ],
+        "evidence": [
+          {
+            "platform": "Syosetu",
+            "collection": "weekly_ranking",
+            "rank": 1,
+            "title": "第二部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "異世界転生",
+              "ギャグ",
+              "ほのぼの",
+              "女主人公",
+              "学園",
+              "中世",
+              "チート",
+              "魔法",
+              "日常"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=1"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "monthly_ranking",
+            "rank": 2,
+            "title": "第二部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "異世界転生",
+              "ギャグ",
+              "ほのぼの",
+              "女主人公",
+              "学園",
+              "中世",
+              "チート",
+              "魔法",
+              "日常"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=2"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "monthly_ranking",
+            "rank": 3,
+            "title": "【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "残酷な描写あり",
+              "シリアス",
+              "女主人公",
+              "西洋",
+              "中世",
+              "年の差",
+              "ネトコン13",
+              "悪女",
+              "回帰"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=3"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "weekly_ranking",
+            "rank": 3,
+            "title": "【第二部開始】アルジェ・ロッシーニ元王太子妃の剣",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "女主人公",
+              "西洋",
+              "学園",
+              "ハッピーエンド",
+              "ざまぁ",
+              "強いヒロイン",
+              "剣聖"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=3"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "monthly_ranking",
+            "rank": 4,
+            "title": "病弱な幼馴染のために娘の部屋を明け渡せと言われたので、夫ごと捨てます～前世で読んだ物語では娘が死んでから溺愛されるそうですが、そんな展開はお断りです～",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "異世界転生",
+              "女主人公",
+              "西洋",
+              "近世",
+              "魔法",
+              "ハッピーエンド",
+              "政略結婚",
+              "冷遇夫",
+              "病弱な幼馴染"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=4"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "monthly_ranking",
+            "rank": 5,
+            "title": "【4/4コミカライズ開始】公爵家の長女でした",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "異世界転生",
+              "女主人公",
+              "ハッピーエンド",
+              "婚約破棄",
+              "姉妹格差",
+              "前世の記憶",
+              "長女"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=5"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "weekly_ranking",
+            "rank": 5,
+            "title": "【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "残酷な描写あり",
+              "シリアス",
+              "女主人公",
+              "西洋",
+              "中世",
+              "年の差",
+              "ネトコン13",
+              "悪女",
+              "回帰"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=5"
+          },
+          {
+            "platform": "Alphapolis",
+            "collection": "hot_24h",
+            "rank": 39,
+            "title": "転生したら子持ちだったのに皇帝陛下が嫁になれと迫ってくる",
+            "genre": "BL",
+            "tags": [
+              "BL",
+              "連載中",
+              "長編",
+              "R18",
+              "小説",
+              "ハッピーエンド",
+              "異世界",
+              "年下攻め",
+              "オメガバース（独自設定有り）",
+              "ご都合主義ダンジョン有"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=1, rank=39"
+          }
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 16,
+        "title": "The Cruelty of Salvation",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "COMPLETED",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=5, rank=16"
+      },
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 1,
+        "title": "The Villainess' Mandate",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "ON_GOING",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=3, rank=1"
+      },
+      {
+        "platform": "Wattpad",
+        "collection": "hot_fantasy",
+        "rank": 4,
+        "title": "The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt",
+        "genre": "aristocracy",
+        "tags": [
+          "aristocracy",
+          "betrayal",
+          "darkfantasy",
+          "darkromance",
+          "fantasy",
+          "femaleprotagonist",
+          "guiltridden",
+          "multiplelovinterests",
+          "noblewoman",
+          "regression"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=3, rank=4"
+      },
+      {
+        "platform": "Wattpad",
+        "collection": "hot_fantasy",
+        "rank": 1,
+        "title": "The Life of A Villainess [COMPLETED]",
+        "genre": "changedestiny",
+        "tags": [
+          "changedestiny",
+          "fantasy",
+          "lazyheroine",
+          "nobility",
+          "noble",
+          "original",
+          "prince",
+          "reincarnated",
+          "reincarnation",
+          "romance"
+        ],
+        "source_url": null,
+        "reason": "genre hits=2, synopsis hits=5, rank=1"
+      },
+      {
+        "platform": "Wattpad",
+        "collection": "hot_fantasy",
+        "rank": 9,
+        "title": "The Scamming High Priest",
+        "genre": "-romance",
+        "tags": [
+          "-romance",
+          "comedy-romance",
+          "fantasy",
+          "fantasy-romance",
+          "fantasyadventure",
+          "fantasyfiction",
+          "femaleprotagonist",
+          "femaletomale",
+          "genderbender",
+          "historical"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=3, rank=9"
+      },
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 27,
+        "title": "Forget My Husband, I'll Go Make Money",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "COMPLETED",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=5, rank=27"
+      },
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 10,
+        "title": "The Perks of Being a Villainess",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "COMPLETED",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=3, rank=10"
+      },
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 23,
+        "title": "Villains Are Destined to Die",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "COMPLETED",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=4, rank=23"
+      }
+    ],
+    "requiredOutputSections": [
+      "market_trend_fit",
+      "genre_trope_alignment",
+      "title_synopsis_localization",
+      "terminology_glossary_risks",
+      "content_rating_sensitivity",
+      "adaptation_checklist",
+      "evidence_used"
+    ],
+    "claimLimit": "Phrase conclusions as platform trend evidence, not national readership certainty.",
+    "evidencePolicy": {
+      "allowed": [
+        "public rank/exposure metadata",
+        "title",
+        "genre",
+        "tags",
+        "public metrics",
+        "public synopsis/description"
+      ],
+      "excluded": [
+        "episode/story body text",
+        "paid or locked content",
+        "login-only data",
+        "image downloads"
+      ]
+    }
+  },
+  "htmlReport": "\n    <div class=\"guide-report\">\n      <div class=\"guide-cover\">\n        <div class=\"guide-cover-label\">Localization Guide · Platform Trend Evidence</div>\n        <div class=\"guide-cover-title\">미국/영어권 현지화 가이드<br><em>플랫폼 트렌드 리포트</em></div>\n        <div class=\"guide-cover-sub\"><span>시놉시스 기반 국가 추천</span><span>현대 로맨스</span><span>current platform trends</span></div>\n      </div>\n      <div class=\"guide-legacy-anchors\">작성 방향 · 문화 주의사항 · 플랫폼 규정</div>\n      <div class=\"guide-section\"><div class=\"guide-section-header\"><span class=\"guide-section-title\">추천 국가 후보</span></div><ul class=\"guide-list\"><li>US/global English: 1306.555 — synopsis motifs overlap with exposed titles/descriptions/tags (653); requested genre overlaps with platform-visible genres/tags (449)</li><li>Global: 380.505 — synopsis motifs overlap with exposed titles/descriptions/tags (183); requested genre overlaps with platform-visible genres/tags (140)</li><li>Japan: 116.285 — requested genre overlaps with platform-visible genres/tags (65); synopsis motifs overlap with exposed titles/descriptions/tags (2)</li></ul></div>\n      <div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>시장 트렌드 적합도</span></div><ul class='guide-list'><li>선택/추천 국가: US/global English</li><li>요청 장르: 현대 로맨스</li><li>상위 장르 근거: Fantasy(248), Adventure(216), Action(212), LitRPG(164), ONGOING(140)</li><li>시놉시스 기반 국가 추천 흐름입니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>장르/트로프 정렬</span></div><ul class='guide-list'><li>System/progression readability is a primary market signal: levels, skills, growth loops, and payoff cadence should be explicit.</li><li>Isekai/reincarnation framing is prominent; early setup should clarify transfer/rebirth rules and the protagonist&#x27;s advantage.</li><li>Relationship-forward fantasy/romance demand is strong; emotional stakes and pairing dynamics need clear early hooks.</li><li>Male-protagonist adventure/power-fantasy remains visible in platform exposure.</li><li>Female-lead status reversal, romance conflict, and social-position tropes are visible localization levers.</li><li>반복 태그: Fantasy(248), Adventure(216), Action(212), LitRPG(164), ONGOING(140), Original(140), Progression(111), WAIT_UNTIL_FREE(100)</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>제목/시놉시스 현지화</span></div><ul class='guide-list'><li>플랫폼 상위 노출작의 제목·소개문은 장르 훅을 빠르게 드러내는 방향으로 압축합니다.</li><li>시놉시스가 제공된 경우, 원문 소재를 시장 상위 장르/태그 언어로 재정렬합니다.</li><li>공개 시놉시스는 신호 분석에만 쓰고 문장을 복사하지 않습니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>용어/글로서리 리스크</span></div><ul class='guide-list'><li>고유명사, 스킬명, 계급명, 호칭은 작품 단위 glossary로 고정합니다.</li><li>한국 제도/학교/군대/가족 호칭은 대상 시장 독자가 이해할 수 있게 설명량을 조절합니다.</li><li>장르 태그와 본문 용어가 충돌하지 않도록 번역 후 consistency check가 필요합니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>연령등급/민감도</span></div><ul class='guide-list'><li>Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.</li><li>Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.</li><li>플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>구체 적용 체크리스트</span></div><ul class='guide-list'><li>Anchor the pitch in the dominant platform-visible genre mix before adding niche cultural explanations.</li><li>Convert synopsis observations into title hooks, opening-episode stakes, and tag/copy choices rather than copying source descriptions.</li><li>Preserve progression mechanics in translation: skill names, rank terms, and upgrade cadence should be consistent across episodes.</li><li>Make relationship premise, power imbalance, consent boundary, and emotional payoff legible in synopsis and chapter-one localization.</li><li>Explain reincarnation/transport premises compactly; readers tolerate familiar setups when the unique advantage is clear.</li><li>For English platforms, foreground premise clarity and genre tags; avoid long cultural footnote-style exposition in the opening pitch.</li><li>최종 가이드에는 사용한 플랫폼, 수집일, rank evidence를 함께 남깁니다.</li><li>본문 수집 없이 공개 메타데이터와 시놉시스 신호만 사용합니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>사용 근거</span></div><ul class='guide-list'><li>Tapas/popular_novels rank 16: The Cruelty of Salvation (Romance Fantasy) - genre hits=3, synopsis hits=5, rank=16</li><li>Tapas/popular_novels rank 1: The Villainess&#x27; Mandate (Romance Fantasy) - genre hits=3, synopsis hits=3, rank=1</li><li>Wattpad/hot_fantasy rank 4: The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt (aristocracy) - genre hits=3, synopsis hits=3, rank=4</li><li>Wattpad/hot_fantasy rank 1: The Life of A Villainess [COMPLETED] (changedestiny) - genre hits=2, synopsis hits=5, rank=1</li><li>Wattpad/hot_fantasy rank 9: The Scamming High Priest (-romance) - genre hits=3, synopsis hits=3, rank=9</li><li>Tapas/popular_novels rank 27: Forget My Husband, I&#x27;ll Go Make Money (Romance Fantasy) - genre hits=3, synopsis hits=5, rank=27</li><li>Tapas/popular_novels rank 10: The Perks of Being a Villainess (Romance Fantasy) - genre hits=3, synopsis hits=3, rank=10</li><li>Tapas/popular_novels rank 23: Villains Are Destined to Die (Romance Fantasy) - genre hits=3, synopsis hits=4, rank=23</li></ul></div>\n    </div>\n    ",
+  "createdAt": "2026-06-08 16:11",
+  "writingDirection": {
+    "genre_formula": [
+      "System/progression readability is a primary market signal: levels, skills, growth loops, and payoff cadence should be explicit.",
+      "Isekai/reincarnation framing is prominent; early setup should clarify transfer/rebirth rules and the protagonist's advantage.",
+      "Relationship-forward fantasy/romance demand is strong; emotional stakes and pairing dynamics need clear early hooks.",
+      "Male-protagonist adventure/power-fantasy remains visible in platform exposure.",
+      "Female-lead status reversal, romance conflict, and social-position tropes are visible localization levers.",
+      "반복 태그: Fantasy(248), Adventure(216), Action(212), LitRPG(164), ONGOING(140), Original(140), Progression(111), WAIT_UNTIL_FREE(100)"
+    ],
+    "chapter_structure": [
+      "플랫폼 상위 노출작의 제목·소개문은 장르 훅을 빠르게 드러내는 방향으로 압축합니다.",
+      "시놉시스가 제공된 경우, 원문 소재를 시장 상위 장르/태그 언어로 재정렬합니다.",
+      "공개 시놉시스는 신호 분석에만 쓰고 문장을 복사하지 않습니다."
+    ]
+  },
+  "cultureNotes": {
+    "avoid": [
+      "Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.",
+      "Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.",
+      "플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다."
+    ],
+    "prefer": [
+      "Anchor the pitch in the dominant platform-visible genre mix before adding niche cultural explanations.",
+      "Convert synopsis observations into title hooks, opening-episode stakes, and tag/copy choices rather than copying source descriptions.",
+      "Preserve progression mechanics in translation: skill names, rank terms, and upgrade cadence should be consistent across episodes.",
+      "Make relationship premise, power imbalance, consent boundary, and emotional payoff legible in synopsis and chapter-one localization.",
+      "Explain reincarnation/transport premises compactly; readers tolerate familiar setups when the unique advantage is clear.",
+      "For English platforms, foreground premise clarity and genre tags; avoid long cultural footnote-style exposition in the opening pitch.",
+      "최종 가이드에는 사용한 플랫폼, 수집일, rank evidence를 함께 남깁니다.",
+      "본문 수집 없이 공개 메타데이터와 시놉시스 신호만 사용합니다."
+    ]
+  },
+  "platformRules": {
+    "common_bans": [
+      "Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.",
+      "Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.",
+      "플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다."
+    ],
+    "platforms": []
+  },
+  "localizationTips": {
+    "marketing_tags": [
+      "플랫폼 상위 노출작의 제목·소개문은 장르 훅을 빠르게 드러내는 방향으로 압축합니다.",
+      "시놉시스가 제공된 경우, 원문 소재를 시장 상위 장르/태그 언어로 재정렬합니다.",
+      "공개 시놉시스는 신호 분석에만 쓰고 문장을 복사하지 않습니다."
+    ],
+    "translation_quality": [
+      "고유명사, 스킬명, 계급명, 호칭은 작품 단위 glossary로 고정합니다.",
+      "한국 제도/학교/군대/가족 호칭은 대상 시장 독자가 이해할 수 있게 설명량을 조절합니다.",
+      "장르 태그와 본문 용어가 충돌하지 않도록 번역 후 consistency check가 필요합니다."
+    ]
+  },
+  "tags": [
+    "현대 로맨스",
+    "US/global English",
+    "현지화",
+    "플랫폼 트렌드"
+  ],
+  "policyAttentionCards": [],
+  "policyLimitations": [
+    "현재 입력에서 규정 확인 후보로 표시할 직접 키워드는 발견되지 않았습니다.",
+    "이 결과는 법적 판단이나 위반 확정이 아닙니다."
+  ],
+  "policy_attention_cards": [],
+  "policy_limitations": [
+    "현재 입력에서 규정 확인 후보로 표시할 직접 키워드는 발견되지 않았습니다.",
+    "이 결과는 법적 판단이나 위반 확정이 아닙니다."
+  ]
+}

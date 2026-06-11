@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-06-07T16:25:46.189470+00:00",
+  "raw_record_count": 1346,
+  "context_record_count": 1146,
+  "excluded_record_count": 200,
+  "excluded_platforms": [
+    "WebNovel"
+  ],
+  "excluded_sources": [
+    {
+      "platform": "Royal Road",
+      "signal_type": "trending",
+      "reason": "redundant_signal_type_for_context_balance_keep_weekly_popular"
+    }
+  ],
+  "exclusion_reason": "global_market_not_matched_to_regulatory_context",
+  "context_packs": [
+    {
+      "market": "China",
+      "slug": "china",
+      "record_count": 136,
+      "json": "context_packs/china_observation_context_ko.json",
+      "markdown": "context_packs/china_observation_context_ko.md"
+    },
+    {
+      "market": "US",
+      "slug": "english",
+      "record_count": 450,
+      "json": "context_packs/english_observation_context_ko.json",
+      "markdown": "context_packs/english_observation_context_ko.md"
+    },
+    {
+      "market": "Japan",
+      "slug": "japan",
+      "record_count": 340,
+      "json": "context_packs/japan_observation_context_ko.json",
+      "markdown": "context_packs/japan_observation_context_ko.md"
+    },
+    {
+      "market": "Thailand",
+      "slug": "thailand",
+      "record_count": 220,
+      "json": "context_packs/thailand_observation_context_ko.json",
+      "markdown": "context_packs/thailand_observation_context_ko.md"
+    }
+  ]
+}

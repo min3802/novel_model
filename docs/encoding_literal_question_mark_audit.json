@@ -1,0 +1,112 @@
+﻿{
+  "checked_at": "2026-06-08",
+  "fixed_source_files": [
+    "app/guide/platform_trend_advisor.py",
+    "tests/test_platform_trend_advisor.py"
+  ],
+  "regenerated_artifacts": [
+    "docs/live_api_guide_smoke_payload.json",
+    "docs/live_api_guide_smoke_response.json",
+    "docs/live_api_guide_smoke_report.md",
+    "docs/live_api_guide_smoke_preview.html",
+    "docs/platform_trend_advisor_country_encoding_check.json"
+  ],
+  "current_live_api_html_status": {
+    "htmlReport_contains_triple_question": false,
+    "htmlReport_contains_replacement_char": false,
+    "cover_title": "Japan 현지화 가이드<br><em>플랫폼 트렌드 리포트</em>",
+    "cover_sub": "<span>시놉시스 기반 국가 추천</span><span>로맨스 판타지</span><span>current platform trends</span>"
+  },
+  "country_output_check": [
+    {
+      "case": "Japan",
+      "targetCountry": "Japan",
+      "title": "Japan 현지화 가이드",
+      "tags": [
+        "로맨스 판타지",
+        "Japan",
+        "현지화",
+        "플랫폼 트렌드"
+      ],
+      "cover_title": "Japan 현지화 가이드<br><em>플랫폼 트렌드 리포트</em>",
+      "cover_sub": "<span>시놉시스 기반 국가 추천</span><span>로맨스 판타지</span><span>current platform trends</span>",
+      "contains_triple_question": false,
+      "contains_double_question": false,
+      "contains_replacement_char": false
+    },
+    {
+      "case": "US/global English",
+      "targetCountry": "US/global English",
+      "title": "US/global English 현지화 가이드",
+      "tags": [
+        "LitRPG",
+        "US/global English",
+        "현지화",
+        "플랫폼 트렌드"
+      ],
+      "cover_title": "US/global English 현지화 가이드<br><em>플랫폼 트렌드 리포트</em>",
+      "cover_sub": "<span>시놉시스 기반 국가 추천</span><span>LitRPG</span><span>current platform trends</span>",
+      "contains_triple_question": false,
+      "contains_double_question": false,
+      "contains_replacement_char": false
+    },
+    {
+      "case": "China",
+      "targetCountry": "China",
+      "title": "China 현지화 가이드",
+      "tags": [
+        "무협",
+        "China",
+        "현지화",
+        "플랫폼 트렌드"
+      ],
+      "cover_title": "China 현지화 가이드<br><em>플랫폼 트렌드 리포트</em>",
+      "cover_sub": "<span>시놉시스 기반 국가 추천</span><span>무협</span><span>current platform trends</span>",
+      "contains_triple_question": false,
+      "contains_double_question": false,
+      "contains_replacement_char": false
+    },
+    {
+      "case": "Thailand",
+      "targetCountry": "Thailand",
+      "title": "Thailand 현지화 가이드",
+      "tags": [
+        "로맨스",
+        "Thailand",
+        "현지화",
+        "플랫폼 트렌드"
+      ],
+      "cover_title": "Thailand 현지화 가이드<br><em>플랫폼 트렌드 리포트</em>",
+      "cover_sub": "<span>시놉시스 기반 국가 추천</span><span>로맨스</span><span>current platform trends</span>",
+      "contains_triple_question": false,
+      "contains_double_question": false,
+      "contains_replacement_char": false
+    }
+  ],
+  "remaining_scan_findings": {
+    "benign_source_data_question_marks": [
+      "data/localization_guide/platform_observation/platform_trends_current.json",
+      "data/localization_guide/platform_observation/raw/english/tapas_popular_novels.json",
+      "data/localization_guide/platform_observation/raw/english/webnovel_power_ranking.json"
+    ],
+    "stale_generated_artifacts_from_before_fix": [
+      "docs/live_model_smoke_report.md",
+      "docs/live_model_smoke_results.json",
+      "docs/model_test_case_outputs_live.json",
+      "docs/model_test_case_outputs_live.md"
+    ],
+    "preexisting_mojibake_docs_unrelated_to_live_html_fix": [
+      "docs/k_culture_annotation_handoff.md",
+      "docs/model_code_test_guide.md",
+      "docs/workspace_cleanup_report.md"
+    ],
+    "test_dummy_placeholders_not_runtime_output": [
+      "tests/test_episode_and_artifact_management.py"
+    ],
+    "intentional_mentions_of_question_marks": [
+      "docs/next_omx_handoff.md",
+      "docs/live_api_guide_smoke_report.md",
+      "tests/test_platform_trend_advisor.py"
+    ]
+  }
+}
