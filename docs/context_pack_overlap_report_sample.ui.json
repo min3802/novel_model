@@ -1,0 +1,1163 @@
+{
+  "title": "일본 플랫폼 분위기 스냅샷",
+  "subtitle": "작가님의 작품이 일본 순위권 작품들의 태그 흐름과 어떤 지점에서 겹쳐 보이는지 정리했습니다.",
+  "scope_badges": [
+    "일본",
+    "살펴본 작품 340편",
+    "참고 플랫폼 3곳",
+    "참고한 순위 24시간 인기작 · 월간 랭킹 · 주간 랭킹"
+  ],
+  "writer_copy": {
+    "page_title": "일본 플랫폼 분위기 스냅샷",
+    "hero_subtitle": "작가님의 작품이 일본 순위권 작품들의 태그 흐름과 어떤 지점에서 겹쳐 보이는지 정리했습니다.",
+    "scope_sentence": "일본 플랫폼 3곳에서 순위권 작품 340편을 살펴봤어요.",
+    "ranking_sentence": "24시간 인기작 · 월간 랭킹 · 주간 랭킹",
+    "input_elements_title": "작품에서 먼저 읽히는 요소",
+    "comparable_elements_title": "장르상 함께 확인해볼 수 있는 요소",
+    "top_tags_title": "일본 순위권 작품에서 자주 보인 태그",
+    "overlap_title": "내 작품과 겹쳐 보이는 지점",
+    "platform_mood_title": "플랫폼마다 달라 보이는 작품 분위기",
+    "rank_band_title": "상위권에서 더 자주 보였는지 보기",
+    "cooccurrence_title": "함께 자주 보인 태그",
+    "missing_label": "이번 데이터에서는 직접 보이지 않음",
+    "detail_toggle": "자세한 숫자 보기"
+  },
+  "input_summary": {
+    "work_title": "계약 결혼을 거부한 악역영애는 몰락한 영지를 다시 세운다",
+    "genre": "로맨스 판타지",
+    "title_elements": [
+      "계약 결혼",
+      "악역영애",
+      "몰락한 영지",
+      "재건"
+    ],
+    "comparable_elements": [
+      "로맨스 판타지",
+      "이세계 전생",
+      "귀족",
+      "마법",
+      "해피엔딩"
+    ],
+    "detected_elements": [
+      "계약 결혼",
+      "악역영애",
+      "몰락한 영지",
+      "재건",
+      "로맨스 판타지",
+      "이세계 전생",
+      "귀족",
+      "마법",
+      "해피엔딩"
+    ]
+  },
+  "briefing_paragraphs": [
+    "제목에서는 계약 결혼, 악역영애, 몰락한 영지, 재건 같은 요소를 먼저 확인했습니다.",
+    "일본 순위권 작품에서는 이세계 전생, R15, 해피엔딩, 남성 주인공, 사이다/복수 같은 작품 태그가 자주 보였습니다.",
+    "아래 내용은 적용 추천이 아니라 입력 요소와 공개 플랫폼 태그 흐름 사이의 참고 비교입니다."
+  ],
+  "headline_market_labels": [
+    {
+      "label_ko": "이세계 전생",
+      "category": "plot_device",
+      "count": 97,
+      "share": 0.2853,
+      "weighted_share": 0.2733,
+      "display_note": "2/3 플랫폼 샘플에서 관찰됨"
+    },
+    {
+      "label_ko": "R15",
+      "category": "content_flag",
+      "count": 104,
+      "share": 0.3059,
+      "weighted_share": 0.2642,
+      "display_note": "2/3 플랫폼 샘플에서 관찰됨"
+    },
+    {
+      "label_ko": "해피엔딩",
+      "category": "ending_signal",
+      "count": 82,
+      "share": 0.2412,
+      "weighted_share": 0.2636,
+      "display_note": "모든 포함 플랫폼 샘플에서 반복 관찰됨"
+    },
+    {
+      "label_ko": "남성 주인공",
+      "category": "character",
+      "count": 90,
+      "share": 0.2647,
+      "weighted_share": 0.2627,
+      "display_note": "2/3 플랫폼 샘플에서 관찰됨"
+    },
+    {
+      "label_ko": "사이다/복수",
+      "category": "plot_device",
+      "count": 83,
+      "share": 0.2441,
+      "weighted_share": 0.2576,
+      "display_note": "모든 포함 플랫폼 샘플에서 반복 관찰됨"
+    },
+    {
+      "label_ko": "잔혹 묘사 있음",
+      "category": "content_flag",
+      "count": 87,
+      "share": 0.2559,
+      "weighted_share": 0.2324,
+      "display_note": "1/3 플랫폼 샘플에서 관찰됨"
+    },
+    {
+      "label_ko": "연애/로맨스",
+      "category": "genre",
+      "count": 62,
+      "share": 0.1824,
+      "weighted_share": 0.223,
+      "display_note": "모든 포함 플랫폼 샘플에서 반복 관찰됨"
+    },
+    {
+      "label_ko": "여성 주인공",
+      "category": "character",
+      "count": 72,
+      "share": 0.2118,
+      "weighted_share": 0.2067,
+      "display_note": "모든 포함 플랫폼 샘플에서 반복 관찰됨"
+    },
+    {
+      "label_ko": "하이 판타지",
+      "category": "genre",
+      "count": 74,
+      "share": 0.2176,
+      "weighted_share": 0.1927,
+      "display_note": "1/3 플랫폼 샘플에서 관찰됨"
+    },
+    {
+      "label_ko": "마법",
+      "category": "other",
+      "count": 67,
+      "share": 0.1971,
+      "weighted_share": 0.1864,
+      "display_note": "모든 포함 플랫폼 샘플에서 반복 관찰됨"
+    }
+  ],
+  "overlap_cards": [
+    {
+      "card_title": "계약 결혼",
+      "card_type": "plot_device",
+      "match_status": "near",
+      "status_label": "가까운 맥락",
+      "input_source": "title_explicit",
+      "input_source_label": "제목에서 읽히는 요소",
+      "observed_label": "혼약 파기",
+      "candidate_labels": [
+        "혼약 파기"
+      ],
+      "raw_label_examples": [
+        "婚約破棄"
+      ],
+      "count": 32,
+      "share": 0.0941,
+      "platform_coverage_text": "관련 태그 최대 3/3 플랫폼에서 보임",
+      "display_sentence": "계약 결혼: 동일 태그는 아니지만 혼약 파기 계열과 가까운 맥락으로 비교해볼 수 있습니다."
+    },
+    {
+      "card_title": "몰락한 영지",
+      "card_type": "other",
+      "match_status": "near",
+      "status_label": "가까운 맥락",
+      "input_source": "title_explicit",
+      "input_source_label": "제목에서 읽히는 요소",
+      "observed_label": "내정",
+      "candidate_labels": [
+        "내정",
+        "신분상승/성공담"
+      ],
+      "raw_label_examples": [
+        "内政",
+        "成り上がり"
+      ],
+      "count": 35,
+      "share": 0.1029,
+      "platform_coverage_text": "관련 태그 최대 2/3 플랫폼에서 보임",
+      "display_sentence": "몰락한 영지: 동일 태그는 아니지만 내정 · 신분상승/성공담 계열과 가까운 맥락으로 비교해볼 수 있습니다."
+    },
+    {
+      "card_title": "재건",
+      "card_type": "other",
+      "match_status": "near",
+      "status_label": "가까운 맥락",
+      "input_source": "title_explicit",
+      "input_source_label": "제목에서 읽히는 요소",
+      "observed_label": "내정",
+      "candidate_labels": [
+        "내정",
+        "신분상승/성공담"
+      ],
+      "raw_label_examples": [
+        "内政",
+        "成り上がり"
+      ],
+      "count": 35,
+      "share": 0.1029,
+      "platform_coverage_text": "관련 태그 최대 2/3 플랫폼에서 보임",
+      "display_sentence": "재건: 동일 태그는 아니지만 내정 · 신분상승/성공담 계열과 가까운 맥락으로 비교해볼 수 있습니다."
+    },
+    {
+      "card_title": "로맨스 판타지",
+      "card_type": "genre",
+      "match_status": "decomposed",
+      "status_label": "나뉘어 보임",
+      "input_source": "genre",
+      "input_source_label": "장르",
+      "observed_label": "연애/로맨스",
+      "candidate_labels": [
+        "연애/로맨스",
+        "이세계 로맨스",
+        "이세계 판타지"
+      ],
+      "raw_label_examples": [
+        "恋愛",
+        "異世界〔恋愛〕",
+        "異世界ファンタジー"
+      ],
+      "count": 63,
+      "share": 0.1853,
+      "platform_coverage_text": "관련 태그 최대 3/3 플랫폼에서 보임",
+      "display_sentence": "로맨스 판타지: 이번 데이터에서는 하나의 태그보다 연애/로맨스 · 이세계 로맨스 · 이세계 판타지처럼 나뉘어 보입니다."
+    },
+    {
+      "card_title": "이세계 전생",
+      "card_type": "plot_device",
+      "match_status": "direct",
+      "status_label": "직접 겹침",
+      "input_source": "comparable",
+      "input_source_label": "장르상 함께 확인해볼 수 있는 요소",
+      "observed_label": "이세계 전생",
+      "candidate_labels": [],
+      "raw_label_examples": [
+        "異世界転生"
+      ],
+      "count": 97,
+      "share": 0.2853,
+      "platform_coverage_text": "2/3 플랫폼에서 보임",
+      "display_sentence": "입력 작품에 이세계 전생 요소가 있다면 일본 순위권 태그 흐름과 함께 비교해볼 수 있습니다."
+    },
+    {
+      "card_title": "마법",
+      "card_type": "other",
+      "match_status": "direct",
+      "status_label": "직접 겹침",
+      "input_source": "comparable",
+      "input_source_label": "장르상 함께 확인해볼 수 있는 요소",
+      "observed_label": "마법",
+      "candidate_labels": [],
+      "raw_label_examples": [
+        "魔法"
+      ],
+      "count": 67,
+      "share": 0.1971,
+      "platform_coverage_text": "3/3 플랫폼에서 보임",
+      "display_sentence": "입력 작품에 마법 요소가 있다면 일본 순위권 태그 흐름과 함께 비교해볼 수 있습니다."
+    },
+    {
+      "card_title": "해피엔딩",
+      "card_type": "ending_signal",
+      "match_status": "direct",
+      "status_label": "직접 겹침",
+      "input_source": "comparable",
+      "input_source_label": "장르상 함께 확인해볼 수 있는 요소",
+      "observed_label": "해피엔딩",
+      "candidate_labels": [],
+      "raw_label_examples": [
+        "ハッピーエンド"
+      ],
+      "count": 82,
+      "share": 0.2412,
+      "platform_coverage_text": "3/3 플랫폼에서 보임",
+      "display_sentence": "입력 작품에 해피엔딩 요소가 있다면 일본 순위권 태그 흐름과 함께 비교해볼 수 있습니다."
+    }
+  ],
+  "missing_cards": [
+    {
+      "input_element": "악역영애",
+      "status": "not_observed",
+      "status_label": "이번 데이터에서는 직접 보이지 않음",
+      "input_source": "title_explicit",
+      "input_source_label": "제목에서 읽히는 요소",
+      "display_sentence": "이번 데이터에서는 직접 보이지 않았습니다. 부적합하다는 뜻은 아니에요."
+    },
+    {
+      "input_element": "귀족",
+      "status": "not_observed",
+      "status_label": "이번 데이터에서는 직접 보이지 않음",
+      "input_source": "comparable",
+      "input_source_label": "장르상 함께 확인해볼 수 있는 요소",
+      "display_sentence": "이번 데이터에서는 직접 보이지 않았습니다. 부적합하다는 뜻은 아니에요."
+    }
+  ],
+  "platform_mood_cards": [
+    {
+      "platform": "Alphapolis",
+      "reference_rankings": [
+        "24시간 인기작"
+      ],
+      "display_sentence": "Alphapolis 순위권 작품에서는 연애/로맨스, 해피엔딩, 사이다/복수, 이세계 계열 태그가 상대적으로 눈에 띕니다.",
+      "top_labels": [
+        {
+          "canonical_label_id": "romance",
+          "label_ko": "연애/로맨스",
+          "category": "genre",
+          "count": 35,
+          "share": 0.875,
+          "raw_examples": [
+            "恋愛"
+          ]
+        },
+        {
+          "canonical_label_id": "happy_ending",
+          "label_ko": "해피엔딩",
+          "category": "ending_signal",
+          "count": 20,
+          "share": 0.5,
+          "raw_examples": [
+            "ハッピーエンド"
+          ]
+        },
+        {
+          "canonical_label_id": "revenge_payoff",
+          "label_ko": "사이다/복수",
+          "category": "plot_device",
+          "count": 16,
+          "share": 0.4,
+          "raw_examples": [
+            "ざまぁ"
+          ]
+        },
+        {
+          "canonical_label_id": "isekai",
+          "label_ko": "이세계",
+          "category": "plot_device",
+          "count": 16,
+          "share": 0.4,
+          "raw_examples": [
+            "異世界"
+          ]
+        },
+        {
+          "canonical_label_id": "r15",
+          "label_ko": "R15",
+          "category": "content_flag",
+          "count": 11,
+          "share": 0.275,
+          "raw_examples": [
+            "R15"
+          ]
+        },
+        {
+          "canonical_label_id": "engagement_break",
+          "label_ko": "혼약 파기",
+          "category": "plot_device",
+          "count": 11,
+          "share": 0.275,
+          "raw_examples": [
+            "婚約破棄"
+          ]
+        },
+        {
+          "canonical_label_id": "label_2770dadc72",
+          "label_ko": "애절함",
+          "category": "tone",
+          "count": 7,
+          "share": 0.175,
+          "raw_examples": [
+            "切ない"
+          ]
+        },
+        {
+          "canonical_label_id": "label_b346eb907e",
+          "label_ko": "집착적 사랑/溺愛",
+          "category": "tone",
+          "count": 6,
+          "share": 0.15,
+          "raw_examples": [
+            "溺愛"
+          ]
+        },
+        {
+          "canonical_label_id": "label_26bfd8f7bd",
+          "label_ko": "異世界恋愛",
+          "category": "other",
+          "count": 5,
+          "share": 0.125,
+          "raw_examples": [
+            "異世界恋愛"
+          ]
+        },
+        {
+          "canonical_label_id": "label_dff65e09c2",
+          "label_ko": "여성 주인공",
+          "category": "character",
+          "count": 5,
+          "share": 0.125,
+          "raw_examples": [
+            "女主人公"
+          ]
+        },
+        {
+          "canonical_label_id": "label_5d782cef50",
+          "label_ko": "판타지",
+          "category": "genre",
+          "count": 5,
+          "share": 0.125,
+          "raw_examples": [
+            "ファンタジー"
+          ]
+        },
+        {
+          "canonical_label_id": "label_bf66672655",
+          "label_ko": "離縁",
+          "category": "other",
+          "count": 4,
+          "share": 0.1,
+          "raw_examples": [
+            "離縁"
+          ]
+        }
+      ],
+      "distinctive_labels": [
+        {
+          "label_ko": "애절함",
+          "category": "tone",
+          "platform_share": 0.175,
+          "market_share": 0.0235,
+          "stands_out_score": 7.45
+        },
+        {
+          "label_ko": "異世界恋愛",
+          "category": "other",
+          "platform_share": 0.125,
+          "market_share": 0.0206,
+          "stands_out_score": 6.07
+        },
+        {
+          "label_ko": "離縁",
+          "category": "other",
+          "platform_share": 0.1,
+          "market_share": 0.0176,
+          "stands_out_score": 5.68
+        },
+        {
+          "label_ko": "연애/로맨스",
+          "category": "genre",
+          "platform_share": 0.875,
+          "market_share": 0.1824,
+          "stands_out_score": 4.8
+        },
+        {
+          "label_ko": "이세계",
+          "category": "plot_device",
+          "platform_share": 0.4,
+          "market_share": 0.1029,
+          "stands_out_score": 3.89
+        }
+      ]
+    },
+    {
+      "platform": "Kakuyomu",
+      "reference_rankings": [
+        "주간 랭킹"
+      ],
+      "display_sentence": "Kakuyomu 순위권 작품에서는 이세계 판타지, 사이다/복수, 러브 코미디, 현대 판타지 계열 태그가 상대적으로 눈에 띕니다.",
+      "top_labels": [
+        {
+          "canonical_label_id": "label_79b95a647e",
+          "label_ko": "이세계 판타지",
+          "category": "genre",
+          "count": 54,
+          "share": 0.54,
+          "raw_examples": [
+            "異世界ファンタジー"
+          ]
+        },
+        {
+          "canonical_label_id": "revenge_payoff",
+          "label_ko": "사이다/복수",
+          "category": "plot_device",
+          "count": 27,
+          "share": 0.27,
+          "raw_examples": [
+            "ざまぁ",
+            "ざまあ"
+          ]
+        },
+        {
+          "canonical_label_id": "label_89ea0e9e40",
+          "label_ko": "러브 코미디",
+          "category": "genre",
+          "count": 24,
+          "share": 0.24,
+          "raw_examples": [
+            "ラブコメ"
+          ]
+        },
+        {
+          "canonical_label_id": "label_03e2087580",
+          "label_ko": "현대 판타지",
+          "category": "genre",
+          "count": 24,
+          "share": 0.24,
+          "raw_examples": [
+            "現代ファンタジー"
+          ]
+        },
+        {
+          "canonical_label_id": "label_33ddb39fae",
+          "label_ko": "얀데레",
+          "category": "other",
+          "count": 20,
+          "share": 0.2,
+          "raw_examples": [
+            "ヤンデレ"
+          ]
+        },
+        {
+          "canonical_label_id": "label_e576b06b0a",
+          "label_ko": "최강 주인공",
+          "category": "character",
+          "count": 20,
+          "share": 0.2,
+          "raw_examples": [
+            "主人公最強"
+          ]
+        },
+        {
+          "canonical_label_id": "isekai_reincarnation",
+          "label_ko": "이세계 전생",
+          "category": "plot_device",
+          "count": 18,
+          "share": 0.18,
+          "raw_examples": [
+            "異世界転生"
+          ]
+        },
+        {
+          "canonical_label_id": "label_ed9ee6cb39",
+          "label_ko": "신분상승/성공담",
+          "category": "other",
+          "count": 18,
+          "share": 0.18,
+          "raw_examples": [
+            "成り上がり"
+          ]
+        },
+        {
+          "canonical_label_id": "label_a2e3851553",
+          "label_ko": "남성 주인공",
+          "category": "character",
+          "count": 16,
+          "share": 0.16,
+          "raw_examples": [
+            "男主人公"
+          ]
+        },
+        {
+          "canonical_label_id": "label_cac867529b",
+          "label_ko": "고통/피폐 전개",
+          "category": "content_flag",
+          "count": 14,
+          "share": 0.14,
+          "raw_examples": [
+            "曇らせ"
+          ]
+        },
+        {
+          "canonical_label_id": "label_2d89825625",
+          "label_ko": "하렘",
+          "category": "content_flag",
+          "count": 12,
+          "share": 0.12,
+          "raw_examples": [
+            "ハーレム"
+          ]
+        },
+        {
+          "canonical_label_id": "magic",
+          "label_ko": "마법",
+          "category": "other",
+          "count": 12,
+          "share": 0.12,
+          "raw_examples": [
+            "魔法"
+          ]
+        }
+      ],
+      "distinctive_labels": [
+        {
+          "label_ko": "이세계 판타지",
+          "category": "genre",
+          "platform_share": 0.54,
+          "market_share": 0.1588,
+          "stands_out_score": 3.4
+        },
+        {
+          "label_ko": "현대 판타지",
+          "category": "genre",
+          "platform_share": 0.24,
+          "market_share": 0.0706,
+          "stands_out_score": 3.4
+        },
+        {
+          "label_ko": "고통/피폐 전개",
+          "category": "content_flag",
+          "platform_share": 0.14,
+          "market_share": 0.0412,
+          "stands_out_score": 3.4
+        },
+        {
+          "label_ko": "얀데레",
+          "category": "other",
+          "platform_share": 0.2,
+          "market_share": 0.0647,
+          "stands_out_score": 3.09
+        },
+        {
+          "label_ko": "러브 코미디",
+          "category": "genre",
+          "platform_share": 0.24,
+          "market_share": 0.1059,
+          "stands_out_score": 2.27
+        }
+      ]
+    },
+    {
+      "platform": "Syosetu",
+      "reference_rankings": [
+        "월간 랭킹",
+        "주간 랭킹"
+      ],
+      "display_sentence": "Syosetu 순위권 작품에서는 R15, 잔혹 묘사 있음, 이세계 전생, 하이 판타지 계열 태그가 상대적으로 눈에 띕니다.",
+      "top_labels": [
+        {
+          "canonical_label_id": "r15",
+          "label_ko": "R15",
+          "category": "content_flag",
+          "count": 93,
+          "share": 0.465,
+          "raw_examples": [
+            "R15"
+          ]
+        },
+        {
+          "canonical_label_id": "cruel_depiction",
+          "label_ko": "잔혹 묘사 있음",
+          "category": "content_flag",
+          "count": 87,
+          "share": 0.435,
+          "raw_examples": [
+            "残酷な描写あり"
+          ]
+        },
+        {
+          "canonical_label_id": "isekai_reincarnation",
+          "label_ko": "이세계 전생",
+          "category": "plot_device",
+          "count": 79,
+          "share": 0.395,
+          "raw_examples": [
+            "異世界転生"
+          ]
+        },
+        {
+          "canonical_label_id": "label_057cf04487",
+          "label_ko": "하이 판타지",
+          "category": "genre",
+          "count": 74,
+          "share": 0.37,
+          "raw_examples": [
+            "ハイファンタジー〔ファンタジー〕"
+          ]
+        },
+        {
+          "canonical_label_id": "label_a2e3851553",
+          "label_ko": "남성 주인공",
+          "category": "character",
+          "count": 74,
+          "share": 0.37,
+          "raw_examples": [
+            "男主人公"
+          ]
+        },
+        {
+          "canonical_label_id": "label_c476a4937e",
+          "label_ko": "이세계 로맨스",
+          "category": "genre",
+          "count": 63,
+          "share": 0.315,
+          "raw_examples": [
+            "異世界〔恋愛〕"
+          ]
+        },
+        {
+          "canonical_label_id": "label_dff65e09c2",
+          "label_ko": "여성 주인공",
+          "category": "character",
+          "count": 63,
+          "share": 0.315,
+          "raw_examples": [
+            "女主人公"
+          ]
+        },
+        {
+          "canonical_label_id": "happy_ending",
+          "label_ko": "해피엔딩",
+          "category": "ending_signal",
+          "count": 55,
+          "share": 0.275,
+          "raw_examples": [
+            "ハッピーエンド"
+          ]
+        },
+        {
+          "canonical_label_id": "magic",
+          "label_ko": "마법",
+          "category": "other",
+          "count": 53,
+          "share": 0.265,
+          "raw_examples": [
+            "魔法"
+          ]
+        },
+        {
+          "canonical_label_id": "label_981d956c28",
+          "label_ko": "훈훈함/잔잔함",
+          "category": "tone",
+          "count": 43,
+          "share": 0.215,
+          "raw_examples": [
+            "ほのぼの"
+          ]
+        },
+        {
+          "canonical_label_id": "label_e834b42cbb",
+          "label_ko": "서양풍",
+          "category": "setting",
+          "count": 43,
+          "share": 0.215,
+          "raw_examples": [
+            "西洋"
+          ]
+        },
+        {
+          "canonical_label_id": "revenge_payoff",
+          "label_ko": "사이다/복수",
+          "category": "plot_device",
+          "count": 40,
+          "share": 0.2,
+          "raw_examples": [
+            "ざまぁ",
+            "ざまあ"
+          ]
+        }
+      ],
+      "distinctive_labels": [
+        {
+          "label_ko": "잔혹 묘사 있음",
+          "category": "content_flag",
+          "platform_share": 0.435,
+          "market_share": 0.2559,
+          "stands_out_score": 1.7
+        },
+        {
+          "label_ko": "하이 판타지",
+          "category": "genre",
+          "platform_share": 0.37,
+          "market_share": 0.2176,
+          "stands_out_score": 1.7
+        },
+        {
+          "label_ko": "이세계 로맨스",
+          "category": "genre",
+          "platform_share": 0.315,
+          "market_share": 0.1853,
+          "stands_out_score": 1.7
+        },
+        {
+          "label_ko": "서양풍",
+          "category": "setting",
+          "platform_share": 0.215,
+          "market_share": 0.1265,
+          "stands_out_score": 1.7
+        },
+        {
+          "label_ko": "훈훈함/잔잔함",
+          "category": "tone",
+          "platform_share": 0.215,
+          "market_share": 0.1382,
+          "stands_out_score": 1.56
+        }
+      ]
+    }
+  ],
+  "cooccurrence_cards": [
+    {
+      "labels": [
+        "여성 주인공",
+        "해피엔딩"
+      ],
+      "count": 43,
+      "together_ratio": 0.3874,
+      "together_score": 2.48,
+      "platform_spread": {
+        "observed": 3,
+        "total": 3
+      },
+      "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+    },
+    {
+      "labels": [
+        "R15",
+        "이세계 전생"
+      ],
+      "count": 42,
+      "together_ratio": 0.2642,
+      "together_score": 1.42,
+      "platform_spread": {
+        "observed": 1,
+        "total": 3
+      },
+      "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+    },
+    {
+      "labels": [
+        "이세계 전생",
+        "하이 판타지"
+      ],
+      "count": 40,
+      "together_ratio": 0.3053,
+      "together_score": 1.89,
+      "platform_spread": {
+        "observed": 1,
+        "total": 3
+      },
+      "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+    },
+    {
+      "labels": [
+        "여성 주인공",
+        "이세계 로맨스"
+      ],
+      "count": 39,
+      "together_ratio": 0.4062,
+      "together_score": 2.92,
+      "platform_spread": {
+        "observed": 1,
+        "total": 3
+      },
+      "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+    },
+    {
+      "labels": [
+        "이세계 로맨스",
+        "해피엔딩"
+      ],
+      "count": 36,
+      "together_ratio": 0.3303,
+      "together_score": 2.37,
+      "platform_spread": {
+        "observed": 1,
+        "total": 3
+      },
+      "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+    },
+    {
+      "labels": [
+        "여성 주인공",
+        "이세계 전생"
+      ],
+      "count": 35,
+      "together_ratio": 0.2612,
+      "together_score": 1.7,
+      "platform_spread": {
+        "observed": 2,
+        "total": 3
+      },
+      "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+    },
+    {
+      "labels": [
+        "마법",
+        "이세계 전생"
+      ],
+      "count": 34,
+      "together_ratio": 0.2615,
+      "together_score": 1.78,
+      "platform_spread": {
+        "observed": 2,
+        "total": 3
+      },
+      "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+    },
+    {
+      "labels": [
+        "사이다/복수",
+        "해피엔딩"
+      ],
+      "count": 34,
+      "together_ratio": 0.2595,
+      "together_score": 1.7,
+      "platform_spread": {
+        "observed": 3,
+        "total": 3
+      },
+      "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+    }
+  ],
+  "detailed_reference_tables": {
+    "work_element_rows": [
+      {
+        "work_element": "계약 결혼",
+        "input_source": "title_explicit",
+        "input_source_label": "제목에서 읽히는 요소",
+        "status": "가까운 맥락",
+        "match_status": "near",
+        "looked_works_count": 32,
+        "looked_works_share": 0.0941,
+        "platform_spread": null,
+        "candidate_labels": [
+          "혼약 파기"
+        ],
+        "source_tag_examples": [
+          "婚約破棄"
+        ]
+      },
+      {
+        "work_element": "악역영애",
+        "input_source": "title_explicit",
+        "input_source_label": "제목에서 읽히는 요소",
+        "status": "이번 데이터에서는 직접 보이지 않음",
+        "match_status": "not_observed",
+        "looked_works_count": null,
+        "looked_works_share": null,
+        "platform_spread": null,
+        "candidate_labels": [],
+        "source_tag_examples": []
+      },
+      {
+        "work_element": "몰락한 영지",
+        "input_source": "title_explicit",
+        "input_source_label": "제목에서 읽히는 요소",
+        "status": "가까운 맥락",
+        "match_status": "near",
+        "looked_works_count": 35,
+        "looked_works_share": 0.1029,
+        "platform_spread": null,
+        "candidate_labels": [
+          "내정",
+          "신분상승/성공담"
+        ],
+        "source_tag_examples": [
+          "内政",
+          "成り上がり"
+        ]
+      },
+      {
+        "work_element": "재건",
+        "input_source": "title_explicit",
+        "input_source_label": "제목에서 읽히는 요소",
+        "status": "가까운 맥락",
+        "match_status": "near",
+        "looked_works_count": 35,
+        "looked_works_share": 0.1029,
+        "platform_spread": null,
+        "candidate_labels": [
+          "내정",
+          "신분상승/성공담"
+        ],
+        "source_tag_examples": [
+          "内政",
+          "成り上がり"
+        ]
+      },
+      {
+        "work_element": "로맨스 판타지",
+        "input_source": "genre",
+        "input_source_label": "장르",
+        "status": "나뉘어 보임",
+        "match_status": "decomposed",
+        "looked_works_count": 63,
+        "looked_works_share": 0.1853,
+        "platform_spread": null,
+        "candidate_labels": [
+          "연애/로맨스",
+          "이세계 로맨스",
+          "이세계 판타지"
+        ],
+        "source_tag_examples": [
+          "恋愛",
+          "異世界〔恋愛〕",
+          "異世界ファンタジー"
+        ]
+      },
+      {
+        "work_element": "이세계 전생",
+        "input_source": "comparable",
+        "input_source_label": "장르상 함께 확인해볼 수 있는 요소",
+        "status": "직접 겹침",
+        "match_status": "direct",
+        "looked_works_count": 97,
+        "looked_works_share": 0.2853,
+        "platform_spread": {
+          "platforms_observed": 2,
+          "platform_count": 3,
+          "avg_platform_share": 0.1917,
+          "max_platform_share": 0.395,
+          "source_labels": [
+            "異世界転生"
+          ]
+        },
+        "candidate_labels": [],
+        "source_tag_examples": [
+          "異世界転生"
+        ]
+      },
+      {
+        "work_element": "귀족",
+        "input_source": "comparable",
+        "input_source_label": "장르상 함께 확인해볼 수 있는 요소",
+        "status": "이번 데이터에서는 직접 보이지 않음",
+        "match_status": "not_observed",
+        "looked_works_count": null,
+        "looked_works_share": null,
+        "platform_spread": null,
+        "candidate_labels": [],
+        "source_tag_examples": []
+      },
+      {
+        "work_element": "마법",
+        "input_source": "comparable",
+        "input_source_label": "장르상 함께 확인해볼 수 있는 요소",
+        "status": "직접 겹침",
+        "match_status": "direct",
+        "looked_works_count": 67,
+        "looked_works_share": 0.1971,
+        "platform_spread": {
+          "platforms_observed": 3,
+          "platform_count": 3,
+          "avg_platform_share": 0.145,
+          "max_platform_share": 0.265,
+          "source_labels": [
+            "魔法"
+          ]
+        },
+        "candidate_labels": [],
+        "source_tag_examples": [
+          "魔法"
+        ]
+      },
+      {
+        "work_element": "해피엔딩",
+        "input_source": "comparable",
+        "input_source_label": "장르상 함께 확인해볼 수 있는 요소",
+        "status": "직접 겹침",
+        "match_status": "direct",
+        "looked_works_count": 82,
+        "looked_works_share": 0.2412,
+        "platform_spread": {
+          "platforms_observed": 3,
+          "platform_count": 3,
+          "avg_platform_share": 0.2817,
+          "max_platform_share": 0.5,
+          "source_labels": [
+            "ハッピーエンド"
+          ]
+        },
+        "candidate_labels": [],
+        "source_tag_examples": [
+          "ハッピーエンド"
+        ]
+      }
+    ],
+    "platform_rows": [
+      {
+        "platform": "Alphapolis",
+        "looked_works_count": 40,
+        "reference_rankings": [
+          "24시간 인기작"
+        ],
+        "overlap_examples": [
+          {
+            "work_signal": "해피엔딩",
+            "count": 20,
+            "share": 0.5,
+            "source_labels": [
+              "ハッピーエンド"
+            ]
+          }
+        ]
+      },
+      {
+        "platform": "Kakuyomu",
+        "looked_works_count": 100,
+        "reference_rankings": [
+          "주간 랭킹"
+        ],
+        "overlap_examples": [
+          {
+            "work_signal": "이세계 전생",
+            "count": 18,
+            "share": 0.18,
+            "source_labels": [
+              "異世界転生"
+            ]
+          },
+          {
+            "work_signal": "마법",
+            "count": 12,
+            "share": 0.12,
+            "source_labels": [
+              "魔法"
+            ]
+          }
+        ]
+      },
+      {
+        "platform": "Syosetu",
+        "looked_works_count": 200,
+        "reference_rankings": [
+          "월간 랭킹",
+          "주간 랭킹"
+        ],
+        "overlap_examples": [
+          {
+            "work_signal": "이세계 전생",
+            "count": 79,
+            "share": 0.395,
+            "source_labels": [
+              "異世界転生"
+            ]
+          },
+          {
+            "work_signal": "마법",
+            "count": 53,
+            "share": 0.265,
+            "source_labels": [
+              "魔法"
+            ]
+          },
+          {
+            "work_signal": "해피엔딩",
+            "count": 55,
+            "share": 0.275,
+            "source_labels": [
+              "ハッピーエンド"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "이 화면은 “이렇게 바꾸세요”라고 말하는 추천서가 아닙니다.",
+    "일본 플랫폼 순위권 작품들에서 어떤 태그가 함께 보였는지 정리한 참고 자료입니다.",
+    "작품의 방향, 제목, 장르를 바꿀지 여부는 이 데이터만으로 판단하지 마세요.",
+    "이번 데이터에서 보이지 않은 요소는 부적합하다는 뜻이 아니라, 살펴본 범위 안에서 직접 태그로 확인되지 않았다는 뜻입니다.",
+    "플랫폼마다 공개 지표의 의미가 다르므로 숫자는 플랫폼 간 우열 비교가 아니라 참고값으로만 봐주세요."
+  ]
+}

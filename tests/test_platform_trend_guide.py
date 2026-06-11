@@ -1,7 +1,7 @@
-
+﻿
 import unittest
 
-from data.localization_guide.platform_trend_guide import (
+from app.guide.platform_trend_guide import (
     build_collection_profiles,
     build_country_profiles,
     build_prompt_payload,
@@ -133,3 +133,4 @@ class PlatformTrendGuideTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

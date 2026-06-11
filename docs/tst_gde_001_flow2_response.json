@@ -1,0 +1,2186 @@
+{
+  "mode": "country_genre_guide",
+  "requiresSelection": false,
+  "title": "미국 현지화 가이드",
+  "country": "US/global English",
+  "targetCountry": "US/global English",
+  "displayCountry": "미국",
+  "targetCountryDisplay": "미국",
+  "genre": "현대 로맨스",
+  "synopsis": "",
+  "recommendedCountries": [
+    {
+      "country": "US/global English",
+      "score": 179.885,
+      "reasons": [
+        "requested genre overlaps with platform-visible genres/tags (449)"
+      ],
+      "evidence": [
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 1,
+          "title": "The Villainess' Mandate",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "ON_GOING",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=0, rank=1"
+        },
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 3,
+          "title": "The Perks of Being an S-Class Heroine",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "ON_GOING",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=0, rank=3"
+        },
+        {
+          "platform": "Wattpad",
+          "collection": "hot_fantasy",
+          "rank": 4,
+          "title": "The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt",
+          "genre": "aristocracy",
+          "tags": [
+            "aristocracy",
+            "betrayal",
+            "darkfantasy",
+            "darkromance",
+            "fantasy",
+            "femaleprotagonist",
+            "guiltridden",
+            "multiplelovinterests",
+            "noblewoman",
+            "regression"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=0, rank=4"
+        },
+        {
+          "platform": "Wattpad",
+          "collection": "hot_fantasy",
+          "rank": 9,
+          "title": "The Scamming High Priest",
+          "genre": "-romance",
+          "tags": [
+            "-romance",
+            "comedy-romance",
+            "fantasy",
+            "fantasy-romance",
+            "fantasyadventure",
+            "fantasyfiction",
+            "femaleprotagonist",
+            "femaletomale",
+            "genderbender",
+            "historical"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=0, rank=9"
+        },
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 10,
+          "title": "The Perks of Being a Villainess",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "COMPLETED",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=0, rank=10"
+        },
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 16,
+          "title": "The Cruelty of Salvation",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "COMPLETED",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=0, rank=16"
+        },
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 17,
+          "title": "The 4th Princess Just Wants To Rot",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "ON_GOING",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=0, rank=17"
+        },
+        {
+          "platform": "Tapas",
+          "collection": "popular_novels",
+          "rank": 19,
+          "title": "The Fantasie of a Stepmother",
+          "genre": "Romance Fantasy",
+          "tags": [
+            "Romance Fantasy",
+            "COMPLETED",
+            "WAIT_UNTIL_FREE"
+          ],
+          "source_url": null,
+          "reason": "genre hits=3, synopsis hits=0, rank=19"
+        }
+      ],
+      "displayCountry": "미국"
+    },
+    {
+      "country": "Japan",
+      "score": 37.551,
+      "reasons": [
+        "requested genre overlaps with platform-visible genres/tags (65)"
+      ],
+      "evidence": [
+        {
+          "platform": "Syosetu",
+          "collection": "weekly_ranking",
+          "rank": 1,
+          "title": "第二部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "異世界転生",
+            "ギャグ",
+            "ほのぼの",
+            "女主人公",
+            "学園",
+            "中世",
+            "チート",
+            "魔法",
+            "日常"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=1"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "monthly_ranking",
+          "rank": 2,
+          "title": "第二部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "異世界転生",
+            "ギャグ",
+            "ほのぼの",
+            "女主人公",
+            "学園",
+            "中世",
+            "チート",
+            "魔法",
+            "日常"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=2"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "monthly_ranking",
+          "rank": 3,
+          "title": "【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "残酷な描写あり",
+            "シリアス",
+            "女主人公",
+            "西洋",
+            "中世",
+            "年の差",
+            "ネトコン13",
+            "悪女",
+            "回帰"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=3"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "weekly_ranking",
+          "rank": 3,
+          "title": "【第二部開始】アルジェ・ロッシーニ元王太子妃の剣",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "女主人公",
+            "西洋",
+            "学園",
+            "ハッピーエンド",
+            "ざまぁ",
+            "強いヒロイン",
+            "剣聖"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=3"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "monthly_ranking",
+          "rank": 4,
+          "title": "病弱な幼馴染のために娘の部屋を明け渡せと言われたので、夫ごと捨てます～前世で読んだ物語では娘が死んでから溺愛されるそうですが、そんな展開はお断りです～",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "異世界転生",
+            "女主人公",
+            "西洋",
+            "近世",
+            "魔法",
+            "ハッピーエンド",
+            "政略結婚",
+            "冷遇夫",
+            "病弱な幼馴染"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=4"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "monthly_ranking",
+          "rank": 5,
+          "title": "【4/4コミカライズ開始】公爵家の長女でした",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "異世界転生",
+            "女主人公",
+            "ハッピーエンド",
+            "婚約破棄",
+            "姉妹格差",
+            "前世の記憶",
+            "長女"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=5"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "weekly_ranking",
+          "rank": 5,
+          "title": "【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "残酷な描写あり",
+            "シリアス",
+            "女主人公",
+            "西洋",
+            "中世",
+            "年の差",
+            "ネトコン13",
+            "悪女",
+            "回帰"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=5"
+        },
+        {
+          "platform": "Syosetu",
+          "collection": "monthly_ranking",
+          "rank": 7,
+          "title": "テンプレートが立ちはだかる日常",
+          "genre": "異世界〔恋愛〕",
+          "tags": [
+            "異世界〔恋愛〕",
+            "テンプレート",
+            "ざまぁ？",
+            "婚約破棄",
+            "夜会",
+            "学園時代もあり"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=7"
+        }
+      ],
+      "displayCountry": "Japan"
+    },
+    {
+      "country": "Thailand",
+      "score": 1.943,
+      "reasons": [
+        "requested genre overlaps with platform-visible genres/tags (2)"
+      ],
+      "evidence": [
+        {
+          "platform": "ReadAWrite",
+          "collection": "popular",
+          "rank": 32,
+          "title": "ใต้อาณัติเด็กธรีพี (เจ้าสัวxข้าวสวย) มี Ebook",
+          "genre": "Love Novel",
+          "tags": [
+            "Love Novel",
+            "นิยายโรมานซ์",
+            "แอบรัก",
+            "นิยายรัก",
+            "18+",
+            "ดราม่า",
+            "โหด",
+            "รักวัยรุ่น",
+            "รักสามเส้า",
+            "เพื่อนรัก"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=32"
+        },
+        {
+          "platform": "ReadAWrite",
+          "collection": "popular",
+          "rank": 53,
+          "title": "ว่าด้วยวิธีให้ตัวร้ายผู้นี้หลงรัก",
+          "genre": "Love Novel",
+          "tags": [
+            "Love Novel",
+            "นิยายรักจีนโบราณ",
+            "โรแมนติก",
+            "Feel good",
+            "ทะลุมิติ",
+            "18+￼",
+            "กำลังภายใน",
+            "เกิดใหม่",
+            "ตัวร้าย",
+            "แต่งงาน"
+          ],
+          "source_url": null,
+          "reason": "genre hits=1, synopsis hits=0, rank=53"
+        }
+      ],
+      "displayCountry": "Thailand"
+    }
+  ],
+  "sections": {
+    "market_trend_fit": {
+      "title": "시장 트렌드 적합도",
+      "items": [
+        "선택/추천 국가: US/global English",
+        "요청 장르: 현대 로맨스",
+        "상위 장르 근거: Fantasy(248), Adventure(216), Action(212), LitRPG(164), ONGOING(140)",
+        "국가와 장르 선택 기반 가이드 흐름입니다."
+      ]
+    },
+    "genre_trope_alignment": {
+      "title": "장르/트로프 정렬",
+      "items": [
+        "System/progression readability is a primary market signal: levels, skills, growth loops, and payoff cadence should be explicit.",
+        "Isekai/reincarnation framing is prominent; early setup should clarify transfer/rebirth rules and the protagonist's advantage.",
+        "Relationship-forward fantasy/romance demand is strong; emotional stakes and pairing dynamics need clear early hooks.",
+        "Male-protagonist adventure/power-fantasy remains visible in platform exposure.",
+        "Female-lead status reversal, romance conflict, and social-position tropes are visible localization levers.",
+        "반복 태그: Fantasy(248), Adventure(216), Action(212), LitRPG(164), ONGOING(140), Original(140), Progression(111), WAIT_UNTIL_FREE(100)"
+      ]
+    },
+    "title_synopsis_localization": {
+      "title": "제목/시놉시스 현지화",
+      "items": [
+        "플랫폼 상위 노출작의 제목·소개문은 장르 훅을 빠르게 드러내는 방향으로 압축합니다.",
+        "시놉시스가 없으므로 선택 장르의 대표 훅 구조를 먼저 제안합니다.",
+        "공개 시놉시스는 신호 분석에만 쓰고 문장을 복사하지 않습니다."
+      ]
+    },
+    "terminology_glossary_risks": {
+      "title": "용어/글로서리 리스크",
+      "items": [
+        "고유명사, 스킬명, 계급명, 호칭은 작품 단위 glossary로 고정합니다.",
+        "한국 제도/학교/군대/가족 호칭은 대상 시장 독자가 이해할 수 있게 설명량을 조절합니다.",
+        "장르 태그와 본문 용어가 충돌하지 않도록 번역 후 consistency check가 필요합니다."
+      ]
+    },
+    "content_rating_sensitivity": {
+      "title": "연령등급/민감도",
+      "items": [
+        "Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.",
+        "Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.",
+        "플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다."
+      ]
+    },
+    "adaptation_checklist": {
+      "title": "구체 적용 체크리스트",
+      "items": [
+        "Anchor the pitch in the dominant platform-visible genre mix before adding niche cultural explanations.",
+        "Convert synopsis observations into title hooks, opening-episode stakes, and tag/copy choices rather than copying source descriptions.",
+        "Preserve progression mechanics in translation: skill names, rank terms, and upgrade cadence should be consistent across episodes.",
+        "Make relationship premise, power imbalance, consent boundary, and emotional payoff legible in synopsis and chapter-one localization.",
+        "Explain reincarnation/transport premises compactly; readers tolerate familiar setups when the unique advantage is clear.",
+        "For English platforms, foreground premise clarity and genre tags; avoid long cultural footnote-style exposition in the opening pitch.",
+        "최종 가이드에는 사용한 플랫폼, 수집일, rank evidence를 함께 남깁니다.",
+        "본문 수집 없이 공개 메타데이터와 시놉시스 신호만 사용합니다."
+      ]
+    },
+    "evidence_used": {
+      "title": "사용 근거",
+      "items": [
+        "Tapas/popular_novels rank 1: The Villainess' Mandate (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=1",
+        "Tapas/popular_novels rank 3: The Perks of Being an S-Class Heroine (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=3",
+        "Wattpad/hot_fantasy rank 4: The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt (aristocracy) - genre hits=3, synopsis hits=0, rank=4",
+        "Wattpad/hot_fantasy rank 9: The Scamming High Priest (-romance) - genre hits=3, synopsis hits=0, rank=9",
+        "Tapas/popular_novels rank 10: The Perks of Being a Villainess (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=10",
+        "Tapas/popular_novels rank 16: The Cruelty of Salvation (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=16",
+        "Tapas/popular_novels rank 17: The 4th Princess Just Wants To Rot (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=17",
+        "Tapas/popular_novels rank 19: The Fantasie of a Stepmother (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=19"
+      ]
+    }
+  },
+  "evidenceUsed": [
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 1,
+      "title": "The Villainess' Mandate",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "ON_GOING",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=0, rank=1"
+    },
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 3,
+      "title": "The Perks of Being an S-Class Heroine",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "ON_GOING",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=0, rank=3"
+    },
+    {
+      "platform": "Wattpad",
+      "collection": "hot_fantasy",
+      "rank": 4,
+      "title": "The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt",
+      "genre": "aristocracy",
+      "tags": [
+        "aristocracy",
+        "betrayal",
+        "darkfantasy",
+        "darkromance",
+        "fantasy",
+        "femaleprotagonist",
+        "guiltridden",
+        "multiplelovinterests",
+        "noblewoman",
+        "regression"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=0, rank=4"
+    },
+    {
+      "platform": "Wattpad",
+      "collection": "hot_fantasy",
+      "rank": 9,
+      "title": "The Scamming High Priest",
+      "genre": "-romance",
+      "tags": [
+        "-romance",
+        "comedy-romance",
+        "fantasy",
+        "fantasy-romance",
+        "fantasyadventure",
+        "fantasyfiction",
+        "femaleprotagonist",
+        "femaletomale",
+        "genderbender",
+        "historical"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=0, rank=9"
+    },
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 10,
+      "title": "The Perks of Being a Villainess",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "COMPLETED",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=0, rank=10"
+    },
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 16,
+      "title": "The Cruelty of Salvation",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "COMPLETED",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=0, rank=16"
+    },
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 17,
+      "title": "The 4th Princess Just Wants To Rot",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "ON_GOING",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=0, rank=17"
+    },
+    {
+      "platform": "Tapas",
+      "collection": "popular_novels",
+      "rank": 19,
+      "title": "The Fantasie of a Stepmother",
+      "genre": "Romance Fantasy",
+      "tags": [
+        "Romance Fantasy",
+        "COMPLETED",
+        "WAIT_UNTIL_FREE"
+      ],
+      "source_url": null,
+      "reason": "genre hits=3, synopsis hits=0, rank=19"
+    }
+  ],
+  "modelPromptPayload": {
+    "role": "localization_guide_generator",
+    "task": "Generate a Korean webnovel localization guide using the selected/recommended market and platform trend evidence.",
+    "original": {
+      "title": "10년 전 약속",
+      "genre": "현대 로맨스",
+      "synopsis": "",
+      "tags": [],
+      "ageRating": null,
+      "glossary": {}
+    },
+    "targetCountry": "US/global English",
+    "recommendedCountries": [
+      {
+        "country": "US/global English",
+        "score": 179.885,
+        "reasons": [
+          "requested genre overlaps with platform-visible genres/tags (449)"
+        ],
+        "evidence": [
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 1,
+            "title": "The Villainess' Mandate",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "ON_GOING",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=0, rank=1"
+          },
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 3,
+            "title": "The Perks of Being an S-Class Heroine",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "ON_GOING",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=0, rank=3"
+          },
+          {
+            "platform": "Wattpad",
+            "collection": "hot_fantasy",
+            "rank": 4,
+            "title": "The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt",
+            "genre": "aristocracy",
+            "tags": [
+              "aristocracy",
+              "betrayal",
+              "darkfantasy",
+              "darkromance",
+              "fantasy",
+              "femaleprotagonist",
+              "guiltridden",
+              "multiplelovinterests",
+              "noblewoman",
+              "regression"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=0, rank=4"
+          },
+          {
+            "platform": "Wattpad",
+            "collection": "hot_fantasy",
+            "rank": 9,
+            "title": "The Scamming High Priest",
+            "genre": "-romance",
+            "tags": [
+              "-romance",
+              "comedy-romance",
+              "fantasy",
+              "fantasy-romance",
+              "fantasyadventure",
+              "fantasyfiction",
+              "femaleprotagonist",
+              "femaletomale",
+              "genderbender",
+              "historical"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=0, rank=9"
+          },
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 10,
+            "title": "The Perks of Being a Villainess",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "COMPLETED",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=0, rank=10"
+          },
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 16,
+            "title": "The Cruelty of Salvation",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "COMPLETED",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=0, rank=16"
+          },
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 17,
+            "title": "The 4th Princess Just Wants To Rot",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "ON_GOING",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=0, rank=17"
+          },
+          {
+            "platform": "Tapas",
+            "collection": "popular_novels",
+            "rank": 19,
+            "title": "The Fantasie of a Stepmother",
+            "genre": "Romance Fantasy",
+            "tags": [
+              "Romance Fantasy",
+              "COMPLETED",
+              "WAIT_UNTIL_FREE"
+            ],
+            "source_url": null,
+            "reason": "genre hits=3, synopsis hits=0, rank=19"
+          }
+        ]
+      },
+      {
+        "country": "Japan",
+        "score": 37.551,
+        "reasons": [
+          "requested genre overlaps with platform-visible genres/tags (65)"
+        ],
+        "evidence": [
+          {
+            "platform": "Syosetu",
+            "collection": "weekly_ranking",
+            "rank": 1,
+            "title": "第二部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "異世界転生",
+              "ギャグ",
+              "ほのぼの",
+              "女主人公",
+              "学園",
+              "中世",
+              "チート",
+              "魔法",
+              "日常"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=1"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "monthly_ranking",
+            "rank": 2,
+            "title": "第二部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "異世界転生",
+              "ギャグ",
+              "ほのぼの",
+              "女主人公",
+              "学園",
+              "中世",
+              "チート",
+              "魔法",
+              "日常"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=2"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "monthly_ranking",
+            "rank": 3,
+            "title": "【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "残酷な描写あり",
+              "シリアス",
+              "女主人公",
+              "西洋",
+              "中世",
+              "年の差",
+              "ネトコン13",
+              "悪女",
+              "回帰"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=3"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "weekly_ranking",
+            "rank": 3,
+            "title": "【第二部開始】アルジェ・ロッシーニ元王太子妃の剣",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "女主人公",
+              "西洋",
+              "学園",
+              "ハッピーエンド",
+              "ざまぁ",
+              "強いヒロイン",
+              "剣聖"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=3"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "monthly_ranking",
+            "rank": 4,
+            "title": "病弱な幼馴染のために娘の部屋を明け渡せと言われたので、夫ごと捨てます～前世で読んだ物語では娘が死んでから溺愛されるそうですが、そんな展開はお断りです～",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "異世界転生",
+              "女主人公",
+              "西洋",
+              "近世",
+              "魔法",
+              "ハッピーエンド",
+              "政略結婚",
+              "冷遇夫",
+              "病弱な幼馴染"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=4"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "monthly_ranking",
+            "rank": 5,
+            "title": "【4/4コミカライズ開始】公爵家の長女でした",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "異世界転生",
+              "女主人公",
+              "ハッピーエンド",
+              "婚約破棄",
+              "姉妹格差",
+              "前世の記憶",
+              "長女"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=5"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "weekly_ranking",
+            "rank": 5,
+            "title": "【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "残酷な描写あり",
+              "シリアス",
+              "女主人公",
+              "西洋",
+              "中世",
+              "年の差",
+              "ネトコン13",
+              "悪女",
+              "回帰"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=5"
+          },
+          {
+            "platform": "Syosetu",
+            "collection": "monthly_ranking",
+            "rank": 7,
+            "title": "テンプレートが立ちはだかる日常",
+            "genre": "異世界〔恋愛〕",
+            "tags": [
+              "異世界〔恋愛〕",
+              "テンプレート",
+              "ざまぁ？",
+              "婚約破棄",
+              "夜会",
+              "学園時代もあり"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=7"
+          }
+        ]
+      },
+      {
+        "country": "Thailand",
+        "score": 1.943,
+        "reasons": [
+          "requested genre overlaps with platform-visible genres/tags (2)"
+        ],
+        "evidence": [
+          {
+            "platform": "ReadAWrite",
+            "collection": "popular",
+            "rank": 32,
+            "title": "ใต้อาณัติเด็กธรีพี (เจ้าสัวxข้าวสวย) มี Ebook",
+            "genre": "Love Novel",
+            "tags": [
+              "Love Novel",
+              "นิยายโรมานซ์",
+              "แอบรัก",
+              "นิยายรัก",
+              "18+",
+              "ดราม่า",
+              "โหด",
+              "รักวัยรุ่น",
+              "รักสามเส้า",
+              "เพื่อนรัก"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=32"
+          },
+          {
+            "platform": "ReadAWrite",
+            "collection": "popular",
+            "rank": 53,
+            "title": "ว่าด้วยวิธีให้ตัวร้ายผู้นี้หลงรัก",
+            "genre": "Love Novel",
+            "tags": [
+              "Love Novel",
+              "นิยายรักจีนโบราณ",
+              "โรแมนติก",
+              "Feel good",
+              "ทะลุมิติ",
+              "18+￼",
+              "กำลังภายใน",
+              "เกิดใหม่",
+              "ตัวร้าย",
+              "แต่งงาน"
+            ],
+            "source_url": null,
+            "reason": "genre hits=1, synopsis hits=0, rank=53"
+          }
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 1,
+        "title": "The Villainess' Mandate",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "ON_GOING",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=0, rank=1"
+      },
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 3,
+        "title": "The Perks of Being an S-Class Heroine",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "ON_GOING",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=0, rank=3"
+      },
+      {
+        "platform": "Wattpad",
+        "collection": "hot_fantasy",
+        "rank": 4,
+        "title": "The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt",
+        "genre": "aristocracy",
+        "tags": [
+          "aristocracy",
+          "betrayal",
+          "darkfantasy",
+          "darkromance",
+          "fantasy",
+          "femaleprotagonist",
+          "guiltridden",
+          "multiplelovinterests",
+          "noblewoman",
+          "regression"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=0, rank=4"
+      },
+      {
+        "platform": "Wattpad",
+        "collection": "hot_fantasy",
+        "rank": 9,
+        "title": "The Scamming High Priest",
+        "genre": "-romance",
+        "tags": [
+          "-romance",
+          "comedy-romance",
+          "fantasy",
+          "fantasy-romance",
+          "fantasyadventure",
+          "fantasyfiction",
+          "femaleprotagonist",
+          "femaletomale",
+          "genderbender",
+          "historical"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=0, rank=9"
+      },
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 10,
+        "title": "The Perks of Being a Villainess",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "COMPLETED",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=0, rank=10"
+      },
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 16,
+        "title": "The Cruelty of Salvation",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "COMPLETED",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=0, rank=16"
+      },
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 17,
+        "title": "The 4th Princess Just Wants To Rot",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "ON_GOING",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=0, rank=17"
+      },
+      {
+        "platform": "Tapas",
+        "collection": "popular_novels",
+        "rank": 19,
+        "title": "The Fantasie of a Stepmother",
+        "genre": "Romance Fantasy",
+        "tags": [
+          "Romance Fantasy",
+          "COMPLETED",
+          "WAIT_UNTIL_FREE"
+        ],
+        "source_url": null,
+        "reason": "genre hits=3, synopsis hits=0, rank=19"
+      }
+    ],
+    "requiredOutputSections": [
+      "market_trend_fit",
+      "genre_trope_alignment",
+      "title_synopsis_localization",
+      "terminology_glossary_risks",
+      "content_rating_sensitivity",
+      "adaptation_checklist",
+      "evidence_used"
+    ],
+    "claimLimit": "Phrase conclusions as platform trend evidence, not national readership certainty.",
+    "evidencePolicy": {
+      "allowed": [
+        "public rank/exposure metadata",
+        "title",
+        "genre",
+        "tags",
+        "public metrics",
+        "public synopsis/description"
+      ],
+      "excluded": [
+        "episode/story body text",
+        "paid or locked content",
+        "login-only data",
+        "image downloads"
+      ]
+    }
+  },
+  "htmlReport": "\n    <div class=\"guide-report\">\n      <div class=\"guide-cover\">\n        <div class=\"guide-cover-label\">Localization Guide · Platform Trend Evidence</div>\n        <div class=\"guide-cover-title\">미국 현지화 가이드<br><em>플랫폼 트렌드 리포트</em></div>\n        <div class=\"guide-cover-sub\"><span>국가/장르 기반 가이드</span><span>현대 로맨스</span><span>current platform trends</span></div>\n      </div>\n      <div class=\"guide-legacy-anchors\">작성 방향 · 문화 주의사항 · 플랫폼 규정</div>\n      <div class=\"guide-section\"><div class=\"guide-section-header\"><span class=\"guide-section-title\">추천 국가 후보</span></div><ul class=\"guide-list\"><li>US/global English: 179.885 — requested genre overlaps with platform-visible genres/tags (449)</li><li>Japan: 37.551 — requested genre overlaps with platform-visible genres/tags (65)</li><li>Thailand: 1.943 — requested genre overlaps with platform-visible genres/tags (2)</li></ul></div>\n      <div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>시장 트렌드 적합도</span></div><ul class='guide-list'><li>선택/추천 국가: US/global English</li><li>요청 장르: 현대 로맨스</li><li>상위 장르 근거: Fantasy(248), Adventure(216), Action(212), LitRPG(164), ONGOING(140)</li><li>국가와 장르 선택 기반 가이드 흐름입니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>장르/트로프 정렬</span></div><ul class='guide-list'><li>System/progression readability is a primary market signal: levels, skills, growth loops, and payoff cadence should be explicit.</li><li>Isekai/reincarnation framing is prominent; early setup should clarify transfer/rebirth rules and the protagonist&#x27;s advantage.</li><li>Relationship-forward fantasy/romance demand is strong; emotional stakes and pairing dynamics need clear early hooks.</li><li>Male-protagonist adventure/power-fantasy remains visible in platform exposure.</li><li>Female-lead status reversal, romance conflict, and social-position tropes are visible localization levers.</li><li>반복 태그: Fantasy(248), Adventure(216), Action(212), LitRPG(164), ONGOING(140), Original(140), Progression(111), WAIT_UNTIL_FREE(100)</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>제목/시놉시스 현지화</span></div><ul class='guide-list'><li>플랫폼 상위 노출작의 제목·소개문은 장르 훅을 빠르게 드러내는 방향으로 압축합니다.</li><li>시놉시스가 없으므로 선택 장르의 대표 훅 구조를 먼저 제안합니다.</li><li>공개 시놉시스는 신호 분석에만 쓰고 문장을 복사하지 않습니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>용어/글로서리 리스크</span></div><ul class='guide-list'><li>고유명사, 스킬명, 계급명, 호칭은 작품 단위 glossary로 고정합니다.</li><li>한국 제도/학교/군대/가족 호칭은 대상 시장 독자가 이해할 수 있게 설명량을 조절합니다.</li><li>장르 태그와 본문 용어가 충돌하지 않도록 번역 후 consistency check가 필요합니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>연령등급/민감도</span></div><ul class='guide-list'><li>Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.</li><li>Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.</li><li>플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>구체 적용 체크리스트</span></div><ul class='guide-list'><li>Anchor the pitch in the dominant platform-visible genre mix before adding niche cultural explanations.</li><li>Convert synopsis observations into title hooks, opening-episode stakes, and tag/copy choices rather than copying source descriptions.</li><li>Preserve progression mechanics in translation: skill names, rank terms, and upgrade cadence should be consistent across episodes.</li><li>Make relationship premise, power imbalance, consent boundary, and emotional payoff legible in synopsis and chapter-one localization.</li><li>Explain reincarnation/transport premises compactly; readers tolerate familiar setups when the unique advantage is clear.</li><li>For English platforms, foreground premise clarity and genre tags; avoid long cultural footnote-style exposition in the opening pitch.</li><li>최종 가이드에는 사용한 플랫폼, 수집일, rank evidence를 함께 남깁니다.</li><li>본문 수집 없이 공개 메타데이터와 시놉시스 신호만 사용합니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>사용 근거</span></div><ul class='guide-list'><li>Tapas/popular_novels rank 1: The Villainess&#x27; Mandate (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=1</li><li>Tapas/popular_novels rank 3: The Perks of Being an S-Class Heroine (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=3</li><li>Wattpad/hot_fantasy rank 4: The Villainess Knows What She Did: The Second Life of Evelyn de Harcourt (aristocracy) - genre hits=3, synopsis hits=0, rank=4</li><li>Wattpad/hot_fantasy rank 9: The Scamming High Priest (-romance) - genre hits=3, synopsis hits=0, rank=9</li><li>Tapas/popular_novels rank 10: The Perks of Being a Villainess (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=10</li><li>Tapas/popular_novels rank 16: The Cruelty of Salvation (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=16</li><li>Tapas/popular_novels rank 17: The 4th Princess Just Wants To Rot (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=17</li><li>Tapas/popular_novels rank 19: The Fantasie of a Stepmother (Romance Fantasy) - genre hits=3, synopsis hits=0, rank=19</li></ul></div>\n    </div>\n    ",
+  "createdAt": "2026-06-08 17:42",
+  "writingDirection": {
+    "genre_formula": [
+      "System/progression readability is a primary market signal: levels, skills, growth loops, and payoff cadence should be explicit.",
+      "Isekai/reincarnation framing is prominent; early setup should clarify transfer/rebirth rules and the protagonist's advantage.",
+      "Relationship-forward fantasy/romance demand is strong; emotional stakes and pairing dynamics need clear early hooks.",
+      "Male-protagonist adventure/power-fantasy remains visible in platform exposure.",
+      "Female-lead status reversal, romance conflict, and social-position tropes are visible localization levers.",
+      "반복 태그: Fantasy(248), Adventure(216), Action(212), LitRPG(164), ONGOING(140), Original(140), Progression(111), WAIT_UNTIL_FREE(100)"
+    ],
+    "chapter_structure": [
+      "플랫폼 상위 노출작의 제목·소개문은 장르 훅을 빠르게 드러내는 방향으로 압축합니다.",
+      "시놉시스가 없으므로 선택 장르의 대표 훅 구조를 먼저 제안합니다.",
+      "공개 시놉시스는 신호 분석에만 쓰고 문장을 복사하지 않습니다."
+    ]
+  },
+  "cultureNotes": {
+    "avoid": [
+      "Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.",
+      "Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.",
+      "플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다."
+    ],
+    "prefer": [
+      "Anchor the pitch in the dominant platform-visible genre mix before adding niche cultural explanations.",
+      "Convert synopsis observations into title hooks, opening-episode stakes, and tag/copy choices rather than copying source descriptions.",
+      "Preserve progression mechanics in translation: skill names, rank terms, and upgrade cadence should be consistent across episodes.",
+      "Make relationship premise, power imbalance, consent boundary, and emotional payoff legible in synopsis and chapter-one localization.",
+      "Explain reincarnation/transport premises compactly; readers tolerate familiar setups when the unique advantage is clear.",
+      "For English platforms, foreground premise clarity and genre tags; avoid long cultural footnote-style exposition in the opening pitch.",
+      "최종 가이드에는 사용한 플랫폼, 수집일, rank evidence를 함께 남깁니다.",
+      "본문 수집 없이 공개 메타데이터와 시놉시스 신호만 사용합니다."
+    ]
+  },
+  "platformRules": {
+    "common_bans": [
+      "Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.",
+      "Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.",
+      "플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다."
+    ],
+    "platforms": []
+  },
+  "localizationTips": {
+    "marketing_tags": [
+      "플랫폼 상위 노출작의 제목·소개문은 장르 훅을 빠르게 드러내는 방향으로 압축합니다.",
+      "시놉시스가 없으므로 선택 장르의 대표 훅 구조를 먼저 제안합니다.",
+      "공개 시놉시스는 신호 분석에만 쓰고 문장을 복사하지 않습니다."
+    ],
+    "translation_quality": [
+      "고유명사, 스킬명, 계급명, 호칭은 작품 단위 glossary로 고정합니다.",
+      "한국 제도/학교/군대/가족 호칭은 대상 시장 독자가 이해할 수 있게 설명량을 조절합니다.",
+      "장르 태그와 본문 용어가 충돌하지 않도록 번역 후 consistency check가 필요합니다."
+    ]
+  },
+  "tags": [
+    "현대 로맨스",
+    "US/global English",
+    "현지화",
+    "플랫폼 트렌드"
+  ],
+  "contextPackBriefing": {
+    "title": "영어권/US 플랫폼 분위기 스냅샷",
+    "subtitle": "작가님의 작품이 영어권/US 순위권 작품들의 태그 흐름과 어떤 지점에서 겹쳐 보이는지 정리했습니다.",
+    "scope_badges": [
+      "영어권/US",
+      "살펴본 작품 450편",
+      "참고 플랫폼 4곳",
+      "참고한 순위 인기 판타지 · 인기 소설 · 상승작 · 주간 인기작"
+    ],
+    "writer_copy": {
+      "page_title": "영어권/US 플랫폼 분위기 스냅샷",
+      "hero_subtitle": "작가님의 작품이 영어권/US 순위권 작품들의 태그 흐름과 어떤 지점에서 겹쳐 보이는지 정리했습니다.",
+      "scope_sentence": "영어권/US 플랫폼 4곳에서 순위권 작품 450편을 살펴봤어요.",
+      "ranking_sentence": "인기 판타지 · 인기 소설 · 상승작 · 주간 인기작",
+      "input_elements_title": "작품에서 먼저 읽히는 요소",
+      "comparable_elements_title": "장르상 함께 확인해볼 수 있는 요소",
+      "top_tags_title": "영어권/US 순위권 작품에서 자주 보인 태그",
+      "overlap_title": "내 작품과 겹쳐 보이는 지점",
+      "platform_mood_title": "플랫폼마다 달라 보이는 작품 분위기",
+      "rank_band_title": "상위권에서 더 자주 보였는지 보기",
+      "cooccurrence_title": "함께 자주 보인 태그",
+      "missing_label": "이번 데이터에서는 직접 보이지 않음",
+      "detail_toggle": "자세한 숫자 보기"
+    },
+    "input_summary": {
+      "work_title": "10년 전 약속",
+      "genre": "현대 로맨스",
+      "title_elements": [],
+      "comparable_elements": [
+        "현대 로맨스"
+      ],
+      "detected_elements": [
+        "현대 로맨스"
+      ]
+    },
+    "briefing_paragraphs": [
+      "제목에서는 명시 요소 없음 같은 요소를 먼저 확인했습니다.",
+      "영어권/US 순위권 작품에서는 판타지, 모험, 액션, LitRPG, 로맨스 같은 작품 태그가 자주 보였습니다.",
+      "아래 내용은 적용 추천이 아니라 입력 요소와 공개 플랫폼 태그 흐름 사이의 참고 비교입니다."
+    ],
+    "headline_market_labels": [
+      {
+        "label_ko": "판타지",
+        "category": "genre",
+        "count": 307,
+        "share": 0.6822,
+        "weighted_share": 0.6912,
+        "display_note": "모든 포함 플랫폼 샘플에서 반복 관찰됨"
+      },
+      {
+        "label_ko": "모험",
+        "category": "other",
+        "count": 202,
+        "share": 0.4489,
+        "weighted_share": 0.4691,
+        "display_note": "3/4 플랫폼 샘플에서 관찰됨"
+      },
+      {
+        "label_ko": "액션",
+        "category": "genre",
+        "count": 192,
+        "share": 0.4267,
+        "weighted_share": 0.443,
+        "display_note": "3/4 플랫폼 샘플에서 관찰됨"
+      },
+      {
+        "label_ko": "LitRPG",
+        "category": "genre",
+        "count": 138,
+        "share": 0.3067,
+        "weighted_share": 0.3177,
+        "display_note": "2/4 플랫폼 샘플에서 관찰됨"
+      },
+      {
+        "label_ko": "로맨스",
+        "category": "genre",
+        "count": 133,
+        "share": 0.2956,
+        "weighted_share": 0.3119,
+        "display_note": "모든 포함 플랫폼 샘플에서 반복 관찰됨"
+      },
+      {
+        "label_ko": "이세계",
+        "category": "plot_device",
+        "count": 98,
+        "share": 0.2178,
+        "weighted_share": 0.233,
+        "display_note": "2/4 플랫폼 샘플에서 관찰됨"
+      },
+      {
+        "label_ko": "하렘",
+        "category": "content_flag",
+        "count": 98,
+        "share": 0.2178,
+        "weighted_share": 0.2323,
+        "display_note": "1/4 플랫폼 샘플에서 관찰됨"
+      },
+      {
+        "label_ko": "마법",
+        "category": "other",
+        "count": 103,
+        "share": 0.2289,
+        "weighted_share": 0.2219,
+        "display_note": "2/4 플랫폼 샘플에서 관찰됨"
+      },
+      {
+        "label_ko": "일상",
+        "category": "other",
+        "count": 89,
+        "share": 0.1978,
+        "weighted_share": 0.2047,
+        "display_note": "2/4 플랫폼 샘플에서 관찰됨"
+      },
+      {
+        "label_ko": "성인",
+        "category": "content_flag",
+        "count": 74,
+        "share": 0.1644,
+        "weighted_share": 0.1742,
+        "display_note": "1/4 플랫폼 샘플에서 관찰됨"
+      }
+    ],
+    "overlap_cards": [],
+    "missing_cards": [
+      {
+        "input_element": "현대 로맨스",
+        "status": "not_observed",
+        "status_label": "이번 데이터에서는 직접 보이지 않음",
+        "input_source": "genre",
+        "input_source_label": "장르",
+        "display_sentence": "이번 데이터에서는 직접 보이지 않았습니다. 부적합하다는 뜻은 아니에요."
+      }
+    ],
+    "platform_mood_cards": [
+      {
+        "platform": "Royal Road",
+        "reference_rankings": [
+          "주간 인기작"
+        ],
+        "display_sentence": "Royal Road 순위권 작품에서는 판타지, 모험, 액션, 성장형 판타지 계열 태그가 상대적으로 눈에 띕니다.",
+        "top_labels": [
+          {
+            "canonical_label_id": "label_5d782cef50",
+            "label_ko": "판타지",
+            "category": "genre",
+            "count": 88,
+            "share": 0.88,
+            "raw_examples": [
+              "Fantasy"
+            ]
+          },
+          {
+            "canonical_label_id": "label_c939003aa1",
+            "label_ko": "모험",
+            "category": "other",
+            "count": 87,
+            "share": 0.87,
+            "raw_examples": [
+              "Adventure"
+            ]
+          },
+          {
+            "canonical_label_id": "label_39b9ab87fa",
+            "label_ko": "액션",
+            "category": "genre",
+            "count": 77,
+            "share": 0.77,
+            "raw_examples": [
+              "Action"
+            ]
+          },
+          {
+            "canonical_label_id": "label_c324d67463",
+            "label_ko": "성장형 판타지",
+            "category": "genre",
+            "count": 73,
+            "share": 0.73,
+            "raw_examples": [
+              "Progression"
+            ]
+          },
+          {
+            "canonical_label_id": "magic",
+            "label_ko": "마법",
+            "category": "other",
+            "count": 63,
+            "share": 0.63,
+            "raw_examples": [
+              "Magic"
+            ]
+          },
+          {
+            "canonical_label_id": "label_a551ab0691",
+            "label_ko": "LitRPG",
+            "category": "genre",
+            "count": 62,
+            "share": 0.62,
+            "raw_examples": [
+              "LitRPG"
+            ]
+          },
+          {
+            "canonical_label_id": "label_a2e3851553",
+            "label_ko": "남성 주인공",
+            "category": "character",
+            "count": 62,
+            "share": 0.62,
+            "raw_examples": [
+              "Male Lead"
+            ]
+          },
+          {
+            "canonical_label_id": "label_cd153cf32e",
+            "label_ko": "강한 주인공",
+            "category": "character",
+            "count": 47,
+            "share": 0.47,
+            "raw_examples": [
+              "Strong Lead"
+            ]
+          },
+          {
+            "canonical_label_id": "label_057cf04487",
+            "label_ko": "하이 판타지",
+            "category": "genre",
+            "count": 43,
+            "share": 0.43,
+            "raw_examples": [
+              "High Fantasy"
+            ]
+          },
+          {
+            "canonical_label_id": "label_969bbd6da2",
+            "label_ko": "포털 판타지/이세계",
+            "category": "genre",
+            "count": 40,
+            "share": 0.4,
+            "raw_examples": [
+              "Portal Fantasy / Isekai"
+            ]
+          },
+          {
+            "canonical_label_id": "reincarnation",
+            "label_ko": "전생",
+            "category": "plot_device",
+            "count": 33,
+            "share": 0.33,
+            "raw_examples": [
+              "Reincarnation"
+            ]
+          },
+          {
+            "canonical_label_id": "label_c288b36aa0",
+            "label_ko": "일상",
+            "category": "other",
+            "count": 31,
+            "share": 0.31,
+            "raw_examples": [
+              "Slice of Life"
+            ]
+          }
+        ],
+        "distinctive_labels": [
+          {
+            "label_ko": "성장형 판타지",
+            "category": "genre",
+            "platform_share": 0.73,
+            "market_share": 0.1622,
+            "stands_out_score": 4.5
+          },
+          {
+            "label_ko": "남성 주인공",
+            "category": "character",
+            "platform_share": 0.62,
+            "market_share": 0.1378,
+            "stands_out_score": 4.5
+          },
+          {
+            "label_ko": "강한 주인공",
+            "category": "character",
+            "platform_share": 0.47,
+            "market_share": 0.1044,
+            "stands_out_score": 4.5
+          },
+          {
+            "label_ko": "하이 판타지",
+            "category": "genre",
+            "platform_share": 0.43,
+            "market_share": 0.0956,
+            "stands_out_score": 4.5
+          },
+          {
+            "label_ko": "포털 판타지/이세계",
+            "category": "genre",
+            "platform_share": 0.4,
+            "market_share": 0.0889,
+            "stands_out_score": 4.5
+          }
+        ]
+      },
+      {
+        "platform": "Scribble Hub",
+        "reference_rankings": [
+          "상승작",
+          "주간 인기작"
+        ],
+        "display_sentence": "Scribble Hub 순위권 작품에서는 판타지, 하렘, 액션, 모험 계열 태그가 상대적으로 눈에 띕니다.",
+        "top_labels": [
+          {
+            "canonical_label_id": "label_5d782cef50",
+            "label_ko": "판타지",
+            "category": "genre",
+            "count": 118,
+            "share": 0.7867,
+            "raw_examples": [
+              "Fantasy"
+            ]
+          },
+          {
+            "canonical_label_id": "label_2d89825625",
+            "label_ko": "하렘",
+            "category": "content_flag",
+            "count": 98,
+            "share": 0.6533,
+            "raw_examples": [
+              "Harem"
+            ]
+          },
+          {
+            "canonical_label_id": "label_39b9ab87fa",
+            "label_ko": "액션",
+            "category": "genre",
+            "count": 96,
+            "share": 0.64,
+            "raw_examples": [
+              "Action"
+            ]
+          },
+          {
+            "canonical_label_id": "label_c939003aa1",
+            "label_ko": "모험",
+            "category": "other",
+            "count": 88,
+            "share": 0.5867,
+            "raw_examples": [
+              "Adventure"
+            ]
+          },
+          {
+            "canonical_label_id": "isekai",
+            "label_ko": "이세계",
+            "category": "plot_device",
+            "count": 84,
+            "share": 0.56,
+            "raw_examples": [
+              "Isekai"
+            ]
+          },
+          {
+            "canonical_label_id": "label_a551ab0691",
+            "label_ko": "LitRPG",
+            "category": "genre",
+            "count": 76,
+            "share": 0.5067,
+            "raw_examples": [
+              "LitRPG"
+            ]
+          },
+          {
+            "canonical_label_id": "romance",
+            "label_ko": "로맨스",
+            "category": "genre",
+            "count": 76,
+            "share": 0.5067,
+            "raw_examples": [
+              "Romance"
+            ]
+          },
+          {
+            "canonical_label_id": "adult",
+            "label_ko": "성인",
+            "category": "content_flag",
+            "count": 74,
+            "share": 0.4933,
+            "raw_examples": [
+              "Adult"
+            ]
+          },
+          {
+            "canonical_label_id": "label_6bfbcf0a51",
+            "label_ko": "에치/선정 요소",
+            "category": "content_flag",
+            "count": 72,
+            "share": 0.48,
+            "raw_examples": [
+              "Ecchi"
+            ]
+          },
+          {
+            "canonical_label_id": "adult_smut",
+            "label_ko": "성인/선정 요소",
+            "category": "content_flag",
+            "count": 70,
+            "share": 0.4667,
+            "raw_examples": [
+              "Smut"
+            ]
+          },
+          {
+            "canonical_label_id": "label_c288b36aa0",
+            "label_ko": "일상",
+            "category": "other",
+            "count": 58,
+            "share": 0.3867,
+            "raw_examples": [
+              "Slice of Life"
+            ]
+          },
+          {
+            "canonical_label_id": "label_4955de329e",
+            "label_ko": "성인/성숙한 독자",
+            "category": "content_flag",
+            "count": 52,
+            "share": 0.3467,
+            "raw_examples": [
+              "Mature"
+            ]
+          }
+        ],
+        "distinctive_labels": [
+          {
+            "label_ko": "하렘",
+            "category": "content_flag",
+            "platform_share": 0.6533,
+            "market_share": 0.2178,
+            "stands_out_score": 3.0
+          },
+          {
+            "label_ko": "성인",
+            "category": "content_flag",
+            "platform_share": 0.4933,
+            "market_share": 0.1644,
+            "stands_out_score": 3.0
+          },
+          {
+            "label_ko": "에치/선정 요소",
+            "category": "content_flag",
+            "platform_share": 0.48,
+            "market_share": 0.16,
+            "stands_out_score": 3.0
+          },
+          {
+            "label_ko": "성인/선정 요소",
+            "category": "content_flag",
+            "platform_share": 0.4667,
+            "market_share": 0.1556,
+            "stands_out_score": 3.0
+          },
+          {
+            "label_ko": "성인/성숙한 독자",
+            "category": "content_flag",
+            "platform_share": 0.3467,
+            "market_share": 0.1156,
+            "stands_out_score": 3.0
+          }
+        ]
+      },
+      {
+        "platform": "Tapas",
+        "reference_rankings": [
+          "인기 소설"
+        ],
+        "display_sentence": "Tapas 순위권 작품에서는 로맨스 판타지, 액션 판타지, BL/보이즈러브, LGBTQ+ 계열 태그가 상대적으로 눈에 띕니다.",
+        "top_labels": [
+          {
+            "canonical_label_id": "romance_fantasy",
+            "label_ko": "로맨스 판타지",
+            "category": "genre",
+            "count": 48,
+            "share": 0.48,
+            "raw_examples": [
+              "Romance Fantasy"
+            ]
+          },
+          {
+            "canonical_label_id": "label_2513cd74a0",
+            "label_ko": "액션 판타지",
+            "category": "genre",
+            "count": 26,
+            "share": 0.26,
+            "raw_examples": [
+              "Action Fantasy"
+            ]
+          },
+          {
+            "canonical_label_id": "boys_love",
+            "label_ko": "BL/보이즈러브",
+            "category": "content_flag",
+            "count": 18,
+            "share": 0.18,
+            "raw_examples": [
+              "BL"
+            ]
+          },
+          {
+            "canonical_label_id": "label_9df2a74b26",
+            "label_ko": "LGBTQ+",
+            "category": "other",
+            "count": 5,
+            "share": 0.05,
+            "raw_examples": [
+              "LGBTQ+"
+            ]
+          },
+          {
+            "canonical_label_id": "label_a21c253f01",
+            "label_ko": "드라마",
+            "category": "genre",
+            "count": 3,
+            "share": 0.03,
+            "raw_examples": [
+              "Drama"
+            ]
+          },
+          {
+            "canonical_label_id": "romance",
+            "label_ko": "로맨스",
+            "category": "genre",
+            "count": 2,
+            "share": 0.02,
+            "raw_examples": [
+              "Romance"
+            ]
+          },
+          {
+            "canonical_label_id": "label_5d782cef50",
+            "label_ko": "판타지",
+            "category": "genre",
+            "count": 1,
+            "share": 0.01,
+            "raw_examples": [
+              "Fantasy"
+            ]
+          }
+        ],
+        "distinctive_labels": [
+          {
+            "label_ko": "로맨스 판타지",
+            "category": "genre",
+            "platform_share": 0.48,
+            "market_share": 0.1067,
+            "stands_out_score": 4.5
+          },
+          {
+            "label_ko": "액션 판타지",
+            "category": "genre",
+            "platform_share": 0.26,
+            "market_share": 0.0578,
+            "stands_out_score": 4.5
+          },
+          {
+            "label_ko": "BL/보이즈러브",
+            "category": "content_flag",
+            "platform_share": 0.18,
+            "market_share": 0.04,
+            "stands_out_score": 4.5
+          },
+          {
+            "label_ko": "LGBTQ+",
+            "category": "other",
+            "platform_share": 0.05,
+            "market_share": 0.0111,
+            "stands_out_score": 4.5
+          }
+        ]
+      },
+      {
+        "platform": "Wattpad",
+        "reference_rankings": [
+          "인기 판타지"
+        ],
+        "display_sentence": "Wattpad 순위권 작품에서는 판타지, 로맨스, 마법, 전생 계열 태그가 상대적으로 눈에 띕니다.",
+        "top_labels": [
+          {
+            "canonical_label_id": "label_5d782cef50",
+            "label_ko": "판타지",
+            "category": "genre",
+            "count": 100,
+            "share": 1.0,
+            "raw_examples": [
+              "fantasy"
+            ]
+          },
+          {
+            "canonical_label_id": "romance",
+            "label_ko": "로맨스",
+            "category": "genre",
+            "count": 49,
+            "share": 0.49,
+            "raw_examples": [
+              "romance"
+            ]
+          },
+          {
+            "canonical_label_id": "magic",
+            "label_ko": "마법",
+            "category": "other",
+            "count": 40,
+            "share": 0.4,
+            "raw_examples": [
+              "magic"
+            ]
+          },
+          {
+            "canonical_label_id": "reincarnation",
+            "label_ko": "전생",
+            "category": "plot_device",
+            "count": 27,
+            "share": 0.27,
+            "raw_examples": [
+              "reincarnation"
+            ]
+          },
+          {
+            "canonical_label_id": "label_c939003aa1",
+            "label_ko": "모험",
+            "category": "other",
+            "count": 27,
+            "share": 0.27,
+            "raw_examples": [
+              "adventure"
+            ]
+          },
+          {
+            "canonical_label_id": "romance",
+            "label_ko": "사랑/로맨스",
+            "category": "genre",
+            "count": 19,
+            "share": 0.19,
+            "raw_examples": [
+              "love"
+            ]
+          },
+          {
+            "canonical_label_id": "label_39b9ab87fa",
+            "label_ko": "액션",
+            "category": "genre",
+            "count": 19,
+            "share": 0.19,
+            "raw_examples": [
+              "action"
+            ]
+          },
+          {
+            "canonical_label_id": "villainess",
+            "label_ko": "악역영애",
+            "category": "character",
+            "count": 16,
+            "share": 0.16,
+            "raw_examples": [
+              "villainess"
+            ]
+          },
+          {
+            "canonical_label_id": "label_dff65e09c2",
+            "label_ko": "여성 주인공",
+            "category": "character",
+            "count": 14,
+            "share": 0.14,
+            "raw_examples": [
+              "femaleprotagonist"
+            ]
+          },
+          {
+            "canonical_label_id": "isekai",
+            "label_ko": "이세계",
+            "category": "plot_device",
+            "count": 14,
+            "share": 0.14,
+            "raw_examples": [
+              "isekai"
+            ]
+          },
+          {
+            "canonical_label_id": "label_6b1f2377c6",
+            "label_ko": "슬로우번",
+            "category": "other",
+            "count": 13,
+            "share": 0.13,
+            "raw_examples": [
+              "slowburn"
+            ]
+          },
+          {
+            "canonical_label_id": "label_2a43643086",
+            "label_ko": "다크 판타지",
+            "category": "genre",
+            "count": 12,
+            "share": 0.12,
+            "raw_examples": [
+              "darkfantasy"
+            ]
+          }
+        ],
+        "distinctive_labels": [
+          {
+            "label_ko": "사랑/로맨스",
+            "category": "genre",
+            "platform_share": 0.19,
+            "market_share": 0.0422,
+            "stands_out_score": 4.5
+          },
+          {
+            "label_ko": "슬로우번",
+            "category": "other",
+            "platform_share": 0.13,
+            "market_share": 0.0289,
+            "stands_out_score": 4.5
+          },
+          {
+            "label_ko": "악역영애",
+            "category": "character",
+            "platform_share": 0.16,
+            "market_share": 0.0356,
+            "stands_out_score": 4.49
+          },
+          {
+            "label_ko": "다크 판타지",
+            "category": "genre",
+            "platform_share": 0.12,
+            "market_share": 0.0267,
+            "stands_out_score": 4.49
+          },
+          {
+            "label_ko": "전생",
+            "category": "plot_device",
+            "platform_share": 0.27,
+            "market_share": 0.1333,
+            "stands_out_score": 2.03
+          }
+        ]
+      }
+    ],
+    "cooccurrence_cards": [
+      {
+        "labels": [
+          "모험",
+          "판타지"
+        ],
+        "count": 183,
+        "together_ratio": 0.5613,
+        "together_score": 1.33,
+        "platform_spread": {
+          "observed": 3,
+          "total": 4
+        },
+        "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+      },
+      {
+        "labels": [
+          "액션",
+          "판타지"
+        ],
+        "count": 164,
+        "together_ratio": 0.4896,
+        "together_score": 1.25,
+        "platform_spread": {
+          "observed": 3,
+          "total": 4
+        },
+        "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+      },
+      {
+        "labels": [
+          "모험",
+          "액션"
+        ],
+        "count": 138,
+        "together_ratio": 0.5391,
+        "together_score": 1.6,
+        "platform_spread": {
+          "observed": 3,
+          "total": 4
+        },
+        "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+      },
+      {
+        "labels": [
+          "LitRPG",
+          "판타지"
+        ],
+        "count": 124,
+        "together_ratio": 0.3863,
+        "together_score": 1.32,
+        "platform_spread": {
+          "observed": 2,
+          "total": 4
+        },
+        "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+      },
+      {
+        "labels": [
+          "로맨스",
+          "판타지"
+        ],
+        "count": 115,
+        "together_ratio": 0.3538,
+        "together_score": 1.27,
+        "platform_spread": {
+          "observed": 4,
+          "total": 4
+        },
+        "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+      },
+      {
+        "labels": [
+          "LitRPG",
+          "액션"
+        ],
+        "count": 103,
+        "together_ratio": 0.4537,
+        "together_score": 1.75,
+        "platform_spread": {
+          "observed": 2,
+          "total": 4
+        },
+        "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+      },
+      {
+        "labels": [
+          "마법",
+          "판타지"
+        ],
+        "count": 100,
+        "together_ratio": 0.3226,
+        "together_score": 1.42,
+        "platform_spread": {
+          "observed": 2,
+          "total": 4
+        },
+        "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+      },
+      {
+        "labels": [
+          "LitRPG",
+          "모험"
+        ],
+        "count": 99,
+        "together_ratio": 0.4108,
+        "together_score": 1.6,
+        "platform_spread": {
+          "observed": 2,
+          "total": 4
+        },
+        "display_sentence": "두 태그가 같은 순위권 작품 안에서 함께 보인 경우가 있습니다."
+      }
+    ],
+    "detailed_reference_tables": {
+      "work_element_rows": [
+        {
+          "work_element": "현대 로맨스",
+          "input_source": "genre",
+          "input_source_label": "장르",
+          "status": "이번 데이터에서는 직접 보이지 않음",
+          "match_status": "not_observed",
+          "looked_works_count": null,
+          "looked_works_share": null,
+          "platform_spread": null,
+          "candidate_labels": [],
+          "source_tag_examples": []
+        }
+      ],
+      "platform_rows": []
+    },
+    "limitations": [
+      "이 화면은 “이렇게 바꾸세요”라고 말하는 추천서가 아닙니다.",
+      "영어권/US 플랫폼 순위권 작품들에서 어떤 태그가 함께 보였는지 정리한 참고 자료입니다.",
+      "작품의 방향, 제목, 장르를 바꿀지 여부는 이 데이터만으로 판단하지 마세요.",
+      "이번 데이터에서 보이지 않은 요소는 부적합하다는 뜻이 아니라, 살펴본 범위 안에서 직접 태그로 확인되지 않았다는 뜻입니다.",
+      "플랫폼마다 공개 지표의 의미가 다르므로 숫자는 플랫폼 간 우열 비교가 아니라 참고값으로만 봐주세요."
+    ]
+  },
+  "contextPackEvidence": {
+    "generated_at": "2026-06-08T08:42:54.548016+00:00",
+    "analysis_scope": "context_pack_direct_observation_overlap",
+    "work": {
+      "title": "10년 전 약속",
+      "target_market": "english",
+      "genre": "현대 로맨스",
+      "synopsis": "",
+      "declared_signals": [],
+      "title_elements": [],
+      "comparable_signals": []
+    },
+    "target_market": "US",
+    "target_market_ko": "영어권/US",
+    "context_record_count": 450,
+    "platforms": [
+      "Royal Road",
+      "Scribble Hub",
+      "Tapas",
+      "Wattpad"
+    ],
+    "signal_types": [
+      "hot_fantasy",
+      "popular_novels",
+      "rising",
+      "weekly_popular"
+    ],
+    "summary": {
+      "declared_signal_count": 1,
+      "observed_signal_count": 0,
+      "not_observed_signal_count": 1,
+      "title_element_count": 0,
+      "comparable_signal_count": 1
+    },
+    "direct_signal_rows": [
+      {
+        "work_signal": "현대 로맨스",
+        "input_source": "genre",
+        "input_source_label": "장르",
+        "match_status": "not_observed",
+        "direct_observation": "not_observed",
+        "observed_label": null,
+        "candidate_observations": [],
+        "aggregate": null,
+        "platform_balanced": null,
+        "note": "이번 데이터에서는 직접 보이지 않음"
+      }
+    ],
+    "platform_direct_rows": [],
+    "signal_type_direct_rows": [],
+    "regulation_join_candidates": {
+      "sensitive_direct_hits": [],
+      "note": "규정/규제 데이터 미결합 상태입니다. 직접 일치한 민감 라벨만 후보로 제공합니다."
+    },
+    "data_limits": [
+      "랭킹/인기 페이지 공개 샘플에서 관찰된 라벨·공개 지표 집계입니다.",
+      "추천, 성과 예측, 시장 적합도 판단, 창작 방향 제안에 사용하지 않습니다.",
+      "표현은 '관찰됨', '샘플 내 빈도', '검토 참고 항목'으로 제한합니다.",
+      "플랫폼 간 public metric은 의미가 달라 직접 비교하지 않습니다.",
+      "개별 작품명과 시놉시스는 대표 사례/근거 인용 없이 context pack에 넣지 않습니다.",
+      "이 리포트는 참고 데이터의 한국어 표시명과 작가/작품 입력 요소의 직접 일치만 사용합니다.",
+      "이번 데이터에서는 직접 보이지 않음은 인기/부적합 판단이 아니라 살펴본 범위 안에 동일 라벨이 없다는 뜻입니다.",
+      "추천, 성과 예측, 창작 방향 제안은 수행하지 않습니다."
+    ]
+  },
+  "policyAttentionCards": [],
+  "policyLimitations": [
+    "현재 입력에서 규정 확인 후보로 표시할 직접 키워드는 발견되지 않았습니다.",
+    "이 결과는 법적 판단이나 위반 확정이 아닙니다."
+  ],
+  "policy_attention_cards": [],
+  "policy_limitations": [
+    "현재 입력에서 규정 확인 후보로 표시할 직접 키워드는 발견되지 않았습니다.",
+    "이 결과는 법적 판단이나 위반 확정이 아닙니다."
+  ],
+  "generationMode": "llm_with_rag",
+  "llmGeneratedGuide": true,
+  "llmGuideModel": "gpt-4.1-mini",
+  "llmGuideGeneratedAt": "2026-06-08T08:43:22.554274+00:00",
+  "llmGuideEvidenceSummary": {
+    "selectedCountry": "미국",
+    "contextRecordCount": 450,
+    "platforms": [
+      "Royal Road",
+      "Scribble Hub",
+      "Tapas",
+      "Wattpad"
+    ],
+    "policyCards": 0,
+    "countryDataMatchCount": 3
+  },
+  "personalizedGuide": {
+    "executiveSummary": [
+      "작가님께서 제공하신 작품명 '10년 전 약속'과 장르 '현대 로맨스'를 기반으로 미국 시장 내 영어권 플랫폼 데이터와 비교 분석을 진행했습니다.",
+      "미국 내 주요 로맨스 장르 관련 인기 작품들은 주로 판타지 요소가 포함된 로맨스 판타지, 액션 판타지 장르에 많이 분포하며, 현대 로맨스 단독 태그로는 인기 노출 사례가 데이터 내 확인되지 않았습니다.",
+      "해당 시장에서는 판타지, 모험, 액션, LitRPG 태그가 매우 빈번하며, 이는 작품 노출 및 독자 관심에 영향을 주는 주요 요소로 보입니다.",
+      "입력하신 현대 로맨스 장르는 현재 참고한 미국 영어권 공개 플랫폼 데이터 내 직접적인 일치 사례가 적어 장르별 태그와 내용이 어떻게 매칭되는지 추가 조사가 필요하다고 판단됩니다."
+    ],
+    "inputReading": {
+      "workTitle": "10년 전 약속",
+      "genre": "현대 로맨스",
+      "targetCountry": "미국",
+      "coreAppeal": [
+        "현대 로맨스"
+      ],
+      "assumptions": [
+        "장르는 현대를 배경으로 하는 로맨스 이야기임을 전제",
+        "시놉시스가 없어 구체적인 스토리 전개나 설정 정보는 부족"
+      ]
+    },
+    "marketInterpretation": [
+      "미국 내 영어권 플랫폼에서는 로맨스 작품 대다수가 판타지 장르와 결합되어 '로맨스 판타지'로 분류되고 노출되는 경향이 강합니다.",
+      "현대 로맨스 단독 장르로 인식될 경우, 플랫폼 인기 랭킹 내 노출 빈도가 상대적으로 적은 것으로 나타났습니다.",
+      "Tapas, Wattpad, Scribble Hub, Royal Road 등 주요 플랫폼에서 사용자 관심 태그로 ‘판타지’, ‘모험’, ‘액션’ 등이 빈번히 등장하며, 이와 결합된 로맨스 장르가 인기몰이를 하고 있습니다.",
+      "따라서 미국 플랫폼에서는 '현대 로맨스'가 창작자가 기대한 방식으로 바로 받아들여지기보다, 판타지 또는 다른 장르와 혼합된 로맨스 서사로 보일 가능성이 큽니다."
+    ],
+    "culturalNotes": [
+      "미국 독자층은 로맨스 장르 내에서도 판타지적 설정이나 성장형 이야기, 이세계 전생 등 특유의 장르적 요소를 선호하는 경향이 강합니다.",
+      "현대 로맨스만을 원할 경우라도, 현지 독자들은 설정과 캐릭터 감정 흐름에 대해 명확하고 직관적인 이해를 중요시합니다.",
+      "영문화 과정에서 한국 특유의 가족관계 명칭, 사회적 직위, 군대 등 용어는 간단 명료하게 변환하거나 현지 독자가 이해하기 쉬운 형태로 보완할 필요가 있습니다.",
+      "문화적 차이로 인한 공감지점 확보를 위해 감정선과 갈등구도, 사회적 설정이 현지 생활 양식과 맞는지 살펴보는 것이 좋습니다."
+    ],
+    "platformPolicyChecks": [
+      "제공된 입력과 근거 데이터 내에서는 미국 플랫폼의 구체적 정책 위반 가능성을 시사하는 단어, 설정, 표현은 발견되지 않았습니다.",
+      "다만, 영문 플랫폼에서는 성인 콘텐츠 분류, 폭력 묘사, 차별적 내용 등에 관한 정책이 엄격할 수 있으므로 공개 전 플랫폼별 게시 기준을 확인하는 것이 안전합니다.",
+      "판타지나 로맨스 장르 특성상 권력관계, 성적 동의, 민감한 사회적 이슈 표현 시 플랫폼 정책에 주의해야 합니다.",
+      "현재 자료는 정책 위반 확정이 아닌, 게시 전 점검 가능한 요소 안내용입니다."
+    ],
+    "marketTagGuidance": [
+      "미국 인기 플랫폼에서는 현대 로맨스 단독 태그보다 로맨스 판타지, 액션 판타지 등 복합 장르 태그가 더 빈번히 노출됩니다.",
+      "'10년 전 약속'과 같은 제목은 장르 내 기대감을 드러내기에 중립적이며, 플랫폼에서는 장르 태그가 작품 초기 노출에 더 큰 영향을 미칩니다.",
+      "로맨스 장르 노출을 극대화하려면 판타지, 모험 등 결합 가능 태그 검토가 관찰됩니다.",
+      "대상 플랫폼에서는 'ON_GOING' (연재 중), 'WAIT_UNTIL_FREE' (무료 공개 대기) 등 상태 태그도 독자 유입에 영향을 줄 수 있음을 참고하세요."
+    ],
+    "evidenceExplanation": [
+      "미국 영어권 시장에서는 Tapas, Wattpad, Scribble Hub, Royal Road 4개 플랫폼에서 인기 판타지 및 로맨스 판타지 작품 450편 이상을 샘플링 했습니다.",
+      "'현대 로맨스'라는 장르는 해당 플랫폼 인기 랭킹 내 직접적으로 눈에 띄는 사례가 거의 없었고, 대신 로맨스가 판타지 등 장르와 결합된 형태가 상위권에 많았습니다.",
+      "Top 랭킹 작품(예: Tapas 1위 'The Villainess' Mandate')은 대체로 로맨스 판타지 장르이며, 이를 통해 현지 플랫폼 내 작품 분류/노출 경향을 파악했습니다.",
+      "플랫폼별 인기 태그 및 노출 현황 결과를 직접 분석해 한국 웹소설과 달리 로맨스 단독 장르에 대한 시장 신호가 상대적으로 약함을 확인했습니다."
+    ],
+    "limitations": [
+      "입력 데이터에 시놉시스, 구체 줄거리, 주요 캐릭터 정보가 없어 미국 독자 반응이나 시장 적합성에 대해 세밀한 분석은 어렵습니다.",
+      "미국 내 플랫폼별 정책 문서 및 비공개 내부 운영 현황은 접근 불가해 일반적 정책 공개 내용과 노출 태그만 참고했습니다.",
+      "추천이나 작품 개선 조언 대신 중립적 시장 해석과 접속된 데이터 한계 내에서만 근거를 전달합니다.",
+      "한국과 미국 시장 간 문화적 차이나 독자 행동 양식의 미세한 차이는 데이터 수집 범위 한계로 일부 반영되지 못할 수 있습니다.",
+      "분석은 공개된 플랫폼 내 인기 순위, 태그, 분류를 기준으로 하며, 다른 채널이나 비공개 시장 동향은 포함하지 않습니다."
+    ]
+  },
+  "llmHtmlReport": "\n\n<section class=\"section market-snapshot\">\n  <h2>이번 리포트가 참고한 플랫폼 데이터</h2>\n  <p class=\"guide-section-help\">아래 내용은 대상 국가 플랫폼에서 공개적으로 관찰한 작품/태그 데이터만 간단히 보여줍니다. 국가별 우열이나 시장 성공 가능성을 뜻하지 않습니다.</p>\n  <div class=\"work-summary\">\n    <div><small>참고한 작품 수</small><strong>450편</strong></div>\n    <div><small>참고한 플랫폼</small><strong>4곳</strong></div>\n  </div>\n  <div class=\"chips\"><span class='chip'>Royal Road</span><span class='chip'>Scribble Hub</span><span class='chip'>Tapas</span><span class='chip'>Wattpad</span></div>\n  <div class=\"grid\" style=\"margin-top:14px\">\n    <article class=\"chart-card\"><h3>참고 데이터에서 자주 보인 태그</h3><div class='chart-row'><div class='chart-label'>판타지</div><div class='chart-track'><span style='width:100%'></span></div><div class='chart-value'>307건</div></div><div class='chart-row'><div class='chart-label'>모험</div><div class='chart-track'><span style='width:65%'></span></div><div class='chart-value'>202건</div></div><div class='chart-row'><div class='chart-label'>액션</div><div class='chart-track'><span style='width:62%'></span></div><div class='chart-value'>192건</div></div><div class='chart-row'><div class='chart-label'>LitRPG</div><div class='chart-track'><span style='width:44%'></span></div><div class='chart-value'>138건</div></div><div class='chart-row'><div class='chart-label'>로맨스</div><div class='chart-track'><span style='width:43%'></span></div><div class='chart-value'>133건</div></div><div class='chart-row'><div class='chart-label'>이세계</div><div class='chart-track'><span style='width:31%'></span></div><div class='chart-value'>98건</div></div><div class='chart-row'><div class='chart-label'>하렘</div><div class='chart-track'><span style='width:31%'></span></div><div class='chart-value'>98건</div></div><div class='chart-row'><div class='chart-label'>마법</div><div class='chart-track'><span style='width:33%'></span></div><div class='chart-value'>103건</div></div></article>\n    <article class=\"chart-card\"><h3>함께 자주 보인 태그 조합</h3><div class='chart-row'><div class='chart-label'>모험 + 판타지</div><div class='chart-track'><span style='width:100%'></span></div><div class='chart-value'>183건 · 3/4 플랫폼</div></div><div class='chart-row'><div class='chart-label'>액션 + 판타지</div><div class='chart-track'><span style='width:89%'></span></div><div class='chart-value'>164건 · 3/4 플랫폼</div></div><div class='chart-row'><div class='chart-label'>모험 + 액션</div><div class='chart-track'><span style='width:75%'></span></div><div class='chart-value'>138건 · 3/4 플랫폼</div></div><div class='chart-row'><div class='chart-label'>LitRPG + 판타지</div><div class='chart-track'><span style='width:67%'></span></div><div class='chart-value'>124건 · 2/4 플랫폼</div></div><div class='chart-row'><div class='chart-label'>로맨스 + 판타지</div><div class='chart-track'><span style='width:62%'></span></div><div class='chart-value'>115건 · 4/4 플랫폼</div></div><div class='chart-row'><div class='chart-label'>LitRPG + 액션</div><div class='chart-track'><span style='width:56%'></span></div><div class='chart-value'>103건 · 2/4 플랫폼</div></div><div class='chart-row'><div class='chart-label'>마법 + 판타지</div><div class='chart-track'><span style='width:54%'></span></div><div class='chart-value'>100건 · 2/4 플랫폼</div></div><div class='chart-row'><div class='chart-label'>LitRPG + 모험</div><div class='chart-track'><span style='width:54%'></span></div><div class='chart-value'>99건 · 2/4 플랫폼</div></div><p class=\"muted\">같은 작품에 함께 붙어 있던 태그 조합입니다. 내 작품에 모두 적용하라는 뜻은 아닙니다.</p></article>\n  </div>\n</section>\n\n<section class=\"section summary-box\">\n  <h2>이번 리포트 요약</h2>\n  <p>작가님께서 제공하신 작품명 &#x27;10년 전 약속&#x27;과 장르 &#x27;현대 로맨스&#x27;를 기반으로 미국 시장 내 영어권 플랫폼 데이터와 비교 분석을 진행했습니다.</p><p>미국 내 주요 로맨스 장르 관련 인기 작품들은 주로 판타지 요소가 포함된 로맨스 판타지, 액션 판타지 장르에 많이 분포하며, 현대 로맨스 단독 태그로는 인기 노출 사례가 데이터 내 확인되지 않았습니다.</p><p>해당 시장에서는 판타지, 모험, 액션, LitRPG 태그가 매우 빈번하며, 이는 작품 노출 및 독자 관심에 영향을 주는 주요 요소로 보입니다.</p><p>입력하신 현대 로맨스 장르는 현재 참고한 미국 영어권 공개 플랫폼 데이터 내 직접적인 일치 사례가 적어 장르별 태그와 내용이 어떻게 매칭되는지 추가 조사가 필요하다고 판단됩니다.</p>\n</section>\n<section class=\"section\">\n  <h2>입력 작품을 이렇게 읽었어요</h2>\n  <div class=\"work-summary\">\n    <div><small>작품 제목</small><strong>10년 전 약속</strong></div>\n    <div><small>장르 / 대상</small><strong>현대 로맨스 · 미국</strong></div>\n  </div>\n  <p><b>핵심 매력/소재:</b> 현대 로맨스</p>\n  <div class=\"quiet-note\"><strong>전제와 한계</strong><ul><li>장르는 현대를 배경으로 하는 로맨스 이야기임을 전제</li><li>시놉시스가 없어 구체적인 스토리 전개나 설정 정보는 부족</li></ul></div>\n</section>\n<section class=\"section\"><h2>현지 플랫폼에서는 이렇게 보일 수 있어요</h2><p class=\"guide-section-help\">작품을 고치라는 뜻이 아니라, 입력 정보가 대상 국가 플랫폼 데이터 안에서 어떤 태그와 소개 맥락으로 읽힐 수 있는지 정리한 내용입니다.</p><ul class=\"guide-list\"><li>미국 내 영어권 플랫폼에서는 로맨스 작품 대다수가 판타지 장르와 결합되어 &#x27;로맨스 판타지&#x27;로 분류되고 노출되는 경향이 강합니다.</li><li>현대 로맨스 단독 장르로 인식될 경우, 플랫폼 인기 랭킹 내 노출 빈도가 상대적으로 적은 것으로 나타났습니다.</li><li>Tapas, Wattpad, Scribble Hub, Royal Road 등 주요 플랫폼에서 사용자 관심 태그로 ‘판타지’, ‘모험’, ‘액션’ 등이 빈번히 등장하며, 이와 결합된 로맨스 장르가 인기몰이를 하고 있습니다.</li><li>따라서 미국 플랫폼에서는 &#x27;현대 로맨스&#x27;가 창작자가 기대한 방식으로 바로 받아들여지기보다, 판타지 또는 다른 장르와 혼합된 로맨스 서사로 보일 가능성이 큽니다.</li></ul></section>\n<section class=\"section\"><h2>문화적 주의사항</h2><ul class=\"guide-list\"><li>미국 독자층은 로맨스 장르 내에서도 판타지적 설정이나 성장형 이야기, 이세계 전생 등 특유의 장르적 요소를 선호하는 경향이 강합니다.</li><li>현대 로맨스만을 원할 경우라도, 현지 독자들은 설정과 캐릭터 감정 흐름에 대해 명확하고 직관적인 이해를 중요시합니다.</li><li>영문화 과정에서 한국 특유의 가족관계 명칭, 사회적 직위, 군대 등 용어는 간단 명료하게 변환하거나 현지 독자가 이해하기 쉬운 형태로 보완할 필요가 있습니다.</li><li>문화적 차이로 인한 공감지점 확보를 위해 감정선과 갈등구도, 사회적 설정이 현지 생활 양식과 맞는지 살펴보는 것이 좋습니다.</li></ul></section>\n<section class=\"section\"><h2>플랫폼 규정 체크포인트</h2><ul class=\"guide-list\"><li>제공된 입력과 근거 데이터 내에서는 미국 플랫폼의 구체적 정책 위반 가능성을 시사하는 단어, 설정, 표현은 발견되지 않았습니다.</li><li>다만, 영문 플랫폼에서는 성인 콘텐츠 분류, 폭력 묘사, 차별적 내용 등에 관한 정책이 엄격할 수 있으므로 공개 전 플랫폼별 게시 기준을 확인하는 것이 안전합니다.</li><li>판타지나 로맨스 장르 특성상 권력관계, 성적 동의, 민감한 사회적 이슈 표현 시 플랫폼 정책에 주의해야 합니다.</li><li>현재 자료는 정책 위반 확정이 아닌, 게시 전 점검 가능한 요소 안내용입니다.</li></ul></section>\n<section class=\"section\"><h2>태그와 소개문에서 참고할 점</h2><ul class=\"guide-list\"><li>미국 인기 플랫폼에서는 현대 로맨스 단독 태그보다 로맨스 판타지, 액션 판타지 등 복합 장르 태그가 더 빈번히 노출됩니다.</li><li>&#x27;10년 전 약속&#x27;과 같은 제목은 장르 내 기대감을 드러내기에 중립적이며, 플랫폼에서는 장르 태그가 작품 초기 노출에 더 큰 영향을 미칩니다.</li><li>로맨스 장르 노출을 극대화하려면 판타지, 모험 등 결합 가능 태그 검토가 관찰됩니다.</li><li>대상 플랫폼에서는 &#x27;ON_GOING&#x27; (연재 중), &#x27;WAIT_UNTIL_FREE&#x27; (무료 공개 대기) 등 상태 태그도 독자 유입에 영향을 줄 수 있음을 참고하세요.</li></ul></section>\n<section class=\"section\"><h2>사용한 근거 설명</h2><ul class=\"guide-list\"><li>미국 영어권 시장에서는 Tapas, Wattpad, Scribble Hub, Royal Road 4개 플랫폼에서 인기 판타지 및 로맨스 판타지 작품 450편 이상을 샘플링 했습니다.</li><li>&#x27;현대 로맨스&#x27;라는 장르는 해당 플랫폼 인기 랭킹 내 직접적으로 눈에 띄는 사례가 거의 없었고, 대신 로맨스가 판타지 등 장르와 결합된 형태가 상위권에 많았습니다.</li><li>Top 랭킹 작품(예: Tapas 1위 &#x27;The Villainess&#x27; Mandate&#x27;)은 대체로 로맨스 판타지 장르이며, 이를 통해 현지 플랫폼 내 작품 분류/노출 경향을 파악했습니다.</li><li>플랫폼별 인기 태그 및 노출 현황 결과를 직접 분석해 한국 웹소설과 달리 로맨스 단독 장르에 대한 시장 신호가 상대적으로 약함을 확인했습니다.</li></ul></section>\n<section class=\"section\"><h2>읽기 전에</h2><ul class=\"guide-list\"><li>입력 데이터에 시놉시스, 구체 줄거리, 주요 캐릭터 정보가 없어 미국 독자 반응이나 시장 적합성에 대해 세밀한 분석은 어렵습니다.</li><li>미국 내 플랫폼별 정책 문서 및 비공개 내부 운영 현황은 접근 불가해 일반적 정책 공개 내용과 노출 태그만 참고했습니다.</li><li>추천이나 작품 개선 조언 대신 중립적 시장 해석과 접속된 데이터 한계 내에서만 근거를 전달합니다.</li><li>한국과 미국 시장 간 문화적 차이나 독자 행동 양식의 미세한 차이는 데이터 수집 범위 한계로 일부 반영되지 못할 수 있습니다.</li><li>분석은 공개된 플랫폼 내 인기 순위, 태그, 분류를 기준으로 하며, 다른 채널이나 비공개 시장 동향은 포함하지 않습니다.</li></ul></section>\n"
+}

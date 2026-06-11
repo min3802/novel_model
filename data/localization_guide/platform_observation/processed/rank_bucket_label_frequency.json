@@ -1,0 +1,4322 @@
+[
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "爱情",
+    "label_ko": "사랑/로맨스",
+    "count": 13,
+    "share": 0.325
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "言情",
+    "label_ko": "로맨스",
+    "count": 13,
+    "share": 0.325
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "女主视角",
+    "label_ko": "여성 주인공 시점",
+    "count": 13,
+    "share": 0.325
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "爽文",
+    "label_ko": "사이다/쾌감형",
+    "count": 13,
+    "share": 0.325
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "近代现代",
+    "label_ko": "근현대",
+    "count": 11,
+    "share": 0.275
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "热血",
+    "label_ko": "열혈",
+    "count": 10,
+    "share": 0.25
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "甜文",
+    "label_ko": "달달한 이야기",
+    "count": 7,
+    "share": 0.175
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "纯爱",
+    "label_ko": "BL/순애",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "主受视角",
+    "label_ko": "수 시점/BL",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "豪门世家",
+    "label_ko": "재벌/명문가",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "情有独钟",
+    "label_ko": "일편단심",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "玄幻奇幻",
+    "label_ko": "현환/판타지",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "东方玄幻",
+    "label_ko": "동양 판타지",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "架空历史",
+    "label_ko": "가상 역사",
+    "count": 5,
+    "share": 0.125
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "天之骄子",
+    "label_ko": "엘리트/천재형 인물",
+    "count": 5,
+    "share": 0.125
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "仙侠",
+    "label_ko": "선협",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "天作之合",
+    "label_ko": "천생연분",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "穿书",
+    "label_ko": "책빙의",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "轻松",
+    "label_ko": "가벼운 톤",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "都市",
+    "label_ko": "도시",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "日常",
+    "label_ko": "일상",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "穿越时空",
+    "label_ko": "시공간 이동",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "剧情",
+    "label_ko": "드라마/서사",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "幻想未来",
+    "label_ko": "미래 판타지",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "武侠仙侠",
+    "label_ko": "무협/선협",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "仙侠修真",
+    "label_ko": "선협/수진",
+    "count": 2,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "系统",
+    "label_ko": "시스템",
+    "count": 2,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "成长",
+    "label_ko": "성장",
+    "count": 2,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "重生",
+    "label_ko": "환생/회귀",
+    "count": 2,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 40,
+    "label_original": "美食",
+    "label_ko": "음식/미식",
+    "count": 2,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "爱情",
+    "label_ko": "사랑/로맨스",
+    "count": 16,
+    "share": 0.6154
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "甜文",
+    "label_ko": "달달한 이야기",
+    "count": 12,
+    "share": 0.4615
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "近代现代",
+    "label_ko": "근현대",
+    "count": 12,
+    "share": 0.4615
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "言情",
+    "label_ko": "로맨스",
+    "count": 11,
+    "share": 0.4231
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "女主视角",
+    "label_ko": "여성 주인공 시점",
+    "count": 10,
+    "share": 0.3846
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "纯爱",
+    "label_ko": "BL/순애",
+    "count": 9,
+    "share": 0.3462
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "主受视角",
+    "label_ko": "수 시점/BL",
+    "count": 9,
+    "share": 0.3462
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "情有独钟",
+    "label_ko": "일편단심",
+    "count": 8,
+    "share": 0.3077
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "爽文",
+    "label_ko": "사이다/쾌감형",
+    "count": 8,
+    "share": 0.3077
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "天之骄子",
+    "label_ko": "엘리트/천재형 인물",
+    "count": 6,
+    "share": 0.2308
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "架空历史",
+    "label_ko": "가상 역사",
+    "count": 5,
+    "share": 0.1923
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "豪门世家",
+    "label_ko": "재벌/명문가",
+    "count": 5,
+    "share": 0.1923
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "业界精英",
+    "label_ko": "업계 엘리트",
+    "count": 4,
+    "share": 0.1538
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "穿越时空",
+    "label_ko": "시공간 이동",
+    "count": 3,
+    "share": 0.1154
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "系统",
+    "label_ko": "시스템",
+    "count": 3,
+    "share": 0.1154
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "沙雕",
+    "label_ko": "병맛/개그",
+    "count": 3,
+    "share": 0.1154
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "穿书",
+    "label_ko": "책빙의",
+    "count": 3,
+    "share": 0.1154
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "都市",
+    "label_ko": "도시",
+    "count": 3,
+    "share": 0.1154
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "天作之合",
+    "label_ko": "천생연분",
+    "count": 3,
+    "share": 0.1154
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "轻松",
+    "label_ko": "가벼운 톤",
+    "count": 3,
+    "share": 0.1154
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "成长",
+    "label_ko": "성장",
+    "count": 3,
+    "share": 0.1154
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "狗血",
+    "label_ko": "막장/자극적 전개",
+    "count": 2,
+    "share": 0.0769
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "强强",
+    "label_ko": "강자 대 강자",
+    "count": 2,
+    "share": 0.0769
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "暗恋",
+    "label_ko": "짝사랑",
+    "count": 2,
+    "share": 0.0769
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "剧情",
+    "label_ko": "드라마/서사",
+    "count": 2,
+    "share": 0.0769
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "幻想未来",
+    "label_ko": "미래 판타지",
+    "count": 2,
+    "share": 0.0769
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "热血",
+    "label_ko": "열혈",
+    "count": 2,
+    "share": 0.0769
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "边缘恋歌",
+    "label_ko": "边缘恋歌",
+    "count": 1,
+    "share": 0.0385
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "恋爱合约",
+    "label_ko": "恋爱合约",
+    "count": 1,
+    "share": 0.0385
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 26,
+    "label_original": "女配",
+    "label_ko": "女配",
+    "count": 1,
+    "share": 0.0385
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "言情",
+    "label_ko": "로맨스",
+    "count": 26,
+    "share": 0.52
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "爱情",
+    "label_ko": "사랑/로맨스",
+    "count": 25,
+    "share": 0.5
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "架空历史",
+    "label_ko": "가상 역사",
+    "count": 22,
+    "share": 0.44
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "女主视角",
+    "label_ko": "여성 주인공 시점",
+    "count": 20,
+    "share": 0.4
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "纯爱",
+    "label_ko": "BL/순애",
+    "count": 19,
+    "share": 0.38
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "主受视角",
+    "label_ko": "수 시점/BL",
+    "count": 18,
+    "share": 0.36
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "近代现代",
+    "label_ko": "근현대",
+    "count": 17,
+    "share": 0.34
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "甜文",
+    "label_ko": "달달한 이야기",
+    "count": 15,
+    "share": 0.3
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "爽文",
+    "label_ko": "사이다/쾌감형",
+    "count": 14,
+    "share": 0.28
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "情有独钟",
+    "label_ko": "일편단심",
+    "count": 12,
+    "share": 0.24
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "强强",
+    "label_ko": "강자 대 강자",
+    "count": 12,
+    "share": 0.24
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "正剧",
+    "label_ko": "정극",
+    "count": 9,
+    "share": 0.18
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "穿越时空",
+    "label_ko": "시공간 이동",
+    "count": 9,
+    "share": 0.18
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "轻松",
+    "label_ko": "가벼운 톤",
+    "count": 9,
+    "share": 0.18
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "衍生",
+    "label_ko": "파생/팬덤",
+    "count": 9,
+    "share": 0.18
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "仙侠修真",
+    "label_ko": "선협/수진",
+    "count": 8,
+    "share": 0.16
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "古色古香",
+    "label_ko": "고전풍",
+    "count": 7,
+    "share": 0.14
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "系统",
+    "label_ko": "시스템",
+    "count": 7,
+    "share": 0.14
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "剧情",
+    "label_ko": "드라마/서사",
+    "count": 6,
+    "share": 0.12
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "男主视角",
+    "label_ko": "남성 주인공 시점",
+    "count": 6,
+    "share": 0.12
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "仙侠",
+    "label_ko": "선협",
+    "count": 6,
+    "share": 0.12
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "穿书",
+    "label_ko": "책빙의",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "日常",
+    "label_ko": "일상",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "双视角视角",
+    "label_ko": "쌍방 시점",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "东方衍生",
+    "label_ko": "동양풍 파생",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "天作之合",
+    "label_ko": "천생연분",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "灵异神怪",
+    "label_ko": "괴담/초자연",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "快穿",
+    "label_ko": "퀵 트랜스미션",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "宫廷侯爵",
+    "label_ko": "궁정/귀족",
+    "count": 4,
+    "share": 0.08
+  },
+  {
+    "market": "China",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 50,
+    "label_original": "群像",
+    "label_ko": "군상극",
+    "count": 4,
+    "share": 0.08
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "爱情",
+    "label_ko": "사랑/로맨스",
+    "count": 8,
+    "share": 0.4
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "热血",
+    "label_ko": "열혈",
+    "count": 8,
+    "share": 0.4
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "言情",
+    "label_ko": "로맨스",
+    "count": 6,
+    "share": 0.3
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "女主视角",
+    "label_ko": "여성 주인공 시점",
+    "count": 6,
+    "share": 0.3
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "甜文",
+    "label_ko": "달달한 이야기",
+    "count": 6,
+    "share": 0.3
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "轻松",
+    "label_ko": "가벼운 톤",
+    "count": 6,
+    "share": 0.3
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "近代现代",
+    "label_ko": "근현대",
+    "count": 6,
+    "share": 0.3
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "玄幻奇幻",
+    "label_ko": "현환/판타지",
+    "count": 5,
+    "share": 0.25
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "天之骄子",
+    "label_ko": "엘리트/천재형 인물",
+    "count": 4,
+    "share": 0.2
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "爽文",
+    "label_ko": "사이다/쾌감형",
+    "count": 4,
+    "share": 0.2
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "东方玄幻",
+    "label_ko": "동양 판타지",
+    "count": 4,
+    "share": 0.2
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "纯爱",
+    "label_ko": "BL/순애",
+    "count": 3,
+    "share": 0.15
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "主受视角",
+    "label_ko": "수 시점/BL",
+    "count": 3,
+    "share": 0.15
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "情有独钟",
+    "label_ko": "일편단심",
+    "count": 3,
+    "share": 0.15
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "剑道",
+    "label_ko": "검도/검술",
+    "count": 3,
+    "share": 0.15
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "架空历史",
+    "label_ko": "가상 역사",
+    "count": 2,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "穿越时空",
+    "label_ko": "시공간 이동",
+    "count": 2,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "幻想未来",
+    "label_ko": "미래 판타지",
+    "count": 2,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "业界精英",
+    "label_ko": "업계 엘리트",
+    "count": 2,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "天作之合",
+    "label_ko": "천생연분",
+    "count": 2,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "成长",
+    "label_ko": "성장",
+    "count": 2,
+    "share": 0.1
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "豪门世家",
+    "label_ko": "재벌/명문가",
+    "count": 1,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "朝堂",
+    "label_ko": "朝堂",
+    "count": 1,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "群像",
+    "label_ko": "군상극",
+    "count": 1,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "异能",
+    "label_ko": "이능력",
+    "count": 1,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "日常",
+    "label_ko": "일상",
+    "count": 1,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "花季雨季",
+    "label_ko": "花季雨季",
+    "count": 1,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "青梅竹马",
+    "label_ko": "소꿉친구",
+    "count": 1,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "励志",
+    "label_ko": "격려/성공담",
+    "count": 1,
+    "share": 0.05
+  },
+  {
+    "market": "China",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 20,
+    "label_original": "治愈",
+    "label_ko": "힐링",
+    "count": 1,
+    "share": 0.05
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "男主人公",
+    "label_ko": "남성 주인공",
+    "count": 25,
+    "share": 0.3125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "恋愛",
+    "label_ko": "연애/로맨스",
+    "count": 22,
+    "share": 0.275
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "ざまぁ",
+    "label_ko": "사이다/복수",
+    "count": 22,
+    "share": 0.275
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "ハッピーエンド",
+    "label_ko": "해피엔딩",
+    "count": 22,
+    "share": 0.275
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "R15",
+    "label_ko": "R15",
+    "count": 21,
+    "share": 0.2625
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "残酷な描写あり",
+    "label_ko": "잔혹 묘사 있음",
+    "count": 18,
+    "share": 0.225
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "魔法",
+    "label_ko": "마법",
+    "count": 14,
+    "share": 0.175
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "異世界転生",
+    "label_ko": "이세계 전생",
+    "count": 14,
+    "share": 0.175
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "シリアス",
+    "label_ko": "시리어스",
+    "count": 13,
+    "share": 0.1625
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "ハイファンタジー〔ファンタジー〕",
+    "label_ko": "하이 판타지",
+    "count": 12,
+    "share": 0.15
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "異世界〔恋愛〕",
+    "label_ko": "이세계 로맨스",
+    "count": 12,
+    "share": 0.15
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "異世界",
+    "label_ko": "이세계",
+    "count": 11,
+    "share": 0.1375
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "ローファンタジー〔ファンタジー〕",
+    "label_ko": "로우 판타지",
+    "count": 11,
+    "share": 0.1375
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "婚約破棄",
+    "label_ko": "혼약 파기",
+    "count": 10,
+    "share": 0.125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "女主人公",
+    "label_ko": "여성 주인공",
+    "count": 10,
+    "share": 0.125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "ダンジョン",
+    "label_ko": "던전",
+    "count": 10,
+    "share": 0.125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "日常",
+    "label_ko": "일상",
+    "count": 9,
+    "share": 0.1125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "異世界ファンタジー",
+    "label_ko": "이세계 판타지",
+    "count": 9,
+    "share": 0.1125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "チート",
+    "label_ko": "치트",
+    "count": 9,
+    "share": 0.1125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "現代",
+    "label_ko": "현대",
+    "count": 9,
+    "share": 0.1125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "冒険",
+    "label_ko": "모험",
+    "count": 8,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "ほのぼの",
+    "label_ko": "훈훈함/잔잔함",
+    "count": 8,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "西洋",
+    "label_ko": "서양풍",
+    "count": 8,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "異世界転移",
+    "label_ko": "이세계 전이",
+    "count": 8,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "溺愛",
+    "label_ko": "집착적 사랑/溺愛",
+    "count": 7,
+    "share": 0.0875
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "配信",
+    "label_ko": "방송/스트리밍",
+    "count": 7,
+    "share": 0.0875
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "スローライフ",
+    "label_ko": "슬로우 라이프",
+    "count": 7,
+    "share": 0.0875
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "ファンタジー",
+    "label_ko": "판타지",
+    "count": 6,
+    "share": 0.075
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "現代ファンタジー",
+    "label_ko": "현대 판타지",
+    "count": 6,
+    "share": 0.075
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 80,
+    "label_original": "聖女",
+    "label_ko": "성녀",
+    "count": 5,
+    "share": 0.0625
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "異世界転生",
+    "label_ko": "이세계 전생",
+    "count": 24,
+    "share": 0.3429
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "R15",
+    "label_ko": "R15",
+    "count": 22,
+    "share": 0.3143
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "残酷な描写あり",
+    "label_ko": "잔혹 묘사 있음",
+    "count": 20,
+    "share": 0.2857
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "ざまぁ",
+    "label_ko": "사이다/복수",
+    "count": 18,
+    "share": 0.2571
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "男主人公",
+    "label_ko": "남성 주인공",
+    "count": 18,
+    "share": 0.2571
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "ハイファンタジー〔ファンタジー〕",
+    "label_ko": "하이 판타지",
+    "count": 17,
+    "share": 0.2429
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "魔法",
+    "label_ko": "마법",
+    "count": 16,
+    "share": 0.2286
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "チート",
+    "label_ko": "치트",
+    "count": 16,
+    "share": 0.2286
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "ハッピーエンド",
+    "label_ko": "해피엔딩",
+    "count": 13,
+    "share": 0.1857
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "女主人公",
+    "label_ko": "여성 주인공",
+    "count": 13,
+    "share": 0.1857
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "恋愛",
+    "label_ko": "연애/로맨스",
+    "count": 12,
+    "share": 0.1714
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "異世界ファンタジー",
+    "label_ko": "이세계 판타지",
+    "count": 12,
+    "share": 0.1714
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "シリアス",
+    "label_ko": "시리어스",
+    "count": 10,
+    "share": 0.1429
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "異世界転移",
+    "label_ko": "이세계 전이",
+    "count": 10,
+    "share": 0.1429
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "成り上がり",
+    "label_ko": "신분상승/성공담",
+    "count": 9,
+    "share": 0.1286
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "ギャグ",
+    "label_ko": "개그",
+    "count": 9,
+    "share": 0.1286
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "ほのぼの",
+    "label_ko": "훈훈함/잔잔함",
+    "count": 8,
+    "share": 0.1143
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "ダンジョン",
+    "label_ko": "던전",
+    "count": 8,
+    "share": 0.1143
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "主人公最強",
+    "label_ko": "최강 주인공",
+    "count": 8,
+    "share": 0.1143
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "ローファンタジー〔ファンタジー〕",
+    "label_ko": "로우 판타지",
+    "count": 8,
+    "share": 0.1143
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "西洋",
+    "label_ko": "서양풍",
+    "count": 8,
+    "share": 0.1143
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "コメディ",
+    "label_ko": "코미디",
+    "count": 7,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "内政",
+    "label_ko": "내정",
+    "count": 7,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "日常",
+    "label_ko": "일상",
+    "count": 7,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "異世界〔恋愛〕",
+    "label_ko": "이세계 로맨스",
+    "count": 7,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "異世界",
+    "label_ko": "이세계",
+    "count": 6,
+    "share": 0.0857
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "もふもふ",
+    "label_ko": "もふもふ",
+    "count": 6,
+    "share": 0.0857
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "スローライフ",
+    "label_ko": "슬로우 라이프",
+    "count": 6,
+    "share": 0.0857
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "中世",
+    "label_ko": "중세",
+    "count": 6,
+    "share": 0.0857
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 70,
+    "label_original": "冒険",
+    "label_ko": "모험",
+    "count": 6,
+    "share": 0.0857
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "R15",
+    "label_ko": "R15",
+    "count": 56,
+    "share": 0.3733
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "異世界転生",
+    "label_ko": "이세계 전생",
+    "count": 46,
+    "share": 0.3067
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "残酷な描写あり",
+    "label_ko": "잔혹 묘사 있음",
+    "count": 43,
+    "share": 0.2867
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "男主人公",
+    "label_ko": "남성 주인공",
+    "count": 39,
+    "share": 0.26
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "ハイファンタジー〔ファンタジー〕",
+    "label_ko": "하이 판타지",
+    "count": 39,
+    "share": 0.26
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "女主人公",
+    "label_ko": "여성 주인공",
+    "count": 37,
+    "share": 0.2467
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "異世界〔恋愛〕",
+    "label_ko": "이세계 로맨스",
+    "count": 34,
+    "share": 0.2267
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "ハッピーエンド",
+    "label_ko": "해피엔딩",
+    "count": 33,
+    "share": 0.22
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "魔法",
+    "label_ko": "마법",
+    "count": 31,
+    "share": 0.2067
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "ざまぁ",
+    "label_ko": "사이다/복수",
+    "count": 28,
+    "share": 0.1867
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "異世界ファンタジー",
+    "label_ko": "이세계 판타지",
+    "count": 28,
+    "share": 0.1867
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "ほのぼの",
+    "label_ko": "훈훈함/잔잔함",
+    "count": 26,
+    "share": 0.1733
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "ラブコメ",
+    "label_ko": "러브 코미디",
+    "count": 23,
+    "share": 0.1533
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "チート",
+    "label_ko": "치트",
+    "count": 19,
+    "share": 0.1267
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "西洋",
+    "label_ko": "서양풍",
+    "count": 19,
+    "share": 0.1267
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "日常",
+    "label_ko": "일상",
+    "count": 18,
+    "share": 0.12
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "成り上がり",
+    "label_ko": "신분상승/성공담",
+    "count": 17,
+    "share": 0.1133
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "異世界転移",
+    "label_ko": "이세계 전이",
+    "count": 16,
+    "share": 0.1067
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "恋愛",
+    "label_ko": "연애/로맨스",
+    "count": 16,
+    "share": 0.1067
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "内政",
+    "label_ko": "내정",
+    "count": 16,
+    "share": 0.1067
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "ヤンデレ",
+    "label_ko": "얀데레",
+    "count": 15,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "主人公最強",
+    "label_ko": "최강 주인공",
+    "count": 15,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "ハーレム",
+    "label_ko": "하렘",
+    "count": 14,
+    "share": 0.0933
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "学園",
+    "label_ko": "학원",
+    "count": 14,
+    "share": 0.0933
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "溺愛",
+    "label_ko": "집착적 사랑/溺愛",
+    "count": 13,
+    "share": 0.0867
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "異世界",
+    "label_ko": "이세계",
+    "count": 12,
+    "share": 0.08
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "ダンジョン",
+    "label_ko": "던전",
+    "count": 12,
+    "share": 0.08
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "ファンタジー",
+    "label_ko": "판타지",
+    "count": 12,
+    "share": 0.08
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "婚約破棄",
+    "label_ko": "혼약 파기",
+    "count": 12,
+    "share": 0.08
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 150,
+    "label_original": "現代ファンタジー",
+    "label_ko": "현대 판타지",
+    "count": 11,
+    "share": 0.0733
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "ハッピーエンド",
+    "label_ko": "해피엔딩",
+    "count": 14,
+    "share": 0.35
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "異世界転生",
+    "label_ko": "이세계 전생",
+    "count": 13,
+    "share": 0.325
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "恋愛",
+    "label_ko": "연애/로맨스",
+    "count": 12,
+    "share": 0.3
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "女主人公",
+    "label_ko": "여성 주인공",
+    "count": 12,
+    "share": 0.3
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "ざまぁ",
+    "label_ko": "사이다/복수",
+    "count": 10,
+    "share": 0.25
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "異世界〔恋愛〕",
+    "label_ko": "이세계 로맨스",
+    "count": 10,
+    "share": 0.25
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "婚約破棄",
+    "label_ko": "혼약 파기",
+    "count": 9,
+    "share": 0.225
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "男主人公",
+    "label_ko": "남성 주인공",
+    "count": 8,
+    "share": 0.2
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "西洋",
+    "label_ko": "서양풍",
+    "count": 8,
+    "share": 0.2
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "異世界",
+    "label_ko": "이세계",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "ハイファンタジー〔ファンタジー〕",
+    "label_ko": "하이 판타지",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "魔法",
+    "label_ko": "마법",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "残酷な描写あり",
+    "label_ko": "잔혹 묘사 있음",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "R15",
+    "label_ko": "R15",
+    "count": 5,
+    "share": 0.125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "異世界ファンタジー",
+    "label_ko": "이세계 판타지",
+    "count": 5,
+    "share": 0.125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "ほのぼの",
+    "label_ko": "훈훈함/잔잔함",
+    "count": 5,
+    "share": 0.125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "シリアス",
+    "label_ko": "시리어스",
+    "count": 5,
+    "share": 0.125
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "溺愛",
+    "label_ko": "집착적 사랑/溺愛",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "姉妹格差",
+    "label_ko": "姉妹格差",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "学園",
+    "label_ko": "학원",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "チート",
+    "label_ko": "치트",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "成り上がり",
+    "label_ko": "신분상승/성공담",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "ダンジョン",
+    "label_ko": "던전",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "日常",
+    "label_ko": "일상",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "ギャグ",
+    "label_ko": "개그",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "中世",
+    "label_ko": "중세",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "離縁",
+    "label_ko": "離縁",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "切ない",
+    "label_ko": "애절함",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "ファンタジー",
+    "label_ko": "판타지",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Japan",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 40,
+    "label_original": "ラブコメ",
+    "label_ko": "러브 코미디",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "Love Novel",
+    "label_ko": "로맨스 소설",
+    "count": 20,
+    "share": 0.4
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "โรแมนติก",
+    "label_ko": "로맨틱",
+    "count": 14,
+    "share": 0.28
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "นิยายรัก",
+    "label_ko": "로맨스 소설",
+    "count": 12,
+    "share": 0.24
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "นิยายโรมานซ์",
+    "label_ko": "로맨스 소설",
+    "count": 10,
+    "share": 0.2
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "อดีต ปัจจุบัน อนาคต",
+    "label_ko": "과거/현재/미래",
+    "count": 8,
+    "share": 0.16
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "ดรามา",
+    "label_ko": "드라마",
+    "count": 7,
+    "share": 0.14
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "โรมานซ์",
+    "label_ko": "로맨스",
+    "count": 7,
+    "share": 0.14
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "18+",
+    "label_ko": "18+",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "แอบรัก",
+    "label_ko": "짝사랑",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "นิยายโรแมนติก",
+    "label_ko": "로맨스 소설",
+    "count": 4,
+    "share": 0.08
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "หวาน",
+    "label_ko": "달달함",
+    "count": 4,
+    "share": 0.08
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "พีเรียด",
+    "label_ko": "시대극",
+    "count": 4,
+    "share": 0.08
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "พีเรียดไทย",
+    "label_ko": "태국 시대극",
+    "count": 4,
+    "share": 0.08
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "ย้อนอดีต",
+    "label_ko": "과거 회귀",
+    "count": 3,
+    "share": 0.06
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "แต่งงาน",
+    "label_ko": "결혼",
+    "count": 3,
+    "share": 0.06
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "มาเฟีย",
+    "label_ko": "마피아",
+    "count": 3,
+    "share": 0.06
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "ความรัก",
+    "label_ko": "사랑",
+    "count": 3,
+    "share": 0.06
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "ไทยพีเรียด",
+    "label_ko": "태국 시대극",
+    "count": 3,
+    "share": 0.06
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "Feel good",
+    "label_ko": "필굿",
+    "count": 3,
+    "share": 0.06
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "Erotic",
+    "label_ko": "에로틱",
+    "count": 3,
+    "share": 0.06
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "น่ารัก",
+    "label_ko": "귀여움",
+    "count": 3,
+    "share": 0.06
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "ไสยศาสตร์",
+    "label_ko": "ไสยศาสตร์",
+    "count": 2,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "แอบรักเพื่อน",
+    "label_ko": "친구 짝사랑",
+    "count": 2,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "รักเพื่อน",
+    "label_ko": "รักเพื่อน",
+    "count": 2,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "แอบรักเพื่อนสนิท",
+    "label_ko": "절친 짝사랑",
+    "count": 2,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "เพื่อนสนิทคิดไม่ซื่อ",
+    "label_ko": "절친 짝사랑",
+    "count": 2,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "ดราม่า",
+    "label_ko": "드라마",
+    "count": 2,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "คลั่งรัก",
+    "label_ko": "집착적 사랑",
+    "count": 2,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "ตลก",
+    "label_ko": "코미디",
+    "count": 2,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 50,
+    "label_original": "ฟิน",
+    "label_ko": "ฟิน",
+    "count": 2,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "Love Novel",
+    "label_ko": "로맨스 소설",
+    "count": 20,
+    "share": 0.5
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "นิยายโรมานซ์",
+    "label_ko": "로맨스 소설",
+    "count": 10,
+    "share": 0.25
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "โรมานซ์",
+    "label_ko": "로맨스",
+    "count": 10,
+    "share": 0.25
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "นิยายรักจีนโบราณ",
+    "label_ko": "중국 고전풍 로맨스",
+    "count": 10,
+    "share": 0.25
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "โรแมนติก",
+    "label_ko": "로맨틱",
+    "count": 8,
+    "share": 0.2
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "ทะลุมิติ",
+    "label_ko": "차원이동/빙의",
+    "count": 8,
+    "share": 0.2
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "แอบรัก",
+    "label_ko": "짝사랑",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "นิยายรัก",
+    "label_ko": "로맨스 소설",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "18+",
+    "label_ko": "18+",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "น่ารัก",
+    "label_ko": "귀여움",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "นิยายโรแมนติก",
+    "label_ko": "로맨스 소설",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "นิยายจีน",
+    "label_ko": "중국 소설",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "นิยายจีนโบราณ",
+    "label_ko": "중국 고전 소설",
+    "count": 6,
+    "share": 0.15
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "ดรามา",
+    "label_ko": "드라마",
+    "count": 5,
+    "share": 0.125
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "ความรัก",
+    "label_ko": "사랑",
+    "count": 5,
+    "share": 0.125
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "ตลก",
+    "label_ko": "코미디",
+    "count": 5,
+    "share": 0.125
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "Feel good",
+    "label_ko": "필굿",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "มาเฟีย",
+    "label_ko": "마피아",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "ตบจูบ",
+    "label_ko": "강압적 로맨스",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "หวาน",
+    "label_ko": "달달함",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "พีเรียดจีน (จีนโบราณ)",
+    "label_ko": "중국 시대극/고전",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "ย้อนยุค",
+    "label_ko": "시대 회귀/복고",
+    "count": 4,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "ดราม่า",
+    "label_ko": "드라마",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "รักวัยรุ่น",
+    "label_ko": "청춘 로맨스",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "มหาวิทยาลัย",
+    "label_ko": "대학",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "โคแก่",
+    "label_ko": "나이차 로맨스",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "แต่งงาน",
+    "label_ko": "결혼",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "ย้อนอดีต",
+    "label_ko": "과거 회귀",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "นิยายจีนย้อนยุค",
+    "label_ko": "นิยายจีนย้อนยุค",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 40,
+    "label_original": "นิยายจีนสนุกๆ",
+    "label_ko": "นิยายจีนสนุกๆ",
+    "count": 3,
+    "share": 0.075
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "Love Novel",
+    "label_ko": "로맨스 소설",
+    "count": 50,
+    "share": 0.5
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "มหาวิทยาลัย",
+    "label_ko": "대학",
+    "count": 30,
+    "share": 0.3
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "วิศวะ",
+    "label_ko": "공대",
+    "count": 26,
+    "share": 0.26
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "โรแมนติก",
+    "label_ko": "로맨틱",
+    "count": 25,
+    "share": 0.25
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "รักวัยรุ่น",
+    "label_ko": "청춘 로맨스",
+    "count": 23,
+    "share": 0.23
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "นิยายรักวัยรุ่น",
+    "label_ko": "청춘 로맨스 소설",
+    "count": 21,
+    "share": 0.21
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "นิยายรักวัยว้าวุ่น",
+    "label_ko": "청춘 로맨스",
+    "count": 20,
+    "share": 0.2
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "น่ารัก",
+    "label_ko": "귀여움",
+    "count": 18,
+    "share": 0.18
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "Feel good",
+    "label_ko": "필굿",
+    "count": 14,
+    "share": 0.14
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "ตลก",
+    "label_ko": "코미디",
+    "count": 13,
+    "share": 0.13
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "ความรัก",
+    "label_ko": "사랑",
+    "count": 13,
+    "share": 0.13
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "นิยายรัก",
+    "label_ko": "로맨스 소설",
+    "count": 12,
+    "share": 0.12
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "18+",
+    "label_ko": "18+",
+    "count": 12,
+    "share": 0.12
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "นิยายโรแมนติก",
+    "label_ko": "로맨스 소설",
+    "count": 11,
+    "share": 0.11
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "นิยายรักจีนโบราณ",
+    "label_ko": "중국 고전풍 로맨스",
+    "count": 10,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "เพื่อนสนิท",
+    "label_ko": "절친",
+    "count": 10,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "รุ่นพี่",
+    "label_ko": "선배",
+    "count": 10,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "แอบรัก",
+    "label_ko": "짝사랑",
+    "count": 9,
+    "share": 0.09
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "หวาน",
+    "label_ko": "달달함",
+    "count": 9,
+    "share": 0.09
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "ดรามา",
+    "label_ko": "드라마",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "ดราม่า",
+    "label_ko": "드라마",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "โรมานซ์",
+    "label_ko": "로맨스",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "มหาลัย",
+    "label_ko": "대학",
+    "count": 7,
+    "share": 0.07
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "เกิดใหม่",
+    "label_ko": "환생/전생",
+    "count": 6,
+    "share": 0.06
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "รุ่นพี่รุ่นน้อง",
+    "label_ko": "선후배",
+    "count": 6,
+    "share": 0.06
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "พีเรียดจีน (จีนโบราณ)",
+    "label_ko": "중국 시대극/고전",
+    "count": 5,
+    "share": 0.05
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "ทะลุมิติ",
+    "label_ko": "차원이동/빙의",
+    "count": 5,
+    "share": 0.05
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "มาเฟีย",
+    "label_ko": "마피아",
+    "count": 5,
+    "share": 0.05
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "นิยายจีน",
+    "label_ko": "중국 소설",
+    "count": 4,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 100,
+    "label_original": "ตัวร้าย",
+    "label_ko": "악역",
+    "count": 4,
+    "share": 0.04
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "Love Novel",
+    "label_ko": "로맨스 소설",
+    "count": 10,
+    "share": 0.3333
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "นิยายรัก",
+    "label_ko": "로맨스 소설",
+    "count": 10,
+    "share": 0.3333
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "โรแมนติก",
+    "label_ko": "로맨틱",
+    "count": 5,
+    "share": 0.1667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "อดีต ปัจจุบัน อนาคต",
+    "label_ko": "과거/현재/미래",
+    "count": 4,
+    "share": 0.1333
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "แอบรัก",
+    "label_ko": "짝사랑",
+    "count": 4,
+    "share": 0.1333
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "ดรามา",
+    "label_ko": "드라마",
+    "count": 4,
+    "share": 0.1333
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "ท้อง",
+    "label_ko": "임신",
+    "count": 4,
+    "share": 0.1333
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "แฟนฟิคนิยาย การ์ตูน เกม",
+    "label_ko": "팬픽션",
+    "count": 3,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "รักต่างวัย",
+    "label_ko": "나이차 로맨스",
+    "count": 3,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "มีลูก",
+    "label_ko": "육아/자녀",
+    "count": 3,
+    "share": 0.1
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "จีนย้อนยุค",
+    "label_ko": "จีนย้อนยุค",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "Feel good",
+    "label_ko": "필굿",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "หมอ",
+    "label_ko": "의사",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "มาเฟีย",
+    "label_ko": "마피아",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "พระเอกโหด",
+    "label_ko": "พระเอกโหด",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "ท้องแล้วหนี",
+    "label_ko": "ท้องแล้วหนี",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "ง้อเมีย",
+    "label_ko": "ง้อเมีย",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "18+",
+    "label_ko": "18+",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "ดราม่า",
+    "label_ko": "드라마",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "มีเด็ก",
+    "label_ko": "มีเด็ก",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "พระเอกร้าย",
+    "label_ko": "พระเอกร้าย",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "ย้อนอดีต",
+    "label_ko": "과거 회귀",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "โรมานซ์",
+    "label_ko": "로맨스",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "ทะลุมิติ",
+    "label_ko": "차원이동/빙의",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "เกิดใหม่",
+    "label_ko": "환생/전생",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "นิยายโรแมนติก",
+    "label_ko": "로맨스 소설",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "นางเอกร้าย",
+    "label_ko": "นางเอกร้าย",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "นางร้าย",
+    "label_ko": "악녀",
+    "count": 2,
+    "share": 0.0667
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "วาย",
+    "label_ko": "BL/보이즈러브",
+    "count": 1,
+    "share": 0.0333
+  },
+  {
+    "market": "Thailand",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 30,
+    "label_original": "เสี่ย",
+    "label_ko": "เสี่ย",
+    "count": 1,
+    "share": 0.0333
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Fantasy",
+    "label_ko": "판타지",
+    "count": 49,
+    "share": 0.49
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Adventure",
+    "label_ko": "모험",
+    "count": 44,
+    "share": 0.44
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Action",
+    "label_ko": "액션",
+    "count": 43,
+    "share": 0.43
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "LitRPG",
+    "label_ko": "LitRPG",
+    "count": 30,
+    "share": 0.3
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Isekai",
+    "label_ko": "이세계",
+    "count": 26,
+    "share": 0.26
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Harem",
+    "label_ko": "하렘",
+    "count": 23,
+    "share": 0.23
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Romance",
+    "label_ko": "로맨스",
+    "count": 23,
+    "share": 0.23
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Slice of Life",
+    "label_ko": "일상",
+    "count": 22,
+    "share": 0.22
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "fantasy",
+    "label_ko": "판타지",
+    "count": 20,
+    "share": 0.2
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Adult",
+    "label_ko": "성인",
+    "count": 17,
+    "share": 0.17
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Ecchi",
+    "label_ko": "에치/선정 요소",
+    "count": 17,
+    "share": 0.17
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Male Lead",
+    "label_ko": "남성 주인공",
+    "count": 16,
+    "share": 0.16
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Comedy",
+    "label_ko": "코미디",
+    "count": 15,
+    "share": 0.15
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Smut",
+    "label_ko": "성인/선정 요소",
+    "count": 15,
+    "share": 0.15
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Progression",
+    "label_ko": "성장형 판타지",
+    "count": 14,
+    "share": 0.14
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Magic",
+    "label_ko": "마법",
+    "count": 13,
+    "share": 0.13
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Strong Lead",
+    "label_ko": "강한 주인공",
+    "count": 13,
+    "share": 0.13
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Supernatural",
+    "label_ko": "초자연",
+    "count": 12,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Girls Love",
+    "label_ko": "GL/걸즈러브",
+    "count": 12,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Mature",
+    "label_ko": "성인/성숙한 독자",
+    "count": 12,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Romance Fantasy",
+    "label_ko": "로맨스 판타지",
+    "count": 12,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Portal Fantasy / Isekai",
+    "label_ko": "포털 판타지/이세계",
+    "count": 11,
+    "share": 0.11
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Mystery",
+    "label_ko": "미스터리",
+    "count": 10,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "romance",
+    "label_ko": "로맨스",
+    "count": 10,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Martial Arts",
+    "label_ko": "무술/무협",
+    "count": 9,
+    "share": 0.09
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "High Fantasy",
+    "label_ko": "하이 판타지",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "GameLit",
+    "label_ko": "게임릿",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Drama",
+    "label_ko": "드라마",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "Gender Bender",
+    "label_ko": "성별 전환",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_11_30",
+    "bucket_record_count": 100,
+    "label_original": "magic",
+    "label_ko": "마법",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Fantasy",
+    "label_ko": "판타지",
+    "count": 49,
+    "share": 0.49
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Action",
+    "label_ko": "액션",
+    "count": 44,
+    "share": 0.44
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Adventure",
+    "label_ko": "모험",
+    "count": 44,
+    "share": 0.44
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "LitRPG",
+    "label_ko": "LitRPG",
+    "count": 34,
+    "share": 0.34
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Romance",
+    "label_ko": "로맨스",
+    "count": 23,
+    "share": 0.23
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Isekai",
+    "label_ko": "이세계",
+    "count": 23,
+    "share": 0.23
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Harem",
+    "label_ko": "하렘",
+    "count": 23,
+    "share": 0.23
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Smut",
+    "label_ko": "성인/선정 요소",
+    "count": 20,
+    "share": 0.2
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "fantasy",
+    "label_ko": "판타지",
+    "count": 20,
+    "share": 0.2
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Adult",
+    "label_ko": "성인",
+    "count": 19,
+    "share": 0.19
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Slice of Life",
+    "label_ko": "일상",
+    "count": 18,
+    "share": 0.18
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Magic",
+    "label_ko": "마법",
+    "count": 17,
+    "share": 0.17
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Progression",
+    "label_ko": "성장형 판타지",
+    "count": 16,
+    "share": 0.16
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Ecchi",
+    "label_ko": "에치/선정 요소",
+    "count": 16,
+    "share": 0.16
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Girls Love",
+    "label_ko": "GL/걸즈러브",
+    "count": 15,
+    "share": 0.15
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Male Lead",
+    "label_ko": "남성 주인공",
+    "count": 14,
+    "share": 0.14
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Mature",
+    "label_ko": "성인/성숙한 독자",
+    "count": 14,
+    "share": 0.14
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Comedy",
+    "label_ko": "코미디",
+    "count": 12,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "High Fantasy",
+    "label_ko": "하이 판타지",
+    "count": 12,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "School Life",
+    "label_ko": "학원/학교생활",
+    "count": 11,
+    "share": 0.11
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Supernatural",
+    "label_ko": "초자연",
+    "count": 11,
+    "share": 0.11
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Portal Fantasy / Isekai",
+    "label_ko": "포털 판타지/이세계",
+    "count": 10,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Strong Lead",
+    "label_ko": "강한 주인공",
+    "count": 10,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Romance Fantasy",
+    "label_ko": "로맨스 판타지",
+    "count": 10,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Gender Bender",
+    "label_ko": "성별 전환",
+    "count": 9,
+    "share": 0.09
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Reincarnation",
+    "label_ko": "전생",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "romance",
+    "label_ko": "로맨스",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "magic",
+    "label_ko": "마법",
+    "count": 8,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Dungeon Crawler",
+    "label_ko": "던전 크롤러",
+    "count": 7,
+    "share": 0.07
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_31_50",
+    "bucket_record_count": 100,
+    "label_original": "Martial Arts",
+    "label_ko": "무술/무협",
+    "count": 7,
+    "share": 0.07
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Fantasy",
+    "label_ko": "판타지",
+    "count": 83,
+    "share": 0.415
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Adventure",
+    "label_ko": "모험",
+    "count": 66,
+    "share": 0.33
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Action",
+    "label_ko": "액션",
+    "count": 65,
+    "share": 0.325
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "LitRPG",
+    "label_ko": "LitRPG",
+    "count": 56,
+    "share": 0.28
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "fantasy",
+    "label_ko": "판타지",
+    "count": 50,
+    "share": 0.25
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Slice of Life",
+    "label_ko": "일상",
+    "count": 38,
+    "share": 0.19
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Harem",
+    "label_ko": "하렘",
+    "count": 38,
+    "share": 0.19
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Progression",
+    "label_ko": "성장형 판타지",
+    "count": 35,
+    "share": 0.175
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Romance",
+    "label_ko": "로맨스",
+    "count": 29,
+    "share": 0.145
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Ecchi",
+    "label_ko": "에치/선정 요소",
+    "count": 28,
+    "share": 0.14
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Adult",
+    "label_ko": "성인",
+    "count": 28,
+    "share": 0.14
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Isekai",
+    "label_ko": "이세계",
+    "count": 26,
+    "share": 0.13
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Smut",
+    "label_ko": "성인/선정 요소",
+    "count": 26,
+    "share": 0.13
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Male Lead",
+    "label_ko": "남성 주인공",
+    "count": 25,
+    "share": 0.125
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Magic",
+    "label_ko": "마법",
+    "count": 25,
+    "share": 0.125
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Comedy",
+    "label_ko": "코미디",
+    "count": 24,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "romance",
+    "label_ko": "로맨스",
+    "count": 23,
+    "share": 0.115
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "magic",
+    "label_ko": "마법",
+    "count": 22,
+    "share": 0.11
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Strong Lead",
+    "label_ko": "강한 주인공",
+    "count": 20,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Supernatural",
+    "label_ko": "초자연",
+    "count": 20,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Mature",
+    "label_ko": "성인/성숙한 독자",
+    "count": 20,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Romance Fantasy",
+    "label_ko": "로맨스 판타지",
+    "count": 20,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "High Fantasy",
+    "label_ko": "하이 판타지",
+    "count": 19,
+    "share": 0.095
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Reincarnation",
+    "label_ko": "전생",
+    "count": 17,
+    "share": 0.085
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Action Fantasy",
+    "label_ko": "액션 판타지",
+    "count": 17,
+    "share": 0.085
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Female Lead",
+    "label_ko": "여성 주인공",
+    "count": 16,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Girls Love",
+    "label_ko": "GL/걸즈러브",
+    "count": 16,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "Portal Fantasy / Isekai",
+    "label_ko": "포털 판타지/이세계",
+    "count": 15,
+    "share": 0.075
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "School Life",
+    "label_ko": "학원/학교생활",
+    "count": 14,
+    "share": 0.07
+  },
+  {
+    "market": "US",
+    "rank_bucket": "rank_51_100",
+    "bucket_record_count": 200,
+    "label_original": "adventure",
+    "label_ko": "모험",
+    "count": 14,
+    "share": 0.07
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Fantasy",
+    "label_ko": "판타지",
+    "count": 26,
+    "share": 0.52
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Action",
+    "label_ko": "액션",
+    "count": 21,
+    "share": 0.42
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Adventure",
+    "label_ko": "모험",
+    "count": 21,
+    "share": 0.42
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "LitRPG",
+    "label_ko": "LitRPG",
+    "count": 18,
+    "share": 0.36
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Harem",
+    "label_ko": "하렘",
+    "count": 14,
+    "share": 0.28
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Slice of Life",
+    "label_ko": "일상",
+    "count": 11,
+    "share": 0.22
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Ecchi",
+    "label_ko": "에치/선정 요소",
+    "count": 11,
+    "share": 0.22
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Adult",
+    "label_ko": "성인",
+    "count": 10,
+    "share": 0.2
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "fantasy",
+    "label_ko": "판타지",
+    "count": 10,
+    "share": 0.2
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Isekai",
+    "label_ko": "이세계",
+    "count": 9,
+    "share": 0.18
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Romance",
+    "label_ko": "로맨스",
+    "count": 9,
+    "share": 0.18
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Smut",
+    "label_ko": "성인/선정 요소",
+    "count": 9,
+    "share": 0.18
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Progression",
+    "label_ko": "성장형 판타지",
+    "count": 8,
+    "share": 0.16
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Magic",
+    "label_ko": "마법",
+    "count": 8,
+    "share": 0.16
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Supernatural",
+    "label_ko": "초자연",
+    "count": 8,
+    "share": 0.16
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "romance",
+    "label_ko": "로맨스",
+    "count": 8,
+    "share": 0.16
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Male Lead",
+    "label_ko": "남성 주인공",
+    "count": 7,
+    "share": 0.14
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Girls Love",
+    "label_ko": "GL/걸즈러브",
+    "count": 7,
+    "share": 0.14
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "GameLit",
+    "label_ko": "게임릿",
+    "count": 6,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Martial Arts",
+    "label_ko": "무술/무협",
+    "count": 6,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Mature",
+    "label_ko": "성인/성숙한 독자",
+    "count": 6,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Romance Fantasy",
+    "label_ko": "로맨스 판타지",
+    "count": 6,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "reincarnation",
+    "label_ko": "전생",
+    "count": 6,
+    "share": 0.12
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "School Life",
+    "label_ko": "학원/학교생활",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Drama",
+    "label_ko": "드라마",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Comedy",
+    "label_ko": "코미디",
+    "count": 5,
+    "share": 0.1
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Portal Fantasy / Isekai",
+    "label_ko": "포털 판타지/이세계",
+    "count": 4,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Cultivation",
+    "label_ko": "수련/선협",
+    "count": 4,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Strong Lead",
+    "label_ko": "강한 주인공",
+    "count": 4,
+    "share": 0.08
+  },
+  {
+    "market": "US",
+    "rank_bucket": "top_10",
+    "bucket_record_count": 50,
+    "label_original": "Kingdom Building",
+    "label_ko": "국가/영지 건설",
+    "count": 4,
+    "share": 0.08
+  }
+]

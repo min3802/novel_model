@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>러브 앤 블러드 - 해외 플랫폼 현지화 가이드</title>
+  <style>
+    :root { color-scheme: light; --ink:#16181d; --muted:#667085; --line:#e5e7eb; --panel:#f8fafc; --brand:#6d28d9; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif; color:var(--ink); background:#fff; }
+    main { max-width:1040px; margin:0 auto; padding:40px 22px 64px; }
+    .hero { padding:32px; border-radius:28px; background:linear-gradient(135deg,#20124d,#6d28d9); color:white; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.08em; font-size:12px; opacity:.78; }
+    h1 { margin:10px 0 8px; font-size:36px; line-height:1.18; }
+    h2 { margin:0 0 14px; font-size:22px; }
+    section { margin-top:22px; padding:24px; border:1px solid var(--line); border-radius:22px; background:#fff; }
+    .summary { background:var(--panel); }
+    .badges { display:flex; gap:8px; flex-wrap:wrap; margin-top:18px; }
+    .badge { padding:7px 11px; border-radius:999px; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.22); font-size:13px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+    .card { padding:16px; border:1px solid var(--line); border-radius:16px; background:var(--panel); }
+    ul { margin:0; padding-left:20px; }
+    li { margin:8px 0; }
+    p { margin:6px 0; line-height:1.62; }
+    small,.muted { color:var(--muted); }
+    .guide { color:#344054; }
+    .tag { display:inline-block; margin:4px 6px 4px 0; padding:7px 10px; border-radius:999px; background:#f4f3ff; color:#4c1d95; font-size:13px; }
+    .warning { border-color:#fed7aa; background:#fff7ed; }
+    .footer { margin-top:26px; color:var(--muted); font-size:13px; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <div class="eyebrow">해외 플랫폼 현지화 가이드</div>
+    <h1>러브 앤 블러드</h1>
+    <p>상세 현지화 가이드 · 미국 · 현대 로맨스 / 작가물 / 혐관 로맨스 / 상처 치유 / 로맨틱 코미디 / 휴먼 멜로</p>
+    <div class="badges">
+      <span class="badge">상세 리포트</span>
+      <span class="badge">게시 전 체크 기준: 시놉시스에서 확인한 소재</span>
+      <span class="badge">플랫폼 참고 데이터: 사용함</span>
+    </div>
+  </div>
+
+  <section class="summary">
+    <h2>이번 결과 요약</h2>
+    <ul><li>현재 자료로는 작품 소개·메타데이터·문화 설명·게시 전 점검 중심의 MVP 현지화 가이드를 생성합니다.</li><li>시장 데이터는 플랫폼 태그 관찰 참고 자료이며 성공 가능성 예측이나 국가 적합도 단정에 쓰지 않습니다.</li><li>한국 문화/제도 요소는 유지하되 대상 국가 독자가 이해할 수 있게 짧은 설명을 붙이는 방향을 우선 검토합니다.</li></ul>
+  </section>
+
+  <section>
+    <h2>입력 작품 분석</h2>
+    <div class="grid">
+      <div class="card"><small>확인된 작품 요소</small><ul><li>복수 서사</li><li>로맨스 관계</li><li>작가물</li><li>계약 관계</li><li>혐관 로맨스</li><li>상처 치유</li><li>감정 성장</li><li>가족/가문 갈등</li></ul></div><div class="card"><small>게시 전 점검 후보</small><ul><li>잔혹 묘사</li><li>트라우마/정서적 상처</li><li>혐오/차별 가능성</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>시장 태그 맥락</h2>
+    <p class="muted">플랫폼 관찰 데이터는 태그/장르 맥락 참고용이며 흥행·독자 취향 예측 근거가 아닙니다.</p>
+    <div><span class="tag">판타지</span><span class="tag">모험</span><span class="tag">액션</span><span class="tag">LitRPG</span><span class="tag">로맨스</span><span class="tag">이세계</span><span class="tag">하렘</span><span class="tag">마법</span></div>
+    <ul><li>대상 국가 플랫폼의 공개 태그/순위 관찰 데이터를 작품 요소와 비교합니다.</li><li>관찰 태그는 작성 참고 후보이지 작품에 없는 태그를 붙이라는 뜻이 아닙니다.</li><li>자주 보인 태그 예: 판타지, 모험, 액션, LitRPG, 로맨스, 이세계</li></ul>
+  </section>
+
+  <section>
+    <h2>문화 현지화 노트</h2>
+    <ul><li><strong>한국어 원문 관계 표현</strong><p>미국 독자에게 인물 간 호칭·말투·거리감이 직역만으로는 덜 자연스러울 수 있습니다.</p><p class='guide'>작품에 없는 제도 설명을 추가하지 말고, 소개문/메타데이터에서는 관계 구도와 감정선을 자연스러운 대상 언어 표현으로 정리합니다.</p><small>confidence: medium · source: detailed_korean_source_text</small></li></ul>
+    <h3>현지화 방향</h3>
+    <ul><li>한국적 제도와 관습은 완전 대체보다 유지+짧은 의미 보완을 우선 검토합니다.</li><li>제목/소개문에서는 세계관 설명을 길게 늘리기보다 주인공, 관계 구도, 핵심 갈등 이해에 필요한 문화 요소만 드러냅니다.</li></ul>
+  </section>
+
+  <section>
+    <h2>제목/소개문/태그 방향</h2>
+    <ul><li>제목/소개문은 스토리 수정 지시가 아니라 독자가 처음 이해해야 할 배경·관계·갈등을 정리하는 용도로 사용합니다.</li><li>태그는 작품에 실제로 있는 요소만 검토하고, 플랫폼 관찰 데이터에서 자주 보였다는 이유만으로 추가하지 않습니다.</li><li>대상 시장 관찰 태그 참고 후보: 판타지, 모험, 액션, LitRPG, 로맨스, 이세계</li><li>소개문에서 먼저 풀어볼 수 있는 작품 요소: 복수 서사, 로맨스 관계, 작가물, 계약 관계, 혐관 로맨스, 상처 치유</li></ul>
+  </section>
+
+  <section class="warning">
+    <h2>게시 전 정책 체크포인트</h2>
+    <ul><li><strong>폭력/잔혹 묘사 수위 확인</strong><p>살인·폭력·유혈 등 잔혹 묘사 가능성이 있는 단서가 확인됐습니다.</p><p class='guide'>위반 확정이 아니라 게시 전 확인 항목입니다.</p><small>severity: medium · matched: 잔혹 묘사</small></li><li><strong>트라우마·학대·정서적 상처 묘사 방식 확인</strong><p>정서적 상처나 트라우마 소재는 미화·자극적 소비로 보이지 않게 본문 수위를 확인해야 합니다.</p><p class='guide'>위반 확정이 아니라 게시 전 확인 항목입니다.</p><small>severity: medium · matched: 트라우마/정서적 상처</small></li><li><strong>혐오/차별 표현 가능성 확인</strong><p>보호 속성 또는 집단 비하로 읽힐 수 있는 표현이 없는지 확인합니다.</p><p class='guide'>위반 확정이 아니라 게시 전 확인 항목입니다.</p><small>severity: medium · matched: 혐오/차별 가능성</small></li></ul>
+    <h3>정책 한계</h3>
+    <ul><li>정책 체크포인트는 원문 규정 위반 확정이 아니라 게시 전 확인 후보입니다.</li><li>플랫폼 원문 규정 카드는 내부 근거로 보관하고, 사용자 화면에는 소재별 요약을 우선 표시합니다.</li><li>시놉시스 기반 민감 요소는 본문 수위와 메타데이터 노출 정도를 별도로 확인해야 합니다.</li></ul>
+  </section>
+
+  <section>
+    <h2>과장 금지 / 한계</h2>
+    <ul><li>이 가이드는 법적 판단이나 플랫폼 승인 보장이 아니라 게시 전 확인 체크리스트입니다.</li><li>스토리 내용을 바꾸라고 지시하지 않고 소개·태그·문화 설명·정책 점검 방향만 제안합니다.</li><li>플랫폼 관찰 데이터만으로 특정 국가 성공 가능성이나 독자 선호를 단정하지 않습니다.</li><li>시놉시스 기반 민감 요소는 본문 수위 확인 필요 항목으로만 표시합니다.</li></ul>
+  </section>
+
+  <div class="footer">이 결과는 법적 판단이나 플랫폼 승인 보장이 아니라, 게시 전 확인을 돕기 위한 참고 자료입니다.</div>
+</main>
+</body>
+</html>

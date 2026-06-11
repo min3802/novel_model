@@ -7,7 +7,7 @@ export default function GuidePage() {
       <PageTitle
         eyebrow="Workspace · Localization Guide"
         title="현지화 가이드"
-        text="국가/장르 선택 또는 시놉시스 기반 국가 추천으로 API 가이드 섹션과 근거를 확인합니다."
+        text="시놉시스가 있으면 먼저 국가 추천을 받고, 없으면 일본/중국/미국/태국 중 대상 국가를 직접 선택한 뒤 가이드를 생성합니다."
       />
       <GuideConnector />
     </WorkspaceShell>

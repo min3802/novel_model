@@ -59,6 +59,23 @@ class EpisodeAndArtifactManagementTests(unittest.TestCase):
         store.localization_guide_delete(guide["id"])
         self.assertEqual(store.localization_guides_list(work_id=work["id"]), [])
 
+    def test_localization_guides_are_limited_per_work(self):
+        work = store.work_create({"title": "Story", "genre": "fantasy"})
+        created = []
+        for index in range(6):
+            created.append(
+                store.save_localization_guide(
+                    {"workId": work["id"]},
+                    {"title": f"Guide {index}", "country": "US", "genre": "fantasy", "guide_html": f"<p>{index}</p>"},
+                )
+            )
+
+        guides = store.localization_guides_list(work_id=work["id"])
+        self.assertEqual(len(guides), 5)
+        self.assertEqual([row["guide"]["title"] for row in guides], [f"Guide {index}" for index in range(5, 0, -1)])
+        self.assertIn("storage_notice", created[-1])
+        self.assertEqual(created[-1]["storage_notice"]["guideLimit"], 5)
+
 
 if __name__ == "__main__":
     unittest.main()

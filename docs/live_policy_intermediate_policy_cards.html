@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>규정 후보 중간 확인</title>
+  <style>
+    body { margin: 0; background: #f6f3ee; color: #241f1a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; line-height: 1.58; }
+    main { max-width: 1180px; margin: 0 auto; padding: 32px 20px 64px; }
+    .meta, .section, .card { background: #fff; border: 1px solid #e2d9cd; border-radius: 22px; padding: 22px; box-shadow: 0 10px 30px rgba(57,43,25,.06); }
+    .meta { background: #fffaf3; margin-bottom: 18px; }
+    .meta p { margin: 6px 0 0; color: #70665d; }
+    h1, h2, h3 { margin: 0 0 10px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .stack { display: grid; gap: 16px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { border: 1px solid #e6ddcf; background: #fff7ed; border-radius: 999px; padding: 6px 10px; }
+    .chart-card { border: 1px solid #e6ddcf; border-radius: 18px; background: #fffaf5; padding: 16px; }
+    .chart-card h3 { font-size: 16px; margin-bottom: 12px; }
+    .chart-row { display: grid; grid-template-columns: minmax(110px, 1fr) 2fr minmax(48px, auto); gap: 10px; align-items: center; margin: 10px 0; }
+    .chart-label { font-weight: 800; color: #3f352c; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .chart-track { height: 12px; border-radius: 999px; background: #eee4d8; overflow: hidden; }
+    .chart-track span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #c57a32, #e0ad6b); }
+    .chart-value { color: #70665d; font-size: 12px; text-align: right; }
+    .market-snapshot .work-summary { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+    .muted { color: #70665d; }
+    .badge { display: inline-block; background: #efe7dc; border-radius: 999px; padding: 4px 9px; margin-right: 6px; font-size: 12px; }
+    a { color: #9b5a1f; }
+    details summary { cursor: pointer; font-weight: 800; }
+    .guide-report { display: grid; gap: 18px; }
+    .guide-cover, .guide-section { background: #fff; border: 1px solid #e2d9cd; border-radius: 22px; padding: 22px; box-shadow: 0 10px 30px rgba(57,43,25,.06); }
+    .guide-cover-label { color: #9b6a2f; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+    .guide-cover-title { font-size: 32px; font-weight: 800; margin-top: 8px; }
+    .guide-cover-title em { color: #b1672d; font-style: normal; }
+    .guide-cover-sub, .guide-legacy-anchors { display: flex; flex-wrap: wrap; gap: 8px; color: #6f6256; margin-top: 12px; }
+    .guide-cover-sub span { background: #f3eadf; padding: 6px 10px; border-radius: 999px; }
+    .guide-legacy-anchors { padding: 12px 16px; border-radius: 14px; background: #efe7dc; }
+    .guide-section-title { font-size: 18px; font-weight: 800; }
+    .guide-section-help { margin: -4px 0 14px; color: #70665d; }
+    .guide-list { margin: 12px 0 0; padding-left: 20px; }
+    .guide-list li { margin: 8px 0; }
+    .note-list { display: grid; margin-top: 12px; border: 1px solid #e2d9cd; border-radius: 18px; overflow: hidden; background: #fff; }
+    .note-row { display: grid; grid-template-columns: 170px 1fr; gap: 18px; padding: 16px 18px; border-bottom: 1px solid #eee3d7; }
+    .note-row:last-child { border-bottom: 0; }
+    .note-row h3 { margin: 0; font-size: 16px; }
+    .note-row p { margin: 0; color: #70665d; }
+    .note-row small { display: block; margin-top: 5px; color: #8a7a6b; }
+    .work-summary { display: grid; grid-template-columns: 1.4fr .8fr; gap: 10px; margin: 14px 0; }
+    .work-summary div { display: grid; gap: 4px; border: 1px solid #e6ddcf; border-radius: 16px; background: #fffaf5; padding: 14px 16px; }
+    .work-summary small { color: #8a7a6b; font-weight: 800; }
+    .work-summary strong { color: #241f1a; }
+    .work-footnote { margin: 12px 0 0; color: #70665d; }
+    .quiet-note { margin-top: 14px; padding: 16px; border-radius: 16px; background: #f8f4ef; border: 1px dashed #d9cbb9; }
+    .quiet-note p { margin: 8px 0 4px; color: #70665d; }
+    .quiet-note small { color: #70665d; }
+    .policy-summary { display: grid; gap: 10px; margin: 14px 0; padding: 16px; border: 1px solid #e6ddcf; border-radius: 16px; background: #fffaf5; }
+    .policy-summary span { display: block; color: #9b5a1f; font-weight: 800; }
+    .policy-summary p { margin: 4px 0 0; color: #70665d; }
+    .policy-details { margin-top: 14px; padding: 16px; border: 1px solid #e2d9cd; border-radius: 16px; background: #fff; }
+    .policy-checkpoints { display: grid; gap: 12px; margin-top: 14px; }
+    .policy-checkpoint { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 16px; border: 1px solid #e6ddcf; border-radius: 16px; background: #fffaf5; }
+    .policy-checkpoint > span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 999px; background: #fff1df; color: #9b5a1f; font-weight: 900; }
+    .policy-checkpoint p { margin: 6px 0 0; color: #70665d; }
+    .summary-box { background: #fffaf3; }
+    .summary-box p { color: #3f352c; font-weight: 750; }
+    .dev-meta { margin-top: 18px; padding: 16px; border: 1px dashed #d9cbb9; border-radius: 16px; color: #70665d; }
+    .policy-detail-list { display: grid; gap: 10px; margin-top: 12px; }
+    .policy-detail-item { border: 1px solid #eee3d7; border-radius: 14px; padding: 14px; background: #fffdfb; }
+    .policy-detail-item p { margin: 6px 0 0; color: #70665d; }
+    .policy-detail-item small { color: #8a7a6b; }
+    @media(max-width: 720px) { .note-row, .work-summary { grid-template-columns: 1fr; gap: 6px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="meta">
+      <h1>규정 후보 중간 확인</h1>
+      <p>입력한 작품 정보를 일본 플랫폼 관찰 데이터와 게시 전 규정 데이터에 대조해, 참고할 태그 흐름과 체크포인트를 정리했어요.</p>
+    </section>
+    <section class="section"><h2>게시 전 체크포인트</h2><p class="guide-section-help">규정 ID를 먼저 읽기보다, 작가가 게시 전에 바로 확인할 항목부터 정리했어요.</p>
+<div class="policy-checkpoints">
+<article class="policy-checkpoint"><span>1</span><div><strong>R15/R18 표시가 필요한가요?</strong><p>제목과 입력 요소에 R15·성적·잔혹 묘사가 걸려 있어, 일본 플랫폼에 올리기 전 연령 등급 표시를 먼저 확인하는 게 좋습니다.</p></div></article>
+<article class="policy-checkpoint"><span>2</span><div><strong>잔혹 묘사가 플랫폼 기준을 넘지 않나요?</strong><p>피의 복수나 잔혹 묘사가 핵심이라면 일본 플랫폼별 경고 태그, 연령 등급, 표현 강도 기준을 함께 확인하세요.</p></div></article>
+<article class="policy-checkpoint"><span>3</span><div><strong>성적 묘사가 있다면 미성년자 관련 표현이 없는지 확인하세요.</strong><p>일본 플랫폼은 성적 표현과 미성년자 보호 기준을 강하게 분리해서 보는 편이라, 등장인물 설정과 표현 방식을 함께 점검하는 게 안전합니다.</p></div></article>
+<article class="policy-checkpoint"><span>4</span><div><strong>카테고리와 키워드가 작품 내용과 맞나요?</strong><p>제목·소개·키워드가 실제 내용과 다르게 보이면 노출보다 규정 확인에서 문제가 될 수 있으니 일본 게시 전 메타정보를 맞춰주세요.</p></div></article>
+</div>
+<details class="policy-details"><summary>자세한 규정 후보 7건 보기</summary><div class="policy-detail-list">
+
+            <article class="policy-detail-item">
+              <h3>연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사</h3>
+              <small>アルファポリス(알파폴리스)</small>
+              <p><b>규칙 ID</b>: JP_ALPHAPOLIS_0011</p>
+              <p><b>확인 요소</b>: 잔혹</p>
+              <p>작품에 18세 미만 인물의 성행위나 과도한 성적·폭력 묘사가 있는지 확인하고, 해당 표현은 삭제·수정하거나 연령 등급을 R-18로 설정하며 표지·시놉시스·회차 텍스트·메타데이터를 갱신하세요.</p>
+              <ul><li><a href="https://www.alphapolis.co.jp/guidelines" target="_blank" rel="noreferrer">アルファポリス(알파폴리스)</a></li></ul>
+            </article>
+            
+
+            <article class="policy-detail-item">
+              <h3>연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사</h3>
+              <small>アルファポリス(알파폴리스)</small>
+              <p><b>규칙 ID</b>: JP_ALPHAPOLIS_0012</p>
+              <p><b>확인 요소</b>: 잔혹</p>
+              <p>작품의 전체 분량과 표현 강도를 확인해 과도한 성적·폭력 묘사는 수정하거나 삭제하고, 18세 미만 등장인물의 성행위 묘사는 반드시 제거하거나 적절히 조치하여 등급 기준에 맞추세요.</p>
+              <ul><li><a href="https://www.alphapolis.co.jp/guidelines" target="_blank" rel="noreferrer">アルファポリス(알파폴리스)</a></li></ul>
+            </article>
+            
+
+            <article class="policy-detail-item">
+              <h3>성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사 · 자해/자살 · 혐오/차별 · 불법/범죄 행위 · 제목/소개/표지/회차 형식</h3>
+              <small>カクヨム(카쿠요무)</small>
+              <p><b>규칙 ID</b>: JP_KAKUYOMU_0003</p>
+              <p><b>확인 요소</b>: 잔혹</p>
+              <p>작품의 표현을 확인해 과도한 성적·폭력·자살 유발·범죄·차별 묘사는 최소화하거나 즉시 수정하고, 필요 시 회차 비공개나 삭제에 대비하세요. 미성년자의 음주·흡연 등 법으로 금지된 행위를 불가피하게 묘사할 때는 소개문 끝에 &#x27;이 작품은 법에 반하는 행위를 용인·권장하지 않습니다&#x27;와 같은 비추천 문구를 반드시 기재하세요.</p>
+              <ul><li><a href="https://kakuyomu.jp/legal/guideline" target="_blank" rel="noreferrer">カクヨム(카쿠요무)</a></li></ul>
+            </article>
+            
+
+            <article class="policy-detail-item">
+              <h3>연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사 · 자해/자살 · 제목/소개/표지/회차 형식</h3>
+              <small>小説家になろう(소설가가 되자)</small>
+              <p><b>규칙 ID</b>: JP_SYOSETU_0001</p>
+              <p><b>확인 요소</b>: 잔혹</p>
+              <p>게시할 때 연령제한 항목에서 R15를 선택하고 R15 키워드를 반드시 등록하세요. 성적·유혈·자해·모방 유발 묘사는 상세 묘사를 줄이거나 필요 시 R18로 상향해 분류를 수정하세요.</p>
+              <ul><li><a href="https://syosetu.com/site/ratinga/" target="_blank" rel="noreferrer">小説家になろう(소설가가 되자)</a></li></ul>
+            </article>
+            
+
+            <article class="policy-detail-item">
+              <h3>연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사</h3>
+              <small>小説家になろう(소설가가 되자)</small>
+              <p><b>규칙 ID</b>: JP_SYOSETU_0002</p>
+              <p><b>확인 요소</b>: 잔혹</p>
+              <p>작품에 성행위·성적 접촉·성적 자극을 유발하는 묘사, 성기 묘사, 성인용 이미지, 대중사전에 없는 성인용어 또는 지나치게 상세한 잔혹 묘사가 포함된다면 게시 전에 반드시 &#x27;R18&#x27;로 분류하거나 우려가 제기되면 즉시 R18로 변경해 주세요.</p>
+              <ul><li><a href="https://syosetu.com/site/ratingb/" target="_blank" rel="noreferrer">小説家になろう(소설가가 되자)</a></li></ul>
+            </article>
+            
+
+            <article class="policy-detail-item">
+              <h3>연령 등급/성인 표시 · 성적 콘텐츠 · 폭력/잔혹 묘사 · 괴롭힘/위협 · 불법/범죄 행위 · 종교/민족 민감 · 저작권/상표권/IP · 2차창작/팬콘텐츠 · 제목/소개/표지/회차 형식 · 상업화/수익화</h3>
+              <small>小説家になろう(소설가가 되자)</small>
+              <p><b>규칙 ID</b>: JP_SYOSETU_0011</p>
+              <p><b>확인 요소</b>: 잔혹</p>
+              <p>게시 시 제공된 검색용 키워드를 설정하고, 2차창작 허가 여부와 저작권·가사 전재 금지 등 금지 사유를 반드시 확인하세요. 작품을 서적화하려면 권리자와 KADOKAWA의 별도 허가를 받고, 위반 시 게시 중단될 수 있으니 문제 발견 시 즉시 수정하거나 삭제하십시오.</p>
+              <ul><li><a href="https://syosetu.com/site/replay/" target="_blank" rel="noreferrer">小説家になろう(소설가가 되자)</a></li></ul>
+            </article>
+            
+
+            <article class="policy-detail-item">
+              <h3>폭력/잔혹 묘사 · 개인정보/사생활</h3>
+              <small>アルファポリス(알파폴리스)</small>
+              <p><b>규칙 ID</b>: JP_ALPHAPOLIS_0009</p>
+              <p><b>확인 요소</b>: 잔혹</p>
+              <p>게시 전 음란·잔혹·모욕적 표현, 유해 스크립트, 타인 개인정보 포함 여부와 분할·복제·대량·비작품성 게시 여부를 확인하고 위반 소지가 있으면 즉시 수정하거나 삭제하세요. 심각한 경우 노출 제한·삭제·계정 정지 등의 제재가 있을 수 있습니다.</p>
+              <ul><li><a href="https://www.alphapolis.co.jp/guidelines" target="_blank" rel="noreferrer">アルファポリス(알파폴리스)</a></li></ul>
+            </article>
+            
+</div></details>
+<div class="quiet-note"><strong>읽기 전에</strong><ul><li>이 섹션은 법적 판단이나 위반 확정이 아니라 게시 전 확인 후보입니다.</li><li>플랫폼 상위 태그 관찰과 규정 확인 후보는 별도로 표시합니다.</li><li>시놉시스 기반 매칭은 명시 입력보다 약한 후보로 표시합니다.</li></ul></div>
+</section>
+    <details class="dev-meta"><summary>자세한 생성 정보</summary><p>Generated at: 2026-06-09T00:55:58.310665+00:00</p><p class="muted">Policy cards: 7 / Source: raw platform rules + live /api/guide payload.</p></details>
+  </main>
+</body>
+</html>

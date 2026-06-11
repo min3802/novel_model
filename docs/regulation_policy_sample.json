@@ -1,0 +1,915 @@
+{
+  "input": {
+    "targetCountry": "Japan",
+    "title": "R15 기준 악역영애는 피의 복수를 시작한다",
+    "genre": "로맨스 판타지",
+    "titleElements": [
+      "R15 기준",
+      "악역영애",
+      "피의 복수"
+    ],
+    "comparableSignals": [
+      "잔혹 묘사",
+      "성적 묘사",
+      "이세계 전생",
+      "귀족"
+    ],
+    "synopsis": "주인공은 유혈이 낭자한 복수극 속에서 연령제한 설정과 R18 표시가 필요할 수 있는 사건을 추적한다."
+  },
+  "policy_attention_cards": [
+    {
+      "card_title": "연령 등급/성인 표시 · 미성년자 보호",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "synopsis_inferred",
+      "matched_elements": [
+        "연령",
+        "제한"
+      ],
+      "matched_rule_ids": [
+        "JP_ALPHAPOLIS_0010"
+      ],
+      "platform_display_name": "アルファポリス(알파폴리스)",
+      "display_sentence": "작품이 18세 미만에게 부적절하다면 게시 또는 수정 시 반드시 'R 지정'을 설정하고, 메타데이터·시놉시스·회차 텍스트에 등급 정보를 반영하세요.",
+      "guide_message_ko": "작품이 18세 미만에게 부적절하다면 게시 또는 수정 시 반드시 'R 지정'을 설정하고, 메타데이터·시놉시스·회차 텍스트에 등급 정보를 반영하세요.",
+      "rule_summary_ko": "18세 미만의 열람이 부적절한 작품은 게시 시 반드시 연령 제한(R 지정)을 설정해야 합니다.",
+      "source_refs": [
+        {
+          "label": "アルファポリス(알파폴리스)",
+          "url": "https://www.alphapolis.co.jp/guidelines"
+        }
+      ],
+      "matched_by_source": {
+        "synopsis_inferred": [
+          "연령",
+          "제한"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적",
+        "잔혹",
+        "기준",
+        "연령"
+      ],
+      "matched_rule_ids": [
+        "JP_ALPHAPOLIS_0011"
+      ],
+      "platform_display_name": "アルファポリス(알파폴리스)",
+      "display_sentence": "작품에 18세 미만 인물의 성행위나 과도한 성적·폭력 묘사가 있는지 확인하고, 해당 표현은 삭제·수정하거나 연령 등급을 R-18로 설정하며 표지·시놉시스·회차 텍스트·메타데이터를 갱신하세요.",
+      "guide_message_ko": "작품에 18세 미만 인물의 성행위나 과도한 성적·폭력 묘사가 있는지 확인하고, 해당 표현은 삭제·수정하거나 연령 등급을 R-18로 설정하며 표지·시놉시스·회차 텍스트·메타데이터를 갱신하세요.",
+      "rule_summary_ko": "18세 미만 인물의 성행위가 상세히 표현되거나 과도한 성적·폭력 묘사가 포함된 작품은 R-18로 분류된다.",
+      "source_refs": [
+        {
+          "label": "アルファポリス(알파폴리스)",
+          "url": "https://www.alphapolis.co.jp/guidelines"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적",
+          "잔혹",
+          "기준"
+        ],
+        "title_or_genre": [
+          "기준"
+        ],
+        "synopsis_inferred": [
+          "연령"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적",
+        "잔혹",
+        "기준",
+        "연령"
+      ],
+      "matched_rule_ids": [
+        "JP_ALPHAPOLIS_0012"
+      ],
+      "platform_display_name": "アルファポリス(알파폴리스)",
+      "display_sentence": "작품의 전체 분량과 표현 강도를 확인해 과도한 성적·폭력 묘사는 수정하거나 삭제하고, 18세 미만 등장인물의 성행위 묘사는 반드시 제거하거나 적절히 조치하여 등급 기준에 맞추세요.",
+      "guide_message_ko": "작품의 전체 분량과 표현 강도를 확인해 과도한 성적·폭력 묘사는 수정하거나 삭제하고, 18세 미만 등장인물의 성행위 묘사는 반드시 제거하거나 적절히 조치하여 등급 기준에 맞추세요.",
+      "rule_summary_ko": "성적·폭력적 표현의 분량 또는 과격성, 또는 18세 미만 등장인물의 성행위가 포함된 작품은 R-15로 분류됩니다.",
+      "source_refs": [
+        {
+          "label": "アルファポリス(알파폴리스)",
+          "url": "https://www.alphapolis.co.jp/guidelines"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적",
+          "잔혹",
+          "기준"
+        ],
+        "title_or_genre": [
+          "기준"
+        ],
+        "synopsis_inferred": [
+          "연령"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사 · 자해/자살 · 혐오/차별 · 불법/범죄 행위 · 제목/소개/표지/회차 형식",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적 묘사",
+        "성적",
+        "잔혹"
+      ],
+      "matched_rule_ids": [
+        "JP_KAKUYOMU_0003"
+      ],
+      "platform_display_name": "カクヨム(카쿠요무)",
+      "display_sentence": "작품의 표현을 확인해 과도한 성적·폭력·자살 유발·범죄·차별 묘사는 최소화하거나 즉시 수정하고, 필요 시 회차 비공개나 삭제에 대비하세요. 미성년자의 음주·흡연 등 법으로 금지된 행위를 불가피하게 묘사할 때는 소개문 끝에 '이 작품은 법에 반하는 행위를 용인·권장하지 않습니다'와 같은 비추천 문구를 반드시 기재하세요.",
+      "guide_message_ko": "작품의 표현을 확인해 과도한 성적·폭력·자살 유발·범죄·차별 묘사는 최소화하거나 즉시 수정하고, 필요 시 회차 비공개나 삭제에 대비하세요. 미성년자의 음주·흡연 등 법으로 금지된 행위를 불가피하게 묘사할 때는 소개문 끝에 '이 작품은 법에 반하는 행위를 용인·권장하지 않습니다'와 같은 비추천 문구를 반드시 기재하세요.",
+      "rule_summary_ko": "성적·폭력·자살 유발·범죄 조장·차별적 묘사 등 과도한 표현은 최소한으로 하고, 과도할 경우 수정 요청이나 비공개·삭제 조치가 있을 수 있습니다.",
+      "source_refs": [
+        {
+          "label": "カクヨム(카쿠요무)",
+          "url": "https://kakuyomu.jp/legal/guideline"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적 묘사",
+          "성적",
+          "잔혹"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "성적 콘텐츠 · 저작권/상표권/IP · 2차창작/팬콘텐츠 · 제목/소개/표지/회차 형식 · 상업화/수익화",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적"
+      ],
+      "matched_rule_ids": [
+        "JP_KAKUYOMU_0010"
+      ],
+      "platform_display_name": "カクヨム(카쿠요무)",
+      "display_sentence": "게시 전 원작이 허가 목록에 등재되었는지 확인하고, 한 작품당 허가된 단일 타이틀만 사용하며 크로스오버·원작 설정·캐릭터성 훼손을 피하고 다른 서비스로 전재하지 마십시오. 필요시 즉시 수정하거나 삭제하세요.",
+      "guide_message_ko": "게시 전 원작이 허가 목록에 등재되었는지 확인하고, 한 작품당 허가된 단일 타이틀만 사용하며 크로스오버·원작 설정·캐릭터성 훼손을 피하고 다른 서비스로 전재하지 마십시오. 필요시 즉시 수정하거나 삭제하세요.",
+      "rule_summary_ko": "지정된 원작에 한해 허가된 작품의 2차창작만 허용되며, 허가 범위를 벗어나면 수정 요청이나 비공개 등 제재가 발생할 수 있습니다.",
+      "source_refs": [
+        {
+          "label": "カクヨム(카쿠요무)",
+          "url": "https://kakuyomu.jp/legal/guideline"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사 · 자해/자살 · 제목/소개/표지/회차 형식",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적 묘사",
+        "성적",
+        "잔혹",
+        "연령제한 설정",
+        "연령제한",
+        "유혈",
+        "연령"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0001"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "게시할 때 연령제한 항목에서 R15를 선택하고 R15 키워드를 반드시 등록하세요. 성적·유혈·자해·모방 유발 묘사는 상세 묘사를 줄이거나 필요 시 R18로 상향해 분류를 수정하세요.",
+      "guide_message_ko": "게시할 때 연령제한 항목에서 R15를 선택하고 R15 키워드를 반드시 등록하세요. 성적·유혈·자해·모방 유발 묘사는 상세 묘사를 줄이거나 필요 시 R18로 상향해 분류를 수정하세요.",
+      "rule_summary_ko": "15세 미만에게 부적절한 성적·잔혹·자해·모방 유발 묘사 등은 R15로 표시하고 게시 시 연령제한 항목에서 R15를 선택하며 키워드를 설정해야 합니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/ratinga/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적 묘사",
+          "성적",
+          "잔혹"
+        ],
+        "synopsis_inferred": [
+          "연령제한 설정",
+          "연령제한",
+          "유혈",
+          "연령"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 폭력/잔혹 묘사",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적 묘사",
+        "성적",
+        "잔혹 묘사",
+        "잔혹",
+        "R18 표시",
+        "R18",
+        "연령"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0002"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "작품에 성행위·성적 접촉·성적 자극을 유발하는 묘사, 성기 묘사, 성인용 이미지, 대중사전에 없는 성인용어 또는 지나치게 상세한 잔혹 묘사가 포함된다면 게시 전에 반드시 'R18'로 분류하거나 우려가 제기되면 즉시 R18로 변경해 주세요.",
+      "guide_message_ko": "작품에 성행위·성적 접촉·성적 자극을 유발하는 묘사, 성기 묘사, 성인용 이미지, 대중사전에 없는 성인용어 또는 지나치게 상세한 잔혹 묘사가 포함된다면 게시 전에 반드시 'R18'로 분류하거나 우려가 제기되면 즉시 R18로 변경해 주세요.",
+      "rule_summary_ko": "성적 묘사나 과도한 잔혹 묘사 등 18세 미만에게 부적절한 내용은 게시 시 반드시 R18로 표시해야 하며, 미표시 시 운영이 조치할 수 있습니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/ratingb/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적 묘사",
+          "성적",
+          "잔혹 묘사",
+          "잔혹"
+        ],
+        "synopsis_inferred": [
+          "R18 표시",
+          "R18",
+          "연령"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "성적 콘텐츠 · AI 생성 콘텐츠 · 제목/소개/표지/회차 형식 · 상업화/수익화",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0003"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "작품 설정 페이지에서 AI 이용 유형을 반드시 선택하세요. 본문에 AI가 생성한 텍스트를 그대로 사용했다면 '직접 사용', 편집·재작성했다면 '간접 이용', 아이디어나 교정 수준이면 '보조적 이용', 전혀 사용하지 않았다면 '미사용'으로 설정하고 필요 시 비고에 상세를 기재하세요.",
+      "guide_message_ko": "작품 설정 페이지에서 AI 이용 유형을 반드시 선택하세요. 본문에 AI가 생성한 텍스트를 그대로 사용했다면 '직접 사용', 편집·재작성했다면 '간접 이용', 아이디어나 교정 수준이면 '보조적 이용', 전혀 사용하지 않았다면 '미사용'으로 설정하고 필요 시 비고에 상세를 기재하세요.",
+      "rule_summary_ko": "작품 창작에서 AI 사용 여부를 반드시 설정하도록 요구하며, 본문 AI 직접사용·간접이용·보조적 이용·미사용으로 분류해 표시하도록 규정합니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/ai/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "성적 콘텐츠 · 저작권/상표권/IP · 2차창작/팬콘텐츠",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "기준",
+        "성적"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0004"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "게시 전 가사 사용 권한을 반드시 확인하고 권한이 없으면 게재하지 말거나 권리자에게 허가를 받아야 하며, 허가를 받은 경우 권한 획득 사실을 명확히 기재하세요; 번안·번역·패러디는 권한 없이 게시하지 말고, 가사에 영감을 받은 작품은 반드시 본인의 문장만으로 작성하십시오.",
+      "guide_message_ko": "게시 전 가사 사용 권한을 반드시 확인하고 권한이 없으면 게재하지 말거나 권리자에게 허가를 받아야 하며, 허가를 받은 경우 권한 획득 사실을 명확히 기재하세요; 번안·번역·패러디는 권한 없이 게시하지 말고, 가사에 영감을 받은 작품은 반드시 본인의 문장만으로 작성하십시오.",
+      "rule_summary_ko": "가사는 저작권 보호 대상이며 권리자 동의 없이 게재하면 저작권 침해로 계정 정지 등 엄중한 제재를 받을 수 있습니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/song/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "기준",
+          "성적"
+        ],
+        "title_or_genre": [
+          "기준"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "연령 등급/성인 표시 · 성적 콘텐츠 · 미성년자 보호 · 저작권/상표권/IP · 개인정보/사생활",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적",
+        "R18",
+        "연령"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0005"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "프로필·활동보고·댓글에 R18 표현이나 가사를 게시하거나 R18 관련 페이지로 직접 링크하지 말고, 댓글을 짧은 시간에 집중적으로 주고받아 서버에 부담을 주는 경우 외부 채팅 서비스를 이용하거나 댓글 속도를 조절해 주세요.",
+      "guide_message_ko": "프로필·활동보고·댓글에 R18 표현이나 가사를 게시하거나 R18 관련 페이지로 직접 링크하지 말고, 댓글을 짧은 시간에 집중적으로 주고받아 서버에 부담을 주는 경우 외부 채팅 서비스를 이용하거나 댓글 속도를 조절해 주세요.",
+      "rule_summary_ko": "마이페이지의 프로필, 활동보고, 댓글 등에서는 R18에 해당하는 표현, 가사 게시, R18 페이지로의 직접 링크 및 실시간 성격의 대량 채팅을 금지합니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/mypage/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적"
+        ],
+        "synopsis_inferred": [
+          "R18",
+          "연령"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "성적 콘텐츠 · 저작권/상표권/IP · 2차창작/팬콘텐츠 · 상업화/수익화",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0006"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "게시를 원하면 먼저 '게시를 받는 2차창작' 페이지에서 해당 작품의 허용 여부와 게시 조건을 확인하고, 권리자가 공개적으로 허용 의사를 밝혔더라도 반드시 사전에 권리자로부터 직접 허가를 받으세요. 상업화된 판권작은 운영이 권리자에게서 직접 허가를 받은 경우에만 게시 가능하며, 허가 요청은 운영의 정보제공·개선요청 폼으로 공개 페이지 URL과 권리자 정보를 제출해 문의하십시오.",
+      "guide_message_ko": "게시를 원하면 먼저 '게시를 받는 2차창작' 페이지에서 해당 작품의 허용 여부와 게시 조건을 확인하고, 권리자가 공개적으로 허용 의사를 밝혔더라도 반드시 사전에 권리자로부터 직접 허가를 받으세요. 상업화된 판권작은 운영이 권리자에게서 직접 허가를 받은 경우에만 게시 가능하며, 허가 요청은 운영의 정보제공·개선요청 폼으로 공개 페이지 URL과 권리자 정보를 제출해 문의하십시오.",
+      "rule_summary_ko": "원칙적으로 2차창작 게시를 금지하며, 동화·고전 등 일부 작품에 한해 운영이 정한 조건 및 권리자 허가가 충족될 경우에만 예외적으로 허용합니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/nizi/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "연령 등급/성인 표시 · 성적 콘텐츠 · 저작권/상표권/IP · 2차창작/팬콘텐츠 · AI 생성 콘텐츠 · 제목/소개/표지/회차 형식 · 상업화/수익화",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적",
+        "제한",
+        "연령"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0007"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "작품이 2차창작을 허용하는지 확인하고, 운영이 지정한 방식·형식에 맞춰 제출하세요. 권리자 가이드라인을 준수하고, 허가가 있을 경우 줄거리에 허가 표기와 원작 코드 또는 권리자 의견표명 페이지의 URL을 반드시 기재하며 필요한 관리 키워드를 설정하세요.",
+      "guide_message_ko": "작품이 2차창작을 허용하는지 확인하고, 운영이 지정한 방식·형식에 맞춰 제출하세요. 권리자 가이드라인을 준수하고, 허가가 있을 경우 줄거리에 허가 표기와 원작 코드 또는 권리자 의견표명 페이지의 URL을 반드시 기재하며 필요한 관리 키워드를 설정하세요.",
+      "rule_summary_ko": "플랫폼에서 허용하는 2차창작의 대상과 제출 방식·주의사항을 규정하며, 조건 미준수 시 삭제 등 제재가 가능함을 안내합니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/ff/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적"
+        ],
+        "synopsis_inferred": [
+          "제한",
+          "연령"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "성적 콘텐츠 · 혐오/차별 · 개인정보/사생활 · 상업화/수익화",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0010"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "운영이 전달한 기업 문면을 먼저 확인하고 진행을 원하면 문면에 기재된 기업 연락처로 직접 연락하십시오; 거절하는 경우에만 운영을 통해 회신을 요청할 수 있습니다. 개인정보는 계약이 필요할 때까지 제공하지 말고, 플랫폼 기능으로 받은 제안은 삭제하지 말고 문의로 신고해 주세요; 운영이 확인을 위해 메시지함을 열람할 수 있습니다.",
+      "guide_message_ko": "운영이 전달한 기업 문면을 먼저 확인하고 진행을 원하면 문면에 기재된 기업 연락처로 직접 연락하십시오; 거절하는 경우에만 운영을 통해 회신을 요청할 수 있습니다. 개인정보는 계약이 필요할 때까지 제공하지 말고, 플랫폼 기능으로 받은 제안은 삭제하지 말고 문의로 신고해 주세요; 운영이 확인을 위해 메시지함을 열람할 수 있습니다.",
+      "rule_summary_ko": "플랫폼에 게재된 작품에 대해 서적·코미컬라이즈·영상화·게임화 등 기업의 상업화 제안이 있을 수 있으며, 제안은 운영을 통해 통지되고 진행은 저자가 기업과 직접 협의해야 합니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/syoseki/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "연령 등급/성인 표시 · 성적 콘텐츠 · 폭력/잔혹 묘사 · 괴롭힘/위협 · 불법/범죄 행위 · 종교/민족 민감 · 저작권/상표권/IP · 2차창작/팬콘텐츠 · 제목/소개/표지/회차 형식 · 상업화/수익화",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적",
+        "잔혹",
+        "연령"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0011"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "게시 시 제공된 검색용 키워드를 설정하고, 2차창작 허가 여부와 저작권·가사 전재 금지 등 금지 사유를 반드시 확인하세요. 작품을 서적화하려면 권리자와 KADOKAWA의 별도 허가를 받고, 위반 시 게시 중단될 수 있으니 문제 발견 시 즉시 수정하거나 삭제하십시오.",
+      "guide_message_ko": "게시 시 제공된 검색용 키워드를 설정하고, 2차창작 허가 여부와 저작권·가사 전재 금지 등 금지 사유를 반드시 확인하세요. 작품을 서적화하려면 권리자와 KADOKAWA의 별도 허가를 받고, 위반 시 게시 중단될 수 있으니 문제 발견 시 즉시 수정하거나 삭제하십시오.",
+      "rule_summary_ko": "지정된 TRPG 타이틀에 한해 리플레이 작품을 게시할 수 있으며, 저작권 침해·가사·무허가 2차창작·사이트의 R18 기준 해당 등은 게시 금지되고 서적화 시 권리자 및 KADOKAWA의 허가가 필요합니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/replay/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적",
+          "잔혹"
+        ],
+        "synopsis_inferred": [
+          "연령"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "연령 등급/성인 표시 · 성적 콘텐츠 · 제목/소개/표지/회차 형식 · 상업화/수익화",
+      "status_label": "검토 권장",
+      "severity": "high",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "성적",
+        "연령"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0012"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "게시 전에 사용하려는 시스템이 허용 목록에 포함되는지 확인하고, 시놉시스에 지정된 경고문을 반드시 기재하며 키워드에 '공식 시나리오 사용'을 추가하세요. 의도적으로 내용을 변경한 경우에는 시놉시스에 그 사실을 명확히 적어 주세요.",
+      "guide_message_ko": "게시 전에 사용하려는 시스템이 허용 목록에 포함되는지 확인하고, 시놉시스에 지정된 경고문을 반드시 기재하며 키워드에 '공식 시나리오 사용'을 추가하세요. 의도적으로 내용을 변경한 경우에는 시놉시스에 그 사실을 명확히 적어 주세요.",
+      "rule_summary_ko": "권리자 허가가 있는 일부 시스템에 한해 공식 시나리오를 사용한 TRPG 리플레이 게시를 허용하되, 시놉시스 경고문·키워드 표기와 개작 표기를 요구합니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/replay2/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "성적"
+        ],
+        "synopsis_inferred": [
+          "연령"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "연령 등급/성인 표시 · 저작권/상표권/IP · 2차창작/팬콘텐츠 · 제목/소개/표지/회차 형식 · 상업화/수익화",
+      "status_label": "게시 전 확인",
+      "severity": "medium",
+      "match_source": "synopsis_inferred",
+      "matched_elements": [
+        "연령"
+      ],
+      "matched_rule_ids": [
+        "JP_ALPHAPOLIS_0001"
+      ],
+      "platform_display_name": "アルファポリス(알파폴리스)",
+      "display_sentence": "게시 전에 가이드라인을 확인하고 중복 게시, 카테고리 오류, 2차 창작, 연령 등급 표기, 상업화 관련 금지사항을 점검해 위반 요소는 수정하거나 삭제하세요. 위반 시 작품이 비공개 처리되거나 삭제될 수 있으며 심한 경우 계정이 삭제될 수 있습니다.",
+      "guide_message_ko": "게시 전에 가이드라인을 확인하고 중복 게시, 카테고리 오류, 2차 창작, 연령 등급 표기, 상업화 관련 금지사항을 점검해 위반 요소는 수정하거나 삭제하세요. 위반 시 작품이 비공개 처리되거나 삭제될 수 있으며 심한 경우 계정이 삭제될 수 있습니다.",
+      "rule_summary_ko": "게시 작품은 플랫폼 가이드라인을 준수해야 하며, 위반 시 작품 공개 제한·삭제 및 악질적 위반에 대해서는 회원 계정 삭제가 이루어질 수 있습니다.",
+      "source_refs": [
+        {
+          "label": "アルファポリス(알파폴리스)",
+          "url": "https://www.alphapolis.co.jp/guidelines"
+        }
+      ],
+      "matched_by_source": {
+        "synopsis_inferred": [
+          "연령"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "폭력/잔혹 묘사 · 개인정보/사생활",
+      "status_label": "게시 전 확인",
+      "severity": "medium",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "잔혹"
+      ],
+      "matched_rule_ids": [
+        "JP_ALPHAPOLIS_0009"
+      ],
+      "platform_display_name": "アルファポリス(알파폴리스)",
+      "display_sentence": "게시 전 음란·잔혹·모욕적 표현, 유해 스크립트, 타인 개인정보 포함 여부와 분할·복제·대량·비작품성 게시 여부를 확인하고 위반 소지가 있으면 즉시 수정하거나 삭제하세요. 심각한 경우 노출 제한·삭제·계정 정지 등의 제재가 있을 수 있습니다.",
+      "guide_message_ko": "게시 전 음란·잔혹·모욕적 표현, 유해 스크립트, 타인 개인정보 포함 여부와 분할·복제·대량·비작품성 게시 여부를 확인하고 위반 소지가 있으면 즉시 수정하거나 삭제하세요. 심각한 경우 노출 제한·삭제·계정 정지 등의 제재가 있을 수 있습니다.",
+      "rule_summary_ko": "공서양속 위반, 음란·잔혹·모욕 표현, 악성 스크립트·개인정보 무단 처리, 분할·복제·대량·비작품성 게시 등을 금지하며 위반 시 제재합니다.",
+      "source_refs": [
+        {
+          "label": "アルファポリス(알파폴리스)",
+          "url": "https://www.alphapolis.co.jp/guidelines"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "잔혹"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "괴롭힘/위협",
+      "status_label": "게시 전 확인",
+      "severity": "medium",
+      "match_source": "synopsis_inferred",
+      "matched_elements": [
+        "제한"
+      ],
+      "matched_rule_ids": [
+        "JP_KAKUYOMU_0013"
+      ],
+      "platform_display_name": "カクヨム(카쿠요무)",
+      "display_sentence": "게시 전에 욕설·명예훼손, 연락처 기재, 광고·모집, 상호평가 요청, 부적절한 링크, 과도한 자기홍보가 포함되어 있지 않은지 확인하고 필요 시 수정하거나 삭제하세요. 부적절한 게시물을 발견하면 신고 기능을 통해 운영에 알려주십시오.",
+      "guide_message_ko": "게시 전에 욕설·명예훼손, 연락처 기재, 광고·모집, 상호평가 요청, 부적절한 링크, 과도한 자기홍보가 포함되어 있지 않은지 확인하고 필요 시 수정하거나 삭제하세요. 부적절한 게시물을 발견하면 신고 기능을 통해 운영에 알려주십시오.",
+      "rule_summary_ko": "운영이 욕설·명예훼손, 연락처 기재, 소설과 무관한 영업·광고·모집, 상호평가 요청, 부적절한 링크·과도한 자기홍보로 판단한 게시물은 삭제되며 계정 정지 등 조치가 취해질 수 있습니다.",
+      "source_refs": [
+        {
+          "label": "カクヨム(카쿠요무)",
+          "url": "https://kakuyomu.jp/legal/guideline"
+        }
+      ],
+      "matched_by_source": {
+        "synopsis_inferred": [
+          "제한"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "괴롭힘/위협",
+      "status_label": "게시 전 확인",
+      "severity": "medium",
+      "match_source": "synopsis_inferred",
+      "matched_elements": [
+        "제한"
+      ],
+      "matched_rule_ids": [
+        "JP_KAKUYOMU_0014"
+      ],
+      "platform_display_name": "カクヨム(카쿠요무)",
+      "display_sentence": "비방, 연락처 공개, 소설과 무관한 영업·선전·모집, 부적절한 링크 등 금지 항목을 게시하지 마세요; 위반 게시물은 삭제되어 복구할 수 없습니다. 선물을 보내기 전에는 해당 작가가 제한 근황 노트 설정을 해두었는지 확인하고, 노트 설정이 없어도 작가가 기프트 수신을 허용하면 선물을 보낼 수 있습니다.",
+      "guide_message_ko": "비방, 연락처 공개, 소설과 무관한 영업·선전·모집, 부적절한 링크 등 금지 항목을 게시하지 마세요; 위반 게시물은 삭제되어 복구할 수 없습니다. 선물을 보내기 전에는 해당 작가가 제한 근황 노트 설정을 해두었는지 확인하고, 노트 설정이 없어도 작가가 기프트 수신을 허용하면 선물을 보낼 수 있습니다.",
+      "rule_summary_ko": "제한 근황 노트와 댓글은 작가와 서포터 간 소통 수단이며, 비방·연락처 기재·영업·부적절한 링크 등 규약 위반 게시물은 삭제되며 복구되지 않습니다.",
+      "source_refs": [
+        {
+          "label": "カクヨム(카쿠요무)",
+          "url": "https://kakuyomu.jp/legal/guideline"
+        }
+      ],
+      "matched_by_source": {
+        "synopsis_inferred": [
+          "제한"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "종교/민족 민감 · 제목/소개/표지/회차 형식",
+      "status_label": "게시 전 확인",
+      "severity": "medium",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "이세계 전생",
+        "이세계",
+        "전생",
+        "세계",
+        "주인공"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0009"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "작품의 주인공이 현실에서 이세계로 전생·전이했는지와 작품의 주요 무대가 이세계인지 확인한 뒤, 해당 조건이면 키워드를 설정하고 해당하지 않으면 설정하지 않거나 메타데이터에서 제거하세요.",
+      "guide_message_ko": "작품의 주인공이 현실에서 이세계로 전생·전이했는지와 작품의 주요 무대가 이세계인지 확인한 뒤, 해당 조건이면 키워드를 설정하고 해당하지 않으면 설정하지 않거나 메타데이터에서 제거하세요.",
+      "rule_summary_ko": "주인공이 현실 세계에서 이세계로 전생·전이하고 작품의 주요 무대가 이세계인 경우 '이세계 전생/전이' 키워드를 설정해야 합니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/isekaikeyword2/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "이세계 전생",
+          "이세계",
+          "전생",
+          "세계"
+        ],
+        "synopsis_inferred": [
+          "주인공"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "제목/소개/표지/회차 형식",
+      "status_label": "참고 확인",
+      "severity": "low",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "기준"
+      ],
+      "matched_rule_ids": [
+        "JP_ALPHAPOLIS_0003"
+      ],
+      "platform_display_name": "アルファポリス(알파폴리스)",
+      "display_sentence": "카테고리 설정 시 작품 성격에 맞는 항목을 신중히 선택하세요. 운영에서 변경이 있을 경우 안내를 확인하고 필요하면 카테고리를 재설정하세요.",
+      "guide_message_ko": "카테고리 설정 시 작품 성격에 맞는 항목을 신중히 선택하세요. 운영에서 변경이 있을 경우 안내를 확인하고 필요하면 카테고리를 재설정하세요.",
+      "rule_summary_ko": "운영이 작품을 카테고리 오류로 판단하면 적절하다고 판단되는 카테고리로 변경될 수 있습니다.",
+      "source_refs": [
+        {
+          "label": "アルファポリス(알파폴리스)",
+          "url": "https://www.alphapolis.co.jp/guidelines"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "기준"
+        ],
+        "title_or_genre": [
+          "기준"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "제목/소개/표지/회차 형식",
+      "status_label": "참고 확인",
+      "severity": "low",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "이세계",
+        "전생",
+        "악역",
+        "영애"
+      ],
+      "matched_rule_ids": [
+        "JP_ALPHAPOLIS_0004"
+      ],
+      "platform_display_name": "アルファポリス(알파폴리스)",
+      "display_sentence": "제목, 소개, 표지, 회차 등 메타데이터에서 이세계 판타지 요소(이세계, 전생/전이, 악역 영애, 약혼 파기 등)가 포함되어 있지 않은지 확인하고, 포함되어 있다면 적절한 장르로 재분류하거나 해당 요소를 제거해 제출하세요.",
+      "guide_message_ko": "제목, 소개, 표지, 회차 등 메타데이터에서 이세계 판타지 요소(이세계, 전생/전이, 악역 영애, 약혼 파기 등)가 포함되어 있지 않은지 확인하고, 포함되어 있다면 적절한 장르로 재분류하거나 해당 요소를 제거해 제출하세요.",
+      "rule_summary_ko": "이세계·전생·악역 영애·약혼 파기 등 이세계 판타지 요소를 포함한 작품은 장르 분류 오류로 간주됩니다.",
+      "source_refs": [
+        {
+          "label": "アルファポリス(알파폴리스)",
+          "url": "https://www.alphapolis.co.jp/guidelines"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "이세계",
+          "전생",
+          "악역",
+          "영애"
+        ],
+        "title_or_genre": [
+          "악역",
+          "영애"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "제목/소개/표지/회차 형식",
+      "status_label": "참고 확인",
+      "severity": "low",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "악역",
+        "영애"
+      ],
+      "matched_rule_ids": [
+        "JP_ALPHAPOLIS_0005"
+      ],
+      "platform_display_name": "アルファポリス(알파폴리스)",
+      "display_sentence": "작품이 동화·아동서에 적합한지 확인하고, 부적절한 설정이나 표현이 있으면 삭제·수정하거나 알맞은 카테고리로 재분류하세요.",
+      "guide_message_ko": "작품이 동화·아동서에 적합한지 확인하고, 부적절한 설정이나 표현이 있으면 삭제·수정하거나 알맞은 카테고리로 재분류하세요.",
+      "rule_summary_ko": "동화·아동서 카테고리에 악역 영애·약혼 파기 등 아동용으로 부적절한 내용이 포함된 작품은 카테고리 오류로 간주됩니다.",
+      "source_refs": [
+        {
+          "label": "アルファポリス(알파폴리스)",
+          "url": "https://www.alphapolis.co.jp/guidelines"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "악역",
+          "영애"
+        ],
+        "title_or_genre": [
+          "악역",
+          "영애"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "제목/소개/표지/회차 형식",
+      "status_label": "참고 확인",
+      "severity": "low",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "전생",
+        "이세계"
+      ],
+      "matched_rule_ids": [
+        "JP_ALPHAPOLIS_0006"
+      ],
+      "platform_display_name": "アルファポリス(알파폴리스)",
+      "display_sentence": "제목·소개·표지·회차 메타에서 타임슬립·전생·전이 또는 이세계 판타지 요소를 암시하는 표현을 확인해 삭제하거나 수정하고, 필요시 적절한 카테고리로 재분류하세요. 가상 전쟁물이나 역사 개변물은 위 요소가 없다면 카테고리 오류가 아닙니다.",
+      "guide_message_ko": "제목·소개·표지·회차 메타에서 타임슬립·전생·전이 또는 이세계 판타지 요소를 암시하는 표현을 확인해 삭제하거나 수정하고, 필요시 적절한 카테고리로 재분류하세요. 가상 전쟁물이나 역사 개변물은 위 요소가 없다면 카테고리 오류가 아닙니다.",
+      "rule_summary_ko": "과거·미래로의 타임슬립, 과거·미래 인물·시대로의 전생·전이 또는 이세계 판타지 요소를 포함한 작품은 카테고리 오류로 분류됩니다.",
+      "source_refs": [
+        {
+          "label": "アルファポリス(알파폴리스)",
+          "url": "https://www.alphapolis.co.jp/guidelines"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "전생",
+          "이세계"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "제목/소개/표지/회차 형식",
+      "status_label": "참고 확인",
+      "severity": "low",
+      "match_source": "synopsis_inferred",
+      "matched_elements": [
+        "제한"
+      ],
+      "matched_rule_ids": [
+        "JP_KAKUYOMU_0002"
+      ],
+      "platform_display_name": "カクヨム(카쿠요무)",
+      "display_sentence": "작품이 본인 창작인지 확인하고, 타 서비스에 이미 게시된 작품은 해당 서비스 규약과 공모 응모 제한을 확인한 뒤 게시하세요. 짧은 기간에 대량 업로드하는 행위는 자제해 게시 빈도를 조절하세요.",
+      "guide_message_ko": "작품이 본인 창작인지 확인하고, 타 서비스에 이미 게시된 작품은 해당 서비스 규약과 공모 응모 제한을 확인한 뒤 게시하세요. 짧은 기간에 대량 업로드하는 행위는 자제해 게시 빈도를 조절하세요.",
+      "rule_summary_ko": "운영진은 게시물에 개입하지 않으며, 회원 본인이 창작한 작품만 게시할 수 있고, 타 서비스 중복 게재 시 외부 규약과 공모 요건을 확인하고 과도한 게시 빈도는 자제해야 합니다.",
+      "source_refs": [
+        {
+          "label": "カクヨム(카쿠요무)",
+          "url": "https://kakuyomu.jp/legal/guideline"
+        }
+      ],
+      "matched_by_source": {
+        "synopsis_inferred": [
+          "제한"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "연령 등급/성인 표시",
+      "status_label": "참고 확인",
+      "severity": "low",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "R15 기준",
+        "R15",
+        "기준",
+        "제한",
+        "연령"
+      ],
+      "matched_rule_ids": [
+        "JP_KAKUYOMU_0004"
+      ],
+      "platform_display_name": "カクヨム(카쿠요무)",
+      "display_sentence": "작품에 관련 표현이나 묘사가 포함되어 있으면 회차 본문·메타데이터·시놉시스 등에 자체 등급을 R15로 표시하고, 표현이 과도하거나 비중이 클 경우 내용 수정·재분류 등을 검토하세요.",
+      "guide_message_ko": "작품에 관련 표현이나 묘사가 포함되어 있으면 회차 본문·메타데이터·시놉시스 등에 자체 등급을 R15로 표시하고, 표현이 과도하거나 비중이 클 경우 내용 수정·재분류 등을 검토하세요.",
+      "rule_summary_ko": "해당 표현·묘사를 포함한 작품에는 이용자 배려 차원에서 자체 등급 표기를 권장하며 기준은 R15로, 과도하거나 비중이 큰 표현은 제한될 수 있다.",
+      "source_refs": [
+        {
+          "label": "カクヨム(카쿠요무)",
+          "url": "https://kakuyomu.jp/legal/guideline"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "R15 기준",
+          "R15",
+          "기준"
+        ],
+        "title_or_genre": [
+          "R15 기준",
+          "R15",
+          "기준"
+        ],
+        "synopsis_inferred": [
+          "제한",
+          "연령"
+        ]
+      },
+      "country": "JP"
+    },
+    {
+      "card_title": "제목/소개/표지/회차 형식",
+      "status_label": "참고 확인",
+      "severity": "low",
+      "match_source": "direct_input",
+      "matched_elements": [
+        "이세계 전생",
+        "이세계",
+        "전생"
+      ],
+      "matched_rule_ids": [
+        "JP_SYOSETU_0008"
+      ],
+      "platform_display_name": "小説家になろう(소설가가 되자)",
+      "display_sentence": "작품에 해당 요소가 포함되어 있으면 설정 화면에서 '이세계 전생' 또는 '이세계 전이' 키워드를 확인·설정하고, 키워드가 치명적 스포일러가 되는 경우에는 설정을 생략할 수 있습니다.",
+      "guide_message_ko": "작품에 해당 요소가 포함되어 있으면 설정 화면에서 '이세계 전생' 또는 '이세계 전이' 키워드를 확인·설정하고, 키워드가 치명적 스포일러가 되는 경우에는 설정을 생략할 수 있습니다.",
+      "rule_summary_ko": "주인공이 현실 세계에서 이세계로 전생 또는 전이하고 주요 무대가 이세계인 경우, 작품에 해당 키워드를 반드시 설정해야 합니다.",
+      "source_refs": [
+        {
+          "label": "小説家になろう(소설가가 되자)",
+          "url": "https://syosetu.com/site/isekaikeyword/"
+        }
+      ],
+      "matched_by_source": {
+        "direct_input": [
+          "이세계 전생",
+          "이세계",
+          "전생"
+        ]
+      },
+      "country": "JP"
+    }
+  ],
+  "policy_limitations": [
+    "이 섹션은 법적 판단이나 위반 확정이 아니라 게시 전 확인 후보입니다.",
+    "플랫폼 상위 태그 관찰과 규정 확인 후보는 별도로 표시합니다.",
+    "시놉시스 기반 매칭은 명시 입력보다 약한 후보로 표시합니다."
+  ]
+}

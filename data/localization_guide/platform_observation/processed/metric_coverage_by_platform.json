@@ -1,0 +1,371 @@
+[
+  {
+    "platform": "Alphapolis",
+    "record_count": 40,
+    "metric": "characters",
+    "available_count": 40,
+    "min": 6055.0,
+    "median": 50626.5,
+    "max": 864153.0
+  },
+  {
+    "platform": "Alphapolis",
+    "record_count": 40,
+    "metric": "comments",
+    "available_count": 18,
+    "min": 0.0,
+    "median": 15.0,
+    "max": 499.0
+  },
+  {
+    "platform": "Alphapolis",
+    "record_count": 40,
+    "metric": "platform_rank",
+    "available_count": 40,
+    "min": 1.0,
+    "median": 20.5,
+    "max": 40.0
+  },
+  {
+    "platform": "Alphapolis",
+    "record_count": 40,
+    "metric": "points_24h",
+    "available_count": 40,
+    "min": 35765.0,
+    "median": 51340.0,
+    "max": 192833.0
+  },
+  {
+    "platform": "JJWXC",
+    "record_count": 100,
+    "metric": "comments",
+    "available_count": 100,
+    "min": 3.0,
+    "median": 47815.5,
+    "max": 2884455.0
+  },
+  {
+    "platform": "JJWXC",
+    "record_count": 100,
+    "metric": "favorites",
+    "available_count": 100,
+    "min": 7.0,
+    "median": 42058.5,
+    "max": 681705.0
+  },
+  {
+    "platform": "JJWXC",
+    "record_count": 100,
+    "metric": "words",
+    "available_count": 100,
+    "min": 52779.0,
+    "median": 394801.5,
+    "max": 19675917.0
+  },
+  {
+    "platform": "Joylada",
+    "record_count": 100,
+    "metric": "category_rank",
+    "available_count": 100,
+    "min": 1.0,
+    "median": 35.5,
+    "max": 85.0
+  },
+  {
+    "platform": "Joylada",
+    "record_count": 100,
+    "metric": "ranking_box",
+    "available_count": 100,
+    "min": 1.0,
+    "median": 1.0,
+    "max": 3.0
+  },
+  {
+    "platform": "Joylada",
+    "record_count": 100,
+    "metric": "reads_or_views",
+    "available_count": 100,
+    "min": 1315561.0,
+    "median": 2928743.0,
+    "max": 1477996480.0
+  },
+  {
+    "platform": "Kakuyomu",
+    "record_count": 100,
+    "metric": "platform_rank",
+    "available_count": 100,
+    "min": 1.0,
+    "median": 50.5,
+    "max": 100.0
+  },
+  {
+    "platform": "Kakuyomu",
+    "record_count": 100,
+    "metric": "stars",
+    "available_count": 100,
+    "min": 95.0,
+    "median": 1663.5,
+    "max": 29908.0
+  },
+  {
+    "platform": "ReadAWrite",
+    "record_count": 100,
+    "metric": "chapters",
+    "available_count": 100,
+    "min": 1.0,
+    "median": 10.0,
+    "max": 54.0
+  },
+  {
+    "platform": "ReadAWrite",
+    "record_count": 100,
+    "metric": "comments",
+    "available_count": 100,
+    "min": 8.0,
+    "median": 215.0,
+    "max": 2737.0
+  },
+  {
+    "platform": "ReadAWrite",
+    "record_count": 100,
+    "metric": "rating_count",
+    "available_count": 100,
+    "min": 7.0,
+    "median": 135.5,
+    "max": 1144.0
+  },
+  {
+    "platform": "ReadAWrite",
+    "record_count": 100,
+    "metric": "views",
+    "available_count": 100,
+    "min": 317.0,
+    "median": 14265.5,
+    "max": 194606.0
+  },
+  {
+    "platform": "Royal Road",
+    "record_count": 100,
+    "metric": "chapters",
+    "available_count": 100,
+    "min": 21.0,
+    "median": 184.5,
+    "max": 1531.0
+  },
+  {
+    "platform": "Royal Road",
+    "record_count": 100,
+    "metric": "followers",
+    "available_count": 100,
+    "min": 302.0,
+    "median": 6561.0,
+    "max": 34165.0
+  },
+  {
+    "platform": "Royal Road",
+    "record_count": 100,
+    "metric": "pages",
+    "available_count": 100,
+    "min": 123.0,
+    "median": 1876.5,
+    "max": 16110.0
+  },
+  {
+    "platform": "Royal Road",
+    "record_count": 100,
+    "metric": "rating",
+    "available_count": 100,
+    "min": 3.6,
+    "median": 4.58,
+    "max": 4.84
+  },
+  {
+    "platform": "Royal Road",
+    "record_count": 100,
+    "metric": "views",
+    "available_count": 100,
+    "min": 50303.0,
+    "median": 3251924.5,
+    "max": 47266150.0
+  },
+  {
+    "platform": "Scribble Hub",
+    "record_count": 150,
+    "metric": "chapters",
+    "available_count": 150,
+    "min": 6.0,
+    "median": 378.0,
+    "max": 2204.0
+  },
+  {
+    "platform": "Scribble Hub",
+    "record_count": 150,
+    "metric": "favorites",
+    "available_count": 150,
+    "min": 31.0,
+    "median": 89269.0,
+    "max": 290484.0
+  },
+  {
+    "platform": "Scribble Hub",
+    "record_count": 150,
+    "metric": "readers",
+    "available_count": 150,
+    "min": 48.0,
+    "median": 6605.0,
+    "max": 12847.0
+  },
+  {
+    "platform": "Scribble Hub",
+    "record_count": 150,
+    "metric": "views",
+    "available_count": 150,
+    "min": 2.0,
+    "median": 8.0,
+    "max": 907.0
+  },
+  {
+    "platform": "Syosetu",
+    "record_count": 200,
+    "metric": "characters",
+    "available_count": 200,
+    "min": 12534.0,
+    "median": 314990.0,
+    "max": 11877903.0
+  },
+  {
+    "platform": "Syosetu",
+    "record_count": 200,
+    "metric": "episodes",
+    "available_count": 194,
+    "min": 3.0,
+    "median": 93.5,
+    "max": 954.0
+  },
+  {
+    "platform": "Syosetu",
+    "record_count": 200,
+    "metric": "monthly_points",
+    "available_count": 100,
+    "min": 3012.0,
+    "median": 4580.0,
+    "max": 52168.0
+  },
+  {
+    "platform": "Syosetu",
+    "record_count": 200,
+    "metric": "weekly_points",
+    "available_count": 100,
+    "min": 730.0,
+    "median": 1202.0,
+    "max": 12286.0
+  },
+  {
+    "platform": "Tapas",
+    "record_count": 100,
+    "metric": "likes",
+    "available_count": 100,
+    "min": 188.0,
+    "median": 13039.5,
+    "max": 304488.0
+  },
+  {
+    "platform": "Tapas",
+    "record_count": 100,
+    "metric": "platform_rank",
+    "available_count": 100,
+    "min": 1.0,
+    "median": 50.5,
+    "max": 100.0
+  },
+  {
+    "platform": "Tapas",
+    "record_count": 100,
+    "metric": "subscribers",
+    "available_count": 100,
+    "min": 461.0,
+    "median": 3147.5,
+    "max": 43472.0
+  },
+  {
+    "platform": "Tapas",
+    "record_count": 100,
+    "metric": "views",
+    "available_count": 100,
+    "min": 12915.0,
+    "median": 234129.5,
+    "max": 4804352.0
+  },
+  {
+    "platform": "Wattpad",
+    "record_count": 100,
+    "metric": "category",
+    "available_count": 20,
+    "min": 3.0,
+    "median": 3.0,
+    "max": 3.0
+  },
+  {
+    "platform": "Wattpad",
+    "record_count": 100,
+    "metric": "parts",
+    "available_count": 100,
+    "min": 4.0,
+    "median": 42.5,
+    "max": 200.0
+  },
+  {
+    "platform": "Wattpad",
+    "record_count": 100,
+    "metric": "reads",
+    "available_count": 100,
+    "min": 162.0,
+    "median": 34361.5,
+    "max": 10929975.0
+  },
+  {
+    "platform": "Wattpad",
+    "record_count": 100,
+    "metric": "votes",
+    "available_count": 100,
+    "min": 2.0,
+    "median": 1102.5,
+    "max": 679996.0
+  },
+  {
+    "platform": "Zongheng",
+    "record_count": 36,
+    "metric": "total_clicks_wan",
+    "available_count": 21,
+    "min": 1.4,
+    "median": 590.5,
+    "max": 36376.8
+  },
+  {
+    "platform": "Zongheng",
+    "record_count": 36,
+    "metric": "total_recommend_wan",
+    "available_count": 13,
+    "min": 1.6,
+    "median": 31.8,
+    "max": 1894.1
+  },
+  {
+    "platform": "Zongheng",
+    "record_count": 36,
+    "metric": "weekly_recommend",
+    "available_count": 35,
+    "min": 0.0,
+    "median": 144.0,
+    "max": 8712.0
+  },
+  {
+    "platform": "Zongheng",
+    "record_count": 36,
+    "metric": "words_wan",
+    "available_count": 34,
+    "min": 7.3,
+    "median": 55.400000000000006,
+    "max": 1582.6
+  }
+]

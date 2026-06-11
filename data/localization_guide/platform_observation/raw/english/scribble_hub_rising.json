@@ -1,0 +1,1296 @@
+{
+  "market": "US",
+  "language_market": "English",
+  "raw_language": "en",
+  "platform": "Scribble Hub",
+  "signal_type": "rising",
+  "target_limit": 50,
+  "records": [
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 1,
+      "title": "I am NOT a Demon Queen!",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Mystery",
+        "Psychological",
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 45,
+        "favorites": 2425,
+        "readers": 728,
+        "chapters": 64
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 2,
+      "title": "Farming Monster Girls",
+      "labels": [
+        "Adult",
+        "Comedy",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "Mature",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 279,
+        "favorites": 12175,
+        "readers": 1267,
+        "chapters": 125
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 3,
+      "title": "The Record of Hyoren Enjo’s Journey in Another World",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Romance",
+        "Seinen",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 49,
+        "favorites": 4843,
+        "readers": 253,
+        "chapters": 136
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 4,
+      "title": "Echoes Of The Seven",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "School Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 140,
+        "favorites": 4701,
+        "readers": 1392,
+        "chapters": 70
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 5,
+      "title": "The Wolf’s Daughter",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Gender Bender",
+        "Isekai",
+        "Romance"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 28,
+        "favorites": 1335,
+        "readers": 495,
+        "chapters": 25
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 6,
+      "title": "The Demon Queen Wants To Live.",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Girls Love",
+        "Psychological",
+        "Romance",
+        "Seinen"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 20,
+        "favorites": 1356,
+        "readers": 429,
+        "chapters": 39
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 7,
+      "title": "Summoned Again",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Gender Bender",
+        "Isekai"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 37,
+        "favorites": 889,
+        "readers": 406,
+        "chapters": 38
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 8,
+      "title": "Walking Disasters and Me",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 197,
+        "favorites": 5814,
+        "readers": 1263,
+        "chapters": 180
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 9,
+      "title": "The Chimera Summoner",
+      "labels": [
+        "Ecchi",
+        "Fantasy",
+        "Gender Bender",
+        "Girls Love",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "School Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 175,
+        "favorites": 5298,
+        "readers": 1429,
+        "chapters": 53
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 10,
+      "title": "REND",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Horror",
+        "Mystery",
+        "Psychological",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 185,
+        "favorites": 6677,
+        "readers": 1258,
+        "chapters": 170
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 11,
+      "title": "A Perverted Path to Victory",
+      "labels": [
+        "Action",
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 101,
+        "favorites": 2268,
+        "readers": 1147,
+        "chapters": 204
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 12,
+      "title": "Relentless Potential (Original Fantasy)",
+      "labels": [
+        "Action",
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "Mature",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 86,
+        "favorites": 3292,
+        "readers": 783,
+        "chapters": 62
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 13,
+      "title": "A Spark of Sylvan Flame",
+      "labels": [
+        "Action",
+        "Drama",
+        "Gender Bender",
+        "Girls Love",
+        "LitRPG",
+        "Psychological",
+        "Romance",
+        "Sci-fi"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 267,
+        "favorites": 11349,
+        "readers": 1674,
+        "chapters": 114
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 14,
+      "title": "Protagonist System: Reincarnated as the main character, but I don’t want to be!",
+      "labels": [
+        "Action",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 63,
+        "favorites": 1934,
+        "readers": 712,
+        "chapters": 56
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 15,
+      "title": "She Who Woke Among Eternity",
+      "labels": [
+        "Adventure",
+        "Gender Bender",
+        "Girls Love",
+        "Isekai",
+        "Sci-fi",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 37,
+        "favorites": 1666,
+        "readers": 728,
+        "chapters": 27
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 16,
+      "title": "Mad God – Reborn",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Martial Arts",
+        "Mature",
+        "Mystery",
+        "Romance"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 84,
+        "favorites": 4433,
+        "readers": 919,
+        "chapters": 168
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 17,
+      "title": "Streamer in the Omniverse",
+      "labels": [
+        "Action",
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Isekai",
+        "Mature",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 708,
+        "favorites": 25386,
+        "readers": 1972,
+        "chapters": 201
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 18,
+      "title": "Marvel – I am Spiderman",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Harem",
+        "Romance",
+        "School Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 907,
+        "favorites": 31,
+        "readers": 48,
+        "chapters": 6
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 19,
+      "title": "Dao of the World Walker (Xianxia) Book 2",
+      "labels": [
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 18,
+        "favorites": 384,
+        "readers": 135,
+        "chapters": 142
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 20,
+      "title": "I Became a Side Character in the World Of Skyrim",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Romance"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 56,
+        "favorites": 2658,
+        "readers": 452,
+        "chapters": 97
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 21,
+      "title": "Reincarnated as a Hero- and the Wrong Gender?!",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Gender Bender",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 38,
+        "favorites": 447,
+        "readers": 530,
+        "chapters": 29
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 22,
+      "title": "Immortal Paladin",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Isekai",
+        "Martial Arts",
+        "Mystery",
+        "Seinen",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 377,
+        "favorites": 13152,
+        "readers": 1998,
+        "chapters": 481
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 23,
+      "title": "The Villainess’s Reputation [Kingdom Building]",
+      "labels": [
+        "Action",
+        "Drama",
+        "Fantasy",
+        "Historical",
+        "Isekai",
+        "LitRPG",
+        "Mystery",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 359,
+        "favorites": 15180,
+        "readers": 1118,
+        "chapters": 330
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 24,
+      "title": "The Other Side of the Coin",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Girls Love",
+        "Harem",
+        "Mature",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 3,
+        "favorites": 53,
+        "readers": 48,
+        "chapters": 11
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 25,
+      "title": "I Got Isekai’d, Well Shyt!",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Gender Bender",
+        "Isekai",
+        "Mature",
+        "Mystery",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 2,
+        "favorites": 36307,
+        "readers": 4950,
+        "chapters": 398
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 26,
+      "title": "I am NOT a Demon Queen!",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Mystery",
+        "Psychological",
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 45,
+        "favorites": 2425,
+        "readers": 728,
+        "chapters": 64
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 27,
+      "title": "Farming Monster Girls",
+      "labels": [
+        "Adult",
+        "Comedy",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "Mature",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 279,
+        "favorites": 12175,
+        "readers": 1267,
+        "chapters": 125
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 28,
+      "title": "The Record of Hyoren Enjo’s Journey in Another World",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Romance",
+        "Seinen",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 49,
+        "favorites": 4843,
+        "readers": 253,
+        "chapters": 136
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 29,
+      "title": "Echoes Of The Seven",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "School Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 140,
+        "favorites": 4701,
+        "readers": 1392,
+        "chapters": 70
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 30,
+      "title": "The Wolf’s Daughter",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Gender Bender",
+        "Isekai",
+        "Romance"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 28,
+        "favorites": 1335,
+        "readers": 495,
+        "chapters": 25
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 31,
+      "title": "The Demon Queen Wants To Live.",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Girls Love",
+        "Psychological",
+        "Romance",
+        "Seinen"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 20,
+        "favorites": 1356,
+        "readers": 429,
+        "chapters": 39
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 32,
+      "title": "Summoned Again",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Gender Bender",
+        "Isekai"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 37,
+        "favorites": 889,
+        "readers": 406,
+        "chapters": 38
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 33,
+      "title": "Walking Disasters and Me",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 197,
+        "favorites": 5814,
+        "readers": 1263,
+        "chapters": 180
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 34,
+      "title": "The Chimera Summoner",
+      "labels": [
+        "Ecchi",
+        "Fantasy",
+        "Gender Bender",
+        "Girls Love",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "School Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 175,
+        "favorites": 5298,
+        "readers": 1429,
+        "chapters": 53
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 35,
+      "title": "REND",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Horror",
+        "Mystery",
+        "Psychological",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 185,
+        "favorites": 6677,
+        "readers": 1258,
+        "chapters": 170
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 36,
+      "title": "A Perverted Path to Victory",
+      "labels": [
+        "Action",
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 101,
+        "favorites": 2268,
+        "readers": 1147,
+        "chapters": 204
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 37,
+      "title": "Relentless Potential (Original Fantasy)",
+      "labels": [
+        "Action",
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "Mature",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 86,
+        "favorites": 3292,
+        "readers": 783,
+        "chapters": 62
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 38,
+      "title": "A Spark of Sylvan Flame",
+      "labels": [
+        "Action",
+        "Drama",
+        "Gender Bender",
+        "Girls Love",
+        "LitRPG",
+        "Psychological",
+        "Romance",
+        "Sci-fi"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 267,
+        "favorites": 11349,
+        "readers": 1674,
+        "chapters": 114
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 39,
+      "title": "Protagonist System: Reincarnated as the main character, but I don’t want to be!",
+      "labels": [
+        "Action",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 63,
+        "favorites": 1934,
+        "readers": 712,
+        "chapters": 56
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 40,
+      "title": "She Who Woke Among Eternity",
+      "labels": [
+        "Adventure",
+        "Gender Bender",
+        "Girls Love",
+        "Isekai",
+        "Sci-fi",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 37,
+        "favorites": 1666,
+        "readers": 728,
+        "chapters": 27
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 41,
+      "title": "Mad God – Reborn",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Martial Arts",
+        "Mature",
+        "Mystery",
+        "Romance"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 84,
+        "favorites": 4433,
+        "readers": 919,
+        "chapters": 168
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 42,
+      "title": "Streamer in the Omniverse",
+      "labels": [
+        "Action",
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Isekai",
+        "Mature",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 708,
+        "favorites": 25386,
+        "readers": 1972,
+        "chapters": 201
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 43,
+      "title": "Marvel – I am Spiderman",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Harem",
+        "Romance",
+        "School Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 907,
+        "favorites": 31,
+        "readers": 48,
+        "chapters": 6
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 44,
+      "title": "Dao of the World Walker (Xianxia) Book 2",
+      "labels": [
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 18,
+        "favorites": 384,
+        "readers": 135,
+        "chapters": 142
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 45,
+      "title": "I Became a Side Character in the World Of Skyrim",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Romance"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 56,
+        "favorites": 2658,
+        "readers": 452,
+        "chapters": 97
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 46,
+      "title": "Reincarnated as a Hero- and the Wrong Gender?!",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Gender Bender",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 38,
+        "favorites": 447,
+        "readers": 530,
+        "chapters": 29
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 47,
+      "title": "Immortal Paladin",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Isekai",
+        "Martial Arts",
+        "Mystery",
+        "Seinen",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 377,
+        "favorites": 13152,
+        "readers": 1998,
+        "chapters": 481
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 48,
+      "title": "The Villainess’s Reputation [Kingdom Building]",
+      "labels": [
+        "Action",
+        "Drama",
+        "Fantasy",
+        "Historical",
+        "Isekai",
+        "LitRPG",
+        "Mystery",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 359,
+        "favorites": 15180,
+        "readers": 1118,
+        "chapters": 330
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 49,
+      "title": "The Other Side of the Coin",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Girls Love",
+        "Harem",
+        "Mature",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 3,
+        "favorites": 53,
+        "readers": 48,
+        "chapters": 11
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "rising",
+      "rank": 50,
+      "title": "I Got Isekai’d, Well Shyt!",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Gender Bender",
+        "Isekai",
+        "Mature",
+        "Mystery",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 2,
+        "favorites": 36307,
+        "readers": 4950,
+        "chapters": 398
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "platform": "Alphapolis",
+    "record_count": 40,
+    "synopsis_present_count": 40,
+    "synopsis_present_share": 1.0,
+    "usage_note": "시놉 기반 내용 신호 보조 가능"
+  },
+  {
+    "platform": "Dek-D",
+    "record_count": 20,
+    "synopsis_present_count": 19,
+    "synopsis_present_share": 0.95,
+    "usage_note": "시놉 기반 내용 신호 보조 가능"
+  },
+  {
+    "platform": "JJWXC",
+    "record_count": 100,
+    "synopsis_present_count": 100,
+    "synopsis_present_share": 1.0,
+    "usage_note": "시놉 기반 내용 신호 보조 가능"
+  },
+  {
+    "platform": "Joylada",
+    "record_count": 100,
+    "synopsis_present_count": 0,
+    "synopsis_present_share": 0.0,
+    "usage_note": "시놉 기반 분석 제한"
+  },
+  {
+    "platform": "Kakuyomu",
+    "record_count": 100,
+    "synopsis_present_count": 100,
+    "synopsis_present_share": 1.0,
+    "usage_note": "시놉 기반 내용 신호 보조 가능"
+  },
+  {
+    "platform": "ReadAWrite",
+    "record_count": 100,
+    "synopsis_present_count": 98,
+    "synopsis_present_share": 0.98,
+    "usage_note": "시놉 기반 내용 신호 보조 가능"
+  },
+  {
+    "platform": "Royal Road",
+    "record_count": 100,
+    "synopsis_present_count": 98,
+    "synopsis_present_share": 0.98,
+    "usage_note": "시놉 기반 내용 신호 보조 가능"
+  },
+  {
+    "platform": "Scribble Hub",
+    "record_count": 150,
+    "synopsis_present_count": 0,
+    "synopsis_present_share": 0.0,
+    "usage_note": "시놉 기반 분석 제한"
+  },
+  {
+    "platform": "Syosetu",
+    "record_count": 200,
+    "synopsis_present_count": 200,
+    "synopsis_present_share": 1.0,
+    "usage_note": "시놉 기반 내용 신호 보조 가능"
+  },
+  {
+    "platform": "Tapas",
+    "record_count": 100,
+    "synopsis_present_count": 100,
+    "synopsis_present_share": 1.0,
+    "usage_note": "시놉 기반 내용 신호 보조 가능"
+  },
+  {
+    "platform": "Wattpad",
+    "record_count": 100,
+    "synopsis_present_count": 100,
+    "synopsis_present_share": 1.0,
+    "usage_note": "시놉 기반 내용 신호 보조 가능"
+  },
+  {
+    "platform": "Zongheng",
+    "record_count": 36,
+    "synopsis_present_count": 0,
+    "synopsis_present_share": 0.0,
+    "usage_note": "시놉 기반 분석 제한"
+  }
+]

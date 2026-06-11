@@ -1,0 +1,5991 @@
+[
+  {
+    "record_id": "China::JJWXC::monthly_rank::1::1",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 1,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::6::6",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 6,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::9::9",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 9,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::11::11",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 11,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::12::12",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 12,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::14::14",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 14,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::20::20",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 20,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::21::21",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 21,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::22::22",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 22,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::32::32",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 32,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::35::35",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 35,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::36::36",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 36,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::41::41",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 41,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::42::42",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 42,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::43::43",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 43,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::45::45",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 45,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::47::47",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 47,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::50::50",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 50,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::51::51",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 51,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::52::52",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 52,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::53::53",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 53,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::55::55",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 55,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::57::57",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 57,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::59::59",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 59,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::60::60",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 60,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::61::61",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 61,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::65::65",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 65,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::66::66",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 66,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::70::70",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 70,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::73::73",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 73,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::81::81",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 81,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::82::82",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 82,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::84::84",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 84,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::85::85",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 85,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::86::86",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 86,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::91::91",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 91,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "China::JJWXC::monthly_rank::97::97",
+    "market": "China",
+    "platform": "JJWXC",
+    "signal_type": "monthly_rank",
+    "rank": 97,
+    "matched_labels": [
+      {
+        "label_original": "纯爱",
+        "label_ko": "BL/순애"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::2::2",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 2,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::3::3",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 3,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::4::4",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 4,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::8::8",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 8,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::9::9",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 9,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::11::11",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 11,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::12::12",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 12,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::14::14",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 14,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::17::17",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 17,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::18::18",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 18,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::21::21",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 21,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::24::24",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 24,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::25::25",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 25,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::27::27",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 27,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::28::28",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 28,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::29::29",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 29,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::33::33",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 33,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::34::34",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 34,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::36::36",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 36,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::37::37",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 37,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::39::39",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 39,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::42::42",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 42,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::43::43",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 43,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::46::46",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 46,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::49::49",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 49,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::rising::50::50",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "rising",
+    "rank": 50,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::1::1",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 1,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::3::3",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 3,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::4::4",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 4,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::5::5",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 5,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::6::6",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 6,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::7::7",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 7,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::8::8",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 8,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::9::9",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 9,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::10::10",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 10,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::11::11",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 11,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::12::12",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 12,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::13::13",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 13,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::14::14",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 14,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::15::15",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 15,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::16::16",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 16,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::17::17",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 17,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::18::18",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 18,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::22::22",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 22,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::23::23",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 23,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::25::25",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 25,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::26::26",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 26,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::28::28",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 28,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::29::29",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 29,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::30::30",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 30,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::31::31",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 31,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::32::32",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 32,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::33::33",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 33,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::34::34",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 34,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::35::35",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 35,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::36::36",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 36,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::37::37",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 37,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::38::38",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 38,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::39::39",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 39,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::40::40",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 40,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::41::41",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 41,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::42::42",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 42,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::43::43",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 43,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::47::47",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 47,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::48::48",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 48,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::50::50",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 50,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::51::51",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 51,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::53::53",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 53,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::54::54",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 54,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::55::55",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 55,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::56::56",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 56,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::57::57",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 57,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::58::58",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 58,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::59::59",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 59,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::60::60",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 60,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::61::61",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 61,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::62::62",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 62,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::63::63",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 63,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::64::64",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 64,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::65::65",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 65,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::66::66",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 66,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::67::67",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 67,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::68::68",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 68,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::72::72",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 72,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::73::73",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 73,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::75::75",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 75,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::76::76",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 76,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::78::78",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 78,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::79::79",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 79,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::80::80",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 80,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::81::81",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 81,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::82::82",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 82,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::83::83",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 83,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::84::84",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 84,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::85::85",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 85,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::86::86",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 86,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::87::87",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 87,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::88::88",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 88,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::89::89",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 89,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::90::90",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 90,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::91::91",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 91,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::92::92",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 92,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::93::93",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 93,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::97::97",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 97,
+    "matched_labels": [
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::98::98",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 98,
+    "matched_labels": [
+      {
+        "label_original": "Adult",
+        "label_ko": "성인"
+      },
+      {
+        "label_original": "Ecchi",
+        "label_ko": "에치/선정 요소"
+      },
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      },
+      {
+        "label_original": "Smut",
+        "label_ko": "성인/선정 요소"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Scribble Hub::weekly_popular::100::100",
+    "market": "US",
+    "platform": "Scribble Hub",
+    "signal_type": "weekly_popular",
+    "rank": 100,
+    "matched_labels": [
+      {
+        "label_original": "Harem",
+        "label_ko": "하렘"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::5::5",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 5,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::6::6",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 6,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::15::15",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 15,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::18::18",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 18,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::22::22",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 22,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::24::24",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 24,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::26::26",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 26,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::37::37",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 37,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::48::48",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 48,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::49::49",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 49,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::51::51",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 51,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::56::56",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 56,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::61::61",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 61,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::79::79",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 79,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::80::80",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 80,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::83::83",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 83,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::89::89",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 89,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "US::Tapas::popular_novels::100::100",
+    "market": "US",
+    "platform": "Tapas",
+    "signal_type": "popular_novels",
+    "rank": 100,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::5::5",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 5,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::16::16",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 16,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::17::17",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 17,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::19::19",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 19,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::22::22",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 22,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::23::23",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 23,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::26::26",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 26,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::31::31",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 31,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::33::33",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 33,
+    "matched_labels": [
+      {
+        "label_original": "R18",
+        "label_ko": "R18"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::35::35",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 35,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::38::38",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 38,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::39::39",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 39,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      },
+      {
+        "label_original": "R18",
+        "label_ko": "R18"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Alphapolis::hot_24h::40::40",
+    "market": "Japan",
+    "platform": "Alphapolis",
+    "signal_type": "hot_24h",
+    "rank": 40,
+    "matched_labels": [
+      {
+        "label_original": "BL",
+        "label_ko": "BL/보이즈러브"
+      },
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::3::3",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 3,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::6::6",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 6,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::9::9",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 9,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::10::10",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 10,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::12::12",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 12,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::13::13",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 13,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::15::15",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 15,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::17::17",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 17,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::18::18",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 18,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::21::21",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 21,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::22::22",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 22,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::24::24",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 24,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::25::25",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 25,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::27::27",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 27,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::28::28",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 28,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::29::29",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 29,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::30::30",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 30,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::31::31",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 31,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::32::32",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 32,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::34::34",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 34,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::35::35",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 35,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::36::36",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 36,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::37::37",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 37,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::40::40",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 40,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::42::42",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 42,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::43::43",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 43,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::44::44",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 44,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::45::45",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 45,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::47::47",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 47,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::48::48",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 48,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::49::49",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 49,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::50::50",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 50,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::51::51",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 51,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::52::52",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 52,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::53::53",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 53,
+    "matched_labels": [
+      {
+        "label_original": "純愛",
+        "label_ko": "純愛"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::55::55",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 55,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::56::56",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 56,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::58::58",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 58,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::59::59",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 59,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::61::61",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 61,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::62::62",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 62,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::63::63",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 63,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::64::64",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 64,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::67::67",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 67,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::70::70",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 70,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::71::71",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 71,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::73::73",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 73,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::74::74",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 74,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::77::77",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 77,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::79::79",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 79,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::80::80",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 80,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::83::83",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 83,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::84::84",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 84,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::85::85",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 85,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::87::87",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 87,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::88::88",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 88,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::90::90",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 90,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::92::92",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 92,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::93::93",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 93,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::95::95",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 95,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::96::96",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 96,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::98::98",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 98,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::99::99",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 99,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::monthly_ranking::100::100",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "monthly_ranking",
+    "rank": 100,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::5::5",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 5,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::7::7",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 7,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::8::8",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 8,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::13::13",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 13,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::14::14",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 14,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::16::16",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 16,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::19::19",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 19,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::22::22",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 22,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::24::24",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 24,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::25::25",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 25,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::30::30",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 30,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::31::31",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 31,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::32::32",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 32,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::34::34",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 34,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::35::35",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 35,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::36::36",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 36,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::38::38",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 38,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::39::39",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 39,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::44::44",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 44,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::45::45",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 45,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::48::48",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 48,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::49::49",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 49,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::50::50",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 50,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::52::52",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 52,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::56::56",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 56,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::57::57",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 57,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::58::58",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 58,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::59::59",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 59,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::60::60",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 60,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::62::62",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 62,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::63::63",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 63,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::65::65",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 65,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::66::66",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 66,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::69::69",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 69,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::70::70",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 70,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::71::71",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 71,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::72::72",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 72,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::74::74",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 74,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::75::75",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 75,
+    "matched_labels": [
+      {
+        "label_original": "純愛",
+        "label_ko": "純愛"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::76::76",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 76,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::77::77",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 77,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::78::78",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 78,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::79::79",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 79,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::80::80",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 80,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::81::81",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 81,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::82::82",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 82,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::83::83",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 83,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::84::84",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 84,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::85::85",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 85,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::86::86",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 86,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::88::88",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 88,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::89::89",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 89,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::90::90",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 90,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::91::91",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 91,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::92::92",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 92,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::94::94",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 94,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::95::95",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 95,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::96::96",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 96,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::99::99",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 99,
+    "matched_labels": [
+      {
+        "label_original": "R15",
+        "label_ko": "R15"
+      },
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Japan::Syosetu::weekly_ranking::100::100",
+    "market": "Japan",
+    "platform": "Syosetu",
+    "signal_type": "weekly_ranking",
+    "rank": 100,
+    "matched_labels": [
+      {
+        "label_original": "残酷な描写あり",
+        "label_ko": "잔혹 묘사 있음"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::Dek-D::popular::1::1",
+    "market": "Thailand",
+    "platform": "Dek-D",
+    "signal_type": "popular",
+    "rank": 1,
+    "matched_labels": [
+      {
+        "label_original": "วาย",
+        "label_ko": "BL/보이즈러브"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::4::4",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 4,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::6::6",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 6,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::11::11",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 11,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::21::21",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 21,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::24::24",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 24,
+    "matched_labels": [
+      {
+        "label_original": "18+.",
+        "label_ko": "18+."
+      },
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::27::27",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 27,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::29::29",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 29,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::32::32",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 32,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      },
+      {
+        "label_original": "18+￼",
+        "label_ko": "18+￼"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::33::33",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 33,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      },
+      {
+        "label_original": "นิยาย18+",
+        "label_ko": "นิยาย18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::35::35",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 35,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::39::39",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 39,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::40::40",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 40,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::42::42",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 42,
+    "matched_labels": [
+      {
+        "label_original": "วายจีนโบราณ",
+        "label_ko": "วายจีนโบราณ"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::43::43",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 43,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::53::53",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 53,
+    "matched_labels": [
+      {
+        "label_original": "18+￼",
+        "label_ko": "18+￼"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::64::64",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 64,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::67::67",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 67,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::71::71",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 71,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::72::72",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 72,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::80::80",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 80,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::83::83",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 83,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::86::86",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 86,
+    "matched_labels": [
+      {
+        "label_original": "คลั่งรัก18+",
+        "label_ko": "คลั่งรัก18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::87::87",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 87,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::92::92",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 92,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::93::93",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 93,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::95::95",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 95,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::97::97",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 97,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  },
+  {
+    "record_id": "Thailand::ReadAWrite::popular::100::100",
+    "market": "Thailand",
+    "platform": "ReadAWrite",
+    "signal_type": "popular",
+    "rank": 100,
+    "matched_labels": [
+      {
+        "label_original": "18+",
+        "label_ko": "18+"
+      }
+    ],
+    "evidence_source": "labels",
+    "usage_note": "규정/규제 데이터와 결합할 때 검토 후보로만 사용"
+  }
+]

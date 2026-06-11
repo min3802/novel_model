@@ -1,0 +1,1802 @@
+[
+  {
+    "market": "China",
+    "label_a_original": "女主视角",
+    "label_a_ko": "여성 주인공 시점",
+    "label_b_original": "言情",
+    "label_b_ko": "로맨스",
+    "co_count": 48,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爱情",
+    "label_a_ko": "사랑/로맨스",
+    "label_b_original": "言情",
+    "label_b_ko": "로맨스",
+    "co_count": 38,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爱情",
+    "label_a_ko": "사랑/로맨스",
+    "label_b_original": "甜文",
+    "label_b_ko": "달달한 이야기",
+    "co_count": 37,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爱情",
+    "label_a_ko": "사랑/로맨스",
+    "label_b_original": "近代现代",
+    "label_b_ko": "근현대",
+    "co_count": 36,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "主受视角",
+    "label_a_ko": "수 시점/BL",
+    "label_b_original": "纯爱",
+    "label_b_ko": "BL/순애",
+    "co_count": 35,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "女主视角",
+    "label_a_ko": "여성 주인공 시점",
+    "label_b_original": "爱情",
+    "label_b_ko": "사랑/로맨스",
+    "co_count": 35,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "女主视角",
+    "label_a_ko": "여성 주인공 시점",
+    "label_b_original": "甜文",
+    "label_b_ko": "달달한 이야기",
+    "co_count": 24,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "甜文",
+    "label_a_ko": "달달한 이야기",
+    "label_b_original": "言情",
+    "label_b_ko": "로맨스",
+    "co_count": 24,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "情有独钟",
+    "label_a_ko": "일편단심",
+    "label_b_original": "爱情",
+    "label_b_ko": "사랑/로맨스",
+    "co_count": 24,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "甜文",
+    "label_a_ko": "달달한 이야기",
+    "label_b_original": "近代现代",
+    "label_b_ko": "근현대",
+    "co_count": 24,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "主受视角",
+    "label_a_ko": "수 시점/BL",
+    "label_b_original": "爱情",
+    "label_b_ko": "사랑/로맨스",
+    "co_count": 23,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爱情",
+    "label_a_ko": "사랑/로맨스",
+    "label_b_original": "纯爱",
+    "label_b_ko": "BL/순애",
+    "co_count": 23,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "言情",
+    "label_a_ko": "로맨스",
+    "label_b_original": "近代现代",
+    "label_b_ko": "근현대",
+    "co_count": 23,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "女主视角",
+    "label_a_ko": "여성 주인공 시점",
+    "label_b_original": "近代现代",
+    "label_b_ko": "근현대",
+    "co_count": 20,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "架空历史",
+    "label_a_ko": "가상 역사",
+    "label_b_original": "言情",
+    "label_b_ko": "로맨스",
+    "co_count": 20,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "纯爱",
+    "label_a_ko": "BL/순애",
+    "label_b_original": "近代现代",
+    "label_b_ko": "근현대",
+    "co_count": 20,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "架空历史",
+    "label_a_ko": "가상 역사",
+    "label_b_original": "爱情",
+    "label_b_ko": "사랑/로맨스",
+    "co_count": 18,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "女主视角",
+    "label_a_ko": "여성 주인공 시점",
+    "label_b_original": "架空历史",
+    "label_b_ko": "가상 역사",
+    "co_count": 18,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "主受视角",
+    "label_a_ko": "수 시점/BL",
+    "label_b_original": "近代现代",
+    "label_b_ko": "근현대",
+    "co_count": 18,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "情有独钟",
+    "label_a_ko": "일편단심",
+    "label_b_original": "甜文",
+    "label_b_ko": "달달한 이야기",
+    "co_count": 17,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "天之骄子",
+    "label_a_ko": "엘리트/천재형 인물",
+    "label_b_original": "爱情",
+    "label_b_ko": "사랑/로맨스",
+    "co_count": 16,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "天之骄子",
+    "label_a_ko": "엘리트/천재형 인물",
+    "label_b_original": "近代现代",
+    "label_b_ko": "근현대",
+    "co_count": 16,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "情有独钟",
+    "label_a_ko": "일편단심",
+    "label_b_original": "言情",
+    "label_b_ko": "로맨스",
+    "co_count": 16,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "情有独钟",
+    "label_a_ko": "일편단심",
+    "label_b_original": "近代现代",
+    "label_b_ko": "근현대",
+    "co_count": 16,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "甜文",
+    "label_a_ko": "달달한 이야기",
+    "label_b_original": "纯爱",
+    "label_b_ko": "BL/순애",
+    "co_count": 16,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "女主视角",
+    "label_a_ko": "여성 주인공 시점",
+    "label_b_original": "情有独钟",
+    "label_b_ko": "일편단심",
+    "co_count": 15,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "主受视角",
+    "label_a_ko": "수 시점/BL",
+    "label_b_original": "甜文",
+    "label_b_ko": "달달한 이야기",
+    "co_count": 15,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爱情",
+    "label_a_ko": "사랑/로맨스",
+    "label_b_original": "爽文",
+    "label_b_ko": "사이다/쾌감형",
+    "co_count": 14,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爱情",
+    "label_a_ko": "사랑/로맨스",
+    "label_b_original": "轻松",
+    "label_b_ko": "가벼운 톤",
+    "co_count": 14,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "主受视角",
+    "label_a_ko": "수 시점/BL",
+    "label_b_original": "架空历史",
+    "label_b_ko": "가상 역사",
+    "co_count": 13,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爱情",
+    "label_a_ko": "사랑/로맨스",
+    "label_b_original": "豪门世家",
+    "label_b_ko": "재벌/명문가",
+    "co_count": 13,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爽文",
+    "label_a_ko": "사이다/쾌감형",
+    "label_b_original": "言情",
+    "label_b_ko": "로맨스",
+    "co_count": 13,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "架空历史",
+    "label_a_ko": "가상 역사",
+    "label_b_original": "甜文",
+    "label_b_ko": "달달한 이야기",
+    "co_count": 13,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "情有独钟",
+    "label_a_ko": "일편단심",
+    "label_b_original": "纯爱",
+    "label_b_ko": "BL/순애",
+    "co_count": 13,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爽文",
+    "label_a_ko": "사이다/쾌감형",
+    "label_b_original": "纯爱",
+    "label_b_ko": "BL/순애",
+    "co_count": 13,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "架空历史",
+    "label_a_ko": "가상 역사",
+    "label_b_original": "穿越时空",
+    "label_b_ko": "시공간 이동",
+    "co_count": 12,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "架空历史",
+    "label_a_ko": "가상 역사",
+    "label_b_original": "纯爱",
+    "label_b_ko": "BL/순애",
+    "co_count": 12,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爱情",
+    "label_a_ko": "사랑/로맨스",
+    "label_b_original": "穿越时空",
+    "label_b_ko": "시공간 이동",
+    "co_count": 12,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "女主视角",
+    "label_a_ko": "여성 주인공 시점",
+    "label_b_original": "爽文",
+    "label_b_ko": "사이다/쾌감형",
+    "co_count": 12,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "爽文",
+    "label_a_ko": "사이다/쾌감형",
+    "label_b_original": "甜文",
+    "label_b_ko": "달달한 이야기",
+    "co_count": 12,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "天作之合",
+    "label_a_ko": "천생연분",
+    "label_b_original": "爱情",
+    "label_b_ko": "사랑/로맨스",
+    "co_count": 12,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "主受视角",
+    "label_a_ko": "수 시점/BL",
+    "label_b_original": "情有独钟",
+    "label_b_ko": "일편단심",
+    "co_count": 12,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "主受视角",
+    "label_a_ko": "수 시점/BL",
+    "label_b_original": "爽文",
+    "label_b_ko": "사이다/쾌감형",
+    "co_count": 12,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "甜文",
+    "label_a_ko": "달달한 이야기",
+    "label_b_original": "轻松",
+    "label_b_ko": "가벼운 톤",
+    "co_count": 11,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "言情",
+    "label_a_ko": "로맨스",
+    "label_b_original": "轻松",
+    "label_b_ko": "가벼운 톤",
+    "co_count": 11,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "天之骄子",
+    "label_a_ko": "엘리트/천재형 인물",
+    "label_b_original": "言情",
+    "label_b_ko": "로맨스",
+    "co_count": 11,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "业界精英",
+    "label_a_ko": "업계 엘리트",
+    "label_b_original": "爱情",
+    "label_b_ko": "사랑/로맨스",
+    "co_count": 11,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "业界精英",
+    "label_a_ko": "업계 엘리트",
+    "label_b_original": "言情",
+    "label_b_ko": "로맨스",
+    "co_count": 11,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "业界精英",
+    "label_a_ko": "업계 엘리트",
+    "label_b_original": "近代现代",
+    "label_b_ko": "근현대",
+    "co_count": 11,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "China",
+    "label_a_original": "轻松",
+    "label_a_ko": "가벼운 톤",
+    "label_b_original": "近代现代",
+    "label_b_ko": "근현대",
+    "co_count": 11,
+    "records_with_label_pairs": 119
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "残酷な描写あり",
+    "label_b_ko": "잔혹 묘사 있음",
+    "co_count": 58,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "ハイファンタジー〔ファンタジー〕",
+    "label_b_ko": "하이 판타지",
+    "co_count": 48,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ハッピーエンド",
+    "label_a_ko": "해피엔딩",
+    "label_b_original": "女主人公",
+    "label_b_ko": "여성 주인공",
+    "co_count": 43,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "異世界転生",
+    "label_b_ko": "이세계 전생",
+    "co_count": 42,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "残酷な描写あり",
+    "label_a_ko": "잔혹 묘사 있음",
+    "label_b_original": "男主人公",
+    "label_b_ko": "남성 주인공",
+    "co_count": 42,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ハイファンタジー〔ファンタジー〕",
+    "label_a_ko": "하이 판타지",
+    "label_b_original": "異世界転生",
+    "label_b_ko": "이세계 전생",
+    "co_count": 40,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "女主人公",
+    "label_a_ko": "여성 주인공",
+    "label_b_original": "異世界〔恋愛〕",
+    "label_b_ko": "이세계 로맨스",
+    "co_count": 39,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "男主人公",
+    "label_b_ko": "남성 주인공",
+    "co_count": 38,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ハッピーエンド",
+    "label_a_ko": "해피엔딩",
+    "label_b_original": "異世界〔恋愛〕",
+    "label_b_ko": "이세계 로맨스",
+    "co_count": 36,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "女主人公",
+    "label_a_ko": "여성 주인공",
+    "label_b_original": "異世界転生",
+    "label_b_ko": "이세계 전생",
+    "co_count": 35,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "異世界転生",
+    "label_a_ko": "이세계 전생",
+    "label_b_original": "魔法",
+    "label_b_ko": "마법",
+    "co_count": 34,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ざまぁ",
+    "label_a_ko": "사이다/복수",
+    "label_b_original": "ハッピーエンド",
+    "label_b_ko": "해피엔딩",
+    "co_count": 33,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ハイファンタジー〔ファンタジー〕",
+    "label_a_ko": "하이 판타지",
+    "label_b_original": "残酷な描写あり",
+    "label_b_ko": "잔혹 묘사 있음",
+    "co_count": 33,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ハイファンタジー〔ファンタジー〕",
+    "label_a_ko": "하이 판타지",
+    "label_b_original": "男主人公",
+    "label_b_ko": "남성 주인공",
+    "co_count": 32,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "残酷な描写あり",
+    "label_a_ko": "잔혹 묘사 있음",
+    "label_b_original": "異世界転生",
+    "label_b_ko": "이세계 전생",
+    "co_count": 32,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ハッピーエンド",
+    "label_a_ko": "해피엔딩",
+    "label_b_original": "恋愛",
+    "label_b_ko": "연애/로맨스",
+    "co_count": 30,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "男主人公",
+    "label_a_ko": "남성 주인공",
+    "label_b_original": "異世界転生",
+    "label_b_ko": "이세계 전생",
+    "co_count": 28,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ハッピーエンド",
+    "label_a_ko": "해피엔딩",
+    "label_b_original": "異世界転生",
+    "label_b_ko": "이세계 전생",
+    "co_count": 28,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "異世界〔恋愛〕",
+    "label_a_ko": "이세계 로맨스",
+    "label_b_original": "異世界転生",
+    "label_b_ko": "이세계 전생",
+    "co_count": 28,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "女主人公",
+    "label_b_ko": "여성 주인공",
+    "co_count": 27,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "魔法",
+    "label_b_ko": "마법",
+    "co_count": 26,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "チート",
+    "label_a_ko": "치트",
+    "label_b_original": "男主人公",
+    "label_b_ko": "남성 주인공",
+    "co_count": 26,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "男主人公",
+    "label_a_ko": "남성 주인공",
+    "label_b_original": "魔法",
+    "label_b_ko": "마법",
+    "co_count": 26,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ハイファンタジー〔ファンタジー〕",
+    "label_a_ko": "하이 판타지",
+    "label_b_original": "魔法",
+    "label_b_ko": "마법",
+    "co_count": 26,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ローファンタジー〔ファンタジー〕",
+    "label_a_ko": "로우 판타지",
+    "label_b_original": "男主人公",
+    "label_b_ko": "남성 주인공",
+    "co_count": 26,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "異世界〔恋愛〕",
+    "label_b_ko": "이세계 로맨스",
+    "co_count": 26,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "女主人公",
+    "label_a_ko": "여성 주인공",
+    "label_b_original": "西洋",
+    "label_b_ko": "서양풍",
+    "co_count": 25,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "残酷な描写あり",
+    "label_a_ko": "잔혹 묘사 있음",
+    "label_b_original": "魔法",
+    "label_b_ko": "마법",
+    "co_count": 25,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "ハッピーエンド",
+    "label_b_ko": "해피엔딩",
+    "co_count": 24,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ざまぁ",
+    "label_a_ko": "사이다/복수",
+    "label_b_original": "異世界〔恋愛〕",
+    "label_b_ko": "이세계 로맨스",
+    "co_count": 24,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "チート",
+    "label_a_ko": "치트",
+    "label_b_original": "異世界転生",
+    "label_b_ko": "이세계 전생",
+    "co_count": 23,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ハイファンタジー〔ファンタジー〕",
+    "label_a_ko": "하이 판타지",
+    "label_b_original": "異世界転移",
+    "label_b_ko": "이세계 전이",
+    "co_count": 23,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ざまぁ",
+    "label_a_ko": "사이다/복수",
+    "label_b_original": "恋愛",
+    "label_b_ko": "연애/로맨스",
+    "co_count": 22,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ダンジョン",
+    "label_a_ko": "던전",
+    "label_b_original": "男主人公",
+    "label_b_ko": "남성 주인공",
+    "co_count": 22,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ほのぼの",
+    "label_a_ko": "훈훈함/잔잔함",
+    "label_b_original": "日常",
+    "label_b_ko": "일상",
+    "co_count": 22,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "西洋",
+    "label_b_ko": "서양풍",
+    "co_count": 22,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ざまぁ",
+    "label_a_ko": "사이다/복수",
+    "label_b_original": "女主人公",
+    "label_b_ko": "여성 주인공",
+    "co_count": 21,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "現代",
+    "label_a_ko": "현대",
+    "label_b_original": "男主人公",
+    "label_b_ko": "남성 주인공",
+    "co_count": 21,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ほのぼの",
+    "label_a_ko": "훈훈함/잔잔함",
+    "label_b_original": "ハイファンタジー〔ファンタジー〕",
+    "label_b_ko": "하이 판타지",
+    "co_count": 21,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ローファンタジー〔ファンタジー〕",
+    "label_a_ko": "로우 판타지",
+    "label_b_original": "残酷な描写あり",
+    "label_b_ko": "잔혹 묘사 있음",
+    "co_count": 21,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "ほのぼの",
+    "label_b_ko": "훈훈함/잔잔함",
+    "co_count": 21,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ほのぼの",
+    "label_a_ko": "훈훈함/잔잔함",
+    "label_b_original": "ハッピーエンド",
+    "label_b_ko": "해피엔딩",
+    "co_count": 20,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "シリアス",
+    "label_a_ko": "시리어스",
+    "label_b_original": "残酷な描写あり",
+    "label_b_ko": "잔혹 묘사 있음",
+    "co_count": 20,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "女主人公",
+    "label_a_ko": "여성 주인공",
+    "label_b_original": "残酷な描写あり",
+    "label_b_ko": "잔혹 묘사 있음",
+    "co_count": 20,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "異世界転移",
+    "label_b_ko": "이세계 전이",
+    "co_count": 20,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ほのぼの",
+    "label_a_ko": "훈훈함/잔잔함",
+    "label_b_original": "男主人公",
+    "label_b_ko": "남성 주인공",
+    "co_count": 19,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "ハイファンタジー〔ファンタジー〕",
+    "label_a_ko": "하이 판타지",
+    "label_b_original": "西洋",
+    "label_b_ko": "서양풍",
+    "co_count": 19,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "日常",
+    "label_a_ko": "일상",
+    "label_b_original": "男主人公",
+    "label_b_ko": "남성 주인공",
+    "co_count": 19,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "R15",
+    "label_a_ko": "R15",
+    "label_b_original": "チート",
+    "label_b_ko": "치트",
+    "co_count": 19,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Japan",
+    "label_a_original": "チート",
+    "label_a_ko": "치트",
+    "label_b_original": "ハイファンタジー〔ファンタジー〕",
+    "label_b_ko": "하이 판타지",
+    "co_count": 19,
+    "records_with_label_pairs": 337
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 52,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "มหาวิทยาลัย",
+    "label_b_ko": "대학",
+    "co_count": 35,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "น่ารัก",
+    "label_b_ko": "귀여움",
+    "co_count": 28,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "วิศวะ",
+    "label_b_ko": "공대",
+    "co_count": 28,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "รักวัยรุ่น",
+    "label_b_ko": "청춘 로맨스",
+    "co_count": 28,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "โรมานซ์",
+    "label_b_ko": "로맨스",
+    "co_count": 27,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "18+",
+    "label_a_ko": "18+",
+    "label_b_original": "Love Novel",
+    "label_b_ko": "로맨스 소설",
+    "co_count": 25,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "ดรามา",
+    "label_b_ko": "드라마",
+    "co_count": 24,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "แอบรัก",
+    "label_b_ko": "짝사랑",
+    "co_count": 24,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "มหาวิทยาลัย",
+    "label_a_ko": "대학",
+    "label_b_original": "วิศวะ",
+    "label_b_ko": "공대",
+    "co_count": 24,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Feel good",
+    "label_a_ko": "필굿",
+    "label_b_original": "Love Novel",
+    "label_b_ko": "로맨스 소설",
+    "co_count": 23,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "มหาวิทยาลัย",
+    "label_a_ko": "대학",
+    "label_b_original": "รักวัยรุ่น",
+    "label_b_ko": "청춘 로맨스",
+    "co_count": 23,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "นิยายรัก",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 22,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "ความรัก",
+    "label_b_ko": "사랑",
+    "co_count": 22,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "ตลก",
+    "label_b_ko": "코미디",
+    "co_count": 21,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "นิยายรักวัยรุ่น",
+    "label_b_ko": "청춘 로맨스 소설",
+    "co_count": 21,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "นิยายรักจีนโบราณ",
+    "label_b_ko": "중국 고전풍 로맨스",
+    "co_count": 20,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "นิยายรักวัยว้าวุ่น",
+    "label_b_ko": "청춘 로맨스",
+    "co_count": 20,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "มหาวิทยาลัย",
+    "label_a_ko": "대학",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 19,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "น่ารัก",
+    "label_a_ko": "귀여움",
+    "label_b_original": "รักวัยรุ่น",
+    "label_b_ko": "청춘 로맨스",
+    "co_count": 18,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "น่ารัก",
+    "label_a_ko": "귀여움",
+    "label_b_original": "มหาวิทยาลัย",
+    "label_b_ko": "대학",
+    "co_count": 18,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "18+",
+    "label_a_ko": "18+",
+    "label_b_original": "นิยายรัก",
+    "label_b_ko": "로맨스 소설",
+    "co_count": 17,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "หวาน",
+    "label_b_ko": "달달함",
+    "co_count": 17,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "รักวัยรุ่น",
+    "label_a_ko": "청춘 로맨스",
+    "label_b_original": "วิศวะ",
+    "label_b_ko": "공대",
+    "co_count": 17,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Feel good",
+    "label_a_ko": "필굿",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 16,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "ทะลุมิติ",
+    "label_b_ko": "차원이동/빙의",
+    "co_count": 16,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "ดรามา",
+    "label_a_ko": "드라마",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 16,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "นิยายรัก",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "โรมานซ์",
+    "label_b_ko": "로맨스",
+    "co_count": 16,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "นิยายโรแมนติก",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 16,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "น่ารัก",
+    "label_a_ko": "귀여움",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 16,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "ดราม่า",
+    "label_b_ko": "드라마",
+    "co_count": 15,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "18+",
+    "label_a_ko": "18+",
+    "label_b_original": "โรมานซ์",
+    "label_b_ko": "로맨스",
+    "co_count": 15,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "นิยายโรแมนติก",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "น่ารัก",
+    "label_b_ko": "귀여움",
+    "co_count": 15,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "รักวัยรุ่น",
+    "label_a_ko": "청춘 로맨스",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 15,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "นิยายรักวัยรุ่น",
+    "label_a_ko": "청춘 로맨스 소설",
+    "label_b_original": "มหาวิทยาลัย",
+    "label_b_ko": "대학",
+    "co_count": 15,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "นิยายรักวัยว้าวุ่น",
+    "label_a_ko": "청춘 로맨스",
+    "label_b_original": "มหาวิทยาลัย",
+    "label_b_ko": "대학",
+    "co_count": 15,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "นิยายรักวัยว้าวุ่น",
+    "label_a_ko": "청춘 로맨스",
+    "label_b_original": "วิศวะ",
+    "label_b_ko": "공대",
+    "co_count": 15,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "ความรัก",
+    "label_a_ko": "사랑",
+    "label_b_original": "นิยายรัก",
+    "label_b_ko": "로맨스 소설",
+    "co_count": 14,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "ดรามา",
+    "label_a_ko": "드라마",
+    "label_b_original": "นิยายรัก",
+    "label_b_ko": "로맨스 소설",
+    "co_count": 14,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "มาเฟีย",
+    "label_b_ko": "마피아",
+    "co_count": 14,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "18+",
+    "label_a_ko": "18+",
+    "label_b_original": "นิยายโรแมนติก",
+    "label_b_ko": "로맨스 소설",
+    "co_count": 14,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Feel good",
+    "label_a_ko": "필굿",
+    "label_b_original": "มหาวิทยาลัย",
+    "label_b_ko": "대학",
+    "co_count": 14,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "ความรัก",
+    "label_a_ko": "사랑",
+    "label_b_original": "มหาวิทยาลัย",
+    "label_b_ko": "대학",
+    "co_count": 14,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "วิศวะ",
+    "label_a_ko": "공대",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 14,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "นิยายรักวัยรุ่น",
+    "label_a_ko": "청춘 로맨스 소설",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 14,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "Love Novel",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "เพื่อนสนิท",
+    "label_b_ko": "절친",
+    "co_count": 13,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "นิยายรัก",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "แอบรัก",
+    "label_b_ko": "짝사랑",
+    "co_count": 13,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "18+",
+    "label_a_ko": "18+",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 13,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "โรมานซ์",
+    "label_a_ko": "로맨스",
+    "label_b_original": "โรแมนติก",
+    "label_b_ko": "로맨틱",
+    "co_count": 13,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "Thailand",
+    "label_a_original": "นิยายโรมานซ์",
+    "label_a_ko": "로맨스 소설",
+    "label_b_original": "โรมานซ์",
+    "label_b_ko": "로맨스",
+    "co_count": 13,
+    "records_with_label_pairs": 100
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adventure",
+    "label_a_ko": "모험",
+    "label_b_original": "Fantasy",
+    "label_b_ko": "판타지",
+    "co_count": 156,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Fantasy",
+    "label_b_ko": "판타지",
+    "co_count": 145,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Adventure",
+    "label_b_ko": "모험",
+    "co_count": 125,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "LitRPG",
+    "label_b_ko": "LitRPG",
+    "co_count": 124,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "LitRPG",
+    "label_b_ko": "LitRPG",
+    "co_count": 103,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adventure",
+    "label_a_ko": "모험",
+    "label_b_original": "LitRPG",
+    "label_b_ko": "LitRPG",
+    "co_count": 99,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "Harem",
+    "label_b_ko": "하렘",
+    "co_count": 76,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "Slice of Life",
+    "label_b_ko": "일상",
+    "co_count": 74,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "Isekai",
+    "label_b_ko": "이세계",
+    "co_count": 72,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adult",
+    "label_a_ko": "성인",
+    "label_b_original": "Harem",
+    "label_b_ko": "하렘",
+    "co_count": 70,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Harem",
+    "label_a_ko": "하렘",
+    "label_b_original": "Smut",
+    "label_b_ko": "성인/선정 요소",
+    "co_count": 68,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "Progression",
+    "label_b_ko": "성장형 판타지",
+    "co_count": 67,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "Romance",
+    "label_b_ko": "로맨스",
+    "co_count": 66,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adventure",
+    "label_a_ko": "모험",
+    "label_b_original": "Progression",
+    "label_b_ko": "성장형 판타지",
+    "co_count": 64,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Ecchi",
+    "label_a_ko": "에치/선정 요소",
+    "label_b_original": "Harem",
+    "label_b_ko": "하렘",
+    "co_count": 64,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adventure",
+    "label_a_ko": "모험",
+    "label_b_original": "Slice of Life",
+    "label_b_ko": "일상",
+    "co_count": 62,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "Magic",
+    "label_b_ko": "마법",
+    "co_count": 60,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adventure",
+    "label_a_ko": "모험",
+    "label_b_original": "Isekai",
+    "label_b_ko": "이세계",
+    "co_count": 60,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Harem",
+    "label_a_ko": "하렘",
+    "label_b_original": "Romance",
+    "label_b_ko": "로맨스",
+    "co_count": 60,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adult",
+    "label_a_ko": "성인",
+    "label_b_original": "Smut",
+    "label_b_ko": "성인/선정 요소",
+    "co_count": 60,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Progression",
+    "label_b_ko": "성장형 판타지",
+    "co_count": 59,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adventure",
+    "label_a_ko": "모험",
+    "label_b_original": "Male Lead",
+    "label_b_ko": "남성 주인공",
+    "co_count": 57,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "Male Lead",
+    "label_b_ko": "남성 주인공",
+    "co_count": 57,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adult",
+    "label_a_ko": "성인",
+    "label_b_original": "Fantasy",
+    "label_b_ko": "판타지",
+    "co_count": 56,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Romance",
+    "label_b_ko": "로맨스",
+    "co_count": 54,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Harem",
+    "label_b_ko": "하렘",
+    "co_count": 54,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "Smut",
+    "label_b_ko": "성인/선정 요소",
+    "co_count": 54,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adventure",
+    "label_a_ko": "모험",
+    "label_b_original": "Magic",
+    "label_b_ko": "마법",
+    "co_count": 53,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Male Lead",
+    "label_b_ko": "남성 주인공",
+    "co_count": 52,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adult",
+    "label_a_ko": "성인",
+    "label_b_original": "Ecchi",
+    "label_b_ko": "에치/선정 요소",
+    "co_count": 52,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Ecchi",
+    "label_a_ko": "에치/선정 요소",
+    "label_b_original": "Fantasy",
+    "label_b_ko": "판타지",
+    "co_count": 52,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Isekai",
+    "label_b_ko": "이세계",
+    "co_count": 52,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Ecchi",
+    "label_a_ko": "에치/선정 요소",
+    "label_b_original": "Smut",
+    "label_b_ko": "성인/선정 요소",
+    "co_count": 52,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "LitRPG",
+    "label_a_ko": "LitRPG",
+    "label_b_original": "Progression",
+    "label_b_ko": "성장형 판타지",
+    "co_count": 51,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Magic",
+    "label_a_ko": "마법",
+    "label_b_original": "Progression",
+    "label_b_ko": "성장형 판타지",
+    "co_count": 51,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Male Lead",
+    "label_a_ko": "남성 주인공",
+    "label_b_original": "Progression",
+    "label_b_ko": "성장형 판타지",
+    "co_count": 51,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Magic",
+    "label_b_ko": "마법",
+    "co_count": 50,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Harem",
+    "label_a_ko": "하렘",
+    "label_b_original": "LitRPG",
+    "label_b_ko": "LitRPG",
+    "co_count": 50,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "romance",
+    "label_b_ko": "로맨스",
+    "co_count": 49,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Fantasy",
+    "label_a_ko": "판타지",
+    "label_b_original": "Supernatural",
+    "label_b_ko": "초자연",
+    "co_count": 48,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Slice of Life",
+    "label_b_ko": "일상",
+    "co_count": 47,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "LitRPG",
+    "label_a_ko": "LitRPG",
+    "label_b_original": "Magic",
+    "label_b_ko": "마법",
+    "co_count": 46,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "LitRPG",
+    "label_a_ko": "LitRPG",
+    "label_b_original": "Slice of Life",
+    "label_b_ko": "일상",
+    "co_count": 46,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Adult",
+    "label_a_ko": "성인",
+    "label_b_original": "Mature",
+    "label_b_ko": "성인/성숙한 독자",
+    "co_count": 46,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Harem",
+    "label_a_ko": "하렘",
+    "label_b_original": "Mature",
+    "label_b_ko": "성인/성숙한 독자",
+    "co_count": 46,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Isekai",
+    "label_a_ko": "이세계",
+    "label_b_original": "LitRPG",
+    "label_b_ko": "LitRPG",
+    "co_count": 46,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Comedy",
+    "label_b_ko": "코미디",
+    "co_count": 44,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Ecchi",
+    "label_a_ko": "에치/선정 요소",
+    "label_b_original": "LitRPG",
+    "label_b_ko": "LitRPG",
+    "co_count": 44,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Romance",
+    "label_a_ko": "로맨스",
+    "label_b_original": "Smut",
+    "label_b_ko": "성인/선정 요소",
+    "co_count": 44,
+    "records_with_label_pairs": 352
+  },
+  {
+    "market": "US",
+    "label_a_original": "Action",
+    "label_a_ko": "액션",
+    "label_b_original": "Supernatural",
+    "label_b_ko": "초자연",
+    "co_count": 43,
+    "records_with_label_pairs": 352
+  }
+]

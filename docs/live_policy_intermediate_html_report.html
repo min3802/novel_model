@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>중간 HTML 원문 확인</title>
+  <style>
+    body { margin: 0; background: #f6f3ee; color: #241f1a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif; line-height: 1.58; }
+    main { max-width: 1180px; margin: 0 auto; padding: 32px 20px 64px; }
+    .meta, .section, .card { background: #fff; border: 1px solid #e2d9cd; border-radius: 22px; padding: 22px; box-shadow: 0 10px 30px rgba(57,43,25,.06); }
+    .meta { background: #fffaf3; margin-bottom: 18px; }
+    .meta p { margin: 6px 0 0; color: #70665d; }
+    h1, h2, h3 { margin: 0 0 10px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .stack { display: grid; gap: 16px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { border: 1px solid #e6ddcf; background: #fff7ed; border-radius: 999px; padding: 6px 10px; }
+    .chart-card { border: 1px solid #e6ddcf; border-radius: 18px; background: #fffaf5; padding: 16px; }
+    .chart-card h3 { font-size: 16px; margin-bottom: 12px; }
+    .chart-row { display: grid; grid-template-columns: minmax(110px, 1fr) 2fr minmax(48px, auto); gap: 10px; align-items: center; margin: 10px 0; }
+    .chart-label { font-weight: 800; color: #3f352c; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .chart-track { height: 12px; border-radius: 999px; background: #eee4d8; overflow: hidden; }
+    .chart-track span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #c57a32, #e0ad6b); }
+    .chart-value { color: #70665d; font-size: 12px; text-align: right; }
+    .market-snapshot .work-summary { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+    .muted { color: #70665d; }
+    .badge { display: inline-block; background: #efe7dc; border-radius: 999px; padding: 4px 9px; margin-right: 6px; font-size: 12px; }
+    a { color: #9b5a1f; }
+    details summary { cursor: pointer; font-weight: 800; }
+    .guide-report { display: grid; gap: 18px; }
+    .guide-cover, .guide-section { background: #fff; border: 1px solid #e2d9cd; border-radius: 22px; padding: 22px; box-shadow: 0 10px 30px rgba(57,43,25,.06); }
+    .guide-cover-label { color: #9b6a2f; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+    .guide-cover-title { font-size: 32px; font-weight: 800; margin-top: 8px; }
+    .guide-cover-title em { color: #b1672d; font-style: normal; }
+    .guide-cover-sub, .guide-legacy-anchors { display: flex; flex-wrap: wrap; gap: 8px; color: #6f6256; margin-top: 12px; }
+    .guide-cover-sub span { background: #f3eadf; padding: 6px 10px; border-radius: 999px; }
+    .guide-legacy-anchors { padding: 12px 16px; border-radius: 14px; background: #efe7dc; }
+    .guide-section-title { font-size: 18px; font-weight: 800; }
+    .guide-section-help { margin: -4px 0 14px; color: #70665d; }
+    .guide-list { margin: 12px 0 0; padding-left: 20px; }
+    .guide-list li { margin: 8px 0; }
+    .note-list { display: grid; margin-top: 12px; border: 1px solid #e2d9cd; border-radius: 18px; overflow: hidden; background: #fff; }
+    .note-row { display: grid; grid-template-columns: 170px 1fr; gap: 18px; padding: 16px 18px; border-bottom: 1px solid #eee3d7; }
+    .note-row:last-child { border-bottom: 0; }
+    .note-row h3 { margin: 0; font-size: 16px; }
+    .note-row p { margin: 0; color: #70665d; }
+    .note-row small { display: block; margin-top: 5px; color: #8a7a6b; }
+    .work-summary { display: grid; grid-template-columns: 1.4fr .8fr; gap: 10px; margin: 14px 0; }
+    .work-summary div { display: grid; gap: 4px; border: 1px solid #e6ddcf; border-radius: 16px; background: #fffaf5; padding: 14px 16px; }
+    .work-summary small { color: #8a7a6b; font-weight: 800; }
+    .work-summary strong { color: #241f1a; }
+    .work-footnote { margin: 12px 0 0; color: #70665d; }
+    .quiet-note { margin-top: 14px; padding: 16px; border-radius: 16px; background: #f8f4ef; border: 1px dashed #d9cbb9; }
+    .quiet-note p { margin: 8px 0 4px; color: #70665d; }
+    .quiet-note small { color: #70665d; }
+    .policy-summary { display: grid; gap: 10px; margin: 14px 0; padding: 16px; border: 1px solid #e6ddcf; border-radius: 16px; background: #fffaf5; }
+    .policy-summary span { display: block; color: #9b5a1f; font-weight: 800; }
+    .policy-summary p { margin: 4px 0 0; color: #70665d; }
+    .policy-details { margin-top: 14px; padding: 16px; border: 1px solid #e2d9cd; border-radius: 16px; background: #fff; }
+    .policy-checkpoints { display: grid; gap: 12px; margin-top: 14px; }
+    .policy-checkpoint { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 16px; border: 1px solid #e6ddcf; border-radius: 16px; background: #fffaf5; }
+    .policy-checkpoint > span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 999px; background: #fff1df; color: #9b5a1f; font-weight: 900; }
+    .policy-checkpoint p { margin: 6px 0 0; color: #70665d; }
+    .summary-box { background: #fffaf3; }
+    .summary-box p { color: #3f352c; font-weight: 750; }
+    .dev-meta { margin-top: 18px; padding: 16px; border: 1px dashed #d9cbb9; border-radius: 16px; color: #70665d; }
+    .policy-detail-list { display: grid; gap: 10px; margin-top: 12px; }
+    .policy-detail-item { border: 1px solid #eee3d7; border-radius: 14px; padding: 14px; background: #fffdfb; }
+    .policy-detail-item p { margin: 6px 0 0; color: #70665d; }
+    .policy-detail-item small { color: #8a7a6b; }
+    @media(max-width: 720px) { .note-row, .work-summary { grid-template-columns: 1fr; gap: 6px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="meta">
+      <h1>중간 HTML 원문 확인</h1>
+      <p>입력한 작품 정보를 일본 플랫폼 관찰 데이터와 게시 전 규정 데이터에 대조해, 참고할 태그 흐름과 체크포인트를 정리했어요.</p>
+    </section>
+    
+    <div class="guide-report">
+      <div class="guide-cover">
+        <div class="guide-cover-label">Localization Guide · Platform Trend Evidence</div>
+        <div class="guide-cover-title">Japan 현지화 가이드<br><em>플랫폼 트렌드 리포트</em></div>
+        <div class="guide-cover-sub"><span>시놉시스 기반 국가 추천</span><span>로맨스 판타지</span><span>current platform trends</span></div>
+      </div>
+      <div class="guide-legacy-anchors">작성 방향 · 문화 주의사항 · 플랫폼 규정</div>
+      <div class="guide-section"><div class="guide-section-header"><span class="guide-section-title">추천 국가 후보</span></div><ul class="guide-list"><li>US/global English: 663.148 — requested genre overlaps with platform-visible genres/tags (1349); synopsis motifs overlap with exposed titles/descriptions/tags (912)</li><li>Japan: 99.816 — requested genre overlaps with platform-visible genres/tags (172)</li><li>Thailand: 43.716 — synopsis motifs overlap with exposed titles/descriptions/tags (104); requested genre overlaps with platform-visible genres/tags (2)</li></ul></div>
+      <div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>이번 결과 요약</span></div><ul class='guide-list'><li>대상: Japan / 입력 장르: 로맨스 판타지</li><li>시놉시스에서 관계/로맨스 축, 회귀·전생·이세계 축, 전투·생존 축을 조심스러운 추정 요소로 읽었습니다.</li><li>상위 장르 근거: R15(104), 異世界転生(97), 男主人公(90), 残酷な描写あり(87), ざまぁ(78)</li><li>시놉시스가 있어 작품의 소재·관계·수위 확인 항목을 더 구체적으로 분리했습니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>입력 작품을 이렇게 읽었어요</span></div><ul class='guide-list'><li>입력 장르 `로맨스 판타지`을 우선 기준으로 삼았습니다.</li><li>시놉시스에서 관계/로맨스 축, 회귀·전생·이세계 축, 전투·생존 축을 조심스러운 추정 요소로 읽었습니다.</li><li>추정 소재 축: 관계/로맨스 축, 회귀·전생·이세계 축, 전투·생존 축</li><li>Isekai/reincarnation framing is prominent; early setup should clarify transfer/rebirth rules and the protagonist&#x27;s advantage.</li><li>Relationship-forward fantasy/romance demand is strong; emotional stakes and pairing dynamics need clear early hooks.</li><li>Male-protagonist adventure/power-fantasy remains visible in platform exposure.</li><li>Female-lead status reversal, romance conflict, and social-position tropes are visible localization levers.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>Japan 플랫폼에서는 어떤 이름으로 보일 수 있을까요?</span></div><ul class='guide-list'><li>플랫폼 상위 노출작의 제목·소개문은 장르 훅을 빠르게 드러내는 방향으로 압축되는 경향을 참고합니다.</li><li>시놉시스 기준으로는 관계/로맨스 축, 회귀·전생·이세계 축, 전투·생존 축이 먼저 보입니다. 이 표현은 확정 태그가 아니라 소개문/태그 후보를 점검하기 위한 추정입니다.</li><li>공개 시놉시스는 신호 분석에만 쓰고 문장을 그대로 복사하지 않습니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>Japan 순위권 작품에서 자주 보인 키워드</span></div><ul class='guide-list'><li>순위권에서 자주 보인 키워드: R15(104), 異世界転生(97), 男主人公(90), 残酷な描写あり(87), ハッピーエンド(82), ざまぁ(78), ハイファンタジー〔ファンタジー〕(74), 女主人公(68)</li><li>이 키워드는 적용 지시가 아니라 대상 플랫폼에서 자주 보인 공개 태그/장르 표현입니다.</li><li>고유명사, 스킬명, 계급명, 호칭은 작품 단위 glossary로 고정하고 태그 표현과 충돌하지 않는지 확인합니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>게시 전 체크포인트</span></div><ul class='guide-list'><li>연령등급, 잔혹/성적 표현, 플랫폼별 금지·제한 표현은 시장 분위기와 별개로 확인합니다.</li><li>시놉시스에서 나온 민감 요소는 위반 확정이 아니라 게시 전 확인 후보로 표시합니다.</li><li>Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.</li><li>Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.</li><li>Japanese rankings expose age/content warnings; localization should preserve rating-sensitive violence/sexual-content cues.</li><li>플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>상세 근거와 다음 확인</span></div><ul class='guide-list'><li>Anchor the pitch in the dominant platform-visible genre mix before adding niche cultural explanations.</li><li>Convert synopsis observations into title hooks, opening-episode stakes, and tag/copy choices rather than copying source descriptions.</li><li>Preserve progression mechanics in translation: skill names, rank terms, and upgrade cadence should be consistent across episodes.</li><li>Make relationship premise, power imbalance, consent boundary, and emotional payoff legible in synopsis and chapter-one localization.</li><li>Explain reincarnation/transport premises compactly; readers tolerate familiar setups when the unique advantage is clear.</li><li>For Japan, compare Korean proper nouns and honorific/social-rank terms against light-novel readability; keep hierarchy clear but reduce unexplained Korean-only institutional terms.</li><li>최종 가이드에는 사용한 플랫폼, 수집일, rank evidence를 함께 남깁니다.</li><li>본문 수집 없이 공개 메타데이터와 사용자가 입력한 시놉시스 신호만 사용합니다.</li></ul></div><div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>사용 근거</span></div><ul class='guide-list'><li>Syosetu/weekly_ranking rank 37: 【連載版】聖女は3歳児でした 〜聖女誕生からレイナ成長記録〜 (ハイファンタジー〔ファンタジー〕) - genre hits=2, synopsis hits=0, rank=37</li><li>Syosetu/monthly_ranking rank 1: 45歳社長、転生先でハズレスキル「綻びの目」を武器に没落領地を再建する (ハイファンタジー〔ファンタジー〕) - genre hits=1, synopsis hits=0, rank=1</li><li>Syosetu/weekly_ranking rank 1: 第二部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜 (異世界〔恋愛〕) - genre hits=1, synopsis hits=0, rank=1</li><li>Syosetu/monthly_ranking rank 2: 第二部完結 当て馬令嬢リベルタ〜転生喪女はゴーインニマイウェー〜 (異世界〔恋愛〕) - genre hits=1, synopsis hits=0, rank=2</li><li>Syosetu/monthly_ranking rank 3: 【書籍化＆コミカライズ】双子の妹に殺された姉、二度目の人生は初恋のイケおじ王弟にフルベットします！ (異世界〔恋愛〕) - genre hits=1, synopsis hits=0, rank=3</li><li>Syosetu/weekly_ranking rank 3: 【第二部開始】アルジェ・ロッシーニ元王太子妃の剣 (異世界〔恋愛〕) - genre hits=1, synopsis hits=0, rank=3</li><li>Syosetu/monthly_ranking rank 4: 病弱な幼馴染のために娘の部屋を明け渡せと言われたので、夫ごと捨てます～前世で読んだ物語では娘が死んでから溺愛されるそうですが、そんな展開はお断りです～ (異世界〔恋愛〕) - genre hits=1, synopsis hits=0, rank=4</li><li>Syosetu/weekly_ranking rank 4: 45歳社長、転生先でハズレスキル「綻びの目」を武器に没落領地を再建する (ハイファンタジー〔ファンタジー〕) - genre hits=1, synopsis hits=0, rank=4</li></ul></div>
+    </div>
+    
+    <details class="dev-meta"><summary>자세한 생성 정보</summary><p>Generated at: 2026-06-09T00:55:58.309823+00:00</p><p class="muted">Source: live /api/guide response htmlReport field.</p></details>
+  </main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "manual-ko-ja-idiom-001",
+    "source_id": "manual-ko-ja-idiom-001",
+    "embedding_text": "다 잡은 고기를 놓치다. 거의 손에 넣은 성과를 마지막에 놓쳐 허탈함을 드러내는 표현.",
+    "context_text": "한국어 기준 표현: 다 잡은 고기를 놓치다\n일본어 후보: 掴みかけた勝利を逃す / 手中に収めかけたものを逃す",
+    "metadata": {
+      "locale": "ko_ja",
+      "category": "idiom",
+      "source_type": "manual_scenario_augmentation",
+      "status": "scenario_manual",
+      "literal_risk": "high"
+    }
+  },
+  {
+    "id": "manual-ko-ja-idiom-002",
+    "source_id": "manual-ko-ja-idiom-002",
+    "embedding_text": "노는 물. 사람의 처지나 활동 무대가 달라지는 상황을 가리키는 표현.",
+    "context_text": "한국어 기준 표현: 노는 물\n일본어 후보: 住む世界 / 活躍の場 / ステージ",
+    "metadata": {
+      "locale": "ko_ja",
+      "category": "idiom",
+      "source_type": "manual_scenario_augmentation",
+      "status": "scenario_manual",
+      "literal_risk": "medium"
+    }
+  },
+  {
+    "id": "manual-ko-ja-idiom-003",
+    "source_id": "manual-ko-ja-idiom-003",
+    "embedding_text": "벼랑 끝에 몰리다. 더는 물러설 곳이 없는 절박한 상황에 내몰리는 뜻.",
+    "context_text": "한국어 기준 표현: 벼랑 끝에 몰리다\n일본어 후보: 崖っぷちに追い詰められる",
+    "metadata": {
+      "locale": "ko_ja",
+      "category": "idiom",
+      "source_type": "manual_scenario_augmentation",
+      "status": "scenario_manual",
+      "literal_risk": "high"
+    }
+  },
+  {
+    "id": "manual-ko-ja-idiom-004",
+    "source_id": "manual-ko-ja-idiom-004",
+    "embedding_text": "눈물 쏙 빼놓다. 상대를 울리거나 정신없게 만들어 강한 반응을 끌어내는 뜻.",
+    "context_text": "한국어 기준 표현: 눈물 쏙 빼놓다\n일본어 후보: 泣かせる / 痛い目に遭わせる / 徹底的に打ちのめす",
+    "metadata": {
+      "locale": "ko_ja",
+      "category": "idiom",
+      "source_type": "manual_scenario_augmentation",
+      "status": "scenario_manual",
+      "literal_risk": "high"
+    }
+  },
+  {
+    "id": "manual-ko-ja-idiom-005",
+    "source_id": "manual-ko-ja-idiom-005",
+    "embedding_text": "목청이 터져라. 목이 쉬어도 될 만큼 큰소리로 외치거나 노래하는 모습을 나타내는 표현.",
+    "context_text": "한국어 기준 표현: 목청이 터져라\n일본어 후보: 声を張り上げて / 喉が枯れるほど",
+    "metadata": {
+      "locale": "ko_ja",
+      "category": "idiom",
+      "source_type": "manual_scenario_augmentation",
+      "status": "scenario_manual",
+      "literal_risk": "medium"
+    }
+  }
+]

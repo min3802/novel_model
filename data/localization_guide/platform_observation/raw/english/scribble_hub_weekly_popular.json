@@ -1,0 +1,2614 @@
+{
+  "market": "US",
+  "language_market": "English",
+  "raw_language": "en",
+  "platform": "Scribble Hub",
+  "signal_type": "weekly_popular",
+  "target_limit": 100,
+  "records": [
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 1,
+      "title": "The Young Master in the Shadows",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Martial Arts",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 14,
+        "favorites": 188408,
+        "readers": 8542,
+        "chapters": 536
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 2,
+      "title": "The Runesmith",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Martial Arts",
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 13,
+        "favorites": 255596,
+        "readers": 11979,
+        "chapters": 680
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 3,
+      "title": "My Dungeon Life: Rise of the Slave Harem",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 11,
+        "favorites": 183031,
+        "readers": 9589,
+        "chapters": 1803
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 4,
+      "title": "Goddess of Ice; Reborn as Naruto’s twin sister [Completed]",
+      "labels": [
+        "Action",
+        "Comedy",
+        "Ecchi",
+        "Girls Love",
+        "Harem"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 10,
+        "favorites": 290484,
+        "readers": 7797,
+        "chapters": 558
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 5,
+      "title": "A Pervert’s World",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "Mature",
+        "Smut",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 10,
+        "favorites": 49121,
+        "readers": 8944,
+        "chapters": 394
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 6,
+      "title": "The Incubus System",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 9,
+        "favorites": 136739,
+        "readers": 10110,
+        "chapters": 871
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 7,
+      "title": "Immortal Only Accepts Female Disciples",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Harem",
+        "Martial Arts",
+        "Mature",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 97474,
+        "readers": 9302,
+        "chapters": 887
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 8,
+      "title": "Rebirth of the Nephilim",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 258901,
+        "readers": 8523,
+        "chapters": 705
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 9,
+      "title": "The S*x Beast System (The World Of Systems)",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "School Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 43436,
+        "readers": 12847,
+        "chapters": 181
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 10,
+      "title": "Heaven, Earth, Me",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Mature",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 7,
+        "favorites": 240709,
+        "readers": 8061,
+        "chapters": 1579
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 11,
+      "title": "New Life As An Ecchi Girl With A “Big Surprise”",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Gender Bender",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Mature",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 7,
+        "favorites": 72016,
+        "readers": 9281,
+        "chapters": 749
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 12,
+      "title": "A Cliché Multiverse Story",
+      "labels": [
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 148383,
+        "readers": 9552,
+        "chapters": 536
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 13,
+      "title": "Dungeons and Dalliances",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Girls Love",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "School Life",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 136832,
+        "readers": 9290,
+        "chapters": 378
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 14,
+      "title": "Isekai’d Shoggoth",
+      "labels": [
+        "Action",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "School Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 122353,
+        "readers": 10581,
+        "chapters": 185
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 15,
+      "title": "This Ascent to Divinity is Lewder Than Expected",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 107091,
+        "readers": 10811,
+        "chapters": 315
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 16,
+      "title": "Collide Gamer",
+      "labels": [
+        "Action",
+        "Adult",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "Romance",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 149743,
+        "readers": 6321,
+        "chapters": 2204
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 17,
+      "title": "Villain: The Play of Destiny",
+      "labels": [
+        "Action",
+        "Adult",
+        "Fantasy",
+        "Harem",
+        "Mature",
+        "Mystery",
+        "Romance",
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 119323,
+        "readers": 6478,
+        "chapters": 530
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 18,
+      "title": "THE CURSED GAMER",
+      "labels": [
+        "Action",
+        "Adult",
+        "Comedy",
+        "Ecchi",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 100229,
+        "readers": 7824,
+        "chapters": 500
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 19,
+      "title": "Chaotic Craftsman Worships The Cube",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Sci-fi"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 156119,
+        "readers": 3613,
+        "chapters": 1062
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 20,
+      "title": "The Reincarnated Vampire Just Wants To Enjoy Her New Life",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Gender Bender",
+        "Isekai",
+        "LitRPG",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 68974,
+        "readers": 10157,
+        "chapters": 210
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 21,
+      "title": "I was Betrayed then Reincarnated as a Kitsune",
+      "labels": [
+        "Adventure",
+        "Fantasy",
+        "Gender Bender",
+        "Girls Love",
+        "Isekai",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 116944,
+        "readers": 8481,
+        "chapters": 367
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 22,
+      "title": "Unfathomable Senior",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Ecchi",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Martial Arts"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 89269,
+        "readers": 5561,
+        "chapters": 783
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 23,
+      "title": "Reverse World",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Harem",
+        "Mature",
+        "School Life",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 39503,
+        "readers": 6076,
+        "chapters": 199
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 24,
+      "title": "He Who Fights With Monsters",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 6033,
+        "readers": 4839,
+        "chapters": 76
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 25,
+      "title": "Reborn From the Cosmos",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Mature",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 151086,
+        "readers": 6605,
+        "chapters": 863
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 26,
+      "title": "The Young Master in the Shadows",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Martial Arts",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 14,
+        "favorites": 188408,
+        "readers": 8542,
+        "chapters": 536
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 27,
+      "title": "The Runesmith",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Martial Arts",
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 13,
+        "favorites": 255596,
+        "readers": 11979,
+        "chapters": 680
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 28,
+      "title": "My Dungeon Life: Rise of the Slave Harem",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 11,
+        "favorites": 183031,
+        "readers": 9589,
+        "chapters": 1803
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 29,
+      "title": "Goddess of Ice; Reborn as Naruto’s twin sister [Completed]",
+      "labels": [
+        "Action",
+        "Comedy",
+        "Ecchi",
+        "Girls Love",
+        "Harem"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 10,
+        "favorites": 290484,
+        "readers": 7797,
+        "chapters": 558
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 30,
+      "title": "A Pervert’s World",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "Mature",
+        "Smut",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 10,
+        "favorites": 49121,
+        "readers": 8944,
+        "chapters": 394
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 31,
+      "title": "The Incubus System",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 9,
+        "favorites": 136739,
+        "readers": 10110,
+        "chapters": 871
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 32,
+      "title": "Immortal Only Accepts Female Disciples",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Harem",
+        "Martial Arts",
+        "Mature",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 97474,
+        "readers": 9302,
+        "chapters": 887
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 33,
+      "title": "Rebirth of the Nephilim",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 258901,
+        "readers": 8523,
+        "chapters": 705
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 34,
+      "title": "The S*x Beast System (The World Of Systems)",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "School Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 43436,
+        "readers": 12847,
+        "chapters": 181
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 35,
+      "title": "Heaven, Earth, Me",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Mature",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 7,
+        "favorites": 240709,
+        "readers": 8061,
+        "chapters": 1579
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 36,
+      "title": "New Life As An Ecchi Girl With A “Big Surprise”",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Gender Bender",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Mature",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 7,
+        "favorites": 72016,
+        "readers": 9281,
+        "chapters": 749
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 37,
+      "title": "A Cliché Multiverse Story",
+      "labels": [
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 148383,
+        "readers": 9552,
+        "chapters": 536
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 38,
+      "title": "Dungeons and Dalliances",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Girls Love",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "School Life",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 136832,
+        "readers": 9290,
+        "chapters": 378
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 39,
+      "title": "Isekai’d Shoggoth",
+      "labels": [
+        "Action",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "School Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 122353,
+        "readers": 10581,
+        "chapters": 185
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 40,
+      "title": "This Ascent to Divinity is Lewder Than Expected",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 107091,
+        "readers": 10811,
+        "chapters": 315
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 41,
+      "title": "Collide Gamer",
+      "labels": [
+        "Action",
+        "Adult",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "Romance",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 149743,
+        "readers": 6321,
+        "chapters": 2204
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 42,
+      "title": "Villain: The Play of Destiny",
+      "labels": [
+        "Action",
+        "Adult",
+        "Fantasy",
+        "Harem",
+        "Mature",
+        "Mystery",
+        "Romance",
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 119323,
+        "readers": 6478,
+        "chapters": 530
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 43,
+      "title": "THE CURSED GAMER",
+      "labels": [
+        "Action",
+        "Adult",
+        "Comedy",
+        "Ecchi",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 100229,
+        "readers": 7824,
+        "chapters": 500
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 44,
+      "title": "Chaotic Craftsman Worships The Cube",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Sci-fi"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 156119,
+        "readers": 3613,
+        "chapters": 1062
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 45,
+      "title": "The Reincarnated Vampire Just Wants To Enjoy Her New Life",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Gender Bender",
+        "Isekai",
+        "LitRPG",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 68974,
+        "readers": 10157,
+        "chapters": 210
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 46,
+      "title": "I was Betrayed then Reincarnated as a Kitsune",
+      "labels": [
+        "Adventure",
+        "Fantasy",
+        "Gender Bender",
+        "Girls Love",
+        "Isekai",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 116944,
+        "readers": 8481,
+        "chapters": 367
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 47,
+      "title": "Unfathomable Senior",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Ecchi",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Martial Arts"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 89269,
+        "readers": 5561,
+        "chapters": 783
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 48,
+      "title": "Reverse World",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Harem",
+        "Mature",
+        "School Life",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 39503,
+        "readers": 6076,
+        "chapters": 199
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 49,
+      "title": "He Who Fights With Monsters",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 6033,
+        "readers": 4839,
+        "chapters": 76
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 50,
+      "title": "Reborn From the Cosmos",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Mature",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 151086,
+        "readers": 6605,
+        "chapters": 863
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 51,
+      "title": "The Young Master in the Shadows",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Martial Arts",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 14,
+        "favorites": 188408,
+        "readers": 8542,
+        "chapters": 536
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 52,
+      "title": "The Runesmith",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Martial Arts",
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 13,
+        "favorites": 255596,
+        "readers": 11979,
+        "chapters": 680
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 53,
+      "title": "My Dungeon Life: Rise of the Slave Harem",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 11,
+        "favorites": 183031,
+        "readers": 9589,
+        "chapters": 1803
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 54,
+      "title": "Goddess of Ice; Reborn as Naruto’s twin sister [Completed]",
+      "labels": [
+        "Action",
+        "Comedy",
+        "Ecchi",
+        "Girls Love",
+        "Harem"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 10,
+        "favorites": 290484,
+        "readers": 7797,
+        "chapters": 558
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 55,
+      "title": "A Pervert’s World",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "Mature",
+        "Smut",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 10,
+        "favorites": 49121,
+        "readers": 8944,
+        "chapters": 394
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 56,
+      "title": "The Incubus System",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 9,
+        "favorites": 136739,
+        "readers": 10110,
+        "chapters": 871
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 57,
+      "title": "Immortal Only Accepts Female Disciples",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Harem",
+        "Martial Arts",
+        "Mature",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 97474,
+        "readers": 9302,
+        "chapters": 887
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 58,
+      "title": "Rebirth of the Nephilim",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 258901,
+        "readers": 8523,
+        "chapters": 705
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 59,
+      "title": "The S*x Beast System (The World Of Systems)",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "School Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 43436,
+        "readers": 12847,
+        "chapters": 181
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 60,
+      "title": "Heaven, Earth, Me",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Mature",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 7,
+        "favorites": 240709,
+        "readers": 8061,
+        "chapters": 1579
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 61,
+      "title": "New Life As An Ecchi Girl With A “Big Surprise”",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Gender Bender",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Mature",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 7,
+        "favorites": 72016,
+        "readers": 9281,
+        "chapters": 749
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 62,
+      "title": "A Cliché Multiverse Story",
+      "labels": [
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 148383,
+        "readers": 9552,
+        "chapters": 536
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 63,
+      "title": "Dungeons and Dalliances",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Girls Love",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "School Life",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 136832,
+        "readers": 9290,
+        "chapters": 378
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 64,
+      "title": "Isekai’d Shoggoth",
+      "labels": [
+        "Action",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "School Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 122353,
+        "readers": 10581,
+        "chapters": 185
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 65,
+      "title": "This Ascent to Divinity is Lewder Than Expected",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 107091,
+        "readers": 10811,
+        "chapters": 315
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 66,
+      "title": "Collide Gamer",
+      "labels": [
+        "Action",
+        "Adult",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "Romance",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 149743,
+        "readers": 6321,
+        "chapters": 2204
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 67,
+      "title": "Villain: The Play of Destiny",
+      "labels": [
+        "Action",
+        "Adult",
+        "Fantasy",
+        "Harem",
+        "Mature",
+        "Mystery",
+        "Romance",
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 119323,
+        "readers": 6478,
+        "chapters": 530
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 68,
+      "title": "THE CURSED GAMER",
+      "labels": [
+        "Action",
+        "Adult",
+        "Comedy",
+        "Ecchi",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 100229,
+        "readers": 7824,
+        "chapters": 500
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 69,
+      "title": "Chaotic Craftsman Worships The Cube",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Sci-fi"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 156119,
+        "readers": 3613,
+        "chapters": 1062
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 70,
+      "title": "The Reincarnated Vampire Just Wants To Enjoy Her New Life",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Gender Bender",
+        "Isekai",
+        "LitRPG",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 68974,
+        "readers": 10157,
+        "chapters": 210
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 71,
+      "title": "I was Betrayed then Reincarnated as a Kitsune",
+      "labels": [
+        "Adventure",
+        "Fantasy",
+        "Gender Bender",
+        "Girls Love",
+        "Isekai",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 116944,
+        "readers": 8481,
+        "chapters": 367
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 72,
+      "title": "Unfathomable Senior",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Ecchi",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Martial Arts"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 89269,
+        "readers": 5561,
+        "chapters": 783
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 73,
+      "title": "Reverse World",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Harem",
+        "Mature",
+        "School Life",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 39503,
+        "readers": 6076,
+        "chapters": 199
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 74,
+      "title": "He Who Fights With Monsters",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 6033,
+        "readers": 4839,
+        "chapters": 76
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 75,
+      "title": "Reborn From the Cosmos",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Mature",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 151086,
+        "readers": 6605,
+        "chapters": 863
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 76,
+      "title": "The Young Master in the Shadows",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Martial Arts",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 14,
+        "favorites": 188408,
+        "readers": 8542,
+        "chapters": 536
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 77,
+      "title": "The Runesmith",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Martial Arts",
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 13,
+        "favorites": 255596,
+        "readers": 11979,
+        "chapters": 680
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 78,
+      "title": "My Dungeon Life: Rise of the Slave Harem",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 11,
+        "favorites": 183031,
+        "readers": 9589,
+        "chapters": 1803
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 79,
+      "title": "Goddess of Ice; Reborn as Naruto’s twin sister [Completed]",
+      "labels": [
+        "Action",
+        "Comedy",
+        "Ecchi",
+        "Girls Love",
+        "Harem"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 10,
+        "favorites": 290484,
+        "readers": 7797,
+        "chapters": 558
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 80,
+      "title": "A Pervert’s World",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "Isekai",
+        "Mature",
+        "Smut",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 10,
+        "favorites": 49121,
+        "readers": 8944,
+        "chapters": 394
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 81,
+      "title": "The Incubus System",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 9,
+        "favorites": 136739,
+        "readers": 10110,
+        "chapters": 871
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 82,
+      "title": "Immortal Only Accepts Female Disciples",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Harem",
+        "Martial Arts",
+        "Mature",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 97474,
+        "readers": 9302,
+        "chapters": 887
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 83,
+      "title": "Rebirth of the Nephilim",
+      "labels": [
+        "Adult",
+        "Adventure",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 258901,
+        "readers": 8523,
+        "chapters": 705
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 84,
+      "title": "The S*x Beast System (The World Of Systems)",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "School Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 8,
+        "favorites": 43436,
+        "readers": 12847,
+        "chapters": 181
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 85,
+      "title": "Heaven, Earth, Me",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Mature",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 7,
+        "favorites": 240709,
+        "readers": 8061,
+        "chapters": 1579
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 86,
+      "title": "New Life As An Ecchi Girl With A “Big Surprise”",
+      "labels": [
+        "Action",
+        "Adult",
+        "Ecchi",
+        "Gender Bender",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Mature",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 7,
+        "favorites": 72016,
+        "readers": 9281,
+        "chapters": 749
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 87,
+      "title": "A Cliché Multiverse Story",
+      "labels": [
+        "Adventure",
+        "Ecchi",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 148383,
+        "readers": 9552,
+        "chapters": 536
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 88,
+      "title": "Dungeons and Dalliances",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Girls Love",
+        "Harem",
+        "LitRPG",
+        "Romance",
+        "School Life",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 136832,
+        "readers": 9290,
+        "chapters": 378
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 89,
+      "title": "Isekai’d Shoggoth",
+      "labels": [
+        "Action",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "School Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 122353,
+        "readers": 10581,
+        "chapters": 185
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 90,
+      "title": "This Ascent to Divinity is Lewder Than Expected",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Isekai",
+        "LitRPG",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 6,
+        "favorites": 107091,
+        "readers": 10811,
+        "chapters": 315
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 91,
+      "title": "Collide Gamer",
+      "labels": [
+        "Action",
+        "Adult",
+        "Fantasy",
+        "Harem",
+        "LitRPG",
+        "Mature",
+        "Romance",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 149743,
+        "readers": 6321,
+        "chapters": 2204
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 92,
+      "title": "Villain: The Play of Destiny",
+      "labels": [
+        "Action",
+        "Adult",
+        "Fantasy",
+        "Harem",
+        "Mature",
+        "Mystery",
+        "Romance",
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 119323,
+        "readers": 6478,
+        "chapters": 530
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 93,
+      "title": "THE CURSED GAMER",
+      "labels": [
+        "Action",
+        "Adult",
+        "Comedy",
+        "Ecchi",
+        "Harem",
+        "Isekai",
+        "Romance",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 5,
+        "favorites": 100229,
+        "readers": 7824,
+        "chapters": 500
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 94,
+      "title": "Chaotic Craftsman Worships The Cube",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Sci-fi"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 156119,
+        "readers": 3613,
+        "chapters": 1062
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 95,
+      "title": "The Reincarnated Vampire Just Wants To Enjoy Her New Life",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Gender Bender",
+        "Isekai",
+        "LitRPG",
+        "Supernatural"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 68974,
+        "readers": 10157,
+        "chapters": 210
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 96,
+      "title": "I was Betrayed then Reincarnated as a Kitsune",
+      "labels": [
+        "Adventure",
+        "Fantasy",
+        "Gender Bender",
+        "Girls Love",
+        "Isekai",
+        "Romance",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 116944,
+        "readers": 8481,
+        "chapters": 367
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 97,
+      "title": "Unfathomable Senior",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Ecchi",
+        "Fantasy",
+        "Isekai",
+        "LitRPG",
+        "Martial Arts"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 89269,
+        "readers": 5561,
+        "chapters": 783
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 98,
+      "title": "Reverse World",
+      "labels": [
+        "Adult",
+        "Ecchi",
+        "Harem",
+        "Mature",
+        "School Life",
+        "Slice of Life",
+        "Smut"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 39503,
+        "readers": 6076,
+        "chapters": 199
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 99,
+      "title": "He Who Fights With Monsters",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Isekai",
+        "LitRPG"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 6033,
+        "readers": 4839,
+        "chapters": 76
+      }
+    },
+    {
+      "market": "US",
+      "language_market": "English",
+      "raw_language": "en",
+      "platform": "Scribble Hub",
+      "signal_type": "weekly_popular",
+      "rank": 100,
+      "title": "Reborn From the Cosmos",
+      "labels": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Girls Love",
+        "Harem",
+        "Mature",
+        "Slice of Life"
+      ],
+      "synopsis": "",
+      "public_metrics": {
+        "views": 4,
+        "favorites": 151086,
+        "readers": 6605,
+        "chapters": 863
+      }
+    }
+  ]
+}

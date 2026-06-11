@@ -1,0 +1,66 @@
+[
+  {
+    "case": "Japan",
+    "targetCountry": "Japan",
+    "title": "Japan 현지화 가이드",
+    "tags": [
+      "로맨스 판타지",
+      "Japan",
+      "현지화",
+      "플랫폼 트렌드"
+    ],
+    "cover_title": "Japan 현지화 가이드<br><em>플랫폼 트렌드 리포트</em>",
+    "cover_sub": "<span>시놉시스 기반 국가 추천</span><span>로맨스 판타지</span><span>current platform trends</span>",
+    "contains_triple_question": false,
+    "contains_double_question": false,
+    "contains_replacement_char": false
+  },
+  {
+    "case": "US/global English",
+    "targetCountry": "US/global English",
+    "title": "US/global English 현지화 가이드",
+    "tags": [
+      "LitRPG",
+      "US/global English",
+      "현지화",
+      "플랫폼 트렌드"
+    ],
+    "cover_title": "US/global English 현지화 가이드<br><em>플랫폼 트렌드 리포트</em>",
+    "cover_sub": "<span>시놉시스 기반 국가 추천</span><span>LitRPG</span><span>current platform trends</span>",
+    "contains_triple_question": false,
+    "contains_double_question": false,
+    "contains_replacement_char": false
+  },
+  {
+    "case": "China",
+    "targetCountry": "China",
+    "title": "China 현지화 가이드",
+    "tags": [
+      "무협",
+      "China",
+      "현지화",
+      "플랫폼 트렌드"
+    ],
+    "cover_title": "China 현지화 가이드<br><em>플랫폼 트렌드 리포트</em>",
+    "cover_sub": "<span>시놉시스 기반 국가 추천</span><span>무협</span><span>current platform trends</span>",
+    "contains_triple_question": false,
+    "contains_double_question": false,
+    "contains_replacement_char": false
+  },
+  {
+    "case": "Thailand",
+    "targetCountry": "Thailand",
+    "title": "Thailand 현지화 가이드",
+    "tags": [
+      "로맨스",
+      "Thailand",
+      "현지화",
+      "플랫폼 트렌드"
+    ],
+    "cover_title": "Thailand 현지화 가이드<br><em>플랫폼 트렌드 리포트</em>",
+    "cover_sub": "<span>시놉시스 기반 국가 추천</span><span>로맨스</span><span>current platform trends</span>",
+    "contains_triple_question": false,
+    "contains_double_question": false,
+    "contains_replacement_char": false
+  }
+]
