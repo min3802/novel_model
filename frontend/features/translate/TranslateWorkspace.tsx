@@ -2,6 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import { WorkspaceShell, PageTitle } from "@/components/WorkspaceShell";
+import {
+  getBlockedMessage,
+  getTranslationDisplayState,
+  type TranslationResponseLike,
+} from "@/features/translate/translationDisplay";
 
 const API_BASE = process.env.NEXT_PUBLIC_WLIGHTER_API_BASE || "http://127.0.0.1:8000";
 const TRANSLATE_STATE_KEY = "translate_workspace_state";
@@ -10,6 +15,12 @@ type TranslateResult = {
   finalTranslation: string;
   reviewSummary: string;
   retrievalCount: number;
+  deliveryStatus?: "deliverable" | "blocked_translation_safety" | string;
+  userVisibleErrorCode?: "translation_safety_failed" | string | null;
+  message?: string;
+  metadata?: Record<string, unknown>;
+  qaReport?: unknown;
+  userVisibleQaReport?: Record<string, unknown>;
   workflow?: Record<string, unknown>;
 };
 
@@ -62,6 +73,41 @@ function renderReviewSummary(summary: string) {
   );
 }
 
+function renderTranslationStateCard(result: TranslationResponseLike | null, onRetry?: () => void) {
+  const state = getTranslationDisplayState(result);
+  if (state === "blocked") {
+    const blockedMessage = getBlockedMessage(result);
+    return (
+      <div className="blocked-card">
+        <h4>번역 검증 실패</h4>
+        <p>{blockedMessage}</p>
+        <button className="secondary compact" type="button" onClick={onRetry}>
+          다시 시도
+        </button>
+      </div>
+    );
+  }
+
+  if (state === "error") {
+    return (
+      <div className="api-error" style={{ margin: 0 }}>
+        번역 결과를 확인할 수 없습니다.
+      </div>
+    );
+  }
+
+  if (state === "qa_warning") {
+    return (
+      <div className="qa-warning-card">
+        <h4>QA 경고</h4>
+        <p>번역은 표시되지만 검토가 필요한 항목이 있습니다.</p>
+      </div>
+    );
+  }
+
+  return null;
+}
+
 export function TranslateWorkspace() {
   const [country, setCountry] = useState("");
   const [sourceText, setSourceText] = useState("");
@@ -76,6 +122,7 @@ export function TranslateWorkspace() {
   const [chatLoading, setChatLoading] = useState(false);
   const [chatError, setChatError] = useState("");
   const loadedRef = useRef(false);
+  const displayState = getTranslationDisplayState(result);
 
   useEffect(() => {
     try {
@@ -308,9 +355,16 @@ export function TranslateWorkspace() {
 
             {tab === "trans" && (
               <div className="document-area" style={{ whiteSpace: "pre-wrap" }}>
-                {result
-                  ? result.finalTranslation
-                  : <span style={{ color: "#b0a8c0" }}>번역을 실행하면 결과가 여기에 표시됩니다.</span>}
+                {renderTranslationStateCard(result, () => void run())}
+                {displayState !== "blocked" && result && result.finalTranslation.trim() && (
+                  <div className="translation-output" style={{ marginTop: "0.75rem" }}>
+                    {result.finalTranslation}
+                  </div>
+                )}
+                {displayState === "result" && result && !result.finalTranslation.trim() && (
+                  <span style={{ color: "#b0a8c0" }}>?? ??? ????.</span>
+                )}
+                {!result && <span style={{ color: "#b0a8c0" }}>??? ???? ??? ?? ?????.</span>}
               </div>
             )}
 

@@ -890,3 +890,127 @@ OK
 - 이미지 포함 검증 시:
   - `docs/live_model_smoke_with_images_report.md`
   - `docs/live_model_smoke_with_images_results.json`
+# 2026-06-11 model routing update
+
+Translation model selection is now profile-based instead of hardcoded to `gpt-4.1-mini`.
+
+## qualityMode defaults
+
+- default `qualityMode`: `standard`
+- `fast` -> `gpt-5.4-nano`
+- `standard` -> `gpt-5-mini`
+- `quality` -> `gpt-5.4-mini`
+- `baseline` -> `gpt-4.1-mini`
+
+## override policy
+
+- Request payload may pass `qualityMode`.
+- Request payload may pass `translationModel` or `model`.
+- Direct model overrides are allowlisted only:
+  - `gpt-5.4-nano`
+  - `gpt-5.4-mini`
+  - `gpt-5-mini`
+  - `gpt-4.1-mini`
+- Unsupported override values raise a validation error. They do not silently fall back to `gpt-4.1-mini`.
+
+## metadata expectations
+
+Every translation workflow must record the selected model routing metadata, including:
+
+- `mode`
+- `quality_mode`
+- `model_profile`
+- `translation_model`
+- `review_model`
+- `model_override_used`
+
+`gpt-4.1-mini` remains available only for baseline/debug/fallback use and is no longer the default operating model.
+
+# 2026-06-12 locale adherence smoke guidance
+
+## recommended smoke matrix
+
+- default model under evaluation: `gpt-5-mini`
+- comparison model: `gpt-5.4-mini`
+- locales:
+  - `ko_en_us`
+  - `ko_zh_cn`
+  - `ko_ja`
+  - `ko_th_th`
+- lengths:
+  - `short`
+  - `medium`
+  - `long`
+
+## expected checks
+
+Each run should capture:
+
+- `final_translation`
+- `locale_adherence_status`
+- `overall_translation_safety_status`
+- `korean_char_ratio`
+- `target_script_ratio`
+- `source_copy_suspected`
+- `source_copy_status`
+- `residual_hangul_status`
+- `residual_hangul_ratio`
+- `residual_hangul_spans`
+- `proper_noun_transliteration_status`
+- `proper_noun_transliteration_issues`
+- `source_prefix_match_200`
+- `translation_model`
+- `locale`
+- `target_language_name`
+
+## pass/fail interpretation
+
+- `locale_adherence`: target-language maintenance check
+- `source_copy`: copied-source or severe source-language leakage check
+- `residual_hangul`: leftover Hangul check
+- `proper_noun_transliteration`: possible Hangul proper-noun transliteration issue bucket
+- `pass`: target-script ratio is healthy and there is no strong source-copy signal
+- `warn`: mixed-script output, leftover Hangul, or transliteration issues that do not look like full source copy
+- `fail`: copied-source suspicion, obviously wrong target-script balance, or leftover Korean sentence-level text
+- `direct_only`: should follow the same safety gate and blocked-delivery policy as `v2_direct_qa`
+- `retry_success`: `null` when retry was not attempted, `true` when retry succeeded, and `false` when retry failed
+- `내부 디버그` QA rows are kept for diagnostics but excluded from user-visible QA counts
+
+## response contract
+
+- `deliveryStatus = "deliverable"` means the translation may be rendered as a normal success result.
+- `deliveryStatus = "blocked_translation_safety"` means the translation must be shown as an error state, not a success result.
+- `userVisibleErrorCode = "translation_safety_failed"` identifies the blocked safety case.
+- `finalTranslation` must be non-empty when `deliveryStatus = "deliverable"`.
+- `finalTranslation = ""` is reserved for blocked safety responses.
+- Internal ratios such as `korean_char_ratio` and `target_script_ratio` remain metadata-only.
+- `retryAttempted`, `retryCount`, `retrySuccess`, `initialLocaleAdherenceStatus`, `finalLocaleAdherenceStatus`, `initialSourceCopyStatus`, and `finalSourceCopyStatus` may be surfaced as debug metadata but should not be shown as user-facing error text.
+
+## UI/client policy
+
+- `deliverable` responses render the translation panel normally.
+- `blocked_translation_safety` responses render a blocked/error card instead of an empty translation panel.
+- Frontend helpers should branch on `deliveryStatus` and `userVisibleErrorCode`; blocked results must not be shown as ordinary success output.
+- Recommended blocked-state copy:
+  - title: `번역 검증 실패`
+  - body: `대상 언어 번역 검증에 실패했습니다. 다시 시도해 주세요.`
+  - action: `다시 시도`
+- `residual_hangul_status = warn` remains a QA warning and does not block delivery.
+- `proper_noun_transliteration_status = warn` or `unchecked` remains a QA warning and does not block delivery.
+- `내부 디버그` rows are diagnostic-only and do not count toward user-visible QA cards.
+
+## follow-up policy
+
+- `source_copy_status = fail` and `locale_adherence_status = fail` are retry/hold candidates for a single same-model strict retry.
+- Retry should use a stricter locale instruction block, not a different model.
+- `residual_hangul_status = warn` should not trigger a retry by itself.
+- `proper_noun_transliteration_status = warn|unchecked` should be tracked as a QA issue, not a retry trigger.
+- `source_copy_suspected = true` should also trigger retry/hold logic.
+- A fail should be treated as an internal quality/control event, not as a silent model fallback event.
+- If retry still fails, set `delivery_status = blocked_translation_safety` and do not surface the translation as a normal successful result.
+- Automatic cross-model fallback is still undecided.
+- Preferred future flow:
+  1. first translation
+  2. locale-adherence guard
+  3. one stricter retry on the same model
+  4. if still failing, hold the result as internal error/QA state
