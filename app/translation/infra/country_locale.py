@@ -4,10 +4,10 @@ from typing import Final
 
 
 COUNTRY_TO_LOCALE: Final[dict[str, str]] = {
-    "\uc77c\ubcf8": "ko_ja",
-    "\ubbf8\uad6d": "ko_en_us",
-    "\uc911\uad6d": "ko_zh_cn",
-    "\ud0dc\uad6d": "ko_th_th",
+    '일본': "ko_ja",
+    '미국': "ko_en_us",
+    '중국': "ko_zh_cn",
+    '태국': "ko_th_th",
 }
 
 LOCALE_TO_COUNTRY: Final[dict[str, str]] = {locale: country for country, locale in COUNTRY_TO_LOCALE.items()}

@@ -41,11 +41,11 @@ def ko(value: str) -> str:
 
 
 DEFAULT_SOURCE = ko(
-    "\\uae40\\ucca8\\uc9c0\\ub294 \\uc0ac\\ub791 \\uc57d\\uad6d \\uc55e\\uc5d0\\uc11c "
-    "\\ub3d9\\uc18c\\ubb38 \\uc2dc\\uc7a5\\uc744 \\ubc14\\ub77c\\ubd24\\ub2e4. "
-    "\\ube68\\uac1b\\uace0 \\ubd89\\uc740 \\ud45c\\uc815\\uc740 \\uc790\\uc5f0\\uc2a4\\ub7fd\\uac8c "
-    "\\ub2e4\\ub974\\uac8c \\ubc88\\uc5ed\\ub418\\uc5b4\\ub3c4 \\ub418\\uc9c0\\ub9cc, "
-    "\\uc0ac\\ub791 \\uc57d\\uad6d\\uc740 \\ud55c \\uac00\\uc9c0 \\uc774\\ub984\\uc73c\\ub85c \\uc720\\uc9c0\\ub418\\uc5b4\\uc57c \\ud55c\\ub2e4."
+    '김첨지는 사랑 약국 앞에서 '
+    '동소문 시장을 바라봤다. '
+    '빨갛고 붉은 표정은 자연스럽게 '
+    '다르게 번역되어도 되지만, '
+    '사랑 약국은 한 가지 이름으로 유지되어야 한다.'
 )
 
 
@@ -59,21 +59,21 @@ def _country_for_locale(locale: str) -> str:
 def _sample_terms() -> list[dict[str, Any]]:
     return [
         {
-            "source": ko("\\uae40\\ucca8\\uc9c0"),
+            "source": ko('김첨지'),
             "target": "Kim Cheomji",
             "policy": "locked",
             "type": "person_name",
             "status": "confirmed",
         },
         {
-            "source": ko("\\uc0ac\\ub791 \\uc57d\\uad6d"),
+            "source": ko('사랑 약국'),
             "target": "Sarang Pharmacy",
             "policy": "locked",
             "type": "business_name",
             "status": "confirmed",
         },
         {
-            "source": ko("\\uc57d\\uad6d"),
+            "source": ko('약국'),
             "target": "pharmacy",
             "allowedTranslations": ["pharmacy", "drugstore"],
             "policy": "preferred",
@@ -161,8 +161,8 @@ def run_guide(locale: str) -> dict[str, Any]:
     result = guide(
         {
             "targetCountry": country,
-            "genre": ko("\\ud604\\ub300\\ubb38\\ud559"),
-            "synopsis": ko("\\uc6b4\\uc218 \\uc88b\\uc740 \\ub0a0\\uc758 \\uae40\\ucca8\\uc9c0\\uac00 \\ub3c4\\uc2dc\\uc758 \\uc2dc\\uc7a5\\uacfc \\uc57d\\uad6d\\uc744 \\uc9c0\\ub098\\uba70 \\uc120\\ud0dd\\uc758 \\uae30\\ub85c\\uc5d0 \\uc120\\ub2e4."),
+            "genre": ko('현대문학'),
+            "synopsis": ko('운수 좋은 날의 김첨지가 도시의 시장과 약국을 지나며 선택의 기로에 선다.'),
         }
     )
     return {

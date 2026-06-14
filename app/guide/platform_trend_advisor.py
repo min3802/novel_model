@@ -18,19 +18,19 @@ from app.guide.platform_trend_guide import (
 )
 
 
-KO_US = "\ubbf8\uad6d"
-KO_ENGLISH_ZONE = "\uc601\uc5b4\uad8c"
-KO_JAPAN = "\uc77c\ubcf8"
+KO_US = '미국'
+KO_ENGLISH_ZONE = '영어권'
+KO_JAPAN = '일본'
 JP_JAPAN = "\u65e5\u672c"
-KO_ROMANCE_FANTASY_SHORT = "\ub85c\ud310"
-KO_ROMANCE_FANTASY = "\ub85c\ub9e8\uc2a4 \ud310\ud0c0\uc9c0"
-KO_ROMANCE = "\ub85c\ub9e8\uc2a4"
-KO_FANTASY = "\ud310\ud0c0\uc9c0"
-KO_ACTION_FANTASY = "\uc561\uc158 \ud310\ud0c0\uc9c0"
-KO_GAME_FANTASY = "\uac8c\uc784\ud310\ud0c0\uc9c0"
-KO_WUXIA = "\ubb34\ud611"
-KO_ISEKAI = "\uc774\uc138\uacc4"
-KO_REINCARNATION = "\uc804\uc0dd"
+KO_ROMANCE_FANTASY_SHORT = '로판'
+KO_ROMANCE_FANTASY = '로맨스 판타지'
+KO_ROMANCE = '로맨스'
+KO_FANTASY = '판타지'
+KO_ACTION_FANTASY = '액션 판타지'
+KO_GAME_FANTASY = '게임판타지'
+KO_WUXIA = '무협'
+KO_ISEKAI = '이세계'
+KO_REINCARNATION = '전생'
 
 JP_ISEKAI_ROMANCE = "\u7570\u4e16\u754c\u3014\u604b\u611b\u3015"
 JP_HIGH_FANTASY = "\u30cf\u30a4\u30d5\u30a1\u30f3\u30bf\u30b8\u30fc"
@@ -55,10 +55,10 @@ COUNTRY_ALIASES = {
     JP_JAPAN: "Japan",
     "china": "China",
     "cn": "China",
-    "\uc911\uad6d": "China",
+    '중국': "China",
     "thailand": "Thailand",
     "th": "Thailand",
-    "\ud0dc\uad6d": "Thailand",
+    '태국': "Thailand",
 }
 
 EXCLUDED_RECOMMENDATION_COUNTRIES = {"Global"}
@@ -66,10 +66,10 @@ EXCLUDED_RECOMMENDATION_COUNTRIES = {"Global"}
 ALLOWED_COUNTRY_ORDER = ["Japan", "China", "US/global English", "Thailand"]
 
 COUNTRY_DISPLAY_KO = {
-    "Japan": "일본",
-    "China": "중국",
-    "US/global English": "미국",
-    "Thailand": "태국",
+    "Japan": '일본',
+    "China": '중국',
+    "US/global English": '미국',
+    "Thailand": '태국',
 }
 
 GENRE_ALIASES = {
@@ -93,19 +93,19 @@ GENRE_ALIASES = {
 }
 
 SYNOPSIS_KEYWORDS = {
-    "romance": ["romance", "love", "marriage", "husband", "wife", "duke", "prince", "villainess", "\uc57d\ud63c", "\uacb0\ud63c", "\uacf5\uc791", "\ud669\ud0dc\uc790", "\uc545\ub140", "공녀", "귀족", "가문", KO_ROMANCE, "\uc0ac\ub791"],
-    "progression": ["level", "skill", "system", "rank", "dungeon", "quest", "\uc131\uc7a5", "\uc2a4\ud0ac", "\ub808\ubca8", "\uc2dc\uc2a4\ud15c", "\ub358\uc804", "\ub7ad\ucee4"],
-    "isekai": ["reincarn", "isekai", "another world", "transport", "\ud68c\uadc0", "돌아와", "다시", KO_REINCARNATION, "\ube59\uc758", KO_ISEKAI, "\ud658\uc0dd"],
-    "action": ["battle", "war", "fight", "survival", "apocalypse", "\uc804\ud22c", "\uc804\uc7c1", "복수", "잔혹", "피", "\uc0dd\uc874", "\uba78\ub9dd", "\uc544\ud3ec\uce7c\ub9bd\uc2a4"],
-    "bl": ["omega", "alpha", "bl", "boys love", "\ub0a8\uc790", "\uc624\uba54\uac00", "\uc54c\ud30c"],
+    "romance": ["romance", "love", "marriage", "husband", "wife", "duke", "prince", "villainess", '약혼', '결혼', '공작', '황태자', '악녀', '공녀', '귀족', '가문', KO_ROMANCE, '사랑'],
+    "progression": ["level", "skill", "system", "rank", "dungeon", "quest", '성장', '스킬', '레벨', '시스템', '던전', '랭커'],
+    "isekai": ["reincarn", "isekai", "another world", "transport", '회귀', '돌아와', '다시', KO_REINCARNATION, '빙의', KO_ISEKAI, '환생'],
+    "action": ["battle", "war", "fight", "survival", "apocalypse", '전투', '전쟁', '복수', '잔혹', '피', '생존', '멸망', '아포칼립스'],
+    "bl": ["omega", "alpha", "bl", "boys love", '남자', '오메가', '알파'],
 }
 
 SYNOPSIS_MOTIF_LABELS = {
-    "romance": "관계/로맨스 축",
-    "progression": "성장·시스템 축",
-    "isekai": "회귀·전생·이세계 축",
-    "action": "전투·생존 축",
-    "bl": "BL/관계성 축",
+    "romance": '관계/로맨스 축',
+    "progression": '성장·시스템 축',
+    "isekai": '회귀·전생·이세계 축',
+    "action": '전투·생존 축',
+    "bl": 'BL/관계성 축',
 }
 
 @dataclass(frozen=True)
@@ -181,10 +181,10 @@ def _synopsis_motifs(synopsis: str | None) -> list[str]:
 def _synopsis_input_note(synopsis: str | None) -> str:
     motifs = _synopsis_motifs(synopsis)
     if not _text(synopsis):
-        return "시놉시스가 없어 세부 소재·관계·수위 요소는 확정하지 않고, 입력 장르와 대상 국가 기준으로만 확인합니다."
+        return '시놉시스가 없어 세부 소재·관계·수위 요소는 확정하지 않고, 입력 장르와 대상 국가 기준으로만 확인합니다.'
     if motifs:
         return f"시놉시스에서 {', '.join(motifs)}을 조심스러운 추정 요소로 읽었습니다."
-    return "시놉시스는 제공됐지만 준비된 키워드 기준으로 특정 소재 축을 강하게 확정하지 않았습니다."
+    return '시놉시스는 제공됐지만 준비된 키워드 기준으로 특정 소재 축을 강하게 확정하지 않았습니다.'
 
 
 def _row_search_text(row: dict[str, Any]) -> str:
@@ -235,43 +235,43 @@ def _available_countries() -> list[dict[str, str]]:
 
 def _recommendation_notice(*, synopsis_present: bool) -> str:
     if synopsis_present:
-        return "이 추천은 시장 흥행 예측이 아니라 장르와 시놉시스 기준의 1차 현지화 적합도 참고입니다. 작품의 줄거리, 결말, 캐릭터 정체성, 중심 갈등은 바꾸지 않습니다."
-    return "시놉시스가 없어 국가 추천은 제공하지 않고, 선택한 국가를 기준으로 번역 전 현지화 기준서만 만듭니다."
+        return '이 추천은 시장 흥행 예측이 아니라 장르와 시놉시스 기준의 1차 현지화 적합도 참고입니다. 작품의 줄거리, 결말, 캐릭터 정체성, 중심 갈등은 바꾸지 않습니다.'
+    return '시놉시스가 없어 국가 추천은 제공하지 않고, 선택한 국가를 기준으로 번역 전 현지화 기준서만 만듭니다.'
 
 
 def _translation_profile(country: str, *, genre: str, synopsis_present: bool) -> dict[str, Any]:
     display = COUNTRY_DISPLAY_KO.get(country, country)
     localization_level = "balanced" if synopsis_present else "conservative"
     if country == "Japan":
-        dialogue_style = "장면 톤을 살리는 자연스러운 구어체와 호칭 체계를 우선한다."
-        proper_noun_policy = "고유명사는 원문 음차와 작품 glossary를 우선하고, 호칭은 일본 독자 기준으로 무리하게 바꾸지 않는다."
-        culture_policy = "한국 문화 요소는 현지 제도로 바꾸기보다 의미를 유지한 채 자연스럽게 풀어준다."
+        dialogue_style = '장면 톤을 살리는 자연스러운 구어체와 호칭 체계를 우선한다.'
+        proper_noun_policy = '고유명사는 원문 음차와 작품 glossary를 우선하고, 호칭은 일본 독자 기준으로 무리하게 바꾸지 않는다.'
+        culture_policy = '한국 문화 요소는 현지 제도로 바꾸기보다 의미를 유지한 채 자연스럽게 풀어준다.'
     elif country == "China":
-        dialogue_style = "관계와 긴장감을 살리는 간결한 구어체를 우선한다."
-        proper_noun_policy = "고유명사는 병기 기준을 유지하고, 호칭·직책은 작품 glossary를 우선한다."
-        culture_policy = "한국 문화 요소는 설명을 덧붙이되 현지 권력/제도로 치환하지 않는다."
+        dialogue_style = '관계와 긴장감을 살리는 간결한 구어체를 우선한다.'
+        proper_noun_policy = '고유명사는 병기 기준을 유지하고, 호칭·직책은 작품 glossary를 우선한다.'
+        culture_policy = '한국 문화 요소는 설명을 덧붙이되 현지 권력/제도로 치환하지 않는다.'
     elif country == "Thailand":
-        dialogue_style = "대사 리듬과 감정선을 우선하는 자연스러운 구어체를 쓴다."
-        proper_noun_policy = "고유명사는 음차 우선, 호칭은 작품 내 관계망을 훼손하지 않는 방식으로 유지한다."
-        culture_policy = "한국 문화 요소는 과한 현지화 대신 맥락 설명 중심으로 다룬다."
+        dialogue_style = '대사 리듬과 감정선을 우선하는 자연스러운 구어체를 쓴다.'
+        proper_noun_policy = '고유명사는 음차 우선, 호칭은 작품 내 관계망을 훼손하지 않는 방식으로 유지한다.'
+        culture_policy = '한국 문화 요소는 과한 현지화 대신 맥락 설명 중심으로 다룬다.'
     else:
-        dialogue_style = "웹소설 문체의 속도감과 캐릭터 말맛을 살리는 자연스러운 구어체를 우선한다."
-        proper_noun_policy = "고유명사는 glossary 중심으로 고정하고, 필요할 때만 짧게 보충 설명한다."
-        culture_policy = "한국 문화 요소는 삭제하거나 다른 문화로 치환하지 말고, 이해를 돕는 최소 설명만 덧붙인다."
+        dialogue_style = '웹소설 문체의 속도감과 캐릭터 말맛을 살리는 자연스러운 구어체를 우선한다.'
+        proper_noun_policy = '고유명사는 glossary 중심으로 고정하고, 필요할 때만 짧게 보충 설명한다.'
+        culture_policy = '한국 문화 요소는 삭제하거나 다른 문화로 치환하지 말고, 이해를 돕는 최소 설명만 덧붙인다.'
 
     return {
         "tone": f"{display} 독자에게도 과장 없이 읽히되 웹소설 특유의 속도감과 감정선을 살리는 톤",
         "dialogue_style": dialogue_style,
-        "narration_style": "장면 기능과 시점 일관성을 유지하는 문장으로, 교과서식 평탄화는 피한다.",
+        "narration_style": '장면 기능과 시점 일관성을 유지하는 문장으로, 교과서식 평탄화는 피한다.',
         "localization_level": localization_level,
         "proper_noun_policy": proper_noun_policy,
         "culture_policy": culture_policy,
         "do_not": [
-            "줄거리 변경 제안 금지",
-            "결말 변경 제안 금지",
-            "캐릭터 정체성 변경 제안 금지",
-            "중심 갈등 변경 제안 금지",
-            "장르나 서사 자체를 대상 국가에 맞춰 바꾸라는 제안 금지",
+            '줄거리 변경 제안 금지',
+            '결말 변경 제안 금지',
+            '캐릭터 정체성 변경 제안 금지',
+            '중심 갈등 변경 제안 금지',
+            '장르나 서사 자체를 대상 국가에 맞춰 바꾸라는 제안 금지',
         ],
         "genre": genre,
         "country": country,
@@ -382,17 +382,17 @@ def _section_payload(country_profile: Any, *, target_country: str, genre: str, s
     cautions = country_profile.caution_points if country_profile else []
     synopsis_mode = bool(synopsis.strip())
     best_reasons = recommendations[0].reasons if recommendations else []
-    genre_label = genre or '\ubbf8\uc9c0\uc815'  # '미지정' (py3.10 f-string 백슬래시 제약 회피)
+    genre_label = genre or '미지정'  # '미지정' (py3.10 f-string 백슬래시 제약 회피)
     _top_genre_join = ', '.join(f'{g}({c})' for g, c in top_genres[:5])
-    top_genres_label = _top_genre_join or '\uadfc\uac70 \ubd80\uc871'  # '근거 부족'
+    top_genres_label = _top_genre_join or '근거 부족'  # '근거 부족'
     synopsis_note = _synopsis_input_note(synopsis)
     inferred_motifs = _synopsis_motifs(synopsis)
-    top_tag_line = f"순위권에서 자주 보인 키워드: {', '.join(f'{t}({c})' for t, c in top_tags[:8])}" if top_tags else "순위권 키워드 근거가 충분하지 않습니다."
+    top_tag_line = f"순위권에서 자주 보인 키워드: {', '.join(f'{t}({c})' for t, c in top_tags[:8])}" if top_tags else '순위권 키워드 근거가 충분하지 않습니다.'
     target_label = _display_country_label(target_country)
     recommendation_note = _recommendation_notice(synopsis_present=synopsis_mode)
     return {
         "market_trend_fit": {
-            "title": "현지화 기준서 요약",
+            "title": '현지화 기준서 요약',
             "items": [
                 f"대상 국가: {target_label} / 입력 장르: {genre_label}",
                 synopsis_note,
@@ -401,49 +401,49 @@ def _section_payload(country_profile: Any, *, target_country: str, genre: str, s
             ],
         },
         "genre_trope_alignment": {
-            "title": "번역/표현 방향을 이렇게 읽었어요",
+            "title": '번역/표현 방향을 이렇게 읽었어요',
             "items": [
                 f"입력 장르 `{genre_label}`을 우선 기준으로 삼되, 이야기 구조를 바꾸지 않고 번역 방향만 정리했습니다.",
                 synopsis_note,
-                f"추정 소재 축: {', '.join(inferred_motifs)}" if inferred_motifs else "추정 소재 축: 시놉시스 근거 부족 또는 미입력",
-                "장면 톤과 캐릭터 말투는 살리고, 문장을 교과서식으로 평평하게 만들지 않습니다.",
+                f"추정 소재 축: {', '.join(inferred_motifs)}" if inferred_motifs else '추정 소재 축: 시놉시스 근거 부족 또는 미입력',
+                '장면 톤과 캐릭터 말투는 살리고, 문장을 교과서식으로 평평하게 만들지 않습니다.',
             ]
             + signals[:4],
         },
         "title_synopsis_localization": {
             "title": f"{target_label} 독자에게는 어떻게 소개하면 좋을까요?",
             "items": [
-                "플랫폼 상위 노출작은 장르 훅과 관계 축을 빠르게 드러내는 방식이 많지만, 이 가이드는 흥행 예측이 아니라 표현 방향 참고만 제공합니다.",
-                f"시놉시스 기준으로는 {', '.join(inferred_motifs)}이 먼저 보입니다. 이 표현은 확정 태그가 아니라 소개문/태그 후보를 점검하기 위한 추정입니다." if inferred_motifs else "시놉시스 근거가 부족하므로 제목·소개문 후보는 장르의 대표 기대치 수준에서만 확인합니다.",
-                "공개 시놉시스는 신호 분석에만 쓰고 문장을 그대로 복사하지 않습니다.",
+                '플랫폼 상위 노출작은 장르 훅과 관계 축을 빠르게 드러내는 방식이 많지만, 이 가이드는 흥행 예측이 아니라 표현 방향 참고만 제공합니다.',
+                f"시놉시스 기준으로는 {', '.join(inferred_motifs)}이 먼저 보입니다. 이 표현은 확정 태그가 아니라 소개문/태그 후보를 점검하기 위한 추정입니다." if inferred_motifs else '시놉시스 근거가 부족하므로 제목·소개문 후보는 장르의 대표 기대치 수준에서만 확인합니다.',
+                '공개 시놉시스는 신호 분석에만 쓰고 문장을 그대로 복사하지 않습니다.',
             ],
         },
         "terminology_glossary_risks": {
             "title": f"{target_label} 고유명사·호칭·문화 요소 처리",
             "items": [
                 top_tag_line,
-                "이 키워드는 적용 지시가 아니라 대상 플랫폼에서 자주 보인 공개 태그/장르 표현입니다.",
-                "고유명사, 스킬명, 계급명, 호칭은 작품 단위 glossary로 고정하고 태그 표현과 충돌하지 않는지 확인합니다.",
+                '이 키워드는 적용 지시가 아니라 대상 플랫폼에서 자주 보인 공개 태그/장르 표현입니다.',
+                '고유명사, 스킬명, 계급명, 호칭은 작품 단위 glossary로 고정하고 태그 표현과 충돌하지 않는지 확인합니다.',
             ],
         },
         "content_rating_sensitivity": {
-            "title": "플랫폼/문화권 검토 항목",
+            "title": '플랫폼/문화권 검토 항목',
             "items": [
-                "연령등급, 잔혹/성적 표현, 플랫폼별 금지·제한 표현은 시장 분위기와 별개로 확인합니다.",
-                "시놉시스에서 나온 민감 요소는 위반 확정이 아니라 게시 전 확인 후보로 표시합니다." if synopsis_mode else "시놉시스가 없으면 민감 요소 확인은 장르 일반론을 넘어서 확정하지 않습니다.",
+                '연령등급, 잔혹/성적 표현, 플랫폼별 금지·제한 표현은 시장 분위기와 별개로 확인합니다.',
+                '시놉시스에서 나온 민감 요소는 위반 확정이 아니라 게시 전 확인 후보로 표시합니다.' if synopsis_mode else '시놉시스가 없으면 민감 요소 확인은 장르 일반론을 넘어서 확정하지 않습니다.',
             ]
             + cautions[:5]
-            + ["플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다."],
+            + ['플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다.'],
         },
         "adaptation_checklist": {
-            "title": "피해야 할 방식과 다음 확인",
+            "title": '피해야 할 방식과 다음 확인',
             "items": guidance[:6] + [
-                "최종 가이드는 스토리 수정 지시가 아니라 번역/현지화 기준서로만 사용합니다.",
-                "본문 수집 없이 공개 메타데이터와 사용자가 입력한 시놉시스 신호만 사용합니다.",
+                '최종 가이드는 스토리 수정 지시가 아니라 번역/현지화 기준서로만 사용합니다.',
+                '본문 수집 없이 공개 메타데이터와 사용자가 입력한 시놉시스 신호만 사용합니다.',
             ],
         },
         "evidence_used": {
-            "title": "\uc0ac\uc6a9 \uadfc\uac70",
+            "title": '사용 근거',
             "items": [
                 f"{ev.platform}/{ev.collection} rank {ev.rank}: {ev.title} ({ev.genre or 'genre unknown'}) - {ev.reason}"
                 for ev in evidence[:8]
@@ -526,7 +526,7 @@ def recommend_country(payload: dict[str, Any], *, data_path: Path = DEFAULT_INPU
         return {
             "mode": "needs_country_and_genre_selection",
             "requiresSelection": True,
-            "message": "시놉시스가 없어 국가 추천은 제공할 수 없습니다. 대상 국가를 직접 선택하면 번역 전 현지화 기준서를 만들 수 있습니다.",
+            "message": '시놉시스가 없어 국가 추천은 제공할 수 없습니다. 대상 국가를 직접 선택하면 번역 전 현지화 기준서를 만들 수 있습니다.',
             "availableOptions": available_options_payload,
             "available_countries": _available_countries(),
             "limitation_notice": limitation_notice,
@@ -541,7 +541,7 @@ def recommend_country(payload: dict[str, Any], *, data_path: Path = DEFAULT_INPU
         return {
             "mode": "synopsis_country_recommendation",
             "requiresSelection": True,
-            "title": "추천 국가를 먼저 확인해 주세요",
+            "title": '추천 국가를 먼저 확인해 주세요',
             "genre": genre,
             "synopsis": synopsis,
             "availableOptions": available_options_payload,
@@ -608,7 +608,7 @@ def generate_localization_guide(payload: dict[str, Any], *, data_path: Path = DE
     recommendation_notice = _recommendation_notice(synopsis_present=synopsis_present)
     recommended_country = top.country if synopsis_present and top else None
     recommendation_reasons = top.reasons if synopsis_present and top else (
-        ["시놉시스가 없어 국가 추천을 제공하지 않았습니다."]
+        ['시놉시스가 없어 국가 추천을 제공하지 않았습니다.']
         if not synopsis_present
         else []
     )
@@ -660,7 +660,7 @@ def generate_localization_guide(payload: dict[str, Any], *, data_path: Path = DE
         ),
         "guide_html": _html_report(
             title=display_title,
-            mode_label="시놉시스 기반 추천 반영" if synopsis_present else "국가/장르 기반 기준서",
+            mode_label='시놉시스 기반 추천 반영' if synopsis_present else '국가/장르 기반 기준서',
             target_country=selected_country,
             genre=genre,
             sections=sections,
@@ -668,7 +668,7 @@ def generate_localization_guide(payload: dict[str, Any], *, data_path: Path = DE
         ),
         "htmlReport": _html_report(
             title=display_title,
-            mode_label="시놉시스 기반 추천 반영" if synopsis_present else "국가/장르 기반 기준서",
+            mode_label='시놉시스 기반 추천 반영' if synopsis_present else '국가/장르 기반 기준서',
             target_country=selected_country,
             genre=genre,
             sections=sections,
@@ -684,7 +684,7 @@ def generate_localization_guide(payload: dict[str, Any], *, data_path: Path = DE
     result["cultureNotes"] = {"avoid": sections["content_rating_sensitivity"]["items"], "prefer": sections["adaptation_checklist"]["items"]}
     result["platformRules"] = {"common_bans": sections["content_rating_sensitivity"]["items"], "platforms": []}
     result["localizationTips"] = {"marketing_tags": sections["title_synopsis_localization"]["items"], "translation_quality": sections["terminology_glossary_risks"]["items"]}
-    result["tags"] = [genre, selected_country, "현지화", "플랫폼 트렌드"]
+    result["tags"] = [genre, selected_country, '현지화', '플랫폼 트렌드']
     return result
 
 
