@@ -19,6 +19,7 @@ from .text_processing.terminology import extract_noun_terminology_candidates, re
 from .v2_pipeline import DirectTranslationResult, PatchSuggestion, QAItem, RiskItem, V2TranslationResult
 from .v2_dual_draft_review import (
     AuthorReviewCard,
+    AuthorReviewCardGenerator,
     MeaningDraft,
     RagEvidence,
     TranslationDecisionAnalyzer,
@@ -41,6 +42,7 @@ __all__ = [
     "ALLOWED_QUALITY_MODES",
     "ALLOWED_TRANSLATION_MODELS",
     "AuthorReviewCard",
+    "AuthorReviewCardGenerator",
     "MODEL_PROFILES",
     "PipelineConfig",
     "MeaningDraft",

@@ -487,4 +487,5 @@ Planned retry policy:
 - `MeaningDraftTranslator` is deterministic in this step and does not call live LLMs.
 - The meaning draft is a comparison baseline for later vibe translation review, not the user-facing final translation.
 - `TranslationDecisionAnalyzer` converts user-visible evidence into conservative review-point decisions only; it does not revise translation text.
-- Author review card generation remains future work.
+- `AuthorReviewCardGenerator` converts review decisions into writer-facing cards without applying patches.
+- UI, writer selection storage, and WorkMemory remain future work.

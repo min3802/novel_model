@@ -22,6 +22,7 @@ from .v2_pipeline import (
     split_user_visible_risk_items,
 )
 from .v2_dual_draft_review import (
+    AuthorReviewCardGenerator,
     TranslationDecisionAnalyzer,
     MeaningDraftTranslator,
     MeaningDraft,
@@ -71,6 +72,7 @@ class TranslationPipeline:
         self.rag_evidence_retriever = RagEvidenceRetriever(self.source_side_analyzer)
         self.meaning_draft_translator = MeaningDraftTranslator(self.config)
         self.translation_decision_analyzer = TranslationDecisionAnalyzer(self.config)
+        self.author_review_card_generator = AuthorReviewCardGenerator(self.config)
         self.post_translation_qa = PostTranslationQA()
         self.patch_proposer = PatchProposer()
         self.graph = TranslationGraph(
@@ -552,6 +554,14 @@ class TranslationPipeline:
                 locale=self.config.resolved_resources().locale,
             )
         )
+        author_review_cards = (
+            []
+            if blocked
+            else self.author_review_card_generator.generate(
+                translation_decisions,
+                rag_evidence=rag_evidence,
+            )
+        )
         metadata = self._metadata(
             source_side_rag_enabled=not blocked,
             rag_enabled=False,
@@ -564,7 +574,7 @@ class TranslationPipeline:
                 "meaning_draft_enabled": True,
                 "rag_evidence_count": len(rag_evidence),
                 "translation_decision_count": len(translation_decisions),
-                "author_review_card_count": 0,
+                "author_review_card_count": len(author_review_cards),
             },
         )
         return V2DualDraftReviewResult(
@@ -574,7 +584,7 @@ class TranslationPipeline:
             meaning_draft=meaning_draft,
             rag_evidence=rag_evidence,
             translation_decisions=translation_decisions,
-            author_review_cards=[],
+            author_review_cards=author_review_cards,
             metadata=metadata,
             delivery_status=direct_result.delivery_status,
             user_visible_error_code=direct_result.user_visible_error_code,

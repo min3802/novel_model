@@ -354,3 +354,151 @@ class TranslationDecisionAnalyzer:
                 )
             )
         return decisions
+
+
+def _decision_label_for_type(decision_type: str) -> str:
+    mapping = {
+        "literal": "직역 유지",
+        "adaptive": "문맥 의역",
+        "localized": "현지화",
+        "preserved": "원어 유지",
+        "expanded": "설명 보강",
+        "compressed": "압축 번역",
+        "risk_unresolved": "작가 확인 필요",
+    }
+    return mapping.get(_compact_text(decision_type), "작가 확인 필요")
+
+
+def _card_explanation_for_decision(decision: TranslationDecision) -> str:
+    text = _compact_text(decision.reason)
+    if text:
+        return text
+    if decision.decision_type == "preserved":
+        return "이 표현은 원문 표현이 남아 있어 보존 여부 확인이 필요합니다."
+    return "이 표현은 작가 확인이 필요한 판단 지점입니다."
+
+
+def _card_question_for_decision(decision: TranslationDecision, evidence_types: list[str]) -> str:
+    note = _compact_text(decision.author_note)
+    if note:
+        return note
+    evidence_type = evidence_types[0] if evidence_types else ""
+    if evidence_type in {"k_culture", "annotation"}:
+        return "이 문화어를 원어로 유지할지, 설명을 붙일지 확인해 주세요."
+    if evidence_type in {"idiom", "proverb", "slang", "pragmatic"}:
+        return "이 표현의 핵심이 실제 의미인가요, 관계성이나 톤인가요?"
+    if evidence_type == "term":
+        return "이 용어를 원어로 유지할지, 고정 번역어로 바꿀지 확인해 주세요."
+    if decision.decision_type == "preserved":
+        return "이 표현을 그대로 둔 의도가 맞는지 확인해 주세요."
+    return "이 표현의 처리 방식이 맞는지 확인해 주세요."
+
+
+def _card_options_for_decision(decision: TranslationDecision) -> list[dict[str, str]]:
+    options = [
+        {
+            "id": "keep",
+            "label": "현재 번역 유지",
+            "description": "현재 번역을 유지합니다.",
+        },
+        {
+            "id": "review",
+            "label": "직접 검토",
+            "description": "작가가 문맥에 맞게 직접 확인합니다.",
+        },
+    ]
+    if decision.decision_type == "preserved":
+        options.insert(
+            1,
+            {
+                "id": "add_explanation",
+                "label": "설명 보강 검토",
+                "description": "원어를 유지하되 설명을 덧붙일지 검토합니다.",
+            },
+        )
+    elif decision.decision_type == "risk_unresolved":
+        options.insert(
+            1,
+            {
+                "id": "make_more_literal",
+                "label": "더 직접적인 번역",
+                "description": "의미가 더 직접 드러나도록 조정할지 검토합니다.",
+            },
+        )
+        options.insert(
+            2,
+            {
+                "id": "make_more_natural",
+                "label": "더 자연스러운 번역",
+                "description": "문맥에 맞게 더 자연스럽게 풀어낼지 검토합니다.",
+            },
+        )
+    return options
+
+
+def _evidence_lookup(rag_evidence: list[RagEvidence]) -> dict[str, RagEvidence]:
+    lookup: dict[str, RagEvidence] = {}
+    for evidence in rag_evidence:
+        lookup[_compact_text(evidence.id)] = evidence
+        lookup[_compact_text(evidence.source_id)] = evidence
+    return lookup
+
+
+def _evidence_summary_for_decision(
+    decision: TranslationDecision,
+    evidence_lookup: dict[str, RagEvidence],
+) -> str:
+    summaries: list[str] = []
+    for evidence_id in decision.evidence_ids:
+        evidence = evidence_lookup.get(_compact_text(evidence_id))
+        if evidence is None:
+            continue
+        bits = _unique_preserve(
+            [
+                evidence.literal_risk,
+                evidence.pragmatic_function,
+                evidence.cultural_meaning,
+            ]
+        )
+        if bits:
+            summaries.append(" / ".join(bits[:2]))
+    return " | ".join(_unique_preserve(summaries)[:2])
+
+
+class AuthorReviewCardGenerator:
+    def __init__(self, config: PipelineConfig | None = None):
+        self.config = config or PipelineConfig()
+
+    def generate(
+        self,
+        translation_decisions: list[TranslationDecision],
+        *,
+        rag_evidence: list[RagEvidence] | None = None,
+    ) -> list[AuthorReviewCard]:
+        if not translation_decisions:
+            return []
+
+        evidence_lookup = _evidence_lookup(rag_evidence or [])
+        cards: list[AuthorReviewCard] = []
+        for decision in translation_decisions:
+            if not decision.needs_author_review:
+                continue
+
+            evidence_types = [evidence_lookup.get(_compact_text(evidence_id)).evidence_type for evidence_id in decision.evidence_ids if evidence_lookup.get(_compact_text(evidence_id))]
+            evidence_types = _unique_preserve(evidence_types)
+            current_translation = _compact_text(decision.vibe_translation_span)
+            card = AuthorReviewCard(
+                id=f"review:{_compact_text(decision.id) or 'decision'}",
+                decision_id=_compact_text(decision.id),
+                source_span=_compact_text(decision.source_span),
+                current_translation=current_translation,
+                decision_label=_decision_label_for_type(decision.decision_type),
+                explanation=_card_explanation_for_decision(decision),
+                author_question=_card_question_for_decision(decision, evidence_types),
+                options=_card_options_for_decision(decision),
+                recommended_option_id="review" if decision.decision_type == "risk_unresolved" else "keep",
+                evidence_summary=_evidence_summary_for_decision(decision, evidence_lookup),
+                patch_suggestion=None,
+            )
+            cards.append(card)
+        return cards

@@ -25,6 +25,8 @@ from app.translation.v2_pipeline import (
     split_user_visible_risk_items,
 )
 from app.translation.v2_dual_draft_review import (
+    AuthorReviewCard,
+    AuthorReviewCardGenerator,
     V2DualDraftReviewResult,
     MeaningDraft,
     MeaningDraftTranslator,
@@ -109,6 +111,39 @@ class TranslationV2PipelineTests(unittest.TestCase):
             anchor_boost=0.0,
             final_score=final_score,
         )
+
+    def _make_review_decision(
+        self,
+        *,
+        decision_id: str,
+        decision_type: str,
+        source_span: str,
+        meaning_draft_span: str,
+        vibe_translation_span: str,
+        reason: str,
+        evidence_ids: list[str],
+        author_note: str,
+        confidence: str,
+        needs_author_review: bool,
+        risk_level: str,
+    ):
+        return type(
+            "_DecisionStub",
+            (),
+            {
+                "id": decision_id,
+                "source_span": source_span,
+                "meaning_draft_span": meaning_draft_span,
+                "vibe_translation_span": vibe_translation_span,
+                "decision_type": decision_type,
+                "reason": reason,
+                "evidence_ids": evidence_ids,
+                "author_note": author_note,
+                "confidence": confidence,
+                "needs_author_review": needs_author_review,
+                "risk_level": risk_level,
+            },
+        )()
 
     def test_legacy_full_still_runs(self) -> None:
         pipeline = TranslationPipeline(self._config())
@@ -383,6 +418,58 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(dual_result.translation_decisions, [])
         self.assertEqual(dual_result.author_review_cards, [])
 
+    def test_v2_dual_draft_review_populates_author_review_cards(self) -> None:
+        pipeline = TranslationPipeline(self._config())
+        source_text = "그는 마을에 산다."
+        risk_item = RiskItem(
+            id="idiom:010",
+            type="idiom",
+            source_span="have a meal sometime",
+            anchor="have a meal sometime",
+            meaning_ko="관계 유지용 완곡 표현",
+            target_candidates=["let's eat sometime"],
+            confidence="high",
+            policy="check_after_translation",
+            source="rag",
+            visibility_bucket="확인 필요",
+            user_visible=True,
+            debug_reason="idiom score=0.93",
+        )
+
+        pipeline.source_side_analyzer.analyze = lambda text: [risk_item]  # type: ignore[assignment]
+        pipeline.run_direct_only = lambda *args, **kwargs: DirectTranslationResult(  # type: ignore[assignment]
+            mode="direct_only",
+            final_translation="We should have a meal sometime.",
+            draft={"prompt_debug": {"prompt_hash": "card-hash"}},
+            metadata=pipeline._metadata(
+                source_side_rag_enabled=False,
+                rag_enabled=False,
+                terminology_enabled=False,
+                glossary_enabled=False,
+                review_enabled=False,
+                inspection_enabled=False,
+                extra=TranslationPipeline._locale_adherence_metadata(
+                    source_text=source_text,
+                    final_translation="We should have a meal sometime.",
+                    locale="ko_ja",
+                    target_language_name="Japanese",
+                ),
+            ),
+            delivery_status="deliverable",
+            user_visible_error_code=None,
+        )
+
+        result = pipeline.run_v2_dual_draft_review(source_text)
+
+        self.assertTrue(result.translation_decisions)
+        self.assertTrue(result.author_review_cards)
+        card = result.author_review_cards[0]
+        self.assertIsInstance(card, AuthorReviewCard)
+        self.assertEqual(card.decision_label, "원어 유지")
+        self.assertIn("keep", [option["id"] for option in card.options])
+        self.assertIn("review", [option["id"] for option in card.options])
+        self.assertIsNone(card.patch_suggestion)
+
     def test_v2_dual_draft_review_blocks_keep_safety_contract(self) -> None:
         pipeline = TranslationPipeline(self._config())
         source_text = "그는 마을의 주인이다."
@@ -548,6 +635,74 @@ class TranslationV2PipelineTests(unittest.TestCase):
         )
 
         self.assertEqual(decisions, [])
+
+    def test_author_review_card_generator_turns_review_decisions_into_cards(self) -> None:
+        generator = AuthorReviewCardGenerator(self._config())
+        decision = self._make_review_decision(
+            decision_id="decision:001",
+            decision_type="risk_unresolved",
+            source_span="have a meal sometime",
+            meaning_draft_span="meaning baseline",
+            vibe_translation_span="We should have a meal sometime.",
+            reason="literal translation may miss the intended figurative meaning. 작가 검수가 필요합니다.",
+            evidence_ids=["risk:001", "evidence:001"],
+            author_note="이 표현의 핵심이 실제 의미인가요, 관계성이나 톤인가요?",
+            confidence="high",
+            needs_author_review=True,
+            risk_level="medium",
+        )
+        evidence = RagEvidence(
+            id="evidence:001",
+            source_span="have a meal sometime",
+            anchor="have a meal sometime",
+            evidence_type="idiom",
+            literal_meaning="literal meal invitation",
+            pragmatic_function="casual relational cue",
+            tone="soft",
+            cultural_meaning="",
+            literal_risk="literal translation may miss the intended figurative meaning",
+            strategy_hints=["reference only"],
+            candidate_translations=["let's eat sometime"],
+            confidence="high",
+            source="idiom_rag",
+            source_id="risk:001",
+            user_visible=True,
+        )
+
+        cards = generator.generate([decision], rag_evidence=[evidence])
+
+        self.assertEqual(len(cards), 1)
+        card = cards[0]
+        self.assertIsInstance(card, AuthorReviewCard)
+        self.assertEqual(card.decision_id, "decision:001")
+        self.assertEqual(card.decision_label, "작가 확인 필요")
+        self.assertIn("작가 검수", card.explanation)
+        self.assertEqual(card.author_question, "이 표현의 핵심이 실제 의미인가요, 관계성이나 톤인가요?")
+        self.assertIn("keep", [option["id"] for option in card.options])
+        self.assertIn("review", [option["id"] for option in card.options])
+        self.assertEqual(card.recommended_option_id, "review")
+        self.assertIn("literal translation may miss", card.evidence_summary)
+        self.assertIsNone(card.patch_suggestion)
+
+    def test_author_review_card_generator_skips_non_review_decisions(self) -> None:
+        generator = AuthorReviewCardGenerator(self._config())
+        decision = self._make_review_decision(
+            decision_id="decision:002",
+            decision_type="risk_unresolved",
+            source_span="internal note",
+            meaning_draft_span="meaning baseline",
+            vibe_translation_span="translated text",
+            reason="internal",
+            evidence_ids=["risk:002"],
+            author_note="",
+            confidence="high",
+            needs_author_review=False,
+            risk_level="high",
+        )
+
+        cards = generator.generate([decision], rag_evidence=[])
+
+        self.assertEqual(cards, [])
 
     def test_high_confidence_idiom_is_user_visible(self) -> None:
         analyzer = SourceSideAnalyzer(
@@ -856,6 +1011,8 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(result["mode"], "v2_dual_draft_review")
         self.assertIn("translationDecisions", result)
         self.assertIsInstance(result["translationDecisions"], list)
+        self.assertIn("authorReviewCards", result)
+        self.assertIsInstance(result["authorReviewCards"], list)
         self.assertIn("meaningDraft", result)
         self.assertIn("text", result["meaningDraft"])
 

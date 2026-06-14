@@ -31,7 +31,8 @@ If the next agent continues here, the most likely follow-up is visual polish / U
 - `MeaningDraftTranslator` now provides a deterministic shell path for `meaningDraft.text`.
 - meaningDraft is a comparison baseline for later vibe translation review, not the final user-facing translation.
 - `TranslationDecisionAnalyzer` now turns user-visible `RagEvidence[]` into conservative review-point decisions without changing the final translation.
-- Author review card generation remains follow-up work.
+- `AuthorReviewCardGenerator` now turns decisions into writer-facing review cards without auto-applying patches.
+- UI, writer selection storage, and WorkMemory remain follow-up work.
 
 ## 0B. 2026-06-09 latest main sync + localization-guide state
 
