@@ -315,6 +315,51 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             "translationVersion": None,
         }
 
+    if mode is TranslationMode.V2_DUAL_DRAFT_REVIEW:
+        result = asdict(pipeline.run_v2_dual_draft_review(source_text))
+        final_translation = result.get("final_translation", "")
+        delivery_status = result.get("delivery_status", "deliverable")
+        user_visible_error_code = result.get("user_visible_error_code")
+        message = ""
+        final_translation, delivery_status, user_visible_error_code, metadata = _normalize_translation_delivery_contract(
+            final_translation=final_translation,
+            delivery_status=delivery_status,
+            user_visible_error_code=user_visible_error_code,
+            metadata=result.get("metadata", {}),
+        )
+        if delivery_status == "blocked_translation_safety":
+            message = "????몄뼱 踰덉뿭 寃利앹뿉 ?ㅽ뙣?덉뒿?덈떎. ?ㅼ떆 ?쒕룄??二쇱꽭??"
+        result["metadata"] = metadata
+        result["delivery_status"] = delivery_status
+        result["user_visible_error_code"] = user_visible_error_code
+        result["final_translation"] = final_translation
+        return {
+            "country": country,
+            "locale": locale,
+            "mode": mode.value,
+            "finalTranslation": final_translation,
+            "reviewSummary": "",
+            "retrievalCount": 0,
+            "workflow": result,
+            "meaningDraft": result.get("meaning_draft", {}),
+            "ragEvidence": result.get("rag_evidence", []),
+            "translationDecisions": result.get("translation_decisions", []),
+            "authorReviewCards": result.get("author_review_cards", []),
+            "riskItems": [],
+            "userVisibleRiskItems": [],
+            "hiddenRiskItems": [],
+            "qaReport": [],
+            "userVisibleQaReport": {},
+            "hiddenQaReport": [],
+            "patchSuggestions": [],
+            "metadata": metadata,
+            "deliveryStatus": delivery_status,
+            "userVisibleErrorCode": user_visible_error_code,
+            "message": message,
+            "memory": None,
+            "translationVersion": None,
+        }
+
     if mode is TranslationMode.V2_DIRECT_QA:
         result = asdict(pipeline.run_v2_direct_qa(source_text))
         final_translation = result.get("final_translation", "")

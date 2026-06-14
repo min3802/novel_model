@@ -479,3 +479,12 @@ Planned retry policy:
 - `residual_hangul_status = warn` should be treated as a QA issue, not an automatic retry trigger
 - `proper_noun_transliteration_status = warn|unchecked` should be treated as a transliteration QA issue, not an automatic retry trigger
 - `source_copy_status = fail`, `locale_adherence_status = fail`, or `source_copy_suspected = true` should trigger retry/hold logic
+
+## v2_dual_draft_review shell notes
+
+- `v2_dual_draft_review` currently reuses the existing direct translation safety contract.
+- `RagEvidence[]` and `MeaningDraft` are shell adapters for later dual-draft review work.
+- `MeaningDraftTranslator` is deterministic in this step and does not call live LLMs.
+- The meaning draft is a comparison baseline for later vibe translation review, not the user-facing final translation.
+- `TranslationDecisionAnalyzer` converts user-visible evidence into conservative review-point decisions only; it does not revise translation text.
+- Author review card generation remains future work.

@@ -1,5 +1,38 @@
 # Next OMX Handoff
 
+## 2026-06-12 translation safety + UI contract update
+
+Today's work focused on making translation safety states safe-to-render end to end:
+
+- Backend contract:
+  - `blocked_translation_safety` now consistently returns an empty `finalTranslation`, `deliveryStatus = "blocked_translation_safety"`, and `userVisibleErrorCode = "translation_safety_failed"`.
+  - `deliverable` responses with an empty translation are normalized to blocked at the service layer.
+- Pipeline logic:
+  - `Translation Safety Checks` remain split into `locale_adherence`, `source_copy`, `residual_hangul`, and `proper_noun_transliteration`.
+  - hard-fail cases still trigger same-model strict retry once; retry failure blocks delivery.
+- Frontend/UI:
+  - translation render path now branches on `deliveryStatus` and `userVisibleErrorCode`.
+  - `result`, `qa_warning`, `blocked`, and `error` states are handled separately.
+  - blocked responses show a retry/error card instead of looking like a successful translation.
+  - internal debug ratios are not surfaced to the user.
+- Verification:
+  - backend regression tests passed
+  - frontend TypeScript typecheck passed
+  - no live API calls were made
+
+If the next agent continues here, the most likely follow-up is visual polish / UI consistency for the blocked and QA warning cards, or wiring the same display helper into any other translation surfaces if they exist.
+
+## 2026-06-14 v2_dual_draft_review shell note
+
+- `v2_dual_draft_review` has been added as a shell mode only.
+- This step adds the mode enum, minimal schema dataclasses, and a pipeline/service shell that reuses the existing direct translation safety contract.
+- `RagEvidence[]` is now produced by adapting existing `SourceSideAnalyzer` / retriever risk items.
+- RAG remains an evidence layer for future explanation and review work, not a hard prompt-injection layer.
+- `MeaningDraftTranslator` now provides a deterministic shell path for `meaningDraft.text`.
+- meaningDraft is a comparison baseline for later vibe translation review, not the final user-facing translation.
+- `TranslationDecisionAnalyzer` now turns user-visible `RagEvidence[]` into conservative review-point decisions without changing the final translation.
+- Author review card generation remains follow-up work.
+
 ## 0B. 2026-06-09 latest main sync + localization-guide state
 
 This session pulled teammate changes from GitHub `main` and preserved the in-progress localization-guide work.

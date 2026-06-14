@@ -1,46 +1,155 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from enum import Enum
 from pathlib import Path
 
 from .infra.locales import KO_JA, LOCALE_REGISTRY, LocaleResources
 from .infra.project_paths import package_project_root
 
 
+class TranslationMode(str, Enum):
+    LEGACY_FULL = "legacy_full"
+    DIRECT_ONLY = "direct_only"
+    V2_DIRECT_QA = "v2_direct_qa"
+    V2_DUAL_DRAFT_REVIEW = "v2_dual_draft_review"
+    QA_ONLY = "qa_only"
+
+
+DEFAULT_QUALITY_MODE = "standard"
+ALLOWED_QUALITY_MODES = ("fast", "standard", "quality", "baseline")
+ALLOWED_TRANSLATION_MODELS = (
+    "gpt-5.4-nano",
+    "gpt-5.4-mini",
+    "gpt-5-mini",
+    "gpt-4.1-mini",
+)
+MODEL_PROFILES: dict[str, dict[str, str]] = {
+    "fast": {
+        "translation_model": "gpt-5.4-nano",
+        "review_model": "gpt-5.4-nano",
+    },
+    "standard": {
+        "translation_model": "gpt-5-mini",
+        "review_model": "gpt-5-mini",
+    },
+    "quality": {
+        "translation_model": "gpt-5.4-mini",
+        "review_model": "gpt-5.4-mini",
+    },
+    "baseline": {
+        "translation_model": "gpt-4.1-mini",
+        "review_model": "gpt-4.1-mini",
+    },
+}
+
+
+def normalize_quality_mode(value: str | None) -> str:
+    normalized = str(value or DEFAULT_QUALITY_MODE).strip().lower()
+    if normalized not in MODEL_PROFILES:
+        raise ValueError(
+            f"Unsupported qualityMode: {value}. Allowed values: {', '.join(ALLOWED_QUALITY_MODES)}"
+        )
+    return normalized
+
+
+def validate_translation_model(model: str, *, field_name: str = "model") -> str:
+    normalized = str(model or "").strip()
+    if normalized not in ALLOWED_TRANSLATION_MODELS:
+        raise ValueError(
+            f"Unsupported {field_name}: {model}. Allowed models: {', '.join(ALLOWED_TRANSLATION_MODELS)}"
+        )
+    return normalized
+
+
 @dataclass(slots=True)
 class PipelineConfig:
     locale: str = KO_JA.locale
+    mode: TranslationMode | str = TranslationMode.LEGACY_FULL
     resources: LocaleResources | None = None
     rag_dataset_path: Path | None = None
+    idiom_augmentation_paths: tuple[Path, ...] | list[Path] | None = None
     annotation_dataset_path: Path | None = None
     cultural_terms_path: Path | None = None
     inspection_prompt_path: Path | None = None
     embedding_model: str = "nlpai-lab/KURE-v1"
-    translation_model: str = "gpt-4.1-mini"
-    review_model: str = "gpt-4.1-mini"
-    # 검색 개수 (2단계로 분리)
-    #  *_top_k    : (A) 쿼리(문장) 1개당 qdrant 에서 가져올 후보 수 — 문장별 검색 깊이
-    #  *_return_k : (B) 모든 문장 결과를 통합한 뒤 번역에 넘길 최종 상한
+    quality_mode: str = DEFAULT_QUALITY_MODE
+    model_profile_name: str | None = None
+    translation_model: str | None = None
+    review_model: str | None = None
+    allowed_models: tuple[str, ...] = ALLOWED_TRANSLATION_MODELS
+    model_override: str | None = None
     idiom_top_k: int = 3
     idiom_return_k: int = 15
-    # 검색 threshold (idiom·annotation 동일하게 0.6으로 통일)
     score_threshold: float = 0.6
     annotation_top_k: int = 2
     annotation_return_k: int = 10
     annotation_score_threshold: float = 0.6
     mock: bool = False
     embedding_cache_dir: Path | None = None
-    # --- 청킹 전략 선택 (A/B 실험용) -----------------------------------
-    # "paragraph": 줄바꿈 기준으로 묶는다.
-    # "sentence" : Kiwi(kiwipiepy)로 문장 단위 분리 후 각 문장을 그대로 검색.
-    # 현재 기본값은 "sentence" (Kiwi 문장 단위). kiwipiepy 미설치 시 paragraph로 폴백.
     chunk_strategy: str = "sentence"
-    # --- qdrant 설정 ---------------------------------------------------
-    # mock=False면 qdrant 검색, mock=True면 레거시 JSON 경로(테스트용).
-    # TODO: 도커 서버로 전환 시 이 경로 대신 url 방식으로 교체.
-    #   예) QdrantClient(url="http://localhost:6333")
-    #   서버 전환 시 코드 한 줄 변경 + 컬렉션 데이터 서버에 재적재 필요.
     qdrant_path: str = "qdrant_local"
+
+    def __post_init__(self) -> None:
+        self.allowed_models = tuple(str(model).strip() for model in (self.allowed_models or ALLOWED_TRANSLATION_MODELS))
+        self.quality_mode = normalize_quality_mode(self.quality_mode)
+        self.model_profile_name = str(self.model_profile_name or self.quality_mode).strip().lower()
+        if self.model_profile_name not in MODEL_PROFILES:
+            raise ValueError(
+                f"Unsupported model profile: {self.model_profile_name}. "
+                f"Allowed profiles: {', '.join(sorted(MODEL_PROFILES))}"
+            )
+
+        profile = MODEL_PROFILES[self.model_profile_name]
+        override = self.model_override
+        if override is not None:
+            override = validate_translation_model(override, field_name="model override")
+            self.model_override = override
+
+        if self.translation_model is None:
+            self.translation_model = override or profile["translation_model"]
+        else:
+            self.translation_model = validate_translation_model(self.translation_model, field_name="translation_model")
+
+        if self.review_model is None:
+            self.review_model = override or profile["review_model"]
+        else:
+            self.review_model = validate_translation_model(self.review_model, field_name="review_model")
+
+    @property
+    def model_override_used(self) -> bool:
+        return self.model_override is not None
+
+    def build_metadata(
+        self,
+        *,
+        source_side_rag_enabled: bool,
+        rag_enabled: bool,
+        terminology_enabled: bool,
+        glossary_enabled: bool,
+        review_enabled: bool,
+        inspection_enabled: bool,
+        extra: dict[str, object] | None = None,
+    ) -> dict[str, object]:
+        metadata: dict[str, object] = {
+            "mode": self.resolved_mode().value,
+            "quality_mode": self.quality_mode,
+            "model_profile": self.model_profile_name,
+            "translation_model": self.translation_model,
+            "review_model": self.review_model,
+            "model": self.translation_model,
+            "model_override_used": self.model_override_used,
+            "allowed_models": list(self.allowed_models),
+            "source_side_rag_enabled": source_side_rag_enabled,
+            "rag_enabled": rag_enabled,
+            "terminology_enabled": terminology_enabled,
+            "glossary_enabled": glossary_enabled,
+            "review_enabled": review_enabled,
+            "inspection_enabled": inspection_enabled,
+        }
+        if extra:
+            metadata.update(extra)
+        return metadata
 
     def resolved_resources(self) -> LocaleResources:
         if self.resources is not None:
@@ -49,8 +158,23 @@ class PipelineConfig:
             raise KeyError(f"Unknown locale: {self.locale}")
         return LOCALE_REGISTRY[self.locale]
 
+    def resolved_mode(self) -> TranslationMode:
+        if isinstance(self.mode, TranslationMode):
+            return self.mode
+        try:
+            return TranslationMode(str(self.mode))
+        except ValueError as exc:
+            raise ValueError(f"Unknown translation mode: {self.mode}") from exc
+
     def resolved_rag_dataset_path(self) -> Path:
         return Path(self.rag_dataset_path or self.resolved_resources().rag_dataset_path)
+
+    def resolved_idiom_augmentation_paths(self) -> tuple[Path, ...]:
+        if self.idiom_augmentation_paths is not None:
+            return tuple(Path(path) for path in self.idiom_augmentation_paths)
+        if self.resources is None and self.locale not in LOCALE_REGISTRY:
+            return ()
+        return tuple(Path(path) for path in self.resolved_resources().idiom_augmentation_paths)
 
     def resolved_annotation_dataset_path(self) -> Path:
         if self.annotation_dataset_path is not None:
@@ -70,7 +194,6 @@ class PipelineConfig:
             return Path(self.embedding_cache_dir)
         return package_project_root(Path(__file__)) / "data" / "embedding_cache"
 
-    # locale → idiom(번역용) qdrant 컬렉션 이름 매핑.
     _IDIOM_COLLECTION_BY_LOCALE = {
         "ko_ja": "idiom_jp",
         "ko_en_us": "idiom_us",
@@ -85,11 +208,9 @@ class PipelineConfig:
             raise KeyError(f"No idiom collection mapped for locale: {self.locale}") from exc
 
     def resolved_annotation_collection(self) -> str:
-        # 한국 문화 주석은 locale과 무관하게 항상 kculture 컬렉션을 사용한다.
         return "kculture"
 
     def resolved_qdrant_path(self) -> Path:
-        # 상대경로면 프로젝트 루트 기준으로 해석한다.
         path = Path(self.qdrant_path)
         if path.is_absolute():
             return path
