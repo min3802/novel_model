@@ -1,4 +1,5 @@
 {common_korean_rule}
+{retry_block}
 
 Role:
 - You are a literary {target_language} translator for serialized fiction and webnovel scenes.

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from dataclasses import dataclass
 from typing import Any
 
@@ -69,6 +70,7 @@ class TranslationDraft:
     reference_ids: list[str]
     translation_decisions: list[dict[str, str]]
     raw_response: dict[str, Any]
+    prompt_debug: dict[str, Any]
 
 
 def _format_profile_context(profile: dict[str, Any] | None) -> str:
@@ -121,10 +123,26 @@ class Translator:
         memory_context: str = "",
         translation_profile: dict[str, Any] | None = None,
         source_analysis: dict[str, Any] | None = None,
+        include_rag_context: bool = True,
+        strict_locale_retry: bool = False,
+        retry_attempt: int = 0,
     ) -> TranslationDraft:
         reference_ids = [str(row.item.get("source_id") or row.item.get("id") or "") for row in retrievals if (row.item.get("source_id") or row.item.get("id"))]
         if self.config.mock:
             payload = translation_payload(self.config, self.resources, source_text, retrievals)
+            prompt = self._build_prompt(
+                source_text=source_text,
+                rag_context="",
+                translation_profile=translation_profile,
+                source_analysis=source_analysis,
+                strict_locale_retry=strict_locale_retry,
+            )
+            prompt_debug = self._build_prompt_debug(
+                prompt=prompt,
+                route_source="retry" if strict_locale_retry else "override" if self.config.model_override_used else "profile",
+                strict_locale_retry=strict_locale_retry,
+                retry_attempt=retry_attempt,
+            )
             return TranslationDraft(
                 translation=payload["translation"],
                 strategy=payload["strategy"],
@@ -132,18 +150,23 @@ class Translator:
                 reference_ids=payload["reference_ids"],
                 translation_decisions=payload["translation_decisions"],
                 raw_response=payload["raw_response"],
+                prompt_debug=prompt_debug,
             )
 
         client = get_openai_client()
-        context = IdiomRetriever.build_context(retrievals)
+        context = IdiomRetriever.build_context(retrievals) if include_rag_context else ""
         if memory_context.strip():
-            context = "\n\n[작품 메모리 / 온톨로지 참고]\n" + memory_context.strip() + "\n\n[RAG 참고]\n" + context
+            if context.strip():
+                context = "\n\n[작품 메모리 / 온톨로지 참고]\n" + memory_context.strip() + "\n\n[RAG 참고]\n" + context
+            else:
+                context = memory_context.strip()
         schema_name = f"{self.resources.locale}_translation".replace("-", "_")
         prompt = self._build_prompt(
             source_text=source_text,
             rag_context=context,
             translation_profile=translation_profile,
             source_analysis=source_analysis,
+            strict_locale_retry=strict_locale_retry,
         )
 
         response = client.responses.create(
@@ -165,6 +188,12 @@ class Translator:
         payload["rationale"] = koreanize_text(payload["rationale"], model=self.config.review_model)
         for decision in payload.get("translation_decisions", []):
             decision["reason"] = koreanize_text(decision.get("reason", ""), model=self.config.review_model)
+        prompt_debug = self._build_prompt_debug(
+            prompt=prompt,
+            route_source="retry" if strict_locale_retry else "override" if self.config.model_override_used else "profile",
+            strict_locale_retry=strict_locale_retry,
+            retry_attempt=retry_attempt,
+        )
         return TranslationDraft(
             translation=payload["translation"],
             strategy=payload["strategy"],
@@ -172,6 +201,7 @@ class Translator:
             reference_ids=payload["reference_ids"],
             translation_decisions=payload["translation_decisions"],
             raw_response=payload,
+            prompt_debug=prompt_debug,
         )
 
     def _build_prompt(
@@ -181,13 +211,42 @@ class Translator:
         rag_context: str,
         translation_profile: dict[str, Any] | None = None,
         source_analysis: dict[str, Any] | None = None,
+        strict_locale_retry: bool = False,
     ) -> str:
+        retry_block = ""
+        if strict_locale_retry:
+            retry_block = "\n\n[STRICT LOCALE RETRY]\n- Translate only into the target language.\n- Do not copy Korean source sentences.\n- Do not leave Korean sentence-level text in the output.\n- Keep proper nouns localized or transliterated when possible.\n- Output translation only.\n- Do not add explanations, notes, or commentary."
         return self.prompt_template.format(
             common_korean_rule=self.common_korean_rule,
             source_language=self.resources.source_language,
             target_language=self.resources.target_language,
             source_text=source_text,
             rag_context=rag_context,
+            retry_block=retry_block,
             translation_profile_context=_format_profile_context(translation_profile) or "- none",
             source_analysis_context=_format_source_analysis_context(source_analysis) or "- none",
         )
+
+    def _build_prompt_debug(
+        self,
+        *,
+        prompt: str,
+        route_source: str,
+        strict_locale_retry: bool = False,
+        retry_attempt: int = 0,
+    ) -> dict[str, Any]:
+        system_message = self.resources.translator_system_prompt
+        return {
+            "prompt_template_id": "TRANSLATOR_PROMPT.md",
+            "prompt_version": "runtime",
+            "prompt_hash": hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
+            "system_message_hash": hashlib.sha256(system_message.encode("utf-8")).hexdigest(),
+            "user_message_hash": hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
+            "target_locale": self.resources.locale,
+            "target_language_name": self.resources.target_language,
+            "translation_model": self.config.translation_model,
+            "route_source": route_source,
+            "strict_locale_retry": strict_locale_retry,
+            "retry_attempt": retry_attempt,
+            "retry_prompt_hash": hashlib.sha256(prompt.encode("utf-8")).hexdigest() if strict_locale_retry else None,
+        }
