@@ -12,6 +12,7 @@ class LocaleResources:
     source_language: str
     target_language: str
     rag_dataset_path: Path
+    idiom_augmentation_paths: tuple[Path, ...]
     inspection_prompt_path: Path
     translator_system_prompt: str
 
@@ -26,6 +27,7 @@ KO_JA = LocaleResources(
     source_language="Korean",
     target_language="Japanese",
     rag_dataset_path=EMBEDDING_RAG_DIR / "jp_idiom_embedding_anchor_meaning.json",
+    idiom_augmentation_paths=(PROJECT_ROOT / "data" / "idiom_augmentation" / "manual_ko_ja_idiom_augments.json",),
     inspection_prompt_path=INSPECTION_PROMPT_PATH,
     translator_system_prompt=(
         "You are a Korean-to-Japanese localization translator. "
@@ -41,6 +43,7 @@ KO_EN_US = LocaleResources(
     source_language="Korean",
     target_language="English (US)",
     rag_dataset_path=EMBEDDING_RAG_DIR / "us_idiom_embedding_anchor_meaning.json",
+    idiom_augmentation_paths=(),
     inspection_prompt_path=INSPECTION_PROMPT_PATH,
     translator_system_prompt=(
         "You are a Korean-to-US-English localization translator. "
@@ -56,6 +59,7 @@ KO_ZH_CN = LocaleResources(
     source_language="Korean",
     target_language="Simplified Chinese",
     rag_dataset_path=EMBEDDING_RAG_DIR / "cn_idiom_embedding_anchor_meaning.json",
+    idiom_augmentation_paths=(),
     inspection_prompt_path=INSPECTION_PROMPT_PATH,
     translator_system_prompt=(
         "You are a Korean-to-Simplified-Chinese localization translator. "
@@ -71,6 +75,7 @@ KO_TH_TH = LocaleResources(
     source_language="Korean",
     target_language="Thai",
     rag_dataset_path=EMBEDDING_RAG_DIR / "th_idiom_embedding_anchor_meaning.json",
+    idiom_augmentation_paths=(),
     inspection_prompt_path=INSPECTION_PROMPT_PATH,
     translator_system_prompt=(
         "You are a Korean-to-Thai localization translator. "

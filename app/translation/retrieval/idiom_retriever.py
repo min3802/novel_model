@@ -46,7 +46,6 @@ _MERGED_MATCH_TYPE_PRIORITY = {"semantic": 0, "partial": 1, "normalized": 2, "ex
 _SEMANTIC_ONLY_SCORE_FLOOR = 0.25
 _PARTICLE_STRIP_RE = re.compile(r"[을를이가은는]")
 _NORMALIZED_MATCH_ENDINGS = ("고", "는", "지", "았다", "었다", "게", "도록", "면", "니", "려", "으려", "은", "는지", "친", "린", "으십쇼")
-_MANUAL_AUGMENTATION_FILE = "manual_ko_ja_idiom_augments.json"
 
 
 def _clean_anchor_candidate(value: Any) -> str:
@@ -87,16 +86,6 @@ def _resolve_source_id(payload: dict[str, Any], fallback: str | None = None) -> 
     if fallback:
         return fallback
     return "unknown-source"
-
-
-def _repo_root() -> Path:
-    return Path(__file__).resolve().parents[3]
-
-
-def _manual_augmentation_path(locale: str) -> Path | None:
-    if locale != "ko_ja":
-        return None
-    return _repo_root() / "data" / "idiom_augmentation" / _MANUAL_AUGMENTATION_FILE
 
 
 def _anchor_head_from_text(text: str) -> str:
@@ -241,11 +230,11 @@ class IdiomRetriever(ChunkingMixin):
         self.config = config
         self.backend: EmbeddingBackend = create_embedding_backend(config)
         self.dataset_path = config.resolved_rag_dataset_path()
-        self.augmentation_path = _manual_augmentation_path(config.locale)
+        self.augmentation_paths = tuple(config.resolved_idiom_augmentation_paths())
         self.cache_dir = config.resolved_embedding_cache_dir()
         base_items = self._load_items(self.dataset_path)
-        augmentation_items = self._load_items(self.augmentation_path) if self.augmentation_path else []
-        self.items = self._merge_items(base_items, augmentation_items)
+        augmentation_groups = [self._load_items(path) for path in self.augmentation_paths]
+        self.items = self._merge_items(base_items, *augmentation_groups)
         self.search_texts = [build_search_text(item) for item in self.items]
         self.anchor_index = build_anchor_index(self.items)
         # qdrant 백엔드: 쿼리 임베딩만 필요하고, 벡터/문서는 qdrant가 보관한다.
@@ -283,10 +272,12 @@ class IdiomRetriever(ChunkingMixin):
 
     def _cache_paths(self) -> tuple[Path, Path]:
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-        augmentation_path = self.augmentation_path.resolve() if self.augmentation_path and self.augmentation_path.exists() else None
-        augmentation_fingerprint = (
-            f"{augmentation_path}::{augmentation_path.stat().st_mtime_ns}" if augmentation_path is not None else "none"
-        )
+        augmentation_fingerprint_parts = [
+            f"{path.resolve()}::{path.stat().st_mtime_ns}"
+            for path in self.augmentation_paths
+            if path.exists()
+        ]
+        augmentation_fingerprint = "||".join(augmentation_fingerprint_parts) if augmentation_fingerprint_parts else "none"
         cache_key = hashlib.sha256(
             f"{self.dataset_path.resolve()}::{self.dataset_path.stat().st_mtime_ns}::{augmentation_fingerprint}::{self.config.embedding_model}::{self.config.locale}::anchor-first-v1".encode(
                 "utf-8"
@@ -305,8 +296,14 @@ class IdiomRetriever(ChunkingMixin):
         current_meta = {
             "dataset_path": str(self.dataset_path.resolve()),
             "dataset_mtime_ns": self.dataset_path.stat().st_mtime_ns,
-            "augmentation_path": str(self.augmentation_path.resolve()) if self.augmentation_path and self.augmentation_path.exists() else "",
-            "augmentation_mtime_ns": self.augmentation_path.stat().st_mtime_ns if self.augmentation_path and self.augmentation_path.exists() else 0,
+            "augmentation_paths": [
+                {
+                    "path": str(path.resolve()),
+                    "mtime_ns": path.stat().st_mtime_ns,
+                }
+                for path in self.augmentation_paths
+                if path.exists()
+            ],
             "embedding_model": self.config.embedding_model,
             "record_count": len(self.items),
             "locale": self.config.locale,

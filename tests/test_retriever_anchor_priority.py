@@ -258,6 +258,43 @@ class IdiomRetrieverAnchorPriorityTests(unittest.TestCase):
                     self.assertEqual(candidate.item.get("match_type"), match_types)
                 self.assertEqual(candidate.item.get("confidence"), expected_confidence)
 
+    def test_locale_resources_expose_idiom_augmentation_paths(self) -> None:
+        self.assertEqual(len(LOCALE_REGISTRY["ko_ja"].idiom_augmentation_paths), 1)
+        self.assertEqual(
+            LOCALE_REGISTRY["ko_ja"].idiom_augmentation_paths[0].name,
+            "manual_ko_ja_idiom_augments.json",
+        )
+        self.assertTrue(LOCALE_REGISTRY["ko_ja"].idiom_augmentation_paths[0].exists())
+        self.assertEqual(LOCALE_REGISTRY["ko_en_us"].idiom_augmentation_paths, ())
+        self.assertEqual(LOCALE_REGISTRY["ko_zh_cn"].idiom_augmentation_paths, ())
+        self.assertEqual(LOCALE_REGISTRY["ko_th_th"].idiom_augmentation_paths, ())
+
+    def test_pipeline_config_resolves_idiom_augmentation_paths(self) -> None:
+        ja = PipelineConfig(locale="ko_ja", mock=True)
+        us = PipelineConfig(locale="ko_en_us", mock=True)
+
+        self.assertEqual(len(ja.resolved_idiom_augmentation_paths()), 1)
+        self.assertEqual(ja.resolved_idiom_augmentation_paths()[0].name, "manual_ko_ja_idiom_augments.json")
+        self.assertEqual(us.resolved_idiom_augmentation_paths(), ())
+
+    def test_retriever_accepts_empty_augmentation_paths_for_non_ja_locales(self) -> None:
+        retriever = self._build_retriever(
+            [
+                {
+                    "id": "base-only",
+                    "source_id": "base-only",
+                    "embedding_text": "easy way out. simple base row",
+                    "context_text": "source phrase: Bob's your uncle\nanchor explanation: easy way out",
+                }
+            ],
+            locale="ko_en_us",
+            score_threshold=0.0,
+        )
+
+        self.assertEqual(retriever.augmentation_paths, ())
+        self.assertEqual(len(retriever.items), 1)
+        self.assertEqual(retriever.items[0].get("source_id"), "base-only")
+
     def test_normalize_anchor_key_collapses_spacing_and_punctuation(self) -> None:
         self.assertEqual(normalize_anchor_key("발목을 잡다"), normalize_anchor_key("발목을  잡다"))
         self.assertEqual(normalize_anchor_key("손에 땀을 쥐다"), normalize_anchor_key("손에 땀을 쥐다."))
