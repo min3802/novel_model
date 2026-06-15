@@ -639,6 +639,18 @@ class TranslationGraph:
                     "draft_translation": "",
                     "inspection_issues": [],
                     "support_context": state.get("support_context") or {},
+                    "metadata": self.config.build_metadata(
+                        source_side_rag_enabled=False,
+                        rag_enabled=True,
+                        terminology_enabled=bool(state.get("terminology_candidates") or state.get("active_terminology")),
+                        glossary_enabled=bool(
+                            (state.get("request_payload") or {}).get("terminology")
+                            or (state.get("request_payload") or {}).get("terms")
+                            or (state.get("request_payload") or {}).get("glossary")
+                        ),
+                        review_enabled=False,
+                        inspection_enabled=True,
+                    ),
                 }
                 from .translation_pipeline import AgentWorkflowResult
 
@@ -666,6 +678,18 @@ class TranslationGraph:
                 "draft_translation": draft.get("translation", ""),
                 "inspection_issues": inspection.get("issues") or [],
                 "support_context": state.get("support_context") or {},
+                "metadata": self.config.build_metadata(
+                    source_side_rag_enabled=False,
+                    rag_enabled=True,
+                    terminology_enabled=bool(state.get("terminology_candidates") or state.get("active_terminology")),
+                    glossary_enabled=bool(
+                        (state.get("request_payload") or {}).get("terminology")
+                        or (state.get("request_payload") or {}).get("terms")
+                        or (state.get("request_payload") or {}).get("glossary")
+                    ),
+                    review_enabled=False,
+                    inspection_enabled=True,
+                ),
             }
             from .translation_pipeline import AgentWorkflowResult
 

@@ -99,6 +99,10 @@ class AgentWorkflowTests(unittest.TestCase):
         self.assertEqual(result.inspection["issues"], [])
         self.assertIn("translation", result.draft)
         self.assertTrue(result.reviewed_translation)
+        self.assertEqual(result.metadata["mode"], "legacy_full")
+        self.assertEqual(result.metadata["quality_mode"], "standard")
+        self.assertEqual(result.metadata["translation_model"], "gpt-5-mini")
+        self.assertEqual(result.metadata["review_model"], "gpt-5-mini")
 
 
     def test_translator_prompt_includes_profile_and_analysis(self) -> None:
