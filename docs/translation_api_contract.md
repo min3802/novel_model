@@ -21,13 +21,13 @@
 
 1. 사용자가 원문 `sourceText`를 입력한다.
 2. 사용자가 목표 언어/지역 `targetLocale`을 선택한다.
-3. 사용자가 번역 모드 `mode`를 선택한다.
-4. backend가 translation pipeline을 실행한다.
+3. backend가 기본 translation pipeline을 실행한다.
+4. backend가 내부적으로 `v2_dual_draft_review` pipeline을 선택한다.
 5. backend가 `finalTranslation`을 생성한다.
 6. backend가 필요 시 `ragEvidence`, `translationDecisions`, `authorReviewCards`를 함께 반환한다.
 7. frontend는 `deliveryStatus`를 먼저 확인하고, 상태에 따라 번역문과 검수 정보를 렌더링한다.
 
-권장 기본 모드는 `v2_dual_draft_review`다. 이 모드는 번역 결과와 함께 RAG evidence, decision, author review card를 반환할 수 있다.
+일반 사용자는 `mode`를 선택하지 않는다. public frontend도 `mode`를 보내지 않는다. backend 기본 pipeline은 내부적으로 `v2_dual_draft_review`를 사용한다.
 
 ## 3. Request contract
 
@@ -46,24 +46,39 @@ POST /api/translations/
 | `workId` | string | 권장 | 작품 식별자다. 아직 작품 저장소와 연결되지 않은 초기 구현에서는 nullable 또는 생략 가능하게 둘 수 있다. |
 | `episodeId` | string | 권장 | 회차 식별자다. 아직 회차 저장소와 연결되지 않은 초기 구현에서는 nullable 또는 생략 가능하게 둘 수 있다. |
 | `sourceText` | string | 필수 | 번역할 원문 텍스트다. 빈 문자열이면 validation error로 처리한다. |
-| `sourceLocale` | string | 권장 | 원문 locale이다. 예: `ko_KR`. |
-| `targetLocale` | string | 필수 | 목표 locale이다. 예: `ja_JP`, `en_US`. |
-| `mode` | string | 필수 | 번역 모드다. 예: `v2_dual_draft_review`, `direct_only`, `v2_direct_qa`. |
+| `sourceLocale` | string | 권장 | 원문 locale이다. 예: `ko`. |
+| `targetLocale` | string | 필수 | 목표 locale이다. 예: `ko_ja`, `ko_en`. |
+
+`mode`는 public API request field가 아니다. 일반 frontend는 `mode`를 보내지 않는다.
 
 ### 요청 예시
 
 ```json
 {
   "workId": "work_001",
-  "episodeId": "episode_010",
-  "sourceText": "밥 한번 먹자고 말했다.",
-  "sourceLocale": "ko_KR",
-  "targetLocale": "ja_JP",
-  "mode": "v2_dual_draft_review"
+  "episodeId": "ep_001",
+  "sourceText": "긴 한국어 원문...",
+  "sourceLocale": "ko",
+  "targetLocale": "ko_ja"
 }
 ```
 
-## 4. Response contract
+## 4. Backend internal pipeline mode
+
+`mode`는 사용자 노출용 옵션이 아니라 backend 내부 pipeline selector다.
+
+반드시 지켜야 할 원칙:
+
+- `mode`는 public API request field가 아니다.
+- 일반 frontend는 `mode`를 보내지 않는다.
+- 사용자는 `mode`를 선택하지 않는다.
+- 새 Django backend는 기본값으로 `v2_dual_draft_review`를 사용한다.
+- `direct_only`, `v2_direct_qa`, `qa_only`, `legacy_full` 등은 개발/테스트/관리자/internal override 용도로만 사용한다.
+- 새 Django 구현에서도 public serializer와 internal pipeline selector를 분리하는 것을 권장한다.
+- public response에도 `mode`를 필수 top-level field로 추가하지 않는다.
+- 필요하다면 후속 debug/log/internal metadata에서 `executedMode` 같은 별도 이름을 고려할 수 있지만, 기본 frontend contract에는 포함하지 않는다.
+
+## 5. Response contract
 
 응답 body는 JSON이다. 새 Django backend는 최소한 아래 top-level fields를 유지해야 한다.
 
@@ -80,7 +95,7 @@ POST /api/translations/
 
 frontend는 unknown field에 tolerant하게 동작해야 한다. backend는 internal/debug field를 과도하게 노출하지 않는다.
 
-## 5. `deliveryStatus` 규칙
+## 6. `deliveryStatus` 규칙
 
 허용 enum value는 다음과 같다.
 
@@ -113,7 +128,7 @@ frontend는 unknown field에 tolerant하게 동작해야 한다. backend는 inte
 - frontend는 blocked 상태에서 카드, evidence, patch preview를 만들거나 표시하지 않는다.
 - 사용자는 안전 실패 안내 문구만 확인해야 한다.
 
-## 6. `meaningDraft` contract
+## 7. `meaningDraft` contract
 
 `meaningDraft`는 현재 구현된 compatibility field다. 장기적으로는 `SemanticLedger`가 별도 구조로 도입될 수 있지만, 이번 API contract에서는 `meaningDraft` top-level field를 유지한다.
 
@@ -131,7 +146,7 @@ frontend는 unknown field에 tolerant하게 동작해야 한다. backend는 inte
 - 새 Django API에서는 camelCase인 `temperatureProfile`로 직렬화한다.
 - 내부 Python dataclass는 snake_case를 써도 되지만 API response contract는 frontend가 쓰는 casing으로 고정한다.
 
-## 7. `ragEvidence` contract
+## 8. `ragEvidence` contract
 
 `ragEvidence`는 번역 지시가 아니라 번역 후 검토 evidence다.
 
@@ -156,7 +171,7 @@ frontend는 unknown field에 tolerant하게 동작해야 한다. backend는 inte
 - `candidateTranslations`는 자동 patch나 강제 번역어가 아니다.
 - WorkMemory 저장 근거로 바로 쓰지 않는다.
 
-## 8. `translationDecisions` contract
+## 9. `translationDecisions` contract
 
 `translationDecisions`는 evidence를 바탕으로 backend가 생성한 검토 판단 목록이다. `authorReviewCards`보다 더 많은 항목을 담을 수 있다.
 
@@ -191,7 +206,7 @@ frontend는 unknown field에 tolerant하게 동작해야 한다. backend는 inte
 - 새 Django response에서는 camelCase를 권장한다.
 - legacy Python reference는 snake_case일 수 있다.
 
-## 9. `authorReviewCards` contract
+## 10. `authorReviewCards` contract
 
 `authorReviewCards`는 frontend에서 read-only로 먼저 표시할 검수 카드 목록이다.
 
@@ -227,7 +242,7 @@ frontend는 unknown field에 tolerant하게 동작해야 한다. backend는 inte
 - 같은 `sourceSpan + decisionType` 조합은 중복 card를 만들지 않는다.
 - card action, patch, WorkMemory 저장은 아직 구현하지 않는다.
 
-## 10. alignment 규칙
+## 11. alignment 규칙
 
 허용 `alignmentStatus` 값:
 
@@ -251,17 +266,18 @@ frontend 규칙:
 - `source_only` 또는 `heuristic`은 future extension으로 취급하고, 현재 UI에서는 보수적으로 표시한다.
 - alignment가 불확실한 card에서 patch preview를 만들지 않는다.
 
-## 11. 새 Django backend 책임
+## 12. 새 Django backend 책임
 
 새 Django backend는 다음 책임을 가진다.
 
 1. API serializer와 request validation을 구현한다.
    - `sourceText` 빈 문자열 방지
    - `targetLocale` 유효성 검증
-   - `mode` enum 검증
+   - public request에서 `mode`를 받지 않도록 serializer를 분리
 2. translation service orchestration을 담당한다.
    - pipeline 실행
-   - mode별 service routing
+   - public 요청은 기본적으로 `v2_dual_draft_review`로 routing
+   - 개발/테스트/관리자/internal override에서만 `mode` 기반 service routing 허용
    - mock/live 환경 분리
 3. safety contract를 강제한다.
    - `blocked_translation_safety` 상태에서 `finalTranslation` 렌더링 금지 계약을 지킨다.
@@ -279,7 +295,7 @@ frontend 규칙:
    - raw model response
    - internal safety trace
 
-## 12. 새 frontend 책임
+## 13. 새 frontend 책임
 
 새 frontend는 다음 책임을 가진다.
 
@@ -290,8 +306,9 @@ frontend 규칙:
 5. `alignmentStatus="exact"`일 때만 target highlight를 신뢰한다.
 6. unknown fields에 tolerant하게 parsing한다.
 7. card action, patch, WorkMemory 기능은 후속 feature로 분리한다.
+8. 일반 frontend는 `mode`를 request에 포함하지 않는다.
 
-## 13. Legacy reference files
+## 14. Legacy reference files
 
 아래 파일들은 현재 동작과 테스트를 이해하기 위한 reference다. 새 Django backend에 그대로 복붙하지 않는다.
 
@@ -316,7 +333,7 @@ reference 사용 원칙:
 - Django serializer, view, service layer는 새 구조에 맞춰 다시 작성한다.
 - frontend 화면 설계는 새 UX 기준으로 다시 설계하되, 이 문서의 response contract를 유지한다.
 
-## 14. 아직 구현하지 않는 것
+## 15. 아직 구현하지 않는 것
 
 다음 항목은 이번 contract의 범위 밖이다.
 
@@ -332,7 +349,7 @@ reference 사용 원칙:
 
 이 기능들은 후속 설계에서 별도 endpoint와 저장 계약을 만든 뒤 구현한다.
 
-## 15. 구현 상태 구분
+## 16. 구현 상태 구분
 
 현재 구현된 것으로 볼 수 있는 항목:
 
@@ -346,6 +363,7 @@ reference 사용 원칙:
 - `blocked_translation_safety` empty-array contract
 - minimal exact alignment
 - P0/P1 중심 visible card filtering
+- backend default pipeline으로 `v2_dual_draft_review` 사용
 
 planned 또는 후속 구현 항목:
 
@@ -356,8 +374,9 @@ planned 또는 후속 구현 항목:
 - SemanticLedger
 - card action persistence
 - live alignment 또는 heuristic alignment
+- public API와 분리된 admin/internal `mode` override endpoint 또는 option
 
-## 16. 샘플 response
+## 17. 샘플 response
 
 샘플 response는 별도 파일에 둔다.
 

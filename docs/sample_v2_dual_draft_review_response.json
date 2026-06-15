@@ -2,7 +2,6 @@
   "description": "새 Django backend와 새 frontend가 공유할 v2_dual_draft_review 응답 예시다. 실제 번역 품질 평가 데이터가 아니라 serializer contract 참고용이다.",
   "cases": {
     "deliverable": {
-      "mode": "v2_dual_draft_review",
       "workId": "work_001",
       "episodeId": "episode_010",
       "sourceLocale": "ko_KR",
@@ -22,7 +21,6 @@
       "authorReviewCards": []
     },
     "qa_warning": {
-      "mode": "v2_dual_draft_review",
       "workId": "work_001",
       "episodeId": "episode_011",
       "sourceLocale": "ko_KR",
@@ -167,7 +165,6 @@
       ]
     },
     "blocked_translation_safety": {
-      "mode": "v2_dual_draft_review",
       "workId": "work_001",
       "episodeId": "episode_012",
       "sourceLocale": "ko_KR",
@@ -186,5 +183,6 @@
       "translationDecisions": [],
       "authorReviewCards": []
     }
-  }
+  },
+  "_internalNote": "backend default pipeline is v2_dual_draft_review; public frontend request does not send mode"
 }
