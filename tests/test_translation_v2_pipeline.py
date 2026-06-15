@@ -624,6 +624,43 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertTrue(decisions[0].unresolved_risk)
         self.assertEqual(decisions[0].suggested_actions, ["작가 검토"])
 
+    def test_translation_decision_analyzer_marks_target_only_match_unresolved(self) -> None:
+        analyzer = TranslationDecisionAnalyzer(self._config())
+        evidence = RagEvidence(
+            id="evidence:005",
+            source_span="target only phrase",
+            anchor="target only phrase",
+            evidence_type="annotation",
+            literal_meaning="note",
+            pragmatic_function="context cue",
+            tone="",
+            cultural_meaning="",
+            literal_risk="target only",
+            strategy_hints=[],
+            candidate_translations=[],
+            confidence="high",
+            source="annotation_rag",
+            source_id="risk:005",
+            user_visible=True,
+        )
+
+        decisions = analyzer.analyze(
+            [evidence],
+            MeaningDraft(text="baseline", model="mock-model"),
+            "This translation keeps target only phrase as a note.",
+            source_text="no matching source span here",
+            locale="ko_ja",
+        )
+
+        self.assertEqual(len(decisions), 1)
+        decision = decisions[0]
+        self.assertEqual(decision.source_start, None)
+        self.assertEqual(decision.source_end, None)
+        self.assertEqual(decision.target_span, "target only phrase")
+        self.assertIsNotNone(decision.target_start)
+        self.assertIsNotNone(decision.target_end)
+        self.assertEqual(decision.alignment_status, "unresolved")
+
     def test_translation_decision_analyzer_skips_hidden_evidence(self) -> None:
         analyzer = TranslationDecisionAnalyzer(self._config())
         evidence = RagEvidence(

@@ -395,8 +395,6 @@ class TranslationDecisionAnalyzer:
                 alignment_status = "exact"
             elif source_match:
                 alignment_status = "target_unresolved"
-            elif target_match:
-                alignment_status = "source_only"
             else:
                 alignment_status = "unresolved"
             decisions.append(
