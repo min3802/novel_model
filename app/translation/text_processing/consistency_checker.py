@@ -6,6 +6,7 @@ from .terminology import (
     TERMINOLOGY_POLICY_CONTEXTUAL,
     TERMINOLOGY_POLICY_LOCKED,
     TERMINOLOGY_POLICY_PREFERRED,
+    TERMINOLOGY_POLICY_REVIEW,
     TerminologyIssue,
     issue_to_dict,
     present_any,
@@ -69,7 +70,7 @@ def check_translation_consistency(
         if expected and expected not in allowed:
             allowed.insert(0, expected)
 
-        if policy == TERMINOLOGY_POLICY_CONTEXTUAL:
+        if policy in {TERMINOLOGY_POLICY_CONTEXTUAL, TERMINOLOGY_POLICY_REVIEW}:
             skipped.append(
                 {
                     "source": source,

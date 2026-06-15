@@ -20,11 +20,11 @@ def ko(value: str) -> str:
         return value
 
 
-SARANG_PHARMACY = ko("\uc0ac\ub791 \uc57d\uad6d")
-DONGSOMUN_MARKET = ko("\ub3d9\uc18c\ubb38 \uc2dc\uc7a5")
-PHARMACY = ko("\uc57d\uad6d")
-KIM_CHEOMJI = ko("\uae40\ucca8\uc9c0")
-THAILAND = ko("\ud0dc\uad6d")
+SARANG_PHARMACY = ko('사랑 약국')
+DONGSOMUN_MARKET = ko('동소문 시장')
+PHARMACY = ko('약국')
+KIM_CHEOMJI = ko('김첨지')
+THAILAND = ko('태국')
 
 
 class TranslationConsistencyGlossaryTests(unittest.TestCase):
@@ -32,14 +32,14 @@ class TranslationConsistencyGlossaryTests(unittest.TestCase):
         os.environ["WLIGHTER_MOCK_MODE"] = "true"
 
     def test_named_business_phrase_is_locked_before_common_noun(self) -> None:
-        text = ko("\uae40\ucca8\uc9c0\ub294 \uc0ac\ub791 \uc57d\uad6d \uc55e\uc5d0\uc11c \ub3d9\uc18c\ubb38 \uc2dc\uc7a5 \ucabd\uc744 \ubc14\ub77c\ubd24\ub2e4. \uadfc\ucc98 \uc57d\uad6d\uc740 \uc774\ubbf8 \ubb38\uc744 \ub2eb\uc558\ub2e4.")
+        text = ko('김첨지는 사랑 약국 앞에서 동소문 시장 쪽을 바라봤다. 근처 약국은 이미 문을 닫았다.')
         candidates = extract_noun_terminology_candidates(text)
         sources = [row["source"] for row in candidates]
 
         self.assertIn(SARANG_PHARMACY, sources)
         self.assertIn(DONGSOMUN_MARKET, sources)
         self.assertIn(PHARMACY, sources)
-        self.assertNotIn(ko("\uc55e\uc5d0\uc11c \ub3d9"), sources)
+        self.assertNotIn(ko('앞에서 동'), sources)
         self.assertLess(sources.index(SARANG_PHARMACY), sources.index(PHARMACY))
         locked = next(row for row in candidates if row["source"] == SARANG_PHARMACY)
         self.assertEqual(locked["policy"], TERMINOLOGY_POLICY_LOCKED)
@@ -67,7 +67,7 @@ class TranslationConsistencyGlossaryTests(unittest.TestCase):
                 "status": "confirmed",
             },
         ]
-        source = ko("\uc0ac\ub791 \uc57d\uad6d\uc5d0\uc11c \uc57d\uc744 \uc0ac\uace0 \uadfc\ucc98 \uc57d\uad6d\uc73c\ub85c \uac14\ub2e4.")
+        source = ko('사랑 약국에서 약을 사고 근처 약국으로 갔다.')
         ok = check_translation_consistency(
             source_text=source,
             translated_text="He bought medicine at Sarang Pharmacy and then went to a drugstore nearby.",
@@ -96,7 +96,7 @@ class TranslationConsistencyGlossaryTests(unittest.TestCase):
                 "status": "confirmed",
             }
         ]
-        context = render_terminology_context(terminology, "ko_en_us", source_text=ko("\uc0ac\ub791 \uc57d\uad6d\uc5d0 \uac14\ub2e4."))
+        context = render_terminology_context(terminology, "ko_en_us", source_text=ko('사랑 약국에 갔다.'))
 
         self.assertIn("LOCKED", context)
         self.assertIn(SARANG_PHARMACY, context)
@@ -104,11 +104,11 @@ class TranslationConsistencyGlossaryTests(unittest.TestCase):
         self.assertIn("do not freeze verbs", context)
 
     def test_translate_accepts_explicit_terminology_without_legacy_memory(self) -> None:
-        work = api_server.work_create({"title": ko("\uc6b4\uc218 \uc88b\uc740 \ub0a0"), "genre": ko("\ud604\ub300\ubb38\ud559")})
+        work = api_server.work_create({"title": ko('운수 좋은 날'), "genre": ko('현대문학')})
         result = api_server.translate(
             {
                 "workId": work["id"],
-                "sourceText": ko("\uae40\ucca8\uc9c0\ub294 \uc0ac\ub791 \uc57d\uad6d \uc55e\uc5d0\uc11c \ub3d9\uc18c\ubb38 \uc2dc\uc7a5\uc744 \ubc14\ub77c\ubd24\ub2e4."),
+                "sourceText": ko('김첨지는 사랑 약국 앞에서 동소문 시장을 바라봤다.'),
                 "targetCountry": THAILAND,
                 "terminology": [
                     {

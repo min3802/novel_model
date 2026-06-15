@@ -7,6 +7,7 @@ from typing import Any
 TERMINOLOGY_POLICY_LOCKED = "locked"
 TERMINOLOGY_POLICY_PREFERRED = "preferred"
 TERMINOLOGY_POLICY_CONTEXTUAL = "contextual"
+TERMINOLOGY_POLICY_REVIEW = "review"
 TERMINOLOGY_STATUS_CONFIRMED = "confirmed"
 TERMINOLOGY_STATUS_SUGGESTED = "suggested"
 
@@ -23,40 +24,202 @@ _NOUN_SUFFIX_RULES: tuple[tuple[str, str, str, tuple[str, ...]], ...] = (
         "business_name",
         TERMINOLOGY_POLICY_LOCKED,
         "business/place proper noun",
-        tuple(map(ko, ("\uc57d\uad6d", "\uc11c\uc810", "\uc2dd\ub2f9", "\uc0c1\ud68c", "\uc0c1\uc810", "\uc5ec\uad00", "\ub2e4\ubc29", "\uce74\ud398", "\ubb38\uad6c\uc810"))),
+        tuple(map(ko, ('약국', '서점', '식당', '상회', '상점', '여관', '다방', '카페', '문구점'))),
     ),
     (
         "place_name",
         TERMINOLOGY_POLICY_LOCKED,
         "place proper noun",
-        tuple(map(ko, ("\uc2dc\uc7a5", "\uc5ed", "\ub9c8\uc744", "\uac70\ub9ac", "\uace8\ubaa9", "\ub3d9", "\uad81", "\uc0b0", "\uac15"))),
+        tuple(map(ko, ('시장', '역', '마을', '거리', '골목', '동', '궁', '산', '강'))),
     ),
     (
         "organization_name",
         TERMINOLOGY_POLICY_LOCKED,
         "organization proper noun",
-        tuple(map(ko, ("\uae38\ub4dc", "\ubb38\ud30c", "\ud559\uc6d0", "\ud559\uad50", "\ud68c\uc0ac", "\uac00\ubb38", "\uc655\uad6d", "\uc81c\uad6d"))),
+        tuple(map(ko, ('길드', '문파', '학원', '학교', '회사', '가문', '왕국', '제국'))),
     ),
 )
 _COMMON_NOUNS: dict[str, tuple[str, list[str]]] = {
-    ko("\uc57d\uad6d"): ("pharmacy", ["pharmacy", "drugstore"]),
-    ko("\uc2dc\uc7a5"): ("market", ["market"]),
-    ko("\uae38\ub4dc"): ("guild", ["guild"]),
-    ko("\ubb38\ud30c"): ("sect", ["sect", "clan"]),
-    ko("\uac00\ubb38"): ("family", ["family", "house"]),
+    ko('약국'): ("pharmacy", ["pharmacy", "drugstore"]),
+    ko('시장'): ("market", ["market"]),
+    ko('길드'): ("guild", ["guild"]),
+    ko('문파'): ("sect", ["sect", "clan"]),
+    ko('가문'): ("family", ["family", "house"]),
 }
 _COMMON_KOREAN_SURNAMES = set(
     ko(
-        "\\uae40\\uc774\\ubc15\\ucd5c\\uc815\\uac15\\uc870\\uc724\\uc7a5\\uc784\\ud55c\\uc624\\uc11c\\uc2e0"
-        "\\uad8c\\ud669\\uc548\\uc1a1\\uc804\\ud64d\\uc720\\uace0\\ubb38\\uc591\\uc190\\ubc30\\uc870\\ubc31"
-        "\\ud5c8\\ub0a8\\uc2ec\\ub178\\ud558\\uacfd\\uc131\\ucc28\\uc8fc\\uc6b0\\uad6c\\ubbfc\\uc720\\ub958\\ub098"
+        '김이박최정강조윤장임한오서신'
+        '권황안송전홍유고문양손배조백'
+        '허남심노하곽성차주우구민유류나'
     )
 )
-_PERSON_NAME_BLOCKLIST = set(map(ko, ("\\uc774\\ub984", "\\ud45c\\uc815", "\\uc2dc\\uc7a5", "\\uc57d\\uad6d", "\\ubc88\\uc5ed")))
-_PERSON_NAME_REJECT_SUFFIXES = tuple(map(ko, ("\ub418\uc5b4", "\ub418\uc9c0", "\ud558\uc5ec", "\ud558\uc9c0", "\uc5b4", "\uc5ec", "\uc9c0", "\uace0", "\uac8c")))
-_HANGUL_NAME_RE = re.compile(r"[\uac00-\ud7a3]{2,4}(?:\uc740|\ub294|\uc774|\uac00|\uc744|\ub97c|\uc5d0\uac8c|\ud55c\ud14c|\uc640|\uacfc|\uc758|\ub3c4|\ub9cc|\ubd80\ud130|\uae4c\uc9c0|\uc5d0\uc11c|\ub85c|\uc73c\ub85c|,)")
+_PERSON_NAME_BLOCKLIST = set(map(ko, ('이름', '표정', '시장', '약국', '번역')))
+_PERSON_NAME_REJECT_SUFFIXES = tuple(map(ko, ('되어', '되지', '하여', '하지', '어', '여', '지', '고', '게')))
+_HANGUL_NAME_RE = re.compile(r"[\uac00-\ud7a3]{2,4}(?:\uc740|\ub294|\uc774|\uac00|\uc744|\ub97c|\uc5d0|\uc5d0\uac8c|\ud55c\ud14c|\uc640|\uacfc|\uc758|\ub3c4|\ub9cc|\ubd80\ud130|\uae4c\uc9c0|\uc5d0\uc11c|\ub85c|\uc73c\ub85c|\uc544|\uc57c|,)")
 _EN_NAME_RE = re.compile(r"\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b")
-_PARTICLE_SUFFIXES = tuple(map(ko, ("\uc5d0\uac8c", "\ud55c\ud14c", "\ubd80\ud130", "\uae4c\uc9c0", "\uc5d0\uc11c", "\uc73c\ub85c", "\uc740", "\ub294", "\uc774", "\uac00", "\uc744", "\ub97c", "\uc640", "\uacfc", "\uc758", "\ub3c4", "\ub9cc", "\ub85c", ",")))
+_PARTICLE_SUFFIXES = tuple(map(ko, ('에게', '한테', '부터', '까지', '에서', '으로', '은', '는', '이', '가', '을', '를', '와', '과', '의', '도', '만', '로', '에', '아', '야', ",")))
+_PERSON_ROLE_MARKERS = tuple(map(ko, ('포수', '투수', '대표', '타자')))
+_PERSON_TITLE_MARKERS = tuple(map(ko, ('형', '형님', '누나', '선배', '대표님', '대표')))
+_PERSON_SUBJECT_PARTICLES = tuple(map(ko, ('은', '는', '이', '가')))
+_PERSON_ACTION_MARKERS = tuple(map(ko, ('걸어', '말했', '노려보', '미소', '입가', '자리', '적었', '언급', '바라봤', '들어오', '들었')))
+_TEAM_SUFFIXES = tuple(map(ko, ('킹즈', '타이탄즈')))
+_PLACE_SUFFIXES = tuple(map(ko, ('동', '야구장')))
+_LEAGUE_NAMES = set(("KBO",))
+_COMMON_ALIAS_STARTS = set(map(ko, ('민', '현', '연', '태', '주', '윤', '지', '정', '승', '준', '진', '서', '은', '영', '호', '성', '재')))
+_COMMON_ALIAS_ENDINGS = set(map(ko, ('우', '주', '성', '재', '형', '준', '진', '희', '호', '윤', '석')))
+_EXCLUDED_COMMON_OBJECTS = set(
+    map(
+        ko,
+        (
+            '노트북',
+            '안경',
+            '전화',
+            '배트',
+            '맥주컵',
+            '유니폼',
+            '스마트폰',
+            '비타민제',
+            '스포츠 음료',
+        ),
+    )
+)
+_EXCLUDED_BODY_SPACE_TERMS = set(
+    map(
+        ko,
+        (
+            '오른팔',
+            '왼팔',
+            '어깨',
+            '손끝',
+            '허공',
+            '가슴',
+            '머리',
+            '목',
+        ),
+    )
+)
+_EXCLUDED_TIME_TERMS = set(
+    map(
+        ko,
+        (
+            '오늘',
+            '오래전',
+            '다음날',
+            '주말',
+            '다음 달',
+            '일주일',
+        ),
+    )
+)
+_EXCLUDED_STATE_TERMS = set(
+    map(
+        ko,
+        (
+            '성공적',
+            '본격적',
+            '압도적',
+            '자연적',
+            '냉정함',
+            '쓁쓸함',
+            '해방감',
+            '허탈함',
+        ),
+    )
+)
+_EXCLUDED_ADVERBS = set(
+    map(
+        ko,
+        (
+            '조용히',
+            '천천히',
+            '갑자기',
+            '완전히',
+            '성공적으로',
+        ),
+    )
+)
+_EXPLICIT_NON_PERSON_TERMS = _EXCLUDED_COMMON_OBJECTS | _EXCLUDED_BODY_SPACE_TERMS | _EXCLUDED_TIME_TERMS | _EXCLUDED_STATE_TERMS | _EXCLUDED_ADVERBS
+
+
+def _is_full_name(source: str) -> bool:
+    return bool(len(source) == 3 and source[0] in _COMMON_KOREAN_SURNAMES)
+
+
+def _looks_like_team_name(source: str) -> bool:
+    return any(source.endswith(suffix) for suffix in _TEAM_SUFFIXES)
+
+
+def _looks_like_place_name(source: str) -> bool:
+    return any(source.endswith(suffix) for suffix in _PLACE_SUFFIXES)
+
+
+def _looks_like_league_name(source: str) -> bool:
+    return source in _LEAGUE_NAMES
+
+
+def _looks_like_company_name(source: str, text: str = "") -> bool:
+    if not source:
+        return False
+    escaped = re.escape(source)
+    return bool(
+        re.search(rf"(?:\uae30\uc5c5|\ud68c\uc0ac)\s*[\"'‘’“”]?\s*{escaped}\s*[\"'‘’“”]?", text)
+        or re.search(rf"[\"'‘’“”]{escaped}[\"'‘’“”]\s*\uc758\s*\ub300\ud45c", text)
+        or re.search(rf"{escaped}\s*\uc758\s*\ub300\ud45c", text)
+    )
+
+
+def _is_excluded_person_candidate(source: str) -> bool:
+    compact = _strip_particle(source)
+    if not compact:
+        return True
+    if compact in _PERSON_NAME_BLOCKLIST or compact in _COMMON_NOUNS:
+        return True
+    if compact in _EXPLICIT_NON_PERSON_TERMS:
+        return True
+    if compact.endswith(ko('적')) or compact.endswith(ko('함')) or compact.endswith(ko('적으로')):
+        return True
+    suffix_terms = {suffix for _, _, _, suffixes in _NOUN_SUFFIX_RULES for suffix in suffixes}
+    if compact in suffix_terms or any(compact.endswith(suffix) for suffix in suffix_terms):
+        return True
+    if any(compact.endswith(suffix) for suffix in _PERSON_NAME_REJECT_SUFFIXES):
+        return True
+    if _looks_like_team_name(compact) or _looks_like_place_name(compact) or _looks_like_league_name(compact):
+        return True
+    return False
+
+
+def _looks_like_person_alias(source: str) -> bool:
+    compact = _strip_particle(source)
+    return bool(
+        len(compact) == 2
+        and compact[0] in _COMMON_ALIAS_STARTS
+        and compact[-1] in _COMMON_ALIAS_ENDINGS
+        and not _is_excluded_person_candidate(compact)
+    )
+
+
+def _person_row(source: str, type_name: str = "person_name") -> dict[str, Any]:
+    return {
+        "source": source,
+        "type": type_name,
+        "meaning": "Korean person-name candidate",
+        "policy": TERMINOLOGY_POLICY_REVIEW,
+        "recommendedTranslation": "",
+        "allowedTranslations": [],
+        "status": TERMINOLOGY_STATUS_SUGGESTED,
+    }
+
+
+def _entity_row(source: str, type_name: str, meaning: str) -> dict[str, Any]:
+    return {
+        "source": source,
+        "type": type_name,
+        "meaning": meaning,
+        "policy": TERMINOLOGY_POLICY_REVIEW,
+        "recommendedTranslation": "",
+        "allowedTranslations": [],
+        "status": TERMINOLOGY_STATUS_SUGGESTED,
+    }
 
 
 @dataclass(slots=True)
@@ -93,20 +256,11 @@ def _dedupe_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def _is_likely_person_name(source: str) -> bool:
-    if not (2 <= len(source) <= 4):
+    if not _is_full_name(source):
         return False
-    if source[0] not in _COMMON_KOREAN_SURNAMES:
+    if _is_excluded_person_candidate(source):
         return False
-    if source in _PERSON_NAME_BLOCKLIST:
-        return False
-    if source in _COMMON_NOUNS:
-        return False
-    suffix_terms = {suffix for _, _, _, suffixes in _NOUN_SUFFIX_RULES for suffix in suffixes}
-    if source in suffix_terms or any(source.endswith(suffix) for suffix in suffix_terms):
-        return False
-    if any(source.endswith(suffix) for suffix in _PERSON_NAME_REJECT_SUFFIXES):
-        return False
-    return True
+    return _looks_like_person_alias(source[1:])
 
 
 def extract_noun_terminology_candidates(source_text: str) -> list[dict[str, Any]]:
@@ -148,20 +302,99 @@ def extract_noun_terminology_candidates(source_text: str) -> list[dict[str, Any]
                 }
             )
 
+    team_pattern = re.compile(rf"((?:[\uac00-\ud7a3]{{2,10}}\s+){{0,2}}(?:{'|'.join(re.escape(suffix) for suffix in _TEAM_SUFFIXES)}))")
+    for match in team_pattern.finditer(text):
+        source = match.group(1).strip()
+        rows.append(_entity_row(source, "team_name", "team-name candidate"))
+
+    place_pattern = re.compile(rf"([\uac00-\ud7a3]{{2,12}}(?:{'|'.join(re.escape(suffix) for suffix in _PLACE_SUFFIXES)}))")
+    for match in place_pattern.finditer(text):
+        source = match.group(1).strip()
+        rows.append(_entity_row(source, "place_name", "place-name candidate"))
+
+    for league in _LEAGUE_NAMES:
+        if league in text:
+            rows.append(_entity_row(league, "league_name", "league-name candidate"))
+
+    company_patterns = [
+        re.compile(r"(?:기업|회사)\s*[\"'‘’“”]?\s*([A-Za-z0-9\uac00-\ud7a3]{2,20})\s*[\"'‘’“”]?"),
+        re.compile(r"[\"'‘’“”]([A-Za-z0-9\uac00-\ud7a3]{2,20})[\"'‘’“”]\s*의\s*대표"),
+        re.compile(r"([A-Za-z0-9\uac00-\ud7a3]{2,20})\s*의\s*대표"),
+    ]
+    for pattern in company_patterns:
+        for match in pattern.finditer(text):
+            source = match.group(1).strip()
+            rows.append(_entity_row(source, "company_name", "company-name candidate"))
+
+    sender_pattern = re.compile(r"\[([\uac00-\ud7a3]{2,4})\s*:\]")
+    for match in sender_pattern.finditer(text):
+        source = _strip_particle(match.group(1).strip())
+        if not _is_excluded_person_candidate(source):
+            rows.append(_person_row(source, "person_name_alias"))
+
+    role_pattern = re.compile(rf"(?:{'|'.join(re.escape(role) for role in _PERSON_ROLE_MARKERS)})\s+([\uac00-\ud7a3]{{2,4}})")
+    for match in role_pattern.finditer(text):
+        source = _strip_particle(match.group(1).strip())
+        if not _is_excluded_person_candidate(source):
+            rows.append(_person_row(source, "person_name" if _is_full_name(source) else "person_name_alias"))
+
+    title_pattern = re.compile(rf"([\uac00-\ud7a3]{{2,4}}(?:\uc774)?\s*(?:{'|'.join(re.escape(title) for title in _PERSON_TITLE_MARKERS)}))")
+    for match in title_pattern.finditer(text):
+        source = match.group(1).strip()
+        base = _strip_particle(source.split()[0].rstrip(ko('이')))
+        if not _is_excluded_person_candidate(base) and not _looks_like_company_name(base, text):
+            rows.append(_person_row(source, "person_name_alias"))
+            rows.append(_person_row(base, "person_name_alias"))
+
+    full_name_pattern = re.compile(
+        rf"([\uac00-\ud7a3]{{3}})(?:{'|'.join(re.escape(particle) for particle in _PERSON_SUBJECT_PARTICLES)}|\uc544|\uc57c)"
+    )
+    full_names: set[str] = set()
+    for match in full_name_pattern.finditer(text):
+        source = _strip_particle(match.group(1).strip())
+        if _is_likely_person_name(source):
+            rows.append(_person_row(source, "person_name"))
+            full_names.add(source)
+
+    for source in full_names:
+        alias = source[1:]
+        if len(alias) < 2 or _is_excluded_person_candidate(alias):
+            continue
+        if (
+            re.search(rf"\[{re.escape(alias)}\s*:\]", text)
+            or re.search(
+                rf"{re.escape(alias)}(?:{'|'.join(re.escape(particle) for particle in _PERSON_SUBJECT_PARTICLES)})",
+                text,
+            )
+            or re.search(
+                rf"{re.escape(alias)}\s*(?:{'|'.join(re.escape(title) for title in _PERSON_TITLE_MARKERS)})",
+                text,
+            )
+        ):
+            rows.append(_person_row(alias, "person_name_alias"))
+
+    alias_counts: dict[str, int] = {}
+    alias_subject_pattern = re.compile(
+        rf"([\uac00-\ud7a3]{{2,3}})(?:{'|'.join(re.escape(particle) for particle in _PERSON_SUBJECT_PARTICLES)})"
+    )
+    for match in alias_subject_pattern.finditer(text):
+        source = _strip_particle(match.group(1).strip())
+        if _is_excluded_person_candidate(source):
+            continue
+        if _is_full_name(source):
+            continue
+        if source not in {full_name[1:] for full_name in full_names} and not _looks_like_person_alias(source):
+            continue
+        alias_counts[source] = alias_counts.get(source, 0) + 1
+
+    for source, count in alias_counts.items():
+        if count >= 2 or _looks_like_person_alias(source):
+            rows.append(_person_row(source, "person_name_alias"))
+
     for match in _HANGUL_NAME_RE.finditer(text):
         source = _strip_particle(match.group(0).strip())
-        if _is_likely_person_name(source):
-            rows.append(
-                {
-                    "source": source,
-                    "type": "person_name",
-                    "meaning": "Korean person-name candidate",
-                    "policy": TERMINOLOGY_POLICY_LOCKED,
-                    "recommendedTranslation": "",
-                    "allowedTranslations": [],
-                    "status": TERMINOLOGY_STATUS_SUGGESTED,
-                }
-            )
+        if source in full_names and _is_likely_person_name(source):
+            rows.append(_person_row(source, "person_name"))
 
     for match in _EN_NAME_RE.finditer(text):
         source = match.group(0).strip()
@@ -195,7 +428,7 @@ def normalize_terminology_row(row: dict[str, Any], locale: str) -> dict[str, Any
     if target and target not in allowed:
         allowed.insert(0, target)
     policy = _clean(row.get("policy")) or TERMINOLOGY_POLICY_LOCKED
-    if policy not in {TERMINOLOGY_POLICY_LOCKED, TERMINOLOGY_POLICY_PREFERRED, TERMINOLOGY_POLICY_CONTEXTUAL}:
+    if policy not in {TERMINOLOGY_POLICY_LOCKED, TERMINOLOGY_POLICY_PREFERRED, TERMINOLOGY_POLICY_CONTEXTUAL, TERMINOLOGY_POLICY_REVIEW}:
         policy = TERMINOLOGY_POLICY_LOCKED if row.get("type") != "common_noun" else TERMINOLOGY_POLICY_PREFERRED
     return {
         **row,
