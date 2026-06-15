@@ -142,6 +142,8 @@ class TranslationV2PipelineTests(unittest.TestCase):
                 "confidence": confidence,
                 "needs_author_review": needs_author_review,
                 "risk_level": risk_level,
+                "source_start": None,
+                "source_end": None,
                 "target_span": "",
                 "target_start": None,
                 "target_end": None,
@@ -428,7 +430,7 @@ class TranslationV2PipelineTests(unittest.TestCase):
 
     def test_v2_dual_draft_review_populates_author_review_cards(self) -> None:
         pipeline = TranslationPipeline(self._config())
-        source_text = "그는 마을에 산다."
+        source_text = "have a meal sometime"
         risk_item = RiskItem(
             id="idiom:010",
             type="idiom",
@@ -447,7 +449,7 @@ class TranslationV2PipelineTests(unittest.TestCase):
         pipeline.source_side_analyzer.analyze = lambda text: [risk_item]  # type: ignore[assignment]
         pipeline.run_direct_only = lambda *args, **kwargs: DirectTranslationResult(  # type: ignore[assignment]
             mode="direct_only",
-            final_translation="We should have a meal sometime.",
+            final_translation="have a meal sometime",
             draft={"prompt_debug": {"prompt_hash": "card-hash"}},
             metadata=pipeline._metadata(
                 source_side_rag_enabled=False,
@@ -458,7 +460,7 @@ class TranslationV2PipelineTests(unittest.TestCase):
                 inspection_enabled=False,
                 extra=TranslationPipeline._locale_adherence_metadata(
                     source_text=source_text,
-                    final_translation="We should have a meal sometime.",
+                    final_translation="have a meal sometime",
                     locale="ko_ja",
                     target_language_name="Japanese",
                 ),
@@ -472,11 +474,13 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertTrue(result.translation_decisions)
         self.assertTrue(result.author_review_cards)
         decision = result.translation_decisions[0]
-        self.assertEqual(decision.target_span, "")
-        self.assertIsNone(decision.target_start)
-        self.assertIsNone(decision.target_end)
-        self.assertIn(decision.alignment_status, {"source_only", "unresolved", "target_unresolved"})
-        self.assertIn(decision.priority, {"P0", "P1", "P2", "P3"})
+        self.assertEqual(decision.source_start, 0)
+        self.assertEqual(decision.source_end, len(source_text))
+        self.assertEqual(decision.target_span, source_text)
+        self.assertEqual(decision.target_start, 0)
+        self.assertEqual(decision.target_end, len(source_text))
+        self.assertEqual(decision.alignment_status, "exact")
+        self.assertEqual(decision.priority, "P1")
         self.assertEqual(decision.card_status, "pending")
         self.assertFalse(decision.unresolved_risk)
         self.assertIsInstance(decision.suggested_actions, list)
@@ -567,10 +571,12 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertIn("보존 여부", decision.reason)
         self.assertTrue(decision.author_note)
         self.assertEqual(decision.source_span, "have a meal sometime")
-        self.assertEqual(decision.target_span, "")
-        self.assertIsNone(decision.target_start)
-        self.assertIsNone(decision.target_end)
-        self.assertIn(decision.alignment_status, {"source_only", "unresolved", "target_unresolved"})
+        self.assertEqual(decision.source_start, 0)
+        self.assertEqual(decision.source_end, len("have a meal sometime"))
+        self.assertEqual(decision.target_span, "have a meal sometime")
+        self.assertEqual(decision.target_start, "We should have a meal sometime.".find("have a meal sometime"))
+        self.assertEqual(decision.target_end, decision.target_start + len("have a meal sometime"))
+        self.assertEqual(decision.alignment_status, "exact")
         self.assertEqual(decision.priority, "P1")
         self.assertEqual(decision.card_status, "pending")
         self.assertFalse(decision.unresolved_risk)
@@ -607,10 +613,12 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(len(decisions), 1)
         self.assertEqual(decisions[0].decision_type, "risk_unresolved")
         self.assertIn("작가 검수", decisions[0].reason)
+        self.assertEqual(decisions[0].source_start, 0)
+        self.assertEqual(decisions[0].source_end, len("culture phrase"))
         self.assertEqual(decisions[0].target_span, "")
         self.assertIsNone(decisions[0].target_start)
         self.assertIsNone(decisions[0].target_end)
-        self.assertIn(decisions[0].alignment_status, {"source_only", "unresolved", "target_unresolved"})
+        self.assertEqual(decisions[0].alignment_status, "target_unresolved")
         self.assertEqual(decisions[0].priority, "P1")
         self.assertEqual(decisions[0].card_status, "pending")
         self.assertTrue(decisions[0].unresolved_risk)

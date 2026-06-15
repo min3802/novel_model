@@ -47,6 +47,8 @@ class TranslationDecision:
     confidence: str = "low"
     needs_author_review: bool = False
     risk_level: str = "low"
+    source_start: int | None = None
+    source_end: int | None = None
     target_span: str = ""
     target_start: int | None = None
     target_end: int | None = None
@@ -265,6 +267,20 @@ def _contains_text(haystack: str, needle: str) -> bool:
     return bool(haystack_text and needle_text and needle_text in haystack_text)
 
 
+def _find_exact_span(text: str, *candidates: str) -> tuple[int, int] | None:
+    haystack = _compact_text(text)
+    if not haystack:
+        return None
+    for candidate in candidates:
+        needle = _compact_text(candidate)
+        if not needle:
+            continue
+        start = haystack.find(needle)
+        if start >= 0:
+            return start, start + len(needle)
+    return None
+
+
 def _decision_reason_for_evidence(evidence: RagEvidence, decision_type: str) -> str:
     details = _unique_preserve(
         [
@@ -373,17 +389,28 @@ class TranslationDecisionAnalyzer:
             decision_id = _compact_text(evidence.id) or _compact_text(evidence.source_id) or "decision"
             evidence_ids = _unique_preserve([evidence.source_id or evidence.id, evidence.id])
             source_span = _compact_text(evidence.source_span) or _compact_text(evidence.anchor)
-            alignment_status = "source_only" if source_span else "unresolved"
+            source_match = _find_exact_span(source_text, source_span, evidence.anchor)
+            target_match = _find_exact_span(final_text, source_span, evidence.anchor)
+            if source_match and target_match:
+                alignment_status = "exact"
+            elif source_match:
+                alignment_status = "target_unresolved"
+            elif target_match:
+                alignment_status = "source_only"
+            else:
+                alignment_status = "unresolved"
             decisions.append(
                 TranslationDecision(
                     id=f"decision:{decision_id}",
                     source_span=source_span,
                     meaning_draft_span=draft_text,
                     vibe_translation_span=final_text,
-                    target_span="",
-                    target_start=None,
-                    target_end=None,
                     alignment_status=alignment_status,
+                    source_start=source_match[0] if source_match else None,
+                    source_end=source_match[1] if source_match else None,
+                    target_span=final_text[target_match[0] : target_match[1]] if target_match else "",
+                    target_start=target_match[0] if target_match else None,
+                    target_end=target_match[1] if target_match else None,
                     decision_type=decision_type,
                     reason=_decision_reason_for_evidence(evidence, decision_type),
                     evidence_ids=evidence_ids,
