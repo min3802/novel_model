@@ -529,6 +529,8 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(card.priority, decision.priority)
         self.assertEqual(card.status, decision.card_status)
         self.assertEqual(card.target_span, decision.target_span)
+        self.assertEqual(card.current_translation, decision.target_span)
+        self.assertEqual(card.decision_type, decision.decision_type)
         self.assertEqual(card.suggested_actions, decision.suggested_actions)
         self.assertEqual(card.created_from_evidence_ids, decision.evidence_ids)
 
@@ -611,6 +613,73 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(result.author_review_cards[0].decision_id, "decision:030")
         self.assertEqual(result.delivery_status, "qa_warning")
         self.assertEqual(result.metadata["delivery_status"], "qa_warning")
+
+    def test_author_review_card_hides_current_translation_without_exact_target(self) -> None:
+        generator = AuthorReviewCardGenerator(self._config())
+        decision = self._make_review_decision(
+            decision_id="decision:040",
+            decision_type="risk_unresolved",
+            source_span="very long paragraph source span that should not be shown when anchor is available",
+            meaning_draft_span="meaning baseline",
+            vibe_translation_span="full final translation should not appear in the card",
+            reason="needs review",
+            evidence_ids=["risk:040"],
+            author_note="",
+            confidence="high",
+            needs_author_review=True,
+            risk_level="high",
+            priority="P1",
+        )
+        decision.target_span = ""
+        decision.alignment_status = "target_unresolved"
+        evidence = RagEvidence(
+            id="risk:040",
+            source_span="short evidence span",
+            anchor="short anchor",
+            evidence_type="idiom",
+            literal_meaning="literal",
+            pragmatic_function="pragmatic",
+            tone="",
+            cultural_meaning="",
+            literal_risk="risk",
+            confidence="high",
+            source_id="risk:040",
+            user_visible=True,
+        )
+
+        cards = generator.generate([decision], rag_evidence=[evidence])
+
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0].current_translation, "")
+        self.assertEqual(cards[0].target_span, "")
+        self.assertEqual(cards[0].source_span, "short anchor")
+        self.assertEqual(cards[0].decision_type, "risk_unresolved")
+
+    def test_author_review_card_uses_target_span_only_for_exact_alignment(self) -> None:
+        generator = AuthorReviewCardGenerator(self._config())
+        decision = self._make_review_decision(
+            decision_id="decision:041",
+            decision_type="preserved",
+            source_span="source phrase",
+            meaning_draft_span="meaning baseline",
+            vibe_translation_span="full final translation",
+            reason="needs review",
+            evidence_ids=[],
+            author_note="",
+            confidence="high",
+            needs_author_review=True,
+            risk_level="low",
+            priority="P1",
+        )
+        decision.target_span = "target phrase"
+        decision.alignment_status = "exact"
+
+        cards = generator.generate([decision], rag_evidence=[])
+
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0].target_span, "target phrase")
+        self.assertEqual(cards[0].current_translation, "target phrase")
+        self.assertEqual(cards[0].decision_type, "preserved")
 
     def test_v2_dual_draft_review_blocks_keep_safety_contract(self) -> None:
         pipeline = TranslationPipeline(self._config())

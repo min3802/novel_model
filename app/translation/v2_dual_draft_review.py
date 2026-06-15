@@ -65,6 +65,7 @@ class AuthorReviewCard:
     decision_id: str
     source_span: str
     current_translation: str
+    decision_type: str
     decision_label: str
     explanation: str
     author_question: str
@@ -534,6 +535,41 @@ def _evidence_summary_for_decision(
     return " | ".join(_unique_preserve(summaries)[:2])
 
 
+def _evidence_for_decision(
+    decision: TranslationDecision,
+    evidence_lookup: dict[str, RagEvidence],
+) -> RagEvidence | None:
+    for evidence_id in decision.evidence_ids:
+        evidence = evidence_lookup.get(_compact_text(evidence_id))
+        if evidence is not None:
+            return evidence
+    return None
+
+
+def _display_source_span_for_decision(
+    decision: TranslationDecision,
+    evidence_lookup: dict[str, RagEvidence],
+) -> str:
+    evidence = _evidence_for_decision(decision, evidence_lookup)
+    candidates: list[str] = []
+    if evidence is not None:
+        candidates.extend([evidence.anchor, evidence.source_span])
+    candidates.append(decision.source_span)
+
+    for candidate in candidates:
+        text = _compact_text(candidate)
+        if text:
+            return text
+    return ""
+
+
+def _current_translation_for_decision(decision: TranslationDecision) -> str:
+    target_span = _compact_text(decision.target_span)
+    if target_span and _compact_text(decision.alignment_status) == "exact":
+        return target_span
+    return ""
+
+
 _VISIBLE_CARD_LIMIT = 5
 
 
@@ -592,13 +628,14 @@ class AuthorReviewCardGenerator:
                 if evidence_lookup.get(_compact_text(evidence_id))
             ]
             evidence_types = _unique_preserve(evidence_types)
-            current_translation = _compact_text(decision.vibe_translation_span)
+            current_translation = _current_translation_for_decision(decision)
             cards.append(
                 AuthorReviewCard(
                     id=f"review:{_compact_text(decision.id) or 'decision'}",
                     decision_id=_compact_text(decision.id),
-                    source_span=_compact_text(decision.source_span),
+                    source_span=_display_source_span_for_decision(decision, evidence_lookup),
                     current_translation=current_translation,
+                    decision_type=_compact_text(decision.decision_type),
                     priority=_compact_text(decision.priority) or "P1",
                     status=_compact_text(decision.card_status) or "pending",
                     target_span=_compact_text(decision.target_span),
