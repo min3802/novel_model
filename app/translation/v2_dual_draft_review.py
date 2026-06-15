@@ -534,6 +534,27 @@ def _evidence_summary_for_decision(
     return " | ".join(_unique_preserve(summaries)[:2])
 
 
+_VISIBLE_CARD_LIMIT = 5
+
+
+def _priority_rank(priority: str) -> int:
+    mapping = {"P0": 0, "P1": 1, "P2": 2, "P3": 3}
+    return mapping.get(_compact_text(priority).upper(), 99)
+
+
+def _is_visible_card_decision(decision: TranslationDecision) -> bool:
+    if not decision.needs_author_review:
+        return False
+    confidence = _compact_text(decision.confidence).lower()
+    if confidence == "low":
+        return False
+    return _compact_text(decision.priority).upper() in {"P0", "P1"}
+
+
+def _decision_group_key(decision: TranslationDecision) -> tuple[str, str]:
+    return (_compact_text(decision.source_span), _compact_text(decision.decision_type))
+
+
 class AuthorReviewCardGenerator:
     def __init__(self, config: PipelineConfig | None = None):
         self.config = config or PipelineConfig()
@@ -548,31 +569,48 @@ class AuthorReviewCardGenerator:
             return []
 
         evidence_lookup = _evidence_lookup(rag_evidence or [])
-        cards: list[AuthorReviewCard] = []
+        selected: dict[tuple[str, str], tuple[int, TranslationDecision]] = {}
         for decision in translation_decisions:
-            if not decision.needs_author_review:
+            if not _is_visible_card_decision(decision):
                 continue
 
-            evidence_types = [evidence_lookup.get(_compact_text(evidence_id)).evidence_type for evidence_id in decision.evidence_ids if evidence_lookup.get(_compact_text(evidence_id))]
+            key = _decision_group_key(decision)
+            current = selected.get(key)
+            if current is None:
+                selected[key] = (len(selected), decision)
+                continue
+            current_order, current_decision = current
+            if _priority_rank(decision.priority) < _priority_rank(current_decision.priority):
+                selected[key] = (current_order, decision)
+
+        ordered_decisions = sorted(selected.items(), key=lambda item: (item[1][0], _priority_rank(item[1][1].priority)))
+        cards: list[AuthorReviewCard] = []
+        for _, (_, decision) in ordered_decisions[:_VISIBLE_CARD_LIMIT]:
+            evidence_types = [
+                evidence_lookup.get(_compact_text(evidence_id)).evidence_type
+                for evidence_id in decision.evidence_ids
+                if evidence_lookup.get(_compact_text(evidence_id))
+            ]
             evidence_types = _unique_preserve(evidence_types)
             current_translation = _compact_text(decision.vibe_translation_span)
-            card = AuthorReviewCard(
-                id=f"review:{_compact_text(decision.id) or 'decision'}",
-                decision_id=_compact_text(decision.id),
-                source_span=_compact_text(decision.source_span),
-                current_translation=current_translation,
-                priority=_compact_text(decision.priority) or "P1",
-                status=_compact_text(decision.card_status) or "pending",
-                target_span=_compact_text(decision.target_span),
-                suggested_actions=list(decision.suggested_actions),
-                created_from_evidence_ids=list(decision.evidence_ids),
-                decision_label=_decision_label_for_type(decision.decision_type),
-                explanation=_card_explanation_for_decision(decision),
-                author_question=_card_question_for_decision(decision, evidence_types),
-                options=_card_options_for_decision(decision),
-                recommended_option_id="review" if decision.decision_type == "risk_unresolved" else "keep",
-                evidence_summary=_evidence_summary_for_decision(decision, evidence_lookup),
-                patch_suggestion=None,
+            cards.append(
+                AuthorReviewCard(
+                    id=f"review:{_compact_text(decision.id) or 'decision'}",
+                    decision_id=_compact_text(decision.id),
+                    source_span=_compact_text(decision.source_span),
+                    current_translation=current_translation,
+                    priority=_compact_text(decision.priority) or "P1",
+                    status=_compact_text(decision.card_status) or "pending",
+                    target_span=_compact_text(decision.target_span),
+                    suggested_actions=list(decision.suggested_actions),
+                    created_from_evidence_ids=list(decision.evidence_ids),
+                    decision_label=_decision_label_for_type(decision.decision_type),
+                    explanation=_card_explanation_for_decision(decision),
+                    author_question=_card_question_for_decision(decision, evidence_types),
+                    options=_card_options_for_decision(decision),
+                    recommended_option_id="review" if decision.decision_type == "risk_unresolved" else "keep",
+                    evidence_summary=_evidence_summary_for_decision(decision, evidence_lookup),
+                    patch_suggestion=None,
+                )
             )
-            cards.append(card)
         return cards

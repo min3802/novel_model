@@ -126,6 +126,7 @@ class TranslationV2PipelineTests(unittest.TestCase):
         confidence: str,
         needs_author_review: bool,
         risk_level: str,
+        priority: str = "P1",
     ):
         return type(
             "_DecisionStub",
@@ -148,7 +149,7 @@ class TranslationV2PipelineTests(unittest.TestCase):
                 "target_start": None,
                 "target_end": None,
                 "alignment_status": "target_unresolved",
-                "priority": "P1",
+                "priority": priority,
                 "card_status": "pending",
                 "unresolved_risk": decision_type == "risk_unresolved",
                 "suggested_actions": [],
@@ -496,6 +497,84 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(card.suggested_actions, decision.suggested_actions)
         self.assertEqual(card.created_from_evidence_ids, decision.evidence_ids)
 
+    def test_v2_dual_draft_review_keeps_only_visible_cards(self) -> None:
+        pipeline = TranslationPipeline(self._config())
+        source_text = "visible span"
+        direct_result = DirectTranslationResult(
+            mode="direct_only",
+            final_translation="visible span",
+            draft={"prompt_debug": {"prompt_hash": "limit-hash"}},
+            metadata=pipeline._metadata(
+                source_side_rag_enabled=False,
+                rag_enabled=False,
+                terminology_enabled=False,
+                glossary_enabled=False,
+                review_enabled=False,
+                inspection_enabled=False,
+                extra=TranslationPipeline._locale_adherence_metadata(
+                    source_text=source_text,
+                    final_translation="visible span",
+                    locale="ko_ja",
+                    target_language_name="Japanese",
+                ),
+            ),
+            delivery_status="deliverable",
+            user_visible_error_code=None,
+        )
+        decisions = [
+            self._make_review_decision(
+                decision_id="decision:030",
+                decision_type="risk_unresolved",
+                source_span="visible span",
+                meaning_draft_span="meaning baseline",
+                vibe_translation_span="visible span",
+                reason="visible",
+                evidence_ids=["risk:030"],
+                author_note="",
+                confidence="high",
+                needs_author_review=True,
+                risk_level="high",
+                priority="P1",
+            ),
+            self._make_review_decision(
+                decision_id="decision:031",
+                decision_type="risk_unresolved",
+                source_span="hidden p2",
+                meaning_draft_span="meaning baseline",
+                vibe_translation_span="hidden p2",
+                reason="hidden",
+                evidence_ids=["risk:031"],
+                author_note="",
+                confidence="high",
+                needs_author_review=True,
+                risk_level="high",
+                priority="P2",
+            ),
+            self._make_review_decision(
+                decision_id="decision:032",
+                decision_type="risk_unresolved",
+                source_span="hidden p3",
+                meaning_draft_span="meaning baseline",
+                vibe_translation_span="hidden p3",
+                reason="hidden",
+                evidence_ids=["risk:032"],
+                author_note="",
+                confidence="low",
+                needs_author_review=True,
+                risk_level="low",
+                priority="P3",
+            ),
+        ]
+
+        pipeline.run_direct_only = lambda *args, **kwargs: direct_result  # type: ignore[assignment]
+        pipeline.translation_decision_analyzer.analyze = lambda *args, **kwargs: decisions  # type: ignore[assignment]
+
+        result = pipeline.run_v2_dual_draft_review(source_text)
+
+        self.assertEqual(len(result.translation_decisions), 3)
+        self.assertEqual(len(result.author_review_cards), 1)
+        self.assertEqual(result.author_review_cards[0].decision_id, "decision:030")
+
     def test_v2_dual_draft_review_blocks_keep_safety_contract(self) -> None:
         pipeline = TranslationPipeline(self._config())
         source_text = "그는 마을의 주인이다."
@@ -773,6 +852,131 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(card.target_span, decision.target_span)
         self.assertEqual(card.suggested_actions, decision.suggested_actions)
         self.assertEqual(card.created_from_evidence_ids, decision.evidence_ids)
+
+    def test_author_review_card_generator_filters_by_priority_and_confidence(self) -> None:
+        generator = AuthorReviewCardGenerator(self._config())
+        visible = self._make_review_decision(
+            decision_id="decision:010",
+            decision_type="risk_unresolved",
+            source_span="visible span",
+            meaning_draft_span="meaning baseline",
+            vibe_translation_span="visible span",
+            reason="visible",
+            evidence_ids=["risk:010"],
+            author_note="",
+            confidence="high",
+            needs_author_review=True,
+            risk_level="high",
+            priority="P1",
+        )
+        p2 = self._make_review_decision(
+            decision_id="decision:011",
+            decision_type="risk_unresolved",
+            source_span="priority two span",
+            meaning_draft_span="meaning baseline",
+            vibe_translation_span="priority two span",
+            reason="p2",
+            evidence_ids=["risk:011"],
+            author_note="",
+            confidence="high",
+            needs_author_review=True,
+            risk_level="high",
+            priority="P2",
+        )
+        p3 = self._make_review_decision(
+            decision_id="decision:012",
+            decision_type="risk_unresolved",
+            source_span="priority three span",
+            meaning_draft_span="meaning baseline",
+            vibe_translation_span="priority three span",
+            reason="p3",
+            evidence_ids=["risk:012"],
+            author_note="",
+            confidence="high",
+            needs_author_review=True,
+            risk_level="high",
+            priority="P3",
+        )
+        low_confidence = self._make_review_decision(
+            decision_id="decision:013",
+            decision_type="risk_unresolved",
+            source_span="low confidence span",
+            meaning_draft_span="meaning baseline",
+            vibe_translation_span="low confidence span",
+            reason="low",
+            evidence_ids=["risk:013"],
+            author_note="",
+            confidence="low",
+            needs_author_review=True,
+            risk_level="low",
+            priority="P1",
+        )
+
+        cards = generator.generate([visible, p2, p3, low_confidence], rag_evidence=[])
+
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0].decision_id, "decision:010")
+
+    def test_author_review_card_generator_dedupes_by_source_span_and_decision_type(self) -> None:
+        generator = AuthorReviewCardGenerator(self._config())
+        base = self._make_review_decision(
+            decision_id="decision:020",
+            decision_type="risk_unresolved",
+            source_span="duplicate span",
+            meaning_draft_span="meaning baseline",
+            vibe_translation_span="duplicate span",
+            reason="base",
+            evidence_ids=["risk:020"],
+            author_note="",
+            confidence="high",
+            needs_author_review=True,
+            risk_level="high",
+            priority="P1",
+        )
+        higher_priority = self._make_review_decision(
+            decision_id="decision:021",
+            decision_type="risk_unresolved",
+            source_span="duplicate span",
+            meaning_draft_span="meaning baseline",
+            vibe_translation_span="duplicate span",
+            reason="better",
+            evidence_ids=["risk:021"],
+            author_note="",
+            confidence="high",
+            needs_author_review=True,
+            risk_level="high",
+            priority="P0",
+        )
+
+        cards = generator.generate([base, higher_priority], rag_evidence=[])
+
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0].decision_id, "decision:021")
+        self.assertEqual(cards[0].priority, "P0")
+
+    def test_author_review_card_generator_caps_visible_cards(self) -> None:
+        generator = AuthorReviewCardGenerator(self._config())
+        decisions = [
+            self._make_review_decision(
+                decision_id=f"decision:{100 + index}",
+                decision_type="risk_unresolved",
+                source_span=f"span {index}",
+                meaning_draft_span="meaning baseline",
+                vibe_translation_span=f"span {index}",
+                reason="visible",
+                evidence_ids=[f"risk:{100 + index}"],
+                author_note="",
+                confidence="high",
+                needs_author_review=True,
+                risk_level="high",
+                priority="P1",
+            )
+            for index in range(6)
+        ]
+
+        cards = generator.generate(decisions, rag_evidence=[])
+
+        self.assertEqual(len(cards), 5)
 
     def test_author_review_card_generator_skips_non_review_decisions(self) -> None:
         generator = AuthorReviewCardGenerator(self._config())
