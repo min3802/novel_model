@@ -1,0 +1,90 @@
+{
+  "enabled": true,
+  "episode_id": "EP_001",
+  "target_locale": "ko_en_us",
+  "added": 7,
+  "updated": 0,
+  "conflicts": [],
+  "checked": [
+    {
+      "source": "네오 타이탄즈",
+      "expected": "Neo Titans",
+      "allowed": [
+        "Neo Titans"
+      ],
+      "found": "Neo Titans",
+      "policy": "locked",
+      "type": "term",
+      "status": "pass"
+    },
+    {
+      "source": "제우스 킹즈",
+      "expected": "Zeus Kings",
+      "allowed": [
+        "Zeus Kings"
+      ],
+      "found": "Zeus Kings",
+      "policy": "locked",
+      "type": "term",
+      "status": "pass"
+    },
+    {
+      "source": "잠실야구장",
+      "expected": "Jamsil Baseball Stadium",
+      "allowed": [
+        "Jamsil Baseball Stadium"
+      ],
+      "found": "Jamsil Baseball Stadium",
+      "policy": "locked",
+      "type": "place_name",
+      "status": "pass"
+    },
+    {
+      "source": "강현우",
+      "expected": "Kang Hyun-woo",
+      "allowed": [
+        "Kang Hyun-woo"
+      ],
+      "found": "Kang Hyun-woo",
+      "policy": "locked",
+      "type": "character_name",
+      "status": "pass"
+    },
+    {
+      "source": "최태성",
+      "expected": "Choi Taeseong",
+      "allowed": [
+        "Choi Taeseong"
+      ],
+      "found": "Choi Taeseong",
+      "policy": "locked",
+      "type": "character_name",
+      "status": "pass"
+    },
+    {
+      "source": "민재",
+      "expected": "Minjae",
+      "allowed": [
+        "Minjae"
+      ],
+      "found": "Minjae",
+      "policy": "locked",
+      "type": "character_name",
+      "status": "pass"
+    },
+    {
+      "source": "주형",
+      "expected": "Juhyung",
+      "allowed": [
+        "Juhyung"
+      ],
+      "found": "Juhyung",
+      "policy": "locked",
+      "type": "character_name",
+      "status": "pass"
+    }
+  ],
+  "issues": [],
+  "summary": "Terminology consistency passed for checked noun/proper-noun terms.",
+  "updated_at": "2026-06-10 16:33:36"
+}
