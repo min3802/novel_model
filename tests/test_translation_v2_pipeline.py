@@ -142,6 +142,14 @@ class TranslationV2PipelineTests(unittest.TestCase):
                 "confidence": confidence,
                 "needs_author_review": needs_author_review,
                 "risk_level": risk_level,
+                "target_span": "",
+                "target_start": None,
+                "target_end": None,
+                "alignment_status": "target_unresolved",
+                "priority": "P1",
+                "card_status": "pending",
+                "unresolved_risk": decision_type == "risk_unresolved",
+                "suggested_actions": [],
             },
         )()
 
@@ -463,12 +471,26 @@ class TranslationV2PipelineTests(unittest.TestCase):
 
         self.assertTrue(result.translation_decisions)
         self.assertTrue(result.author_review_cards)
+        decision = result.translation_decisions[0]
+        self.assertEqual(decision.target_span, "")
+        self.assertIsNone(decision.target_start)
+        self.assertIsNone(decision.target_end)
+        self.assertIn(decision.alignment_status, {"source_only", "unresolved", "target_unresolved"})
+        self.assertIn(decision.priority, {"P0", "P1", "P2", "P3"})
+        self.assertEqual(decision.card_status, "pending")
+        self.assertFalse(decision.unresolved_risk)
+        self.assertIsInstance(decision.suggested_actions, list)
         card = result.author_review_cards[0]
         self.assertIsInstance(card, AuthorReviewCard)
         self.assertEqual(card.decision_label, "원어 유지")
         self.assertIn("keep", [option["id"] for option in card.options])
         self.assertIn("review", [option["id"] for option in card.options])
         self.assertIsNone(card.patch_suggestion)
+        self.assertEqual(card.priority, decision.priority)
+        self.assertEqual(card.status, decision.card_status)
+        self.assertEqual(card.target_span, decision.target_span)
+        self.assertEqual(card.suggested_actions, decision.suggested_actions)
+        self.assertEqual(card.created_from_evidence_ids, decision.evidence_ids)
 
     def test_v2_dual_draft_review_blocks_keep_safety_contract(self) -> None:
         pipeline = TranslationPipeline(self._config())
@@ -506,6 +528,8 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(result.author_review_cards, [])
         self.assertEqual(result.rag_evidence, [])
         self.assertEqual(result.translation_decisions, [])
+        self.assertEqual(result.metadata["translation_decision_count"], 0)
+        self.assertEqual(result.metadata["author_review_card_count"], 0)
 
     def test_translation_decision_analyzer_uses_user_visible_evidence(self) -> None:
         analyzer = TranslationDecisionAnalyzer(self._config())
@@ -543,6 +567,14 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertIn("보존 여부", decision.reason)
         self.assertTrue(decision.author_note)
         self.assertEqual(decision.source_span, "have a meal sometime")
+        self.assertEqual(decision.target_span, "")
+        self.assertIsNone(decision.target_start)
+        self.assertIsNone(decision.target_end)
+        self.assertIn(decision.alignment_status, {"source_only", "unresolved", "target_unresolved"})
+        self.assertEqual(decision.priority, "P1")
+        self.assertEqual(decision.card_status, "pending")
+        self.assertFalse(decision.unresolved_risk)
+        self.assertEqual(decision.suggested_actions, ["현재 번역 유지 검토"])
 
     def test_translation_decision_analyzer_defaults_to_risk_unresolved(self) -> None:
         analyzer = TranslationDecisionAnalyzer(self._config())
@@ -575,6 +607,14 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(len(decisions), 1)
         self.assertEqual(decisions[0].decision_type, "risk_unresolved")
         self.assertIn("작가 검수", decisions[0].reason)
+        self.assertEqual(decisions[0].target_span, "")
+        self.assertIsNone(decisions[0].target_start)
+        self.assertIsNone(decisions[0].target_end)
+        self.assertIn(decisions[0].alignment_status, {"source_only", "unresolved", "target_unresolved"})
+        self.assertEqual(decisions[0].priority, "P1")
+        self.assertEqual(decisions[0].card_status, "pending")
+        self.assertTrue(decisions[0].unresolved_risk)
+        self.assertEqual(decisions[0].suggested_actions, ["작가 검토"])
 
     def test_translation_decision_analyzer_skips_hidden_evidence(self) -> None:
         analyzer = TranslationDecisionAnalyzer(self._config())
@@ -683,6 +723,11 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(card.recommended_option_id, "review")
         self.assertIn("literal translation may miss", card.evidence_summary)
         self.assertIsNone(card.patch_suggestion)
+        self.assertEqual(card.priority, decision.priority)
+        self.assertEqual(card.status, decision.card_status)
+        self.assertEqual(card.target_span, decision.target_span)
+        self.assertEqual(card.suggested_actions, decision.suggested_actions)
+        self.assertEqual(card.created_from_evidence_ids, decision.evidence_ids)
 
     def test_author_review_card_generator_skips_non_review_decisions(self) -> None:
         generator = AuthorReviewCardGenerator(self._config())

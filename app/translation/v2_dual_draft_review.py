@@ -47,6 +47,14 @@ class TranslationDecision:
     confidence: str = "low"
     needs_author_review: bool = False
     risk_level: str = "low"
+    target_span: str = ""
+    target_start: int | None = None
+    target_end: int | None = None
+    alignment_status: str = "target_unresolved"
+    priority: str = "P1"
+    card_status: str = "pending"
+    unresolved_risk: bool = False
+    suggested_actions: list[str] = field(default_factory=list)
 
 
 @dataclass(slots=True)
@@ -62,6 +70,11 @@ class AuthorReviewCard:
     recommended_option_id: str | None = None
     evidence_summary: str = ""
     patch_suggestion: dict[str, Any] | None = None
+    priority: str = "P1"
+    status: str = "pending"
+    target_span: str = ""
+    suggested_actions: list[str] = field(default_factory=list)
+    created_from_evidence_ids: list[str] = field(default_factory=list)
 
 
 @dataclass(slots=True)
@@ -311,6 +324,27 @@ def _risk_level_for_decision(evidence: RagEvidence, decision_type: str) -> str:
     return "low"
 
 
+def _priority_for_decision(evidence: RagEvidence, decision_type: str) -> str:
+    confidence = _compact_text(evidence.confidence).lower()
+    if confidence == "high":
+        return "P1"
+    if confidence == "medium":
+        if decision_type == "risk_unresolved":
+            return "P1"
+        return "P2"
+    if decision_type == "risk_unresolved":
+        return "P2"
+    return "P3"
+
+
+def _suggested_actions_for_decision(decision_type: str) -> list[str]:
+    if decision_type == "risk_unresolved":
+        return ["작가 검토"]
+    if decision_type == "preserved":
+        return ["현재 번역 유지 검토"]
+    return []
+
+
 class TranslationDecisionAnalyzer:
     def __init__(self, config: PipelineConfig | None = None):
         self.config = config or PipelineConfig()
@@ -338,17 +372,27 @@ class TranslationDecisionAnalyzer:
             decision_type = _decision_type_for_evidence(evidence, final_text)
             decision_id = _compact_text(evidence.id) or _compact_text(evidence.source_id) or "decision"
             evidence_ids = _unique_preserve([evidence.source_id or evidence.id, evidence.id])
+            source_span = _compact_text(evidence.source_span) or _compact_text(evidence.anchor)
+            alignment_status = "source_only" if source_span else "unresolved"
             decisions.append(
                 TranslationDecision(
                     id=f"decision:{decision_id}",
-                    source_span=_compact_text(evidence.source_span) or _compact_text(evidence.anchor),
+                    source_span=source_span,
                     meaning_draft_span=draft_text,
                     vibe_translation_span=final_text,
+                    target_span="",
+                    target_start=None,
+                    target_end=None,
+                    alignment_status=alignment_status,
                     decision_type=decision_type,
                     reason=_decision_reason_for_evidence(evidence, decision_type),
                     evidence_ids=evidence_ids,
                     author_note=_author_note_for_evidence(evidence, decision_type),
                     confidence=_compact_text(evidence.confidence) or "low",
+                    priority=_priority_for_decision(evidence, decision_type),
+                    card_status="pending",
+                    unresolved_risk=decision_type == "risk_unresolved",
+                    suggested_actions=_suggested_actions_for_decision(decision_type),
                     needs_author_review=True,
                     risk_level=_risk_level_for_decision(evidence, decision_type),
                 )
@@ -492,6 +536,11 @@ class AuthorReviewCardGenerator:
                 decision_id=_compact_text(decision.id),
                 source_span=_compact_text(decision.source_span),
                 current_translation=current_translation,
+                priority=_compact_text(decision.priority) or "P1",
+                status=_compact_text(decision.card_status) or "pending",
+                target_span=_compact_text(decision.target_span),
+                suggested_actions=list(decision.suggested_actions),
+                created_from_evidence_ids=list(decision.evidence_ids),
                 decision_label=_decision_label_for_type(decision.decision_type),
                 explanation=_card_explanation_for_decision(decision),
                 author_question=_card_question_for_decision(decision, evidence_types),
