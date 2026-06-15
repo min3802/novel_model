@@ -76,6 +76,39 @@ def _build_payload(
     }
 
 
+def _build_mock_deliverable_payload(
+    *,
+    work_id: str,
+    episode_id: str,
+    source_locale: str,
+    target_locale: str,
+    pipeline: str,
+    input_path: Path,
+) -> dict[str, Any]:
+    return {
+        "workId": work_id,
+        "episodeId": episode_id,
+        "sourceLocale": source_locale,
+        "targetLocale": target_locale,
+        "pipeline": pipeline,
+        "inputPath": str(input_path),
+        "mock": True,
+        "deliveryStatus": "deliverable",
+        "userVisibleErrorCode": None,
+        "message": "",
+        "finalTranslation": "Mock translation for long translation smoke test.",
+        "meaningDraft": {
+            "text": "Mock translation for long translation smoke test.",
+            "model": "mock",
+            "purpose": "semantic_baseline",
+            "temperatureProfile": "low",
+        },
+        "ragEvidence": [],
+        "translationDecisions": [],
+        "authorReviewCards": [],
+    }
+
+
 def _validate_blocked_safety_contract(payload: dict[str, Any]) -> None:
     if payload.get("deliveryStatus") != BLOCKED_STATUS:
         return
@@ -89,6 +122,15 @@ def _validate_blocked_safety_contract(payload: dict[str, Any]) -> None:
             violations.append(f"{field} must be [] for blocked_translation_safety")
     if violations:
         raise RuntimeError("; ".join(violations))
+
+
+def _validate_delivery_contract(payload: dict[str, Any]) -> None:
+    delivery_status = payload.get("deliveryStatus")
+    if delivery_status == "deliverable" and payload.get("authorReviewCards") != []:
+        raise RuntimeError("authorReviewCards must be [] when deliveryStatus is deliverable")
+    if delivery_status == "qa_warning" and not str(payload.get("finalTranslation") or "").strip():
+        raise RuntimeError("finalTranslation must be present when deliveryStatus is qa_warning")
+    _validate_blocked_safety_contract(payload)
 
 
 def _run_v2_dual_draft_review(
@@ -140,22 +182,32 @@ def main() -> int:
     source_text = input_path.read_text(encoding="utf-8")
     mock = bool(args.mock or is_mock_mode() or os.getenv("WLIGHTER_MOCK_MODE", "").strip().lower() == "true")
 
-    result = _run_v2_dual_draft_review(
-        source_text=source_text,
-        target_locale=args.target_locale,
-        mock=mock,
-    )
-    payload = _build_payload(
-        result=result,
-        work_id=args.work_id,
-        episode_id=args.episode_id,
-        source_locale=args.source_locale,
-        target_locale=args.target_locale,
-        pipeline=args.pipeline,
-        input_path=input_path,
-        mock=mock,
-    )
-    _validate_blocked_safety_contract(payload)
+    if mock:
+        payload = _build_mock_deliverable_payload(
+            work_id=args.work_id,
+            episode_id=args.episode_id,
+            source_locale=args.source_locale,
+            target_locale=args.target_locale,
+            pipeline=args.pipeline,
+            input_path=input_path,
+        )
+    else:
+        result = _run_v2_dual_draft_review(
+            source_text=source_text,
+            target_locale=args.target_locale,
+            mock=False,
+        )
+        payload = _build_payload(
+            result=result,
+            work_id=args.work_id,
+            episode_id=args.episode_id,
+            source_locale=args.source_locale,
+            target_locale=args.target_locale,
+            pipeline=args.pipeline,
+            input_path=input_path,
+            mock=False,
+        )
+    _validate_delivery_contract(payload)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(

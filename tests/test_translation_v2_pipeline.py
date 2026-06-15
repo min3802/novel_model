@@ -429,6 +429,39 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(dual_result.translation_decisions, [])
         self.assertEqual(dual_result.author_review_cards, [])
 
+    def test_v2_dual_draft_review_without_cards_stays_deliverable(self) -> None:
+        pipeline = TranslationPipeline(self._config())
+        source_text = "plain source"
+        direct_result = DirectTranslationResult(
+            mode="direct_only",
+            final_translation="translated text",
+            draft={"prompt_debug": {"prompt_hash": "deliverable-no-cards-hash"}},
+            metadata=pipeline._metadata(
+                source_side_rag_enabled=False,
+                rag_enabled=False,
+                terminology_enabled=False,
+                glossary_enabled=False,
+                review_enabled=False,
+                inspection_enabled=False,
+                extra=TranslationPipeline._locale_adherence_metadata(
+                    source_text=source_text,
+                    final_translation="translated text",
+                    locale="ko_ja",
+                    target_language_name="Japanese",
+                ),
+            ),
+            delivery_status="deliverable",
+            user_visible_error_code=None,
+        )
+        pipeline.run_direct_only = lambda *args, **kwargs: direct_result  # type: ignore[assignment]
+        pipeline.source_side_analyzer.analyze = lambda text: []  # type: ignore[assignment]
+
+        result = pipeline.run_v2_dual_draft_review(source_text)
+
+        self.assertEqual(result.author_review_cards, [])
+        self.assertEqual(result.delivery_status, "deliverable")
+        self.assertEqual(result.metadata["delivery_status"], "deliverable")
+
     def test_v2_dual_draft_review_populates_author_review_cards(self) -> None:
         pipeline = TranslationPipeline(self._config())
         source_text = "have a meal sometime"
@@ -474,6 +507,8 @@ class TranslationV2PipelineTests(unittest.TestCase):
 
         self.assertTrue(result.translation_decisions)
         self.assertTrue(result.author_review_cards)
+        self.assertEqual(result.delivery_status, "qa_warning")
+        self.assertEqual(result.metadata["delivery_status"], "qa_warning")
         decision = result.translation_decisions[0]
         self.assertEqual(decision.source_start, 0)
         self.assertEqual(decision.source_end, len(source_text))
@@ -574,6 +609,8 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(len(result.translation_decisions), 3)
         self.assertEqual(len(result.author_review_cards), 1)
         self.assertEqual(result.author_review_cards[0].decision_id, "decision:030")
+        self.assertEqual(result.delivery_status, "qa_warning")
+        self.assertEqual(result.metadata["delivery_status"], "qa_warning")
 
     def test_v2_dual_draft_review_blocks_keep_safety_contract(self) -> None:
         pipeline = TranslationPipeline(self._config())
@@ -613,6 +650,7 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertEqual(result.translation_decisions, [])
         self.assertEqual(result.metadata["translation_decision_count"], 0)
         self.assertEqual(result.metadata["author_review_card_count"], 0)
+        self.assertEqual(result.metadata["delivery_status"], "blocked_translation_safety")
 
     def test_translation_decision_analyzer_uses_user_visible_evidence(self) -> None:
         analyzer = TranslationDecisionAnalyzer(self._config())

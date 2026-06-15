@@ -529,6 +529,18 @@ class TranslationPipeline:
             user_visible_error_code=final_result.user_visible_error_code,
         )
 
+    @staticmethod
+    def _dual_draft_delivery_status(
+        *,
+        direct_delivery_status: str,
+        author_review_cards: list[Any],
+    ) -> str:
+        if direct_delivery_status == "blocked_translation_safety":
+            return "blocked_translation_safety"
+        if author_review_cards:
+            return "qa_warning"
+        return "deliverable"
+
     def run_v2_dual_draft_review(self, source_text: str) -> V2DualDraftReviewResult:
         direct_result = self.run_direct_only(source_text)
         blocked = direct_result.delivery_status == "blocked_translation_safety"
@@ -562,6 +574,10 @@ class TranslationPipeline:
                 rag_evidence=rag_evidence,
             )
         )
+        delivery_status = self._dual_draft_delivery_status(
+            direct_delivery_status=direct_result.delivery_status,
+            author_review_cards=author_review_cards,
+        )
         metadata = self._metadata(
             source_side_rag_enabled=not blocked,
             rag_enabled=False,
@@ -575,6 +591,7 @@ class TranslationPipeline:
                 "rag_evidence_count": len(rag_evidence),
                 "translation_decision_count": len(translation_decisions),
                 "author_review_card_count": len(author_review_cards),
+                "delivery_status": delivery_status,
             },
         )
         return V2DualDraftReviewResult(
@@ -586,7 +603,7 @@ class TranslationPipeline:
             translation_decisions=translation_decisions,
             author_review_cards=author_review_cards,
             metadata=metadata,
-            delivery_status=direct_result.delivery_status,
+            delivery_status=delivery_status,
             user_visible_error_code=direct_result.user_visible_error_code,
         )
 
