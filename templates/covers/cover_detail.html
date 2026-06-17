@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>표지 이미지 상세</h2>
+<p>생성된 표지 이미지와 프롬프트를 확인하는 화면입니다.</p>
+
+{% if image.image_path %}
+    <p><img src="{{ image.image_path }}" alt="커버 이미지" style="max-width: 360px;"></p>
+{% else %}
+    <p>이미지가 생성되지 않았습니다.</p>
+{% endif %}
+
+<dl>
+    <dt>작품</dt>
+    <dd>{{ work.title }}</dd>
+    <dt>대상 국가</dt>
+    <dd>{{ image.get_target_country_display }}</dd>
+    <dt>상태</dt>
+    <dd>{{ image.get_status_display }}</dd>
+    <dt>생성 모델</dt>
+    <dd>{{ image.model_name }}</dd>
+    <dt>생성일</dt>
+    <dd>{{ image.created_at|date:'Y-m-d H:i' }}</dd>
+</dl>
+
+{% if image.error_message %}
+    <h3>오류 메시지</h3>
+    <p>{{ image.error_message|linebreaksbr }}</p>
+{% endif %}
+
+<h3>최종 프롬프트</h3>
+<pre>{{ image.final_prompt }}</pre>
+
+<p>
+    <a href="{% url 'covers:cover_delete' work.id image.id %}">표지 이미지 삭제</a>
+    <a href="{% url 'covers:cover_list' work.id %}">표지 이미지 목록으로 돌아가기</a>
+</p>
+{% endblock %}

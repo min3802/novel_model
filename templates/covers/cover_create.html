@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>표지 이미지 생성</h2>
+<p>REQ-VIS-001: {{ work.title }} 작품의 표지 이미지를 생성하는 화면입니다.</p>
+
+<section>
+    <h3>작품 시놉시스</h3>
+    <p>{{ work.synopsis|default:'등록된 시놉시스가 없습니다.'|linebreaksbr }}</p>
+</section>
+
+<section>
+    <p>{{ form.notice_text|linebreaksbr }}</p>
+</section>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">이미지 생성</button>
+</form>
+
+<p><a href="{% url 'covers:cover_list' work.id %}">표지 이미지 목록으로 돌아가기</a></p>
+{% endblock %}

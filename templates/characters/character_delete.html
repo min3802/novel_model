@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>캐릭터 설정 삭제</h2>
+<p>REQ-UNIV-005: 선택한 캐릭터 설정을 삭제하기 전 확인 절차를 제공하는 화면입니다.</p>
+
+<p>정말로 <strong>{{ character.name }}</strong> 캐릭터 설정을 삭제하시겠습니까?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">삭제</button>
+</form>
+
+<p><a href="{% url 'characters:character_detail' work.id character.id %}">캐릭터 상세로 돌아가기</a></p>
+{% endblock %}

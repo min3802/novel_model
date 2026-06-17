@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>표지 이미지 조회</h2>
+<p>REQ-VIS-002: {{ work.title }} 작품의 생성 표지 이미지 목록을 조회하는 화면입니다.</p>
+
+<p>
+    <a href="{% url 'covers:cover_create' work.id %}">표지 이미지 생성</a>
+    <a href="{% url 'works:work_detail' work.id %}">작품 상세로 돌아가기</a>
+</p>
+
+{% if images %}
+    <div>
+        {% for image in images %}
+            <article>
+                {% if image.image_path %}
+                    <p><img src="{{ image.image_path }}" alt="커버 이미지" style="max-width: 220px;"></p>
+                {% else %}
+                    <p>이미지 없음</p>
+                {% endif %}
+                <p>{{ image.get_target_country_display }} / {{ image.get_status_display }}</p>
+                <p>{{ image.created_at|date:'Y-m-d H:i' }}</p>
+                <p><a href="{% url 'covers:cover_detail' work.id image.id %}">상세 보기</a></p>
+            </article>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>아직 생성된 표지 이미지가 없습니다.</p>
+{% endif %}
+{% endblock %}

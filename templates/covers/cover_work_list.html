@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>표지 이미지 작품 선택</h2>
+<p>표지 이미지를 생성하거나 조회할 작품을 선택하는 화면입니다.</p>
+
+{% if works %}
+    <ul>
+        {% for work in works %}
+            <li>
+                <a href="{% url 'covers:cover_list' work.id %}">{{ work.title }}</a>
+                <span> / {{ work.genre }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>등록된 작품이 없습니다. 먼저 작품을 등록해 주세요.</p>
+    <p><a href="{% url 'works:work_create' %}">작품 등록하기</a></p>
+{% endif %}
+{% endblock %}

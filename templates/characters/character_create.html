@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>캐릭터 설정 생성</h2>
+<p>REQ-UNIV-001: {{ work.title }} 작품에 사용할 캐릭터 설정을 생성하는 화면입니다.</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">캐릭터 설정 저장</button>
+</form>
+
+<p><a href="{% url 'characters:character_list' work.id %}">캐릭터 목록으로 돌아가기</a></p>
+{% endblock %}

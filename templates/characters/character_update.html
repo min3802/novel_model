@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>캐릭터 설정 수정</h2>
+<p>REQ-UNIV-004: 선택한 캐릭터 설정을 수정하는 화면입니다.</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">캐릭터 설정 수정</button>
+</form>
+
+<p><a href="{% url 'characters:character_detail' work.id character.id %}">캐릭터 상세로 돌아가기</a></p>
+{% endblock %}

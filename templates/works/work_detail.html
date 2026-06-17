@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>작품 상세</h2>
+<p>REQ-WORK-003: 작품의 상세 정보를 조회하는 화면입니다.</p>
+
+<dl>
+    <dt>제목</dt>
+    <dd>{{ work.title }}</dd>
+    <dt>필명</dt>
+    <dd>{{ work.pen_name|default:'-' }}</dd>
+    <dt>장르</dt>
+    <dd>{{ work.genre }}</dd>
+    <dt>시놉시스</dt>
+    <dd>{{ work.synopsis|linebreaksbr|default:'-' }}</dd>
+</dl>
+
+<p>
+    <a href="{% url 'works:work_update' work.id %}">작품 수정</a>
+    <a href="{% url 'works:work_delete' work.id %}">작품 삭제</a>
+    <a href="{% url 'works:episode_list' work.id %}">회차 목록</a>
+    <a href="{% url 'works:episode_create' work.id %}">회차 등록</a>
+</p>
+
+<h3>최근 회차</h3>
+{% if episodes %}
+    <ul>
+        {% for episode in episodes %}
+            <li>
+                <a href="{% url 'works:episode_detail' work.id episode.id %}">
+                    {{ episode.episode_no }}화. {{ episode.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>등록된 회차가 없습니다.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>크레딧 차감</h2>
+<p>REQ-CRED-003: 유료 기능 사용 시 크레딧 차감 내역을 처리하고 확인하는 화면입니다.</p>
+
+<p>추후 번역, 이미지 생성, 현지화 가이드 생성 등 유료 기능과 연결됩니다.</p>
+
+<p>
+    <a href="{% url 'credits:credit_balance' %}">잔여 크레딧 조회</a>
+</p>
+{% endblock %}

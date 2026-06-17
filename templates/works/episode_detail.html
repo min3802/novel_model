@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>회차 상세 조회</h2>
+<p>REQ-CHAP-003: 회차 상세 정보를 조회하는 화면입니다.</p>
+
+<dl>
+    <dt>작품</dt>
+    <dd>{{ work.title }}</dd>
+    <dt>회차</dt>
+    <dd>{{ episode.episode_no }}화</dd>
+    <dt>제목</dt>
+    <dd>{{ episode.title }}</dd>
+    <dt>원문</dt>
+    <dd>{{ episode.original_text|linebreaksbr }}</dd>
+</dl>
+
+<p>
+    <a href="{% url 'works:episode_update' work.id episode.id %}">회차 수정</a>
+    <a href="{% url 'works:episode_delete' work.id episode.id %}">회차 삭제</a>
+    <a href="{% url 'works:episode_list' work.id %}">회차 목록으로 돌아가기</a>
+</p>
+{% endblock %}

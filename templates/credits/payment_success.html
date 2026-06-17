@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>결제 승인 결과</h2>
+<p>상태 코드: {{ status_code }}</p>
+<pre>{{ result }}</pre>
+<a href="/credits/charge/">다시 테스트</a>
+{% endblock %}

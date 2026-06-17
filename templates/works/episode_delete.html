@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>회차 삭제</h2>
+<p>REQ-CHAP-005: 회차 삭제 전 확인 절차를 제공하는 화면입니다.</p>
+
+<p>정말로 <strong>{{ episode.episode_no }}화. {{ episode.title }}</strong> 회차를 삭제하시겠습니까?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">삭제</button>
+</form>
+
+<p><a href="{% url 'works:episode_detail' work.id episode.id %}">회차 상세로 돌아가기</a></p>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>작품 목록 조회</h2>
+<p>REQ-WORK-002: 등록된 작품 목록을 조회하는 화면입니다.</p>
+
+<p><a href="{% url 'works:work_create' %}">작품 등록</a></p>
+
+{% if works %}
+    <ul>
+        {% for work in works %}
+            <li>
+                <a href="{% url 'works:work_detail' work.id %}">{{ work.title }}</a>
+                <span> / {{ work.genre }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>등록된 작품이 없습니다.</p>
+{% endif %}
+{% endblock %}

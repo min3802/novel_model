@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>회차 수정</h2>
+<p>REQ-CHAP-004: 회차 정보를 수정하는 화면입니다.</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">회차 수정</button>
+</form>
+
+<p><a href="{% url 'works:episode_detail' work.id episode.id %}">회차 상세로 돌아가기</a></p>
+{% endblock %}

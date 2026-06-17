@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>캐릭터 설정 목록 조회</h2>
+<p>REQ-UNIV-002: {{ work.title }} 작품의 캐릭터 설정 목록을 조회하는 화면입니다.</p>
+
+<p>
+    <a href="{% url 'characters:character_create' work.id %}">캐릭터 설정 생성</a>
+    <a href="{% url 'works:work_detail' work.id %}">작품 상세로 돌아가기</a>
+</p>
+
+{% if characters %}
+    <ul>
+        {% for character in characters %}
+            <li>
+                <a href="{% url 'characters:character_detail' work.id character.id %}">
+                    {{ character.name }}
+                </a>
+                <span> / {{ character.role|default:'역할 미입력' }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>등록된 캐릭터 설정이 없습니다.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>회차 등록</h2>
+<p>REQ-CHAP-001: 작품에 신규 회차를 등록하는 화면입니다.</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">회차 등록</button>
+</form>
+
+<p><a href="{% url 'works:episode_list' work.id %}">회차 목록으로 돌아가기</a></p>
+{% endblock %}

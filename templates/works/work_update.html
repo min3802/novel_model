@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>작품 정보 수정</h2>
+<p>REQ-WORK-004: 작품의 기본 정보를 수정하는 화면입니다.</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">작품 수정</button>
+</form>
+
+<p><a href="{% url 'works:work_detail' work.id %}">작품 상세로 돌아가기</a></p>
+{% endblock %}

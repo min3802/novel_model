@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>작품 삭제</h2>
+<p>REQ-WORK-005: 작품 삭제 전 확인 절차를 제공하는 화면입니다.</p>
+
+<p>정말로 <strong>{{ work.title }}</strong> 작품을 삭제하시겠습니까?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">삭제</button>
+</form>
+
+<p><a href="{% url 'works:work_detail' work.id %}">작품 상세로 돌아가기</a></p>
+{% endblock %}

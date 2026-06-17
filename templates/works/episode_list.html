@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>회차 목록 조회</h2>
+<p>REQ-CHAP-002: 작품에 등록된 회차 목록을 조회하는 화면입니다.</p>
+
+<p>
+    <a href="{% url 'works:episode_create' work.id %}">회차 등록</a>
+    <a href="{% url 'works:work_detail' work.id %}">작품 상세로 돌아가기</a>
+</p>
+
+{% if episodes %}
+    <ul>
+        {% for episode in episodes %}
+            <li>
+                <a href="{% url 'works:episode_detail' work.id episode.id %}">
+                    {{ episode.episode_no }}화. {{ episode.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>등록된 회차가 없습니다.</p>
+{% endif %}
+{% endblock %}

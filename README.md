@@ -1,110 +1,315 @@
-# w.LiGHTER 모델/API 파이프라인
+# w.LiGHTER Django Server
 
-이 저장소는 w.LiGHTER의 모델 파이프라인, API, 테스트 코드를 협업 기준으로 관리합니다.
-기존 Streamlit 프로토타입은 혼선을 줄이기 위해 현재 제품 표면에서 제외했습니다.
+웹소설 현지화 보조 서비스 **w.LiGHTER**의 Django 서버 프로젝트입니다.
 
-## 주요 작업 영역
+현재 단계는 최종 기능 구현 전, 요구사항 정의서를 기준으로 앱 구조와 화면 URL 틀을 잡아둔 상태입니다.
+
+## 1. 프로젝트 실행 방법
+
+### 1. 가상환경 활성화
+
+conda를 사용하는 경우:
+
+```bash
+conda activate wlighter
+```
+
+venv를 사용하는 경우:
+
+```bash
+.\.venv\Scripts\activate
+```
+
+### 2. 패키지 설치
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. DB 반영
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### 4. 서버 실행
+
+```bash
+python manage.py runserver
+```
+
+접속 주소:
 
 ```txt
-api_server.py                         # 표준 라이브러리 기반 JSON API 서버
-backend/                              # API 서비스/인메모리 저장소
-ko_locale_pipeline/                   # 번역, RAG, 검수, 용어 일관성 파이프라인
-  - terminology.py                    # 명사/고유명사 용어 일관성 후보/검증
-  - runtime.py                        # mock/live 실행 모드 판단
-  - mock_adapters.py                  # 테스트용 deterministic fake 응답
-scripts/                              # 웹 없이 모듈 점검/데이터 생성/라이브 스모크 실행
-tests/                                # API/모델/파이프라인 테스트
-data/localization_guide/              # 플랫폼 트렌드 수집 및 현지화 가이드 생성
-frontend/                             # Next.js 프론트엔드. 모델 협업에는 필수 표면이 아님
+http://127.0.0.1:8000/
 ```
 
-## 웹 없이 모듈 테스트하기
-
-프론트엔드나 API 서버를 켜지 않아도 모델 모듈을 직접 확인할 수 있습니다.
-기본은 mock/offline 모드라 API 키와 비용 없이 연결 구조를 점검합니다.
-
-```bash
-python scripts/module_smoke.py --case all
-python scripts/module_smoke.py --case terminology
-python scripts/module_smoke.py --case translate --locale ko_en_us
-```
-
-실제 LLM 호출로 번역 품질을 확인할 때만 `--live`를 붙입니다.
-
-```bash
-python scripts/module_smoke.py --case translate --live
-python scripts/run_live_model_smoke.py
-```
-
-팀원이 로컬 `.env`를 사용해 실제 모델 호출까지 검증해야 한다면 아래 문서를 먼저 확인합니다.
+관리자 페이지:
 
 ```txt
-docs/live_model_test_guide.md
+http://127.0.0.1:8000/admin/
 ```
 
-## Mock 테스트와 Live 테스트의 역할
-
-mock은 번역 품질 평가용이 아니라 다음을 빠르게 확인하기 위한 장치입니다.
-
-- import/API contract가 깨지지 않았는지
-- 파이프라인 데이터 흐름이 이어지는지
-- 테스트가 API 키 없이 결정적으로 실행되는지
-- CI나 팀원 로컬에서 비용 없이 기본 검증이 가능한지
-
-mock 응답은 `ko_locale_pipeline/mock_adapters.py`에 격리되어 있고,
-mock/live 모드 판단은 `ko_locale_pipeline/runtime.py`에 모여 있습니다.
-실제 번역/현지화 품질 평가는 live 모델 실행으로 확인해야 합니다.
-
-live 모델 테스트는 실제 외부 API를 호출하므로 API 키, 네트워크, 비용/쿼터 영향을 받습니다.
-이미지 생성 테스트는 기본 smoke에서 제외되어 있으며, 필요할 때만 `--include-images`로 별도 실행합니다.
-
-## 전체 Python 검증
-
-```bash
-python -m unittest discover -s tests
-```
-
-집중 검증 예시:
-
-```bash
-python -m unittest tests.test_platform_trend_advisor tests.test_platform_trend_guide tests.test_platform_trend_collector tests.test_model_acceptance_from_docs tests.test_model_feature_backlog tests.test_k_culture_rag
-```
-
-## API 서버 실행
-
-```bash
-python api_server.py
-```
-
-## 프론트엔드 실행
-
-프론트엔드는 UI 확인이 필요할 때만 실행합니다.
-모델/파이프라인 테스트에는 필수 아닙니다.
-
-```bash
-cd frontend
-npm run dev
-```
-
-## 현지화 가이드 흐름
-
-`/api/guide`는 세 가지 모드를 지원합니다.
-
-1. 시놉시스와 국가가 모두 없으면 국가/장르 선택지를 반환합니다.
-2. 국가와 장르만 있으면 해당 국가/장르 기반 가이드를 생성합니다.
-3. 시놉시스가 있으면 플랫폼 트렌드 데이터를 바탕으로 적합 국가를 추천한 뒤 가이드를 생성합니다.
-
-트렌드 근거 데이터는 아래에 있습니다.
+## 2. 앱 구조
 
 ```txt
-data/localization_guide/platform_observation/platform_trends_current.json
-data/localization_guide/platform_observation/platform_trend_localization_guide.md
-data/localization_guide/platform_observation/platform_trend_guide_prompt.json
+accounts     사용자 인증, 회원정보, 회원탈퇴
+works        작품 등록, 작품 목록, 작품 상세, 회차 관리
+characters   캐릭터 설정집
+translation  번역 실행, 검수 챗봇, 번역 결과 버전 관리
+relationships 캐릭터 관계도 HTML 생성/조회/삭제
+covers       표지 이미지 생성/조회/삭제
+guides        현지화 가이드 생성/조회/다운로드/삭제
+credits      크레딧 충전, 조회, 차감, 결제 취소
 ```
 
-## 작업 메모
+## 3. 현재 완료된 내용
 
-- 새 Streamlit 페이지/테스트는 추가하지 않습니다.
-- 번역 일관성은 ontology가 아니라 `terminology.py` 기준으로 관리합니다.
-- 동사/형용사 표현 차이는 강제하지 않고, 명사/고유명사 용어만 일관성 대상으로 봅니다.
-- LLM 후보 추출을 붙이더라도 suggested → confirmed 승격 구조를 유지합니다.
+```txt
+- Django 프로젝트 생성
+- 앱 분리
+- settings.py 앱 등록
+- URL 연결
+- base.html 공통 템플릿 구성
+- static CSS 연결
+- 기본 모델 작성
+- admin 등록
+- requirements.txt 생성
+- 요구사항 ID 기준 HTML 화면 틀 생성
+```
+
+현재 HTML 화면은 실제 기능 구현 전, 요구사항별 화면 위치를 확인하기 위한 틀입니다.
+
+## 4. 주요 모델
+
+```txt
+works
+- Work
+- Episode
+
+characters
+- Character
+
+translation
+- TranslationResult
+- ChatMessage
+
+relationships
+- RelationMap
+
+guides
+- LocalizationGuide
+
+covers
+- Cover
+
+credits
+- Plan
+- Payment
+- CreditTransaction
+```
+
+## 5. 요구사항별 화면 URL
+
+### 사용자 관리
+
+```txt
+REQ-AUTH-001 로그인
+/accounts/login/
+
+REQ-AUTH-002 로그아웃
+/accounts/logout/
+
+REQ-USER-001 회원가입
+/accounts/signup/
+
+REQ-USER-002 회원정보 조회
+/accounts/profile/
+
+REQ-USER-003 회원정보 수정
+/accounts/profile/edit/
+
+REQ-USER-004 회원탈퇴
+/accounts/withdraw/
+```
+
+### 작품 관리
+
+```txt
+REQ-WORK-001 작품 등록
+/works/new/
+
+REQ-WORK-002 작품 목록 조회
+/works/
+
+REQ-WORK-003 작품 상세
+/works/<work_id>/
+
+REQ-WORK-004 작품 정보 수정
+/works/<work_id>/edit/
+
+REQ-WORK-005 작품 삭제
+/works/<work_id>/delete/
+```
+
+### 회차 관리
+
+```txt
+REQ-CHAP-001 회차 등록
+/works/<work_id>/episodes/new/
+
+REQ-CHAP-002 회차 목록 조회
+/works/<work_id>/episodes/
+
+REQ-CHAP-003 회차 상세 조회
+/works/<work_id>/episodes/<episode_id>/
+
+REQ-CHAP-004 회차 수정
+/works/<work_id>/episodes/<episode_id>/edit/
+
+REQ-CHAP-005 회차 삭제
+/works/<work_id>/episodes/<episode_id>/delete/
+```
+
+### 번역 / 검수
+
+```txt
+REQ-CHAP-006 번역 실행
+/translation/episodes/<episode_id>/run/
+
+REQ-CHAP-007 검수 챗봇
+/translation/results/<translation_id>/chat/
+
+REQ-CHAP-008 번역 결과 버전 조회
+/translation/episodes/<episode_id>/results/
+
+REQ-CHAP-009 번역 결과 버전 삭제
+/translation/results/<translation_id>/delete/
+```
+
+### 캐릭터 설정집
+
+```txt
+REQ-UNIV-001 캐릭터 설정 생성
+/characters/new/
+
+REQ-UNIV-002 캐릭터 설정 목록 조회
+/characters/
+
+REQ-UNIV-003 캐릭터 설정 상세 조회
+/characters/<character_id>/
+
+REQ-UNIV-004 캐릭터 설정 수정
+/characters/<character_id>/edit/
+
+REQ-UNIV-005 캐릭터 설정 삭제
+/characters/<character_id>/delete/
+```
+
+### 표지 이미지
+
+```txt
+REQ-VIS-001 표지 이미지 생성
+/covers/works/<work_id>/covers/new/
+
+REQ-VIS-002 표지 이미지 조회
+/covers/works/<work_id>/covers/
+
+REQ-VIS-003 표지 이미지 삭제
+/covers/works/<work_id>/covers/<image_id>/delete/
+```
+
+### 캐릭터 관계도
+
+```txt
+REQ-VIS-004 캐릭터 관계도 생성
+/relationships/new/
+
+REQ-VIS-005 캐릭터 관계도 조회
+/relationships/
+
+REQ-VIS-006 캐릭터 관계도 상세조회
+/relationships/<map_id>/
+
+REQ-VIS-007 캐릭터 관계도 다운로드
+/relationships/<map_id>/download/
+
+REQ-VIS-008 캐릭터 관계도 삭제
+/relationships/<map_id>/delete/
+```
+
+### 현지화 가이드
+
+```txt
+REQ-GDE-001 현지화 가이드 생성
+/guides/new/
+
+REQ-GDE-002 현지화 가이드 조회
+/guides/
+
+REQ-GDE-003 현지화 가이드 상세조회
+/guides/<guide_id>/
+
+REQ-GDE-004 현지화 가이드 다운로드
+/guides/<guide_id>/download/
+
+REQ-GDE-005 현지화 가이드 삭제
+/guides/<guide_id>/delete/
+```
+
+### 결제 / 크레딧
+
+```txt
+REQ-CRED-001 크레딧 충전
+/credits/charge/
+
+REQ-CRED-002 잔여 크레딧 조회
+/credits/balance/
+
+REQ-CRED-003 크레딧 차감
+/credits/use/
+
+REQ-CRED-004 결제 취소
+/credits/cancel/
+```
+
+## 6. 아직 미구현인 내용
+
+```txt
+- 실제 소셜 로그인 연동
+- 작품/회차 CRUD 저장 로직
+- 파일 업로드 처리
+- 번역 API 연동
+- 검수 챗봇 기능
+- 캐릭터 설정 CRUD
+- 관계도 HTML 생성 로직
+- 표지 이미지 생성 API 연동
+- 현지화 가이드 생성 로직
+- Toss Payments 결제 연동
+- 크레딧 차감 트랜잭션 처리
+```
+
+## 7. 다음 구현 추천 순서
+
+```txt
+1. 작품 등록 / 목록 / 상세
+2. 회차 등록 / 목록 / 상세
+3. 캐릭터 설정집 CRUD
+4. 번역 실행 및 결과 저장
+5. 검수 챗봇
+6. 현지화 가이드
+7. 관계도 HTML 생성
+8. 표지 이미지 생성
+9. 크레딧 / 결제
+```
+
+## 8. 개발 메모
+
+현재 화면은 요구사항 추적을 위한 분리형 구조입니다.
+최종 UI 구현 시에는 등록, 수정, 삭제 화면을 모달 또는 partial 템플릿으로 합칠 수 있습니다.
+
+```txt
+초기 구조: 요구사항 ID별 화면 분리
+최종 구조: 사용자 흐름 기준으로 화면 통합 가능
+```

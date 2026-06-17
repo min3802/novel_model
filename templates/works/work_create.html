@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>작품 등록</h2>
+<p>REQ-WORK-001: 작품 기본 정보를 입력하여 신규 작품을 등록하는 화면입니다.</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">작품 등록</button>
+</form>
+
+<p><a href="{% url 'works:work_list' %}">작품 목록으로 돌아가기</a></p>
+{% endblock %}
