@@ -2,6 +2,9 @@
 
 from __future__ import annotations
 
+import hashlib
+import json
+import os
 from dataclasses import asdict
 from typing import Any
 
@@ -12,10 +15,17 @@ from app.translation import (
     TranslationMode,
     TranslationPipeline,
 )
-from app.translation.infra.country_locale import COUNTRY_TO_LOCALE, resolve_locale_for_country
+from app.translation.locale_utils import (
+    LocaleNormalizationError,
+    TARGET_COUNTRY_TO_LOCALE,
+    TARGET_LOCALE_TO_COUNTRY,
+    normalize_target_fields,
+)
 from app.translation.infra.runtime import is_mock_mode
 from app.translation.text_processing.consistency_checker import check_translation_consistency
 from app.translation.text_processing.korean_output import is_korean_source
+from backend.services.glossary_service import capture_candidates_from_v3_result, hydrate_work_memory
+from backend.services.content_service import get_content_repository
 from backend.store.memory_store import _get_episode, save_translation_version, work_get
 
 
@@ -56,6 +66,14 @@ _DEFAULT_BLOCK = {
 }
 
 
+def _delivery_block_message(delivery_status: str) -> str:
+    if delivery_status == "blocked_translation_safety":
+        return "Translation safety validation failed. Please try again."
+    if delivery_status == "blocked_translation_integrity":
+        return "Translation target-language integrity validation failed. Please try again."
+    return ""
+
+
 def _normalize_translation_delivery_contract(
     *,
     final_translation: str,
@@ -70,12 +88,15 @@ def _normalize_translation_delivery_contract(
 
     if normalized_delivery_status == "deliverable" and not normalized_translation.strip():
         normalized_translation = ""
-        normalized_delivery_status = "blocked_translation_safety"
-        normalized_error_code = "translation_safety_failed"
+        normalized_delivery_status = "blocked_translation_integrity"
+        normalized_error_code = "translation_integrity_failed"
 
     if normalized_delivery_status == "blocked_translation_safety":
         normalized_translation = ""
         normalized_error_code = "translation_safety_failed"
+    elif normalized_delivery_status == "blocked_translation_integrity":
+        normalized_translation = ""
+        normalized_error_code = "translation_integrity_failed"
 
     if normalized_delivery_status != "deliverable":
         normalized_metadata["delivery_status"] = normalized_delivery_status
@@ -85,7 +106,12 @@ def _normalize_translation_delivery_contract(
 
 
 def _blocked_response(
-    *, country: str, locale: str, source_text: str, block_reason: str, mode: str = TranslationMode.LEGACY_FULL.value
+    *,
+    country: str,
+    locale: str,
+    source_text: str,
+    block_reason: str,
+    mode: str = TranslationMode.V3_LITERARY_PACKAGE.value,
 ) -> dict[str, Any]:
     messages = BLOCK_MESSAGES.get(block_reason, _DEFAULT_BLOCK)
     message = messages["finalTranslation"]
@@ -111,6 +137,102 @@ def _blocked_response(
     }
 
 
+def _locale_error(exc: LocaleNormalizationError) -> dict[str, Any]:
+    return {
+        "ok": False,
+        "status": 400,
+        "errorCode": exc.error_code,
+        "message": exc.message,
+    }
+
+
+def _wants_translation_persistence(payload: dict[str, Any]) -> bool:
+    return bool(payload.get("saveTranslationResult") or payload.get("save_translation_result"))
+
+
+def _safe_int(value: Any) -> int | None:
+    if value is None or value == "":
+        return None
+    try:
+        return int(value)
+    except Exception:
+        return None
+
+
+def _attach_translation_persistence(
+    response: dict[str, Any],
+    *,
+    payload: dict[str, Any],
+    source_text: str,
+    country: str,
+    locale: str,
+    mode: TranslationMode,
+) -> dict[str, Any]:
+    if not _wants_translation_persistence(payload):
+        return response
+    metadata = dict(response.get("metadata") or {})
+    internal = dict(response.get("internal") or {})
+    delivery_status = str(response.get("deliveryStatus") or metadata.get("delivery_status") or "deliverable")
+    if delivery_status.startswith("blocked_translation_"):
+        internal["translationPersistence"] = {
+            "enabled": True,
+            "saved": False,
+            "skipped": True,
+            "reason": delivery_status,
+        }
+        response["internal"] = internal
+        response["metadata"] = metadata
+        return response
+    work_id = _safe_int(_payload_value(payload, "workId", "work_id"))
+    episode_id = _safe_int(_payload_value(payload, "episodeId", "episode_id"))
+    if work_id is None or episode_id is None:
+        internal["translationPersistence"] = {
+            "enabled": True,
+            "saved": False,
+            "error": "missing_numeric_work_or_episode_id",
+        }
+        response["internal"] = internal
+        response["metadata"] = metadata
+        return response
+    try:
+        saved = get_content_repository().save_translation_result(
+            {
+                "work_id": work_id,
+                "episode_id": episode_id,
+                "target_country": country,
+                "target_locale": locale,
+                "pipeline": response.get("pipeline") or mode.value,
+                "delivery_status": delivery_status,
+                "translated_text": response.get("finalTranslation") or "",
+                "translation_rationale": response.get("translationRationale"),
+                "qa_issues": response.get("qaIssues") or response.get("qaReport"),
+                "author_review_cards": response.get("authorReviewCards"),
+                "metadata": metadata,
+                "internal": internal,
+                "model_name": metadata.get("model_name") or metadata.get("translation_model"),
+                "source_text_hash": hashlib.sha256(source_text.encode("utf-8")).hexdigest(),
+            }
+        )
+        saved_id = saved.get("translation_id")
+        metadata["translationPersisted"] = True
+        metadata["savedTranslationId"] = saved_id
+        internal["translationPersistence"] = {"enabled": True, "saved": True, "savedTranslationId": saved_id}
+        response["savedTranslationId"] = saved_id
+    except Exception as exc:
+        internal["translationPersistence"] = {
+            "enabled": True,
+            "saved": False,
+            "error": f"{type(exc).__name__}: {exc}",
+        }
+    response["metadata"] = metadata
+    response["internal"] = internal
+    return response
+
+
+COUNTRY_TO_LOCALE = dict(TARGET_COUNTRY_TO_LOCALE)
+LOCALE_TO_COUNTRY = dict(TARGET_LOCALE_TO_COUNTRY)
+
+
 SEVERITY_LABELS = {
     "LOW": ("낮음", "의미 전달에는 큰 문제가 없지만, 표현을 조금 더 다듬으면 더 자연스러워질 수 있습니다."),
     "MEDIUM": ("보통", "일부 표현이나 뉘앙스에 보완이 필요하며, 수정 여부를 검토할 가치가 있습니다."),
@@ -125,6 +247,67 @@ def _clean_summary_text(value: Any) -> str:
     if not text:
         return ""
     return text.replace("\r\n", "\n").replace("\r", "\n")
+
+
+def _payload_value(payload: dict[str, Any], *keys: str, default: Any = None) -> Any:
+    for key in keys:
+        if key in payload and payload[key] is not None:
+            return payload[key]
+    return default
+
+
+def _json_context(value: Any) -> str:
+    if value is None or value == "":
+        return ""
+    if isinstance(value, str):
+        return value
+    try:
+        return json.dumps(value, ensure_ascii=False, indent=2, default=str)
+    except TypeError:
+        return str(value)
+
+
+def _chat_reference_from_legacy_retrieval(row: dict[str, Any]) -> dict[str, Any]:
+    item = row.get("item") or {}
+    return {
+        "id": item.get("id"),
+        "ko_anchor_expression": item.get("ko_anchor_expression", []),
+        "target_expression": item.get("expression", ""),
+        "score": row.get("score"),
+    }
+
+
+def _chat_reference_from_v3_row(row: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": row.get("id") or row.get("noteId") or row.get("source") or row.get("sourceSpan"),
+        "source": row.get("source") or row.get("sourceSpan") or row.get("term_ko") or row.get("text") or "",
+        "target": row.get("target") or row.get("targetSpan") or row.get("expression") or "",
+        "note": row.get("note") or row.get("explanation") or row.get("meaning") or "",
+        "category": row.get("category") or row.get("type") or "",
+    }
+
+
+def _chat_used_references(workflow: dict[str, Any], internal: dict[str, Any]) -> list[dict[str, Any]]:
+    rows = internal.get("idiomNotes") or internal.get("ragPackets") or workflow.get("retrievals") or []
+    used_references: list[dict[str, Any]] = []
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        if isinstance(row.get("item"), dict):
+            used_references.append(_chat_reference_from_legacy_retrieval(row))
+        else:
+            used_references.append(_chat_reference_from_v3_row(row))
+    return used_references
+
+
+def _chat_inspection_report(workflow: dict[str, Any], internal: dict[str, Any]) -> dict[str, Any]:
+    if internal:
+        return {
+            "reviewFindings": internal.get("reviewFindings") or [],
+            "aggregateReview": internal.get("aggregateReview") or {},
+            "qaIssues": workflow.get("qaIssues") or [],
+        }
+    return workflow.get("inspection") or {}
 
 
 def _top_severity(issues: list[dict[str, Any]]) -> str:
@@ -190,21 +373,25 @@ def format_review_summary(workflow: dict[str, Any]) -> str:
 
 
 def translate(payload: dict[str, Any]) -> dict[str, Any]:
-    country = payload.get("targetCountry")
-    source_text = (payload.get("sourceText") or "").strip()
-    work_id = payload.get("workId")
-    episode_id = payload.get("episodeId")
-    if not country:
-        raise ValueError("targetCountry is required")
+    source_text = str(_payload_value(payload, "sourceText", "source_text", default="") or "").strip()
+    requested_work_id = _payload_value(payload, "workId", "work_id")
+    canonical_work_key = _payload_value(payload, "canonicalWorkKey", "canonical_work_key")
+    episode_id = _payload_value(payload, "episodeId", "episode_id")
+    mode = TranslationMode(
+        _payload_value(payload, "mode", "pipeline", default=TranslationMode.V3_LITERARY_PACKAGE.value)
+    )
+    work_id = requested_work_id if requested_work_id is not None else (canonical_work_key if mode is TranslationMode.V3_LITERARY_PACKAGE else None)
+    try:
+        normalized_target = normalize_target_fields(payload)
+    except LocaleNormalizationError as exc:
+        return _locale_error(exc)
+    country = normalized_target["targetCountry"]
+    locale = normalized_target["targetLocale"]
     if not source_text:
         raise ValueError("sourceText is required")
-    locale = resolve_locale_for_country(country)
-    if not locale:
-        raise ValueError(f"unsupported targetCountry: {country}")
-    mode = TranslationMode(payload.get("mode") or TranslationMode.LEGACY_FULL.value)
     quality_mode = payload.get("qualityMode") or DEFAULT_QUALITY_MODE
     model_override = payload.get("translationModel") or payload.get("model")
-    if work_id is not None:
+    if work_id is not None and mode is not TranslationMode.V3_LITERARY_PACKAGE:
         work_id_int = int(work_id)
         work = work_get(work_id_int)
         if not work:
@@ -259,7 +446,7 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
                 workflow=data,
                 memory={"terms": terminology_memory} if terminology_memory else None,
             )
-        return {
+        response = {
             "country": country,
             "locale": locale,
             "mode": mode.value,
@@ -272,6 +459,7 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             "memory": None,
             "translationVersion": saved_version,
         }
+        return response
 
     pipeline = _pipeline_for_mode(locale, mode, quality_mode=quality_mode, model_override=model_override)
     if mode is TranslationMode.DIRECT_ONLY:
@@ -282,20 +470,19 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
         message = ""
         if delivery_status == "blocked_translation_safety":
             final_translation = ""
-            message = "대상 언어 번역 검증에 실패했습니다. 다시 시도해 주세요."
+        message = _delivery_block_message(delivery_status)
         final_translation, delivery_status, user_visible_error_code, metadata = _normalize_translation_delivery_contract(
             final_translation=final_translation,
             delivery_status=delivery_status,
             user_visible_error_code=user_visible_error_code,
             metadata=direct.get("metadata", {}),
         )
-        if delivery_status == "blocked_translation_safety":
-            message = "대상 언어 번역 검증에 실패했습니다. 다시 시도해 주세요."
+        message = _delivery_block_message(delivery_status)
         direct["metadata"] = metadata
         direct["delivery_status"] = delivery_status
         direct["user_visible_error_code"] = user_visible_error_code
         direct["final_translation"] = final_translation
-        return {
+        response = {
             "country": country,
             "locale": locale,
             "mode": mode.value,
@@ -314,6 +501,14 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             "memory": None,
             "translationVersion": None,
         }
+        return _attach_translation_persistence(
+            response,
+            payload=payload,
+            source_text=source_text,
+            country=country,
+            locale=locale,
+            mode=mode,
+        )
 
     if mode is TranslationMode.V2_DUAL_DRAFT_REVIEW:
         result = asdict(pipeline.run_v2_dual_draft_review(source_text))
@@ -327,8 +522,7 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             user_visible_error_code=user_visible_error_code,
             metadata=result.get("metadata", {}),
         )
-        if delivery_status == "blocked_translation_safety":
-            message = "????몄뼱 踰덉뿭 寃利앹뿉 ?ㅽ뙣?덉뒿?덈떎. ?ㅼ떆 ?쒕룄??二쇱꽭??"
+        message = _delivery_block_message(delivery_status)
         result["metadata"] = metadata
         result["delivery_status"] = delivery_status
         result["user_visible_error_code"] = user_visible_error_code
@@ -360,6 +554,134 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             "translationVersion": None,
         }
 
+    if mode is TranslationMode.V3_LITERARY_PACKAGE:
+        genre = payload.get("genre") or payload.get("workGenre") or "Modern Korean web novel"
+        max_iterations = int(payload.get("maxIterations") or 2)
+        request_work_memory = payload.get("workMemory") or payload.get("work_memory")
+        work_memory = request_work_memory if isinstance(request_work_memory, dict) else None
+        work_memory_source = "request_payload" if work_memory is not None else "none"
+        work_memory_fallback_reason = ""
+        if work_memory is None and work_id is not None and locale:
+            try:
+                hydrated = hydrate_work_memory(str(work_id), locale)
+                if hydrated is not None and hydrated.approvedGlossary:
+                    work_memory = hydrated
+                    work_memory_source = "rdb_hydrated"
+                else:
+                    work_memory_source = "none"
+                    work_memory_fallback_reason = "no_approved_glossary"
+            except Exception as exc:  # keep translation deliverable if glossary storage is unavailable
+                work_memory = None
+                work_memory_source = "none"
+                work_memory_fallback_reason = f"glossary_hydration_failed:{type(exc).__name__}"
+        result = asdict(
+            pipeline.run_v3_literary_package(
+                source_text,
+                genre=genre,
+                work_memory=work_memory,
+                max_iterations=max_iterations,
+                debug_capture_model_outputs=bool(
+                    payload.get("debugCaptureModelOutputs")
+                    or payload.get("debug_capture_model_outputs")
+                    or os.environ.get("TRANSLATION_DEBUG_CAPTURE_MODEL_OUTPUTS") == "1"
+                ),
+                debug_artifact_dir=payload.get("debugArtifactDir") or payload.get("debug_artifact_dir"),
+            )
+        )
+        capture_enabled = bool(payload.get("captureGlossaryCandidates") or payload.get("capture_glossary_candidates"))
+        capture_summary: dict[str, Any]
+        capture_target_locale = locale
+        if not capture_enabled:
+            capture_summary = {"enabled": False, "reason": "disabled"}
+        elif work_id is None:
+            capture_summary = {"enabled": False, "reason": "missing_work_id"}
+        elif not capture_target_locale:
+            capture_summary = {"enabled": False, "reason": "missing_target_locale"}
+        else:
+            try:
+                capture_summary = capture_candidates_from_v3_result(
+                    result,
+                    work_id=str(work_id),
+                    episode_id=str(episode_id) if episode_id is not None else None,
+                    target_locale=capture_target_locale,
+                )
+            except Exception as exc:
+                capture_summary = {
+                    "enabled": True,
+                    "error": f"candidate_capture_failed:{type(exc).__name__}",
+                    "collectedCount": 0,
+                    "savedCount": 0,
+                    "skippedCount": 0,
+                    "skippedReasons": {},
+                }
+        final_translation = result.get("finalTranslation", "")
+        delivery_status = result.get("deliveryStatus", "deliverable")
+        user_visible_error_code = (result.get("internal") or {}).get("userVisibleErrorCode")
+        final_translation, delivery_status, user_visible_error_code, metadata = _normalize_translation_delivery_contract(
+            final_translation=final_translation,
+            delivery_status=delivery_status,
+            user_visible_error_code=user_visible_error_code,
+            metadata={
+                "mode": TranslationMode.V3_LITERARY_PACKAGE.value,
+                "pipeline": result.get("pipeline"),
+                "delivery_status": delivery_status,
+                "idiom_note_count": len(((result.get("internal") or {}).get("idiomNotes") or [])),
+                "qa_issue_count": len(result.get("qaIssues") or []),
+                "translation_rationale_item_count": len((result.get("translationRationale") or {}).get("items") or []),
+                "work_memory_glossary_count": len(((result.get("internal") or {}).get("workMemory") or {}).get("approvedGlossary") or []),
+                "work_memory_source": work_memory_source,
+                "work_memory_fallback_reason": work_memory_fallback_reason,
+            },
+        )
+        result["finalTranslation"] = final_translation
+        result["deliveryStatus"] = delivery_status
+        internal = dict(result.get("internal") or {})
+        internal["userVisibleErrorCode"] = user_visible_error_code
+        internal["workMemorySource"] = work_memory_source
+        internal["workMemoryFallbackReason"] = work_memory_fallback_reason
+        internal["workMemoryGlossaryCount"] = len((internal.get("workMemory") or {}).get("approvedGlossary") or [])
+        internal["glossaryCandidateCapture"] = capture_summary
+        result["internal"] = internal
+        response = {
+            "country": country,
+            "locale": locale,
+            "mode": mode.value,
+            "pipeline": result.get("pipeline"),
+            "finalTranslation": final_translation,
+            "reviewSummary": "",
+            "translationRationale": result.get("translationRationale", {}),
+            "readerEndnotes": result.get("readerEndnotes", []),
+            "retrievalCount": 0,
+            "workflow": result,
+            "meaningDraft": {},
+            "ragEvidence": [],
+            "translationDecisions": [],
+            "authorReviewCards": result.get("authorReviewCards", []),
+            "riskItems": [],
+            "userVisibleRiskItems": [],
+            "hiddenRiskItems": [],
+            "qaReport": result.get("qaIssues", []),
+            "qaIssues": result.get("qaIssues", []),
+            "userVisibleQaReport": {},
+            "hiddenQaReport": [],
+            "patchSuggestions": [],
+            "metadata": metadata,
+            "deliveryStatus": delivery_status,
+            "userVisibleErrorCode": user_visible_error_code,
+            "message": "",
+            "internal": result.get("internal", {}),
+            "memory": None,
+            "translationVersion": None,
+        }
+        return _attach_translation_persistence(
+            response,
+            payload=payload,
+            source_text=source_text,
+            country=country,
+            locale=locale,
+            mode=mode,
+        )
+
     if mode is TranslationMode.V2_DIRECT_QA:
         result = asdict(pipeline.run_v2_direct_qa(source_text))
         final_translation = result.get("final_translation", "")
@@ -368,15 +690,14 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
         message = ""
         if delivery_status == "blocked_translation_safety":
             final_translation = ""
-            message = "대상 언어 번역 검증에 실패했습니다. 다시 시도해 주세요."
+        message = _delivery_block_message(delivery_status)
         final_translation, delivery_status, user_visible_error_code, metadata = _normalize_translation_delivery_contract(
             final_translation=final_translation,
             delivery_status=delivery_status,
             user_visible_error_code=user_visible_error_code,
             metadata=result.get("metadata", {}),
         )
-        if delivery_status == "blocked_translation_safety":
-            message = "대상 언어 번역 검증에 실패했습니다. 다시 시도해 주세요."
+        message = _delivery_block_message(delivery_status)
         result["metadata"] = metadata
         result["delivery_status"] = delivery_status
         result["user_visible_error_code"] = user_visible_error_code
@@ -416,10 +737,7 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
         user_visible_error_code=result.get("user_visible_error_code"),
         metadata=result.get("metadata", {}),
     )
-    if delivery_status == "blocked_translation_safety":
-        message = "대상 언어 번역 검증에 실패했습니다. 다시 시도해 주세요."
-    else:
-        message = ""
+    message = _delivery_block_message(delivery_status)
     result["metadata"] = metadata
     result["delivery_status"] = delivery_status
     result["user_visible_error_code"] = user_visible_error_code
@@ -449,42 +767,37 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
 
 
 def inspect_chat(payload: dict[str, Any]) -> dict[str, Any]:
-    country = payload.get("targetCountry")
-    question = (payload.get("question") or "").strip()
-    source_text = (payload.get("sourceText") or "").strip()
-    current_translation = (payload.get("currentTranslation") or "").strip()
+    question = str(_payload_value(payload, "question", "question_text", default="") or "").strip()
+    source_text = str(_payload_value(payload, "sourceText", "source_text", default="") or "").strip()
+    current_translation = str(_payload_value(payload, "currentTranslation", "current_translation", default="") or "").strip()
     workflow = payload.get("workflow") or {}
     chat_history_payload = payload.get("chatHistory") or []
 
-    if not country:
-        raise ValueError("targetCountry is required")
+    try:
+        normalized_target = normalize_target_fields(payload)
+    except LocaleNormalizationError as exc:
+        return _locale_error(exc)
+    country = normalized_target["targetCountry"]
     if not question:
         raise ValueError("question is required")
-    locale = COUNTRY_TO_LOCALE.get(country)
-    if not locale:
-        raise ValueError(f"unsupported targetCountry: {country}")
+    locale = normalized_target["targetLocale"]
 
     draft = workflow.get("draft") or {}
-    inspection = workflow.get("inspection") or {}
-    retrievals = workflow.get("retrievals") or []
+    internal = workflow.get("internal") or {}
     reviewed_translation = (
         current_translation
+        or workflow.get("finalTranslation")
         or workflow.get("reviewed_translation")
         or draft.get("translation")
         or ""
     )
     source_text = source_text or workflow.get("source_text") or ""
-
-    used_references = [
-        {
-            "id": (row.get("item") or {}).get("id"),
-            "ko_anchor_expression": (row.get("item") or {}).get("ko_anchor_expression", []),
-            "target_expression": (row.get("item") or {}).get("expression", ""),
-            "score": row.get("score"),
-        }
-        for row in retrievals
-        if isinstance(row, dict)
-    ]
+    translation_rationale = _json_context(workflow.get("translationRationale") or draft.get("rationale") or "")
+    inspection_report = _chat_inspection_report(workflow, internal)
+    used_references = _chat_used_references(workflow, internal)
+    reader_endnotes = workflow.get("readerEndnotes") or []
+    work_title = str(workflow.get("title") or _payload_value(payload, "title", "work_title", default="") or "")
+    episode_id = str(_payload_value(payload, "episodeId", "episode_id", default=workflow.get("episodeId") or workflow.get("episode_id") or "") or "")
 
     chat_history: list[ChatMessage] = []
     for row in chat_history_payload[-8:]:
@@ -500,9 +813,12 @@ def inspect_chat(payload: dict[str, Any]) -> dict[str, Any]:
         source_text=source_text,
         draft_translation=draft.get("translation", ""),
         reviewed_translation=reviewed_translation,
-        translation_rationale=draft.get("rationale", ""),
+        translation_rationale=translation_rationale,
         used_references=used_references,
-        inspection_report=inspection,
+        inspection_report=inspection_report,
+        reader_endnotes=reader_endnotes,
+        work_title=work_title,
+        episode_id=episode_id,
         translation_memory=[],
         chat_history=chat_history,
     )

@@ -571,7 +571,7 @@ OPENAI_IMAGE_MODEL=gpt-image-1-mini
 명령:
 
 ```powershell
-python scripts\run_live_model_smoke.py --mock --include-images --json-out docs\mock_model_smoke_results.json --md-out docs\mock_model_smoke_report.md
+python scripts\run_live_model_smoke.py --mock --include-images --json-out outputs\mock_model_smoke_results.json --md-out outputs\mock_model_smoke_report.md
 ```
 
 성공 기준:
@@ -582,8 +582,6 @@ python scripts\run_live_model_smoke.py --mock --include-images --json-out docs\m
 
 생성 파일:
 
-- `docs/mock_model_smoke_results.json`
-- `docs/mock_model_smoke_report.md`
 
 ---
 
@@ -647,8 +645,6 @@ python scripts\run_live_model_smoke.py
 
 생성 파일:
 
-- `docs/live_model_smoke_results.json`
-- `docs/live_model_smoke_report.md`
 
 주의:
 
@@ -840,7 +836,7 @@ python scripts\run_live_model_smoke.py --include-images --json-out docs\live_mod
 명령:
 
 ```powershell
-python scripts\run_live_model_smoke.py --mock --include-images --json-out docs\mock_model_smoke_results.json --md-out docs\mock_model_smoke_report.md
+python scripts\run_live_model_smoke.py --mock --include-images --json-out outputs\mock_model_smoke_results.json --md-out outputs\mock_model_smoke_report.md
 ```
 
 결과:
@@ -885,33 +881,40 @@ OK
 
 - `docs/model_code_test_guide.md`
 - `docs/model_test_handoff.md`
-- `docs/live_model_smoke_report.md`
-- `docs/live_model_smoke_results.json`
 - 이미지 포함 검증 시:
   - `docs/live_model_smoke_with_images_report.md`
   - `docs/live_model_smoke_with_images_results.json`
 # 2026-06-11 model routing update
 
-Translation model selection is now profile-based instead of hardcoded to `gpt-4.1-mini`.
+Translation model selection is profile-based. Public Django/frontend docs should talk about `qualityMode` only; raw model names stay backend/internal.
 
 ## qualityMode defaults
 
 - default `qualityMode`: `standard`
-- `fast` -> `gpt-5.4-nano`
-- `standard` -> `gpt-5-mini`
-- `quality` -> `gpt-5.4-mini`
-- `baseline` -> `gpt-4.1-mini`
+- `fast` default: `gpt-5.4-nano`
+- `standard` default: `gpt-5.4-mini`
+- `quality` default: `gpt-5.4-mini`
+- `baseline` default: `gpt-4.1-mini`
+
+## profile env overrides
+
+Backend can raise or swap the model used by a specific profile through environment variables:
+
+- `WLIGHTER_FAST_TRANSLATION_MODEL`
+- `WLIGHTER_FAST_REVIEW_MODEL`
+- `WLIGHTER_STANDARD_TRANSLATION_MODEL`
+- `WLIGHTER_STANDARD_REVIEW_MODEL`
+- `WLIGHTER_QUALITY_TRANSLATION_MODEL`
+- `WLIGHTER_QUALITY_REVIEW_MODEL`
+
+These env vars are validated against the existing allowlist. They do not enable arbitrary model names.
 
 ## override policy
 
 - Request payload may pass `qualityMode`.
 - Request payload may pass `translationModel` or `model`.
-- Direct model overrides are allowlisted only:
-  - `gpt-5.4-nano`
-  - `gpt-5.4-mini`
-  - `gpt-5-mini`
-  - `gpt-4.1-mini`
-- Unsupported override values raise a validation error. They do not silently fall back to `gpt-4.1-mini`.
+- Direct model overrides remain allowlisted only.
+- Unsupported override values raise a validation error. They do not silently fall back.
 
 ## metadata expectations
 
@@ -924,14 +927,12 @@ Every translation workflow must record the selected model routing metadata, incl
 - `review_model`
 - `model_override_used`
 
-`gpt-4.1-mini` remains available only for baseline/debug/fallback use and is no longer the default operating model.
-
 # 2026-06-12 locale adherence smoke guidance
 
 ## recommended smoke matrix
 
-- default model under evaluation: `gpt-5-mini`
-- comparison model: `gpt-5.4-mini`
+- default model under evaluation: `gpt-5.4-mini`
+- comparison model: `gpt-5.5`
 - locales:
   - `ko_en_us`
   - `ko_zh_cn`

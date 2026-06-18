@@ -5,6 +5,7 @@ import os
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import backend.services.translation_service as translation_service_module
 from app.translation import DEFAULT_QUALITY_MODE, MODEL_PROFILES, PipelineConfig, TranslationMode, TranslationPipeline
@@ -1460,7 +1461,7 @@ class TranslationV2PipelineTests(unittest.TestCase):
     def test_pipeline_config_quality_mode_profiles_map_expected_models(self) -> None:
         expected = {
             "fast": "gpt-5.4-nano",
-            "standard": "gpt-5-mini",
+            "standard": "gpt-5.4-mini",
             "quality": "gpt-5.4-mini",
             "baseline": "gpt-4.1-mini",
         }
@@ -1471,6 +1472,25 @@ class TranslationV2PipelineTests(unittest.TestCase):
             self.assertEqual(config.review_model, model_name)
             self.assertEqual(config.model_profile_name, quality_mode)
             self.assertEqual(MODEL_PROFILES[quality_mode]["translation_model"], model_name)
+
+    def test_pipeline_config_profile_env_overrides_apply(self) -> None:
+        with patch.dict(
+            os.environ,
+            {
+                "WLIGHTER_FAST_TRANSLATION_MODEL": "gpt-5.5",
+                "WLIGHTER_FAST_REVIEW_MODEL": "gpt-5.5",
+                "WLIGHTER_STANDARD_TRANSLATION_MODEL": "gpt-5.5",
+                "WLIGHTER_STANDARD_REVIEW_MODEL": "gpt-5.5",
+                "WLIGHTER_QUALITY_TRANSLATION_MODEL": "gpt-5.5",
+                "WLIGHTER_QUALITY_REVIEW_MODEL": "gpt-5.5",
+            },
+            clear=False,
+        ):
+            for quality_mode in ("fast", "standard", "quality"):
+                config = PipelineConfig(locale="ko_ja", quality_mode=quality_mode, mock=True)
+                self.assertEqual(config.translation_model, "gpt-5.5")
+                self.assertEqual(config.review_model, "gpt-5.5")
+                self.assertEqual(config.model_profile_name, quality_mode)
 
     def test_service_default_quality_mode_is_standard(self) -> None:
         result = translate(
@@ -1483,14 +1503,14 @@ class TranslationV2PipelineTests(unittest.TestCase):
 
         self.assertEqual(result["metadata"]["quality_mode"], "standard")
         self.assertEqual(result["metadata"]["model_profile"], "standard")
-        self.assertEqual(result["metadata"]["translation_model"], "gpt-5-mini")
-        self.assertEqual(result["metadata"]["review_model"], "gpt-5-mini")
+        self.assertEqual(result["metadata"]["translation_model"], "gpt-5.4-mini")
+        self.assertEqual(result["metadata"]["review_model"], "gpt-5.4-mini")
         self.assertFalse(result["metadata"]["model_override_used"])
 
     def test_service_quality_mode_routes_models(self) -> None:
         expectations = {
             "fast": "gpt-5.4-nano",
-            "standard": "gpt-5-mini",
+            "standard": "gpt-5.4-mini",
             "quality": "gpt-5.4-mini",
             "baseline": "gpt-4.1-mini",
         }
@@ -2074,7 +2094,7 @@ class TranslationV2PipelineTests(unittest.TestCase):
 
         self.assertEqual(result["deliveryStatus"], "blocked_translation_safety")
         self.assertEqual(result["userVisibleErrorCode"], "translation_safety_failed")
-        self.assertEqual(result["message"], "대상 언어 번역 검증에 실패했습니다. 다시 시도해 주세요.")
+        self.assertEqual(result["message"], "Translation safety validation failed. Please try again.")
         self.assertEqual(result["finalTranslation"], "")
 
 
@@ -2107,7 +2127,7 @@ class TranslationV2PipelineTests(unittest.TestCase):
 
         self.assertEqual(result["deliveryStatus"], "blocked_translation_safety")
         self.assertEqual(result["userVisibleErrorCode"], "translation_safety_failed")
-        self.assertEqual(result["message"], "대상 언어 번역 검증에 실패했습니다. 다시 시도해 주세요.")
+        self.assertEqual(result["message"], "Translation safety validation failed. Please try again.")
         self.assertEqual(result["finalTranslation"], "")
 
     def test_translation_service_normalizes_empty_deliverable_to_blocked(self) -> None:
@@ -2136,12 +2156,12 @@ class TranslationV2PipelineTests(unittest.TestCase):
             }
         )
 
-        self.assertEqual(result["deliveryStatus"], "blocked_translation_safety")
-        self.assertEqual(result["userVisibleErrorCode"], "translation_safety_failed")
+        self.assertEqual(result["deliveryStatus"], "blocked_translation_integrity")
+        self.assertEqual(result["userVisibleErrorCode"], "translation_integrity_failed")
         self.assertEqual(result["finalTranslation"], "")
-        self.assertEqual(result["message"], "대상 언어 번역 검증에 실패했습니다. 다시 시도해 주세요.")
-        self.assertEqual(result["metadata"]["delivery_status"], "blocked_translation_safety")
-        self.assertEqual(result["metadata"]["user_visible_error_code"], "translation_safety_failed")
+        self.assertEqual(result["message"], "Translation target-language integrity validation failed. Please try again.")
+        self.assertEqual(result["metadata"]["delivery_status"], "blocked_translation_integrity")
+        self.assertEqual(result["metadata"]["user_visible_error_code"], "translation_integrity_failed")
 
     def test_translation_service_preserves_deliverable_success(self) -> None:
         from backend.services import translation_service as svc
@@ -2174,6 +2194,89 @@ class TranslationV2PipelineTests(unittest.TestCase):
         self.assertNotEqual(result["finalTranslation"], "")
         self.assertEqual(result["message"], "")
         self.assertEqual(result["metadata"]["delivery_status"], "deliverable")
+
+    def test_ko_ja_hangul_residue_creates_decision_and_card_for_name(self) -> None:
+        analyzer = TranslationDecisionAnalyzer(self._config())
+        final_translation = "タエオは振り返って、태오と呼んだ。"
+
+        decisions = analyzer.analyze(
+            [],
+            MeaningDraft(text=final_translation, model="mock"),
+            final_translation,
+            source_text="태오는 뒤돌아보았다.",
+            locale="ko_ja",
+        )
+        cards = AuthorReviewCardGenerator(self._config()).generate(decisions, rag_evidence=[])
+
+        residue = [item for item in decisions if item.decision_type == "untranslated_korean_residue"]
+        self.assertEqual(len(residue), 1)
+        self.assertEqual(residue[0].target_span, "태오")
+        self.assertEqual(residue[0].priority, "P0")
+        self.assertEqual(residue[0].risk_level, "high")
+        self.assertTrue(residue[0].needs_author_review)
+        self.assertEqual(residue[0].suggested_actions, ["대상 언어 표기 확인"])
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0].decision_type, "untranslated_korean_residue")
+        self.assertEqual(cards[0].target_span, "태오")
+        self.assertIn("태오", cards[0].explanation)
+
+    def test_ko_ja_hangul_residue_detects_system_message_segment(self) -> None:
+        analyzer = TranslationDecisionAnalyzer(self._config())
+        final_translation = "システムメッセージ: [균열 안정도 12%]"
+
+        decisions = analyzer.analyze(
+            [],
+            MeaningDraft(text=final_translation, model="mock"),
+            final_translation,
+            source_text="[균열 안정도 12%]",
+            locale="ko_ja",
+        )
+
+        residue_spans = [item.target_span for item in decisions if item.decision_type == "untranslated_korean_residue"]
+        self.assertEqual(residue_spans, ["[균열 안정도 12%]"])
+
+    def test_ko_ja_japanese_rendered_names_do_not_create_hangul_residue(self) -> None:
+        analyzer = TranslationDecisionAnalyzer(self._config())
+        final_translation = "ミンジェ、スア、パク・ドヒョンは頷いた。"
+
+        decisions = analyzer.analyze(
+            [],
+            MeaningDraft(text=final_translation, model="mock"),
+            final_translation,
+            source_text="민재, 수아, 박도현은 고개를 끌덕였다.",
+            locale="ko_ja",
+        )
+
+        self.assertFalse(any(item.decision_type == "untranslated_korean_residue" for item in decisions))
+
+    def test_ko_ja_hangul_residue_skipped_for_blocked_translation_safety(self) -> None:
+        pipeline = TranslationPipeline(self._config())
+        blocked_direct = DirectTranslationResult(
+            mode="direct_only",
+            final_translation="",
+            draft={"prompt_debug": {"prompt_hash": "blocked-hangul-residue-hash"}},
+            metadata=pipeline._metadata(
+                source_side_rag_enabled=False,
+                rag_enabled=False,
+                terminology_enabled=False,
+                glossary_enabled=False,
+                review_enabled=False,
+                inspection_enabled=False,
+                extra={"delivery_status": "blocked_translation_safety"},
+            ),
+            delivery_status="blocked_translation_safety",
+            user_visible_error_code="translation_safety_failed",
+        )
+        pipeline.run_direct_only = lambda *args, **kwargs: blocked_direct  # type: ignore[assignment]
+
+        result = pipeline.run_v2_dual_draft_review("태오가 남아 있는 원문")
+
+        self.assertEqual(result.delivery_status, "blocked_translation_safety")
+        self.assertEqual(result.final_translation, "")
+        self.assertEqual(result.rag_evidence, [])
+        self.assertEqual(result.translation_decisions, [])
+        self.assertEqual(result.author_review_cards, [])
+
 
 if __name__ == "__main__":
     unittest.main()

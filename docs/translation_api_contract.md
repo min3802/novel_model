@@ -22,12 +22,13 @@
 1. 사용자가 원문 `sourceText`를 입력한다.
 2. 사용자가 목표 언어/지역 `targetLocale`을 선택한다.
 3. backend가 기본 translation pipeline을 실행한다.
-4. backend가 내부적으로 `v2_dual_draft_review` pipeline을 선택한다.
+4. Backend selects the default `v3_literary_package` graph pipeline internally.
 5. backend가 `finalTranslation`을 생성한다.
 6. backend가 필요 시 `ragEvidence`, `translationDecisions`, `authorReviewCards`를 함께 반환한다.
 7. frontend는 `deliveryStatus`를 먼저 확인하고, 상태에 따라 번역문과 검수 정보를 렌더링한다.
 
-일반 사용자는 `mode`를 선택하지 않는다. public frontend도 `mode`를 보내지 않는다. backend 기본 pipeline은 내부적으로 `v2_dual_draft_review`를 사용한다.
+Regular users do not choose `mode`. Public frontend and Django/API callers may omit `mode`; the backend default is `v3_literary_package` graph. If Django/API sends an explicit selector, use `mode` or `pipeline` = `v3_literary_package`.
+Public frontend and Django/API callers should use `qualityMode` for profile selection when they need one; they should not expose raw model names in the UI or public request contract.
 
 ## 3. Request contract
 
@@ -72,7 +73,10 @@ POST /api/translations/
 - `mode`는 public API request field가 아니다.
 - 일반 frontend는 `mode`를 보내지 않는다.
 - 사용자는 `mode`를 선택하지 않는다.
-- 새 Django backend는 기본값으로 `v2_dual_draft_review`를 사용한다.
+- `qualityMode` is the public profile selector for cost/quality tuning.
+- Django/frontend may omit `qualityMode`; the backend default is `standard`.
+- If Django/API sends it explicitly, use one of `fast`, `standard`, `quality`, or `baseline`.
+- New Django backend default: `v3_literary_package` graph.
 - `direct_only`, `v2_direct_qa`, `qa_only`, `legacy_full` 등은 개발/테스트/관리자/internal override 용도로만 사용한다.
 - 새 Django 구현에서도 public serializer와 internal pipeline selector를 분리하는 것을 권장한다.
 - public response에도 `mode`를 필수 top-level field로 추가하지 않는다.
@@ -94,6 +98,122 @@ POST /api/translations/
 | `authorReviewCards` | array | 필수 | 현재 구현 | 작가/편집자에게 read-only로 보여줄 검수 카드 목록이다. |
 
 frontend는 unknown field에 tolerant하게 동작해야 한다. backend는 internal/debug field를 과도하게 노출하지 않는다.
+
+## 5-A. v3_literary_package request/response contract
+
+`v3_literary_package` graph is the current default literary pipeline for `/api/translate`. If `mode`/`pipeline` is omitted, this path runs by default. If Django/API sends an explicit selector, send `"v3_literary_package"`. Existing `v2_dual_draft_review` and `legacy_full` paths remain internal compatibility overrides.
+
+### v3 request core fields
+
+| 필드 | 타입 | 필수 여부 | 설명 |
+| --- | --- | --- | --- |
+| `sourceText` | string | 필수 | 번역할 한국어 원문이다. |
+| `sourceLocale` | string | 권장 | 원문 locale이다. 예: `ko`. |
+| `targetLocale` | string | 권장 | 목표 locale이다. 예: `ko_ja`, `ko_en_us`. 기존 backend 호환을 위해 `targetCountry`도 허용된다. |
+| `targetCountry` | string | 조건부 | 기존 서비스 호환 필드다. `targetLocale`만 있는 v3 요청도 허용한다. |
+| `genre` | string | 선택 | 장르/문체 힌트다. 없으면 backend 기본값을 사용한다. |
+| `workId` 또는 `work_id` | string | 권장 | WorkMemory hydrate 기준 작품 ID다. |
+| `episodeId` 또는 `episode_id` | string | 선택 | 후보 용어 저장/분석을 위한 회차 ID다. |
+| `mode` or `pipeline` | string | optional | Omit to use the default `v3_literary_package` graph. If Django/API sends it explicitly, use `"v3_literary_package"`. |
+| `workMemory` 또는 `work_memory` | object 또는 null | 선택 | 직접 전달하는 WorkMemory payload다. 있으면 store hydrate보다 우선한다. |
+| `captureGlossaryCandidates` 또는 `capture_glossary_candidates` | boolean | 선택 | v3 결과에서 저장 가능한 인물/용어 후보를 process-local candidate store에 pending으로 기록한다. 기본값은 `false`다. |
+
+### v3 WorkMemory payload
+
+```json
+{
+  "workId": "work_001",
+  "targetLocale": "ko_en_us",
+  "approvedGlossary": [
+    {
+      "source": "균열",
+      "target": "rift",
+      "category": "genre_term",
+      "priority": "hard",
+      "aliases": [],
+      "forbidden": ["crack", "fissure"],
+      "note": "헌터물 장르 용어로 rift를 고정 사용"
+    }
+  ],
+  "styleMemory": {},
+  "previousSummary": null
+}
+```
+
+### v3 WorkMemory priority policy
+
+Backend service가 v3를 실행할 때 WorkMemory는 다음 순서로 결정한다.
+
+1. Request payload에 `workMemory` 또는 `work_memory` dict가 있으면 그것을 우선 사용하고 `internal.workMemorySource = "request_payload"`로 기록한다.
+2. Request payload에 WorkMemory가 없고 `workId/work_id + targetLocale/target_locale` 또는 resolved locale이 있으면 MySQL-backed glossary repository에서 approved glossary row를 조회해 WorkMemory를 hydrate한다.
+3. Hydrate 결과가 있으면 `internal.workMemorySource = "rdb_hydrated"`로 기록한다.
+4. 둘 다 없거나 approved glossary가 없으면 `internal.workMemorySource = "none"`으로 기록한다.
+5. Store 조회 실패는 번역을 막지 않는다. WorkMemory 없이 fallback하고 `internal.workMemoryFallbackReason`에 이유를 남긴다.
+
+`"merged"`는 향후 request payload와 MySQL glossary row를 병합하는 정책을 도입할 때를 위해 예약된 값이다. 현재 기본 정책은 request payload 우선이며 자동 병합하지 않는다.
+
+운영 기준에서 `approvedGlossary`는 MySQL RDB에 저장되는 기준표다. VDB/RAG는 glossary 저장소가 아니며, 추후 Static RAG, Rationale Memory, QA Failure Memory 같은 참고자료 검색 레이어로만 검토한다.
+
+Repository backend is selected outside the public API:
+
+- `GLOSSARY_STORE_BACKEND=memory` keeps the process-local fallback used by tests and local smoke runs.
+- `GLOSSARY_STORE_BACKEND=mysql` uses `MySQLGlossaryRepository` with `MYSQL_HOST`, `MYSQL_PORT`, `MYSQL_DATABASE`, `MYSQL_USER`, `MYSQL_PASSWORD`, and `MYSQL_CHARSET`.
+
+The API contract does not expose the storage backend. Request-supplied `workMemory` still wins over repository hydration. Hydration or candidate-capture storage failures remain non-blocking and are recorded in `internal.workMemoryFallbackReason` or `internal.glossaryCandidateCapture.error`.
+
+인물 glossary는 회차 내부 coreference 보조가 아니라 장기 표기 일관성 memory다. 이름/공식 표기/직함/별명/반복 이명은 저장할 수 있지만, `그`, `그녀`, `남자`, `저 남자`, `그 남자`, `그분`, `이 사람`, `저 사람` 같은 대명사·지시어·일반 명사는 hard alias로 저장하지 않는다.
+
+### v3 glossary candidate capture
+
+Candidate capture는 opt-in side effect다.
+
+- `captureGlossaryCandidates=true` 또는 `capture_glossary_candidates=true`일 때만 실행한다.
+- `workId/work_id`와 `targetLocale/target_locale`이 필요하다.
+- 후보는 `glossary_candidates.status="pending"`으로만 저장된다.
+- 자동 승인하지 않는다.
+- 이미 approved glossary에 같은 `work_id + target_locale + source + category`가 있으면 저장하지 않는다.
+- 이미 pending candidate에 같은 key가 있으면 중복 저장하지 않는다.
+- 대명사/지시어/일반 명사는 candidate 또는 alias로 저장하지 않는다.
+- 기본 테스트 구현은 process-local in-memory repository다. `GLOSSARY_STORE_BACKEND=mysql`에서는 MySQL-backed repository가 같은 contract로 pending candidate를 저장할 수 있다.
+- capture 실패는 번역 실패가 아니며 `deliveryStatus`를 `blocked_translation_safety`로 바꾸지 않는다.
+
+### v3 response core fields
+
+| 필드 | 타입 | 설명 |
+| --- | --- | --- |
+| `deliveryStatus` | string | `deliverable`, `qa_warning`, `blocked_translation_safety`. |
+| `finalTranslation` | string | 독자에게 보여줄 최종 번역문이다. blocked 상태에서는 빈 문자열이어야 한다. |
+| `translationRationale` | object | 번역 의도/전략 설명이다. |
+| `qaIssues` | array | v3 Critic/Judge가 남긴 검수 이슈다. |
+| `authorReviewCards` | array | 작가/편집자 검수 카드다. |
+| `internal` | object | 개발/검증용 내부 정보다. |
+
+v3 `internal`에서 확인 가능한 필드는 다음과 같다.
+
+| 필드 | 설명 |
+| --- | --- |
+| `internal.idiomDetection` | 관용어 감지 모드와 감지 결과다. 현재 기본은 rule adapter다. |
+| `internal.ragPackets.translatorBrief.glossary` | Translator에 들어가는 compact approved glossary다. 최대 20개다. |
+| `internal.ragPackets.editorEvidence.approvedGlossary` | Critic/Judge/Rationale Writer용 approved glossary evidence다. 최대 50개다. |
+| `internal.failureSignals` | 향후 개선 후보가 되는 실패 신호다. |
+| `internal.characterReferences` | 회차 내부 인물/coreference evidence다. 대명사·지시어를 포함할 수 있지만 glossary candidate alias로는 필터링된다. |
+| `internal.entityCandidates` | 장기 표기 일관성을 위해 pending glossary candidate로 저장될 수 있는 인물명/직함/이명/용어 evidence다. |
+| `internal.workMemory` | v3에 실제 전달된 normalized WorkMemory payload다. |
+| `internal.workMemorySource` | `"request_payload"`, `"rdb_hydrated"`, `"none"`, 또는 향후 `"merged"`. |
+| `internal.workMemoryGlossaryCount` | 실제 WorkMemory approved glossary 개수다. |
+| `internal.workMemoryFallbackReason` | hydrate 실패 또는 no glossary fallback 이유다. |
+| `internal.glossaryCandidateCapture` | opt-in candidate capture 실행/skip/saved 요약이다. |
+| `internal.glossaryE2ESmoke` | smoke/CLI에서 capture → approve → hydrate 결과를 요약하는 개발자용 diagnostics다. |
+
+Glossary QA는 기본적으로 P1 review issue이며, 별도 P0 safety rule이 아닌 한 `blocked_translation_safety`로 바로 막지 않는다.
+
+### E2E example
+
+1. `translate(..., captureGlossaryCandidates=true)`로 첫 회차를 번역해 pending glossary candidates를 수집한다.
+2. reviewer 또는 service workflow가 pending candidate를 승인한다.
+3. 다음 회차 번역 요청은 `workMemory`를 직접 보내지 않고 동일한 `workId + targetLocale`만 보낸다.
+4. backend는 repository-backed `WorkMemory`를 hydrate한다.
+5. `translatorBrief.glossary`와 `editorEvidence.approvedGlossary`에 승인된 glossary entry가 반영된다.
 
 ## 6. `deliveryStatus` 규칙
 
@@ -276,7 +396,7 @@ frontend 규칙:
    - public request에서 `mode`를 받지 않도록 serializer를 분리
 2. translation service orchestration을 담당한다.
    - pipeline 실행
-   - public 요청은 기본적으로 `v2_dual_draft_review`로 routing
+   - public requests route to `v3_literary_package` graph by default
    - 개발/테스트/관리자/internal override에서만 `mode` 기반 service routing 허용
    - mock/live 환경 분리
 3. safety contract를 강제한다.
@@ -363,7 +483,7 @@ reference 사용 원칙:
 - `blocked_translation_safety` empty-array contract
 - minimal exact alignment
 - P0/P1 중심 visible card filtering
-- backend default pipeline으로 `v2_dual_draft_review` 사용
+- backend default pipeline uses `v3_literary_package` graph
 
 planned 또는 후속 구현 항목:
 
@@ -380,6 +500,285 @@ planned 또는 후속 구현 항목:
 
 샘플 response는 별도 파일에 둔다.
 
-- `docs/sample_v2_dual_draft_review_response.json`
 
 이 샘플은 serializer contract 참고용이다. 실제 model output 품질 평가용 데이터가 아니며, `requirements.txt`, `outputs/*`, eval scripts와 무관하다.
+## 8. Glossary API contract
+
+Glossary management is exposed as a thin backend contract over the repository/service layer. The v3 literary package does not know about the API or repository implementation.
+
+### HTTP endpoints
+
+- `GET /api/works/{workId}/glossary/candidates?targetLocale=ko_en_us&status=pending`
+- `POST /api/works/{workId}/glossary/candidates/{candidateId}/approve`
+- `POST /api/works/{workId}/glossary/candidates/{candidateId}/reject`
+- `GET /api/works/{workId}/glossary/entries?targetLocale=ko_en_us`
+- `POST /api/works/{workId}/glossary/entries`
+- `PATCH /api/works/{workId}/glossary/entries/{entryId}`
+- `DELETE /api/works/{workId}/glossary/entries/{entryId}`
+- `GET /api/glossary/repository-status`
+
+### Shared request fields
+
+- `workId` / `work_id`
+- `targetLocale` / `target_locale`
+- `candidateId` / `candidate_id`
+- `entryId` / `entry_id`
+
+### Candidate list response
+
+```json
+{
+  "ok": true,
+  "items": [],
+  "count": 0,
+  "repository": {
+    "backend": "memory",
+    "available": true,
+    "mysqlAvailable": false,
+    "fallback": false
+  }
+}
+```
+
+### Approve / reject / upsert / deprecate
+
+- `approve` promotes a pending candidate to an approved glossary entry.
+- `reject` marks the candidate as rejected.
+- `upsert` stores an approved glossary entry and rejects contextual sources.
+- `delete` is implemented as deprecate-by-status so approved entries can be retained for audit.
+
+### Error policy
+
+Handlers return standard error payloads instead of traceback text:
+
+```json
+{
+  "ok": false,
+  "errorCode": "candidate_not_found",
+  "message": "Glossary candidate was not found."
+}
+```
+
+Common error codes:
+
+- `missing_work_id`
+- `missing_target_locale`
+- `candidate_not_found`
+- `entry_not_found`
+- `invalid_payload`
+- `contextual_reference_not_allowed`
+- `repository_unavailable`
+- `repository_error`
+
+### Repository status
+
+`GET /api/glossary/repository-status` returns the effective backend and whether MySQL is available. Sensitive credentials are never exposed.
+
+Response fields:
+
+- `backend`: effective backend used by the API response (`memory` or `mysql`)
+- `available`: whether the effective repository is available
+- `mysqlAvailable`: true only when MySQL is selected and the driver/config/connection check succeeds
+- `fallback`: true when `GLOSSARY_STORE_BACKEND=mysql` was requested but memory fallback is active
+
+## Glossary live HTTP smoke
+
+The glossary API is covered by a standalone live HTTP smoke script that exercises the actual `api_server.py` routes against the in-memory repository backend.
+
+### Run it against an existing server
+
+```bash
+python scripts/run_glossary_api_smoke.py --base-url http://127.0.0.1:8000
+```
+
+For deterministic candidate capture, start the server with `WLIGHTER_MOCK_MODE=true`.
+
+### Run it without `--base-url`
+
+If `--base-url` is omitted, the script attempts to start `api_server.py` itself on a free local port, then shuts it down after the smoke completes.
+
+### Verified endpoints
+
+The smoke covers:
+
+- `GET /api/glossary/repository-status`
+- `POST /api/works/{workId}/glossary/entries`
+- `GET /api/works/{workId}/glossary/entries?targetLocale=...`
+- `PATCH /api/works/{workId}/glossary/entries/{entryId}`
+- `DELETE /api/works/{workId}/glossary/entries/{entryId}?targetLocale=...`
+- `POST /api/translate` with omitted `mode`/`pipeline` (or explicit `mode=v3_literary_package`) and `captureGlossaryCandidates=true`
+- `GET /api/works/{workId}/glossary/candidates?targetLocale=...&status=pending`
+- `POST /api/works/{workId}/glossary/candidates/{candidateId}/approve`
+- `POST /api/works/{workId}/glossary/candidates/{candidateId}/reject`
+
+### Expected scope
+
+- Default repository backend: `memory`; MySQL final path requires numeric content IDs
+- MySQL client dependency: `PyMySQL>=1.1.0`
+- Memory-backed smoke runs without MySQL env
+- MySQL-backed smoke runs after `CONTENT_STORE_BACKEND=mysql`, `GLOSSARY_STORE_BACKEND=mysql`, and both core/glossary DDL files are applied
+- Full MySQL setup instructions are in `docs/mysql_glossary_setup.md`
+
+### Standard error smoke
+
+The live smoke also checks that the API returns structured errors for:
+
+- missing `targetLocale`
+- contextual reference upsert attempts such as `source="그"`
+- non-existent candidate approval
+
+These error responses must return `ok=false`, the documented `errorCode`, and no traceback text.
+
+## Target country and locale normalization
+
+The API may accept either UI country codes or v3 engine locales.
+
+| UI/API country | v3 targetLocale |
+| --- | --- |
+| `US` | `ko_en_us` |
+| `CN` | `ko_zh_cn` |
+| `JP` | `ko_ja` |
+| `TH` | `ko_th_th` |
+
+Request policy:
+
+- Accept `targetCountry` or `target_country` for external/product-facing calls.
+- Accept `targetLocale` or `target_locale` for existing v3 callers and glossary
+  APIs.
+- If only one value is present, backend service derives the other.
+- If both values are present and they do not map to each other, return
+  `invalid_payload`.
+- This normalization belongs in backend/service code. `v3_literary_package` only
+  receives the resolved `targetLocale` and remains unaware of DB/repository
+  details.
+
+## Translation result persistence direction
+
+When `saveTranslationResult` or an equivalent backend save path is implemented,
+it should persist v3 packages into `translation_results` from the reconciled
+content schema instead of creating a new content table family.
+
+Persistence mapping:
+
+- `finalTranslation` -> `translation_results.translated_text`
+- request/work context -> `work_id`, `episode_id`
+- normalized country/locale -> `target_country`, `target_locale`
+- v3 mode -> `pipeline`
+- delivery decision -> `delivery_status`
+- rationale/review fields -> `translation_rationale`, `qa_issues`,
+  `author_review_cards`
+- diagnostics -> `metadata` and optional `internal`
+
+Glossary routes accept `workId` path parameters. In the final MySQL path, `workId` must be a numeric `works.work_id`, and candidate `episodeId` must be a nullable numeric `episodes.episode_id`. The memory backend may continue accepting legacy string IDs for local/dev compatibility.
+
+## 9. Target country / locale normalization
+
+The backend normalizes `targetCountry` and `targetLocale` in service/API code before calling the pipeline or repository.
+
+- Accepted country codes: `US`, `CN`, `JP`, `TH`.
+- Accepted locales: `ko_en_us`, `ko_zh_cn`, `ko_ja`, `ko_th_th`.
+- Either field may be supplied.
+- If only one is supplied, the other is derived.
+- If both are supplied and do not match, the API returns `errorCode=target_country_locale_mismatch` with HTTP 400.
+- Invalid country and locale inputs return `invalid_target_country` and `invalid_target_locale` respectively.
+
+The helper lives in `app.translation.locale_utils` and is shared by translation, glossary, and future content services.
+
+## 10. Live HTTP smoke for `/api/translate`
+
+Use the live smoke script to verify route parsing, HTTP status mapping, and target country/locale normalization:
+
+```powershell
+python scripts/run_translation_api_smoke.py --verbose
+```
+
+The script can also target an already-running server:
+
+```powershell
+python scripts/run_translation_api_smoke.py --base-url http://127.0.0.1:8000 --verbose
+```
+
+It verifies:
+
+- `targetCountry`-only requests derive `targetLocale`
+- `targetLocale`-only requests keep the existing behavior
+- snake_case payload keys remain compatible
+- mismatched country/locale pairs return HTTP 400 with `errorCode=target_country_locale_mismatch`
+- invalid country and locale inputs return `invalid_target_country` / `invalid_target_locale`
+- `v3_literary_package` responses still include `finalTranslation`, `deliveryStatus`, and `translationRationale`
+
+The smoke uses `WLIGHTER_MOCK_MODE=true` when it auto-starts `api_server.py`, so it stays fast and does not require MySQL or persistence setup. Inspect-chat normalization is exercised by the same smoke when available.
+
+## 11. Core content persistence API
+
+Core content persistence is available through the standard-library API server.
+The default backend is memory. Set `CONTENT_STORE_BACKEND=mysql` and configure
+`MYSQL_*` env after applying `scripts/sql/core_schema_mysql.sql` to use MySQL.
+
+Repository status:
+
+- `GET /api/content/repository-status`
+
+Works:
+
+- `GET /api/works`
+- `POST /api/works`
+- `GET /api/works/{workId}`
+- `PATCH /api/works/{workId}`
+- `DELETE /api/works/{workId}` archives the work
+
+Episodes:
+
+- `GET /api/works/{workId}/episodes`
+- `POST /api/works/{workId}/episodes`
+- `GET /api/works/{workId}/episodes/{episodeId}`
+- `PATCH /api/works/{workId}/episodes/{episodeId}`
+- `DELETE /api/works/{workId}/episodes/{episodeId}` archives the episode
+
+Translations:
+
+- `GET /api/works/{workId}/episodes/{episodeId}/translations`
+- `GET /api/works/{workId}/episodes/{episodeId}/translations/latest?targetCountry=JP`
+- `GET /api/translations/{translationId}`
+
+Success responses use:
+
+```json
+{"ok": true, "item": {}}
+```
+
+or:
+
+```json
+{"ok": true, "items": [], "count": 0}
+```
+
+Episode `originalText` is limited to 8000 characters by service validation. A
+longer payload returns HTTP 400 with `errorCode=text_too_long`.
+
+`POST /api/translate` accepts `saveTranslationResult` or
+`save_translation_result`. When true, `workId` and `episodeId` must be numeric
+content IDs. On successful persistence, the translation response includes:
+
+- `metadata.translationPersisted=true`
+- `metadata.savedTranslationId`
+- `internal.translationPersistence.saved=true`
+
+Persistence failure does not fail the translation response. The failure is
+reported under `internal.translationPersistence` without a traceback.
+
+Live smoke:
+
+```powershell
+python scripts/run_content_api_smoke.py --verbose
+```
+
+The smoke creates a work, creates an episode, translates with
+`saveTranslationResult=true`, reads the latest translation, and verifies
+`text_too_long`.
+
+For the current MySQL-backed content smoke, the repository auto-seeds a
+development `users` row for `user_id=1` when the first work is created. A
+separate seed helper is not required unless you want to target a different
+numeric user via the smoke script's `--user-id` option.
+

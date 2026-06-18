@@ -1,13 +1,13 @@
 # Django / Frontend 번역 API handoff
 
-이 문서는 새 Django backend와 새 frontend 담당자가 번역 API를 연결할 때 반드시 지켜야 할 핵심 contract만 짧게 정리한 인수인계 문서다. 상세 계약은 `docs/translation_api_contract.md`와 `docs/sample_v2_dual_draft_review_response.json`을 기준으로 확인한다.
 
 ## 1. 요약
 
 - public endpoint는 `POST /api/translations/`를 사용한다.
 - public request에는 `mode`를 넣지 않는다.
 - 일반 사용자는 `mode`를 선택하지 않는다.
-- backend 기본 pipeline은 내부적으로 `v2_dual_draft_review`를 사용한다.
+- backend default pipeline internally uses `v3_literary_package` graph.
+- `qualityMode` is the only public profile knob for quality/cost tuning; raw model names should not be shown in Django/Frontend UI.
 - frontend는 `deliveryStatus`를 먼저 보고 렌더링을 분기한다.
 - `authorReviewCards`는 초기에는 read-only로만 표시한다.
 - patch 적용, WorkMemory 저장, RAG candidate 자동 저장은 하지 않는다.
@@ -38,13 +38,16 @@ public frontend가 보내는 request 예시는 다음 형태를 따른다.
 - `targetLocale`은 필수다.
 - `mode`는 public API field가 아니다.
 - 일반 frontend는 `mode`를 보내지 않는다.
+- `qualityMode` is optional; the backend default is `standard`.
+- If Django/API sends it explicitly, use one of `fast`, `standard`, `quality`, or `baseline`.
 
 ## 3. Backend internal pipeline mode
 
 backend 내부 기본값:
 
 ```txt
-default pipeline = v2_dual_draft_review
+default pipeline = v3_literary_package graph
+Django/API may omit `mode`; if it sends an explicit selector, send `v3_literary_package`.
 ```
 
 `mode`의 성격:
@@ -167,6 +170,27 @@ frontend/features/translate/TranslateWorkspace.tsx
 frontend/features/translate/TranslateConnector.tsx
 frontend/features/translate/translationDisplay.ts
 docs/translation_api_contract.md
-docs/sample_v2_dual_draft_review_response.json
 ```
 
+## Stable work identity for approved glossary hydration
+
+For Django integration, the stable identity for a novel/work is the Django work
+DB id. Django must pass one of these fields on every translation request:
+
+- `workId`: preferred when the Django numeric work id is already available.
+- `canonicalWorkKey`: optional canonical string key for non-Django batch/test
+  callers that need a stable find-or-create identity before a numeric work id
+  exists.
+
+The model server hydrates approved glossary from `glossary_entries` by
+`workId + targetLocale`. This means `translatorBrief.glossary`,
+`editorEvidence.approvedGlossary`, and `rationaleEvidence.approvedGlossary`
+must all come from the same approved glossary rows. Pending
+`glossary_candidates` are review queue data only and must not be injected into
+the translator prompt as locked glossary.
+
+Batch/test callers may omit both fields only as a fallback; that path creates a
+new work per run and therefore cannot validate long-term glossary stability.
+For batch eval, prefer `--work-id <django-work-id>` or
+`--work-key <stable-key>` plus `--seed-approved-glossary` when smoke-testing
+approved glossary behavior.

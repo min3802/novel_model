@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
@@ -13,6 +14,7 @@ class TranslationMode(str, Enum):
     DIRECT_ONLY = "direct_only"
     V2_DIRECT_QA = "v2_direct_qa"
     V2_DUAL_DRAFT_REVIEW = "v2_dual_draft_review"
+    V3_LITERARY_PACKAGE = "v3_literary_package"
     QA_ONLY = "qa_only"
 
 
@@ -21,6 +23,7 @@ ALLOWED_QUALITY_MODES = ("fast", "standard", "quality", "baseline")
 ALLOWED_TRANSLATION_MODELS = (
     "gpt-5.4-nano",
     "gpt-5.4-mini",
+    "gpt-5.5",
     "gpt-5-mini",
     "gpt-4.1-mini",
 )
@@ -30,8 +33,8 @@ MODEL_PROFILES: dict[str, dict[str, str]] = {
         "review_model": "gpt-5.4-nano",
     },
     "standard": {
-        "translation_model": "gpt-5-mini",
-        "review_model": "gpt-5-mini",
+        "translation_model": "gpt-5.4-mini",
+        "review_model": "gpt-5.4-mini",
     },
     "quality": {
         "translation_model": "gpt-5.4-mini",
@@ -42,6 +45,30 @@ MODEL_PROFILES: dict[str, dict[str, str]] = {
         "review_model": "gpt-4.1-mini",
     },
 }
+MODEL_PROFILE_ENV_VARS: dict[str, dict[str, str]] = {
+    "fast": {
+        "translation_model": "WLIGHTER_FAST_TRANSLATION_MODEL",
+        "review_model": "WLIGHTER_FAST_REVIEW_MODEL",
+    },
+    "standard": {
+        "translation_model": "WLIGHTER_STANDARD_TRANSLATION_MODEL",
+        "review_model": "WLIGHTER_STANDARD_REVIEW_MODEL",
+    },
+    "quality": {
+        "translation_model": "WLIGHTER_QUALITY_TRANSLATION_MODEL",
+        "review_model": "WLIGHTER_QUALITY_REVIEW_MODEL",
+    },
+}
+
+
+def _resolve_profile_env_model(profile_name: str, field_name: str) -> str | None:
+    env_name = MODEL_PROFILE_ENV_VARS.get(profile_name, {}).get(field_name)
+    if not env_name:
+        return None
+    value = os.getenv(env_name, "").strip()
+    if not value:
+        return None
+    return validate_translation_model(value, field_name=env_name)
 
 
 def normalize_quality_mode(value: str | None) -> str:
@@ -65,7 +92,7 @@ def validate_translation_model(model: str, *, field_name: str = "model") -> str:
 @dataclass(slots=True)
 class PipelineConfig:
     locale: str = KO_JA.locale
-    mode: TranslationMode | str = TranslationMode.LEGACY_FULL
+    mode: TranslationMode | str = TranslationMode.V3_LITERARY_PACKAGE
     resources: LocaleResources | None = None
     rag_dataset_path: Path | None = None
     idiom_augmentation_paths: tuple[Path, ...] | list[Path] | None = None
@@ -106,13 +133,16 @@ class PipelineConfig:
             override = validate_translation_model(override, field_name="model override")
             self.model_override = override
 
+        profile_translation_model = _resolve_profile_env_model(self.model_profile_name, "translation_model")
+        profile_review_model = _resolve_profile_env_model(self.model_profile_name, "review_model")
+
         if self.translation_model is None:
-            self.translation_model = override or profile["translation_model"]
+            self.translation_model = override or profile_translation_model or profile["translation_model"]
         else:
             self.translation_model = validate_translation_model(self.translation_model, field_name="translation_model")
 
         if self.review_model is None:
-            self.review_model = override or profile["review_model"]
+            self.review_model = override or profile_review_model or profile["review_model"]
         else:
             self.review_model = validate_translation_model(self.review_model, field_name="review_model")
 
