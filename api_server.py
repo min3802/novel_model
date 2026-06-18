@@ -12,21 +12,48 @@ import os
 import re
 from dataclasses import asdict
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
 from typing import Any
+from urllib.parse import parse_qs
 
 from dotenv import load_dotenv
 from backend.services.cover_plan_service import cover_plan
+from backend.services.glossary_api_service import (
+    approve_glossary_candidate_handler,
+    delete_or_deprecate_glossary_entry_handler,
+    get_glossary_repository_status_handler,
+    list_glossary_candidates_handler,
+    list_glossary_entries_handler,
+    reject_glossary_candidate_handler,
+    upsert_glossary_entry_handler,
+)
+from backend.services.content_api_service import (
+    archive_episode_handler,
+    archive_work_handler,
+    get_content_repository_status_handler,
+    get_episode_handler,
+    get_latest_translation_handler,
+    get_translation_handler,
+    get_work_handler,
+    list_episodes_handler,
+    list_translations_handler,
+    list_works_handler,
+    upsert_episode_handler,
+    upsert_work_handler,
+)
 from backend.services.guide_service import guide
 from backend.services.image_service import cover_image, relation_image, visual_prompt
 from backend.services.translation_service import inspect_chat, translate
 
-load_dotenv()
+ROOT = Path(__file__).resolve().parent
+load_dotenv(ROOT / ".env")
 
 # URL patterns for dynamic segments
 _WORK_RE = re.compile(r"^/api/works/(\d+)$")
 _EP_RE = re.compile(r"^/api/works/(\d+)/episodes$")
 _EP_ITEM_RE = re.compile(r"^/api/works/(\d+)/episodes/(\d+)$")
 _EP_TRANSLATIONS_RE = re.compile(r"^/api/works/(\d+)/episodes/(\d+)/translations$")
+_EP_TRANSLATIONS_LATEST_RE = re.compile(r"^/api/works/(\d+)/episodes/(\d+)/translations/latest$")
 _TRANSLATION_RE = re.compile(r"^/api/translations/(\d+)$")
 _TRANSLATION_APPLY_CHAT_RE = re.compile(r"^/api/translations/(\d+)/apply-chat-suggestion$")
 _TRANSLATION_CHAT_RE = re.compile(r"^/api/translations/(\d+)/chat$")
@@ -36,6 +63,13 @@ _ASSET_RE = re.compile(r"^/api/generated-assets/(\d+)$")
 _GUIDES_RE = re.compile(r"^/api/localization-guides$")
 _GUIDE_RE = re.compile(r"^/api/localization-guides/(\d+)$")
 _GUIDE_PDF_RE = re.compile(r"^/api/localization-guides/(\d+)/pdf$")
+_CONTENT_REPOSITORY_STATUS_RE = re.compile(r"^/api/content/repository-status$")
+_GLOSSARY_REPOSITORY_STATUS_RE = re.compile(r"^/api/glossary/repository-status$")
+_GLOSSARY_CANDIDATES_RE = re.compile(r"^/api/works/([^/]+)/glossary/candidates$")
+_GLOSSARY_CANDIDATE_APPROVE_RE = re.compile(r"^/api/works/([^/]+)/glossary/candidates/(\d+)/approve$")
+_GLOSSARY_CANDIDATE_REJECT_RE = re.compile(r"^/api/works/([^/]+)/glossary/candidates/(\d+)/reject$")
+_GLOSSARY_ENTRIES_RE = re.compile(r"^/api/works/([^/]+)/glossary/entries$")
+_GLOSSARY_ENTRY_RE = re.compile(r"^/api/works/([^/]+)/glossary/entries/(\d+)$")
 
 from backend.store.memory_store import (
     apply_chat_suggestion,
@@ -253,6 +287,12 @@ def _read_json(handler: BaseHTTPRequestHandler) -> dict[str, Any]:
     return json.loads(raw or "{}")
 
 
+def _query_params(path: str) -> dict[str, str]:
+    query = path.split("?", 1)[1] if "?" in path else ""
+    params = parse_qs(query, keep_blank_values=True)
+    return {key: values[-1] for key, values in params.items() if values}
+
+
 
 
 
@@ -267,7 +307,7 @@ class ApiHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(data)))
         self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
         self.end_headers()
         self.wfile.write(data)
@@ -282,40 +322,41 @@ class ApiHandler(BaseHTTPRequestHandler):
                 self._send(200, {"ok": True, "service": "wlighter-api"})
             elif path == "/api/dashboard-summary":
                 self._send(200, dashboard_summary())
+            elif _CONTENT_REPOSITORY_STATUS_RE.match(path):
+                result = get_content_repository_status_handler()
+                self._send(int(result.get("status") or 200), result)
             elif path == "/api/works":
-                self._send(200, {"works": works_list()})
+                result = list_works_handler(_query_params(self.path))
+                self._send(int(result.get("status") or 200), result)
             elif m := _WORK_RE.match(path):
                 wid = int(m.group(1))
-                work = work_get(wid)
-                if work:
-                    eps = episodes_list(wid)
-                    self._send(200, {"work": work, "episodeCount": len(eps)})
-                else:
-                    self._send(404, {"error": "work not found"})
+                result = get_work_handler({"workId": wid})
+                self._send(int(result.get("status") or 200), result)
             elif m := _EP_RE.match(path):
                 wid = int(m.group(1))
-                self._send(200, {"episodes": episodes_list(wid)})
+                result = list_episodes_handler({"workId": wid, **_query_params(self.path)})
+                self._send(int(result.get("status") or 200), result)
             elif m := _EP_ITEM_RE.match(path):
                 wid, eid = map(int, m.groups())
-                episode = next((row for row in episodes_list(wid) if row["id"] == eid), None)
-                if episode:
-                    self._send(200, {"episode": episode})
-                else:
-                    self._send(404, {"error": "episode not found"})
+                result = get_episode_handler({"workId": wid, "episodeId": eid})
+                self._send(int(result.get("status") or 200), result)
+            elif m := _EP_TRANSLATIONS_LATEST_RE.match(path):
+                wid, eid = map(int, m.groups())
+                params = _query_params(self.path)
+                result = get_latest_translation_handler({"workId": wid, "episodeId": eid, **params})
+                self._send(int(result.get("status") or 200), result)
             elif m := _EP_TRANSLATIONS_RE.match(path):
                 wid, eid = map(int, m.groups())
-                query = self.path.split("?", 1)[1] if "?" in self.path else ""
-                locale = None
-                for part in query.split("&"):
-                    if part.startswith("locale="):
-                        locale = part.split("=", 1)[1]
-                self._send(200, {"translations": translation_versions_list(wid, eid, locale=locale)})
+                params = _query_params(self.path)
+                result = list_translations_handler({"workId": wid, "episodeId": eid, **params})
+                self._send(int(result.get("status") or 200), result)
             elif m := _TRANSLATION_CHAT_RE.match(path):
                 tid = int(m.group(1))
                 self._send(200, {"messages": translation_chat_list(tid)})
             elif m := _TRANSLATION_RE.match(path):
                 tid = int(m.group(1))
-                self._send(200, {"translation": translation_version_get(tid)})
+                result = get_translation_handler({"translationId": tid})
+                self._send(int(result.get("status") or 200), result)
             elif _ASSETS_RE.match(path):
                 query = self.path.split("?", 1)[1] if "?" in self.path else ""
                 params = dict(part.split("=", 1) for part in query.split("&") if "=" in part)
@@ -340,6 +381,31 @@ class ApiHandler(BaseHTTPRequestHandler):
             elif m := _GUIDE_RE.match(path):
                 gid = int(m.group(1))
                 self._send(200, {"guide": localization_guide_get(gid)})
+            elif _GLOSSARY_REPOSITORY_STATUS_RE.match(path):
+                self._send(200, get_glossary_repository_status_handler())
+            elif m := _GLOSSARY_CANDIDATES_RE.match(path):
+                work_id = m.group(1)
+                params = _query_params(self.path)
+                result = list_glossary_candidates_handler(
+                    {
+                        "workId": work_id,
+                        "targetCountry": params.get("targetCountry") or params.get("target_country"),
+                        "targetLocale": params.get("targetLocale") or params.get("target_locale"),
+                        "status": params.get("status"),
+                    }
+                )
+                self._send(int(result.get("status") or 200), result)
+            elif m := _GLOSSARY_ENTRIES_RE.match(path):
+                work_id = m.group(1)
+                params = _query_params(self.path)
+                result = list_glossary_entries_handler(
+                    {
+                        "workId": work_id,
+                        "targetCountry": params.get("targetCountry") or params.get("target_country"),
+                        "targetLocale": params.get("targetLocale") or params.get("target_locale"),
+                    }
+                )
+                self._send(int(result.get("status") or 200), result)
             else:
                 self._send(404, {"error": "not found"})
         except Exception as exc:
@@ -350,7 +416,8 @@ class ApiHandler(BaseHTTPRequestHandler):
         try:
             payload = _read_json(self)
             if path == "/api/translate":
-                self._send(200, translate(payload))
+                result = translate(payload)
+                self._send(int(result.get("status") or 200), result)
             elif path == "/api/guide":
                 result = guide(payload)
                 result = dict(result)
@@ -361,7 +428,8 @@ class ApiHandler(BaseHTTPRequestHandler):
                         result["storageNotice"] = saved["storage_notice"]
                 self._send(200, result)
             elif path == "/api/inspect-chat":
-                self._send(200, inspect_chat(payload))
+                result = inspect_chat(payload)
+                self._send(int(result.get("status") or 200), result)
             elif path == "/api/cover-prompt":
                 self._send(200, visual_prompt(payload, "cover"))
             elif path == "/api/relation-prompt":
@@ -379,7 +447,8 @@ class ApiHandler(BaseHTTPRequestHandler):
                     result["assetRecord"] = save_generated_asset("relation", payload, result)
                 self._send(200, result)
             elif path == "/api/works":
-                self._send(201, work_create(payload))
+                result = upsert_work_handler(payload)
+                self._send(int(result.get("status") or 201), result)
             elif m := _WORK_COVER_PLAN_RE.match(path):
                 wid = int(m.group(1))
                 self._send(200, cover_plan(wid, payload))
@@ -391,7 +460,73 @@ class ApiHandler(BaseHTTPRequestHandler):
                 self._send(201, translation_chat_add(tid, payload))
             elif m := _EP_RE.match(path):
                 wid = int(m.group(1))
-                self._send(201, episode_create(wid, payload))
+                result = upsert_episode_handler({**payload, "workId": wid})
+                self._send(int(result.get("status") or 201), result)
+            elif m := _GLOSSARY_CANDIDATE_APPROVE_RE.match(path):
+                work_id = m.group(1)
+                candidate_id = m.group(2)
+                result = approve_glossary_candidate_handler({**payload, "workId": work_id, "candidateId": candidate_id})
+                self._send(int(result.get("status") or 200), result)
+            elif m := _GLOSSARY_CANDIDATE_REJECT_RE.match(path):
+                work_id = m.group(1)
+                candidate_id = m.group(2)
+                result = reject_glossary_candidate_handler({**payload, "workId": work_id, "candidateId": candidate_id})
+                self._send(int(result.get("status") or 200), result)
+            elif m := _GLOSSARY_ENTRIES_RE.match(path):
+                work_id = m.group(1)
+                params = _query_params(self.path)
+                result = upsert_glossary_entry_handler(
+                    {
+                        **payload,
+                        "workId": work_id,
+                        "targetCountry": payload.get("targetCountry")
+                        or payload.get("target_country")
+                        or params.get("targetCountry")
+                        or params.get("target_country"),
+                        "targetLocale": payload.get("targetLocale")
+                        or payload.get("target_locale")
+                        or params.get("targetLocale")
+                        or params.get("target_locale"),
+                    }
+                )
+                self._send(int(result.get("status") or 200), result)
+            else:
+                self._send(404, {"error": "not found"})
+        except Exception as exc:
+            self._send(400, {"error": str(exc)})
+
+    def do_PATCH(self) -> None:  # noqa: N802
+        path = self.path.split("?")[0]
+        try:
+            payload = _read_json(self)
+            if m := _WORK_RE.match(path):
+                wid = int(m.group(1))
+                result = upsert_work_handler({**payload, "workId": wid})
+                self._send(int(result.get("status") or 200), result)
+            elif m := _EP_ITEM_RE.match(path):
+                wid, eid = map(int, m.groups())
+                result = upsert_episode_handler({**payload, "workId": wid, "episodeId": eid})
+                self._send(int(result.get("status") or 200), result)
+            elif m := _GLOSSARY_ENTRY_RE.match(path):
+                work_id = m.group(1)
+                entry_id = m.group(2)
+                params = _query_params(self.path)
+                result = upsert_glossary_entry_handler(
+                    {
+                        **payload,
+                        "workId": work_id,
+                        "entryId": entry_id,
+                        "targetCountry": payload.get("targetCountry")
+                        or payload.get("target_country")
+                        or params.get("targetCountry")
+                        or params.get("target_country"),
+                        "targetLocale": payload.get("targetLocale")
+                        or payload.get("target_locale")
+                        or params.get("targetLocale")
+                        or params.get("target_locale"),
+                    }
+                )
+                self._send(int(result.get("status") or 200), result)
             else:
                 self._send(404, {"error": "not found"})
         except Exception as exc:
@@ -403,10 +538,12 @@ class ApiHandler(BaseHTTPRequestHandler):
             payload = _read_json(self)
             if m := _EP_ITEM_RE.match(path):
                 wid, eid = map(int, m.groups())
-                self._send(200, episode_update(wid, eid, payload))
+                result = upsert_episode_handler({**payload, "workId": wid, "episodeId": eid})
+                self._send(int(result.get("status") or 200), result)
             elif m := _WORK_RE.match(path):
                 wid = int(m.group(1))
-                self._send(200, work_update(wid, payload))
+                result = upsert_work_handler({**payload, "workId": wid})
+                self._send(int(result.get("status") or 200), result)
             else:
                 self._send(404, {"error": "not found"})
         except Exception as exc:
@@ -415,13 +552,15 @@ class ApiHandler(BaseHTTPRequestHandler):
     def do_DELETE(self) -> None:  # noqa: N802
         path = self.path.split("?")[0]
         try:
+            payload = _read_json(self)
             if m := _EP_ITEM_RE.match(path):
                 wid, eid = map(int, m.groups())
-                self._send(200, episode_delete(wid, eid))
+                result = archive_episode_handler({"workId": wid, "episodeId": eid})
+                self._send(int(result.get("status") or 200), result)
             elif m := _WORK_RE.match(path):
                 wid = int(m.group(1))
-                work_delete(wid)
-                self._send(200, {"ok": True})
+                result = archive_work_handler({"workId": wid})
+                self._send(int(result.get("status") or 200), result)
             elif m := _ASSET_RE.match(path):
                 aid = int(m.group(1))
                 self._send(200, generated_asset_delete(aid))
@@ -430,7 +569,26 @@ class ApiHandler(BaseHTTPRequestHandler):
                 self._send(200, localization_guide_delete(gid))
             elif m := _TRANSLATION_RE.match(path):
                 tid = int(m.group(1))
-                self._send(200, translation_version_delete(tid))
+                self._send(405, {"ok": False, "errorCode": "method_not_allowed"})
+            elif m := _GLOSSARY_ENTRY_RE.match(path):
+                work_id = m.group(1)
+                entry_id = m.group(2)
+                params = _query_params(self.path)
+                result = delete_or_deprecate_glossary_entry_handler(
+                    {
+                        "workId": work_id,
+                        "targetCountry": params.get("targetCountry")
+                        or params.get("target_country")
+                        or payload.get("targetCountry")
+                        or payload.get("target_country"),
+                        "targetLocale": params.get("targetLocale")
+                        or params.get("target_locale")
+                        or payload.get("targetLocale")
+                        or payload.get("target_locale"),
+                        "entryId": entry_id,
+                    }
+                )
+                self._send(int(result.get("status") or 200), result)
             else:
                 self._send(404, {"error": "not found"})
         except Exception as exc:

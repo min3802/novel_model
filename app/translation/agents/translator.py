@@ -215,7 +215,7 @@ class Translator:
     ) -> str:
         retry_block = ""
         if strict_locale_retry:
-            retry_block = "\n\n[STRICT LOCALE RETRY]\n- Translate only into the target language.\n- Do not copy Korean source sentences.\n- Do not leave Korean sentence-level text in the output.\n- Keep proper nouns localized or transliterated when possible.\n- Output translation only.\n- Do not add explanations, notes, or commentary."
+            retry_block = "\n\n[STRICT LOCALE RETRY]\n- Translate only into the target language.\n- Do not copy Korean source sentences.\n- Do not leave Korean sentence-level text in the output.\n- Keep proper nouns localized or transliterated when possible.\n- If approved hard glossary entries are provided, fix only the mismatched glossary surface forms and use the approved target exactly.\n- Fix only output integrity problems such as leftover Korean text or misplaced bracketed system/contact labels.\n- Restore bracketed blocks to the source scene order and role.\n- Do not unnecessarily change idiom handling, prose style, or character voice while fixing glossary or integrity problems.\n- Output translation only.\n- Do not add explanations, notes, or commentary."
         return self.prompt_template.format(
             common_korean_rule=self.common_korean_rule,
             source_language=self.resources.source_language,

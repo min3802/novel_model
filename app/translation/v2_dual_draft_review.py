@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -362,6 +363,84 @@ def _suggested_actions_for_decision(decision_type: str) -> list[str]:
     return []
 
 
+
+_HANGUL_RE = re.compile(r"[ᄀ-ᇿ㄰-㆏가-힣]+")
+_HANGUL_BRACKET_RE = re.compile(r"\[[^\]]*[ᄀ-ᇿ㄰-㆏가-힣][^\]]*\]")
+
+
+def _find_hangul_residue_spans(text: str) -> list[tuple[str, int, int]]:
+    final_text = _compact_text(text)
+    if not final_text:
+        return []
+
+    spans: list[tuple[str, int, int]] = []
+    covered_ranges: list[tuple[int, int]] = []
+    for match in _HANGUL_BRACKET_RE.finditer(final_text):
+        spans.append((match.group(0), match.start(), match.end()))
+        covered_ranges.append((match.start(), match.end()))
+
+    def is_covered(start: int, end: int) -> bool:
+        return any(range_start <= start and end <= range_end for range_start, range_end in covered_ranges)
+
+    for match in _HANGUL_RE.finditer(final_text):
+        if is_covered(match.start(), match.end()):
+            continue
+        spans.append((match.group(0), match.start(), match.end()))
+
+    return sorted(spans, key=lambda item: item[1])
+
+
+def _hangul_residue_decisions(
+    final_translation: str,
+    *,
+    source_text: str = "",
+    locale: str = "",
+    meaning_draft_span: str = "",
+) -> list[TranslationDecision]:
+    if _compact_text(locale) != "ko_ja":
+        return []
+
+    final_text = _compact_text(final_translation)
+    decisions: list[TranslationDecision] = []
+    seen: set[tuple[str, int, int]] = set()
+    for index, (span, start, end) in enumerate(_find_hangul_residue_spans(final_text), start=1):
+        key = (span, start, end)
+        if key in seen:
+            continue
+        seen.add(key)
+        source_match = _find_exact_span(source_text, span)
+        decisions.append(
+            TranslationDecision(
+                id=f"decision:hangul-residue:{index:03d}",
+                source_span=span,
+                meaning_draft_span=meaning_draft_span,
+                vibe_translation_span=final_text,
+                decision_type="untranslated_korean_residue",
+                reason=(
+                    f'일본어 번역문 안에 한국어 문자열 "{span}"이 남아 있습니다. '
+                    "인물명/용어/시스템 메시지의 target rendering이 누락되었을 수 있습니다."
+                ),
+                evidence_ids=[],
+                author_note=(
+                    f'번역문에 남은 한국어 "{span}"을 일본어 표기로 바꿀지 확인해 주세요.'
+                ),
+                confidence="high",
+                needs_author_review=True,
+                risk_level="high",
+                source_start=source_match[0] if source_match else None,
+                source_end=source_match[1] if source_match else None,
+                target_span=span,
+                target_start=start,
+                target_end=end,
+                alignment_status="exact",
+                priority="P0",
+                card_status="pending",
+                unresolved_risk=True,
+                suggested_actions=["대상 언어 표기 확인"],
+            )
+        )
+    return decisions
+
 class TranslationDecisionAnalyzer:
     def __init__(self, config: PipelineConfig | None = None):
         self.config = config or PipelineConfig()
@@ -423,6 +502,14 @@ class TranslationDecisionAnalyzer:
                     risk_level=_risk_level_for_decision(evidence, decision_type),
                 )
             )
+        decisions.extend(
+            _hangul_residue_decisions(
+                final_text,
+                source_text=source_text,
+                locale=locale,
+                meaning_draft_span=draft_text,
+            )
+        )
         return decisions
 
 
@@ -435,6 +522,7 @@ def _decision_label_for_type(decision_type: str) -> str:
         "expanded": "설명 보강",
         "compressed": "압축 번역",
         "risk_unresolved": "작가 확인 필요",
+        "untranslated_korean_residue": "한글 잔류 확인",
     }
     return mapping.get(_compact_text(decision_type), "작가 확인 필요")
 
@@ -465,6 +553,20 @@ def _card_question_for_decision(decision: TranslationDecision, evidence_types: l
 
 
 def _card_options_for_decision(decision: TranslationDecision) -> list[dict[str, str]]:
+    if decision.decision_type == "untranslated_korean_residue":
+        return [
+            {
+                "id": "review",
+                "label": "대상 언어 표기 확인",
+                "description": "남아 있는 한국어 문자열을 일본어 표기로 바꿀지 확인합니다.",
+            },
+            {
+                "id": "keep",
+                "label": "의도적 유지",
+                "description": "작품 설정상 한국어를 그대로 노출해야 하는 경우에만 유지합니다.",
+            },
+        ]
+
     options = [
         {
             "id": "keep",

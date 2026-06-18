@@ -1,16 +1,12 @@
-# Core
-requests>=2.31
-python-dotenv>=1.0
-openai>=1.0
-numpy>=1.26
+# Direct runtime dependencies for the FastAPI/model server service.
+# Script-only helpers (requests, beautifulsoup4, pytest) stay out of this runtime file.
+python-dotenv>=1.2,<2
+openai>=2.38,<3
 langgraph>=1.2,<2
-
-# HTML parsing (bs4)
-beautifulsoup4>=4.12
-
-# Embedding / retrieval (KURE 임베딩 + Qdrant)
-sentence-transformers>=3.0
-qdrant-client>=1.7
-
-# 한국어 문장 분리 (retriever sentence 전략, 미설치 시 paragraph 폴백)
-kiwipiepy>=0.17
+numpy>=1.26,<3
+qdrant-client>=1.7,<2
+sentence-transformers>=3.0,<4
+kiwipiepy>=0.17,<1
+tavily-python>=0.1,<1
+Pillow>=12.0,<13
+PyMySQL>=1.1,<2

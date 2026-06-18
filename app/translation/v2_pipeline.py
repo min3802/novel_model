@@ -299,13 +299,14 @@ class DirectTranslator:
         self,
         source_text: str,
         *,
+        memory_context: str = "",
         strict_locale_retry: bool = False,
         retry_attempt: int = 0,
     ) -> TranslationDraft:
         return self.translator.translate(
             source_text,
             [],
-            memory_context="",
+            memory_context=memory_context,
             translation_profile=None,
             source_analysis=None,
             include_rag_context=False,

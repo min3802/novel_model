@@ -34,6 +34,14 @@ KO_JA = LocaleResources(
         "The input may contain Korean idioms or culture-bound expressions. "
         "Use retrieved references as soft guidance and produce natural Japanese. "
         "Prefer functionally equivalent Japanese over literal translation when needed. "
+        "Do not translate Korean idioms, proverbs, or figurative expressions word-for-word; "
+        "preserve the scene meaning, emotional pressure, fatigue, and tension in natural Japanese narration. "
+        "If no equivalent Japanese idiom fits naturally, paraphrase the meaning in plain literary Japanese. "
+        "Avoid literal Korean body-part idiom images such as feet on fire, dry face-washing, throat, liver, chest, or stomach expressions unless Japanese naturally uses the same image. "
+        "For example, render '그는 마른세수를 했다' as a tired face-rubbing action, not pretending to wash his face; "
+        "render '지금은 발등에 불이 떨어져도 눈이 감길 것 같았다' as sleepiness overwhelming him no matter what happens, not fire on his feet. "
+        "Naturalize Korean company ranks for Japanese readers without over-changing rank meaning; choose contextually among チーム長, 上司, or a similar title, e.g. 박 팀장 as パクチーム長 or 上司のパク. "
+        "Preserve web novel pacing with short impact sentences, readable narration, and natural dialogue. "
         "Return JSON only."
     ),
 )

@@ -2,15 +2,10 @@ from __future__ import annotations
 
 from typing import Final
 
+from app.translation.locale_utils import TARGET_COUNTRY_TO_LOCALE, TARGET_LOCALE_TO_COUNTRY
 
-COUNTRY_TO_LOCALE: Final[dict[str, str]] = {
-    '일본': "ko_ja",
-    '미국': "ko_en_us",
-    '중국': "ko_zh_cn",
-    '태국': "ko_th_th",
-}
-
-LOCALE_TO_COUNTRY: Final[dict[str, str]] = {locale: country for country, locale in COUNTRY_TO_LOCALE.items()}
+COUNTRY_TO_LOCALE: Final[dict[str, str]] = dict(TARGET_COUNTRY_TO_LOCALE)
+LOCALE_TO_COUNTRY: Final[dict[str, str]] = dict(TARGET_LOCALE_TO_COUNTRY)
 
 
 def resolve_locale_for_country(country: str) -> str | None:

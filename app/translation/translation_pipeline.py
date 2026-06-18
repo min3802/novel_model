@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
+import json
 import re
+from pathlib import Path
 from typing import Any
 
 from .agents.chatbot import ChatbotAgent
@@ -29,6 +31,8 @@ from .v2_dual_draft_review import (
     RagEvidenceRetriever,
     V2DualDraftReviewResult,
 )
+from .v3_literary_package import V3LiteraryPackageResult
+from .v3_graph_orchestrator import build_v3_graph_literary_package
 
 
 @dataclass(slots=True)
@@ -382,11 +386,13 @@ class TranslationPipeline:
         self,
         source_text: str,
         *,
+        memory_context: str = "",
         strict_locale_retry: bool = False,
         retry_attempt: int = 0,
     ) -> DirectTranslationResult:
         draft = self.direct_translator.translate(
             source_text,
+            memory_context=memory_context,
             strict_locale_retry=strict_locale_retry,
             retry_attempt=retry_attempt,
         )
@@ -416,6 +422,8 @@ class TranslationPipeline:
         self,
         source_text: str,
         initial_result: DirectTranslationResult,
+        *,
+        memory_context: str = "",
     ) -> DirectTranslationResult:
         initial_metadata = initial_result.metadata
         retry_attempted = self._should_retry_translation_safety(initial_metadata)
@@ -424,6 +432,7 @@ class TranslationPipeline:
         if retry_attempted:
             retry_result = self._run_direct_translation_once(
                 source_text,
+                memory_context=memory_context,
                 strict_locale_retry=True,
                 retry_attempt=1,
             )
@@ -466,15 +475,112 @@ class TranslationPipeline:
         self,
         source_text: str,
         *,
+        memory_context: str = "",
         strict_locale_retry: bool = False,
         retry_attempt: int = 0,
+        debug_capture: dict[str, Any] | None = None,
     ) -> DirectTranslationResult:
         initial_result = self._run_direct_translation_once(
             source_text,
+            memory_context=memory_context,
             strict_locale_retry=strict_locale_retry,
             retry_attempt=retry_attempt,
         )
-        return self._finalize_direct_translation(source_text, initial_result)
+        final_result = self._finalize_direct_translation(source_text, initial_result, memory_context=memory_context)
+        if debug_capture and debug_capture.get("enabled"):
+            artifact = self._write_direct_translation_debug_artifact(
+                final_result,
+                attempt_name=str(debug_capture.get("attemptName") or "translation_attempt"),
+                artifact_dir=debug_capture.get("artifactDir"),
+                prompt_preview=str(debug_capture.get("promptPreview") or memory_context or ""),
+            )
+            if artifact:
+                final_result.metadata = {**final_result.metadata, "debug_artifact": artifact}
+        return final_result
+
+    @staticmethod
+    def _safe_reports_debug_dir(path_value: Any) -> Path | None:
+        if not path_value:
+            return None
+        try:
+            target = Path(str(path_value)).resolve()
+            reports_root = (Path.cwd() / "reports").resolve()
+            target.relative_to(reports_root)
+            target.mkdir(parents=True, exist_ok=True)
+            return target
+        except Exception:
+            return None
+
+    @staticmethod
+    def _write_debug_text(path: Path, text: str) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+
+    def _write_direct_translation_debug_artifact(
+        self,
+        result: DirectTranslationResult,
+        *,
+        attempt_name: str,
+        artifact_dir: Any,
+        prompt_preview: str,
+    ) -> dict[str, Any] | None:
+        target_dir = self._safe_reports_debug_dir(artifact_dir)
+        if target_dir is None:
+            return None
+        safe_name = re.sub(r"[^A-Za-z0-9_.-]+", "_", attempt_name).strip("_") or "translation_attempt"
+        prefix = target_dir / safe_name
+        draft = result.draft or {}
+        prompt_debug = dict(draft.get("prompt_debug") or {})
+        raw_response = draft.get("raw_response") or {}
+        parsed_candidate = str(result.final_translation or "")
+        metadata = dict(result.metadata or {})
+        spans = list(metadata.get("residual_hangul_spans") or [])
+        metrics = {
+            "attemptName": attempt_name,
+            "promptHash": prompt_debug.get("prompt_hash"),
+            "retryPromptHash": prompt_debug.get("retry_prompt_hash"),
+            "routeSource": prompt_debug.get("route_source"),
+            "strictLocaleRetry": prompt_debug.get("strict_locale_retry"),
+            "retryAttempt": prompt_debug.get("retry_attempt"),
+            "translationModel": prompt_debug.get("translation_model") or metadata.get("translation_model"),
+            "raw_model_response_length": metadata.get("raw_model_response_length") or len(json.dumps(raw_response, ensure_ascii=False)),
+            "final_translation_length": len(parsed_candidate),
+            "source_prefix_match_200": metadata.get("source_prefix_match_200"),
+            "source_copy_suspected": metadata.get("source_copy_suspected"),
+            "source_copy_status": metadata.get("source_copy_status"),
+            "target_script_ratio": metadata.get("target_script_ratio"),
+            "residual_hangul_ratio": metadata.get("residual_hangul_ratio"),
+            "residual_hangul_char_count": sum(len(str(span.get("text") or "")) for span in spans if isinstance(span, dict)),
+            "hangul_span_count": len(spans),
+            "delivery_candidate": metadata.get("delivery_status") or result.delivery_status,
+            "fallbackApplied": bool(metadata.get("fallback_applied") or metadata.get("fallbackApplied")),
+            "fallbackReason": metadata.get("fallback_reason") or metadata.get("fallbackReason") or "",
+            "candidateDiscarded": bool(metadata.get("candidate_discarded") or metadata.get("candidateDiscarded")),
+            "discardReason": metadata.get("discard_reason") or metadata.get("discardReason") or "",
+        }
+        prompt_metadata = {
+            key: value
+            for key, value in prompt_debug.items()
+            if key not in {"api_key", "authorization", "password", "secret"}
+        }
+        prompt_metadata["promptPreviewLength"] = len(prompt_preview)
+        self._write_debug_text(prefix.with_name(f"{safe_name}_prompt_preview.txt"), prompt_preview[:4000])
+        self._write_debug_text(prefix.with_name(f"{safe_name}_prompt_metadata.json"), json.dumps(prompt_metadata, ensure_ascii=False, indent=2) + "\n")
+        self._write_debug_text(prefix.with_name(f"{safe_name}_raw_output.txt"), json.dumps(raw_response, ensure_ascii=False, indent=2) + "\n")
+        self._write_debug_text(prefix.with_name(f"{safe_name}_parsed_candidate.txt"), parsed_candidate + "\n")
+        self._write_debug_text(prefix.with_name(f"{safe_name}_metrics.json"), json.dumps(metrics, ensure_ascii=False, indent=2) + "\n")
+        return {
+            "debugArtifactDir": str(target_dir),
+            "rawOutputPath": str(prefix.with_name(f"{safe_name}_raw_output.txt")),
+            "parsedCandidatePath": str(prefix.with_name(f"{safe_name}_parsed_candidate.txt")),
+            "metricsPath": str(prefix.with_name(f"{safe_name}_metrics.json")),
+            "promptPreviewPath": str(prefix.with_name(f"{safe_name}_prompt_preview.txt")),
+            "promptMetadataPath": str(prefix.with_name(f"{safe_name}_prompt_metadata.json")),
+            "fallbackApplied": metrics["fallbackApplied"],
+            "fallbackReason": metrics["fallbackReason"],
+            "candidateDiscarded": metrics["candidateDiscarded"],
+            "discardReason": metrics["discardReason"],
+        }
 
     def run_v2_direct_qa(self, source_text: str) -> V2TranslationResult:
         final_result = self.run_direct_only(source_text)
@@ -605,6 +711,81 @@ class TranslationPipeline:
             metadata=metadata,
             delivery_status=delivery_status,
             user_visible_error_code=direct_result.user_visible_error_code,
+        )
+
+    def run_v3_literary_package(
+        self,
+        source_text: str,
+        *,
+        genre: str = "Modern Korean web novel",
+        work_memory: dict[str, Any] | None = None,
+        max_iterations: int = 2,
+        debug_capture_model_outputs: bool = False,
+        debug_artifact_dir: str | None = None,
+    ) -> V3LiteraryPackageResult:
+        resources = self.config.resolved_resources()
+        glossary_rows = []
+        if isinstance(work_memory, dict):
+            rows = work_memory.get("approvedGlossary") or work_memory.get("approved_glossary") or []
+            if isinstance(rows, list):
+                glossary_rows = [row for row in rows if isinstance(row, dict)]
+        hard_glossary_lines = []
+        for row in glossary_rows:
+            if str(row.get("priority") or "").strip().lower() != "hard":
+                continue
+            source = str(row.get("source") or "").strip()
+            target = str(row.get("target") or "").strip()
+            if not source or not target:
+                continue
+            aliases = [str(alias).strip() for alias in (row.get("aliases") or []) if str(alias).strip()]
+            alias_text = f" (aliases: {', '.join(aliases[:5])})" if aliases else ""
+            hard_glossary_lines.append(f"- {source}{alias_text} => {target}")
+        v3_memory_context = ""
+        if hard_glossary_lines:
+            v3_memory_context = (
+                "[APPROVED HARD GLOSSARY]\n"
+                "Use each approved target exactly when its source or alias appears in the Korean source. "
+                "On retry, fix only mismatched glossary surface forms and keep the rest of the translation stable.\n"
+                + "\n".join(hard_glossary_lines[:30])
+            )
+
+        def translate_once(strict_locale_retry: bool, retry_attempt: int, revision_context: str = "") -> tuple[str, dict[str, Any]]:
+            memory_context = v3_memory_context
+            if revision_context.strip():
+                memory_context = (memory_context + "\n\n" if memory_context.strip() else "") + revision_context.strip()
+            if "GRAPH TARGETED SMALL PROSE RESIDUE FALLBACK" in revision_context:
+                debug_attempt_name = "targeted_repair_fallback"
+            elif "GRAPH STRICT CLEAN FINAL FALLBACK" in revision_context:
+                debug_attempt_name = "strict_clean_fallback"
+            elif "GRAPH TARGETED SMALL PROSE RESIDUE REPAIR" in revision_context:
+                debug_attempt_name = "targeted_repair"
+            elif "GRAPH CLEAN FULL TRANSLATOR RETRY" in revision_context:
+                debug_attempt_name = "graph_clean_full_translator_retry"
+            elif revision_context.strip():
+                debug_attempt_name = "deterministic_revision"
+            else:
+                debug_attempt_name = "initial_translation"
+            direct = self.run_direct_only(
+                source_text,
+                memory_context=memory_context,
+                strict_locale_retry=strict_locale_retry,
+                retry_attempt=retry_attempt,
+                debug_capture={
+                    "enabled": debug_capture_model_outputs,
+                    "artifactDir": debug_artifact_dir,
+                    "attemptName": debug_attempt_name,
+                    "promptPreview": memory_context,
+                },
+            )
+            return direct.final_translation, direct.metadata
+
+        return build_v3_graph_literary_package(
+            source_text,
+            resources.locale,
+            genre=genre,
+            work_memory=work_memory,
+            max_iterations=max_iterations,
+            translate_once=None if self.config.mock else translate_once,
         )
 
     def run_qa_only(self, source_text: str, translation_text: str) -> V2TranslationResult:
