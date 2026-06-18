@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>캐릭터 관계도 상세조회</h2>
+<p>REQ-VIS-006: 선택한 캐릭터 관계도 HTML 결과를 상세 조회하는 화면입니다.</p>
+
+<dl>
+    <dt>작품</dt>
+    <dd>{{ work.title }}</dd>
+    <dt>관계도 제목</dt>
+    <dd>{{ relation_map.title }}</dd>
+    <dt>상태</dt>
+    <dd>{{ relation_map.status }}</dd>
+    <dt>생성일</dt>
+    <dd>{{ relation_map.created_at|date:'Y-m-d H:i' }}</dd>
+</dl>
+
+<p>
+    <a href="{% url 'relationships:relation_html' work.id relation_map.id %}" target="_blank">HTML 관계도 새 창으로 보기</a>
+    <a href="{% url 'relationships:relation_download' work.id relation_map.id %}">HTML 다운로드</a>
+    <a href="{% url 'relationships:relation_delete' work.id relation_map.id %}">관계도 삭제</a>
+    <a href="{% url 'relationships:relation_list' work.id %}">관계도 목록으로 돌아가기</a>
+</p>
+
+<iframe
+    src="{% url 'relationships:relation_html' work.id relation_map.id %}"
+    title="관계도 미리보기"
+    style="width: 100%; min-height: 820px; border: 1px solid #ddd;"
+></iframe>
+{% endblock %}

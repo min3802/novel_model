@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>캐릭터 관계도 조회</h2>
+<p>REQ-VIS-005: {{ work.title }} 작품의 캐릭터 관계도 목록을 조회하는 화면입니다.</p>
+
+<p>
+    <a href="{% url 'characters:character_list' work.id %}">캐릭터 설정집으로 이동</a>
+    <a href="{% url 'works:work_detail' work.id %}">작품 상세로 돌아가기</a>
+</p>
+
+<section>
+    <h3>관계도 생성</h3>
+    {% if characters %}
+        <form method="post" action="{% url 'relationships:relation_create' work.id %}">
+            {% csrf_token %}
+            <p>
+                <label for="title">관계도 제목</label>
+                <input id="title" type="text" name="title" placeholder="{{ work.title }} 관계도">
+            </p>
+            <p>포함할 캐릭터를 선택하지 않으면 최대 20명까지 자동 포함합니다.</p>
+            {% for character in characters %}
+                <label>
+                    <input type="checkbox" name="character_ids" value="{{ character.id }}">
+                    {{ character.name }} / {{ character.role|default:'역할 미입력' }}
+                </label><br>
+            {% endfor %}
+            <button type="submit">관계도 생성</button>
+        </form>
+    {% else %}
+        <p>등록된 캐릭터 설정이 없습니다. 먼저 캐릭터 설정을 만들거나 시놉시스로 추출해 주세요.</p>
+    {% endif %}
+</section>
+
+<section>
+    <h3>생성된 관계도</h3>
+    {% if relation_maps %}
+        <ul>
+            {% for relation_map in relation_maps %}
+                <li>
+                    <a href="{% url 'relationships:relation_detail' work.id relation_map.id %}">
+                        {{ relation_map.title }}
+                    </a>
+                    <span> / {{ relation_map.status }} / {{ relation_map.created_at|date:'Y-m-d H:i' }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>아직 생성된 관계도가 없습니다.</p>
+    {% endif %}
+</section>
+{% endblock %}

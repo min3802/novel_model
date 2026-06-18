@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>캐릭터 설정 상세 조회</h2>
+<p>REQ-UNIV-003: 선택한 캐릭터 설정의 상세 정보를 조회하는 화면입니다.</p>
+
+<dl>
+    <dt>작품</dt>
+    <dd>{{ work.title }}</dd>
+    <dt>이름</dt>
+    <dd>{{ character.name }}</dd>
+    <dt>역할</dt>
+    <dd>{{ character.role|default:'-' }}</dd>
+    <dt>성별</dt>
+    <dd>{{ character.gender|default:'-' }}</dd>
+    <dt>나이</dt>
+    <dd>{{ character.age|default:'-' }}</dd>
+    <dt>관계 요약</dt>
+    <dd>{{ character.relation|linebreaksbr|default:'-' }}</dd>
+    <dt>외형</dt>
+    <dd>{{ character.appearance|linebreaksbr|default:'-' }}</dd>
+    <dt>성격</dt>
+    <dd>{{ character.personality|linebreaksbr|default:'-' }}</dd>
+    <dt>설명</dt>
+    <dd>{{ character.description|linebreaksbr|default:'-' }}</dd>
+    <dt>생성 방식</dt>
+    <dd>{{ character.get_source_display }}</dd>
+</dl>
+
+<p>
+    <a href="{% url 'characters:character_update' work.id character.id %}">캐릭터 설정 수정</a>
+    <a href="{% url 'characters:character_delete' work.id character.id %}">캐릭터 설정 삭제</a>
+    <a href="{% url 'characters:character_list' work.id %}">캐릭터 목록으로 돌아가기</a>
+</p>
+{% endblock %}

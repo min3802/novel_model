@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>결제 실패</h2>
+<p>code: {{ code }}</p>
+<p>message: {{ message }}</p>
+<p>orderId: {{ order_id }}</p>
+<p>실패 내역은 orderId가 확인되는 경우 결제 내역에 저장됩니다.</p>
+<a href="{% url 'credits:credit_balance' %}">크레딧 내역 확인</a>
+<a href="/credits/charge/">다시 테스트</a>
+{% endblock %}

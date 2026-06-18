@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>결제 취소</h2>
+<p>현재 잔여 크레딧: <strong>{{ balance }} CR</strong></p>
+
+{% if payment %}
+    <section class="cancel-card">
+        <h3>취소 확인</h3>
+        <p>플랜: {{ payment.plan_name }}</p>
+        <p>결제금액: {{ payment.amount }}원</p>
+        <p>환수 크레딧: {{ payment.credit_amount }} CR</p>
+        <p>주문번호: {{ payment.order_id }}</p>
+        <p>결제키: {{ payment.payment_key }}</p>
+
+        {% if payment.can_cancel and balance >= payment.credit_amount %}
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="payment_id" value="{{ payment.id }}">
+                <p>
+                    <label for="cancel_reason">취소 사유</label><br>
+                    <input id="cancel_reason" name="cancel_reason" type="text" value="사용자 요청으로 결제 취소" style="width: 420px;">
+                </p>
+                <button type="submit">최종 결제 취소</button>
+            </form>
+        {% elif balance < payment.credit_amount %}
+            <p>충전된 크레딧을 일부 사용하여 결제 취소가 불가능합니다.</p>
+        {% else %}
+            <p>취소 가능한 결제가 아닙니다.</p>
+        {% endif %}
+    </section>
+{% else %}
+    <p>아래 결제 내역에서 취소할 결제를 선택하세요.</p>
+{% endif %}
+
+{% if result %}
+    <section>
+        <h3>취소 API 응답</h3>
+        <p>상태 코드: {{ status_code }}</p>
+        <pre>{{ result }}</pre>
+    </section>
+{% endif %}
+
+<section>
+    <h3>결제 내역</h3>
+    <table class="credit-table">
+        <thead>
+            <tr>
+                <th>결제일시</th>
+                <th>플랜</th>
+                <th>금액</th>
+                <th>크레딧</th>
+                <th>상태</th>
+                <th>취소</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in payments %}
+                <tr>
+                    <td>{{ item.approved_at|default:item.created_at }}</td>
+                    <td>{{ item.plan_name }}</td>
+                    <td>{{ item.amount }}원</td>
+                    <td>{{ item.credit_amount }} CR</td>
+                    <td>{{ item.get_status_display }}</td>
+                    <td>
+                        {% if item.can_cancel and balance >= item.credit_amount %}
+                            <a href="{% url 'credits:payment_cancel_detail' item.id %}">취소 확인</a>
+                        {% elif item.status == 'DONE' and balance < item.credit_amount %}
+                            사용 후 취소 불가
+                        {% else %}
+                            -
+                        {% endif %}
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">결제 내역이 없습니다.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<p>
+    <a href="{% url 'credits:credit_balance' %}">크레딧 내역으로 돌아가기</a>
+</p>
+
+<style>
+    .cancel-card {
+        margin: 18px 0 28px;
+        padding: 20px;
+        border: 1px solid #ddd2c7;
+        border-radius: 12px;
+        background: #fffaf5;
+    }
+
+    .credit-table {
+        width: 100%;
+        margin: 14px 0 24px;
+        border-collapse: collapse;
+        background: #fff;
+    }
+
+    .credit-table th,
+    .credit-table td {
+        padding: 10px;
+        border: 1px solid #ddd2c7;
+        text-align: left;
+    }
+
+    .credit-table th {
+        background: #f4eee8;
+    }
+</style>
+{% endblock %}

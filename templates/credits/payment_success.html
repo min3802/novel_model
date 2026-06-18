@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>결제 승인 결과</h2>
+{% if payment %}
+<p>{{ payment.plan_name }} 결제가 완료되어 {{ payment.credit_amount }} CR이 충전되었습니다.</p>
+<p>현재 결제 상태: {{ payment.get_status_display }}</p>
+<p>
+    <a href="{% url 'credits:credit_balance' %}">크레딧 내역 확인</a>
+    <a href="{% url 'credits:payment_cancel_detail' payment.id %}">결제 취소 테스트</a>
+</p>
+{% endif %}
+<p>상태 코드: {{ status_code }}</p>
+<pre>{{ result }}</pre>
+<a href="/credits/charge/">다시 테스트</a>
+{% endblock %}

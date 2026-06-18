@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>크레딧 차감 테스트</h2>
+<p>현재 잔여 크레딧: <strong>{{ balance }} CR</strong></p>
+<p>결제 취소 제한 테스트를 위해 임의로 크레딧 사용 내역을 생성할 수 있습니다.</p>
+
+<form method="post">
+    {% csrf_token %}
+    <p>
+        <label for="feature_name">사용 기능명</label><br>
+        <input id="feature_name" name="feature_name" type="text" value="테스트 기능 실행" style="width: 360px;">
+    </p>
+    <p>
+        <label for="credit_amount">차감 크레딧</label><br>
+        <input id="credit_amount" name="credit_amount" type="number" min="1" value="1000" style="width: 160px;">
+    </p>
+    <button type="submit">크레딧 차감</button>
+</form>
+
+<p>
+    <a href="{% url 'credits:credit_balance' %}">크레딧 내역으로 돌아가기</a>
+</p>
+{% endblock %}
