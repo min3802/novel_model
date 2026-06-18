@@ -7,22 +7,28 @@
 <dl>
     <dt>작품</dt>
     <dd>{{ work.title }}</dd>
+
     <dt>이름</dt>
-    <dd>{{ character.name }}</dd>
-    <dt>역할</dt>
-    <dd>{{ character.role|default:'-' }}</dd>
-    <dt>성별</dt>
-    <dd>{{ character.gender|default:'-' }}</dd>
+    <dd>{{ character.char_name }}</dd>
+
     <dt>나이</dt>
     <dd>{{ character.age|default:'-' }}</dd>
-    <dt>관계 요약</dt>
-    <dd>{{ character.relation|linebreaksbr|default:'-' }}</dd>
+
+    <dt>역할</dt>
+    <dd>{{ character.role|default:'-' }}</dd>
+
+    <dt>성별</dt>
+    <dd>{{ character.gender|default:'-' }}</dd>
+
+    <dt>관계</dt>
+    <dd>{{ character.relationships|linebreaksbr|default:'-' }}</dd>
+
     <dt>외형</dt>
     <dd>{{ character.appearance|linebreaksbr|default:'-' }}</dd>
-    <dt>성격</dt>
-    <dd>{{ character.personality|linebreaksbr|default:'-' }}</dd>
-    <dt>설명</dt>
-    <dd>{{ character.description|linebreaksbr|default:'-' }}</dd>
+
+    <dt>세부 설정</dt>
+    <dd>{{ character.detail_setting|linebreaksbr|default:'-' }}</dd>
+
     <dt>생성 방식</dt>
     <dd>{{ character.get_source_display }}</dd>
 </dl>

@@ -19,7 +19,7 @@ def character_work_list(request):
 @login_required
 def character_list(request, work_id):
     work = get_object_or_404(Work, id=work_id, user=request.user)
-    characters = work.characters.all().order_by('name')
+    characters = work.characters.all().order_by('char_name')
     return render(request, 'characters/character_list.html', {
         'work': work,
         'characters': characters,

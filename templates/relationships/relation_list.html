@@ -22,7 +22,7 @@
             {% for character in characters %}
                 <label>
                     <input type="checkbox" name="character_ids" value="{{ character.id }}">
-                    {{ character.name }} / {{ character.role|default:'역할 미입력' }}
+                    {{ character.char_name }} / {{ character.role|default:'역할 미입력' }}
                 </label><br>
             {% endfor %}
             <button type="submit">관계도 생성</button>

@@ -9,6 +9,25 @@ from ..prompts.relation_prompts import SYSTEM_PROMPT, build_relation_extract_pro
 RELATION_CHARACTER_LIMIT = 20
 
 
+def character_description(character):
+    return ' '.join(
+        value.strip()
+        for value in [
+            character.relationships,
+            character.detail_setting,
+            character.appearance,
+        ]
+        if value and value.strip()
+    )
+
+
+def safe_int(value, default=3):
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
 def get_selected_characters(work, character_ids=None):
     query = Character.objects.filter(work=work).order_by('id')
     if not character_ids:
@@ -27,15 +46,23 @@ def get_selected_characters(work, character_ids=None):
 
 def normalize_relation_data(work, payload, characters):
     valid_by_id = {f'char_{character.id}': character for character in characters}
-    valid_names = {character.name for character in characters}
+    valid_by_name = {character.char_name: character for character in characters}
+
+    def normalize_node_ref(value):
+        ref = str(value or '').strip()
+        if ref in valid_by_id:
+            return ref
+        if ref in valid_by_name:
+            return f'char_{valid_by_name[ref].id}'
+        return ref
 
     normalized_characters = []
     seen_ids = set()
     for item in payload.get('characters') or []:
-        raw_id = str(item.get('id', '')).strip()
+        raw_id = normalize_node_ref(item.get('id'))
         name = str(item.get('name', '')).strip()
-        if raw_id not in valid_by_id and name in valid_names:
-            source = next(character for character in characters if character.name == name)
+        if raw_id not in valid_by_id and name in valid_by_name:
+            source = valid_by_name[name]
             raw_id = f'char_{source.id}'
 
         source = valid_by_id.get(raw_id)
@@ -46,13 +73,13 @@ def normalize_relation_data(work, payload, characters):
         normalized_characters.append(
             {
                 'id': raw_id,
-                'name': source.name,
+                'name': source.char_name,
                 'role': str(item.get('role') or source.role or '인물').strip()[:40],
                 'description': str(
-                    item.get('description') or source.description or source.relation or source.personality or source.appearance
+                    item.get('description') or character_description(source)
                 ).strip()[:180],
                 'is_main': bool(item.get('is_main', False)),
-                'importance': int(item.get('importance') or 3),
+                'importance': safe_int(item.get('importance'), 3),
             }
         )
 
@@ -61,9 +88,9 @@ def normalize_relation_data(work, payload, characters):
             normalized_characters.append(
                 {
                     'id': f'char_{character.id}',
-                    'name': character.name,
+                    'name': character.char_name,
                     'role': character.role or ('주인공' if index == 1 else '인물'),
-                    'description': (character.description or character.relation or character.personality or character.appearance)[:180],
+                    'description': character_description(character)[:180],
                     'is_main': index == 1,
                     'importance': index,
                 }
@@ -91,15 +118,15 @@ def normalize_relation_data(work, payload, characters):
                 'group_type': str(group.get('group_type') or 'group').strip()[:30],
                 'members': members,
                 'description': str(group.get('description') or '').strip()[:180],
-                'importance': int(group.get('importance') or 3),
+                'importance': safe_int(group.get('importance'), 3),
             }
         )
 
     relations = []
     seen_relations = set()
     for relation in payload.get('relations') or []:
-        source = str(relation.get('source', '')).strip()
-        target = str(relation.get('target', '')).strip()
+        source = normalize_node_ref(relation.get('source'))
+        target = normalize_node_ref(relation.get('target'))
         label = str(relation.get('relation') or '관계').strip()[:30]
         key = (source, target, label)
         if source not in valid_node_ids or target not in valid_node_ids or source == target or key in seen_relations:
@@ -114,7 +141,7 @@ def normalize_relation_data(work, payload, characters):
                 'description': str(relation.get('description') or '').strip()[:220],
                 'direction': 'one_way' if direction == 'one_way' else 'both',
                 'style': str(relation.get('style') or 'neutral').strip()[:30],
-                'importance': int(relation.get('importance') or 3),
+                'importance': safe_int(relation.get('importance'), 3),
             }
         )
 

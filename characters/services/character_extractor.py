@@ -13,10 +13,13 @@ CHARACTER_LIMIT_PER_WORK = 20
 
 
 FIELD_LIMITS = {
-    'name': 50,
-    'age': 20,
-    'role': 30,
-    'gender': 20,
+    'char_name': 30,
+    'age': 10,
+    'role': 5,
+    'gender': 5,
+    'relationships': 500,
+    'appearance': 300,
+    'detail_setting': 1000,
 }
 
 
@@ -31,14 +34,19 @@ def cut(value, limit=None):
 
 def normalize_character_item(item):
     return {
-        'name': cut(item.get('name'), FIELD_LIMITS['name']),
+        'char_name': cut(item.get('char_name') or item.get('name'), FIELD_LIMITS['char_name']),
         'age': cut(item.get('age'), FIELD_LIMITS['age']),
         'role': cut(item.get('role'), FIELD_LIMITS['role']),
         'gender': cut(item.get('gender'), FIELD_LIMITS['gender']),
-        'relation': cut(item.get('relation')),
-        'appearance': cut(item.get('appearance')),
-        'personality': cut(item.get('personality')),
-        'description': cut(item.get('description') or item.get('detail')),
+        'relationships': cut(
+            item.get('relationships') or item.get('relation'),
+            FIELD_LIMITS['relationships']
+        ),
+        'appearance': cut(item.get('appearance'), FIELD_LIMITS['appearance']),
+        'detail_setting': cut(
+            item.get('detail_setting') or item.get('description') or item.get('detail'),
+            FIELD_LIMITS['detail_setting']
+        ),
     }
 
 
@@ -59,11 +67,14 @@ def extract_character_settings(work, *, save=True):
 
     normalized = []
     seen_names = set()
+
     for item in (payload.get('characters') or [])[:CHARACTER_LIMIT_PER_WORK]:
         row = normalize_character_item(item)
-        if not row['name'] or row['name'] in seen_names:
+
+        if not row['char_name'] or row['char_name'] in seen_names:
             continue
-        seen_names.add(row['name'])
+
+        seen_names.add(row['char_name'])
         normalized.append(row)
 
     if not save:
@@ -71,11 +82,13 @@ def extract_character_settings(work, *, save=True):
 
     with transaction.atomic():
         saved = []
+
         for row in normalized:
             character, _ = Character.objects.update_or_create(
                 work=work,
-                name=row['name'],
+                char_name=row['char_name'],
                 defaults={**row, 'source': Character.SOURCE_AI},
             )
             saved.append(character)
+
         return saved
