@@ -435,6 +435,10 @@ export function GuideConnector() {
   }
 
   async function removeHistory(item: GuideHistoryItem) {
+    const confirmed = window.confirm(
+      `${guideDisplayTitle(item)} 가이드 기록을 삭제할까요?\n이 작업은 되돌릴 수 없습니다.`,
+    );
+    if (!confirmed) return;
     if (item.id) {
       const res = await fetch(`${API_BASE}/api/localization-guides/${item.id}`, { method: "DELETE" });
       const data = await res.json().catch(() => ({}));
@@ -507,9 +511,9 @@ export function GuideConnector() {
     if (!selectedWork) return true;
     try {
       const guides = await getGuideCountForWork(selectedWork.id);
-      if (guides.length < 5) return true;
+      if (guides.length < 10) return true;
       return window.confirm(
-        `이 작품에는 이미 가이드가 ${guides.length}개 있습니다.\n가이드 보관 한도는 5개이며, 새로 생성하면 가장 오래된 가이드가 삭제됩니다.\n계속 진행하시겠습니까?`,
+        `이 작품에는 이미 가이드가 ${guides.length}개 있습니다.\n가이드 보관 한도는 10개이며, 새로 생성하면 가장 오래된 가이드가 삭제됩니다.\n계속 진행하시겠습니까?`,
       );
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
@@ -672,7 +676,7 @@ export function GuideConnector() {
             )}
           </div>
           <div className="guide-dev-input">
-            <span className="guide-country-picker-label">개발용 직접 입력</span>
+            <span className="guide-country-picker-label">시연용 직접 입력</span>
             <input
               value={genre}
               onChange={e => setGenre(e.target.value)}

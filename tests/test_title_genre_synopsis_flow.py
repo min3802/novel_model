@@ -43,10 +43,12 @@ class TitleGenreSynopsisFlowTests(unittest.TestCase):
         )
 
         cards = report["policy_attention_cards"]
-        self.assertGreaterEqual(len(cards), 2)
+        self.assertEqual(len(cards), 3)
         self.assertTrue(all(card["match_source"] == "synopsis_inferred" for card in cards))
-        self.assertTrue(any("JP_SYOSETU_0002" in card["matched_rule_ids"] for card in cards))
-        self.assertTrue(any("JP_SYOSETU_0005" in card["matched_rule_ids"] for card in cards))
+        self.assertCountEqual(
+            [card["matched_rule_ids"][0] for card in cards],
+            ["JP_ALPHAPOLIS_0001", "JP_ALPHAPOLIS_0002", "JP_ALPHAPOLIS_0009"],
+        )
         self.assertIn("R18", str(cards))
 
     def test_title_genre_synopsis_can_still_trigger_direct_policy_cards(self) -> None:
@@ -60,9 +62,12 @@ class TitleGenreSynopsisFlowTests(unittest.TestCase):
         )
 
         cards = report["policy_attention_cards"]
-        self.assertGreaterEqual(len(cards), 1)
+        self.assertEqual(len(cards), 3)
         self.assertTrue(any(card["match_source"] == "title_or_genre" for card in cards))
-        self.assertTrue(any("JP_KAKUYOMU_0004" in card["matched_rule_ids"] for card in cards))
+        self.assertCountEqual(
+            [card["matched_rule_ids"][0] for card in cards],
+            ["JP_ALPHAPOLIS_0001", "JP_ALPHAPOLIS_0002", "JP_ALPHAPOLIS_0009"],
+        )
         self.assertNotIn("??", str(report))
 
     def test_synopsis_presence_changes_guide_reading_contract(self) -> None:

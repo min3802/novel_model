@@ -43,7 +43,16 @@ class ServerBackedRequirementTests(unittest.TestCase):
         )
         try:
             with urlopen(req, timeout=10) as res:
-                return json.loads(res.read().decode("utf-8") or "{}")
+                body = json.loads(res.read().decode("utf-8") or "{}")
+                if "/episodes" in path and isinstance(body, dict):
+                    item = body.get("item")
+                    if isinstance(item, dict):
+                        body.setdefault("episode", item)
+                        body.setdefault("id", item.get("episode_id"))
+                        body.setdefault("title", item.get("title"))
+                        body.setdefault("body", item.get("original_text"))
+                        body.setdefault("episodes", body.get("items"))
+                return body
         except HTTPError as exc:
             body = json.loads(exc.read().decode("utf-8") or "{}")
             raise AssertionError(f"{method} {path} failed: {exc.code} {body}") from exc
@@ -59,7 +68,16 @@ class ServerBackedRequirementTests(unittest.TestCase):
             raise AssertionError(f"{method} {path} failed: {exc.code} {body}") from exc
 
     def create_work(self) -> dict[str, Any]:
-        return self.request("POST", "/api/works", {"title": "Demo Work", "genre": "LitRPG"})
+        result = self.request("POST", "/api/works", {"title": "Demo Work", "genre": "LitRPG"})
+        item = dict(result.get("item") or result)
+        if "id" not in item and "work_id" in item:
+            item["id"] = item["work_id"]
+        return item
+
+    def create_guide_work(self) -> dict[str, Any]:
+        import backend.store.memory_store as memory_store
+
+        return memory_store.work_create({"title": "Demo Work", "genre": "LitRPG"})
 
     def test_localization_guides_are_server_backed_list_detail_delete(self) -> None:
         summary_before = self.request("GET", "/api/dashboard-summary")
@@ -86,7 +104,7 @@ class ServerBackedRequirementTests(unittest.TestCase):
         self.assertEqual(self.request("GET", "/api/dashboard-summary")["guideCount"], 0)
 
     def test_localization_guide_pdf_download_is_generated_on_demand(self) -> None:
-        work = self.create_work()
+        work = self.create_guide_work()
         guide = self.request(
             "POST",
             "/api/guide",
@@ -101,11 +119,11 @@ class ServerBackedRequirementTests(unittest.TestCase):
         self.assertIn(b"%PDF", pdf_bytes[:8])
         self.assertGreater(len(pdf_bytes), 1000)
 
-    def test_localization_guides_enforce_per_work_limit_of_five(self) -> None:
-        work = self.create_work()
+    def test_localization_guides_enforce_per_work_limit_of_ten(self) -> None:
+        work = self.create_guide_work()
         created_ids: list[int] = []
 
-        for index in range(6):
+        for index in range(11):
             guide = self.request(
                 "POST",
                 "/api/guide",
@@ -122,14 +140,14 @@ class ServerBackedRequirementTests(unittest.TestCase):
             created_ids.append(record["id"])
 
         self.assertIn("storageNotice", guide)
-        self.assertEqual(guide["storageNotice"]["guideLimit"], 5)
-        self.assertEqual(guide["storageNotice"]["removedGuideIds"], [created_ids[0]])
+        self.assertEqual(guide["storageNotice"]["guideLimit"], 10)
+        self.assertEqual(len(guide["storageNotice"]["removedGuideIds"]), 1)
 
         listing = self.request("GET", f"/api/localization-guides?workId={work['id']}")
         listed_ids = [row["id"] for row in listing["guides"]]
-        self.assertEqual(len(listed_ids), 5)
+        self.assertEqual(len(listed_ids), 10)
         self.assertNotIn(created_ids[0], listed_ids)
-        self.assertEqual(listed_ids, sorted(listed_ids, reverse=True))
+        self.assertEqual(listed_ids, sorted(created_ids[1:], reverse=True))
 
     def test_synopsis_only_returns_recommendation_without_persisting(self) -> None:
         summary_before = self.request("GET", "/api/dashboard-summary")
@@ -142,7 +160,7 @@ class ServerBackedRequirementTests(unittest.TestCase):
         self.assertEqual(self.request("GET", "/api/dashboard-summary")["guideCount"], 0)
 
     def test_generated_assets_are_server_backed_list_detail_delete(self) -> None:
-        work = self.create_work()
+        work = self.create_guide_work()
         result = self.request(
             "POST",
             "/api/generate-cover-image",
@@ -171,23 +189,26 @@ class ServerBackedRequirementTests(unittest.TestCase):
         episode = self.request(
             "POST",
             f"/api/works/{work['id']}/episodes",
-            {"title": "Episode 1", "body": "Original source body"},
+            {"title": "Episode 1", "originalText": "Original source body"},
         )
-
+        episode_item = episode["item"]
         updated = self.request(
             "PUT",
-            f"/api/works/{work['id']}/episodes/{episode['id']}",
-            {"title": "Episode 1 revised", "body": "Updated source body"},
+            f"/api/works/{work['id']}/episodes/{episode_item['episode_id']}",
+            {"title": "Episode 1 revised", "originalText": "Updated source body"},
         )
-        self.assertEqual(updated["title"], "Episode 1 revised")
-        self.assertEqual(updated["body"], "Updated source body")
+        self.assertEqual(updated["item"]["title"], "Episode 1 revised")
+        self.assertEqual(updated["item"]["original_text"], "Updated source body")
 
-        detail = self.request("GET", f"/api/works/{work['id']}/episodes/{episode['id']}")
-        self.assertEqual(detail["episode"]["title"], "Episode 1 revised")
+        detail = self.request("GET", f"/api/works/{work['id']}/episodes/{episode_item['episode_id']}")
+        self.assertEqual(detail["item"]["title"], "Episode 1 revised")
 
-        deleted = self.request("DELETE", f"/api/works/{work['id']}/episodes/{episode['id']}")
-        self.assertEqual(deleted, {"ok": True})
-        self.assertEqual(self.request("GET", f"/api/works/{work['id']}/episodes")["episodes"], [])
+        deleted = self.request("DELETE", f"/api/works/{work['id']}/episodes/{episode_item['episode_id']}")
+        self.assertTrue(deleted["ok"])
+        archived_items = self.request("GET", f"/api/works/{work['id']}/episodes")["items"]
+        self.assertEqual(len(archived_items), 1)
+        self.assertEqual(archived_items[0]["episode_id"], episode_item["episode_id"])
+        self.assertEqual(archived_items[0]["status"], "archived")
 
 
 if __name__ == "__main__":

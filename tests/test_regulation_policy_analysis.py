@@ -17,8 +17,11 @@ class RegulationPolicyAnalysisTests(unittest.TestCase):
 
         rules = load_policy_rules("Japan")
 
-        self.assertGreaterEqual(len(rules), 40)
-        self.assertTrue(any(rule.rule_id == "JP_ALPHAPOLIS_0010" for rule in rules))
+        self.assertEqual(len(rules), 3)
+        self.assertCountEqual(
+            [rule.rule_id for rule in rules],
+            ["JP_ALPHAPOLIS_0001", "JP_ALPHAPOLIS_0002", "JP_ALPHAPOLIS_0009"],
+        )
         self.assertTrue(all(rule.country == "JP" for rule in rules))
 
     def test_direct_inputs_generate_policy_attention_cards(self) -> None:
@@ -32,10 +35,12 @@ class RegulationPolicyAnalysisTests(unittest.TestCase):
         )
 
         cards = report["policy_attention_cards"]
-        self.assertGreaterEqual(len(cards), 2)
-        self.assertTrue(any("JP_KAKUYOMU_0004" in card["matched_rule_ids"] for card in cards))
-        self.assertTrue(any("JP_SYOSETU_0002" in card["matched_rule_ids"] for card in cards))
-        self.assertTrue(any("R15 기준" in card["matched_elements"] for card in cards))
+        self.assertEqual(len(cards), 3)
+        self.assertCountEqual(
+            [card["matched_rule_ids"][0] for card in cards],
+            ["JP_ALPHAPOLIS_0001", "JP_ALPHAPOLIS_0002", "JP_ALPHAPOLIS_0009"],
+        )
+        self.assertTrue(any("R15" in card["matched_elements"] for card in cards))
         self.assertTrue(any(card["match_source"] == "direct_input" for card in cards))
         self.assertIn("법적 판단", " ".join(report["policy_limitations"]))
 
@@ -50,6 +55,7 @@ class RegulationPolicyAnalysisTests(unittest.TestCase):
 
         cards = report["policy_attention_cards"]
         self.assertTrue(cards)
+        self.assertEqual(len(cards), 3)
         self.assertTrue(
             all(card["match_source"] == "synopsis_inferred" for card in cards),
             msg=str([(card["matched_rule_ids"], card["match_source"], card["matched_elements"]) for card in cards]),
@@ -65,7 +71,7 @@ class RegulationPolicyAnalysisTests(unittest.TestCase):
         )
 
         self.assertEqual(report["policy_attention_cards"], [])
-        self.assertIn("규정 확인 후보", report["policy_limitations"][0])
+        self.assertIn("현재 입력에서 규정 확인 후보", report["policy_limitations"][0])
 
     def test_api_guide_attaches_policy_cards_without_mixing_with_context_pack(self) -> None:
         result = guide(

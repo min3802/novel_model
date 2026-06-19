@@ -468,7 +468,7 @@ def save_localization_guide(payload: dict[str, Any], result: dict[str, Any]) -> 
         removed: list[dict[str, Any]] = []
         if work_id is not None:
             rows = [row for row in _localization_guides if row.get("work_id") == work_id]
-            if len(rows) >= 5:
+            if len(rows) >= 10:
                 oldest = sorted(rows, key=lambda row: (row.get("created_at") or "", row["id"]))[0]
                 removed.append(dict(oldest))
                 _localization_guides[:] = [row for row in _localization_guides if row["id"] != oldest["id"]]
@@ -487,9 +487,9 @@ def save_localization_guide(payload: dict[str, Any], result: dict[str, Any]) -> 
         saved = dict(record)
         if removed:
             saved["storage_notice"] = {
-                "guideLimit": 5,
+                "guideLimit": 10,
                 "removedGuideIds": [row["id"] for row in removed],
-                "message": "작품 단위 현지화 가이드는 최대 5개까지 보관됩니다. 한도를 초과해 가장 오래된 결과를 삭제하고 저장했습니다.",
+                "message": "작품 단위 현지화 가이드는 최대 10개까지 보관됩니다. 한도를 넘으면 가장 오래된 결과를 삭제하고 저장했습니다.",
             }
             saved["removedGuides"] = removed
         return saved
