@@ -100,3 +100,210 @@
 .guide-progress{width:min(420px,100%);height:12px;border-radius:999px;background:#f2ebff;overflow:hidden;border:1px solid #e9d8ff}
 .guide-progress span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#7c3aed,#f472b6);transition:width .12s linear}
 @keyframes guide-spin{to{transform:rotate(360deg)}}
+
+
+.guide-document-modal{
+  --guide-bg:#FFF9F7;
+  --guide-surface:#fff;
+  --guide-surface-soft:#F6F1EB;
+  --guide-main:#6E5BB8;
+  --guide-text:#2D2440;
+  --guide-muted:#6E638C;
+  --guide-line:#B7A9E6;
+  --guide-line-soft:#CFC3FB;
+  --guide-chip:#E9E1FF;
+  --guide-chip-soft:#F3EEFF;
+  display:block;
+  height:min(708px, calc(100vh - 2.5rem));
+  min-height:0;
+  overflow:auto;
+  padding:1rem;
+  border:1px solid var(--guide-line-soft);
+  border-radius:24px;
+  background:linear-gradient(180deg,var(--guide-bg),var(--guide-surface-soft));
+  box-shadow:none;
+}
+.guide-document-modal .guide-doc-top{
+  position:sticky;
+  top:0;
+  z-index:2;
+  margin-bottom:.85rem;
+  padding:.9rem 1rem;
+  border:1px solid var(--guide-line-soft);
+  border-radius:18px;
+  background:linear-gradient(180deg,#fff,#fbf8ff);
+  box-shadow:none;
+}
+.guide-document-modal .guide-doc-top b{
+  color:var(--guide-text);
+  font-size:1.15rem;
+  line-height:1.35;
+}
+.guide-document-modal .guide-doc-top p{
+  color:var(--guide-muted);
+  font-size:.92rem;
+  line-height:1.7;
+}
+.guide-document-modal .guide-doc-meta span{
+  background:var(--guide-chip-soft);
+  border-color:var(--guide-line-soft);
+  color:var(--guide-main);
+}
+.guide-document-modal .guide-storage-notice,
+.guide-document-modal .guide-selection-box,
+.guide-document-modal .guide-recommend-summary,
+.guide-document-modal .guide-note,
+.guide-document-modal .guide-html-preview,
+.guide-document-modal .guide-evidence-panel,
+.guide-document-modal .guide-history{
+  background:#fff;
+  border-color:var(--guide-line-soft);
+  box-shadow:none;
+}
+.guide-document-modal .guide-storage-notice b,
+.guide-document-modal .guide-selection-box b,
+.guide-document-modal .guide-recommend-summary b,
+.guide-document-modal .guide-note b,
+.guide-document-modal .guide-history-head b{
+  color:var(--guide-main);
+}
+.guide-document-modal .guide-selection-summary,
+.guide-document-modal .guide-selection-hint,
+.guide-document-modal .guide-note p,
+.guide-document-modal .guide-storage-notice p,
+.guide-document-modal .guide-storage-notice small,
+.guide-document-modal .guide-history-head span,
+.guide-document-modal .guide-history-open small,
+.guide-document-modal .guide-work-summary p,
+.guide-document-modal .guide-work-summary small,
+.guide-document-modal .guide-work-help,
+.guide-document-modal .guide-action-note{
+  color:var(--guide-muted);
+}
+.guide-document-modal .visual-result-actions,
+.guide-document-modal .guide-download-actions{
+  position:sticky;
+  top:4.55rem;
+  z-index:1;
+  padding:.25rem 0 .1rem;
+  margin-bottom:.9rem;
+  background:linear-gradient(180deg,rgba(255,249,247,.98),rgba(255,249,247,.88));
+}
+.guide-document-modal .guide-section-list,
+.guide-document-modal .guide-evidence-list{
+  gap:.85rem;
+}
+.guide-document-modal .guide-document-body{
+  display:grid;
+  gap:1rem;
+  margin-bottom:1rem;
+}
+.guide-document-modal .guide-section{
+  border-color:var(--guide-line-soft);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:none;
+}
+.guide-document-modal .guide-section-header{
+  margin-bottom:.8rem;
+}
+.guide-document-modal .guide-section-num{
+  background:var(--guide-chip-soft);
+  color:var(--guide-main);
+}
+.guide-document-modal .guide-section-title{
+  color:var(--guide-text);
+  font-size:1rem;
+}
+.guide-document-modal .guide-list li,
+.guide-document-modal .guide-evidence-item span,
+.guide-document-modal .guide-evidence-item small,
+.guide-document-modal .guide-evidence-item p,
+.guide-document-modal .guide-html :is(h1,h2,h3,h4,h5,h6,p,li,td,th,span,div,small,strong,b,a,code,pre,blockquote){
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.guide-document-modal .guide-html,
+.guide-document-modal .guide-report{
+  display:grid;
+  gap:1rem;
+  color:var(--guide-text);
+  font-size:14px;
+  line-height:1.75;
+}
+.guide-document-modal .guide-html :is(h1,h2,h3,h4,h5,h6){
+  margin:0;
+  color:var(--guide-text);
+  letter-spacing:-.02em;
+}
+.guide-document-modal .guide-html :is(h1){font-size:1.7rem;line-height:1.2}
+.guide-document-modal .guide-html :is(h2){font-size:1.35rem;line-height:1.25}
+.guide-document-modal .guide-html :is(h3){font-size:1.05rem;line-height:1.35}
+.guide-document-modal .guide-html :is(p,li,td,th,small,span,blockquote,code,pre){
+  color:var(--guide-text);
+  font-size:14px;
+  line-height:1.75;
+}
+.guide-document-modal .guide-html :is(a){
+  color:var(--guide-main);
+}
+.guide-document-modal .guide-cover{
+  padding:.95rem 1rem;
+  border-radius:18px;
+  border-color:var(--guide-line-soft);
+  background:linear-gradient(180deg,#fff,#fbf8ff);
+  box-shadow:none;
+}
+.guide-document-modal .guide-cover-label{
+  color:var(--guide-main);
+  font-size:.72rem;
+}
+.guide-document-modal .guide-cover-title{
+  margin:.35rem 0 .45rem;
+  color:var(--guide-text);
+  font-size:1.45rem;
+  line-height:1.22;
+}
+.guide-document-modal .guide-cover-title em{
+  color:var(--guide-main);
+}
+.guide-document-modal .guide-cover-sub span{
+  background:var(--guide-chip-soft);
+  border-color:var(--guide-line-soft);
+  color:var(--guide-muted);
+}
+.guide-document-modal .guide-html-preview{
+  max-width:100%;
+}
+.guide-document-modal .guide-html-preview summary{
+  cursor:pointer;
+  color:var(--guide-main);
+  font-weight:950;
+}
+.guide-document-modal .guide-html-preview .guide-html{
+  margin-top:1rem;
+  max-height:min(32rem, 44vh);
+  overflow:auto;
+  padding-right:.25rem;
+}
+.guide-document-modal .guide-evidence-panel{
+  padding:1rem;
+}
+.guide-document-modal .guide-evidence-item{
+  border-color:var(--guide-line-soft);
+  box-shadow:none;
+}
+.guide-document-modal .guide-evidence-item b{
+  color:var(--guide-main);
+}
+.guide-document-modal .guide-evidence-item span{
+  color:var(--guide-text);
+}
+.guide-document-modal .guide-evidence-item small,
+.guide-document-modal .guide-evidence-item p{
+  color:var(--guide-muted);
+}
+.guide-document-modal .guide-loading,
+.guide-document-modal .guide-empty{
+  min-height:0;
+}

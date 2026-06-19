@@ -78,6 +78,24 @@ class PlatformTrendAdvisorTests(unittest.TestCase):
         self.assertIn('플랫폼', result["htmlReport"])
         self.assertIn("modelPromptPayload", result)
 
+    def test_final_guide_html_stays_korean_and_country_centric(self):
+        result = build_localization_advice(
+            {
+                "targetCountry": '미국',
+                "genre": "로맨스",
+                "synopsis": "두 사람이 사랑을 시작하는 현대 로맨스 이야기다.",
+            }
+        )
+
+        html = result["htmlReport"]
+        self.assertIn("선택 국가 요약", html)
+        self.assertIn("플랫폼 트렌드 참고", html)
+        self.assertNotIn("current platform trends", html)
+        self.assertNotIn("추천 국가 후보", html)
+        self.assertNotIn("미국는", html)
+        self.assertNotIn("일본는", html)
+        self.assertNotIn("회귀·전생·이세계 축", html)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { postJson } from "@/features/shared/api";
 
 const API_BASE = process.env.NEXT_PUBLIC_WLIGHTER_API_BASE || "http://127.0.0.1:8000";
@@ -92,6 +92,7 @@ type GuideRecord = {
 type GuideResponse = GuideResult & { guideRecord?: GuideRecord };
 type GuideHistoryItem = GuideResult & { id?: number; work_id?: number | null; savedAt: string };
 type WorksResponse = { works?: Work[]; error?: string };
+type LoadingAction = "recommend" | "generate";
 
 const GUIDE_SECTION_ORDER = [
   "market_trend_fit",
@@ -109,6 +110,24 @@ const DEFAULT_COUNTRY_OPTIONS: GuideCountryOption[] = [
   { country: "US/global English", display: "미국" },
   { country: "Thailand", display: "태국" },
 ];
+
+const LOADING_STAGE_MESSAGES: Record<LoadingAction, string[]> = {
+  recommend: [
+    "자료를 분석하고 있습니다.",
+    "플랫폼 근거를 검토하고 있습니다.",
+    "현지화 가이드를 작성하고 있습니다.",
+  ],
+  generate: [
+    "자료를 분석하고 있습니다.",
+    "플랫폼 근거를 검토하고 있습니다.",
+    "현지화 가이드를 작성하고 있습니다.",
+  ],
+};
+
+const LOADING_MAX_PROGRESS = 94;
+const LOADING_TICK_MS = 180;
+const LOADING_STAGE_MS = 1200;
+const LOADING_FINISH_DELAY_MS = 120;
 
 function displayCountryName(value?: string | null) {
   switch ((value || "").trim()) {
@@ -305,11 +324,12 @@ export function GuideConnector() {
   const [history, setHistory] = useState<GuideHistoryItem[]>([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [loadingAction, setLoadingAction] = useState<"recommend" | "generate" | null>(null);
+  const [, setLoadingAction] = useState<LoadingAction | null>(null);
   const [progress, setProgress] = useState(0);
-  const [loadingText, setLoadingText] = useState("현지화 기준서를 준비하는 중입니다...");
-  const loadingTargetRef = useRef(1800);
-  const loadingTimerRef = useRef<number | null>(null);
+  const [loadingText, setLoadingText] = useState("자료를 분석하고 있습니다.");
+  const loadingIntervalRef = useRef<number | null>(null);
+  const loadingFinalizeRef = useRef<number | null>(null);
+  const loadingStartedAtRef = useRef(0);
   const loadingRef = useRef(false);
 
   const hasSynopsis = synopsis.trim().length > 0;
@@ -354,71 +374,53 @@ export function GuideConnector() {
     }
   }
 
-  useEffect(() => {
-    void loadWorks();
-    void loadHistory();
+  const clearLoadingTimers = useCallback(() => {
+    if (loadingIntervalRef.current !== null) {
+      window.clearInterval(loadingIntervalRef.current);
+      loadingIntervalRef.current = null;
+    }
+    if (loadingFinalizeRef.current !== null) {
+      window.clearTimeout(loadingFinalizeRef.current);
+      loadingFinalizeRef.current = null;
+    }
   }, []);
 
-  useEffect(() => {
-    loadingRef.current = loading;
-  }, [loading]);
+  useEffect(() => clearLoadingTimers, [clearLoadingTimers]);
 
-  useEffect(() => {
-    if (loadingRef.current) return;
-    setRecommendationResult(null);
-    setGuideResult(null);
-    setError("");
-  }, [genre, synopsis]);
+  function startLoading(nextAction: LoadingAction) {
+    clearLoadingTimers();
+    loadingStartedAtRef.current = Date.now();
+    setLoadingAction(nextAction);
+    setLoadingText(LOADING_STAGE_MESSAGES[nextAction][0]);
+    setProgress(0);
+    setLoading(true);
 
-  useEffect(() => {
-    const nextWork = works.find(work => String(work.id) === selectedWorkId);
-    if (!nextWork) return;
-    setGenre(nextWork.genre && nextWork.genre !== "미선택" ? nextWork.genre : "");
-    setSynopsis(nextWork.desc || "");
-    setRecommendationResult(null);
-    setGuideResult(null);
-    setSelectedCountry("");
-    setError("");
-  }, [selectedWorkId, works]);
+    loadingIntervalRef.current = window.setInterval(() => {
+      const elapsed = Date.now() - loadingStartedAtRef.current;
+      const stageIndex = Math.min(
+        LOADING_STAGE_MESSAGES[nextAction].length - 1,
+        Math.floor(elapsed / LOADING_STAGE_MS),
+      );
+      const bumpProgress = (current: number) => {
+        if (current >= LOADING_MAX_PROGRESS) return LOADING_MAX_PROGRESS;
+        const bump = current < 60 ? 8 : current < 85 ? 4 : 2;
+        return Math.min(LOADING_MAX_PROGRESS, current + bump);
+      };
+      setLoadingText(LOADING_STAGE_MESSAGES[nextAction][stageIndex]);
+      setProgress(prev => bumpProgress(prev));
+    }, LOADING_TICK_MS);
+  }
 
-  useEffect(() => {
-    if (!loading) {
-      setProgress(0);
-      if (loadingTimerRef.current) {
-        window.clearInterval(loadingTimerRef.current);
-        loadingTimerRef.current = null;
-      }
-      return;
-    }
-
-    const start = Date.now();
-    const target = loadingTargetRef.current;
-    const messages = loadingAction === "recommend"
-      ? [
-          "추천 가능한 국가 조합을 확인하는 중입니다...",
-          "장르와 시놉시스 신호를 비교하는 중입니다...",
-          "추천 사유와 제한 안내를 정리하는 중입니다...",
-        ]
-      : [
-          "선택한 국가 기준으로 가이드를 준비하는 중입니다...",
-          "번역/표현 방향을 정리하는 중입니다...",
-          "가이드 섹션과 근거를 마무리하는 중입니다...",
-        ];
-
-    loadingTimerRef.current = window.setInterval(() => {
-      const elapsed = Date.now() - start;
-      const pct = Math.min(97, Math.round((elapsed / target) * 100));
-      setProgress(pct);
-      setLoadingText(messages[Math.min(messages.length - 1, Math.floor(elapsed / 700))]);
-    }, 120);
-
-    return () => {
-      if (loadingTimerRef.current) {
-        window.clearInterval(loadingTimerRef.current);
-        loadingTimerRef.current = null;
-      }
-    };
-  }, [loading, loadingAction]);
+  function finishLoading() {
+    clearLoadingTimers();
+    setProgress(100);
+    setLoadingText("완료되었습니다.");
+    loadingFinalizeRef.current = window.setTimeout(() => {
+      loadingFinalizeRef.current = null;
+      setLoading(false);
+      setLoadingAction(null);
+    }, LOADING_FINISH_DELAY_MS);
+  }
 
   function saveHistory(next: GuideResponse) {
     if (next.requiresSelection) return;
@@ -469,10 +471,7 @@ export function GuideConnector() {
   }
 
   async function requestRecommendation() {
-    const targetMs = 1200 + Math.floor(Math.random() * 900);
-    loadingTargetRef.current = targetMs;
-    setLoadingAction("recommend");
-    setLoading(true);
+    startLoading("recommend");
     setError("");
 
     try {
@@ -484,17 +483,13 @@ export function GuideConnector() {
         genre: genre.trim() || undefined,
         synopsis: synopsis.trim() || undefined,
       };
-      const [guide] = await Promise.all([
-        postJson<GuideResponse>("/api/guide", payload),
-        new Promise(resolve => setTimeout(resolve, targetMs)),
-      ]);
+      const guide = await postJson<GuideResponse>("/api/guide", payload);
 
       if (guide.requiresSelection) {
         syncRecommendationSelection(guide);
         return;
       }
 
-      // 추천 요청이었더라도 백엔드가 바로 가이드를 반환하면 가이드 상태로 저장한다.
       setGuideResult(guide);
       setSelectedCountry(guide.targetCountry || guide.country || "");
       saveHistory(guide);
@@ -502,8 +497,7 @@ export function GuideConnector() {
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     } finally {
-      setLoading(false);
-      setLoadingAction(null);
+      finishLoading();
     }
   }
 
@@ -523,14 +517,11 @@ export function GuideConnector() {
 
   async function requestGuide(nextCountry = selectedCountry || recommendedCountry) {
     if (!nextCountry) {
-      setError("대상 국가를 먼저 선택해 주세요.");
+      setError("대상 국가를 먼저 선택해 주세요");
       return;
     }
 
-    const targetMs = 1200 + Math.floor(Math.random() * 900);
-    loadingTargetRef.current = targetMs;
-    setLoadingAction("generate");
-    setLoading(true);
+    startLoading("generate");
     setError("");
 
     try {
@@ -542,10 +533,7 @@ export function GuideConnector() {
         genre: genre.trim() || undefined,
         synopsis: synopsis.trim() || undefined,
       };
-      const [guide] = await Promise.all([
-        postJson<GuideResponse>("/api/guide", payload),
-        new Promise(resolve => setTimeout(resolve, targetMs)),
-      ]);
+      const guide = await postJson<GuideResponse>("/api/guide", payload);
 
       if (guide.requiresSelection) {
         syncRecommendationSelection(guide);
@@ -559,8 +547,7 @@ export function GuideConnector() {
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
     } finally {
-      setLoading(false);
-      setLoadingAction(null);
+      finishLoading();
     }
   }
 
@@ -621,7 +608,7 @@ export function GuideConnector() {
   const primaryButtonLabel = loading
     ? loadingText
     : hasSynopsis && !recommendationResult
-      ? "현지화 적합 국가 추천 받기"
+      ? "시놉시스 종합 국가 추천 받기"
       : "선택한 국가로 가이드 생성";
   const primaryButtonDisabled = loading || !genre.trim() || (!hasSynopsis && !selectedCountry && !recommendedCountry);
   const selectionNotice = hasSynopsis
@@ -721,7 +708,7 @@ export function GuideConnector() {
             <b>추천 결과</b>
             <p className="guide-selection-summary">
               추천 국가: <strong>{recommendedCountryLabel}</strong>
-              {recommendationResult.recommendation_reasons?.length ? ` · ${recommendationResult.recommendation_reasons.join(" / ")}` : ""}
+              {recommendationResult.recommendation_reasons?.length ? ` · ${recommendationResult.recommendation_reasons.join(" · ")}` : ""}
             </p>
             {recommendationResult.limitation_notice && <p className="guide-note">{recommendationResult.limitation_notice}</p>}
             <div className="guide-selection-hint">
@@ -756,7 +743,7 @@ export function GuideConnector() {
         </div>
       </div>
 
-      <article className="glass-card guide-doc">
+      <article className="glass-card guide-doc guide-document-modal">
         {loading ? (
           <div className="guide-loading">
             <div className="guide-spinner" />
@@ -798,7 +785,11 @@ export function GuideConnector() {
               <button type="button" className="secondary compact" onClick={() => downloadGuide(guideResult, "json")}>JSON 다운로드</button>
             </div>
 
-            {allSections.length > 0 && (
+            {(guideResult.guide_html || guideResult.htmlReport) ? (
+              <div className="guide-document-body">
+                <div className="guide-html" dangerouslySetInnerHTML={{ __html: guideResult.guide_html || guideResult.htmlReport || "" }} />
+              </div>
+            ) : allSections.length > 0 ? (
               <div className="guide-section-list">
                 {allSections.map(([key, section], index) => (
                   <section key={key} className="guide-section">
@@ -814,31 +805,24 @@ export function GuideConnector() {
                   </section>
                 ))}
               </div>
-            )}
+            ) : null}
 
             {guideResult.evidenceUsed && guideResult.evidenceUsed.length > 0 && (
               <section className="guide-evidence-panel">
                 <div className="guide-section-header">
-                  <span className="guide-section-title">사용 근거</span>
+                  <span className="guide-section-title">참고 근거</span>
                 </div>
                 <div className="guide-evidence-list">
                   {guideResult.evidenceUsed.slice(0, 8).map((ev, index) => (
                     <article key={`${ev.platform}-${ev.collection}-${ev.rank}-${index}`} className="guide-evidence-item">
-                      <b>{ev.platform} / {ev.collection} · rank {ev.rank}</b>
+                      <b>{ev.platform} · {ev.collection} · rank {ev.rank}</b>
                       <span>{ev.title}</span>
-                      <small>{ev.genre || "genre unknown"}{ev.reason ? ` · ${ev.reason}` : ""}</small>
+                      <small>{ev.genre || "장르 미지정"}{ev.reason ? ` · ${ev.reason}` : ""}</small>
                       {ev.tags && ev.tags.length > 0 && <p>{ev.tags.slice(0, 6).join(" · ")}</p>}
                     </article>
                   ))}
                 </div>
               </section>
-            )}
-
-            {(guideResult.guide_html || guideResult.htmlReport) && (
-              <details className="guide-html-preview">
-                <summary>HTML 미리보기</summary>
-                <div className="guide-html" dangerouslySetInnerHTML={{ __html: guideResult.guide_html || guideResult.htmlReport || "" }} />
-              </details>
             )}
           </>
         ) : activePreview ? (

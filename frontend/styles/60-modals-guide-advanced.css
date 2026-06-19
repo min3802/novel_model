@@ -25,3 +25,47 @@
 .guide-html-preview summary{cursor:pointer;color:#6d28d9;font-weight:950}
 .guide-html-preview .guide-html{margin-top:1rem}
 @media(max-width:900px){.guide-evidence-list{grid-template-columns:1fr}}
+
+
+.guide-document-modal .guide-selection-box,
+.guide-document-modal .guide-recommend-box,
+.guide-document-modal .guide-evidence-panel,
+.guide-document-modal .guide-html-preview{
+  margin-top:1rem;
+  border:1px solid var(--guide-line-soft);
+  border-radius:18px;
+  background:#fff;
+  padding:1rem;
+}
+.guide-document-modal .guide-selection-box p{
+  margin:.2rem 0 .8rem;
+  color:var(--guide-muted);
+  line-height:1.65;
+}
+.guide-document-modal .guide-rec{
+  border-color:var(--guide-line-soft);
+  background:#fff;
+  color:var(--guide-text);
+}
+.guide-document-modal .guide-rec.active{
+  border-color:var(--guide-main);
+  background:var(--guide-chip-soft);
+  color:var(--guide-main);
+}
+.guide-document-modal .guide-rec small{
+  color:var(--guide-muted);
+}
+.guide-document-modal .guide-html-preview summary{
+  cursor:pointer;
+  color:var(--guide-main);
+  font-weight:950;
+}
+.guide-document-modal .guide-html-preview .guide-html{
+  margin-top:1rem;
+}
+@media(max-width:900px){
+  .guide-document-modal{
+    height:auto;
+    max-height:none;
+  }
+}
