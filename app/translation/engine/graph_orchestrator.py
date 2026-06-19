@@ -118,6 +118,8 @@ class TranslationGraphState(TypedDict, total=False):
     annotationCandidateHook: Callable[[TranslationGraphState], list[dict[str, Any]]] | None
     annotationRetrievalHook: Callable[[TranslationGraphState], list[dict[str, Any]]] | None
     readerEndnoteWriterHook: Callable[[TranslationGraphState], list[dict[str, Any]]] | None
+    # LLM 리뷰어 hook: (state, reviewer_type) -> list[v3 issue dict]. 없으면 결정론적 리뷰만.
+    reviewerHook: Callable[[TranslationGraphState, str], list[dict[str, Any]]] | None
 
 
 def _trace(state: TranslationGraphState, node: GraphNodeName, **data: Any) -> TranslationGraphState:
@@ -903,6 +905,22 @@ def deterministic_precheck(state: TranslationGraphState) -> TranslationGraphStat
     )
 
 
+def _llm_reviewer_findings(state: TranslationGraphState, reviewer_type: str) -> list[dict[str, Any]]:
+    """주입된 LLM 리뷰어 hook을 호출해 (advisory) findings를 만든다.
+
+    hook은 (state, reviewer_type) -> list[v3 issue dict]. 리뷰 실패가 그래프를 막지
+    않도록 예외는 빈 리스트로 흡수한다(reviewers.py의 fail-soft와 동일 철학).
+    """
+    hook = state.get("reviewerHook")
+    if hook is None:
+        return []
+    try:
+        raw_issues = hook(state, reviewer_type) or []
+    except Exception:
+        return []
+    return [_finding_from_issue(reviewer_type, issue) for issue in raw_issues if isinstance(issue, dict)]
+
+
 def _review_by_codes(state: TranslationGraphState, reviewer_type: str, node: GraphNodeName) -> TranslationGraphState:
     codes = _REVIEWER_ISSUE_CODES[reviewer_type]
     issues = [
@@ -911,6 +929,7 @@ def _review_by_codes(state: TranslationGraphState, reviewer_type: str, node: Gra
         if str(issue.get("code") or issue.get("type") or "") in codes
     ]
     findings = [_finding_from_issue(reviewer_type, issue) for issue in issues]
+    findings += _llm_reviewer_findings(state, reviewer_type)
     return _record_review_trace(state, node=node, reviewer_type=reviewer_type, findings=findings)
 
 
@@ -949,6 +968,7 @@ def review_cultural(state: TranslationGraphState) -> TranslationGraphState:
         if str(issue.get("code") or issue.get("type") or "") in _REVIEWER_ISSUE_CODES["cultural"]
     ]
     findings.extend(_finding_from_issue("cultural", issue) for issue in issues)
+    findings += _llm_reviewer_findings(state, "cultural")
     return _record_review_trace(state, node="review_cultural", reviewer_type="cultural", findings=findings)
 
 
@@ -2055,6 +2075,42 @@ def align_endnotes_to_final_translation(state: TranslationGraphState) -> Transla
     )
 
 
+def _review_cards_from_findings(findings: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """LLM 리뷰어 findings(reviewFindings)를 화면 검수항목용 카드로 변환한다.
+
+    section 태그가 있는 findings(=LLM 리뷰어: voice/naturalness/cultural)만 카드로 만든다.
+    결정론적 critic findings(section 없음)는 loop.authorReviewCards 쪽에서 이미 처리되므로 제외.
+    화면은 card.section 으로 '말투/자연스러움/문화권 유의사항' 소제목 그룹을 만든다(advisory).
+    """
+    cards: list[dict[str, Any]] = []
+    for index, finding in enumerate(findings or [], start=1):
+        issue = finding.get("issue") or {}
+        section = issue.get("section")
+        if not section:
+            continue
+        suggestion = finding.get("suggestion") or issue.get("suggestion") or ""
+        cards.append(
+            {
+                "id": f"v3-review-card-{index}",
+                "priority": finding.get("priority") or "P2",
+                "status": "pending",
+                "section": section,
+                "sectionLabel": issue.get("sectionLabel") or section,
+                "reviewerType": finding.get("reviewerType") or section,
+                "severity": issue.get("severity") or "",
+                "decisionType": finding.get("code") or "review_item",
+                "sourceSpan": finding.get("sourceSpan") or "",
+                "targetSpan": finding.get("targetSpan") or "",
+                "currentTranslation": finding.get("targetSpan") or "",
+                "explanation": finding.get("message") or "",
+                "suggestion": suggestion,
+                "authorQuestion": "이 검수 의견을 반영할지 확인해 주세요.",
+                "suggestedActions": [suggestion] if suggestion else [],
+            }
+        )
+    return cards
+
+
 def build_translation_package(state: TranslationGraphState) -> TranslationGraphState:
     loop = state["_loop"]
     guidelines = state["_guidelinesObject"]
@@ -2106,13 +2162,15 @@ def build_translation_package(state: TranslationGraphState) -> TranslationGraphS
             "readerEndnotes": "annotation branch adapter/stub unless hooks provide retrieval-backed notes",
         },
     }
+    # 결정론적 critic 카드 + LLM 리뷰어(말투/자연스러움/문화) 카드 합류.
+    author_review_cards = list(loop.authorReviewCards) + _review_cards_from_findings(state.get("reviewFindings") or [])
     package = V3LiteraryPackageResult(
         "v3_literary_package",
         loop.deliveryStatus,
         loop.finalTranslation,
         rationale,
         loop.qaIssues,
-        loop.authorReviewCards,
+        author_review_cards,
         internal,
         readerEndnotes=state.get("readerEndnotes") or [],
         userVisibleErrorCode=loop.userVisibleErrorCode,
@@ -2346,6 +2404,7 @@ def build_v3_graph_literary_package(
     annotation_candidate_hook: Callable[[TranslationGraphState], list[dict[str, Any]]] | None = None,
     annotation_retrieval_hook: Callable[[TranslationGraphState], list[dict[str, Any]]] | None = None,
     reader_endnote_writer_hook: Callable[[TranslationGraphState], list[dict[str, Any]]] | None = None,
+    reviewer_hook: Callable[[TranslationGraphState, str], list[dict[str, Any]]] | None = None,
 ) -> V3LiteraryPackageResult:
     state = run_graph_orchestrator(
         {
@@ -2358,6 +2417,7 @@ def build_v3_graph_literary_package(
             "annotationCandidateHook": annotation_candidate_hook,
             "annotationRetrievalHook": annotation_retrieval_hook,
             "readerEndnoteWriterHook": reader_endnote_writer_hook,
+            "reviewerHook": reviewer_hook,
         },
         max_iterations=max_iterations,
         translate_once=translate_once,

@@ -55,5 +55,35 @@ def load_locale_constraints(locale: str) -> str:
     return load_prompt_file(prompt_root() / file_name)
 
 
+# Per-language register guidance for the voice reviewer: how each target language realizes
+# the speech-register distinctions (honorifics / politeness) carried by the Korean source.
+LOCALE_REGISTER_GUIDES: dict[str, str] = {
+    "ko_ja": (
+        "Japanese: apply correct speech registers (敬語 / タメ口) per character. "
+        "Match the source's honorific relationships—keep 敬語 where the speaker defers, タメ口 between peers."
+    ),
+    "ko_zh_cn": (
+        "Chinese: Mandarin has weak grammatical honorifics, so register lives in word choice, "
+        "address terms (您/你), and tone. Keep natural 网络文学-style prose and preserve the social distance of the source."
+    ),
+    "ko_th_th": (
+        "Thai: apply appropriate politeness levels per character and narrator "
+        "(particles like ครับ/ค่ะ, pronoun choices). Match each speaker's deference to the source."
+    ),
+    "ko_en_us": (
+        "English (US): English has no grammatical honorific system, so carry register through diction, "
+        "contractions, and formality of phrasing—formal vs. casual—rather than honorific markers."
+    ),
+}
+
+
+def load_register_guide(locale: str) -> str:
+    """Return the target-language register guidance for the voice reviewer.
+
+    Soft lookup: unknown locale -> empty string (reviewer still runs without it).
+    """
+    return LOCALE_REGISTER_GUIDES.get(locale, "")
+
+
 def load_runtime_prompt(file_name: str) -> str:
     return load_prompt_file(runtime_prompt_root() / file_name)

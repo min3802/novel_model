@@ -17,6 +17,7 @@ from typing import Any, Callable
 
 from .agents.direct_translator import DirectTranslator
 from .agents.endnote_writer import EndnoteWriter, build_reader_endnote_hook
+from .agents.reviewers import CulturalSafetyReviewer, NaturalnessReviewer, VoiceReviewer
 from .config import PipelineConfig
 from .retrieval.annotation_retriever import AnnotationRetriever
 from .engine.graph_orchestrator import build_v3_graph_literary_package
@@ -78,6 +79,56 @@ def _hard_glossary_context(work_memory: dict[str, Any] | None) -> str:
     )
 
 
+# --- LLM 리뷰어 어댑터: reviewers.py 출력 -> v3 그래프 issue 형식으로 "API 조정" ---
+_SECTION_LABELS = {"voice": "말투", "naturalness": "자연스러움", "cultural": "문화권 유의사항"}
+_SEVERITY_TO_PRIORITY = {"CRITICAL": "P1", "HIGH": "P1", "MEDIUM": "P2", "LOW": "P3"}
+
+
+def _review_issue_to_v3(reviewer_type: str, issue: Any) -> dict[str, Any]:
+    severity = str(getattr(issue, "severity", "") or "").upper()
+    return {
+        "code": f"{reviewer_type}_review",
+        "type": f"{reviewer_type}_review",
+        # advisory: 절대 P0(차단)로 매핑하지 않는다. 카드로만 노출.
+        "priority": _SEVERITY_TO_PRIORITY.get(severity, "P3"),
+        "severity": severity,
+        "message": getattr(issue, "problem", "") or "",
+        "sourceSpan": getattr(issue, "source_span", "") or "",
+        "targetSpan": getattr(issue, "target_span", "") or "",
+        "suggestion": getattr(issue, "suggestion", "") or "",
+        "reviewerType": reviewer_type,
+        "section": reviewer_type,
+        "sectionLabel": _SECTION_LABELS.get(reviewer_type, reviewer_type),
+        "autoRevisionEligible": False,
+    }
+
+
+def build_reviewer_hook(reviewers: dict[str, Any]) -> Callable[[dict[str, Any], str], list[dict[str, Any]]]:
+    """v3 그래프 reviewerHook: (state, reviewer_type) -> list[v3 issue dict].
+
+    advisory — voice/naturalness/cultural 만 LLM 리뷰(그 외 reviewer_type은 빈 리스트).
+    현 후보 번역(draftTranslation)을 리뷰한다. mock 모드면 reviewer가 빈 결과를 낸다.
+    """
+
+    def _hook(state: dict[str, Any], reviewer_type: str) -> list[dict[str, Any]]:
+        reviewer = reviewers.get(reviewer_type)
+        if reviewer is None:
+            return []
+        translation = state.get("draftTranslation") or state.get("finalTranslation") or ""
+        if not translation.strip():
+            return []
+        result = reviewer.review(
+            source_text=state.get("sourceText") or "",
+            translation=translation,
+            rationale="",
+            translation_profile=None,
+            source_analysis=state.get("sourceAnalysis"),
+        )
+        return [_review_issue_to_v3(reviewer_type, issue) for issue in (result.issues or [])]
+
+    return _hook
+
+
 class TranslationPipeline:
     """단일 번역 파이프라인. config(locale/mock)로 구성하고 run() 한 번으로 실행."""
 
@@ -86,6 +137,11 @@ class TranslationPipeline:
         self.direct_translator = DirectTranslator(self.config)
         self.annotation_retriever = AnnotationRetriever(self.config)
         self.endnote_writer = EndnoteWriter(self.config)
+        self.reviewers = {
+            "voice": VoiceReviewer(self.config),
+            "naturalness": NaturalnessReviewer(self.config),
+            "cultural": CulturalSafetyReviewer(self.config),
+        }
 
     def run(
         self,
@@ -138,6 +194,7 @@ class TranslationPipeline:
             translate_once=None if self.config.mock else translate_once,
             annotation_retrieval_hook=build_annotation_retrieval_hook(self.annotation_retriever),
             reader_endnote_writer_hook=build_reader_endnote_hook(self.endnote_writer),
+            reviewer_hook=build_reviewer_hook(self.reviewers),
         )
 
     # 기존 backend 호출부 호환 별칭 (translation_service 가 이 이름으로 호출).
