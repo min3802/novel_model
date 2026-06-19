@@ -10,8 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
-
-ROOT = Path(__file__).resolve().parents[2]
+from app.guide.config import ROOT
 DEFAULT_INPUT = ROOT / "data" / "localization_guide" / "platform_observation" / "platform_trends_current.json"
 DEFAULT_REPORT = ROOT / "data" / "localization_guide" / "platform_observation" / "platform_trend_localization_guide.md"
 DEFAULT_PROMPT = ROOT / "data" / "localization_guide" / "platform_observation" / "platform_trend_guide_prompt.json"

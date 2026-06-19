@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from app.guide.platform_trend_guide import (
+from app.guide.retrieval.platform_trends import (
     DEFAULT_INPUT,
     build_collection_profiles,
     build_country_profiles,
@@ -717,3 +717,13 @@ def build_localization_advice(payload: dict[str, Any], *, data_path: Path = DEFA
 
     return generate_localization_guide(payload, data_path=data_path)
 
+__all__ = [
+    "EvidenceItem",
+    "Recommendation",
+    "available_options",
+    "build_localization_advice",
+    "generate_localization_guide",
+    "normalize_country",
+    "rank_countries",
+    "recommend_country",
+]

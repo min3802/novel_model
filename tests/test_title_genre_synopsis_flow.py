@@ -3,7 +3,7 @@
 import unittest
 
 from backend.services.guide_service import guide
-from app.guide.regulation_policy_analysis import build_policy_attention_report
+from app.guide.engine.policy_analysis import build_policy_attention_report
 
 
 class TitleGenreSynopsisFlowTests(unittest.TestCase):

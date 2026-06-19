@@ -2,8 +2,8 @@
 import unittest
 
 import api_server
-from app.guide.platform_trend_advisor import build_localization_advice, rank_countries
-from app.guide.platform_trend_guide import load_trend_data
+from app.guide.engine.recommendation import build_localization_advice, rank_countries
+from app.guide.retrieval.platform_trends import load_trend_data
 
 
 class PlatformTrendAdvisorTests(unittest.TestCase):

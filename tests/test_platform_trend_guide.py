@@ -1,7 +1,7 @@
 ﻿
 import unittest
 
-from app.guide.platform_trend_guide import (
+from app.guide.retrieval.platform_trends import (
     build_collection_profiles,
     build_country_profiles,
     build_prompt_payload,

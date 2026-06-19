@@ -28,6 +28,59 @@ class GuideContextPackBriefingTest(unittest.TestCase):
         self.assertNotIn("signal_type", str(briefing))
         self.assertNotIn("context pack", str(briefing))
 
+    def test_context_pack_can_be_disabled_without_public_briefing_payload(self) -> None:
+        result = guide(
+            {
+                "legacyGuide": True,
+                "targetCountry": "Japan",
+                "title": "계약 결혼을 거부한 악역영애",
+                "genre": "로맨스 판타지",
+                "titleElements": ["계약 결혼", "악역영애"],
+                "includeContextPack": False,
+                "includeInternal": True,
+            }
+        )
+
+        self.assertFalse(result["contextPackUsed"])
+        self.assertEqual(result["targetMarket"], "japan")
+        self.assertEqual(result["contextRecordCount"], 0)
+        self.assertEqual(result["observedSignalCount"], 0)
+        self.assertEqual(result["matchedSignals"], [])
+        self.assertNotIn("contextPackBriefing", result)
+        self.assertNotIn("contextPackEvidence", result)
+
+    def test_context_pack_diagnostics_are_internal_only(self) -> None:
+        result = guide(
+            {
+                "legacyGuide": True,
+                "targetCountry": "Japan",
+                "title": "계약 결혼을 거부한 악역영애",
+                "genre": "로맨스 판타지",
+                "titleElements": ["계약 결혼", "악역영애"],
+            }
+        )
+
+        self.assertIn("contextPackBriefing", result)
+        self.assertNotIn("contextPackUsed", result)
+        self.assertNotIn("matchedSignals", result)
+
+    def test_reunion_synopsis_does_not_infer_reincarnation_axis_from_again(self) -> None:
+        result = guide(
+            {
+                "legacyGuide": True,
+                "targetCountry": "Japan",
+                "title": "다시 만난 너에게",
+                "genre": "현대 로맨스",
+                "synopsis": "헤어진 두 사람이 고향으로 돌아와 다시 만나 사랑을 확인한다.",
+                "includeInternal": True,
+            }
+        )
+
+        briefing = result["contextPackBriefing"]
+        inferred = briefing["input_summary"]["synopsis_inferred_elements"]
+        self.assertNotIn("회귀·전생·이세계 축", inferred)
+        self.assertNotIn("회귀·전생·이세계 축", result["matchedSignals"])
+
 
 if __name__ == "__main__":
     unittest.main()

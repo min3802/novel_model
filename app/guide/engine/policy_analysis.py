@@ -6,8 +6,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-
-ROOT = Path(__file__).resolve().parents[2]
+from app.guide.config import ROOT
 REGULATION_DIR = ROOT / "data" / "localization_guide" / "regulation"
 RAW_PLATFORM_RULES_DIR = ROOT / "data" / "localization_guide" / "raw" / "platform_rules"
 

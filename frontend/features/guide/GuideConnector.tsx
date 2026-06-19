@@ -187,102 +187,6 @@ function safeFilename(value: string) {
     .slice(0, 80) || "localization-guide";
 }
 
-function guideToMarkdown(result: GuideResult) {
-  const lines: string[] = [];
-  lines.push(`# ${guideDisplayTitle(result)}`);
-  lines.push("");
-  lines.push(`- Mode: ${result.mode}`);
-  lines.push(`- Target country: ${displayCountryName(result.targetCountry || result.country)}`);
-  lines.push(`- Genre: ${result.genre || "미지정"}`);
-  if (result.createdAt) lines.push(`- Created at: ${result.createdAt}`);
-  if (result.synopsis) {
-    lines.push("");
-    lines.push("## Synopsis");
-    lines.push(result.synopsis);
-  }
-  if (result.summary_text) {
-    lines.push("");
-    lines.push(`Summary: ${result.summary_text}`);
-  }
-  if (result.recommended_country) {
-    lines.push("");
-    lines.push(`- Recommended country: ${displayCountryName(result.recommended_country_display || result.recommended_country)}`);
-  }
-  if (result.recommendation_reasons?.length) {
-    lines.push("");
-    lines.push("## Recommendation reasons");
-    result.recommendation_reasons.forEach(reason => lines.push(`- ${reason}`));
-  }
-  if (result.limitation_notice) {
-    lines.push("");
-    lines.push(`- Limitation: ${result.limitation_notice}`);
-  }
-  if (result.translation_profile) {
-    lines.push("");
-    lines.push("## Translation profile");
-    if (result.translation_profile.tone) lines.push(`- Tone: ${result.translation_profile.tone}`);
-    if (result.translation_profile.dialogue_style) lines.push(`- Dialogue style: ${result.translation_profile.dialogue_style}`);
-    if (result.translation_profile.narration_style) lines.push(`- Narration style: ${result.translation_profile.narration_style}`);
-    if (result.translation_profile.localization_level) lines.push(`- Localization level: ${result.translation_profile.localization_level}`);
-    if (result.translation_profile.proper_noun_policy) lines.push(`- Proper noun policy: ${result.translation_profile.proper_noun_policy}`);
-    if (result.translation_profile.culture_policy) lines.push(`- Culture policy: ${result.translation_profile.culture_policy}`);
-    if (result.translation_profile.do_not?.length) lines.push(`- Do not: ${result.translation_profile.do_not.join("; ")}`);
-  }
-  if (result.recommendedCountries?.length) {
-    lines.push("");
-    lines.push("## Recommended countries");
-    result.recommendedCountries.forEach(rec => {
-      lines.push(`- ${displayCountryName(rec.country)} (${rec.score}): ${rec.reasons.join("; ")}`);
-    });
-  }
-  if (result.sections) {
-    const ordered = [
-      ...GUIDE_SECTION_ORDER.flatMap(key => result.sections?.[key] ? [[key, result.sections[key]] as const] : []),
-      ...Object.entries(result.sections).filter(([key]) => !GUIDE_SECTION_ORDER.includes(key)),
-    ];
-    ordered.forEach(([key, section]) => {
-      lines.push("");
-      lines.push(`## ${section.title || key}`);
-      (section.items || []).forEach(item => lines.push(`- ${item}`));
-    });
-  }
-  if (result.evidenceUsed?.length) {
-    lines.push("");
-    lines.push("## Evidence used");
-    result.evidenceUsed.forEach(ev => {
-      lines.push(`- ${ev.platform} / ${ev.collection} rank ${ev.rank}: ${ev.title}${ev.genre ? ` (${ev.genre})` : ""}`);
-      if (ev.reason) lines.push(`  - Reason: ${ev.reason}`);
-      if (ev.tags?.length) lines.push(`  - Tags: ${ev.tags.slice(0, 12).join(", ")}`);
-      if (ev.source_url) lines.push(`  - Source: ${ev.source_url}`);
-    });
-  }
-  lines.push("");
-  lines.push("---");
-  lines.push("Evidence boundary: platform trend metadata only; not national readership certainty.");
-  return lines.join("\n");
-}
-
-function downloadText(filename: string, content: string, type: string) {
-  const blob = new Blob([content], { type });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = filename;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
-}
-
-function downloadGuide(result: GuideResult, format: "md" | "json") {
-  const base = safeFilename(`${guideDisplayTitle(result)}-${result.targetCountry || result.country || "country"}-${result.genre || "genre"}`);
-  if (format === "json") {
-    downloadText(`${base}.json`, JSON.stringify(result, null, 2), "application/json;charset=utf-8");
-    return;
-  }
-  downloadText(`${base}.md`, guideToMarkdown(result), "text/markdown;charset=utf-8");
-}
-
 async function downloadGuidePdf(result: GuideResult) {
   const id = guideId(result);
   if (!id) {
@@ -781,8 +685,6 @@ export function GuideConnector() {
             )}
             <div className="visual-result-actions guide-download-actions">
               <button type="button" className="secondary compact" onClick={() => void handlePdfDownload(guideResult)}>PDF 다운로드</button>
-              <button type="button" className="secondary compact" onClick={() => downloadGuide(guideResult, "md")}>Markdown 다운로드</button>
-              <button type="button" className="secondary compact" onClick={() => downloadGuide(guideResult, "json")}>JSON 다운로드</button>
             </div>
 
             {(guideResult.guide_html || guideResult.htmlReport) ? (

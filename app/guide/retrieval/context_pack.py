@@ -7,8 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-
-ROOT = Path(__file__).resolve().parents[2]
+from app.guide.config import ROOT
 PROCESSED_DIR = ROOT / "data" / "localization_guide" / "platform_observation" / "processed"
 CONTEXT_DIR = PROCESSED_DIR / "context_packs"
 
@@ -195,7 +194,7 @@ NEAR_LABELS = {
 
 SYNOPSIS_HINTS = {
     "관계/로맨스 축": ["사랑", "연애", "로맨스", "결혼", "약혼", "공작", "왕자", "황태자", "악녀", "악역영애"],
-    "회귀·전생·이세계 축": ["회귀", "전생", "빙의", "환생", "이세계", "다시", "돌아와"],
+    "회귀·전생·이세계 축": ["회귀", "전생", "빙의", "환생", "이세계"],
     "성장·시스템 축": ["성장", "레벨", "스킬", "시스템", "던전", "랭커"],
     "전투·생존 축": ["전투", "전쟁", "복수", "피", "잔혹", "생존", "멸망"],
     "연령/민감 표현 축": ["R15", "R18", "성적", "잔혹", "폭력", "유혈"],

@@ -1,22 +1,5 @@
-"""Guide/report generation domain package.
+"""Localization guide package public API."""
 
-This package contains the non-translation guide/report implementation used by
-the backend service boundary and related scripts/tests.
-"""
+from .guide_pipeline import generate_guide
 
-from .context_pack_analysis import build_context_pack_overlap_report
-from .platform_trend_advisor import build_localization_advice, rank_countries
-from .platform_trend_guide import load_trend_data
-from .regulation_policy_analysis import (
-    build_policy_attention_payload,
-    build_policy_attention_report,
-)
-
-__all__ = [
-    "build_context_pack_overlap_report",
-    "build_localization_advice",
-    "build_policy_attention_payload",
-    "build_policy_attention_report",
-    "load_trend_data",
-    "rank_countries",
-]
+__all__ = ["generate_guide"]

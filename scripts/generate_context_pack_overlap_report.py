@@ -9,7 +9,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from app.guide.context_pack_analysis import WorkInput, build_context_pack_overlap_report
+from app.guide.retrieval.context_pack import WorkInput, build_context_pack_overlap_report
 
 
 DEFAULT_OUTPUT_STEM = ROOT / "docs" / "context_pack_overlap_report_sample"

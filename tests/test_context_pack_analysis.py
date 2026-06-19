@@ -2,7 +2,7 @@
 
 import unittest
 
-from app.guide.context_pack_analysis import build_context_pack_overlap_report
+from app.guide.retrieval.context_pack import build_context_pack_overlap_report
 
 
 class ContextPackAnalysisTest(unittest.TestCase):
