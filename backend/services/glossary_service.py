@@ -4,14 +4,11 @@ import os
 from typing import Any
 
 from app.translation.glossary_store import (
-    GlossaryCandidateRecord,
+    DEFAULT_CATEGORY,
     GlossaryEntryRecord,
     GlossaryRepository,
     WorkMemory,
-    collect_glossary_candidate_inputs,
     default_glossary_repository,
-    is_contextual_reference,
-    should_persist_as_glossary_candidate,
 )
 
 _repository_cache: GlossaryRepository | None = None
@@ -69,177 +66,60 @@ def get_glossary_repository_status() -> dict[str, Any]:
     }
 
 
-def list_approved_glossary(
+def list_glossary(
     work_id: str,
-    target_locale: str,
+    country: str,
     *,
     repository: GlossaryRepository | None = None,
     limit: int = 50,
 ) -> list[GlossaryEntryRecord]:
     repo = repository or get_glossary_repository()
-    return repo.list_approved_glossary(work_id, target_locale, limit=limit)
+    return repo.list_glossary(work_id, country, limit=limit)
+
+
+def upsert_entry(
+    work_id: str,
+    country: str,
+    source: str,
+    target: str,
+    *,
+    category: str = DEFAULT_CATEGORY,
+    repository: GlossaryRepository | None = None,
+) -> GlossaryEntryRecord:
+    repo = repository or get_glossary_repository()
+    return repo.upsert_entry(
+        work_id=work_id,
+        country=country,
+        source=source,
+        target=target,
+        category=category,
+    )
+
+
+def get_entry(
+    entry_id: int,
+    *,
+    repository: GlossaryRepository | None = None,
+) -> GlossaryEntryRecord | None:
+    repo = repository or get_glossary_repository()
+    return repo.get_entry(entry_id)
+
+
+def delete_entry(
+    entry_id: int,
+    *,
+    repository: GlossaryRepository | None = None,
+) -> bool:
+    repo = repository or get_glossary_repository()
+    return repo.delete_entry(entry_id)
 
 
 def hydrate_work_memory(
     work_id: str,
-    target_locale: str,
+    country: str,
     *,
     repository: GlossaryRepository | None = None,
     limit: int = 50,
 ) -> WorkMemory | None:
     repo = repository or get_glossary_repository()
-    return repo.hydrate_work_memory(work_id, target_locale, limit=limit)
-
-
-def create_glossary_candidate(
-    payload: dict[str, Any] | None = None,
-    *,
-    repository: GlossaryRepository | None = None,
-    **kwargs: Any,
-) -> GlossaryCandidateRecord:
-    repo = repository or get_glossary_repository()
-    merged = {**(payload or {}), **kwargs}
-    return repo.create_glossary_candidate(**merged)
-
-
-def list_glossary_candidates(
-    work_id: str,
-    target_locale: str,
-    *,
-    status: str | None = None,
-    repository: GlossaryRepository | None = None,
-) -> list[GlossaryCandidateRecord]:
-    repo = repository or get_glossary_repository()
-    return repo.list_glossary_candidates(work_id, target_locale, status=status)
-
-
-def list_pending_candidates(
-    work_id: str,
-    target_locale: str,
-    *,
-    repository: GlossaryRepository | None = None,
-) -> list[GlossaryCandidateRecord]:
-    return list_glossary_candidates(work_id, target_locale, status="pending", repository=repository)
-
-
-def get_glossary_candidate(
-    candidate_id: int,
-    *,
-    repository: GlossaryRepository | None = None,
-) -> GlossaryCandidateRecord | None:
-    repo = repository or get_glossary_repository()
-    return repo.get_glossary_candidate(candidate_id)
-
-
-def _increment(skipped_reasons: dict[str, int], reason: str) -> None:
-    skipped_reasons[reason] = skipped_reasons.get(reason, 0) + 1
-
-
-def _candidate_key(row: Any) -> tuple[str, str]:
-    return (str(getattr(row, "source", "") or "").strip(), str(getattr(row, "category", "") or "other").strip())
-
-
-def capture_candidates_from_v3_result(
-    v3_result: Any,
-    work_id: str,
-    episode_id: str | None,
-    target_locale: str,
-    *,
-    repository: GlossaryRepository | None = None,
-) -> dict[str, Any]:
-    repo = repository or get_glossary_repository()
-    candidates = collect_glossary_candidate_inputs(v3_result)
-    skipped_reasons: dict[str, int] = {}
-    saved = 0
-
-    approved_keys = {_candidate_key(row) for row in repo.list_approved_glossary(work_id, target_locale, limit=500)}
-    pending_keys = {_candidate_key(row) for row in repo.list_glossary_candidates(work_id, target_locale, status="pending")}
-
-    for candidate in candidates:
-        source = str(candidate.get("source") or "").strip()
-        category = str(candidate.get("category") or "other").strip() or "other"
-        suggested_target = str(
-            candidate.get("suggested_target")
-            or candidate.get("suggestedTarget")
-            or candidate.get("target")
-            or ""
-        ).strip()
-        if not source:
-            _increment(skipped_reasons, "empty_source")
-            continue
-        if is_contextual_reference(source):
-            _increment(skipped_reasons, "contextual_reference")
-            continue
-        if not should_persist_as_glossary_candidate(source, category, candidate.get("confidence")):
-            _increment(skipped_reasons, "not_persistable")
-            continue
-        if not suggested_target:
-            _increment(skipped_reasons, "missing_suggested_target")
-            continue
-        key = (source, category)
-        if key in approved_keys:
-            _increment(skipped_reasons, "already_approved")
-            continue
-        if key in pending_keys:
-            _increment(skipped_reasons, "duplicate_candidate")
-            continue
-        repo.create_glossary_candidate(
-            work_id=work_id,
-            episode_id=episode_id,
-            target_locale=target_locale,
-            source=source,
-            suggested_target=suggested_target,
-            category=category,
-            confidence=candidate.get("confidence"),
-            source_span=candidate.get("source_span") or candidate.get("sourceSpan"),
-            reason=candidate.get("reason"),
-            aliases=candidate.get("aliases") or [],
-            status="pending",
-        )
-        pending_keys.add(key)
-        saved += 1
-
-    skipped = sum(skipped_reasons.values())
-    return {
-        "enabled": True,
-        "collectedCount": len(candidates),
-        "savedCount": saved,
-        "skippedCount": skipped,
-        "skippedReasons": skipped_reasons,
-    }
-
-
-def approve_glossary_candidate(
-    candidate_id: int,
-    target_override: str | None = None,
-    *,
-    repository: GlossaryRepository | None = None,
-) -> GlossaryCandidateRecord:
-    repo = repository or get_glossary_repository()
-    return repo.approve_glossary_candidate(candidate_id, target_override=target_override)
-
-
-def approve_candidate(
-    candidate_id: int,
-    target_override: str | None = None,
-    *,
-    repository: GlossaryRepository | None = None,
-) -> GlossaryCandidateRecord:
-    return approve_glossary_candidate(candidate_id, target_override=target_override, repository=repository)
-
-
-def reject_glossary_candidate(
-    candidate_id: int,
-    *,
-    repository: GlossaryRepository | None = None,
-) -> GlossaryCandidateRecord:
-    repo = repository or get_glossary_repository()
-    return repo.reject_glossary_candidate(candidate_id)
-
-
-def reject_candidate(
-    candidate_id: int,
-    *,
-    repository: GlossaryRepository | None = None,
-) -> GlossaryCandidateRecord:
-    return reject_glossary_candidate(candidate_id, repository=repository)
+    return repo.hydrate_work_memory(work_id, country, limit=limit)

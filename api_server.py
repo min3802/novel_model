@@ -19,12 +19,9 @@ from urllib.parse import parse_qs
 from dotenv import load_dotenv
 from backend.services.cover_plan_service import cover_plan
 from backend.services.glossary_api_service import (
-    approve_glossary_candidate_handler,
-    delete_or_deprecate_glossary_entry_handler,
+    delete_glossary_entry_handler,
     get_glossary_repository_status_handler,
-    list_glossary_candidates_handler,
     list_glossary_entries_handler,
-    reject_glossary_candidate_handler,
     upsert_glossary_entry_handler,
 )
 from backend.services.content_api_service import (
@@ -65,9 +62,6 @@ _GUIDE_RE = re.compile(r"^/api/localization-guides/(\d+)$")
 _GUIDE_PDF_RE = re.compile(r"^/api/localization-guides/(\d+)/pdf$")
 _CONTENT_REPOSITORY_STATUS_RE = re.compile(r"^/api/content/repository-status$")
 _GLOSSARY_REPOSITORY_STATUS_RE = re.compile(r"^/api/glossary/repository-status$")
-_GLOSSARY_CANDIDATES_RE = re.compile(r"^/api/works/([^/]+)/glossary/candidates$")
-_GLOSSARY_CANDIDATE_APPROVE_RE = re.compile(r"^/api/works/([^/]+)/glossary/candidates/(\d+)/approve$")
-_GLOSSARY_CANDIDATE_REJECT_RE = re.compile(r"^/api/works/([^/]+)/glossary/candidates/(\d+)/reject$")
 _GLOSSARY_ENTRIES_RE = re.compile(r"^/api/works/([^/]+)/glossary/entries$")
 _GLOSSARY_ENTRY_RE = re.compile(r"^/api/works/([^/]+)/glossary/entries/(\d+)$")
 
@@ -383,18 +377,6 @@ class ApiHandler(BaseHTTPRequestHandler):
                 self._send(200, {"guide": localization_guide_get(gid)})
             elif _GLOSSARY_REPOSITORY_STATUS_RE.match(path):
                 self._send(200, get_glossary_repository_status_handler())
-            elif m := _GLOSSARY_CANDIDATES_RE.match(path):
-                work_id = m.group(1)
-                params = _query_params(self.path)
-                result = list_glossary_candidates_handler(
-                    {
-                        "workId": work_id,
-                        "targetCountry": params.get("targetCountry") or params.get("target_country"),
-                        "targetLocale": params.get("targetLocale") or params.get("target_locale"),
-                        "status": params.get("status"),
-                    }
-                )
-                self._send(int(result.get("status") or 200), result)
             elif m := _GLOSSARY_ENTRIES_RE.match(path):
                 work_id = m.group(1)
                 params = _query_params(self.path)
@@ -462,16 +444,6 @@ class ApiHandler(BaseHTTPRequestHandler):
                 wid = int(m.group(1))
                 result = upsert_episode_handler({**payload, "workId": wid})
                 self._send(int(result.get("status") or 201), result)
-            elif m := _GLOSSARY_CANDIDATE_APPROVE_RE.match(path):
-                work_id = m.group(1)
-                candidate_id = m.group(2)
-                result = approve_glossary_candidate_handler({**payload, "workId": work_id, "candidateId": candidate_id})
-                self._send(int(result.get("status") or 200), result)
-            elif m := _GLOSSARY_CANDIDATE_REJECT_RE.match(path):
-                work_id = m.group(1)
-                candidate_id = m.group(2)
-                result = reject_glossary_candidate_handler({**payload, "workId": work_id, "candidateId": candidate_id})
-                self._send(int(result.get("status") or 200), result)
             elif m := _GLOSSARY_ENTRIES_RE.match(path):
                 work_id = m.group(1)
                 params = _query_params(self.path)
@@ -574,7 +546,7 @@ class ApiHandler(BaseHTTPRequestHandler):
                 work_id = m.group(1)
                 entry_id = m.group(2)
                 params = _query_params(self.path)
-                result = delete_or_deprecate_glossary_entry_handler(
+                result = delete_glossary_entry_handler(
                     {
                         "workId": work_id,
                         "targetCountry": params.get("targetCountry")

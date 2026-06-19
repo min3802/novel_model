@@ -24,7 +24,7 @@ from app.translation.locale_utils import (
 from app.translation.infra.runtime import is_mock_mode
 from app.translation.text_processing.consistency_checker import check_translation_consistency
 from app.translation.text_processing.korean_output import is_korean_source
-from backend.services.glossary_service import capture_candidates_from_v3_result, hydrate_work_memory
+from backend.services.glossary_service import hydrate_work_memory
 from backend.services.content_service import get_content_repository
 from backend.store.memory_store import _get_episode, save_translation_version, work_get
 
@@ -563,7 +563,7 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
         work_memory_fallback_reason = ""
         if work_memory is None and work_id is not None and locale:
             try:
-                hydrated = hydrate_work_memory(str(work_id), locale)
+                hydrated = hydrate_work_memory(str(work_id), country)
                 if hydrated is not None and hydrated.approvedGlossary:
                     work_memory = hydrated
                     work_memory_source = "rdb_hydrated"
@@ -588,32 +588,9 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
                 debug_artifact_dir=payload.get("debugArtifactDir") or payload.get("debug_artifact_dir"),
             )
         )
-        capture_enabled = bool(payload.get("captureGlossaryCandidates") or payload.get("capture_glossary_candidates"))
-        capture_summary: dict[str, Any]
-        capture_target_locale = locale
-        if not capture_enabled:
-            capture_summary = {"enabled": False, "reason": "disabled"}
-        elif work_id is None:
-            capture_summary = {"enabled": False, "reason": "missing_work_id"}
-        elif not capture_target_locale:
-            capture_summary = {"enabled": False, "reason": "missing_target_locale"}
-        else:
-            try:
-                capture_summary = capture_candidates_from_v3_result(
-                    result,
-                    work_id=str(work_id),
-                    episode_id=str(episode_id) if episode_id is not None else None,
-                    target_locale=capture_target_locale,
-                )
-            except Exception as exc:
-                capture_summary = {
-                    "enabled": True,
-                    "error": f"candidate_capture_failed:{type(exc).__name__}",
-                    "collectedCount": 0,
-                    "savedCount": 0,
-                    "skippedCount": 0,
-                    "skippedReasons": {},
-                }
+        # Glossary candidate auto-capture has been removed: the glossary is a
+        # single, manually-curated rule table, so translation never writes to it.
+        capture_summary = {"enabled": False, "reason": "auto_capture_disabled", "savedCount": 0}
         final_translation = result.get("finalTranslation", "")
         delivery_status = result.get("deliveryStatus", "deliverable")
         user_visible_error_code = (result.get("internal") or {}).get("userVisibleErrorCode")

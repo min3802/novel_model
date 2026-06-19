@@ -7,7 +7,6 @@ from unittest.mock import patch
 
 from app.translation import PipelineConfig, TranslationMode, TranslationPipeline
 from app.translation.glossary_store import default_glossary_repository
-from app.translation.glossary_store import collect_glossary_candidate_inputs
 from app.translation.infra.country_locale import resolve_country_for_locale
 from app.translation.v3_literary_package import (
     GlossaryEntry,
@@ -334,13 +333,13 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
 
     def test_translation_service_prefers_request_work_memory_over_store(self) -> None:
         country = resolve_country_for_locale("ko_ja")
+        default_glossary_repository.clear()
         default_glossary_repository.upsert_entry(
             work_id="svc-work",
-            target_locale="ko_ja",
-            source="균열",
+            country="JP",
+            source="강현우",
             target="ストア由来",
-            category="genre_term",
-            priority="hard",
+            category="person",
         )
         request_memory = {
             "workId": "svc-work",
@@ -375,15 +374,13 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
 
     def test_translation_service_hydrates_work_memory_from_store(self) -> None:
         country = resolve_country_for_locale("ko_ja")
+        default_glossary_repository.clear()
         default_glossary_repository.upsert_entry(
             work_id="svc-work",
-            target_locale="ko_ja",
-            source="균열",
-            target="亀裂",
-            category="genre_term",
-            priority="hard",
-            aliases=["게이트"],
-            forbidden=["crack"],
+            country="JP",
+            source="강현우",
+            target="カン・ヒョヌ",
+            category="person",
         )
 
         response = translate(
@@ -400,161 +397,27 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
         editor_glossary = internal["ragPackets"]["editorEvidence"]["approvedGlossary"]
         self.assertEqual(internal["workMemorySource"], "rdb_hydrated")
         self.assertEqual(internal["workMemoryGlossaryCount"], 1)
-        self.assertEqual(glossary[0]["aliases"], ["게이트"])
-        self.assertEqual(glossary[0]["forbidden"], ["crack"])
-        self.assertEqual(editor_glossary[0]["target"], "亀裂")
+        # Every stored row is an enforced rule; aliases live in their own rows.
+        self.assertEqual(glossary[0]["priority"], "hard")
+        self.assertEqual(glossary[0]["aliases"], [])
+        self.assertEqual(editor_glossary[0]["target"], "カン・ヒョヌ")
 
-    def test_translation_service_candidate_capture_disabled_by_default(self) -> None:
-        with patch("backend.services.translation_service.capture_candidates_from_v3_result") as capture:
-            response = translate(
-                {
-                    "sourceText": IDIOM_SOURCE,
-                    "targetLocale": "ko_ja",
-                    "pipeline": "v3_literary_package",
-                    "workId": "svc-work",
-                }
-            )
-
-        capture.assert_not_called()
-        self.assertEqual(response["internal"]["glossaryCandidateCapture"], {"enabled": False, "reason": "disabled"})
-
-    def test_translation_service_candidate_capture_enabled_with_work_and_locale(self) -> None:
-        with patch(
-            "backend.services.glossary_service.collect_glossary_candidate_inputs",
-            return_value=[
-                {
-                    "source": "성녀",
-                    "suggested_target": "the saintess",
-                    "category": "title",
-                    "aliases": ["그녀"],
-                }
-            ],
-        ):
-            response = translate(
-                {
-                    "sourceText": IDIOM_SOURCE,
-                    "targetLocale": "ko_ja",
-                    "pipeline": "v3_literary_package",
-                    "workId": "svc-work",
-                    "episodeId": "svc-episode",
-                    "captureGlossaryCandidates": True,
-                }
-            )
-
-        capture = response["internal"]["glossaryCandidateCapture"]
-        pending = default_glossary_repository.list_glossary_candidates("svc-work", "ko_ja", status="pending")
-        self.assertTrue(capture["enabled"])
-        self.assertEqual(capture["savedCount"], 1)
-        self.assertEqual(len(pending), 1)
-        self.assertEqual(pending[0].source, "성녀")
-        self.assertEqual(pending[0].aliases, [])
-
-    def test_pending_glossary_candidates_do_not_hydrate_approved_work_memory(self) -> None:
-        country = resolve_country_for_locale("ko_ja")
-        default_glossary_repository.create_glossary_candidate(
-            work_id="svc-work",
-            episode_id="svc-episode",
-            target_locale="ko_ja",
-            source="철수",
-            suggested_target="チョルス",
-            category="person",
-            status="pending",
-        )
-
+    def test_translation_service_candidate_capture_removed(self) -> None:
         response = translate(
             {
-                "sourceText": "철수가 복도를 달렸다.",
-                "targetCountry": country,
-                "mode": "v3_literary_package",
-                "workId": "svc-work",
-            }
-        )
-
-        internal = response["internal"]
-        self.assertEqual(internal["workMemorySource"], "none")
-        self.assertEqual(internal["workMemoryGlossaryCount"], 0)
-        self.assertEqual(internal["ragPackets"]["translatorBrief"]["glossary"], [])
-        self.assertEqual(internal["ragPackets"]["editorEvidence"]["approvedGlossary"], [])
-
-    def test_translation_service_candidate_capture_failure_does_not_block_delivery(self) -> None:
-        with patch(
-            "backend.services.translation_service.capture_candidates_from_v3_result",
-            side_effect=RuntimeError("candidate store down"),
-        ):
-            response = translate(
-                {
-                    "sourceText": IDIOM_SOURCE,
-                    "targetLocale": "ko_ja",
-                    "pipeline": "v3_literary_package",
-                    "workId": "svc-work",
-                    "captureGlossaryCandidates": True,
-                }
-            )
-
-        self.assertNotEqual(response["deliveryStatus"], "blocked_translation_safety")
-        capture = response["internal"]["glossaryCandidateCapture"]
-        self.assertTrue(capture["enabled"])
-        self.assertIn("candidate_capture_failed", capture["error"])
-
-    def test_collect_glossary_candidates_from_real_v3_source_evidence(self) -> None:
-        result = build_v3_literary_package(ENTITY_SOURCE, "ko_en_us")
-
-        rows = collect_glossary_candidate_inputs(result)
-        by_source = {row["source"]: row for row in rows}
-
-        self.assertIn("리아", by_source)
-        self.assertIn("카이든 에른스트", by_source)
-        self.assertIn("북부대공", by_source)
-        self.assertIn("검은 늑대", by_source)
-        self.assertEqual(by_source["리아"]["suggested_target"], "Ria")
-        self.assertEqual(by_source["카이든 에른스트"]["suggested_target"], "Kaiden Ernst")
-        self.assertNotIn("그녀", by_source["리아"].get("aliases", []))
-        self.assertNotIn("그", by_source["카이든 에른스트"].get("aliases", []))
-
-    def test_translation_service_candidate_capture_from_real_v3_evidence_saves_candidates(self) -> None:
-        response = translate(
-            {
-                "sourceText": ENTITY_SOURCE,
-                "targetLocale": "ko_en_us",
+                "sourceText": IDIOM_SOURCE,
+                "targetLocale": "ko_ja",
                 "pipeline": "v3_literary_package",
                 "workId": "svc-work",
-                "episodeId": "svc-episode",
-                "captureGlossaryCandidates": True,
             }
         )
 
-        capture = response["internal"]["glossaryCandidateCapture"]
-        pending = default_glossary_repository.list_glossary_candidates("svc-work", "ko_en_us", status="pending")
-        self.assertTrue(capture["enabled"])
-        self.assertGreaterEqual(capture["savedCount"], 1)
-        self.assertGreaterEqual(len(pending), 1)
-        aliases = [alias for row in pending for alias in row.aliases]
-        self.assertNotIn("그", aliases)
-        self.assertNotIn("그녀", aliases)
-
-    def test_character_reference_evidence_does_not_persist_pronouns_as_hard_aliases(self) -> None:
-        rows = collect_glossary_candidate_inputs(
-            {
-                "internal": {
-                    "characterReferences": [
-                        {
-                            "canonical_name_ko": "카이든 에른스트",
-                            "suggested_target": "Kaiden Ernst",
-                            "category": "person",
-                            "priority": "hard",
-                            "references_ko": ["북부대공", "검은 늑대", "그", "남자", "저 남자"],
-                        }
-                    ]
-                }
-            }
+        # Auto-capture has been removed: the glossary is a single, manually
+        # curated rule table, so translation never writes candidates.
+        self.assertEqual(
+            response["internal"]["glossaryCandidateCapture"],
+            {"enabled": False, "reason": "auto_capture_disabled", "savedCount": 0},
         )
-
-        self.assertEqual(rows[0]["source"], "카이든 에른스트")
-        self.assertEqual(rows[0]["priority"], "hard")
-        self.assertEqual(rows[0]["aliases"], ["북부대공", "검은 늑대"])
-        self.assertNotIn("그", rows[0]["aliases"])
-        self.assertNotIn("남자", rows[0]["aliases"])
-        self.assertNotIn("저 남자", rows[0]["aliases"])
 
     def test_translation_service_hydration_failure_falls_back_without_blocking(self) -> None:
         country = resolve_country_for_locale("ko_ja")
