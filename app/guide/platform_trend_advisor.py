@@ -95,7 +95,7 @@ GENRE_ALIASES = {
 SYNOPSIS_KEYWORDS = {
     "romance": ["romance", "love", "marriage", "husband", "wife", "duke", "prince", "villainess", '약혼', '결혼', '공작', '황태자', '악녀', '공녀', '귀족', '가문', KO_ROMANCE, '사랑'],
     "progression": ["level", "skill", "system", "rank", "dungeon", "quest", '성장', '스킬', '레벨', '시스템', '던전', '랭커'],
-    "isekai": ["reincarn", "isekai", "another world", "transport", '회귀', '돌아와', '다시', KO_REINCARNATION, '빙의', KO_ISEKAI, '환생'],
+    "isekai": ["reincarn", "isekai", "another world", "transport", '회귀', KO_REINCARNATION, '빙의', KO_ISEKAI, '환생'],
     "action": ["battle", "war", "fight", "survival", "apocalypse", '전투', '전쟁', '복수', '잔혹', '피', '생존', '멸망', '아포칼립스'],
     "bl": ["omega", "alpha", "bl", "boys love", '남자', '오메가', '알파'],
 }
@@ -183,8 +183,8 @@ def _synopsis_input_note(synopsis: str | None) -> str:
     if not _text(synopsis):
         return '시놉시스가 없어 세부 소재·관계·수위 요소는 확정하지 않고, 입력 장르와 대상 국가 기준으로만 확인합니다.'
     if motifs:
-        return f"시놉시스에서 {', '.join(motifs)}을 조심스러운 추정 요소로 읽었습니다."
-    return '시놉시스는 제공됐지만 준비된 키워드 기준으로 특정 소재 축을 강하게 확정하지 않았습니다.'
+        return f"시놉시스에서 {', '.join(motifs)} 관련 신호를 참고했지만, 확정 소재로 보지는 않았습니다."
+    return '시놉시스는 제공됐지만 특정 소재 축을 단정하지 않고 장르·국가 기준의 참고 신호만 확인했습니다.'
 
 
 def _row_search_text(row: dict[str, Any]) -> str:
@@ -315,15 +315,15 @@ def rank_countries(data: dict[str, Any], *, genre: str | None, synopsis: str | N
             matched_rows += 1
             score += row_score
             if genre_hits:
-                reasons["requested genre overlaps with platform-visible genres/tags"] += genre_hits
+                reasons["입력 장르가 공개 플랫폼 장르/태그와 겹칩니다"] += genre_hits
             if synopsis_hits:
-                reasons["synopsis motifs overlap with exposed titles/descriptions/tags"] += synopsis_hits
-            evidence_rows.append((row_score, row, f"genre hits={genre_hits}, synopsis hits={synopsis_hits}, rank={rank}"))
+                reasons["시놉시스 관련 신호가 공개 제목/설명/태그와 겹칩니다"] += synopsis_hits
+            evidence_rows.append((row_score, row, f"장르 적중 {genre_hits}, 시놉시스 적중 {synopsis_hits}, 순위 {rank}"))
         if score == 0 and records:
             # Keep available countries visible even for weak matches; use top exposure as fallback evidence.
             top = sorted(records, key=lambda r: int(r.get("rank") or 999))[:3]
-            evidence_rows = [(0.1, row, "fallback top platform exposure") for row in top]
-            reasons["fallback: no strong genre/synopsis overlap found"] = 1
+            evidence_rows = [(0.1, row, "상위 공개 노출을 참고한 보조 근거") for row in top]
+            reasons["장르·시놉시스 겹침이 약해 상위 공개 노출을 참고했습니다"] = 1
             score = 0.1
         else:
             # Normalize so larger crawls do not dominate the "country fit" chart just
@@ -348,7 +348,7 @@ def rank_countries(data: dict[str, Any], *, genre: str | None, synopsis: str | N
             Recommendation(
                 country=country,
                 score=0.0,
-                reasons=["fallback: no matching public platform evidence in the dataset"],
+                reasons=["데이터셋에 직접 겹치는 공개 플랫폼 근거가 없어 기본 노출을 참고했습니다"],
                 evidence=[],
             )
         )
@@ -396,7 +396,7 @@ def _section_payload(country_profile: Any, *, target_country: str, genre: str, s
             "items": [
                 f"대상 국가: {target_label} / 입력 장르: {genre_label}",
                 synopsis_note,
-                f"상위 장르 근거: {top_genres_label}",
+                f"상위 장르 참고: {top_genres_label}",
                 recommendation_note,
             ],
         },
@@ -405,7 +405,7 @@ def _section_payload(country_profile: Any, *, target_country: str, genre: str, s
             "items": [
                 f"입력 장르 `{genre_label}`을 우선 기준으로 삼되, 이야기 구조를 바꾸지 않고 번역 방향만 정리했습니다.",
                 synopsis_note,
-                f"추정 소재 축: {', '.join(inferred_motifs)}" if inferred_motifs else '추정 소재 축: 시놉시스 근거 부족 또는 미입력',
+                f"시놉시스에서 보이는 관련 신호: {', '.join(inferred_motifs)}" if inferred_motifs else '시놉시스 관련 신호: 확인할 내용이 부족합니다.',
                 '장면 톤과 캐릭터 말투는 살리고, 문장을 교과서식으로 평평하게 만들지 않습니다.',
             ]
             + signals[:4],
@@ -413,9 +413,9 @@ def _section_payload(country_profile: Any, *, target_country: str, genre: str, s
         "title_synopsis_localization": {
             "title": f"{target_label} 독자에게는 어떻게 소개하면 좋을까요?",
             "items": [
-                '플랫폼 상위 노출작은 장르 훅과 관계 축을 빠르게 드러내는 방식이 많지만, 이 가이드는 흥행 예측이 아니라 표현 방향 참고만 제공합니다.',
-                f"시놉시스 기준으로는 {', '.join(inferred_motifs)}이 먼저 보입니다. 이 표현은 확정 태그가 아니라 소개문/태그 후보를 점검하기 위한 추정입니다." if inferred_motifs else '시놉시스 근거가 부족하므로 제목·소개문 후보는 장르의 대표 기대치 수준에서만 확인합니다.',
-                '공개 시놉시스는 신호 분석에만 쓰고 문장을 그대로 복사하지 않습니다.',
+                '플랫폼 상위 노출작은 장르 훅과 관계 축을 빠르게 드러내는 경향이 있지만, 이 가이드는 흥행 예측이 아니라 표현 방향 참고만 제공합니다.',
+                f"시놉시스에서 읽힌 관련 신호는 {', '.join(inferred_motifs)}입니다. 다만 이것은 확정 태그가 아니라 소개문·태그 후보를 점검하기 위한 참고입니다." if inferred_motifs else '시놉시스 근거가 부족하므로 제목·소개문 후보는 장르의 대표 기대치 수준에서만 확인합니다.',
+                '공개 시놉시스는 신호 분석에만 사용하고 문장을 그대로 옮기지 않습니다.',
             ],
         },
         "terminology_glossary_risks": {
@@ -432,12 +432,12 @@ def _section_payload(country_profile: Any, *, target_country: str, genre: str, s
                 '연령등급, 잔혹/성적 표현, 플랫폼별 금지·제한 표현은 시장 분위기와 별개로 확인합니다.',
                 '시놉시스에서 나온 민감 요소는 위반 확정이 아니라 게시 전 확인 후보로 표시합니다.' if synopsis_mode else '시놉시스가 없으면 민감 요소 확인은 장르 일반론을 넘어서 확정하지 않습니다.',
             ]
-            + cautions[:5]
+            + [_localize_caution_item(item) for item in cautions[:5]]
             + ['플랫폼별 노출 순서는 시장 전체가 아니라 해당 플랫폼 증거로만 표현합니다.'],
         },
         "adaptation_checklist": {
             "title": '피해야 할 방식과 다음 확인',
-            "items": guidance[:6] + [
+            "items": [_localize_guidance_item(item) for item in guidance[:6]] + [
                 '최종 가이드는 스토리 수정 지시가 아니라 번역/현지화 기준서로만 사용합니다.',
                 '본문 수집 없이 공개 메타데이터와 사용자가 입력한 시놉시스 신호만 사용합니다.',
             ],
@@ -445,11 +445,39 @@ def _section_payload(country_profile: Any, *, target_country: str, genre: str, s
         "evidence_used": {
             "title": '사용 근거',
             "items": [
-                f"{ev.platform}/{ev.collection} rank {ev.rank}: {ev.title} ({ev.genre or 'genre unknown'}) - {ev.reason}"
+                f"{ev.platform}/{ev.collection} 순위 {ev.rank}: {ev.title} ({ev.genre or '장르 미확인'}) — {ev.reason}"
                 for ev in evidence[:8]
-            ] or best_reasons or ["No direct evidence selected."],
+            ] or best_reasons or ["직접 선택한 근거가 없습니다."],
         },
     }
+
+
+def _localize_guidance_item(item: str) -> str:
+    text = str(item or "").strip()
+    if not text:
+        return text
+    translations = {
+        "Anchor the pitch in the dominant platform-visible genre mix before adding niche cultural explanations.": "먼저 해당 플랫폼에서 두드러진 장르 조합을 기준으로 잡고, 세부 문화 설명은 그 다음에 덧붙입니다.",
+        "Convert synopsis observations into title hooks, opening-episode stakes, and tag/copy choices rather than copying source descriptions.": "시놉시스에서 읽은 내용은 제목 훅, 첫 화 갈등, 소개문·태그 선택으로 바꾸고 원문 설명을 그대로 옮기지 않습니다.",
+        "Use the platform's top genre/tag mix as the primary guide; avoid overclaiming beyond the collected public ranking metadata.": "가장 두드러진 장르·태그 조합을 우선 참고하고, 수집된 공개 순위 메타데이터를 넘어서 단정하지 않습니다.",
+        "No strong overlap was found, so keep the guide conservative and anchored in public evidence.": "강한 겹침이 없어 가이드는 보수적으로 유지하고 공개 근거에만 기대어 작성합니다.",
+        "Preserve progression mechanics in translation: skill names, rank terms, and upgrade cadence should be consistent across episodes.": "번역에서는 성장 메커니즘을 유지하고, 스킬명·등급 표현·강화 흐름이 회차마다 일관되게 보이도록 합니다.",
+        "Make relationship premise, power imbalance, consent boundary, and emotional payoff legible in synopsis and chapter-one localization.": "시놉시스와 첫 화 현지화에서는 관계 전제, 힘의 차이, 동의 경계, 감정적 보상이 분명하게 읽히도록 합니다.",
+        "Explain reincarnation/transport premises compactly; readers tolerate familiar setups when the unique advantage is clear.": "회귀·전생·이세계 전제는 짧고 분명하게 설명하고, 익숙한 설정이라도 고유한 강점이 드러나면 수용된다는 점을 반영합니다.",
+        "For English platforms, foreground premise clarity and genre tags; avoid long cultural footnote-style exposition in the opening pitch.": "영어권 플랫폼에서는 전제의 선명함과 장르 태그를 먼저 보여주고, 첫 소개문에서 긴 문화 주석형 설명은 피합니다.",
+    }
+    return translations.get(text, text)
+
+
+def _localize_caution_item(item: str) -> str:
+    text = str(item or "").strip()
+    if not text:
+        return text
+    translations = {
+        "Do not treat platform exposure order as a universal national market ranking; it is platform-specific evidence.": "플랫폼 노출 순서는 국가 전체 시장 순위로 보지 말고, 해당 플랫폼에서만 확인된 근거로 다룹니다.",
+        "Do not use collected synopsis text as story content; summarize signals and cite platform/source/date instead.": "수집한 시놉시스 문장을 이야기 본문처럼 쓰지 말고, 신호만 요약한 뒤 플랫폼·출처·날짜를 함께 적습니다.",
+    }
+    return translations.get(text, text)
 
 
 def _model_prompt_payload(*, original: dict[str, Any], target_country: str, recommendations: list[Recommendation], sections: dict[str, Any], evidence: list[EvidenceItem]) -> dict[str, Any]:
@@ -480,20 +508,16 @@ def _html_report(*, title: str, mode_label: str, target_country: str, genre: str
         section_html.append(
             f"<div class='guide-section'><div class='guide-section-header'><span class='guide-section-title'>{esc(section.get('title', key))}</span></div><ul class='guide-list'>{items}</ul></div>"
         )
-    rec_html = "".join(
-        f"<li>{esc(rec.country)}: {esc(rec.score)} — {esc('; '.join(rec.reasons[:3]))}</li>"
-        for rec in recommendations[:3]
-    )
     display_country = _display_country_label(target_country)
     return f"""
     <div class="guide-report">
       <div class="guide-cover">
         <div class="guide-cover-label">번역 전 현지화 기준서 · 플랫폼 참고 근거</div>
         <div class="guide-cover-title">{esc(display_country)} 현지화 기준서<br><em>번역/표현 방향 리포트</em></div>
-        <div class="guide-cover-sub"><span>{esc(mode_label)}</span><span>{esc(genre or 'genre unspecified')}</span><span>current platform trends</span></div>
+        <div class="guide-cover-sub"><span>{esc(mode_label)}</span><span>{esc(genre or '장르 미입력')}</span><span>플랫폼 트렌드 참고</span></div>
       </div>
       <div class="guide-legacy-anchors">번역 방향 · 문화 주의사항 · 플랫폼 검토 항목</div>
-      <div class="guide-section"><div class="guide-section-header"><span class="guide-section-title">추천 국가 후보</span></div><ul class="guide-list">{rec_html}</ul></div>
+      <div class="guide-section"><div class="guide-section-header"><span class="guide-section-title">선택 국가 요약</span></div><ul class="guide-list"><li>선택 국가: {esc(display_country)}</li><li>이 가이드는 선택한 국가를 기준으로 정리했습니다.</li><li>추천 후보는 내부 참고용으로만 유지했습니다.</li></ul></div>
       {''.join(section_html)}
     </div>
     """
@@ -616,7 +640,7 @@ def generate_localization_guide(payload: dict[str, Any], *, data_path: Path = DE
     summary_text = (
         f"{selected_display} 중심으로 번역 전 현지화 기준을 정리했습니다."
         if not synopsis_present
-        else f"{selected_display}는 시놉시스 기반 1차 적합도 추천을 반영한 현지화 기준서입니다."
+        else f"대상 국가: {selected_display} 기준의 시놉시스 기반 1차 적합도 참고 현지화 기준서입니다."
     )
     original = {
         "title": payload.get("title"),

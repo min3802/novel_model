@@ -38,6 +38,7 @@ from backend.services.content_api_service import (
     upsert_episode_handler,
     upsert_work_handler,
 )
+from backend.services.guide_pdf_renderer import build_localization_guide_pdf_bytes
 from backend.services.guide_service import guide
 from backend.services.image_service import cover_image, relation_image, visual_prompt
 from backend.services.translation_service import inspect_chat, translate
@@ -368,8 +369,7 @@ class ApiHandler(BaseHTTPRequestHandler):
             elif m := _GUIDE_PDF_RE.match(path):
                 gid = int(m.group(1))
                 record = localization_guide_get(gid)
-                guide = record.get("guide") if isinstance(record.get("guide"), dict) else record
-                pdf_bytes = _build_pdf_bytes(_guide_pdf_lines(guide, gid))
+                pdf_bytes = build_localization_guide_pdf_bytes(record, gid)
                 filename = f"localization-guide-{gid}.pdf"
                 _send_binary(self, 200, pdf_bytes, content_type="application/pdf", filename=filename)
             elif m := _GUIDE_RE.match(path):

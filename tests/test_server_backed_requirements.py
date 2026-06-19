@@ -119,6 +119,32 @@ class ServerBackedRequirementTests(unittest.TestCase):
         self.assertIn(b"%PDF", pdf_bytes[:8])
         self.assertGreater(len(pdf_bytes), 1000)
 
+    def test_localization_guide_pdf_html_wraps_guide_fragment_with_pdf_css(self) -> None:
+        from backend.services.guide_pdf_renderer import build_localization_guide_pdf_html
+
+        html_doc = build_localization_guide_pdf_html(
+            {
+                "guide": {
+                    "title": "Demo Guide",
+                    "targetCountryDisplay": "일본",
+                    "genre": "로맨스",
+                    "guide_html": "<div class='guide-report'><div class='guide-cover'>preferred</div></div>",
+                    "htmlReport": "<div class='guide-report'><div class='guide-cover'>fallback</div></div>",
+                }
+            },
+            42,
+        )
+
+        self.assertIn("<!doctype html>", html_doc.lower())
+        self.assertIn('class="guide-pdf-document"', html_doc)
+        self.assertIn('class="guide-html"', html_doc)
+        self.assertIn("print-color-adjust: exact", html_doc)
+        self.assertIn("guide-cover", html_doc)
+        self.assertIn("preferred", html_doc)
+        self.assertNotIn("fallback", html_doc)
+        self.assertIn("guide-legacy-anchors", html_doc)
+        self.assertIn("guide-section-title", html_doc)
+
     def test_localization_guides_enforce_per_work_limit_of_ten(self) -> None:
         work = self.create_guide_work()
         created_ids: list[int] = []
