@@ -30,12 +30,22 @@ TOSS_FAIL_URL = os.getenv("TOSS_FAIL_URL", "http://127.0.0.1:8000/credits/fail/"
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-so$r9c&pg7*d^_h8ecu0s7q&v^=n-&6=og#wc6m%x0_bgc90a-'
+SECRET_KEY = os.getenv(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-so$r9c&pg7*d^_h8ecu0s7q&v^=n-&6=og#wc6m%x0_bgc90a-',
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DJANGO_DEBUG', 'True').lower() in ('1', 'true', 'yes', 'on')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    h.strip() for h in os.getenv('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
+    if h.strip()
+]
+CSRF_TRUSTED_ORIGINS = [
+    o.strip() for o in os.getenv('DJANGO_CSRF_TRUSTED_ORIGINS', '').split(',')
+    if o.strip()
+]
 
 
 # Application definition
@@ -169,6 +179,7 @@ ACCOUNT_LOGIN_METHODS = {'email'}
 ACCOUNT_SIGNUP_FIELDS = ['email*']
 SOCIALACCOUNT_AUTO_SIGNUP = True
 SOCIALACCOUNT_LOGIN_ON_GET = True
+SOCIALACCOUNT_ADAPTER = 'accounts.adapters.WLighterSocialAccountAdapter'
 
 SOCIALACCOUNT_PROVIDERS = {
     "google": {
@@ -220,3 +231,19 @@ TOSS_FAIL_URL = os.getenv(
     'TOSS_FAIL_URL',
     'http://localhost:8000/credits/fail/',
 )
+
+# --- FastAPI 번역/현지화 서비스 base URL (translation/guides 앱이 호출) ---
+WLIGHTER_API_BASE = os.getenv('WLIGHTER_API_BASE', 'http://127.0.0.1:8001')
+
+# --- OpenAI (characters/covers/relationships AI 기능) ---
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
+
+# --- 운영(HTTPS) 보안 설정: DEBUG=False일 때만 적용 ---
+if not DEBUG:
+    SECURE_SSL_REDIRECT = os.getenv('DJANGO_SECURE_SSL_REDIRECT', 'True').lower() in ('1', 'true', 'yes', 'on')
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = int(os.getenv('DJANGO_HSTS_SECONDS', '3600'))
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

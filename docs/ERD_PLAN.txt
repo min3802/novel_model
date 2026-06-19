@@ -1,0 +1,134 @@
+export interface LOCALIZATIONGUIDES {
+  guide_id: number; // PK / AUTO INCREMENT / INT
+  work_id: number; // FK / INT
+  target_country: string | null; // CHECK 제약: US/CN/JP/TH / CHAR(2)
+  guide_content: string; // TEXT
+  created_at: Date; // TIMESTAMP
+}
+
+export interface USERS {
+  user_id: number; // PK / AUTO INCREMENT / INT
+  email: string; // VARCHAR(255)
+  nickname: string; // VARCHAR(10)
+  oauth_provider: string; // CHECK 제약: NAVER / KAKAO / GOOGLE / VARCHAR(10)
+  provider_user_id: string; // VARCHAR(255)
+  credit: number; // INT
+  created_at: Date; // TIMESTAMP
+  updated_at: Date; // TIMESTAMP
+  withdrawn_at: Date | null; // TIMESTAMP
+}
+
+export interface COVERS {
+  cover_id: number; // PK / AUTO INCREMENT / INT
+  work_id: number; // FK / INT
+  cover_url: string; // VARCHAR(255)
+  target_country: string; // CHECK 제약: US/CN/JP/TH / CHAR(2)
+  main_cover_yn: number; // TINYINT(1)
+  created_at: Date; // TIMESTAMP
+}
+
+export interface TRANSLATIONRESULTS {
+  translation_id: number; // PK / AUTO INCREMENT / INT
+  episode_id: number; // FK / INT
+  target_country: string; // US/CN/JP/TH / CHAR(2)
+  translated_text: string; // TEXT
+  summary: string | null; // TEXT
+  glossary_can: any | null; // JSON
+  annotation_can: any | null; // JSON
+  inspection_report: any | null; // JSON
+  created_at: Date; // ID와 함께 버전 구분 / TIMESTAMP
+}
+
+export interface CHARACTERS {
+  character_id: number; // PK / AUTO INCREMENT / INT
+  work_id: number; // FK / INT
+  char_name: string; // VARCHAR(30)
+  gender: any | null; // CHECK: M/F/U(unknown) / VARCHER(5)
+  age: any | null; // VARCHER(10)
+  role: string | null; // VARCHAR(5)
+  apperance: string | null; // VARCHAR(300)
+  relationships: string | null; // VARCHAR(500)
+  detail_setting: string | null; // VARCHAR(1000)
+  created_at: Date; // TIMESTAMP
+  updated_at: Date; // TIMESTAMP
+}
+
+export interface PLAN {
+  plan_id: number; // PK / AUTO INCREMENT / INT
+  credit_amount: number; // INT
+  price: number; // INT
+}
+
+export interface CHARACTERIMAGES {
+  image_id: number; // PK / AUTO INCREMENT / INT
+  image_url: string; // VARCHAR(255)
+  created_at: Date; // TIMESTAMP
+}
+
+export interface WORKS {
+  work_id: number; // PK / AUTO INCREMENT / INT
+  user_id: number; // FK / INT
+  title: string; // VARCHAR(50)
+  pen_name: string; // DEFAULT: USERS nickname / VARCHAR(10)
+  genre: string; // VARCHAR(10)
+  synopsis: string | null; // VARCHAR(10000)
+  created_at: Date; // TIMESTAMP
+  updated_at: Date; // TIMESTAMP
+}
+
+export interface PAYMENTS {
+  payment_id: string; // PK / 토스에서 요구하는 orderId (6~64자의 문자열, 상점 직접 생성) / VARCHAR(64)
+  user_id: number; // FK / INT
+  plan_id: number; // FK / INT
+  amount: number; // 플랜 가격 정책의 변화를 대비한 스냅샷용 / INT
+  status: string; // CHECK 제약: PAID/FAILED/CANCELED / VARCHAR(10)
+  payment_key: string; // VARCHAR(200)
+  created_at: Date; // TIMESTAMP
+  updated_at: Date; // TIMESTAMP
+}
+
+export interface EPISODES {
+  episode_id: number; // PK / AUTO INCREMENT / INT
+  work_id: number; // FK / INT
+  title: string; // 30자 제한 / VARCHAR(30)
+  original_text: string; // 8000자 제한 / VARCHAR(8000)
+  created_at: Date; // TIMESTAMP
+  updated_at: Date; // TIMESTAMP
+}
+
+export interface CHATMESSAGES {
+  message_id: number; // PK / AUTO INCREMENT / INT
+  translation_id: number; // FK / INT
+  sender_type: string; // CHECK 제약: USER / ASSISTANT / VARCHAR(10)
+  message_text: string; // TEXT
+  created_at: Date; // TIMESTAMP
+}
+
+export interface CREDITTRANSACTION {
+  transaction_id: number; // PK / AUTO INCREMENT / INT
+  user_id: number; // FK / INT
+  transaction_type: string; // CHECK 제약: CHARGE / USE / REFUND / CANCEL / VARCHAR(10)
+  feature_name: string; // 크레딧을 소모한 플랫폼 기능명 / VARCHAR(20)
+  change_amount: number; // INT
+  balance_after: number; // INT
+  created_at: Date; // TIMESTAMP
+}
+
+export interface RELATIONMAPS {
+  map_id: number; // PK / AUTO INCREMENT / INT
+  work_id: number; // FK / INT
+  map_url: string; // VARCHAR(255)
+  created_at: Date; // TIMESTAMP
+}
+
+export interface GLOSSARY {
+  glossary_id: number; // PK / AUTO INCREMENT / INT
+  work_id: number; // FK / INT
+  target_country: string; // VARCHAR(2)
+  original_word: string; // VARCHAR(30)
+  translated_word: any; // VARCHER(30)
+  glossary_type: string; // person / place / organization / VARCHAR(15)
+  memo: string | null; // VARCHAR(500)
+  created_at: Date; // TIMESTAMP
+  updated_at: Date; // TIMESTAMP
+}
