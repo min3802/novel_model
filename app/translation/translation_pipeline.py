@@ -1,718 +1,146 @@
+"""번역 파이프라인 — 단일 오케스트레이터.
+
+v3 문학 번역 그래프를 "순수 부품"만 조립해 실행하는 유일한 진입점이다.
+다른 파이프라인(레거시/v2)을 import 하지 않는다. 하위 폴더의 부품만 조립한다:
+
+- agents.direct_translator.DirectTranslator : 실제 번역 엔진(translate_once)
+- retrieval.annotation_retriever.AnnotationRetriever : kculture 문화 주석 RAG
+- agents.endnote_writer.EndnoteWriter : 검색된 문화 표현 -> 독자용 각주(LLM)
+- v3_graph_orchestrator / v3_literary_package : 순수 v3 코어(그래프/스텝)
+
+과거 `translation_pipeline.TranslationPipeline.run_v3_literary_package`가 god-object
+위에서 하던 일을 여기로 옮기고, 비어 있던 문화 주석 hook 2개(retrieve/endnote)를 배선했다.
+"""
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass, field
-import json
-import re
-from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
-from .agents.chatbot import ChatbotAgent
-from .agents.inspector import InspectionAgent
-from .agents.translator import Translator
-from .config import PipelineConfig, TranslationMode
+from .agents.direct_translator import DirectTranslator
+from .agents.endnote_writer import EndnoteWriter, build_reader_endnote_hook
+from .config import PipelineConfig
 from .retrieval.annotation_retriever import AnnotationRetriever
-from .retrieval.retriever import IdiomRetriever
-from .translation_graph import TranslationGraph
-from .v2_pipeline import (
-    DirectTranslationResult,
-    DirectTranslator,
-    PatchProposer,
-    PostTranslationQA,
-    SourceSideAnalyzer,
-    V2TranslationResult,
-    split_user_visible_qa_report,
-    split_user_visible_risk_items,
-)
-from .v2_dual_draft_review import (
-    AuthorReviewCardGenerator,
-    TranslationDecisionAnalyzer,
-    MeaningDraftTranslator,
-    MeaningDraft,
-    RagEvidenceRetriever,
-    V2DualDraftReviewResult,
-)
-from .v3_literary_package import V3LiteraryPackageResult
-from .v3_graph_orchestrator import build_v3_graph_literary_package
+from .engine.graph_orchestrator import build_v3_graph_literary_package
+from .engine.literary_package import V3LiteraryPackageResult
 
 
-@dataclass(slots=True)
-class AgentWorkflowResult:
-    source_text: str
-    retrievals: list[dict[str, Any]]
-    annotation_matches: list[dict[str, Any]]
-    draft: dict[str, Any]
-    inspection: dict[str, Any]
-    reviewed_translation: str
-    context_extraction: dict[str, Any] | None = None
-    memory_context: str = ""
-    blocked: bool = False
-    block_reason: str = ""
-    translation_profile: dict[str, Any] | None = None
-    source_analysis: dict[str, Any] | None = None
-    annotation_candidates: list[dict[str, Any]] = field(default_factory=list)
-    terminology_candidates: list[dict[str, Any]] = field(default_factory=list)
-    active_terminology: list[dict[str, Any]] = field(default_factory=list)
-    terminology_context: str = ""
-    draft_translation: str = ""
-    inspection_issues: list[dict[str, Any]] = field(default_factory=list)
-    support_context: dict[str, Any] | None = None
-    metadata: dict[str, Any] = field(default_factory=dict)
+def build_annotation_retrieval_hook(
+    retriever: AnnotationRetriever,
+) -> Callable[[dict[str, Any]], list[dict[str, Any]]]:
+    """v3 그래프 annotationRetrievalHook 용 클로저.
+
+    원문 전체를 kculture RAG 로 검색해(임계치는 config.annotation_score_threshold)
+    그래프 state 가 쓰는 dict 리스트로 변환한다.
+    """
+
+    def _hook(state: dict[str, Any]) -> list[dict[str, Any]]:
+        source_text = state.get("sourceText") or ""
+        if not source_text.strip():
+            return []
+        results = retriever.retrieve(source_text)
+        return [
+            {
+                "item": result.item,
+                "score": result.similarity_score,
+                "source_id": result.item.get("source_id"),
+                "keyword_ko": result.item.get("keyword_ko"),
+            }
+            for result in results
+        ]
+
+    return _hook
+
+
+def _hard_glossary_context(work_memory: dict[str, Any] | None) -> str:
+    """승인된 hard glossary 를 번역 프롬프트용 지침 텍스트로."""
+    glossary_rows: list[dict[str, Any]] = []
+    if isinstance(work_memory, dict):
+        rows = work_memory.get("approvedGlossary") or work_memory.get("approved_glossary") or []
+        if isinstance(rows, list):
+            glossary_rows = [row for row in rows if isinstance(row, dict)]
+    hard_lines: list[str] = []
+    for row in glossary_rows:
+        if str(row.get("priority") or "").strip().lower() != "hard":
+            continue
+        source = str(row.get("source") or "").strip()
+        target = str(row.get("target") or "").strip()
+        if not source or not target:
+            continue
+        aliases = [str(alias).strip() for alias in (row.get("aliases") or []) if str(alias).strip()]
+        alias_text = f" (aliases: {', '.join(aliases[:5])})" if aliases else ""
+        hard_lines.append(f"- {source}{alias_text} => {target}")
+    if not hard_lines:
+        return ""
+    return (
+        "[APPROVED HARD GLOSSARY]\n"
+        "Use each approved target exactly when its source or alias appears in the Korean source. "
+        "On retry, fix only mismatched glossary surface forms and keep the rest of the translation stable.\n"
+        + "\n".join(hard_lines[:30])
+    )
 
 
 class TranslationPipeline:
+    """단일 번역 파이프라인. config(locale/mock)로 구성하고 run() 한 번으로 실행."""
+
     def __init__(self, config: PipelineConfig | None = None):
         self.config = config or PipelineConfig()
-        self.retriever = IdiomRetriever(self.config)
+        self.direct_translator = DirectTranslator(self.config)
         self.annotation_retriever = AnnotationRetriever(self.config)
-        self.translator = Translator(self.config)
-        self.direct_translator = DirectTranslator(self.translator)
-        self.inspector = InspectionAgent(self.config)
-        self.chatbot = ChatbotAgent(self.config)
-        self.source_side_analyzer = SourceSideAnalyzer(
-            self.config,
-            idiom_retriever=self.retriever,
-            annotation_retriever=self.annotation_retriever,
-        )
-        self.rag_evidence_retriever = RagEvidenceRetriever(self.source_side_analyzer)
-        self.meaning_draft_translator = MeaningDraftTranslator(self.config)
-        self.translation_decision_analyzer = TranslationDecisionAnalyzer(self.config)
-        self.author_review_card_generator = AuthorReviewCardGenerator(self.config)
-        self.post_translation_qa = PostTranslationQA()
-        self.patch_proposer = PatchProposer()
-        self.graph = TranslationGraph(
-            self.config,
-            retriever=self.retriever,
-            annotation_retriever=self.annotation_retriever,
-            translator=self.translator,
-            inspector=self.inspector,
-        )
+        self.endnote_writer = EndnoteWriter(self.config)
 
-    def _metadata(
+    def run(
         self,
-        *,
-        source_side_rag_enabled: bool,
-        rag_enabled: bool,
-        terminology_enabled: bool,
-        glossary_enabled: bool,
-        review_enabled: bool,
-        inspection_enabled: bool,
-        extra: dict[str, Any] | None = None,
-    ) -> dict[str, Any]:
-        return self.config.build_metadata(
-            source_side_rag_enabled=source_side_rag_enabled,
-            rag_enabled=rag_enabled,
-            terminology_enabled=terminology_enabled,
-            glossary_enabled=glossary_enabled,
-            review_enabled=review_enabled,
-            inspection_enabled=inspection_enabled,
-            extra=extra,
-        )
-
-    @staticmethod
-    def _target_script_ratio(*, locale: str, latin_chars: int, han_chars: int, japanese_chars: int, thai_chars: int, total: int) -> float:
-        if locale == "ko_en_us":
-            return latin_chars / total
-        if locale == "ko_zh_cn":
-            return han_chars / total
-        if locale == "ko_th_th":
-            return thai_chars / total
-        return japanese_chars / total
-
-    @classmethod
-    def _pass_threshold_for_locale(cls, locale: str) -> float:
-        if locale in {"ko_en_us", "ko_zh_cn"}:
-            return 0.3
-        return 0.2
-
-    @staticmethod
-    def _hangul_spans(text: str) -> list[dict[str, Any]]:
-        return [
-            {"text": match.group(0), "start": match.start(), "end": match.end(), "length": len(match.group(0))}
-            for match in re.finditer(r"[\uac00-\ud7a3]+", text)
-        ]
-
-    @staticmethod
-    def _residual_hangul_ratio(text: str) -> float:
-        total = max(len(text), 1)
-        return round(len(re.findall(r"[\uac00-\ud7a3]", text)) / total, 4)
-
-    @classmethod
-    def _is_source_copy_like(
-        cls,
-        *,
         source_text: str,
-        final_translation: str,
-        locale: str,
-        target_script_ratio: float,
-        korean_chars: int,
-        total: int,
-        residual_hangul_spans: list[dict[str, Any]],
-    ) -> bool:
-        prefix_len = min(200, len(source_text), len(final_translation))
-        source_prefix_match = prefix_len > 0 and source_text[:prefix_len] == final_translation[:prefix_len]
-        if source_prefix_match or source_text.strip() == final_translation.strip():
-            return True
-        if korean_chars / total >= 0.35 and target_script_ratio <= 0.2:
-            return True
-        if len(residual_hangul_spans) >= 2 and korean_chars / total >= 0.2 and target_script_ratio <= cls._pass_threshold_for_locale(locale):
-            return True
-        return False
-
-    @classmethod
-    def _translation_safety_checks(
-        cls,
         *,
-        source_text: str,
-        final_translation: str,
-        locale: str = "ko_ja",
-        target_language_name: str = "Japanese",
-    ) -> dict[str, Any]:
-        total = max(len(final_translation), 1)
-        korean_chars = len(re.findall(r"[\uac00-\ud7a3]", final_translation))
-        latin_chars = len(re.findall(r"[A-Za-z]", final_translation))
-        han_chars = len(re.findall(r"[\u4e00-\u9fff]", final_translation))
-        japanese_chars = len(re.findall(r"[\u3040-\u30ff\u31f0-\u31ff\u4e00-\u9fff]", final_translation))
-        thai_chars = len(re.findall(r"[\u0e00-\u0e7f]", final_translation))
-        target_script_ratio = cls._target_script_ratio(
-            locale=locale,
-            latin_chars=latin_chars,
-            han_chars=han_chars,
-            japanese_chars=japanese_chars,
-            thai_chars=thai_chars,
-            total=total,
-        )
-        prefix_len = min(200, len(source_text), len(final_translation))
-        source_prefix_match = prefix_len > 0 and source_text[:prefix_len] == final_translation[:prefix_len]
-        residual_hangul_spans = cls._hangul_spans(final_translation)
-        residual_hangul_ratio = cls._residual_hangul_ratio(final_translation)
-        pass_threshold = cls._pass_threshold_for_locale(locale)
-        source_copy_like = cls._is_source_copy_like(
-            source_text=source_text,
-            final_translation=final_translation,
-            locale=locale,
-            target_script_ratio=target_script_ratio,
-            korean_chars=korean_chars,
-            total=total,
-            residual_hangul_spans=residual_hangul_spans,
-        )
-        weak_source_copy_signal = (
-            not source_copy_like
-            and (
-                source_prefix_match
-                or (korean_chars / total >= 0.2 and target_script_ratio <= pass_threshold)
-                or (len(residual_hangul_spans) >= 2 and residual_hangul_ratio >= 0.08)
-            )
-        )
-        source_copy_status = "fail" if source_copy_like else "warn" if weak_source_copy_signal else "pass"
-        source_copy_suspected = source_copy_status == "fail"
+        genre: str = "Modern Korean web novel",
+        work_memory: dict[str, Any] | None = None,
+        max_iterations: int = 2,
+        debug_capture_model_outputs: bool = False,
+        debug_artifact_dir: str | None = None,
+    ) -> V3LiteraryPackageResult:
+        memory_context = _hard_glossary_context(work_memory)
 
-        locale_adherence_status = "fail" if source_copy_status == "fail" or target_script_ratio < 0.1 else "pass"
-        if locale_adherence_status == "pass" and target_script_ratio < pass_threshold:
-            locale_adherence_status = "warn"
-
-        if not residual_hangul_spans:
-            residual_hangul_status = "pass"
-        else:
-            sentence_like_hangul = len(residual_hangul_spans) >= 2 and any(
-                span["length"] <= 4 for span in residual_hangul_spans
-            )
-            if source_copy_status == "fail" or sentence_like_hangul:
-                residual_hangul_status = "fail"
+        def translate_once(strict_locale_retry: bool, retry_attempt: int, revision_context: str = "") -> tuple[str, dict[str, Any]]:
+            combined = memory_context
+            if revision_context.strip():
+                combined = (combined + "\n\n" if combined.strip() else "") + revision_context.strip()
+            if "GRAPH TARGETED SMALL PROSE RESIDUE FALLBACK" in revision_context:
+                attempt_name = "targeted_repair_fallback"
+            elif "GRAPH STRICT CLEAN FINAL FALLBACK" in revision_context:
+                attempt_name = "strict_clean_fallback"
+            elif "GRAPH TARGETED SMALL PROSE RESIDUE REPAIR" in revision_context:
+                attempt_name = "targeted_repair"
+            elif "GRAPH CLEAN FULL TRANSLATOR RETRY" in revision_context:
+                attempt_name = "graph_clean_full_translator_retry"
+            elif revision_context.strip():
+                attempt_name = "deterministic_revision"
             else:
-                residual_hangul_status = "warn"
-
-        proper_noun_issues: list[dict[str, Any]] = []
-        if residual_hangul_spans and source_copy_status != "fail":
-            for span in residual_hangul_spans:
-                proper_noun_issues.append(
-                    {
-                        "issue_type": "possible_transliteration_issue",
-                        "span": span["text"],
-                        "start": span["start"],
-                        "end": span["end"],
-                        "length": span["length"],
-                    }
-                )
-        proper_noun_status = "pass"
-        if proper_noun_issues:
-            proper_noun_status = "warn" if residual_hangul_status != "fail" else "unchecked"
-
-        overall_status = "pass"
-        if source_copy_status == "fail" or locale_adherence_status == "fail" or residual_hangul_status == "fail":
-            overall_status = "fail"
-        elif (
-            locale_adherence_status == "warn"
-            or residual_hangul_status == "warn"
-            or proper_noun_status in {"warn", "unchecked"}
-            or source_copy_status == "warn"
-        ):
-            overall_status = "warn"
-
-        locale_adherence = {
-            "status": locale_adherence_status,
-            "locale": locale,
-            "target_language_name": target_language_name,
-            "target_script_ratio": round(target_script_ratio, 4),
-            "target_script_threshold": round(pass_threshold, 4),
-            "korean_char_ratio": round(korean_chars / total, 4),
-            "latin_char_ratio": round(latin_chars / total, 4),
-            "han_char_ratio": round(han_chars / total, 4),
-            "japanese_char_ratio": round(japanese_chars / total, 4),
-            "thai_char_ratio": round(thai_chars / total, 4),
-        }
-        source_copy = {
-            "status": source_copy_status,
-            "suspected": source_copy_suspected,
-            "source_prefix_match_200": source_prefix_match,
-            "source_exact_match": source_text.strip() == final_translation.strip(),
-            "source_copy_like": source_copy_like,
-            "weak_source_copy_signal": weak_source_copy_signal,
-            "reason": (
-                "literal source copy or severe source-language leakage"
-                if source_copy_status == "fail"
-                else "weak source-copy signal"
-                if source_copy_status == "warn"
-                else "no strong source-copy signal"
-            ),
-        }
-        residual_hangul = {
-            "status": residual_hangul_status,
-            "ratio": residual_hangul_ratio,
-            "spans": residual_hangul_spans,
-            "examples": [span["text"] for span in residual_hangul_spans[:5]],
-            "reason": (
-                "residual Hangul span(s) remain"
-                if residual_hangul_spans
-                else "no residual Hangul detected"
-            ),
-        }
-        proper_noun_transliteration = {
-            "status": proper_noun_status if not proper_noun_issues else proper_noun_status,
-            "issues": proper_noun_issues,
-        }
-
-        return {
-            "locale": locale,
-            "target_language_name": target_language_name,
-            "raw_model_response_length": len(final_translation),
-            "final_translation_length": len(final_translation),
-            "source_prefix_match_200": source_prefix_match,
-            "korean_char_ratio": round(korean_chars / total, 4),
-            "latin_char_ratio": round(latin_chars / total, 4),
-            "han_char_ratio": round(han_chars / total, 4),
-            "japanese_char_ratio": round(japanese_chars / total, 4),
-            "thai_char_ratio": round(thai_chars / total, 4),
-            "target_script_ratio": round(target_script_ratio, 4),
-            "source_copy_suspected": source_copy_suspected,
-            "source_copy_status": source_copy_status,
-            "residual_hangul_ratio": residual_hangul_ratio,
-            "residual_hangul_status": residual_hangul_status,
-            "residual_hangul_spans": residual_hangul_spans,
-            "residual_hangul_examples": residual_hangul["examples"],
-            "proper_noun_transliteration_status": proper_noun_status,
-            "proper_noun_transliteration_issues": proper_noun_issues,
-            "locale_adherence_status": locale_adherence_status,
-            "overall_translation_safety_status": overall_status,
-            "translation_safety": {
-                "overall_status": overall_status,
-                "locale_adherence": locale_adherence,
-                "source_copy": source_copy,
-                "residual_hangul": residual_hangul,
-                "proper_noun_transliteration": proper_noun_transliteration,
-            },
-        }
-
-    @classmethod
-    def _locale_adherence_metadata(
-        cls,
-        *,
-        source_text: str,
-        final_translation: str,
-        locale: str = "ko_ja",
-        target_language_name: str = "Japanese",
-    ) -> dict[str, Any]:
-        checks = cls._translation_safety_checks(
-            source_text=source_text,
-            final_translation=final_translation,
-            locale=locale,
-            target_language_name=target_language_name,
-        )
-        return {
-            **checks,
-            "locale_adherence_status": checks["translation_safety"]["locale_adherence"]["status"],
-            "source_copy_suspected": checks["translation_safety"]["source_copy"]["suspected"],
-            "source_copy_status": checks["translation_safety"]["source_copy"]["status"],
-            "residual_hangul_status": checks["translation_safety"]["residual_hangul"]["status"],
-            "residual_hangul_ratio": checks["translation_safety"]["residual_hangul"]["ratio"],
-            "residual_hangul_spans": checks["translation_safety"]["residual_hangul"]["spans"],
-            "residual_hangul_examples": checks["translation_safety"]["residual_hangul"]["examples"],
-            "proper_noun_transliteration_status": checks["translation_safety"]["proper_noun_transliteration"]["status"],
-            "proper_noun_transliteration_issues": checks["translation_safety"]["proper_noun_transliteration"]["issues"],
-            "overall_translation_safety_status": checks["translation_safety"]["overall_status"],
-        }
-
-    @staticmethod
-    def _should_retry_translation_safety(metadata: dict[str, Any]) -> bool:
-        return (
-            metadata.get("source_copy_status") == "fail"
-            or metadata.get("locale_adherence_status") == "fail"
-            or bool(metadata.get("source_copy_suspected"))
-        )
-
-    @staticmethod
-    def _translation_safety_is_hard_fail(metadata: dict[str, Any]) -> bool:
-        return metadata.get("source_copy_status") == "fail" or metadata.get("locale_adherence_status") == "fail"
-
-    def run_with_inspection(
-        self,
-        source_text: str,
-        *,
-        request_payload: dict[str, Any] | None = None,
-        translation_memory: list[dict[str, Any]] | None = None,
-        memory_context: str = "",
-        retrieval_queries: list[str] | None = None,
-        context_extraction: dict[str, Any] | None = None,
-    ) -> AgentWorkflowResult:
-        return self.graph.run_with_inspection(
-            source_text,
-            request_payload=request_payload,
-            translation_memory=translation_memory,
-            memory_context=memory_context,
-            retrieval_queries=retrieval_queries,
-            context_extraction=context_extraction,
-        )
-
-    def _run_direct_translation_once(
-        self,
-        source_text: str,
-        *,
-        memory_context: str = "",
-        strict_locale_retry: bool = False,
-        retry_attempt: int = 0,
-    ) -> DirectTranslationResult:
-        draft = self.direct_translator.translate(
-            source_text,
-            memory_context=memory_context,
-            strict_locale_retry=strict_locale_retry,
-            retry_attempt=retry_attempt,
-        )
-        resources = self.config.resolved_resources()
-        locale_meta = self._locale_adherence_metadata(
-            source_text=source_text,
-            final_translation=draft.translation,
-            locale=resources.locale,
-            target_language_name=resources.target_language,
-        )
-        return DirectTranslationResult(
-            mode="direct_only",
-            final_translation=draft.translation,
-            draft=asdict(draft),
-            metadata=self._metadata(
-                source_side_rag_enabled=False,
-                rag_enabled=False,
-                terminology_enabled=False,
-                glossary_enabled=False,
-                review_enabled=False,
-                inspection_enabled=False,
-                extra=locale_meta,
-            ),
-        )
-
-    def _finalize_direct_translation(
-        self,
-        source_text: str,
-        initial_result: DirectTranslationResult,
-        *,
-        memory_context: str = "",
-    ) -> DirectTranslationResult:
-        initial_metadata = initial_result.metadata
-        retry_attempted = self._should_retry_translation_safety(initial_metadata)
-        retry_result: DirectTranslationResult | None = None
-        final_result = initial_result
-        if retry_attempted:
-            retry_result = self._run_direct_translation_once(
+                attempt_name = "initial_translation"
+            direct = self.direct_translator.translate_once(
                 source_text,
-                memory_context=memory_context,
-                strict_locale_retry=True,
-                retry_attempt=1,
+                memory_context=combined,
+                strict_locale_retry=strict_locale_retry,
+                retry_attempt=retry_attempt,
+                debug_capture={
+                    "enabled": debug_capture_model_outputs,
+                    "artifactDir": debug_artifact_dir,
+                    "attemptName": attempt_name,
+                    "promptPreview": combined,
+                },
             )
-            final_result = retry_result
+            return direct.final_translation, direct.metadata
 
-        final_metadata = final_result.metadata
-        if not retry_attempted:
-            retry_success: bool | None = None
-        else:
-            retry_success = not self._translation_safety_is_hard_fail(final_metadata)
-
-        delivery_status = "deliverable"
-        if retry_attempted and retry_success is False:
-            delivery_status = "blocked_translation_safety"
-        user_visible_error_code = None if delivery_status == "deliverable" else "translation_safety_failed"
-
-        final_result.metadata = {
-            **final_metadata,
-            "translation_safety_retry_attempted": retry_attempted,
-            "translation_safety_retry_count": 1 if retry_attempted else 0,
-            "initial_translation_safety": initial_metadata["translation_safety"],
-            "final_translation_safety": final_metadata["translation_safety"],
-            "initial_locale_adherence_status": initial_metadata["locale_adherence_status"],
-            "final_locale_adherence_status": final_metadata["locale_adherence_status"],
-            "initial_source_copy_status": initial_metadata["source_copy_status"],
-            "final_source_copy_status": final_metadata["source_copy_status"],
-            "initial_source_copy_suspected": initial_metadata["source_copy_suspected"],
-            "final_source_copy_suspected": final_metadata["source_copy_suspected"],
-            "retry_translation_model": retry_result.metadata["translation_model"] if retry_result else None,
-            "retry_prompt_hash": retry_result.draft["prompt_debug"].get("prompt_hash") if retry_result else None,
-            "retry_success": retry_success,
-            "delivery_status": delivery_status,
-            "user_visible_error_code": user_visible_error_code,
-        }
-        final_result.delivery_status = delivery_status
-        final_result.user_visible_error_code = user_visible_error_code
-        return final_result
-
-    def run_direct_only(
-        self,
-        source_text: str,
-        *,
-        memory_context: str = "",
-        strict_locale_retry: bool = False,
-        retry_attempt: int = 0,
-        debug_capture: dict[str, Any] | None = None,
-    ) -> DirectTranslationResult:
-        initial_result = self._run_direct_translation_once(
+        return build_v3_graph_literary_package(
             source_text,
-            memory_context=memory_context,
-            strict_locale_retry=strict_locale_retry,
-            retry_attempt=retry_attempt,
-        )
-        final_result = self._finalize_direct_translation(source_text, initial_result, memory_context=memory_context)
-        if debug_capture and debug_capture.get("enabled"):
-            artifact = self._write_direct_translation_debug_artifact(
-                final_result,
-                attempt_name=str(debug_capture.get("attemptName") or "translation_attempt"),
-                artifact_dir=debug_capture.get("artifactDir"),
-                prompt_preview=str(debug_capture.get("promptPreview") or memory_context or ""),
-            )
-            if artifact:
-                final_result.metadata = {**final_result.metadata, "debug_artifact": artifact}
-        return final_result
-
-    @staticmethod
-    def _safe_reports_debug_dir(path_value: Any) -> Path | None:
-        if not path_value:
-            return None
-        try:
-            target = Path(str(path_value)).resolve()
-            reports_root = (Path.cwd() / "reports").resolve()
-            target.relative_to(reports_root)
-            target.mkdir(parents=True, exist_ok=True)
-            return target
-        except Exception:
-            return None
-
-    @staticmethod
-    def _write_debug_text(path: Path, text: str) -> None:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(text, encoding="utf-8")
-
-    def _write_direct_translation_debug_artifact(
-        self,
-        result: DirectTranslationResult,
-        *,
-        attempt_name: str,
-        artifact_dir: Any,
-        prompt_preview: str,
-    ) -> dict[str, Any] | None:
-        target_dir = self._safe_reports_debug_dir(artifact_dir)
-        if target_dir is None:
-            return None
-        safe_name = re.sub(r"[^A-Za-z0-9_.-]+", "_", attempt_name).strip("_") or "translation_attempt"
-        prefix = target_dir / safe_name
-        draft = result.draft or {}
-        prompt_debug = dict(draft.get("prompt_debug") or {})
-        raw_response = draft.get("raw_response") or {}
-        parsed_candidate = str(result.final_translation or "")
-        metadata = dict(result.metadata or {})
-        spans = list(metadata.get("residual_hangul_spans") or [])
-        metrics = {
-            "attemptName": attempt_name,
-            "promptHash": prompt_debug.get("prompt_hash"),
-            "retryPromptHash": prompt_debug.get("retry_prompt_hash"),
-            "routeSource": prompt_debug.get("route_source"),
-            "strictLocaleRetry": prompt_debug.get("strict_locale_retry"),
-            "retryAttempt": prompt_debug.get("retry_attempt"),
-            "translationModel": prompt_debug.get("translation_model") or metadata.get("translation_model"),
-            "raw_model_response_length": metadata.get("raw_model_response_length") or len(json.dumps(raw_response, ensure_ascii=False)),
-            "final_translation_length": len(parsed_candidate),
-            "source_prefix_match_200": metadata.get("source_prefix_match_200"),
-            "source_copy_suspected": metadata.get("source_copy_suspected"),
-            "source_copy_status": metadata.get("source_copy_status"),
-            "target_script_ratio": metadata.get("target_script_ratio"),
-            "residual_hangul_ratio": metadata.get("residual_hangul_ratio"),
-            "residual_hangul_char_count": sum(len(str(span.get("text") or "")) for span in spans if isinstance(span, dict)),
-            "hangul_span_count": len(spans),
-            "delivery_candidate": metadata.get("delivery_status") or result.delivery_status,
-            "fallbackApplied": bool(metadata.get("fallback_applied") or metadata.get("fallbackApplied")),
-            "fallbackReason": metadata.get("fallback_reason") or metadata.get("fallbackReason") or "",
-            "candidateDiscarded": bool(metadata.get("candidate_discarded") or metadata.get("candidateDiscarded")),
-            "discardReason": metadata.get("discard_reason") or metadata.get("discardReason") or "",
-        }
-        prompt_metadata = {
-            key: value
-            for key, value in prompt_debug.items()
-            if key not in {"api_key", "authorization", "password", "secret"}
-        }
-        prompt_metadata["promptPreviewLength"] = len(prompt_preview)
-        self._write_debug_text(prefix.with_name(f"{safe_name}_prompt_preview.txt"), prompt_preview[:4000])
-        self._write_debug_text(prefix.with_name(f"{safe_name}_prompt_metadata.json"), json.dumps(prompt_metadata, ensure_ascii=False, indent=2) + "\n")
-        self._write_debug_text(prefix.with_name(f"{safe_name}_raw_output.txt"), json.dumps(raw_response, ensure_ascii=False, indent=2) + "\n")
-        self._write_debug_text(prefix.with_name(f"{safe_name}_parsed_candidate.txt"), parsed_candidate + "\n")
-        self._write_debug_text(prefix.with_name(f"{safe_name}_metrics.json"), json.dumps(metrics, ensure_ascii=False, indent=2) + "\n")
-        return {
-            "debugArtifactDir": str(target_dir),
-            "rawOutputPath": str(prefix.with_name(f"{safe_name}_raw_output.txt")),
-            "parsedCandidatePath": str(prefix.with_name(f"{safe_name}_parsed_candidate.txt")),
-            "metricsPath": str(prefix.with_name(f"{safe_name}_metrics.json")),
-            "promptPreviewPath": str(prefix.with_name(f"{safe_name}_prompt_preview.txt")),
-            "promptMetadataPath": str(prefix.with_name(f"{safe_name}_prompt_metadata.json")),
-            "fallbackApplied": metrics["fallbackApplied"],
-            "fallbackReason": metrics["fallbackReason"],
-            "candidateDiscarded": metrics["candidateDiscarded"],
-            "discardReason": metrics["discardReason"],
-        }
-
-    def run_v2_direct_qa(self, source_text: str) -> V2TranslationResult:
-        final_result = self.run_direct_only(source_text)
-        final_metadata = final_result.metadata
-        risk_items = self.source_side_analyzer.analyze(source_text)
-        qa_report = self.post_translation_qa.evaluate(
-            source_text,
-            final_result.final_translation,
-            risk_items,
-        )
-        user_visible_risk_items, hidden_risk_items = split_user_visible_risk_items(risk_items)
-        user_visible_qa_report, hidden_qa_report = split_user_visible_qa_report(qa_report)
-        patch_suggestions = self.patch_proposer.propose(
-            final_result.final_translation,
-            risk_items,
-            qa_report,
-        )
-        metadata = self._metadata(
-            source_side_rag_enabled=True,
-            rag_enabled=False,
-            terminology_enabled=False,
-            glossary_enabled=False,
-            review_enabled=False,
-            inspection_enabled=False,
-            extra={
-                "risk_item_count": len(risk_items),
-                "internal_risk_item_count": len(risk_items),
-                "user_visible_risk_item_count": len(user_visible_risk_items),
-                "hidden_risk_item_count": len(hidden_risk_items),
-                "qa_item_count": len(qa_report),
-                "user_visible_qa_count": sum(
-                    len(rows) for key, rows in user_visible_qa_report.items() if key != "내부 디버그"
-                ),
-                "hidden_qa_count": len(hidden_qa_report),
-                "patch_suggestion_count": len(patch_suggestions),
-                **final_metadata,
-            },
-        )
-        return V2TranslationResult(
-            mode="v2_direct_qa",
-            final_translation=final_result.final_translation,
-            risk_items=[asdict(item) for item in risk_items],
-            qa_report=[asdict(item) for item in qa_report],
-            user_visible_risk_items=user_visible_risk_items,
-            hidden_risk_items=hidden_risk_items,
-            user_visible_qa_report=user_visible_qa_report,
-            hidden_qa_report=hidden_qa_report,
-            patch_suggestions=[asdict(item) for item in patch_suggestions],
-            metadata=metadata,
-            draft=final_result.draft,
-            delivery_status=final_result.delivery_status,
-            user_visible_error_code=final_result.user_visible_error_code,
+            self.config.resolved_resources().locale,
+            genre=genre,
+            work_memory=work_memory,
+            max_iterations=max_iterations,
+            translate_once=None if self.config.mock else translate_once,
+            annotation_retrieval_hook=build_annotation_retrieval_hook(self.annotation_retriever),
+            reader_endnote_writer_hook=build_reader_endnote_hook(self.endnote_writer),
         )
 
-    @staticmethod
-    def _dual_draft_delivery_status(
-        *,
-        direct_delivery_status: str,
-        author_review_cards: list[Any],
-    ) -> str:
-        if direct_delivery_status == "blocked_translation_safety":
-            return "blocked_translation_safety"
-        if author_review_cards:
-            return "qa_warning"
-        return "deliverable"
-
-    def run_v2_dual_draft_review(self, source_text: str) -> V2DualDraftReviewResult:
-        direct_result = self.run_direct_only(source_text)
-        blocked = direct_result.delivery_status == "blocked_translation_safety"
-        rag_evidence = [] if blocked else self.rag_evidence_retriever.retrieve(source_text)
-        meaning_draft = (
-            MeaningDraft(text="", model=self.config.translation_model or "", purpose="semantic_baseline", temperature_profile="low")
-            if blocked
-            else self.meaning_draft_translator.translate(
-                source_text,
-                locale=self.config.resolved_resources().locale,
-                config=self.config,
-                seed_translation=direct_result.final_translation,
-            )
-        )
-        translation_decisions = (
-            []
-            if blocked
-            else self.translation_decision_analyzer.analyze(
-                rag_evidence,
-                meaning_draft,
-                direct_result.final_translation,
-                source_text=source_text,
-                locale=self.config.resolved_resources().locale,
-            )
-        )
-        author_review_cards = (
-            []
-            if blocked
-            else self.author_review_card_generator.generate(
-                translation_decisions,
-                rag_evidence=rag_evidence,
-            )
-        )
-        delivery_status = self._dual_draft_delivery_status(
-            direct_delivery_status=direct_result.delivery_status,
-            author_review_cards=author_review_cards,
-        )
-        metadata = self._metadata(
-            source_side_rag_enabled=not blocked,
-            rag_enabled=False,
-            terminology_enabled=False,
-            glossary_enabled=False,
-            review_enabled=False,
-            inspection_enabled=False,
-            extra={
-                "mode": TranslationMode.V2_DUAL_DRAFT_REVIEW.value,
-                "meaning_draft_enabled": True,
-                "rag_evidence_count": len(rag_evidence),
-                "translation_decision_count": len(translation_decisions),
-                "author_review_card_count": len(author_review_cards),
-                "delivery_status": delivery_status,
-            },
-        )
-        return V2DualDraftReviewResult(
-            mode=TranslationMode.V2_DUAL_DRAFT_REVIEW.value,
-            source_text=source_text,
-            final_translation=direct_result.final_translation,
-            meaning_draft=meaning_draft,
-            rag_evidence=rag_evidence,
-            translation_decisions=translation_decisions,
-            author_review_cards=author_review_cards,
-            metadata=metadata,
-            delivery_status=delivery_status,
-            user_visible_error_code=direct_result.user_visible_error_code,
-        )
-
+    # 기존 backend 호출부 호환 별칭 (translation_service 가 이 이름으로 호출).
     def run_v3_literary_package(
         self,
         source_text: str,
@@ -723,112 +151,33 @@ class TranslationPipeline:
         debug_capture_model_outputs: bool = False,
         debug_artifact_dir: str | None = None,
     ) -> V3LiteraryPackageResult:
-        resources = self.config.resolved_resources()
-        glossary_rows = []
-        if isinstance(work_memory, dict):
-            rows = work_memory.get("approvedGlossary") or work_memory.get("approved_glossary") or []
-            if isinstance(rows, list):
-                glossary_rows = [row for row in rows if isinstance(row, dict)]
-        hard_glossary_lines = []
-        for row in glossary_rows:
-            if str(row.get("priority") or "").strip().lower() != "hard":
-                continue
-            source = str(row.get("source") or "").strip()
-            target = str(row.get("target") or "").strip()
-            if not source or not target:
-                continue
-            aliases = [str(alias).strip() for alias in (row.get("aliases") or []) if str(alias).strip()]
-            alias_text = f" (aliases: {', '.join(aliases[:5])})" if aliases else ""
-            hard_glossary_lines.append(f"- {source}{alias_text} => {target}")
-        v3_memory_context = ""
-        if hard_glossary_lines:
-            v3_memory_context = (
-                "[APPROVED HARD GLOSSARY]\n"
-                "Use each approved target exactly when its source or alias appears in the Korean source. "
-                "On retry, fix only mismatched glossary surface forms and keep the rest of the translation stable.\n"
-                + "\n".join(hard_glossary_lines[:30])
-            )
-
-        def translate_once(strict_locale_retry: bool, retry_attempt: int, revision_context: str = "") -> tuple[str, dict[str, Any]]:
-            memory_context = v3_memory_context
-            if revision_context.strip():
-                memory_context = (memory_context + "\n\n" if memory_context.strip() else "") + revision_context.strip()
-            if "GRAPH TARGETED SMALL PROSE RESIDUE FALLBACK" in revision_context:
-                debug_attempt_name = "targeted_repair_fallback"
-            elif "GRAPH STRICT CLEAN FINAL FALLBACK" in revision_context:
-                debug_attempt_name = "strict_clean_fallback"
-            elif "GRAPH TARGETED SMALL PROSE RESIDUE REPAIR" in revision_context:
-                debug_attempt_name = "targeted_repair"
-            elif "GRAPH CLEAN FULL TRANSLATOR RETRY" in revision_context:
-                debug_attempt_name = "graph_clean_full_translator_retry"
-            elif revision_context.strip():
-                debug_attempt_name = "deterministic_revision"
-            else:
-                debug_attempt_name = "initial_translation"
-            direct = self.run_direct_only(
-                source_text,
-                memory_context=memory_context,
-                strict_locale_retry=strict_locale_retry,
-                retry_attempt=retry_attempt,
-                debug_capture={
-                    "enabled": debug_capture_model_outputs,
-                    "artifactDir": debug_artifact_dir,
-                    "attemptName": debug_attempt_name,
-                    "promptPreview": memory_context,
-                },
-            )
-            return direct.final_translation, direct.metadata
-
-        return build_v3_graph_literary_package(
+        return self.run(
             source_text,
-            resources.locale,
             genre=genre,
             work_memory=work_memory,
             max_iterations=max_iterations,
-            translate_once=None if self.config.mock else translate_once,
+            debug_capture_model_outputs=debug_capture_model_outputs,
+            debug_artifact_dir=debug_artifact_dir,
         )
 
-    def run_qa_only(self, source_text: str, translation_text: str) -> V2TranslationResult:
-        risk_items = self.source_side_analyzer.analyze(source_text)
-        qa_report = self.post_translation_qa.evaluate(source_text, translation_text, risk_items)
-        user_visible_risk_items, hidden_risk_items = split_user_visible_risk_items(risk_items)
-        user_visible_qa_report, hidden_qa_report = split_user_visible_qa_report(qa_report)
-        patch_suggestions = self.patch_proposer.propose(translation_text, risk_items, qa_report)
-        return V2TranslationResult(
-            mode="qa_only",
-            final_translation=translation_text,
-            risk_items=[asdict(item) for item in risk_items],
-            qa_report=[asdict(item) for item in qa_report],
-            user_visible_risk_items=user_visible_risk_items,
-            hidden_risk_items=hidden_risk_items,
-            user_visible_qa_report=user_visible_qa_report,
-            hidden_qa_report=hidden_qa_report,
-            patch_suggestions=[asdict(item) for item in patch_suggestions],
-            metadata=self._metadata(
-                source_side_rag_enabled=True,
-                rag_enabled=False,
-                terminology_enabled=False,
-                glossary_enabled=False,
-                review_enabled=False,
-                inspection_enabled=False,
-                extra={
-                    "risk_item_count": len(risk_items),
-                    "internal_risk_item_count": len(risk_items),
-                    "user_visible_risk_item_count": len(user_visible_risk_items),
-                    "hidden_risk_item_count": len(hidden_risk_items),
-                    "qa_item_count": len(qa_report),
-                    "user_visible_qa_count": sum(
-                        len(rows) for key, rows in user_visible_qa_report.items() if key != "내부 디버그"
-                    ),
-                    "hidden_qa_count": len(hidden_qa_report),
-                    "patch_suggestion_count": len(patch_suggestions),
-                    **self._locale_adherence_metadata(
-                        source_text=source_text,
-                        final_translation=translation_text,
-                        locale=self.config.resolved_resources().locale,
-                        target_language_name=self.config.resolved_resources().target_language,
-                    ),
-                },
-            ),
-            draft=None,
-        )
+
+def run_translation(
+    source_text: str,
+    *,
+    config: PipelineConfig | None = None,
+    genre: str = "Modern Korean web novel",
+    work_memory: dict[str, Any] | None = None,
+    max_iterations: int = 2,
+    debug_capture_model_outputs: bool = False,
+    debug_artifact_dir: str | None = None,
+) -> V3LiteraryPackageResult:
+    """편의 함수: 1회성 호출용. (반복 호출은 TranslationPipeline 인스턴스 재사용 권장)"""
+    pipeline = TranslationPipeline(config)
+    return pipeline.run(
+        source_text,
+        genre=genre,
+        work_memory=work_memory,
+        max_iterations=max_iterations,
+        debug_capture_model_outputs=debug_capture_model_outputs,
+        debug_artifact_dir=debug_artifact_dir,
+    )

@@ -10,23 +10,10 @@ from .retrieval.annotation_retriever import AnnotationRetriever, AnnotationResul
 from .agents.chatbot import ChatbotAgent, ChatbotReply, ChatMessage
 from .text_processing.cultural_lexicon import CulturalLexicon, CulturalTermMatch
 from .agents.inspector import InspectionAgent, InspectionResult
-from .translation_pipeline import (
-    AgentWorkflowResult,
-    TranslationPipeline,
-)
-from .translation_graph import TranslationGraph, TranslationState
+from .translation_pipeline import TranslationPipeline
+from .agents.direct_translator import DirectTranslationResult
 from .text_processing.terminology import extract_noun_terminology_candidates, render_terminology_context
-from .v2_pipeline import DirectTranslationResult, PatchSuggestion, QAItem, RiskItem, V2TranslationResult
-from .v2_dual_draft_review import (
-    AuthorReviewCard,
-    AuthorReviewCardGenerator,
-    MeaningDraft,
-    RagEvidence,
-    TranslationDecisionAnalyzer,
-    TranslationDecision,
-    V2DualDraftReviewResult,
-)
-from .v3_literary_package import (
+from .engine.literary_package import (
     GlossaryEntry,
     IdiomNote,
     RAGPackets,
@@ -43,7 +30,7 @@ from .v3_literary_package import (
     run_translation_loop,
     write_translation_rationale,
 )
-from .glossary_store import (
+from .glossary import (
     GLOSSARY_CATEGORIES,
     GlossaryEntryRecord,
     GlossaryRepository,
@@ -54,7 +41,7 @@ from .glossary_store import (
     is_contextual_reference,
     normalize_category,
 )
-from .locale_utils import (
+from .infra.locale_utils import (
     LocaleNormalizationError,
     TARGET_COUNTRY_TO_LOCALE,
     TARGET_LOCALE_TO_COUNTRY,
@@ -66,7 +53,6 @@ from .locale_utils import (
 )
 
 __all__ = [
-    "AgentWorkflowResult",
     "AnnotationRetriever",
     "AnnotationResult",
     "ChatbotAgent",
@@ -85,29 +71,16 @@ __all__ = [
     "LocaleNormalizationError",
     "ALLOWED_QUALITY_MODES",
     "ALLOWED_TRANSLATION_MODELS",
-    "AuthorReviewCard",
-    "AuthorReviewCardGenerator",
     "InMemoryGlossaryRepository",
     "MODEL_PROFILES",
     "PipelineConfig",
-    "MeaningDraft",
-    "PatchSuggestion",
-    "RagEvidence",
     "RAGPackets",
-    "QAItem",
-    "RiskItem",
-    "TranslationDecision",
-    "TranslationDecisionAnalyzer",
-    "TranslationGraph",
     "TranslationMode",
     "TranslationPipeline",
     "TranslationRationale",
     "TranslationRationaleItem",
-    "TranslationState",
     "DirectTranslationResult",
-    "V2DualDraftReviewResult",
     "V3LiteraryPackageResult",
-    "V2TranslationResult",
     "WorkMemory",
     "TARGET_COUNTRY_TO_LOCALE",
     "TARGET_LOCALE_TO_COUNTRY",

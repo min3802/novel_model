@@ -9,13 +9,14 @@ from dataclasses import asdict
 from typing import Any
 
 from app.translation import (
+    ChatbotAgent,
     ChatMessage,
     DEFAULT_QUALITY_MODE,
     PipelineConfig,
     TranslationMode,
-    TranslationPipeline,
 )
-from app.translation.locale_utils import (
+from app.translation.translation_pipeline import TranslationPipeline
+from app.translation.infra.locale_utils import (
     LocaleNormalizationError,
     TARGET_COUNTRY_TO_LOCALE,
     TARGET_LOCALE_TO_COUNTRY,
@@ -29,13 +30,9 @@ from backend.services.content_service import get_content_repository
 from backend.store.memory_store import _get_episode, save_translation_version, work_get
 
 
-def _pipeline(locale: str) -> TranslationPipeline:
-    return TranslationPipeline(PipelineConfig(locale=locale, mock=is_mock_mode()))
-
-
 def _pipeline_for_mode(
     locale: str,
-    mode: TranslationMode,
+    mode: TranslationMode = TranslationMode.V3_LITERARY_PACKAGE,
     *,
     quality_mode: str = DEFAULT_QUALITY_MODE,
     model_override: str | None = None,
@@ -43,12 +40,16 @@ def _pipeline_for_mode(
     return TranslationPipeline(
         PipelineConfig(
             locale=locale,
-            mode=mode,
+            mode=TranslationMode.V3_LITERARY_PACKAGE,
             mock=is_mock_mode(),
             quality_mode=quality_mode,
             model_override=model_override,
         )
     )
+
+
+def _chatbot(locale: str) -> ChatbotAgent:
+    return ChatbotAgent(PipelineConfig(locale=locale, mock=is_mock_mode()))
 
 
 BLOCK_MESSAGES = {
@@ -377,10 +378,9 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
     requested_work_id = _payload_value(payload, "workId", "work_id")
     canonical_work_key = _payload_value(payload, "canonicalWorkKey", "canonical_work_key")
     episode_id = _payload_value(payload, "episodeId", "episode_id")
-    mode = TranslationMode(
-        _payload_value(payload, "mode", "pipeline", default=TranslationMode.V3_LITERARY_PACKAGE.value)
-    )
-    work_id = requested_work_id if requested_work_id is not None else (canonical_work_key if mode is TranslationMode.V3_LITERARY_PACKAGE else None)
+    # 단일 v3 파이프라인으로 통일: public/internal mode 디스패치 폐지(항상 v3).
+    mode = TranslationMode.V3_LITERARY_PACKAGE
+    work_id = requested_work_id if requested_work_id is not None else canonical_work_key
     try:
         normalized_target = normalize_target_fields(payload)
     except LocaleNormalizationError as exc:
@@ -407,152 +407,7 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             mode=mode.value,
         )
 
-    if mode is TranslationMode.LEGACY_FULL:
-        pipeline = _pipeline_for_mode(locale, mode, quality_mode=quality_mode, model_override=model_override)
-        workflow = pipeline.run_with_inspection(
-            source_text,
-            request_payload=payload,
-            translation_memory=[],
-        )
-        data = asdict(workflow)
-        if data.get("blocked"):
-            return _blocked_response(
-                country=country,
-                locale=locale,
-                source_text=source_text,
-                block_reason=data.get("block_reason", ""),
-                mode=mode.value,
-            )
-        final_translation = data.get("reviewed_translation", "")
-        consistency = check_translation_consistency(
-            source_text=source_text,
-            translated_text=final_translation,
-            locale=locale,
-            terminology=payload.get("terminology") or payload.get("terms") or payload.get("glossary") or [],
-        )
-        data["consistency"] = consistency
-        review_summary = format_review_summary(data)
-        saved_version: dict[str, Any] | None = None
-        terminology_memory = data.get("active_terminology") or data.get("terminology_candidates")
-        if work_id is not None and episode_id is not None:
-            saved_version = save_translation_version(
-                work_id=int(work_id),
-                episode_id=int(episode_id),
-                country=country,
-                locale=locale,
-                source_text=source_text,
-                final_translation=final_translation,
-                review_summary=review_summary,
-                workflow=data,
-                memory={"terms": terminology_memory} if terminology_memory else None,
-            )
-        response = {
-            "country": country,
-            "locale": locale,
-            "mode": mode.value,
-            "finalTranslation": final_translation,
-            "reviewSummary": review_summary,
-            "retrievalCount": len(data.get("retrievals", [])),
-            "workflow": data,
-            "metadata": data.get("metadata", {}),
-            "terminologyCandidates": data.get("terminology_candidates", []),
-            "memory": None,
-            "translationVersion": saved_version,
-        }
-        return response
-
-    pipeline = _pipeline_for_mode(locale, mode, quality_mode=quality_mode, model_override=model_override)
-    if mode is TranslationMode.DIRECT_ONLY:
-        direct = asdict(pipeline.run_direct_only(source_text))
-        final_translation = direct.get("final_translation", "")
-        delivery_status = direct.get("delivery_status", "deliverable")
-        user_visible_error_code = direct.get("user_visible_error_code")
-        message = ""
-        if delivery_status == "blocked_translation_safety":
-            final_translation = ""
-        message = _delivery_block_message(delivery_status)
-        final_translation, delivery_status, user_visible_error_code, metadata = _normalize_translation_delivery_contract(
-            final_translation=final_translation,
-            delivery_status=delivery_status,
-            user_visible_error_code=user_visible_error_code,
-            metadata=direct.get("metadata", {}),
-        )
-        message = _delivery_block_message(delivery_status)
-        direct["metadata"] = metadata
-        direct["delivery_status"] = delivery_status
-        direct["user_visible_error_code"] = user_visible_error_code
-        direct["final_translation"] = final_translation
-        response = {
-            "country": country,
-            "locale": locale,
-            "mode": mode.value,
-            "finalTranslation": final_translation,
-            "reviewSummary": "",
-            "retrievalCount": 0,
-            "workflow": direct,
-            "terminologyCandidates": [],
-            "riskItems": [],
-            "qaReport": [],
-            "patchSuggestions": [],
-            "metadata": direct.get("metadata", {}),
-            "deliveryStatus": delivery_status,
-            "userVisibleErrorCode": user_visible_error_code,
-            "message": message,
-            "memory": None,
-            "translationVersion": None,
-        }
-        return _attach_translation_persistence(
-            response,
-            payload=payload,
-            source_text=source_text,
-            country=country,
-            locale=locale,
-            mode=mode,
-        )
-
-    if mode is TranslationMode.V2_DUAL_DRAFT_REVIEW:
-        result = asdict(pipeline.run_v2_dual_draft_review(source_text))
-        final_translation = result.get("final_translation", "")
-        delivery_status = result.get("delivery_status", "deliverable")
-        user_visible_error_code = result.get("user_visible_error_code")
-        message = ""
-        final_translation, delivery_status, user_visible_error_code, metadata = _normalize_translation_delivery_contract(
-            final_translation=final_translation,
-            delivery_status=delivery_status,
-            user_visible_error_code=user_visible_error_code,
-            metadata=result.get("metadata", {}),
-        )
-        message = _delivery_block_message(delivery_status)
-        result["metadata"] = metadata
-        result["delivery_status"] = delivery_status
-        result["user_visible_error_code"] = user_visible_error_code
-        result["final_translation"] = final_translation
-        return {
-            "country": country,
-            "locale": locale,
-            "mode": mode.value,
-            "finalTranslation": final_translation,
-            "reviewSummary": "",
-            "retrievalCount": 0,
-            "workflow": result,
-            "meaningDraft": result.get("meaning_draft", {}),
-            "ragEvidence": result.get("rag_evidence", []),
-            "translationDecisions": result.get("translation_decisions", []),
-            "authorReviewCards": result.get("author_review_cards", []),
-            "riskItems": [],
-            "userVisibleRiskItems": [],
-            "hiddenRiskItems": [],
-            "qaReport": [],
-            "userVisibleQaReport": {},
-            "hiddenQaReport": [],
-            "patchSuggestions": [],
-            "metadata": metadata,
-            "deliveryStatus": delivery_status,
-            "userVisibleErrorCode": user_visible_error_code,
-            "message": message,
-            "memory": None,
-            "translationVersion": None,
-        }
+    pipeline = _pipeline_for_mode(locale, quality_mode=quality_mode, model_override=model_override)
 
     if mode is TranslationMode.V3_LITERARY_PACKAGE:
         genre = payload.get("genre") or payload.get("workGenre") or "Modern Korean web novel"
@@ -619,37 +474,33 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
         internal["workMemoryGlossaryCount"] = len((internal.get("workMemory") or {}).get("approvedGlossary") or [])
         internal["glossaryCandidateCapture"] = capture_summary
         result["internal"] = internal
+        # 응답 슬림화: 화면/챗봇에 필요한 필드만. blocked 상태에서는 안전 계약대로 비운다.
+        is_blocked = delivery_status.startswith("blocked_translation_")
+        # internal(그래프 트레이스 등 디버그 버킷)은 기본 응답에서 제외하고,
+        # includeInternal / debugCaptureModelOutputs 플래그일 때만 포함한다(데이터는 보존, 노출만 opt-in).
+        include_internal = bool(
+            payload.get("includeInternal")
+            or payload.get("include_internal")
+            or payload.get("debugCaptureModelOutputs")
+            or payload.get("debug_capture_model_outputs")
+            or os.environ.get("TRANSLATION_DEBUG_CAPTURE_MODEL_OUTPUTS") == "1"
+        )
         response = {
             "country": country,
             "locale": locale,
-            "mode": mode.value,
             "pipeline": result.get("pipeline"),
             "finalTranslation": final_translation,
-            "reviewSummary": "",
-            "translationRationale": result.get("translationRationale", {}),
-            "readerEndnotes": result.get("readerEndnotes", []),
-            "retrievalCount": 0,
-            "workflow": result,
-            "meaningDraft": {},
-            "ragEvidence": [],
-            "translationDecisions": [],
-            "authorReviewCards": result.get("authorReviewCards", []),
-            "riskItems": [],
-            "userVisibleRiskItems": [],
-            "hiddenRiskItems": [],
-            "qaReport": result.get("qaIssues", []),
-            "qaIssues": result.get("qaIssues", []),
-            "userVisibleQaReport": {},
-            "hiddenQaReport": [],
-            "patchSuggestions": [],
-            "metadata": metadata,
             "deliveryStatus": delivery_status,
             "userVisibleErrorCode": user_visible_error_code,
-            "message": "",
-            "internal": result.get("internal", {}),
-            "memory": None,
-            "translationVersion": None,
+            "message": _delivery_block_message(delivery_status),
+            "translationRationale": {} if is_blocked else result.get("translationRationale", {}),
+            "readerEndnotes": [] if is_blocked else result.get("readerEndnotes", []),
+            "authorReviewCards": [] if is_blocked else result.get("authorReviewCards", []),
+            "qaIssues": [] if is_blocked else result.get("qaIssues", []),
+            "metadata": metadata,
         }
+        if include_internal:
+            response["internal"] = result.get("internal", {})
         return _attach_translation_persistence(
             response,
             payload=payload,
@@ -659,88 +510,6 @@ def translate(payload: dict[str, Any]) -> dict[str, Any]:
             mode=mode,
         )
 
-    if mode is TranslationMode.V2_DIRECT_QA:
-        result = asdict(pipeline.run_v2_direct_qa(source_text))
-        final_translation = result.get("final_translation", "")
-        delivery_status = result.get("delivery_status", "deliverable")
-        user_visible_error_code = result.get("user_visible_error_code")
-        message = ""
-        if delivery_status == "blocked_translation_safety":
-            final_translation = ""
-        message = _delivery_block_message(delivery_status)
-        final_translation, delivery_status, user_visible_error_code, metadata = _normalize_translation_delivery_contract(
-            final_translation=final_translation,
-            delivery_status=delivery_status,
-            user_visible_error_code=user_visible_error_code,
-            metadata=result.get("metadata", {}),
-        )
-        message = _delivery_block_message(delivery_status)
-        result["metadata"] = metadata
-        result["delivery_status"] = delivery_status
-        result["user_visible_error_code"] = user_visible_error_code
-        result["final_translation"] = final_translation
-        return {
-            "country": country,
-            "locale": locale,
-            "mode": mode.value,
-            "finalTranslation": final_translation,
-            "reviewSummary": "",
-            "retrievalCount": 0,
-            "workflow": result,
-            "riskItems": result.get("risk_items", []),
-            "userVisibleRiskItems": result.get("user_visible_risk_items", []),
-            "hiddenRiskItems": result.get("hidden_risk_items", []),
-            "qaReport": result.get("qa_report", []),
-            "userVisibleQaReport": result.get("user_visible_qa_report", {}),
-            "hiddenQaReport": result.get("hidden_qa_report", []),
-            "patchSuggestions": result.get("patch_suggestions", []),
-            "metadata": result.get("metadata", {}),
-            "deliveryStatus": delivery_status,
-            "userVisibleErrorCode": user_visible_error_code,
-            "message": message,
-            "memory": None,
-            "translationVersion": None,
-        }
-
-    translation_text = (
-        (payload.get("currentTranslation") or "")
-        or (payload.get("finalTranslation") or "")
-        or (payload.get("translatedText") or "")
-    ).strip()
-    result = asdict(pipeline.run_qa_only(source_text, translation_text))
-    final_translation, delivery_status, user_visible_error_code, metadata = _normalize_translation_delivery_contract(
-        final_translation=result.get("final_translation", ""),
-        delivery_status=result.get("delivery_status", "deliverable"),
-        user_visible_error_code=result.get("user_visible_error_code"),
-        metadata=result.get("metadata", {}),
-    )
-    message = _delivery_block_message(delivery_status)
-    result["metadata"] = metadata
-    result["delivery_status"] = delivery_status
-    result["user_visible_error_code"] = user_visible_error_code
-    result["final_translation"] = final_translation
-    return {
-        "country": country,
-        "locale": locale,
-        "mode": mode.value,
-        "finalTranslation": final_translation,
-        "reviewSummary": "",
-        "retrievalCount": 0,
-        "workflow": result,
-        "riskItems": result.get("risk_items", []),
-        "userVisibleRiskItems": result.get("user_visible_risk_items", []),
-        "hiddenRiskItems": result.get("hidden_risk_items", []),
-        "qaReport": result.get("qa_report", []),
-        "userVisibleQaReport": result.get("user_visible_qa_report", {}),
-        "hiddenQaReport": result.get("hidden_qa_report", []),
-        "patchSuggestions": result.get("patch_suggestions", []),
-        "metadata": metadata,
-        "deliveryStatus": delivery_status,
-        "userVisibleErrorCode": user_visible_error_code,
-        "message": message,
-        "memory": None,
-        "translationVersion": None,
-    }
 
 
 def inspect_chat(payload: dict[str, Any]) -> dict[str, Any]:
@@ -785,7 +554,7 @@ def inspect_chat(payload: dict[str, Any]) -> dict[str, Any]:
         if role in {"user", "assistant", "ai"} and content:
             chat_history.append(ChatMessage(role="assistant" if role == "ai" else role, content=content))
 
-    reply = _pipeline(locale).chatbot.reply(
+    reply = _chatbot(locale).reply(
         user_message=question,
         source_text=source_text,
         draft_translation=draft.get("translation", ""),

@@ -32,7 +32,7 @@ load_dotenv(ROOT / ".env")
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from app.translation.locale_utils import country_to_locale  # noqa: E402
+from app.translation.infra.locale_utils import country_to_locale  # noqa: E402
 
 
 @dataclass(slots=True)
@@ -780,6 +780,8 @@ def _build_translation_payload(
         "genre": genre,
         "penName": pen_name,
         "title": title,
+        # 배치 평가는 리포트에 internal(글로서리 캡처/트레이스 등)을 쓰므로 노출을 요청한다.
+        "includeInternal": True,
     }
     if save_results:
         payload["saveTranslationResult"] = True

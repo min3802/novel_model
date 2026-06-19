@@ -1,0 +1,26 @@
+{
+  "deliveryStatus": "deliverable",
+  "finalTranslation": "Minjun bought a desk secondhand on Karrot Market. That evening, he had a drink of soju with a friend at a pojangmacha.",
+  "readerEndnotes": [],
+  "annotationTrace": {
+    "chunkCount": 1,
+    "candidateCount": 0,
+    "retrievalCount": 0,
+    "keptCount": 0
+  },
+  "topKeys": [
+    "country",
+    "locale",
+    "pipeline",
+    "finalTranslation",
+    "deliveryStatus",
+    "userVisibleErrorCode",
+    "message",
+    "translationRationale",
+    "readerEndnotes",
+    "authorReviewCards",
+    "qaIssues",
+    "metadata",
+    "internal"
+  ]
+}

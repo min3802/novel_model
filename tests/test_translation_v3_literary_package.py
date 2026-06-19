@@ -6,9 +6,9 @@ from dataclasses import asdict
 from unittest.mock import patch
 
 from app.translation import PipelineConfig, TranslationMode, TranslationPipeline
-from app.translation.glossary_store import default_glossary_repository
+from app.translation.glossary import default_glossary_repository
 from app.translation.infra.country_locale import resolve_country_for_locale
-from app.translation.v3_literary_package import (
+from app.translation.engine.literary_package import (
     GlossaryEntry,
     WorkMemory,
     build_rag_packets,
@@ -310,8 +310,8 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
 
     def test_translation_service_selects_v3_mode(self) -> None:
         country = resolve_country_for_locale("ko_ja")
-        response = translate({"sourceText": IDIOM_SOURCE, "targetCountry": country, "mode": "v3_literary_package"})
-        self.assertEqual(response["mode"], "v3_literary_package")
+        response = translate({"sourceText": IDIOM_SOURCE, "targetCountry": country, "mode": "v3_literary_package", "includeInternal": True})
+        self.assertEqual(response["pipeline"], "v3_literary_package")
         self.assertTrue(response["finalTranslation"])
         self.assertIn("translationRationale", response)
         self.assertIn("internal", response)
@@ -324,6 +324,7 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
                 "targetCountry": country,
                 "mode": "v3_literary_package",
                 "workMemory": build_sample_work_memory("ko_ja", work_id="svc-work"),
+                "includeInternal": True,
             }
         )
         internal = response["internal"]
@@ -364,6 +365,7 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
                 "mode": "v3_literary_package",
                 "workId": "svc-work",
                 "workMemory": request_memory,
+                "includeInternal": True,
             }
         )
 
@@ -389,6 +391,7 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
                 "targetCountry": country,
                 "mode": "v3_literary_package",
                 "workId": "svc-work",
+                "includeInternal": True,
             }
         )
 
@@ -409,6 +412,7 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
                 "targetLocale": "ko_ja",
                 "pipeline": "v3_literary_package",
                 "workId": "svc-work",
+                "includeInternal": True,
             }
         )
 
@@ -428,6 +432,7 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
                     "targetCountry": country,
                     "mode": "v3_literary_package",
                     "workId": "svc-work",
+                    "includeInternal": True,
                 }
             )
 
@@ -444,7 +449,7 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
             }
         )
         self.assertEqual(response["locale"], "ko_ja")
-        self.assertEqual(response["mode"], "v3_literary_package")
+        self.assertEqual(response["pipeline"], "v3_literary_package")
 
     def test_translation_service_accepts_v3_target_country_without_target_locale(self) -> None:
         response = translate(
@@ -456,7 +461,7 @@ class TranslationV3LiteraryPackageTests(unittest.TestCase):
         )
         self.assertEqual(response["country"], "JP")
         self.assertEqual(response["locale"], "ko_ja")
-        self.assertEqual(response["mode"], "v3_literary_package")
+        self.assertEqual(response["pipeline"], "v3_literary_package")
 
     def test_translation_service_rejects_mismatched_country_and_locale(self) -> None:
         response = translate(

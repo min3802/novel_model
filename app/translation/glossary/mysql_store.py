@@ -6,7 +6,7 @@ from contextlib import contextmanager
 from dataclasses import asdict
 from typing import Any, Iterator
 
-from .glossary_store import (
+from .store import (
     DEFAULT_CATEGORY,
     GLOSSARY_CATEGORIES,
     GlossaryEntryRecord,
@@ -17,7 +17,7 @@ from .glossary_store import (
     is_contextual_reference,
     normalize_category,
 )
-from .locale_utils import normalize_target_country
+from ..infra.locale_utils import normalize_target_country
 
 
 class MySQLDriverUnavailable(RuntimeError):

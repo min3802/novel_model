@@ -9,7 +9,7 @@ try:  # optional at runtime; requirements.txt includes langgraph for graph mode
 except Exception:  # pragma: no cover - exercised only when dependency is absent
     END = START = StateGraph = None
 
-from .v3_literary_package import (
+from .literary_package import (
     IdiomNote,
     V3LiteraryPackageResult,
     analyze_source_references,
@@ -2343,6 +2343,9 @@ def build_v3_graph_literary_package(
     work_memory: Any = None,
     max_iterations: int = 2,
     translate_once: Callable[..., tuple[str, dict[str, Any]]] | None = None,
+    annotation_candidate_hook: Callable[[TranslationGraphState], list[dict[str, Any]]] | None = None,
+    annotation_retrieval_hook: Callable[[TranslationGraphState], list[dict[str, Any]]] | None = None,
+    reader_endnote_writer_hook: Callable[[TranslationGraphState], list[dict[str, Any]]] | None = None,
 ) -> V3LiteraryPackageResult:
     state = run_graph_orchestrator(
         {
@@ -2352,6 +2355,9 @@ def build_v3_graph_literary_package(
             "genre": genre,
             "workMemory": work_memory,
             "workMemorySource": "request_payload" if work_memory is not None else "none",
+            "annotationCandidateHook": annotation_candidate_hook,
+            "annotationRetrievalHook": annotation_retrieval_hook,
+            "readerEndnoteWriterHook": reader_endnote_writer_hook,
         },
         max_iterations=max_iterations,
         translate_once=translate_once,

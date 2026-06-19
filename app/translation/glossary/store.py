@@ -5,8 +5,8 @@ from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from typing import Any, Protocol
 
-from .v3_literary_package import GlossaryEntry, WorkMemory
-from .locale_utils import country_to_locale, normalize_target_country
+from ..engine.literary_package import GlossaryEntry, WorkMemory
+from ..infra.locale_utils import country_to_locale, normalize_target_country
 
 # Single-table glossary model.
 #

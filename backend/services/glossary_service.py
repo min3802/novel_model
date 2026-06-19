@@ -3,7 +3,7 @@ from __future__ import annotations
 import os
 from typing import Any
 
-from app.translation.glossary_store import (
+from app.translation.glossary import (
     DEFAULT_CATEGORY,
     GlossaryEntryRecord,
     GlossaryRepository,
@@ -32,7 +32,7 @@ def get_glossary_repository(*, refresh: bool = False) -> GlossaryRepository:
     _repository_factory_error = ""
     if backend == "mysql":
         try:
-            from app.translation.mysql_glossary_store import MySQLGlossaryRepository
+            from app.translation.glossary.mysql_store import MySQLGlossaryRepository
 
             mysql_repository = MySQLGlossaryRepository.from_env()
             mysql_repository.ping()

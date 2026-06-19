@@ -3,14 +3,14 @@ from __future__ import annotations
 from dataclasses import asdict
 from typing import Any
 
-from app.translation.glossary_store import (
+from app.translation.glossary import (
     DEFAULT_CATEGORY,
     GLOSSARY_CATEGORIES,
     GlossaryEntryRecord,
     GlossaryRepository,
     is_contextual_reference,
 )
-from app.translation.locale_utils import LocaleNormalizationError, normalize_target_fields
+from app.translation.infra.locale_utils import LocaleNormalizationError, normalize_target_fields
 from backend.services.glossary_service import (
     delete_entry,
     get_glossary_repository,

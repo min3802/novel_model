@@ -68,20 +68,45 @@ legacy_full
 
 ## 4. Response contract
 
-response top-level 핵심 필드는 다음을 유지한다.
+2026-06 리팩터로 응답을 v3 단일 파이프라인 기준의 "얇은 응답"으로 정리했다.
+response top-level 핵심 필드는 다음과 같다.
 
 ```txt
+country
+locale
+pipeline
 finalTranslation
 deliveryStatus
 userVisibleErrorCode
 message
-meaningDraft
-ragEvidence
-translationDecisions
-authorReviewCards
+translationRationale      # 왜 이렇게 번역했는지(개요/문체의도/직역·의역 비율/항목) — 챗봇·설명 패널용
+readerEndnotes            # 한국 문화 표현에 대한 독자용 각주(kculture RAG → LLM 작성). 0~N개 가변
+authorReviewCards         # 작가/편집자 read-only 검수 카드. 0~N개 가변
+qaIssues                  # 검수 이슈. 0~N개 가변
+metadata                  # 카운트/진단 요약
 ```
 
+`internal`(그래프 트레이스, idiomNotes, annotationTrace 등 개발/검증용)은 **기본 응답에서 제외**된다.
+필요할 때만 요청에 `"includeInternal": true`(또는 `"debugCaptureModelOutputs": true`)를 넣어 받는다. 화면에는 쓰지 않는다.
+
+이전 응답에 있던 `meaningDraft`, `ragEvidence`, `translationDecisions`, `riskItems`,
+`patchSuggestions`, `qaReport`, `reviewSummary`, `retrievalCount`, `workflow`(전체 중복) 등
+**v3에서 항상 비어 있던 v2 호환 껍데기 필드는 제거됐다.** 검수 근거는 이제
+`qaIssues`·`authorReviewCards`·`translationRationale`·`readerEndnotes`·`internal`에 들어 있다.
+
 frontend는 unknown field에 tolerant하게 동작한다. backend는 debug/internal field를 public response에 과도하게 노출하지 않는다.
+
+### readerEndnotes 항목 형태
+
+```txt
+noteId, sourceSpan(한국어 원문 표현), targetSpan(번역문 내 대응 표현, 없으면 ""),
+category(예: korean_cultural_reference/food/custom), note(목표 독자 언어로 쓴 장면 맥락형 각주),
+sourceChunkId, retrievalRefs, confidence(low|medium|high), targetSpanFound(bool)
+```
+
+`readerEndnotes`는 `finalTranslation`에 합쳐지지 않는다. 화면/다운로드 레이어가 각주로 렌더한다.
+`blocked_translation_safety`/`blocked_translation_integrity`에서는 `readerEndnotes=[]`,
+`authorReviewCards=[]`, `qaIssues=[]`, `finalTranslation=""`로 비워진다.
 
 ## 5. `deliveryStatus` 처리 규칙
 

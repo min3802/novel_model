@@ -1,0 +1,141 @@
+{
+  "country": "US",
+  "locale": "ko_en_us",
+  "pipeline": "v3_literary_package",
+  "finalTranslation": "\"Hey, Jinwoo Kim! The crosswalk light’s changing. Run!\"\n\nLee Minjae shouted, pulling the zipper of his puffer jacket all the way up to his chin. Where his eyes landed was a crosswalk fitted with a Korean-style ground signal light. To keep pedestrians from getting hurt while looking down at their smartphones, a long strip of LED lights was installed along the edge of the curb, blinking green. Above it, the numbers on the countdown signal were already racing down—\"4, 3, 2……\"\n\n\"Ah, wait! It’s gonna spill!\"\n\nKim Jinwoo screamed, guarding the plastic cup in one hand. In the bitter cold in the middle of Daechi-dong’s cram school district, Jinwoo still had an ice-filled iced Americano in his hand. It was the silent creed of the so-called iced-coffee-in-winter crowd. With a straw in his mouth, Jinwoo flapped the hem of his puffer jacket and hurried after Minjae.\n\nThe two of them barely made it across the light and slid into the lobby of the massive tutoring academy building. The moment the warm air from the heater brushed their cheeks, they both let out sighs of relief at the same time. For high school students in Korea, this exhausting academy culture—going to class all day and then coming here again after dark for more lessons—was as routine as breathing.\n\nAfter getting on the elevator, Minjae clicked his tongue at the coffee cup in Jinwoo’s hand, then noticed something unfamiliar sticking out of the side pocket of Jinwoo’s bag.\n\n\"Hey, what’s that? A honey-water bottle?\"\n\"Huh? This? My mom spent all morning hunting around convenience stores to buy it. She said it was in the aisle next to the hangover drinks?\"\n\nJinwoo gave an awkward smile and pulled the bottle out to show him. On the warmed bottle, in red letters, it said, \"Iseong Honey Water for Passing the Exam.\" Even in Korea’s uniquely segmented retail landscape, where products are tightly separated depending on whether you buy them at a convenience store, a pharmacy, or somewhere else, parents with exam-bound kids always managed to find a way.\n\n\"We’ve got a placement test at the academy today. My mom was fully committing to that pre-exam seaweed-soup taboo—people say if you eat seaweed soup before a test, you’ll slip up—so she didn’t even make soup this morning. Instead, she told me to drink this honey water and passed me a rice cake too, so I’d stick to the exam like glue.\"\n\"Your mom’s vibe is honestly top-tier. She means she wants your results to stick, the way the chewy rice cake sticks to your teeth, right? Hey, gimme a bite too.\"\n\"Quit messing around. This is my good-luck food.\"\n\nJinwoo playfully hugged the bottle of honey water to his chest. Even though this neighborhood had a bitter student ranking culture, where people quietly sorted one another by clothing brands and puffer jacket types in the middle of brutal college-entrance competition, there was no room for any of that between Minjae and Jinwoo, who’d been friends for ten years.\n\n---\n\nThe academy classroom was already filled with an eerie heat. Dozens of students had their error notebooks open, each of them pushing through one last sprint. Hanging over the blackboard was a huge banner that read, \"Today’s Placement Test: Steady All the Way to a Top Grade!\" It was the academy version of those typical event banners that every school and company in Korea never forgets to include when they take a group photo after an event.\n\n\"All right, everyone, take your seats.\"\n\nAs the instructor stepped up to the podium, he shook the test papers lightly. In an instant, the classroom fell silent enough to hear a pin drop.\n\nJinwoo sat down and took his writing tools out of his bag. Then, to calm his nerves, he popped the rice cake his mom had packed for him into his mouth. The chewy, sweet red-bean filling spread through his mouth, and he felt his head clear a little. Stick to me. Repeating that sticky little wish, Jinwoo gripped his mechanical pencil.\n\n\"You’ll have 100 minutes total. Starting now.\"\n\nThe scratch of writing filled the classroom. Minjae and Jinwoo both turned to the first page of the test at the same time. All those hours spent preparing—avoiding seaweed soup out of fear of slipping up, and wanting nothing more than a good result to stick.\n\nPast the green glow of the crosswalk light, at the end of a freezing winter day they’d run through clutching iced Americanos, the tips of the two boys’ mechanical pencils kept moving forward without stopping.",
+  "deliveryStatus": "deliverable",
+  "userVisibleErrorCode": null,
+  "message": "",
+  "translationRationale": {
+    "title": "왜 이렇게 번역했는지",
+    "overview": "원문의 의미를 보존하되 관용어와 장르 문체는 목표 언어에서 자연스럽게 읽히도록 조정했습니다.",
+    "styleIntent": "대사와 서술의 속도를 살리고, 과도한 직역보다 웹소설 독자의 몰입감을 우선합니다.",
+    "strategyRatio": {
+      "literal": 55,
+      "adaptive": 45
+    },
+    "items": [
+      {
+        "sourceSpan": "",
+        "targetSpan": "",
+        "category": "style",
+        "strategy": "balanced",
+        "explanation": "원문의 사건 진행과 감정선을 유지하면서 목표 언어 독자가 바로 읽을 수 있는 문장 흐름을 우선했습니다."
+      }
+    ]
+  },
+  "readerEndnotes": [
+    {
+      "noteId": 1,
+      "sourceSpan": "학원 문화",
+      "targetSpan": "this grueling after-school academy culture",
+      "category": "custom",
+      "note": "In Korea, an \"academy\" (hakwon) is a private after-school cram school. Students often go there late into the evening for extra lessons and test prep, so it carries the feel of an entire shadow education system, not just a tutoring class.",
+      "sourceChunkId": "",
+      "retrievalRefs": [],
+      "confidence": "high",
+      "targetSpanFound": false
+    },
+    {
+      "noteId": 2,
+      "sourceSpan": "숙취해소 음료 문화",
+      "targetSpan": "hangover remedy drinks",
+      "category": "food",
+      "note": "These are commonly sold in Korean convenience stores and pharmacies as a quick fix after drinking. They’re part of a very normal, everyday convenience-store culture, so the mention signals something more routine than a specialty health drink.",
+      "sourceChunkId": "",
+      "retrievalRefs": [],
+      "confidence": "high",
+      "targetSpanFound": false
+    },
+    {
+      "noteId": 3,
+      "sourceSpan": "구매 가능 장소 구분",
+      "targetSpan": "convenience stores or pharmacies",
+      "category": "custom",
+      "note": "In Korea, where a product can be bought often matters: some items are sold freely at convenience stores, while others are pharmacy-only. The line here reflects that everyday distinction, which can be more noticeable than in the U.S.",
+      "sourceChunkId": "",
+      "retrievalRefs": [],
+      "confidence": "high",
+      "targetSpanFound": false
+    },
+    {
+      "noteId": 4,
+      "sourceSpan": "시험 전 미역국 금기",
+      "targetSpan": "the pre-exam seaweed soup taboo",
+      "category": "custom",
+      "note": "Koreans sometimes avoid seaweed soup before an exam or interview because the slippery seaweed is linked by wordplay to \"slipping\" or failing. It’s a superstition parents may take seriously when supporting a student.",
+      "sourceChunkId": "",
+      "retrievalRefs": [],
+      "confidence": "high",
+      "targetSpanFound": false
+    },
+    {
+      "noteId": 5,
+      "sourceSpan": "찹쌀떡",
+      "targetSpan": "mochi rice cake",
+      "category": "food",
+      "note": "This sticky rice cake is a common good-luck snack for students in Korea. Its chewy, adhesive texture makes it a punny symbol of results \"sticking\"—in other words, passing the exam.",
+      "sourceChunkId": "",
+      "retrievalRefs": [],
+      "confidence": "high",
+      "targetSpanFound": false
+    },
+    {
+      "noteId": 6,
+      "sourceSpan": "찹쌀떡의 끈끈한 식감처럼",
+      "targetSpan": "the sticky chew of mochi rice cakes",
+      "category": "food",
+      "note": "The joke is that the dessert’s stickiness is an omen for exam success: the good result should \"stick\" just like the cake does. It’s a very Korean kind of encouragement snack.",
+      "sourceChunkId": "",
+      "retrievalRefs": [],
+      "confidence": "high",
+      "targetSpanFound": false
+    },
+    {
+      "noteId": 7,
+      "sourceSpan": "합격 기원 의성 꿀물",
+      "targetSpan": "\"lucky honey water\"",
+      "category": "food",
+      "note": "This is a good-luck drink given to a student before a test. The important part is less the drink itself than the wish that the exam result will \"stick\"—a playful, sticky-food style blessing.",
+      "sourceChunkId": "",
+      "retrievalRefs": [],
+      "confidence": "high",
+      "targetSpanFound": false
+    },
+    {
+      "noteId": 8,
+      "sourceSpan": "대형 현수막",
+      "targetSpan": "a huge banner",
+      "category": "custom",
+      "note": "In Korean schools and companies, big banners are often used at events and in group photos. To an English reader, that can feel more formal or ceremonial than the usual classroom setting, where such banners are less common.",
+      "sourceChunkId": "",
+      "retrievalRefs": [],
+      "confidence": "high",
+      "targetSpanFound": true
+    },
+    {
+      "noteId": 9,
+      "sourceSpan": "한국형 바닥신호등",
+      "targetSpan": "the ground-level traffic light",
+      "category": "place",
+      "note": "This is a pedestrian safety feature installed at street level so people looking down at their phones can still see the signal. It’s a familiar sight in Korea, but less common in the U.S., where crosswalk signals are usually placed higher up.",
+      "sourceChunkId": "",
+      "retrievalRefs": [],
+      "confidence": "high",
+      "targetSpanFound": false
+    }
+  ],
+  "authorReviewCards": [],
+  "qaIssues": [],
+  "metadata": {
+    "mode": "v3_literary_package",
+    "pipeline": "v3_literary_package",
+    "delivery_status": "deliverable",
+    "idiom_note_count": 0,
+    "qa_issue_count": 0,
+    "translation_rationale_item_count": 1,
+    "work_memory_glossary_count": 0,
+    "work_memory_source": "none",
+    "work_memory_fallback_reason": ""
+  }
+}

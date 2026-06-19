@@ -5,7 +5,7 @@ from __future__ import annotations
 import hashlib
 from typing import Any
 
-from app.translation.locale_utils import LocaleNormalizationError
+from app.translation.infra.locale_utils import LocaleNormalizationError
 from backend.services.content_service import (
     ContentServiceError,
     get_content_repository,

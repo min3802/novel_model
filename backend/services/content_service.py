@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 from typing import Any
 
-from app.translation.locale_utils import normalize_target_fields
+from app.translation.infra.locale_utils import normalize_target_fields
 from backend.services.content_store import ContentRepository, InMemoryContentRepository, default_content_repository
 
 MAX_ORIGINAL_TEXT_CHARS = 8000

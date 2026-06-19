@@ -10,12 +10,8 @@ from .infra.project_paths import package_project_root
 
 
 class TranslationMode(str, Enum):
-    LEGACY_FULL = "legacy_full"
-    DIRECT_ONLY = "direct_only"
-    V2_DIRECT_QA = "v2_direct_qa"
-    V2_DUAL_DRAFT_REVIEW = "v2_dual_draft_review"
+    # 레거시/v2 파이프라인 폐지 후 단일 모드만 유지.
     V3_LITERARY_PACKAGE = "v3_literary_package"
-    QA_ONLY = "qa_only"
 
 
 DEFAULT_QUALITY_MODE = "standard"

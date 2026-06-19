@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from app.translation import TranslationPipeline, PipelineConfig
+from app.translation import PipelineConfig
 from app.translation.infra.locales import LOCALE_REGISTRY
 from app.translation.retrieval.retriever import IdiomRetriever, MockEmbeddingBackend, RetrievalResult, build_search_text, create_embedding_backend
 from app.translation.retrieval.idiom_retriever import build_anchor_index, extract_anchor_phrases, normalize_anchor_key
@@ -393,32 +393,6 @@ class IdiomRetrieverAnchorPriorityTests(unittest.TestCase):
 
         self.assertEqual(results[0].item["id"], "jp-00160")
         self.assertGreaterEqual(results[0].final_score, results[0].similarity_score)
-
-    def test_pipeline_serializes_decomposed_scores(self) -> None:
-        item = {
-            "id": "jp-00001",
-            "expression": "sample-1",
-            "meaning": "getting two benefits from one action",
-            "usage": "when one move gives two gains",
-            "caution": "prefer natural idioms",
-            "translation_strategy": "idiom",
-            "ko_anchor_expression": ["two birds one stone"],
-            "ko_expression": ["two birds one stone", "double win"],
-            "scene": ["office"],
-            "tone": ["positive"],
-        }
-        retriever = self._build_retriever([item], locale="ko_en_us")
-        pipeline = TranslationPipeline(retriever.config)
-
-        source = "이건 두 마리 토끼를 잡는 격이야."
-        result = pipeline.run_with_inspection(source)
-        row = result.retrievals[0]
-
-        self.assertIn("similarity_score", row)
-        self.assertIn("anchor_boost", row)
-        self.assertIn("final_score", row)
-        self.assertAlmostEqual(row["final_score"], row["similarity_score"] + row["anchor_boost"], places=6)
-        self.assertEqual(result.reviewed_translation, f"[MOCK English (US)] {source}")
 
     def test_retrieve_returns_empty_when_all_scores_below_threshold(self) -> None:
         items = [

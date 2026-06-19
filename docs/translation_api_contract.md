@@ -179,14 +179,23 @@ Candidate capture는 opt-in side effect다.
 
 ### v3 response core fields
 
+2026-06 리팩터 기준 현행 얇은 응답이다. `meaningDraft`, `ragEvidence`, `translationDecisions`,
+`riskItems`, `patchSuggestions`, `qaReport`, `reviewSummary`, `retrievalCount`, `workflow`(전체 중복)
+등 v3에서 항상 비어 있던 v2 호환 껍데기 필드는 제거됐다.
+
 | 필드 | 타입 | 설명 |
 | --- | --- | --- |
-| `deliveryStatus` | string | `deliverable`, `qa_warning`, `blocked_translation_safety`. |
+| `deliveryStatus` | string | `deliverable`, `qa_warning`, `blocked_translation_safety`, `blocked_translation_integrity`. |
 | `finalTranslation` | string | 독자에게 보여줄 최종 번역문이다. blocked 상태에서는 빈 문자열이어야 한다. |
-| `translationRationale` | object | 번역 의도/전략 설명이다. |
+| `translationRationale` | object | 번역 의도/전략 설명이다(개요/문체의도/직역·의역 비율/항목). |
+| `readerEndnotes` | array | 한국 문화 표현에 대한 독자용 각주다(kculture RAG → LLM 작성). `finalTranslation`에 합치지 않는다. 0~N개 가변. |
 | `qaIssues` | array | v3 Critic/Judge가 남긴 검수 이슈다. |
 | `authorReviewCards` | array | 작가/편집자 검수 카드다. |
-| `internal` | object | 개발/검증용 내부 정보다. |
+| `metadata` | object | 카운트/진단 요약이다. |
+| `internal` | object | 개발/검증용 내부 정보다(그래프 트레이스, idiomNotes, annotationTrace 등). **기본 응답에서는 제외**되며, 요청에 `includeInternal=true`(또는 `debugCaptureModelOutputs=true`)를 줄 때만 포함된다. |
+
+blocked 상태에서는 `finalTranslation=""`, `readerEndnotes=[]`, `authorReviewCards=[]`, `qaIssues=[]`,
+`translationRationale={}` 로 비운다.
 
 v3 `internal`에서 확인 가능한 필드는 다음과 같다.
 

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Final
 
-from app.translation.locale_utils import TARGET_COUNTRY_TO_LOCALE, TARGET_LOCALE_TO_COUNTRY
+from .locale_utils import TARGET_COUNTRY_TO_LOCALE, TARGET_LOCALE_TO_COUNTRY
 
 COUNTRY_TO_LOCALE: Final[dict[str, str]] = dict(TARGET_COUNTRY_TO_LOCALE)
 LOCALE_TO_COUNTRY: Final[dict[str, str]] = dict(TARGET_LOCALE_TO_COUNTRY)

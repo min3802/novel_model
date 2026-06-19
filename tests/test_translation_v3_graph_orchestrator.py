@@ -9,9 +9,10 @@ from dataclasses import asdict
 from pathlib import Path
 from unittest.mock import patch
 
-from app.translation import AgentWorkflowResult, PipelineConfig, TranslationMode, TranslationPipeline
-from app.translation.v3_graph_orchestrator import build_v3_graph_literary_package, run_graph_orchestrator
-from app.translation.v3_literary_package import GlossaryEntry, WorkMemory
+from app.translation import PipelineConfig, TranslationMode, TranslationPipeline
+from app.translation.agents.direct_translator import DirectTranslator
+from app.translation.engine.graph_orchestrator import build_v3_graph_literary_package, run_graph_orchestrator
+from app.translation.engine.literary_package import GlossaryEntry, WorkMemory
 from backend.services.translation_service import translate
 
 
@@ -87,17 +88,16 @@ class TranslationV3GraphOrchestratorTests(unittest.TestCase):
                 "sourceText": "\uac15\ub3c4\uc724\uc740 \ubb38\uc744 \uc5f4\uc5c8\ub2e4.",
                 "targetCountry": "JP",
                 "mode": "v3_literary_package",
+                "includeInternal": True,
             }
         )
 
-        for key in ["country", "locale", "mode", "pipeline", "finalTranslation", "deliveryStatus", "workflow", "qaIssues", "translationRationale", "authorReviewCards"]:
+        for key in ["country", "locale", "pipeline", "finalTranslation", "deliveryStatus", "qaIssues", "translationRationale", "authorReviewCards"]:
             self.assertIn(key, response)
         self.assertIn("readerEndnotes", response)
         self.assertEqual(response["readerEndnotes"], [])
-        self.assertEqual(response["workflow"]["readerEndnotes"], [])
         self.assertEqual(response["country"], "JP")
         self.assertEqual(response["locale"], "ko_ja")
-        self.assertEqual(response["mode"], "v3_literary_package")
         self.assertEqual(response["pipeline"], "v3_literary_package")
         self.assertIn("graphTrace", response["internal"])
 
@@ -106,44 +106,12 @@ class TranslationV3GraphOrchestratorTests(unittest.TestCase):
             {
                 "sourceText": "\uac15\ub3c4\uc724\uc740 \ubb38\uc744 \uc5f4\uc5c8\ub2e4.",
                 "targetCountry": "JP",
+                "includeInternal": True,
             }
         )
 
-        self.assertEqual(response["mode"], "v3_literary_package")
         self.assertEqual(response["pipeline"], "v3_literary_package")
         self.assertIn("graphTrace", response["internal"])
-
-    def test_service_preserves_explicit_legacy_full_branch(self) -> None:
-        class FakePipeline:
-            def run_with_inspection(self, source_text: str, **kwargs) -> AgentWorkflowResult:
-                return AgentWorkflowResult(
-                    source_text=source_text,
-                    retrievals=[],
-                    annotation_matches=[],
-                    draft={"translation": "\u660e\u793a\u30ec\u30ac\u30b7\u30fc"},
-                    inspection={},
-                    reviewed_translation="\u660e\u793a\u30ec\u30ac\u30b7\u30fc",
-                    metadata={"mode": "legacy_full"},
-                )
-
-        seen_modes: list[TranslationMode] = []
-
-        def fake_pipeline_for_mode(locale: str, mode: TranslationMode, **kwargs) -> FakePipeline:
-            seen_modes.append(mode)
-            return FakePipeline()
-
-        with patch("backend.services.translation_service._pipeline_for_mode", side_effect=fake_pipeline_for_mode):
-            response = translate(
-                {
-                    "sourceText": "\uac15\ub3c4\uc724\uc740 \ubb38\uc744 \uc5f4\uc5c8\ub2e4.",
-                    "targetCountry": "JP",
-                    "mode": "legacy_full",
-                }
-            )
-
-        self.assertEqual(seen_modes, [TranslationMode.LEGACY_FULL])
-        self.assertEqual(response["mode"], "legacy_full")
-        self.assertEqual(response["finalTranslation"], "\u660e\u793a\u30ec\u30ac\u30b7\u30fc")
 
     def test_graph_mode_is_default_when_env_unset(self) -> None:
         os.environ.pop("TRANSLATION_ORCHESTRATOR", None)
@@ -193,7 +161,7 @@ class TranslationV3GraphOrchestratorTests(unittest.TestCase):
             "\u5f7c\u306f \uade0\uc5f4\u3092\u898b\u305f\u3002"
             "\u5eca\u4e0b\u306e\u5149\u306f\u9759\u304b\u306b\u63fa\u308c\u305f\u3002"
         )
-        with patch("app.translation.v3_graph_orchestrator._mock_literary_translation", return_value=draft):
+        with patch("app.translation.engine.graph_orchestrator._mock_literary_translation", return_value=draft):
             state = run_graph_orchestrator(
                 {
                     "request": {"sourceText": source, "targetLocale": "ko_ja"},
@@ -223,7 +191,7 @@ class TranslationV3GraphOrchestratorTests(unittest.TestCase):
                 GlossaryEntry(source="\uade0\uc5f4", target="\u4e80\u88c2", category="genre_term", priority="hard")
             ],
         )
-        with patch("app.translation.v3_graph_orchestrator._mock_literary_translation", return_value=draft):
+        with patch("app.translation.engine.graph_orchestrator._mock_literary_translation", return_value=draft):
             state = run_graph_orchestrator(
                 {
                     "request": {"sourceText": source, "targetLocale": "ko_ja"},
@@ -260,7 +228,7 @@ class TranslationV3GraphOrchestratorTests(unittest.TestCase):
                 GlossaryEntry(source="\uade0\uc5f4", target="\u4e80\u88c2", category="genre_term", priority="hard")
             ],
         )
-        with patch("app.translation.v3_graph_orchestrator._mock_literary_translation", return_value=draft):
+        with patch("app.translation.engine.graph_orchestrator._mock_literary_translation", return_value=draft):
             state = run_graph_orchestrator(
                 {
                     "request": {"sourceText": source, "targetLocale": "ko_ja"},
@@ -924,9 +892,9 @@ class TranslationV3GraphOrchestratorTests(unittest.TestCase):
         (Path.cwd() / "reports").mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=Path.cwd() / "reports") as tmp:
             debug_dir = Path(tmp) / "debug" / "episode_001"
-            pipeline = self._pipeline()
+            pipeline = DirectTranslator(PipelineConfig(locale="ko_ja", mock=True))
 
-            pipeline.run_direct_only(
+            pipeline.translate_once(
                 "\uac15\ub3c4\uc724\uc740 \ubb38\uc744 \uc5f4\uc5c8\ub2e4.",
                 debug_capture={"enabled": False, "artifactDir": str(debug_dir), "attemptName": "initial_translation"},
             )
@@ -937,9 +905,9 @@ class TranslationV3GraphOrchestratorTests(unittest.TestCase):
         (Path.cwd() / "reports").mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=Path.cwd() / "reports") as tmp:
             debug_dir = Path(tmp) / "debug" / "episode_001"
-            pipeline = self._pipeline()
+            pipeline = DirectTranslator(PipelineConfig(locale="ko_ja", mock=True))
 
-            result = pipeline.run_direct_only(
+            result = pipeline.translate_once(
                 "\uac15\ub3c4\uc724\uc740 \ubb38\uc744 \uc5f4\uc5c8\ub2e4.",
                 memory_context="[GRAPH CLEAN FULL TRANSLATOR RETRY]\n- Output Japanese only.",
                 strict_locale_retry=True,
@@ -964,9 +932,9 @@ class TranslationV3GraphOrchestratorTests(unittest.TestCase):
         (Path.cwd() / "reports").mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=Path.cwd() / "reports") as tmp:
             debug_dir = Path(tmp) / "debug" / "episode_017"
-            pipeline = self._pipeline()
+            pipeline = DirectTranslator(PipelineConfig(locale="ko_ja", mock=True))
 
-            result = pipeline.run_direct_only(
+            result = pipeline.translate_once(
                 "\uac15\ub3c4\uc724\uc740 \ubb38\uc744 \uc5f4\uc5c8\ub2e4.",
                 memory_context="[GRAPH STRICT CLEAN FINAL FALLBACK]\n- Output only the complete Japanese translation.",
                 strict_locale_retry=True,
@@ -990,9 +958,9 @@ class TranslationV3GraphOrchestratorTests(unittest.TestCase):
         (Path.cwd() / "reports").mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=Path.cwd() / "reports") as tmp:
             debug_dir = Path(tmp) / "debug" / "episode_017"
-            pipeline = self._pipeline()
+            pipeline = DirectTranslator(PipelineConfig(locale="ko_ja", mock=True))
 
-            result = pipeline.run_direct_only(
+            result = pipeline.translate_once(
                 "\ubb38\uc740 \uc870\uc6a9\ud788 \uc5f4\ub838\ub2e4.",
                 memory_context="[GRAPH TARGETED SMALL PROSE RESIDUE FALLBACK]\n- Repair only the affected sentence.",
                 strict_locale_retry=True,
